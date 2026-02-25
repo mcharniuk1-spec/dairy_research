@@ -1,0 +1,142 @@
+source,product,standardized_type,series_variant,jb_p,non_normal_risk,recommended_action
+CME,Молоко питне,milk,linear,,low,Use differences or cointegration framework
+CME,Молоко питне,milk,pchip,,low,Use differences or cointegration framework
+CME,Молоко питне,milk,real,4.581680017629431e-229,high,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+ConsumerUA,Молоко питне,milk,linear,3.0360054261415e-08,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Молоко питне,milk,pchip,6.426164327040243e-06,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Молоко питне,milk,real,3.0360054261415e-08,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Сир твердий,hard_cheese,linear,1.2308519951005352e-07,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Сир твердий,hard_cheese,pchip,1.4631116326773901e-06,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Сир твердий,hard_cheese,real,1.2308519951005352e-07,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Сметана,sour_cream,linear,6.279230537479962e-09,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Сметана,sour_cream,pchip,1.6117465480148259e-06,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ConsumerUA,Сметана,sour_cream,real,6.279230537479962e-09,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+EU,Інше/невідомо,milk,linear,,low,Use differences or cointegration framework
+EU,Інше/невідомо,other,linear,,low,Use differences or cointegration framework
+EU,Інше/невідомо,milk,pchip,,low,Use differences or cointegration framework
+EU,Інше/невідомо,other,pchip,,low,Use differences or cointegration framework
+EU,Інше/невідомо,milk,real,0.0,high,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+EU,Інше/невідомо,other,real,0.0,high,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+EU,Вершки,cream,linear,,low,Use differences or cointegration framework
+EU,Вершки,cream,pchip,,low,Use differences or cointegration framework
+EU,Вершки,cream,real,6.463680808604484e-65,high,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+EU,Масло вершкове,butter,linear,,low,Use differences or cointegration framework
+EU,Масло вершкове,butter,pchip,,low,Use differences or cointegration framework
+EU,Масло вершкове,butter,real,0.0,high,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+EU,Молоко питне,milk,linear,,low,Use differences or cointegration framework
+EU,Молоко питне,milk,pchip,,low,Use differences or cointegration framework
+EU,Молоко питне,milk,real,0.0,high,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+EU,Сир твердий,hard_cheese,linear,,low,Use differences or cointegration framework
+EU,Сир твердий,hard_cheese,pchip,,low,Use differences or cointegration framework
+EU,Сир твердий,hard_cheese,real,0.0,high,Use differences or cointegration framework | Use rolling / split sample / add break dummies
+Novus,Інше/невідомо,milk,linear,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,other,linear,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,yogurt_dessert,linear,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,milk,pchip,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,other,pchip,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,yogurt_dessert,pchip,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,milk,real,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,other,real,,low,Use differences or cointegration framework
+Novus,Інше/невідомо,yogurt_dessert,real,,low,Use differences or cointegration framework
+Novus,Вершки,cream,linear,,low,Use differences or cointegration framework
+Novus,Вершки,cream,pchip,,low,Use differences or cointegration framework
+Novus,Вершки,cream,real,,low,Use differences or cointegration framework
+Novus,Йогурт,milk,linear,,low,Use differences or cointegration framework
+Novus,Йогурт,yogurt_dessert,linear,,low,Use differences or cointegration framework
+Novus,Йогурт,milk,pchip,,low,Use differences or cointegration framework
+Novus,Йогурт,yogurt_dessert,pchip,,low,Use differences or cointegration framework
+Novus,Йогурт,milk,real,,low,Use differences or cointegration framework
+Novus,Йогурт,yogurt_dessert,real,,low,Use differences or cointegration framework
+Novus,Кефір,milk,linear,,low,Use differences or cointegration framework
+Novus,Кефір,milk,pchip,,low,Use differences or cointegration framework
+Novus,Кефір,milk,real,,low,Use differences or cointegration framework
+Novus,Масло вершкове,butter,linear,,low,Use differences or cointegration framework
+Novus,Масло вершкове,butter,pchip,,low,Use differences or cointegration framework
+Novus,Масло вершкове,butter,real,,low,Use differences or cointegration framework
+Novus,Молоко питне,milk,linear,,low,Use differences or cointegration framework
+Novus,Молоко питне,milk,pchip,,low,Use differences or cointegration framework
+Novus,Молоко питне,milk,real,,low,Use differences or cointegration framework
+Novus,Сир кисломолочний,cottage_cheese,linear,,low,Use differences or cointegration framework
+Novus,Сир кисломолочний,cottage_cheese,pchip,,low,Use differences or cointegration framework
+Novus,Сир кисломолочний,cottage_cheese,real,,low,Use differences or cointegration framework
+Novus,Сир твердий,hard_cheese,linear,,low,Use differences or cointegration framework
+Novus,Сир твердий,hard_cheese,pchip,,low,Use differences or cointegration framework
+Novus,Сир твердий,hard_cheese,real,,low,Use differences or cointegration framework
+Novus,Сметана,sour_cream,linear,,low,Use differences or cointegration framework
+Novus,Сметана,sour_cream,pchip,,low,Use differences or cointegration framework
+Novus,Сметана,sour_cream,real,,low,Use differences or cointegration framework
+ProZorro,Інше/невідомо,other,linear,,low,Use differences or cointegration framework
+ProZorro,Інше/невідомо,other,pchip,,low,Use differences or cointegration framework
+ProZorro,Інше/невідомо,other,real,0.7861119270195701,low,Use differences or cointegration framework | Use rolling / split sample / add break dummies
+ProZorro,Вершки,cream,linear,,low,Use differences or cointegration framework
+ProZorro,Вершки,cream,pchip,,low,Use differences or cointegration framework
+ProZorro,Вершки,cream,real,0.9734081631363928,low,No immediate adjustment
+ProZorro,Масло вершкове,butter,linear,,low,Use differences or cointegration framework
+ProZorro,Масло вершкове,butter,pchip,,low,Use differences or cointegration framework
+ProZorro,Масло вершкове,butter,real,0.2853529002093314,low,Use differences or cointegration framework | Use rolling / split sample / add break dummies
+ProZorro,Молоко питне,milk,linear,,low,Use differences or cointegration framework
+ProZorro,Молоко питне,milk,pchip,,low,Use differences or cointegration framework
+ProZorro,Молоко питне,milk,real,0.6086713229682428,low,Use differences or cointegration framework | Use rolling / split sample / add break dummies
+ProZorro,Сир кисломолочний,cottage_cheese,linear,,low,Use differences or cointegration framework
+ProZorro,Сир кисломолочний,cottage_cheese,pchip,,low,Use differences or cointegration framework
+ProZorro,Сир кисломолочний,cottage_cheese,real,0.8993396719651582,low,Use differences or cointegration framework | Increase lags / AR structure | Use rolling / split sample / add break dummies
+ProZorro,Сир твердий,hard_cheese,linear,,low,Use differences or cointegration framework
+ProZorro,Сир твердий,hard_cheese,pchip,,low,Use differences or cointegration framework
+ProZorro,Сир твердий,hard_cheese,real,0.8679784675363473,low,Use differences or cointegration framework | Use rolling / split sample / add break dummies
+ProZorro,Сметана,sour_cream,linear,,low,Use differences or cointegration framework
+ProZorro,Сметана,sour_cream,pchip,,low,Use differences or cointegration framework
+ProZorro,Сметана,sour_cream,real,0.720287448497464,low,Increase lags / AR structure | Use rolling / split sample / add break dummies
+ProducerUA,Вершки,cream,linear,1.2232482630620266e-13,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Вершки,cream,pchip,2.1057757258324647e-12,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Вершки,cream,real,1.2232482630620266e-13,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Кефір,milk,linear,7.904919238715609e-08,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Кефір,milk,pchip,1.558075202844631e-05,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Кефір,milk,real,7.904919238715609e-08,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Масло вершкове,butter,linear,5.212262173658309e-11,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Масло вершкове,butter,pchip,1.0298260686848128e-09,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Масло вершкове,butter,real,5.212262173658309e-11,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Молоко питне,milk,linear,5.586482343179356e-10,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Молоко питне,milk,pchip,5.42434866834351e-07,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Молоко питне,milk,real,5.586482343179356e-10,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Сир твердий,hard_cheese,linear,1.325621408300664e-09,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Сир твердий,hard_cheese,pchip,1.1981828712502717e-08,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Сир твердий,hard_cheese,real,1.325621408300664e-09,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Сметана,sour_cream,linear,7.244017882269817e-13,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Сметана,sour_cream,pchip,5.689667520808635e-10,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+ProducerUA,Сметана,sour_cream,real,7.244017882269817e-13,high,Use differences or cointegration framework | Increase lags / AR structure | Use robust SE / HAC | Use rolling / split sample / add break dummies
+Silpo,Інше/невідомо,milk,linear,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,other,linear,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,yogurt_dessert,linear,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,milk,pchip,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,other,pchip,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,yogurt_dessert,pchip,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,milk,real,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,other,real,,low,Use differences or cointegration framework
+Silpo,Інше/невідомо,yogurt_dessert,real,,low,Use differences or cointegration framework
+Silpo,Вершки,cream,linear,,low,Use differences or cointegration framework
+Silpo,Вершки,cream,pchip,,low,Use differences or cointegration framework
+Silpo,Вершки,cream,real,,low,Use differences or cointegration framework
+Silpo,Йогурт,milk,linear,,low,Use differences or cointegration framework
+Silpo,Йогурт,yogurt_dessert,linear,,low,Use differences or cointegration framework
+Silpo,Йогурт,milk,pchip,,low,Use differences or cointegration framework
+Silpo,Йогурт,yogurt_dessert,pchip,,low,Use differences or cointegration framework
+Silpo,Йогурт,milk,real,,low,Use differences or cointegration framework
+Silpo,Йогурт,yogurt_dessert,real,,low,Use differences or cointegration framework
+Silpo,Кефір,milk,linear,,low,Use differences or cointegration framework
+Silpo,Кефір,milk,pchip,,low,Use differences or cointegration framework
+Silpo,Кефір,milk,real,,low,Use differences or cointegration framework
+Silpo,Масло вершкове,butter,linear,,low,Use differences or cointegration framework
+Silpo,Масло вершкове,butter,pchip,,low,Use differences or cointegration framework
+Silpo,Масло вершкове,butter,real,,low,Use differences or cointegration framework
+Silpo,Молоко питне,milk,linear,,low,Use differences or cointegration framework
+Silpo,Молоко питне,milk,pchip,,low,Use differences or cointegration framework
+Silpo,Молоко питне,milk,real,,low,Use differences or cointegration framework
+Silpo,Сир кисломолочний,cottage_cheese,linear,,low,Use differences or cointegration framework
+Silpo,Сир кисломолочний,cottage_cheese,pchip,,low,Use differences or cointegration framework
+Silpo,Сир кисломолочний,cottage_cheese,real,,low,Use differences or cointegration framework
+Silpo,Сир твердий,hard_cheese,linear,,low,Use differences or cointegration framework
+Silpo,Сир твердий,hard_cheese,pchip,,low,Use differences or cointegration framework
+Silpo,Сир твердий,hard_cheese,real,,low,Use differences or cointegration framework
+Silpo,Сметана,sour_cream,linear,,low,Use differences or cointegration framework
+Silpo,Сметана,sour_cream,pchip,,low,Use differences or cointegration framework
+Silpo,Сметана,sour_cream,real,,low,Use differences or cointegration framework

@@ -1,0 +1,40 @@
+product,standardized_type,pair_left,pair_right,lag_days,corr,is_best_lag
+Масло вершкове,butter,EU,ProZorro,28,-0.44070593855241375,1
+Масло вершкове,butter,EU,ProducerUA,1,0.7908068169800365,1
+Масло вершкове,butter,EU,Silpo,10,-0.25693434003769594,1
+Масло вершкове,butter,Novus,Silpo,24,-0.6048939452964793,1
+Масло вершкове,butter,ProducerUA,Novus,1,-0.1049819509606759,1
+Масло вершкове,butter,ProducerUA,ProZorro,20,-0.09608571873513129,1
+Масло вершкове,butter,ProducerUA,Silpo,8,-0.2508594893128858,1
+Сир кисломолочний,cottage_cheese,Novus,Silpo,10,0.44922039851458306,1
+Вершки,cream,EU,ProZorro,1,0.18843455826795666,1
+Вершки,cream,EU,ProducerUA,5,0.34445442438330837,1
+Вершки,cream,EU,Silpo,20,-0.4042612208416311,1
+Вершки,cream,Novus,Silpo,23,0.3696569431871244,1
+Вершки,cream,ProducerUA,Novus,10,0.19692193365974955,1
+Вершки,cream,ProducerUA,ProZorro,9,-0.08444260136425842,1
+Вершки,cream,ProducerUA,Silpo,15,-0.25412341759401047,1
+Сир твердий,hard_cheese,EU,ProZorro,11,-0.26333701523095143,1
+Сир твердий,hard_cheese,EU,ProducerUA,27,0.686007360451993,1
+Сир твердий,hard_cheese,EU,Silpo,24,-0.47036741987526826,1
+Сир твердий,hard_cheese,Novus,Silpo,7,-0.4139767649030091,1
+Сир твердий,hard_cheese,ProducerUA,ConsumerUA,1,0.9861527112372024,1
+Сир твердий,hard_cheese,ProducerUA,Novus,30,-0.35218643143168815,1
+Сир твердий,hard_cheese,ProducerUA,ProZorro,30,-0.112574663105113,1
+Сир твердий,hard_cheese,ProducerUA,Silpo,16,-0.42088622791084473,1
+Інше/невідомо,milk,EU,Silpo,10,0.38129618404588617,1
+Кефір,milk,ProducerUA,Silpo,1,-0.4427213767975084,1
+Молоко питне,milk,EU,ProZorro,27,0.27851078423532943,1
+Молоко питне,milk,EU,ProducerUA,27,0.7065668481492933,1
+Молоко питне,milk,EU,Silpo,8,-0.39872005522637316,1
+Молоко питне,milk,Novus,Silpo,28,0.6180017302836935,1
+Молоко питне,milk,ProducerUA,ConsumerUA,1,0.9918066746547143,1
+Молоко питне,milk,ProducerUA,Novus,10,0.4093047790827283,1
+Молоко питне,milk,ProducerUA,ProZorro,19,-0.15415420640938843,1
+Молоко питне,milk,ProducerUA,Silpo,18,-0.3368524146103822,1
+Інше/невідомо,other,EU,ProZorro,28,0.8726166637704476,1
+Інше/невідомо,other,EU,Silpo,9,-0.5721977316688752,1
+Сметана,sour_cream,ProducerUA,ConsumerUA,1,0.9940901205039061,1
+Сметана,sour_cream,ProducerUA,ProZorro,14,0.09401258045745899,1
+Сметана,sour_cream,ProducerUA,Silpo,14,-0.29948795703794495,1
+Йогурт,yogurt_dessert,Novus,Silpo,21,-0.4606910370307454,1

@@ -1,0 +1,9 @@
+standardized_type,bundle_ua_core,bundle_benchmark,bundle_procurement,bundle_retail,available_series,possible_models,n_weeks_min,n_weeks_max
+butter,ProducerUA,EU,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"EU, Novus, ProZorro, ProducerUA, Silpo","ARDL, ECM, NARDL, NEIO_proxy, VECM",8,257
+cottage_cheese,ProducerUA,,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"Novus, ProZorro, Silpo",NEIO_proxy,8,40
+cream,ProducerUA,EU,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"EU, Novus, ProZorro, ProducerUA, Silpo","ARDL, ECM, NARDL, NEIO_proxy, VECM",8,257
+hard_cheese,ProducerUA+ConsumerUA,EU,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"ConsumerUA, EU, Novus, ProZorro, ProducerUA, Silpo","ARDL, ECM, NARDL, NEIO_proxy, VECM",8,261
+milk,ProducerUA+ConsumerUA,EU+CME,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"CME, ConsumerUA, EU, Novus, ProZorro, ProducerUA, Silpo","ARDL, ECM, NARDL, NEIO_proxy, VECM",8,261
+other,ProducerUA,EU,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"EU, Novus, ProZorro, Silpo","ARDL, NARDL, NEIO_proxy, VECM",8,212
+sour_cream,ProducerUA+ConsumerUA,,ProZorro(unit_price+expected+initial+current+region),Silpo(price_type+discounts) + Novus(timestamp_dedupe),"ConsumerUA, Novus, ProZorro, ProducerUA, Silpo",NEIO_proxy,8,261
+yogurt_dessert,ProducerUA,,,Silpo(price_type+discounts) + Novus(timestamp_dedupe),"Novus, Silpo",NEIO_proxy,8,10

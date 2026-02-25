@@ -1,0 +1,4 @@
+standardized_type,y_series_source,x_series_sources,frequency,sample_period,lags_selected,short_run_coef,long_run_coef,ect_coef,ect_pvalue,diagnostics_flags,interpretation_note
+cream,ProZorro,EU,weekly,2025-04-15..2026-01-06,"dy(1), dx(0), ect(1)",0.43295210857306066,0.24203147655261692,-0.9167713338060415,1.875767834348819e-15,HAC SE applied,Negative significant ECT indicates convergence to long-run equilibrium.
+hard_cheese,ProZorro,EU,weekly,2025-04-08..2026-01-06,"dy(1), dx(0), ect(1)",-0.17116782947042247,-0.8152110388071305,-0.6376969703823614,0.00029942260609903444,HAC SE applied,Negative significant ECT indicates convergence to long-run equilibrium.
+milk,ProZorro,EU,weekly,2025-04-08..2026-01-06,"dy(1), dx(0), ect(1)",0.7517341425344837,0.8584340883413262,-0.7845430609440491,1.2485334246382707e-10,HAC SE applied,Negative significant ECT indicates convergence to long-run equilibrium.

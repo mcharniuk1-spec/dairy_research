@@ -1,0 +1,46 @@
+source,key,n_obs,missing_value_share,duplicate_date_cnt,outlier_iqr_cnt,date_min,date_max
+chain_weekly,"('butter', 'Europe', 'benchmark_eu')",212,0.0,0,0,2021-12-28,2026-01-13
+chain_weekly,"('butter', 'Novus', 'retail_observed')",9,0.0,0,0,2025-11-04,2026-01-06
+chain_weekly,"('butter', 'Producer_UA', 'upstream')",257,0.0,0,0,2021-01-26,2025-12-23
+chain_weekly,"('butter', 'Prozorro', 'institutional_procurement')",40,0.0,0,0,2025-04-08,2026-01-06
+chain_weekly,"('butter', 'Silpo', 'retail_observed')",8,0.0,0,0,2025-10-21,2025-12-09
+chain_weekly,"('cottage_cheese', 'Novus', 'retail_observed')",9,0.0,0,0,2025-11-04,2026-01-06
+chain_weekly,"('cottage_cheese', 'Prozorro', 'institutional_procurement')",40,0.0,0,1,2025-04-08,2026-01-06
+chain_weekly,"('cottage_cheese', 'Silpo', 'retail_observed')",8,0.0,0,0,2025-10-21,2025-12-09
+chain_weekly,"('cream', 'Europe', 'benchmark_eu')",212,0.0,0,0,2021-12-28,2026-01-13
+chain_weekly,"('cream', 'Novus', 'retail_observed')",8,0.0,0,1,2025-11-04,2026-01-06
+chain_weekly,"('cream', 'Producer_UA', 'upstream')",257,0.0,0,0,2021-01-26,2025-12-23
+chain_weekly,"('cream', 'Prozorro', 'institutional_procurement')",39,0.0,0,0,2025-04-15,2026-01-06
+chain_weekly,"('cream', 'Silpo', 'retail_observed')",8,0.0,0,0,2025-10-21,2025-12-09
+chain_weekly,"('hard_cheese', 'Consumer_UA', 'downstream_consumer')",261,0.0,0,0,2021-01-26,2026-01-20
+chain_weekly,"('hard_cheese', 'Europe', 'benchmark_eu')",212,0.0,0,5,2021-12-28,2026-01-13
+chain_weekly,"('hard_cheese', 'Novus', 'retail_observed')",9,0.0,0,0,2025-11-04,2026-01-06
+chain_weekly,"('hard_cheese', 'Producer_UA', 'upstream')",257,0.0,0,0,2021-01-26,2025-12-23
+chain_weekly,"('hard_cheese', 'Prozorro', 'institutional_procurement')",40,0.0,0,1,2025-04-08,2026-01-06
+chain_weekly,"('hard_cheese', 'Silpo', 'retail_observed')",8,0.0,0,1,2025-10-21,2025-12-09
+chain_weekly,"('milk', 'CME_III', 'benchmark_us_anchor')",214,0.0,0,0,2021-12-28,2026-01-27
+chain_weekly,"('milk', 'Consumer_UA', 'downstream_consumer')",261,0.0,0,0,2021-01-26,2026-01-20
+chain_weekly,"('milk', 'Europe', 'benchmark_eu')",212,0.0,0,1,2021-12-28,2026-01-13
+chain_weekly,"('milk', 'Novus', 'retail_observed')",9,0.0,0,1,2025-11-04,2026-01-06
+chain_weekly,"('milk', 'Producer_UA', 'upstream')",257,0.0,0,0,2021-01-26,2025-12-23
+chain_weekly,"('milk', 'Prozorro', 'institutional_procurement')",40,0.0,0,0,2025-04-08,2026-01-06
+chain_weekly,"('milk', 'Silpo', 'retail_observed')",8,0.0,0,0,2025-10-21,2025-12-09
+chain_weekly,"('other', 'Europe', 'benchmark_eu')",212,0.0,0,0,2021-12-28,2026-01-13
+chain_weekly,"('other', 'Novus', 'retail_observed')",7,0.0,0,1,2025-11-04,2026-01-06
+chain_weekly,"('other', 'Prozorro', 'institutional_procurement')",40,0.0,0,0,2025-04-08,2026-01-06
+chain_weekly,"('other', 'Silpo', 'retail_observed')",8,0.0,0,2,2025-10-21,2025-12-09
+chain_weekly,"('sour_cream', 'Consumer_UA', 'downstream_consumer')",261,0.0,0,0,2021-01-26,2026-01-20
+chain_weekly,"('sour_cream', 'Novus', 'retail_observed')",9,0.0,0,2,2025-11-04,2026-01-06
+chain_weekly,"('sour_cream', 'Producer_UA', 'upstream')",257,0.0,0,0,2021-01-26,2025-12-23
+chain_weekly,"('sour_cream', 'Prozorro', 'institutional_procurement')",40,0.0,0,0,2025-04-08,2026-01-06
+chain_weekly,"('sour_cream', 'Silpo', 'retail_observed')",8,0.0,0,0,2025-10-21,2025-12-09
+chain_weekly,"('yogurt_dessert', 'Novus', 'retail_observed')",9,0.0,0,0,2025-11-04,2026-01-06
+chain_weekly,"('yogurt_dessert', 'Silpo', 'retail_observed')",8,0.0,0,0,2025-10-21,2025-12-09
+silpo_daily,"('butter', 'Silpo')",48,0.0,0,1,2025-10-21,2025-12-13
+silpo_daily,"('cottage_cheese', 'Silpo')",48,0.0,0,0,2025-10-21,2025-12-13
+silpo_daily,"('cream', 'Silpo')",48,0.0,0,0,2025-10-21,2025-12-13
+silpo_daily,"('hard_cheese', 'Silpo')",48,0.0,0,1,2025-10-21,2025-12-13
+silpo_daily,"('milk', 'Silpo')",48,0.0,0,0,2025-10-21,2025-12-13
+silpo_daily,"('other', 'Silpo')",54,0.0,0,6,2025-10-21,2025-12-13
+silpo_daily,"('sour_cream', 'Silpo')",48,0.0,0,0,2025-10-21,2025-12-13
+silpo_daily,"('yogurt_dessert', 'Silpo')",48,0.0,0,0,2025-10-21,2025-12-13
