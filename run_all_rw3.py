@@ -26,6 +26,7 @@ from graph_worker import (
     run_corr_lag_graphs,
     run_brand_region_graphs,
 )
+from total_run_builder import build_total_run
 
 
 INTERPRETATION_GUIDE = [
@@ -373,11 +374,19 @@ def main() -> None:
         module_blocks_df=table_map["Module_Block_Interpretation"],
     )
 
+    total_run_dir: Path | None = None
+    try:
+        total_run_dir = build_total_run()
+    except Exception as exc:
+        print(f"\nWARNING: Total Run build failed: {exc}")
+
     print("\nRW3 separate modular pipeline finished.")
     print(f"Outputs root: {Path(__file__).resolve().parent / 'outputs'}")
     print(f"Run-all summary xlsx: {xlsx}")
     print(f"Run-all summary pdf: {pdf}")
     print(f"Run-all summary md: {md}")
+    if total_run_dir is not None:
+        print(f"Total Run output dir: {total_run_dir}")
 
 
 if __name__ == "__main__":
