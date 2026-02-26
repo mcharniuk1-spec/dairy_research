@@ -2,3 +2,7 @@
 
 .idea/
 __pycache__/
+
+# large local bundles
+graphics.zip
+*.zip
