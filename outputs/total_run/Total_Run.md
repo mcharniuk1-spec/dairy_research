@@ -207,9 +207,9 @@
 | T0189 | primary_chain_summary | primary_chain_consolidated.xlsx | Rule_Documentation | other | 1 | 6 | General output table. Interpret with module context and linked diagnostic/model outputs. |
 | T0190 | run_all_summary | run_all_rw3_summary.xlsx | Run_All_Summary | other | 19 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
 | T0191 | run_all_summary | run_all_rw3_summary.xlsx | Artifacts_By_Module | other | 19 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0192 | run_all_summary | run_all_rw3_summary.xlsx | Sheets_Index | other | 83 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0193 | run_all_summary | run_all_rw3_summary.xlsx | Tests_Interpretation | other | 7 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0194 | run_all_summary | run_all_rw3_summary.xlsx | Results_Interpretation | model_results | 21 | 9 | Model results table. Mean /coef/=1.8333; interpret sign and magnitude jointly with diagnostics. |
+| T0192 | run_all_summary | run_all_rw3_summary.xlsx | Sheets_Index | other | 79 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0193 | run_all_summary | run_all_rw3_summary.xlsx | Tests_Interpretation | other | 9 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0194 | run_all_summary | run_all_rw3_summary.xlsx | Results_Interpretation | model_results | 17 | 9 | Model results table. Mean /coef/=3.9332; interpret sign and magnitude jointly with diagnostics. |
 | T0195 | run_all_summary | run_all_rw3_summary.xlsx | Module_Block_Interpretation | other | 19 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
 | T0196 | sheet_cme | sheet_cme_output.xlsx | raw | raw_clean | 1023 | 2 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
 | T0197 | sheet_cme | sheet_cme_output.xlsx | clean | raw_clean | 1023 | 9 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
@@ -10866,7 +10866,7 @@ _No rows_
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Results_Interpretation
 
 - Category: model_results
-- Interpretation: Model results table. Mean |coef|=1.8333; interpret sign and magnitude jointly with diagnostics.
+- Interpretation: Model results table. Mean |coef|=3.9332; interpret sign and magnitude jointly with diagnostics.
 - Rows: 17
 - Cols: 9
 
