@@ -79,6 +79,6 @@
 
 ## Graphs
 
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_brand_region/brand_hhi.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_brand_region/brand_promo_intensity.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_brand_region/prozorro_region_median.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region/brand_hhi.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region/brand_promo_intensity.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region/prozorro_region_median.png

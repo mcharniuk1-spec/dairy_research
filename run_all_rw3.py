@@ -236,10 +236,13 @@ def _build_combined_summary(logs: List[Dict[str, str]], outputs_root: Path) -> T
         out_dir = Path(out_dir_txt)
         if not out_dir.exists():
             continue
-        xlsx_files = sorted([f.name for f in out_dir.glob("*.xlsx")])
-        pdf_files = sorted([f.name for f in out_dir.glob("*.pdf")])
-        md_files = sorted([f.name for f in out_dir.glob("*.md")])
-        png_count = len(list(out_dir.glob("*.png")))
+        xlsx_paths = sorted(out_dir.rglob("*.xlsx"))
+        pdf_paths = sorted(out_dir.rglob("*.pdf"))
+        md_paths = sorted(out_dir.rglob("*.md"))
+        png_count = len(list(out_dir.rglob("*.png")))
+        xlsx_files = [str(p.relative_to(out_dir)) for p in xlsx_paths]
+        pdf_files = [str(p.relative_to(out_dir)) for p in pdf_paths]
+        md_files = [str(p.relative_to(out_dir)) for p in md_paths]
         artifact_rows.append(
             {
                 "module": module,
@@ -257,7 +260,7 @@ def _build_combined_summary(logs: List[Dict[str, str]], outputs_root: Path) -> T
         module_test_notes: List[str] = []
         module_result_notes: List[str] = []
 
-        for xf in out_dir.glob("*.xlsx"):
+        for xf in xlsx_paths:
             try:
                 xl = pd.ExcelFile(xf)
             except Exception:
@@ -270,7 +273,7 @@ def _build_combined_summary(logs: List[Dict[str, str]], outputs_root: Path) -> T
                 sheet_rows.append(
                     {
                         "module": module,
-                        "xlsx_file": xf.name,
+                        "xlsx_file": str(xf.relative_to(out_dir)),
                         "sheet": sheet,
                         "rows": int(len(df)),
                         "cols": int(len(df.columns)),
@@ -279,11 +282,11 @@ def _build_combined_summary(logs: List[Dict[str, str]], outputs_root: Path) -> T
                     }
                 )
                 if _detect_tests(df):
-                    tr = _interpret_tests(module, xf.name, sheet, df)
+                    tr = _interpret_tests(module, str(xf.relative_to(out_dir)), sheet, df)
                     tests_rows.append(tr)
                     module_test_notes.append(str(tr["interpretation"]))
                 if _detect_model_results(df):
-                    rr = _interpret_results(module, xf.name, sheet, df)
+                    rr = _interpret_results(module, str(xf.relative_to(out_dir)), sheet, df)
                     result_rows.append(rr)
                     module_result_notes.append(str(rr["interpretation"]))
 
@@ -336,12 +339,12 @@ def main() -> None:
     for src in sheet_sources:
         _run_step(f"sheet_{src}", lambda s=src: run_sheet_module(s), logs)
 
+    _run_step("model_short_chain_regional", run_short_chain_regional, logs)
     _run_step("model_ardl", run_ardl, logs)
     _run_step("model_ecm", run_ecm, logs)
     _run_step("model_nardl", run_nardl, logs)
     _run_step("model_vecm", run_vecm, logs)
     _run_step("model_discounts", run_discounts, logs)
-    _run_step("model_short_chain_regional", run_short_chain_regional, logs)
     _run_step("model_intersection_bidirectional", run_intersection_bidirectional, logs)
     _run_step("model_forecast_knn", run_forecast_knn_synthetic, logs)
 

@@ -60,5 +60,5 @@
 
 ## Graphs
 
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_correlations_lags/corr_matrix_sources.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_correlations_lags/lag_best_bar.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_correlations_lags/corr_matrix_sources.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_correlations_lags/lag_best_bar.png

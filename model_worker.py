@@ -21,6 +21,7 @@ from statsmodels.tsa.stattools import grangercausalitytests
 
 import common
 import rw2_extended_mapping_pipeline as rw2
+import vpt_primary_chain as vpt
 
 
 def _coef_bar(df: pd.DataFrame, x_col: str, y_col: str, title: str, out_path: Path, top_n: int = 20) -> Path:
@@ -132,99 +133,101 @@ def _pivot_product_daily(
 
 
 def run_ardl() -> Path:
-    _, _, _, _, model_series = _prep()
-    ardl = rw2.build_ardl_summary(model_series)
-    out_dir = common.get_output_dir("model_ardl")
-    img = _coef_bar(ardl, "standardized_type", "short_run_coef", "ARDL Short-run Coefficients", out_dir / "ardl_short_run.png")
-    xlsx = out_dir / "model_ardl_output.xlsx"
-    common.write_tables_xlsx(xlsx, {"ARDL_Summary": ardl, "Model_Series": model_series})
-    pdf = out_dir / "model_ardl_report.pdf"
-    common.save_pdf_report(
-        pdf,
-        "ARDL Module",
+    out_dir = vpt.run_primary_model_family_report("ARDL")
+    common.print_block(
+        "MODEL ARDL",
         [
-            f"rows={len(ardl)}",
-            "Interpretation option: short_run_coef and long_run_coef by standardized type.",
+            f"output_dir: {out_dir}",
+            "Primary chain rule: ProducerUA -> ProZorro -> Retail (Silpo/Novus/Combined).",
         ],
-        {"ARDL_Summary": ardl},
-        [img],
     )
-    common.print_block("MODEL ARDL", [f"xlsx: {xlsx}", f"pdf: {pdf}", f"rows: {len(ardl)}"])
     return out_dir
 
 
 def run_ecm() -> Path:
-    _, _, _, _, model_series = _prep()
-    ardl = rw2.build_ardl_summary(model_series)
-    ecm = rw2.build_ecm_summary(model_series, ardl)
-    out_dir = common.get_output_dir("model_ecm")
-    img = _coef_bar(ecm, "standardized_type", "ect_coef", "ECM Speed of Adjustment (ECT)", out_dir / "ecm_ect.png")
-    xlsx = out_dir / "model_ecm_output.xlsx"
-    common.write_tables_xlsx(xlsx, {"ECM_Summary": ecm, "ARDL_Summary": ardl})
-    pdf = out_dir / "model_ecm_report.pdf"
-    common.save_pdf_report(
-        pdf,
-        "ECM Module",
+    out_dir = vpt.run_primary_model_family_report("ECM")
+    common.print_block(
+        "MODEL ECM",
         [
-            f"rows={len(ecm)}",
-            "Interpretation option: negative significant ECT implies convergence.",
+            f"output_dir: {out_dir}",
+            "ECM estimated only when series are I(1) and cointegrated; ECT sign/significance retained in output.",
         ],
-        {"ECM_Summary": ecm},
-        [img],
     )
-    common.print_block("MODEL ECM", [f"xlsx: {xlsx}", f"pdf: {pdf}", f"rows: {len(ecm)}"])
     return out_dir
 
 
 def run_nardl() -> Path:
-    _, _, _, _, model_series = _prep()
-    nardl = rw2.build_nardl_summary(model_series)
-    out_dir = common.get_output_dir("model_nardl")
-    img1 = _coef_bar(nardl, "standardized_type", "short_run_coef", "NARDL Short-run Coefficients", out_dir / "nardl_short_run.png")
-    img2 = _coef_bar(nardl, "standardized_type", "long_run_coef", "NARDL Long-run Asymmetry Proxy", out_dir / "nardl_long_run.png")
-    xlsx = out_dir / "model_nardl_output.xlsx"
-    common.write_tables_xlsx(xlsx, {"NARDL_Summary": nardl})
-    pdf = out_dir / "model_nardl_report.pdf"
-    common.save_pdf_report(
-        pdf,
-        "NARDL Module",
+    out_dir = vpt.run_primary_model_family_report("NARDL")
+    common.print_block(
+        "MODEL NARDL",
         [
-            f"rows={len(nardl)}",
-            "Interpretation option: asymmetry_short_p and asymmetry_long_p test asymmetric pass-through.",
+            f"output_dir: {out_dir}",
+            "Asymmetry from positive/negative shock decomposition is reported in primary chain outputs.",
         ],
-        {"NARDL_Summary": nardl},
-        [img1, img2],
     )
-    common.print_block("MODEL NARDL", [f"xlsx: {xlsx}", f"pdf: {pdf}", f"rows: {len(nardl)}"])
     return out_dir
 
 
 def run_vecm() -> Path:
-    _, _, _, _, model_series = _prep()
-    vecm = rw2.build_vecm_summary(model_series)
-    out_dir = common.get_output_dir("model_vecm")
-    img = _coef_bar(vecm, "system", "adjustment_alpha_abs_mean", "VECM Adjustment Alpha (abs mean)", out_dir / "vecm_alpha.png")
-    xlsx = out_dir / "model_vecm_output.xlsx"
-    common.write_tables_xlsx(xlsx, {"VECM_Summary": vecm})
-    pdf = out_dir / "model_vecm_report.pdf"
-    common.save_pdf_report(
-        pdf,
-        "VECM Module",
+    out_dir = vpt.run_primary_model_family_report("VECM")
+    common.print_block(
+        "MODEL VECM",
         [
-            f"rows={len(vecm)}",
-            "Interpretation option: cointegration_rank>0 supports long-run system linkage.",
+            f"output_dir: {out_dir}",
+            "VECM now constrained to primary triplet (ProducerUA, ProZorro, Retail) by standardized_type/retailer.",
         ],
-        {"VECM_Summary": vecm},
-        [img],
     )
-    common.print_block("MODEL VECM", [f"xlsx: {xlsx}", f"pdf: {pdf}", f"rows: {len(vecm)}"])
     return out_dir
 
 
 def run_discounts() -> Path:
-    cleaned, all_daily, *_ = _prep()
-    brand_io = rw2.build_brand_io_metrics(cleaned["Silpo"], cleaned["Novus"])
-    occ, depth, trans = rw2.build_silpo_discount_modules(cleaned["Silpo"], cleaned["Novus"], all_daily, brand_io)
+    # Discount module is derived from primary-chain outputs (observed vs promo-controlled),
+    # so ConsumerUA/EU/CME are not used here.
+    cons_path = common.OUTPUT_ROOT / "primary_chain_summary" / "primary_chain_consolidated.xlsx"
+    if not cons_path.exists():
+        vpt.run_primary_chain_pipeline(freq="weekly")
+    cons = pd.read_excel(cons_path, sheet_name="Consolidated_ModelCoefficients") if cons_path.exists() else pd.DataFrame()
+
+    base = cons[
+        (cons["retailer"] == "silpo")
+        & (cons["link"] == "prozorro_to_retail")
+    ].copy() if not cons.empty else pd.DataFrame()
+    occ = pd.DataFrame()
+    depth = pd.DataFrame()
+    if not base.empty:
+        obs = base[base["promo_variant"] == "observed"].copy()
+        reg = base[base["promo_variant"] == "promo_controlled"].copy()
+        k = ["standardized_type", "model_family", "link"]
+        m = obs.merge(reg, on=k, suffixes=("_obs", "_reg"), how="inner")
+        trans = pd.DataFrame(
+            {
+                "standardized_type": m["standardized_type"],
+                "model_family": m["model_family"],
+                "link": m["link"],
+                "coef_observed": m["sr_coef_obs"],
+                "coef_promo_controlled": m["sr_coef_reg"],
+                "delta_promo_control": m["sr_coef_reg"] - m["sr_coef_obs"],
+                "note": "positive delta means stronger transmission after promo control",
+            }
+        )
+        occ = pd.DataFrame(
+            {
+                "standardized_type": m["standardized_type"],
+                "promo_signal": np.where(m["delta_promo_control"].abs() > 0.02, 1, 0),
+                "definition": "1 if |promo-controlled - observed| > 0.02",
+            }
+        )
+        depth = pd.DataFrame(
+            {
+                "standardized_type": m["standardized_type"],
+                "promo_depth_proxy": m["delta_promo_control"].abs(),
+                "definition": "absolute difference between promo-controlled and observed SR coefficients",
+            }
+        )
+    else:
+        trans = pd.DataFrame([{"note": "No primary-chain silpo rows available to build discount comparison."}])
+        occ = pd.DataFrame([{"note": "No rows"}])
+        depth = pd.DataFrame([{"note": "No rows"}])
     out_dir = common.get_output_dir("model_discounts")
     img1 = _coef_bar(
         trans,
@@ -257,7 +260,7 @@ def run_discounts() -> Path:
             f"occ_rows={len(occ)}",
             f"depth_rows={len(depth)}",
             f"trans_rows={len(trans)}",
-            "Interpretation option: compare no-promo vs promo-controlled coefficients.",
+            "Interpretation option: module compares observed vs promo-controlled primary-chain transmission (Silpo only).",
         ],
         {
             "Silpo_Transmission_PromoCtrl": trans,
@@ -271,55 +274,20 @@ def run_discounts() -> Path:
 
 
 def run_short_chain_regional() -> Path:
-    cleaned, all_daily, *_ = _prep()
-    lag = rw2.build_lag_matrix_all(all_daily)
-    lag_best, lag_profiles = rw2.build_lag_outputs(lag)
-    short_sum, short_details = rw2.build_short_run_models(all_daily, lag_best)
-    chain_sum, chain_details = rw2.build_chain_effects(all_daily, lag_best)
-    pz_models, pz_matrix = rw2.build_prozorro_regional_modules(cleaned["ProZorro"], all_daily)
-
-    out_dir = common.get_output_dir("model_short_chain_regional")
-    img1 = _coef_bar(short_sum, "standardized_type", "producer_effect", "Short-run Producer Effect", out_dir / "short_run_producer_effect.png")
-    img2 = _coef_bar(chain_sum, "product", "coef_retail_from_producer", "Chain: Retail from Producer", out_dir / "chain_retail_from_producer.png")
-    img3 = _coef_bar(pz_models, "product", "coef_dlog_producer", "Prozorro Regional: Producer Shock Effect", out_dir / "prozorro_regional_producer_effect.png")
-
-    xlsx = out_dir / "model_short_chain_regional_output.xlsx"
-    common.write_tables_xlsx(
-        xlsx,
-        {
-            "LagMatrix_ByProduct": lag_best,
-            "LagProfiles_ByProduct": lag_profiles,
-            "Models_ShortRun_Summary": short_sum,
-            "ShortRun_Details": short_details,
-            "Chain_Effects_Summary": chain_sum,
-            "Chain_Effects_Details": chain_details,
-            "Prozorro_Regional_Models": pz_models,
-            "Prozorro_Regional_Effects_Matrix": pz_matrix,
-        },
-    )
-
-    pdf = out_dir / "model_short_chain_regional_report.pdf"
-    common.save_pdf_report(
-        pdf,
-        "Short-run, Chain, and Regional Modules",
+    out_dir = vpt.run_primary_chain_pipeline(freq="weekly")
+    common.print_block(
+        "MODEL SHORT/CHAIN/REGIONAL",
         [
-            f"short_run_rows={len(short_sum)}",
-            f"chain_rows={len(chain_sum)}",
-            f"prozorro_regional_rows={len(pz_models)}",
-            "Interpretation option: compare lag-selected short-run elasticities and chain/regional differentials.",
+            f"output_dir: {out_dir}",
+            "Primary chain refactor applied: ProducerUA -> ProZorro -> Retail by standardized_type and retailer variant.",
         ],
-        {
-            "Models_ShortRun_Summary": short_sum,
-            "Chain_Effects_Summary": chain_sum,
-            "Prozorro_Regional_Models": pz_models,
-        },
-        [img1, img2, img3],
     )
-    common.print_block("MODEL SHORT/CHAIN/REGIONAL", [f"xlsx: {xlsx}", f"pdf: {pdf}"])
     return out_dir
 
 
 def run_intersection_bidirectional() -> Path:
+    # Secondary module only: Silpo-Novus intersection and robustness checks.
+    # ConsumerUA/EU/CME are used only as optional controls/robustness variables here.
     cleaned, all_daily, *_ = _prep()
     eff = _effective_daily_prices(all_daily)
     if eff.empty:
@@ -328,18 +296,6 @@ def run_intersection_bidirectional() -> Path:
         note = pd.DataFrame([{"note": "No daily effective series available."}])
         common.write_tables_xlsx(xlsx, {"Bidirectional_Results": note})
         return out_dir
-
-    pairs = [
-        ("ProducerUA", "ProZorro"),
-        ("ProducerUA", "Silpo"),
-        ("ProducerUA", "Novus"),
-        ("ProducerUA", "ConsumerUA"),
-        ("ProZorro", "Silpo"),
-        ("ProZorro", "Novus"),
-        ("Silpo", "ConsumerUA"),
-        ("Novus", "ConsumerUA"),
-        ("Silpo", "Novus"),
-    ]
 
     bidir_rows: List[Dict[str, object]] = []
     granger_rows: List[Dict[str, object]] = []
@@ -351,113 +307,101 @@ def run_intersection_bidirectional() -> Path:
             eff,
             product=product,
             standardized_type=standardized_type,
-            sources=["ProducerUA", "ConsumerUA", "ProZorro", "Silpo", "Novus"],
+            sources=["Silpo", "Novus", "ConsumerUA", "EU", "CME", "ProducerUA"],
         )
-        if p.empty:
+        if p.empty or not {"Silpo", "Novus"}.issubset(set(p.columns)):
             continue
         lp = np.log(p.where(p > 0))
         dlp = lp.diff()
 
-        for left, right in pairs:
-            if left not in dlp.columns or right not in dlp.columns:
-                continue
-            for src, tgt in [(left, right), (right, left)]:
-                y = dlp[tgt]
-                x = dlp[src]
-                lag, corr = _best_lag(y, x, max_lag=30, min_obs=20)
-                frame = pd.DataFrame(
-                    {
-                        "y": y,
-                        "lag_y": y.shift(1),
-                        "x_lag": x.shift(lag),
-                    }
-                )
-                fit, used = _safe_ols(frame["y"], frame[["lag_y", "x_lag"]], hac_lags=3)
-                if fit is None:
-                    continue
-                bidir_rows.append(
-                    {
-                        "product": product,
-                        "standardized_type": standardized_type,
-                        "source_from": src,
-                        "source_to": tgt,
-                        "best_lag_days": int(lag),
-                        "corr_at_best_lag": float(corr),
-                        "coef": float(fit.params.get("x_lag", np.nan)),
-                        "pvalue": float(fit.pvalues.get("x_lag", np.nan)),
-                        "lag_y_coef": float(fit.params.get("lag_y", np.nan)),
-                        "n_obs": int(len(used)),
-                        "r2": float(fit.rsquared),
-                    }
-                )
-                try:
-                    gc = pd.concat([dlp[tgt], dlp[src]], axis=1).dropna()
-                    gc.columns = ["y", "x"]
-                    if len(gc) >= 35:
-                        with warnings.catch_warnings():
-                            warnings.simplefilter("ignore", FutureWarning)
-                            res = grangercausalitytests(gc[["y", "x"]], maxlag=7, verbose=False)
-                        pvals = [float(res[k][0]["ssr_ftest"][1]) for k in res]
-                        granger_rows.append(
-                            {
-                                "product": product,
-                                "standardized_type": standardized_type,
-                                "source_from": src,
-                                "source_to": tgt,
-                                "granger_min_p_1to7": float(np.nanmin(pvals)) if pvals else np.nan,
-                                "granger_best_lag_1to7": int(np.nanargmin(pvals) + 1) if pvals else np.nan,
-                                "n_obs": int(len(gc)),
-                            }
-                        )
-                except Exception:
-                    pass
-
-        combo_defs = {
-            "silpo_only": ("Silpo", ["ProducerUA", "ProZorro", "ConsumerUA"]),
-            "novus_only": ("Novus", ["ProducerUA", "ProZorro", "ConsumerUA"]),
-            "silpo_novus_intersection": ("RetailCombined", ["ProducerUA", "ProZorro", "ConsumerUA", "Silpo", "Novus"]),
-        }
-        retail_combined = p[["Silpo", "Novus"]].mean(axis=1) if {"Silpo", "Novus"}.intersection(set(p.columns)) else pd.Series(dtype=float)
-        dlp2 = dlp.copy()
-        if not retail_combined.empty:
-            dlp2["RetailCombined"] = np.log(retail_combined.where(retail_combined > 0)).diff()
-
-        for combo_name, (y_source, x_sources) in combo_defs.items():
-            if y_source not in dlp2.columns:
-                continue
-            y = dlp2[y_source]
-            frame = pd.DataFrame({"y": y, "lag_y": y.shift(1)})
-            used_terms: List[str] = []
-            for xs in x_sources:
-                if xs not in dlp2.columns:
-                    continue
-                lag, _corr = _best_lag(y, dlp2[xs], max_lag=30, min_obs=20)
-                cname = f"x_{xs}_lag{lag}"
-                frame[cname] = dlp2[xs].shift(lag)
-                used_terms.append(cname)
-            if not used_terms:
-                continue
-            fit, used = _safe_ols(frame["y"], frame[["lag_y"] + used_terms], hac_lags=3)
+        # Bidirectional Silpo <-> Novus only (secondary module)
+        for src, tgt in [("Silpo", "Novus"), ("Novus", "Silpo")]:
+            y = dlp[tgt]
+            x = dlp[src]
+            lag, corr = _best_lag(y, x, max_lag=30, min_obs=20)
+            frame = pd.DataFrame({"y": y, "lag_y": y.shift(1), "x_lag": x.shift(lag)})
+            for ctrl in ["ConsumerUA", "EU", "CME", "ProducerUA"]:
+                if ctrl in dlp.columns:
+                    c_lag, _ = _best_lag(y, dlp[ctrl], max_lag=30, min_obs=20)
+                    frame[f"ctrl_{ctrl}_lag{c_lag}"] = dlp[ctrl].shift(c_lag)
+            xcols = [c for c in frame.columns if c != "y"]
+            fit, used = _safe_ols(frame["y"], frame[xcols], hac_lags=3)
             if fit is None:
                 continue
+            bidir_rows.append(
+                {
+                    "product": product,
+                    "standardized_type": standardized_type,
+                    "source_from": src,
+                    "source_to": tgt,
+                    "best_lag_days": int(lag),
+                    "corr_at_best_lag": float(corr),
+                    "coef": float(fit.params.get("x_lag", np.nan)),
+                    "pvalue": float(fit.pvalues.get("x_lag", np.nan)),
+                    "n_obs": int(len(used)),
+                    "r2": float(fit.rsquared),
+                    "module_role": "secondary_intersection_robustness",
+                }
+            )
+            try:
+                gc = pd.concat([dlp[tgt], dlp[src]], axis=1).dropna()
+                gc.columns = ["y", "x"]
+                if len(gc) >= 35:
+                    with warnings.catch_warnings():
+                        warnings.simplefilter("ignore", FutureWarning)
+                        res = grangercausalitytests(gc[["y", "x"]], maxlag=7, verbose=False)
+                    pvals = [float(res[k][0]["ssr_ftest"][1]) for k in res]
+                    granger_rows.append(
+                        {
+                            "product": product,
+                            "standardized_type": standardized_type,
+                            "source_from": src,
+                            "source_to": tgt,
+                            "granger_min_p_1to7": float(np.nanmin(pvals)) if pvals else np.nan,
+                            "granger_best_lag_1to7": int(np.nanargmin(pvals) + 1) if pvals else np.nan,
+                            "n_obs": int(len(gc)),
+                            "module_role": "secondary_intersection_robustness",
+                        }
+                    )
+            except Exception:
+                pass
+
+        # Combined intersection regression with optional secondary controls
+        retail_combined = p[["Silpo", "Novus"]].median(axis=1, skipna=True)
+        dlp2 = dlp.copy()
+        dlp2["RetailCombined"] = np.log(retail_combined.where(retail_combined > 0)).diff()
+        y = dlp2["RetailCombined"]
+        frame = pd.DataFrame({"y": y, "lag_y": y.shift(1)})
+        for src in ["Silpo", "Novus", "ConsumerUA", "EU", "CME", "ProducerUA"]:
+            if src not in dlp2.columns:
+                continue
+            lag, _ = _best_lag(y, dlp2[src], max_lag=30, min_obs=20)
+            term = f"x_{src}_lag{lag}"
+            frame[term] = dlp2[src].shift(lag)
+        xcols = [c for c in frame.columns if c != "y"]
+        fit, used = _safe_ols(frame["y"], frame[xcols], hac_lags=3)
+        if fit is not None:
             row = {
                 "product": product,
                 "standardized_type": standardized_type,
-                "combo_model": combo_name,
-                "y_source": y_source,
+                "combo_model": "silpo_novus_secondary_controls",
+                "y_source": "RetailCombined",
                 "n_obs": int(len(used)),
                 "r2": float(fit.rsquared),
                 "adj_r2": float(fit.rsquared_adj),
                 "coef_lag_y": float(fit.params.get("lag_y", np.nan)),
+                "module_role": "secondary_intersection_robustness",
             }
-            for t in used_terms:
+            for t in xcols:
+                if t == "lag_y":
+                    continue
                 row[f"coef_{t}"] = float(fit.params.get(t, np.nan))
                 row[f"p_{t}"] = float(fit.pvalues.get(t, np.nan))
                 combo_details.append(
                     {
                         "product": product,
                         "standardized_type": standardized_type,
-                        "combo_model": combo_name,
+                        "combo_model": "silpo_novus_secondary_controls",
                         "term": t,
                         "coef": float(fit.params.get(t, np.nan)),
                         "pvalue": float(fit.pvalues.get(t, np.nan)),
@@ -473,30 +417,30 @@ def run_intersection_bidirectional() -> Path:
     combo_det_df = pd.DataFrame(combo_details)
     corr_all = rw2.compute_correlations(all_daily)
     corr_core = corr_all[
-        corr_all["source_left"].isin(["ProducerUA", "ProZorro", "Silpo", "Novus", "ConsumerUA"])
-        & corr_all["source_right"].isin(["ProducerUA", "ProZorro", "Silpo", "Novus", "ConsumerUA"])
+        corr_all["source_left"].isin(["Silpo", "Novus", "ConsumerUA", "EU", "CME"])
+        & corr_all["source_right"].isin(["Silpo", "Novus", "ConsumerUA", "EU", "CME"])
     ].copy() if not corr_all.empty else pd.DataFrame()
 
     if bidir_df.empty:
-        bidir_df = pd.DataFrame([{"note": "Insufficient overlap for bidirectional regressions."}])
+        bidir_df = pd.DataFrame([{"note": "Insufficient Silpo-Novus overlap for bidirectional regressions."}])
     if combo_sum_df.empty:
-        combo_sum_df = pd.DataFrame([{"note": "Insufficient overlap for combination intersection models."}])
+        combo_sum_df = pd.DataFrame([{"note": "Insufficient overlap for combined secondary model."}])
     if granger_df.empty:
-        granger_df = pd.DataFrame([{"note": "Insufficient overlap for Granger tests."}])
+        granger_df = pd.DataFrame([{"note": "Insufficient overlap for Silpo-Novus Granger tests."}])
 
     out_dir = common.get_output_dir("model_intersection_bidirectional")
     img1 = _coef_bar(
         bidir_df,
         "source_from",
         "coef",
-        "Bidirectional Influence Coefficients",
+        "Secondary: Silpo-Novus Bidirectional Coefficients",
         out_dir / "bidirectional_coef.png",
     )
     img2 = _coef_bar(
         combo_det_df if not combo_det_df.empty else combo_sum_df,
         "combo_model" if "combo_model" in (combo_det_df.columns if not combo_det_df.empty else combo_sum_df.columns) else "note",
         "coef" if "coef" in combo_det_df.columns else "coef_lag_y",
-        "Intersection Combination Coefficients",
+        "Secondary Intersection Combination Coefficients",
         out_dir / "intersection_combo_coef.png",
     )
 
@@ -514,11 +458,11 @@ def run_intersection_bidirectional() -> Path:
     pdf = out_dir / "model_intersection_bidirectional_report.pdf"
     common.save_pdf_report(
         pdf,
-        "Intersection Bidirectional VPT Module",
+        "Secondary Intersection Module (Silpo-Novus + Controls)",
         [
             f"bidirectional_rows={len(bidir_df)}",
             f"combo_rows={len(combo_sum_df)}",
-            "Interpretation option: coefficient signs/magnitudes and granger_min_p_1to7 for both directions by product.",
+            "ConsumerUA/EU/CME are used only as secondary robustness controls in this module.",
         ],
         {
             "Bidirectional_Results": bidir_df,
@@ -771,6 +715,7 @@ def run_forecast_knn_synthetic() -> Path:
     coef_df = pd.DataFrame(coef_rows)
 
     consumer_link_df = pd.DataFrame()
+    ultimate_consumer_df = pd.DataFrame()
     if not synth_df.empty and not eff.empty:
         synth_prod = synth_df.groupby(["date", "product"], as_index=False)["synthetic_retail_price"].mean()
         cons = eff[eff["source"] == "ConsumerUA"].groupby(["date", "product"], as_index=False)["price_eff"].mean()
@@ -779,6 +724,7 @@ def run_forecast_knn_synthetic() -> Path:
             prod, on=["date", "product"], how="left"
         )
         rows = []
+        pred_rows = []
         for product, g in base.groupby("product", dropna=False):
             gg = g.sort_values("date").copy()
             gg["dlog_consumer"] = np.log(gg["consumer_price"].where(gg["consumer_price"] > 0)).diff()
@@ -795,6 +741,23 @@ def run_forecast_knn_synthetic() -> Path:
             fit, used = _safe_ols(m["y"], m[["lag_y", "x_synth_l1", "x_prod_l1"]], hac_lags=3)
             if fit is None:
                 continue
+            xfull = sm.add_constant(m[["lag_y", "x_synth_l1", "x_prod_l1"]], has_constant="add")
+            m["pred_dlog_consumer"] = fit.predict(xfull)
+            # Build ultimate consumer price path from predicted dlog around first valid observed point.
+            first_valid = gg.loc[m.index.min(), "consumer_price"] if m.index.min() in gg.index else np.nan
+            if pd.notna(first_valid) and first_valid > 0:
+                level = float(first_valid)
+                for idx, rr in m.iterrows():
+                    level = level * float(np.exp(rr["pred_dlog_consumer"]))
+                    pred_rows.append(
+                        {
+                            "date": gg.loc[idx, "date"] if idx in gg.index else idx,
+                            "product": product,
+                            "ultimate_consumer_price": level,
+                            "actual_consumer_price": float(gg.loc[idx, "consumer_price"]) if idx in gg.index and pd.notna(gg.loc[idx, "consumer_price"]) else np.nan,
+                            "synthetic_retail_price": float(gg.loc[idx, "synthetic_retail_price"]) if idx in gg.index and pd.notna(gg.loc[idx, "synthetic_retail_price"]) else np.nan,
+                        }
+                    )
             rows.append(
                 {
                     "product": product,
@@ -807,6 +770,7 @@ def run_forecast_knn_synthetic() -> Path:
                 }
             )
         consumer_link_df = pd.DataFrame(rows)
+        ultimate_consumer_df = pd.DataFrame(pred_rows)
 
     if forecast_sum_df.empty:
         forecast_sum_df = pd.DataFrame([{"note": "Insufficient overlap for Producer/Consumer forecast models."}])
@@ -818,6 +782,8 @@ def run_forecast_knn_synthetic() -> Path:
         coef_df = pd.DataFrame([{"note": "No overlap to estimate brand-product influence coefficients."}])
     if consumer_link_df.empty:
         consumer_link_df = pd.DataFrame([{"note": "No synthetic->consumer linkage model estimated."}])
+    if ultimate_consumer_df.empty:
+        ultimate_consumer_df = pd.DataFrame([{"note": "No ultimate_consumer_price series estimated."}])
 
     out_dir = common.get_output_dir("model_forecast_knn")
 
@@ -864,6 +830,7 @@ def run_forecast_knn_synthetic() -> Path:
             "Synthetic_Retail_Series": synth_df,
             "Synthetic_Influence_Coefficients": coef_df,
             "Synthetic_to_Consumer_Link": consumer_link_df,
+            "Ultimate_Consumer_Price": ultimate_consumer_df,
         },
     )
     pdf = out_dir / "model_forecast_knn_report.pdf"
@@ -879,6 +846,7 @@ def run_forecast_knn_synthetic() -> Path:
             "Forecast_Summary": forecast_sum_df,
             "Synthetic_Influence_Coefficients": coef_df,
             "Synthetic_to_Consumer_Link": consumer_link_df,
+            "Ultimate_Consumer_Price": ultimate_consumer_df,
         },
         [img1, img2, img3],
     )

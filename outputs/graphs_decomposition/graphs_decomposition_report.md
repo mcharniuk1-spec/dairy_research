@@ -1,4 +1,4 @@
-# RW3 Module Report - graphs_decomposition
+# Decomposition Graphs
 
 ## Interpretation Guide
 - ADF p>0.05 and KPSS p<0.05 -> likely I(1)-like; prefer differences/cointegration models.
@@ -10,66 +10,64 @@
 - For retail transmission, compare no-promo vs promo-controlled estimates.
 
 ## Notes
-- module=graphs_decomposition
-- xlsx_files=1
-- png_files=24
-- Interpretation: read test diagnostics first, then coefficients/effects with robustness context.
+- series_plotted=12
+- Interpretation option: trend vs seasonal strength from Decomposition_Summary.
 
 ## Tables
 
-### graphs_decomposition_output_Dec
+### Decomposition_Summary
 
-| date | source | product | standardized_type | observed | log_observed | trend | seasonal | resid |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2022-01-03 00:00:00 | CME | Молоко питне | milk | 505.09281692 | 6.224742208268155 | 6.28937801385405 | -0.06440037264916207 | -0.0002354329367326713 |
-| 2022-01-04 00:00:00 | CME | Молоко питне | milk | 505.09281692 | 6.224742208268155 | 6.294426532077483 | 0.003697747965400232 | -0.07338207177472889 |
-| 2022-01-05 00:00:00 | CME | Молоко питне | milk | 563.9684159999999 | 6.33499824993 | 6.29947157286429 | -0.004329259391739459 | 0.03985593645744956 |
-| 2022-01-06 00:00:00 | CME | Молоко питне | milk | 560.358591 | 6.328576919869759 | 6.304514289599061 | 0.02330752061756797 | 0.0007551096531299706 |
-| 2022-01-07 00:00:00 | CME | Молоко питне | milk | 557.063979 | 6.322680096885729 | 6.309555169343106 | 0.01354928921410869 | -0.0004243616714862952 |
-| 2022-01-10 00:00:00 | CME | Молоко питне | milk | 557.378379 | 6.323244325275082 | 6.314590426689684 | 0.00956359367548714 | -0.0009096950900886469 |
-| 2022-01-11 00:00:00 | CME | Молоко питне | milk | 560.170926 | 6.328241962157521 | 6.319612011209817 | 0.007735717470473674 | 0.0008942334772301663 |
-| 2022-01-12 00:00:00 | CME | Молоко питне | milk | 560.6395339999999 | 6.329078157114704 | 6.324602077468575 | -0.04809791975327118 | 0.05257399939940033 |
-| 2022-01-13 00:00:00 | CME | Молоко питне | milk | 563.012336 | 6.333301539089697 | 6.329450885440416 | 0.002178697267989987 | 0.001671956381291473 |
-| 2022-01-14 00:00:00 | CME | Молоко питне | milk | 562.5104160000001 | 6.332409651240465 | 6.334135956642453 | -0.0001776464653807478 | -0.001548658936607161 |
-| 2022-01-18 00:00:00 | CME | Молоко питне | milk | 568.90806 | 6.343718839348278 | 6.338507088340049 | 0.01853593034998433 | -0.01332417934175556 |
-| 2022-01-19 00:00:00 | CME | Молоко питне | milk | 574.736323 | 6.353911366926919 | 6.34256731568385 | 0.008284056734437523 | 0.003059994508632258 |
-| 2022-01-20 00:00:00 | CME | Молоко питне | milk | 575.17695 | 6.354677732585811 | 6.346317766268097 | 0.004394235813699264 | 0.003965730504014608 |
-| 2022-01-21 00:00:00 | CME | Молоко питне | milk | 574.685844 | 6.35382353322842 | 6.349848299271208 | 0.003997782531895905 | -2.254857468386717e-05 |
-| 2022-01-24 00:00:00 | CME | Молоко питне | milk | 574.85743 | 6.354122062227119 | 6.353079747638271 | -0.03211308688415433 | 0.03315540147300133 |
-| 2022-01-25 00:00:00 | CME | Молоко питне | milk | 575.442972 | 6.355140130289264 | 6.355552608361078 | 0.000769180327452526 | -0.001181658399266539 |
-| 2022-01-26 00:00:00 | CME | Молоко питне | milk | 581.342424 | 6.365339953293228 | 6.357354071030266 | 0.003386780962581623 | 0.004599101300380326 |
-| 2022-01-27 00:00:00 | CME | Молоко питне | milk | 586.335424 | 6.3738920217254 | 6.35895858910984 | 0.01337507853125732 | 0.001558354084302493 |
-| 2022-01-28 00:00:00 | CME | Молоко питне | milk | 590.193644 | 6.380450693220081 | 6.360480397928982 | 0.002488106329952789 | 0.01748218896114651 |
-| 2022-01-31 00:00:00 | CME | Молоко питне | milk | 586.328043 | 6.37387943328855 | 6.361797057845736 | -0.001300962711682346 | 0.01338333815449566 |
-| 2022-02-01 00:00:00 | CME | Молоко питне | milk | 580.2076450000001 | 6.36338604809136 | 6.362786205338093 | -0.0002840741467681539 | 0.0008839169000349756 |
-| 2022-02-02 00:00:00 | CME | Молоко питне | milk | 575.13858 | 6.354611020455073 | 6.363571658313828 | -0.009458899703390554 | 0.000498261844635195 |
-| 2022-02-03 00:00:00 | CME | Молоко питне | milk | 580.5264199999999 | 6.363935312591518 | 6.364143238394486 | -0.0005602302257795876 | 0.0003523044228117556 |
-| 2022-02-04 00:00:00 | CME | Молоко питне | milk | 585.19107 | 6.371938409289278 | 6.364601917360616 | 0.007097272167523171 | 0.0002392197611387203 |
-| 2022-02-07 00:00:00 | CME | Молоко питне | milk | 585.45344 | 6.372386658099488 | 6.365113645349121 | 0.007993564137147352 | -0.0007205513867800661 |
+| source | product | standardized_type | n_obs | var_trend | var_seasonal | var_resid | seasonal_strength |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CME | Молоко питне | milk | 1023 | 0.01813256162305753 | 1.3696895894822528e-05 | 0.000302385190902191 | 0.000750381293947995 |
+| ConsumerUA | Молоко питне | milk | 1821 | 0.05082708394855027 | 4.7772322855711054e-05 | 0.0008804550636545256 | 0.000911622389869363 |
+| ConsumerUA | Сир твердий | hard_cheese | 1821 | 0.06246182267186745 | 1.588233859753418e-05 | 0.0007917875516346176 | 0.00024798904319668326 |
+| ConsumerUA | Сметана | sour_cream | 1821 | 0.06979254233120392 | 2.424267731687577e-05 | 0.0008812011741918114 | 0.00034033498667080845 |
+| EU | Інше/невідомо | milk | 1056 | 0.00806445165463953 | 1.159038812105684e-05 | 0.00011688856630132853 | 0.001421807812900792 |
+| EU | Інше/невідомо | other | 1056 | 0.028411800400451524 | 1.363154350927252e-05 | 0.00016694464895511928 | 0.00047895292368989843 |
+| EU | Вершки | cream | 1056 | 0.035440313483320225 | 1.564491032786221e-05 | 0.00019525096597063438 | 0.00044083863823010845 |
+| EU | Масло вершкове | butter | 1056 | 0.05007185698814855 | 1.7153087105487225e-05 | 0.00016442085350436037 | 0.0003429566028597069 |
+| EU | Молоко питне | milk | 1056 | 0.041164677353559075 | 1.0263983734026259e-05 | 0.00010673107401726843 | 0.0002484903204859443 |
+| EU | Сир твердий | hard_cheese | 1056 | 0.024663958035090486 | 1.4019045482782888e-05 | 0.00011590030606499493 | 0.0005640609064335318 |
+| Novus | Сир твердий | hard_cheese | 37 | 0.01820886698580574 | 0.07346710481510049 | 0.07644916694668599 | 0.478187783131569 |
+| ProZorro | Інше/невідомо | other | 232 | 0.014453029120117701 | 0.0005453592419822099 | 0.0013225961080344268 | 0.03411105573275054 |
+| ProZorro | Вершки | cream | 209 | 0.0037437370343975343 | 0.017378612614771183 | 0.05730873971784335 | 0.26173737984735873 |
+| ProZorro | Масло вершкове | butter | 230 | 0.006064463612998627 | 0.004152378191282226 | 0.013586147118998127 | 0.1946076224165887 |
+| ProZorro | Молоко питне | milk | 211 | 0.0017855952569120546 | 0.004102823192701276 | 0.043549405529153686 | 0.09186615206260783 |
+| ProZorro | Сир кисломолочний | cottage_cheese | 190 | 0.012108051846488268 | 0.012087351588816363 | 0.04139400268321678 | 0.1811938464150304 |
+| ProZorro | Сир твердий | hard_cheese | 199 | 0.004911402373317763 | 0.004101490590481175 | 0.014090939723913233 | 0.18012026363774047 |
+| ProZorro | Сметана | sour_cream | 188 | 0.004763630870920487 | 0.015118890000815809 | 0.03554590508699005 | 0.36644070396767503 |
+| ProducerUA | Вершки | cream | 1793 | 0.028043690705851786 | 3.3477751684091915e-06 | 0.0004676840316530178 | 0.00011664488219292481 |
+| ProducerUA | Кефір | milk | 1793 | 0.0529380562036402 | 4.439101480337001e-05 | 0.0008790285581210395 | 0.0008187065934145023 |
+| ProducerUA | Масло вершкове | butter | 1793 | 0.0943873698974695 | 1.4096265830403553e-05 | 0.0006400070226194157 | 0.00014719942734449363 |
+| ProducerUA | Молоко питне | milk | 1793 | 0.04855665049420276 | 4.238700162664645e-05 | 0.0007966015507488781 | 0.0008454206295321404 |
+| ProducerUA | Сир твердий | hard_cheese | 1793 | 0.04249621573295978 | 1.4468515068429998e-05 | 0.0007448110454729825 | 0.00032890269628089503 |
+| ProducerUA | Сметана | sour_cream | 1793 | 0.05413290701478623 | 1.3642128161575791e-05 | 0.0007549795279768394 | 0.0002464201329687289 |
+| Silpo | Інше/невідомо | milk | 48 | 0.00929142051586112 | 0.00431111164811246 | 0.010383843820431596 | 0.18639409985028646 |
 
 ## Graphs
 
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_01.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_02.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_03.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_04.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_05.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_06.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_07.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_08.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_09.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_10.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_11.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_observed_trend_12.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_01.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_02.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_03.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_04.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_05.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_06.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_07.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_08.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_09.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_10.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_11.png
-- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition/decomp_seasonal_resid_12.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_01.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_01.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_02.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_02.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_03.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_03.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_04.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_04.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_05.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_05.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_06.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_06.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_07.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_07.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_08.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_08.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_09.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_09.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_10.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_10.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_11.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_11.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_observed_trend_12.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition/decomp_seasonal_resid_12.png

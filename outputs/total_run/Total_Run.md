@@ -9,102 +9,1121 @@
 - Stability flag=1 indicates drift/break risk; use rolling or split-sample checks.
 - For retail, compare no-promo and promo-controlled transmission.
 
-- Tables included: 89
-- Graphs included: 87
+- Tables included: 285
+- Graphs included: 135
 
 ## Index
 
 | table_id | module | xlsx_file | original_sheet | category | rows | cols | interpretation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| T0001 | graphs_brand_region | graphs_brand_region_output.xlsx | Brand_IO_Metrics | other | 48 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0002 | graphs_brand_region | graphs_brand_region_output.xlsx | Brand_Economic_Metrics | model_results | 1880 | 10 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
-| T0003 | graphs_brand_region | graphs_brand_region_output.xlsx | Prozorro_ByRegion | descriptive | 171 | 20 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0004 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Correlations | correlation_lag | 273 | 10 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
-| T0005 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Corr_Matrix | other | 7 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0006 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Lag_Best | correlation_lag | 39 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
-| T0007 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Lag_Profiles | correlation_lag | 1025 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
-| T0008 | graphs_decomposition | graphs_decomposition_output.xlsx | Decomposition_Summary | other | 36 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0009 | graphs_decomposition | graphs_decomposition_output.xlsx | Decomposition_Index | other | 36 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0010 | graphs_decomposition | graphs_decomposition_output.xlsx | Decomposition_All | decomposition | 25658 | 9 | Decomposition table. Compare trend/seasonal/residual components for structural interpretation. |
-| T0011 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | BeforeAfterLN_Index | other | 42 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0012 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_Index | other | 12 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0013 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | BeforeAfterLN_All | other | 25774 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0014 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_All | other | 13399 | 10 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0015 | model_ardl | model_ardl_output.xlsx | ARDL_Summary | model_results | 11 | 12 | Model results table. Mean /coef/=0.9400; interpret sign and magnitude jointly with diagnostics. |
-| T0016 | model_ardl | model_ardl_output.xlsx | Model_Series | other | 3765 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0017 | model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Occurrence | other | 1 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0018 | model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Depth | other | 1 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0019 | model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | model_results | 4 | 11 | Model results table. Mean /coef/=1.8479; interpret sign and magnitude jointly with diagnostics. |
-| T0020 | model_ecm | model_ecm_output.xlsx | ECM_Summary | model_results | 3 | 12 | Model results table. Mean /coef/=0.6234; interpret sign and magnitude jointly with diagnostics. |
-| T0021 | model_ecm | model_ecm_output.xlsx | ARDL_Summary | model_results | 11 | 12 | Model results table. Mean /coef/=0.9400; interpret sign and magnitude jointly with diagnostics. |
-| T0022 | model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Summary | other | 9 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0023 | model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Predictions | forecast | 540 | 6 | Forecast/synthetic table. Focus on prediction errors, stability across products, and synthetic-retail linkage. |
-| T0024 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Retail_Series | forecast | 91758 | 8 | Forecast/synthetic table. Focus on prediction errors, stability across products, and synthetic-retail linkage. |
-| T0025 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Influence_Coefficient | model_results | 28 | 7 | Model results table. Mean /coef/=0.5000; interpret sign and magnitude jointly with diagnostics. |
-| T0026 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_to_Consumer_Link | model_results | 3 | 7 | Model results table. Mean /coef/=0.9907; interpret sign and magnitude jointly with diagnostics. |
-| T0027 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | model_results | 47 | 11 | Model results table. Mean /coef/=0.9493; interpret sign and magnitude jointly with diagnostics. |
-| T0028 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Granger | other | 38 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0029 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | model_results | 8 | 36 | Model results table. Mean /coef/=3.1201; interpret sign and magnitude jointly with diagnostics. |
-| T0030 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | model_results | 16 | 8 | Model results table. Mean /coef/=4.5334; interpret sign and magnitude jointly with diagnostics. |
-| T0031 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | CrossTable_Correlations | correlation_lag | 159 | 10 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
-| T0032 | model_nardl | model_nardl_output.xlsx | NARDL_Summary | model_results | 11 | 12 | Model results table. Mean /coef/=0.3855; interpret sign and magnitude jointly with diagnostics. |
-| T0033 | model_short_chain_regional | model_short_chain_regional_output.xlsx | LagMatrix_ByProduct | correlation_lag | 39 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
-| T0034 | model_short_chain_regional | model_short_chain_regional_output.xlsx | LagProfiles_ByProduct | correlation_lag | 1025 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
-| T0035 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Models_ShortRun_Summary | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0036 | model_short_chain_regional | model_short_chain_regional_output.xlsx | ShortRun_Details | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0037 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Summary | model_results | 12 | 14 | Model results table. Mean /coef/=2.6086; interpret sign and magnitude jointly with diagnostics. |
-| T0038 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Details | model_results | 60 | 6 | Model results table. Mean /coef/=2.6086; interpret sign and magnitude jointly with diagnostics. |
-| T0039 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Models | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0040 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Effects_Matri | other | 171 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0041 | model_vecm | model_vecm_output.xlsx | VECM_Summary | model_results | 3 | 12 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
-| T0042 | run_all_summary | run_all_rw3_summary.xlsx | Run_All_Summary | other | 19 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0043 | run_all_summary | run_all_rw3_summary.xlsx | Artifacts_By_Module | other | 19 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0044 | run_all_summary | run_all_rw3_summary.xlsx | Sheets_Index | other | 83 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0045 | run_all_summary | run_all_rw3_summary.xlsx | Tests_Interpretation | other | 7 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0046 | run_all_summary | run_all_rw3_summary.xlsx | Results_Interpretation | model_results | 21 | 9 | Model results table. Mean /coef/=1.8333; interpret sign and magnitude jointly with diagnostics. |
-| T0047 | run_all_summary | run_all_rw3_summary.xlsx | Module_Block_Interpretation | other | 19 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0048 | sheet_cme | sheet_cme_output.xlsx | raw | raw_clean | 1023 | 2 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0049 | sheet_cme | sheet_cme_output.xlsx | clean | raw_clean | 1023 | 9 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0050 | sheet_cme | sheet_cme_output.xlsx | daily_variants | other | 1486 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0051 | sheet_cme | sheet_cme_output.xlsx | series_long | other | 1023 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0052 | sheet_cme | sheet_cme_output.xlsx | descriptive_stats | descriptive | 3 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0053 | sheet_cme | sheet_cme_output.xlsx | tests | tests | 3 | 23 | Diagnostics summary: I(1)-like share=0.33, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
-| T0054 | sheet_consumerua | sheet_consumerua_output.xlsx | raw | raw_clean | 5463 | 11 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0055 | sheet_consumerua | sheet_consumerua_output.xlsx | clean | raw_clean | 5463 | 12 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0056 | sheet_consumerua | sheet_consumerua_output.xlsx | daily_variants | other | 5463 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0057 | sheet_consumerua | sheet_consumerua_output.xlsx | series_long | other | 16389 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0058 | sheet_consumerua | sheet_consumerua_output.xlsx | descriptive_stats | descriptive | 9 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0059 | sheet_consumerua | sheet_consumerua_output.xlsx | tests | tests | 9 | 23 | Diagnostics summary: I(1)-like share=1.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
-| T0060 | sheet_eu | sheet_eu_output.xlsx | raw | raw_clean | 111299 | 6 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0061 | sheet_eu | sheet_eu_output.xlsx | clean | raw_clean | 111299 | 9 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0062 | sheet_eu | sheet_eu_output.xlsx | daily_variants | other | 8868 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0063 | sheet_eu | sheet_eu_output.xlsx | series_long | other | 6336 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0064 | sheet_eu | sheet_eu_output.xlsx | descriptive_stats | descriptive | 18 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0065 | sheet_eu | sheet_eu_output.xlsx | tests | tests | 18 | 23 | Diagnostics summary: I(1)-like share=0.33, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
-| T0066 | sheet_novus | sheet_novus_output.xlsx | raw | raw_clean | 1530 | 19 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0067 | sheet_novus | sheet_novus_output.xlsx | clean | raw_clean | 1530 | 22 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0068 | sheet_novus | sheet_novus_output.xlsx | daily_variants | other | 8790 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0069 | sheet_novus | sheet_novus_output.xlsx | series_long | other | 755 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0070 | sheet_novus | sheet_novus_output.xlsx | descriptive_stats | descriptive | 36 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0071 | sheet_novus | sheet_novus_output.xlsx | tests | tests | 36 | 23 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
-| T0072 | sheet_producerua | sheet_producerua_output.xlsx | raw | raw_clean | 10758 | 11 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0073 | sheet_producerua | sheet_producerua_output.xlsx | clean | raw_clean | 10758 | 12 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0074 | sheet_producerua | sheet_producerua_output.xlsx | daily_variants | other | 10758 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0075 | sheet_producerua | sheet_producerua_output.xlsx | series_long | other | 32274 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0076 | sheet_producerua | sheet_producerua_output.xlsx | descriptive_stats | descriptive | 18 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0077 | sheet_producerua | sheet_producerua_output.xlsx | tests | tests | 18 | 23 | Diagnostics summary: I(1)-like share=1.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
-| T0078 | sheet_prozorro | sheet_prozorro_output.xlsx | raw | raw_clean | 10927 | 12 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0079 | sheet_prozorro | sheet_prozorro_output.xlsx | clean | raw_clean | 10927 | 18 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0080 | sheet_prozorro | sheet_prozorro_output.xlsx | daily_variants | other | 40843 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0081 | sheet_prozorro | sheet_prozorro_output.xlsx | series_long | other | 7613 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0082 | sheet_prozorro | sheet_prozorro_output.xlsx | descriptive_stats | descriptive | 21 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0083 | sheet_prozorro | sheet_prozorro_output.xlsx | tests | tests | 21 | 23 | Diagnostics summary: I(1)-like share=0.19, stationary share=0.10. Use lag structure + robust/HAC + stability checks when needed. |
-| T0084 | sheet_silpo | sheet_silpo_output.xlsx | raw | raw_clean | 86765 | 19 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0085 | sheet_silpo | sheet_silpo_output.xlsx | clean | raw_clean | 86765 | 23 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
-| T0086 | sheet_silpo | sheet_silpo_output.xlsx | daily_variants | other | 23691 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0087 | sheet_silpo | sheet_silpo_output.xlsx | series_long | other | 20933 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
-| T0088 | sheet_silpo | sheet_silpo_output.xlsx | descriptive_stats | descriptive | 36 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
-| T0089 | sheet_silpo | sheet_silpo_output.xlsx | tests | tests | 36 | 23 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0001 | butter/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0002 | butter/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0003 | butter/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0004 | butter/novus | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0005 | butter/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0006 | butter/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0007 | butter/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0008 | butter/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0009 | butter/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0010 | butter/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0011 | butter/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0012 | butter/silpo | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0013 | butter/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0014 | butter/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0015 | butter/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0016 | butter/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0017 | butter/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0018 | butter/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0019 | butter/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0020 | butter/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 10 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0021 | butter/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0022 | butter/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0023 | butter/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0024 | butter/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0025 | cottage_cheese/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0026 | cottage_cheese/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0027 | cottage_cheese/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0028 | cottage_cheese/novus | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0029 | cottage_cheese/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0030 | cottage_cheese/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0031 | cottage_cheese/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0032 | cottage_cheese/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0033 | cottage_cheese/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0034 | cottage_cheese/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0035 | cottage_cheese/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0036 | cottage_cheese/silpo | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0037 | cottage_cheese/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0038 | cottage_cheese/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0039 | cottage_cheese/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0040 | cottage_cheese/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0041 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0042 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0043 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0044 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0045 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0046 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0047 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0048 | cottage_cheese/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0049 | cream/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0050 | cream/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0051 | cream/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0052 | cream/novus | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0053 | cream/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0054 | cream/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0055 | cream/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0056 | cream/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0057 | cream/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0058 | cream/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0059 | cream/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0060 | cream/silpo | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0061 | cream/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0062 | cream/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0063 | cream/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0064 | cream/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0065 | cream/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0066 | cream/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0067 | cream/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0068 | cream/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 10 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0069 | cream/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0070 | cream/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0071 | cream/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0072 | cream/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0073 | graphs_brand_region | graphs_brand_region_output.xlsx | Brand_IO_Metrics | other | 48 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0074 | graphs_brand_region | graphs_brand_region_output.xlsx | Brand_Economic_Metrics | model_results | 1880 | 10 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0075 | graphs_brand_region | graphs_brand_region_output.xlsx | Prozorro_ByRegion | descriptive | 171 | 20 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0076 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Correlations | correlation_lag | 273 | 10 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
+| T0077 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Corr_Matrix | other | 7 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0078 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Lag_Best | correlation_lag | 39 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
+| T0079 | graphs_correlations_lags | graphs_correlations_lags_output.xlsx | Lag_Profiles | correlation_lag | 1025 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
+| T0080 | graphs_decomposition | graphs_decomposition_output.xlsx | Decomposition_Summary | other | 36 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0081 | graphs_decomposition | graphs_decomposition_output.xlsx | Decomposition_Index | other | 36 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0082 | graphs_decomposition | graphs_decomposition_output.xlsx | Decomposition_All | decomposition | 25658 | 9 | Decomposition table. Compare trend/seasonal/residual components for structural interpretation. |
+| T0083 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | BeforeAfterLN_Index | other | 42 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0084 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_Index | other | 12 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0085 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | BeforeAfterLN_All | other | 25774 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0086 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_All | other | 13399 | 10 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0087 | hard_cheese/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0088 | hard_cheese/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0089 | hard_cheese/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0090 | hard_cheese/novus | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0091 | hard_cheese/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0092 | hard_cheese/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0093 | hard_cheese/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0094 | hard_cheese/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0095 | hard_cheese/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0096 | hard_cheese/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0097 | hard_cheese/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0098 | hard_cheese/silpo | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0099 | hard_cheese/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0100 | hard_cheese/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0101 | hard_cheese/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0102 | hard_cheese/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0103 | hard_cheese/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0104 | hard_cheese/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0105 | hard_cheese/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0106 | hard_cheese/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 10 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0107 | hard_cheese/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0108 | hard_cheese/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0109 | hard_cheese/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0110 | hard_cheese/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0111 | milk/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0112 | milk/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0113 | milk/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0114 | milk/novus | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0115 | milk/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0116 | milk/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0117 | milk/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0118 | milk/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0119 | milk/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0120 | milk/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0121 | milk/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0122 | milk/silpo | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0123 | milk/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0124 | milk/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0125 | milk/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0126 | milk/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0127 | milk/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0128 | milk/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0129 | milk/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0130 | milk/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 10 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0131 | milk/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0132 | milk/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0133 | milk/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0134 | milk/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0135 | model_ardl | model_ardl_output.xlsx | ARDL_Summary | model_results | 0 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0136 | model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Occurrence | other | 1 | 1 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0137 | model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Depth | other | 1 | 1 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0138 | model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | other | 1 | 1 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0139 | model_ecm | model_ecm_output.xlsx | ECM_Summary | model_results | 0 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0140 | model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Summary | other | 9 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0141 | model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Predictions | forecast | 540 | 6 | Forecast/synthetic table. Focus on prediction errors, stability across products, and synthetic-retail linkage. |
+| T0142 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Retail_Series | forecast | 91758 | 8 | Forecast/synthetic table. Focus on prediction errors, stability across products, and synthetic-retail linkage. |
+| T0143 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Influence_Coefficient | model_results | 28 | 7 | Model results table. Mean /coef/=0.5000; interpret sign and magnitude jointly with diagnostics. |
+| T0144 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_to_Consumer_Link | model_results | 3 | 7 | Model results table. Mean /coef/=0.9907; interpret sign and magnitude jointly with diagnostics. |
+| T0145 | model_forecast_knn | model_forecast_knn_output.xlsx | Ultimate_Consumer_Price | forecast | 145 | 5 | Forecast/synthetic table. Focus on prediction errors, stability across products, and synthetic-retail linkage. |
+| T0146 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | other | 1 | 1 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0147 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Granger | other | 1 | 1 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0148 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | other | 1 | 1 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0149 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0150 | model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | CrossTable_Correlations | correlation_lag | 77 | 10 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
+| T0151 | model_nardl | model_nardl_output.xlsx | NARDL_Summary | model_results | 0 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0152 | model_short_chain_regional | model_short_chain_regional_output.xlsx | LagMatrix_ByProduct | correlation_lag | 39 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
+| T0153 | model_short_chain_regional | model_short_chain_regional_output.xlsx | LagProfiles_ByProduct | correlation_lag | 1025 | 7 | Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications. |
+| T0154 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Models_ShortRun_Summary | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0155 | model_short_chain_regional | model_short_chain_regional_output.xlsx | ShortRun_Details | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0156 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Summary | model_results | 12 | 14 | Model results table. Mean /coef/=2.6086; interpret sign and magnitude jointly with diagnostics. |
+| T0157 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Details | model_results | 60 | 6 | Model results table. Mean /coef/=2.6086; interpret sign and magnitude jointly with diagnostics. |
+| T0158 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Models | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0159 | model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Effects_Matri | other | 171 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0160 | model_vecm | model_vecm_output.xlsx | VECM_Summary | model_results | 0 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0161 | other/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0162 | other/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0163 | other/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0164 | other/novus | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0165 | other/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0166 | other/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0167 | other/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0168 | other/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0169 | other/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0170 | other/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0171 | other/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0172 | other/silpo | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0173 | other/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0174 | other/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0175 | other/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0176 | other/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0177 | other/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0178 | other/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0179 | other/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0180 | other/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0181 | other/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0182 | other/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0183 | other/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0184 | other/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0185 | primary_chain_summary | primary_chain_consolidated.xlsx | Consolidated_ModelCoefficients | model_results | 48 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0186 | primary_chain_summary | primary_chain_consolidated.xlsx | Consolidated_PreTests | tests | 144 | 12 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0187 | primary_chain_summary | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic | tests | 48 | 11 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0188 | primary_chain_summary | primary_chain_consolidated.xlsx | Consolidated_Eligibility | other | 48 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0189 | primary_chain_summary | primary_chain_consolidated.xlsx | Rule_Documentation | other | 1 | 6 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0190 | run_all_summary | run_all_rw3_summary.xlsx | Run_All_Summary | other | 19 | 4 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0191 | run_all_summary | run_all_rw3_summary.xlsx | Artifacts_By_Module | other | 19 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0192 | run_all_summary | run_all_rw3_summary.xlsx | Sheets_Index | other | 83 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0193 | run_all_summary | run_all_rw3_summary.xlsx | Tests_Interpretation | other | 7 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0194 | run_all_summary | run_all_rw3_summary.xlsx | Results_Interpretation | model_results | 21 | 9 | Model results table. Mean /coef/=1.8333; interpret sign and magnitude jointly with diagnostics. |
+| T0195 | run_all_summary | run_all_rw3_summary.xlsx | Module_Block_Interpretation | other | 19 | 7 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0196 | sheet_cme | sheet_cme_output.xlsx | raw | raw_clean | 1023 | 2 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0197 | sheet_cme | sheet_cme_output.xlsx | clean | raw_clean | 1023 | 9 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0198 | sheet_cme | sheet_cme_output.xlsx | daily_variants | other | 1486 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0199 | sheet_cme | sheet_cme_output.xlsx | series_long | other | 1023 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0200 | sheet_cme | sheet_cme_output.xlsx | descriptive_stats | descriptive | 3 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0201 | sheet_cme | sheet_cme_output.xlsx | tests | tests | 3 | 23 | Diagnostics summary: I(1)-like share=0.33, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0202 | sheet_consumerua | sheet_consumerua_output.xlsx | raw | raw_clean | 5463 | 11 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0203 | sheet_consumerua | sheet_consumerua_output.xlsx | clean | raw_clean | 5463 | 12 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0204 | sheet_consumerua | sheet_consumerua_output.xlsx | daily_variants | other | 5463 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0205 | sheet_consumerua | sheet_consumerua_output.xlsx | series_long | other | 16389 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0206 | sheet_consumerua | sheet_consumerua_output.xlsx | descriptive_stats | descriptive | 9 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0207 | sheet_consumerua | sheet_consumerua_output.xlsx | tests | tests | 9 | 23 | Diagnostics summary: I(1)-like share=1.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0208 | sheet_eu | sheet_eu_output.xlsx | raw | raw_clean | 111299 | 6 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0209 | sheet_eu | sheet_eu_output.xlsx | clean | raw_clean | 111299 | 9 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0210 | sheet_eu | sheet_eu_output.xlsx | daily_variants | other | 8868 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0211 | sheet_eu | sheet_eu_output.xlsx | series_long | other | 6336 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0212 | sheet_eu | sheet_eu_output.xlsx | descriptive_stats | descriptive | 18 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0213 | sheet_eu | sheet_eu_output.xlsx | tests | tests | 18 | 23 | Diagnostics summary: I(1)-like share=0.33, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0214 | sheet_novus | sheet_novus_output.xlsx | raw | raw_clean | 1530 | 19 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0215 | sheet_novus | sheet_novus_output.xlsx | clean | raw_clean | 1530 | 22 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0216 | sheet_novus | sheet_novus_output.xlsx | daily_variants | other | 8790 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0217 | sheet_novus | sheet_novus_output.xlsx | series_long | other | 755 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0218 | sheet_novus | sheet_novus_output.xlsx | descriptive_stats | descriptive | 36 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0219 | sheet_novus | sheet_novus_output.xlsx | tests | tests | 36 | 23 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0220 | sheet_producerua | sheet_producerua_output.xlsx | raw | raw_clean | 10758 | 11 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0221 | sheet_producerua | sheet_producerua_output.xlsx | clean | raw_clean | 10758 | 12 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0222 | sheet_producerua | sheet_producerua_output.xlsx | daily_variants | other | 10758 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0223 | sheet_producerua | sheet_producerua_output.xlsx | series_long | other | 32274 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0224 | sheet_producerua | sheet_producerua_output.xlsx | descriptive_stats | descriptive | 18 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0225 | sheet_producerua | sheet_producerua_output.xlsx | tests | tests | 18 | 23 | Diagnostics summary: I(1)-like share=1.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0226 | sheet_prozorro | sheet_prozorro_output.xlsx | raw | raw_clean | 10927 | 12 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0227 | sheet_prozorro | sheet_prozorro_output.xlsx | clean | raw_clean | 10927 | 18 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0228 | sheet_prozorro | sheet_prozorro_output.xlsx | daily_variants | other | 40843 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0229 | sheet_prozorro | sheet_prozorro_output.xlsx | series_long | other | 7613 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0230 | sheet_prozorro | sheet_prozorro_output.xlsx | descriptive_stats | descriptive | 21 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0231 | sheet_prozorro | sheet_prozorro_output.xlsx | tests | tests | 21 | 23 | Diagnostics summary: I(1)-like share=0.19, stationary share=0.10. Use lag structure + robust/HAC + stability checks when needed. |
+| T0232 | sheet_silpo | sheet_silpo_output.xlsx | raw | raw_clean | 86765 | 19 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0233 | sheet_silpo | sheet_silpo_output.xlsx | clean | raw_clean | 86765 | 23 | Raw/clean processing table. Use this for data lineage and transformation traceability. |
+| T0234 | sheet_silpo | sheet_silpo_output.xlsx | daily_variants | other | 23691 | 12 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0235 | sheet_silpo | sheet_silpo_output.xlsx | series_long | other | 20933 | 11 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0236 | sheet_silpo | sheet_silpo_output.xlsx | descriptive_stats | descriptive | 36 | 21 | Descriptive statistics table. Use dispersion and tails (q05/q95, std, cv) to assess instability by product/source. |
+| T0237 | sheet_silpo | sheet_silpo_output.xlsx | tests | tests | 36 | 23 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0238 | sour_cream/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0239 | sour_cream/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0240 | sour_cream/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0241 | sour_cream/novus | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0242 | sour_cream/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0243 | sour_cream/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0244 | sour_cream/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0245 | sour_cream/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0246 | sour_cream/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0247 | sour_cream/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0248 | sour_cream/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0249 | sour_cream/silpo | primary_chain_output.xlsx | SeriesUsed | other | 8 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0250 | sour_cream/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0251 | sour_cream/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0252 | sour_cream/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0253 | sour_cream/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0254 | sour_cream/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0255 | sour_cream/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0256 | sour_cream/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0257 | sour_cream/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 10 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0258 | sour_cream/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0259 | sour_cream/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0260 | sour_cream/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0261 | sour_cream/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0262 | yogurt_dessert/novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0263 | yogurt_dessert/novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0264 | yogurt_dessert/novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0265 | yogurt_dessert/novus | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0266 | yogurt_dessert/novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0267 | yogurt_dessert/novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0268 | yogurt_dessert/novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0269 | yogurt_dessert/novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0270 | yogurt_dessert/silpo | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0271 | yogurt_dessert/silpo | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0272 | yogurt_dessert/silpo | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0273 | yogurt_dessert/silpo | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0274 | yogurt_dessert/silpo | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0275 | yogurt_dessert/silpo | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0276 | yogurt_dessert/silpo | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0277 | yogurt_dessert/silpo | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0278 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | PreTests | tests | 6 | 13 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0279 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | ModelCoefficients | model_results | 1 | 20 | Model results table. Interpret coefficients, p-values, and model admissibility columns. |
+| T0280 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | ResidualDiagnostics | tests | 1 | 8 | Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed. |
+| T0281 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | SeriesUsed | other | 0 | 8 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0282 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | LagProfile | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0283 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | ModelEligibility | other | 1 | 9 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0284 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | NARDL_Multipliers | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+| T0285 | yogurt_dessert/silpo_novus | primary_chain_output.xlsx | VECM_IRF | other | 0 | 0 | General output table. Interpret with module context and linked diagnostic/model outputs. |
+
+## butter/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | butter | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | butter | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | butter | novus | promo_controlled |
+
+## butter/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## butter/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## butter/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-11-10 00:00:00 | 77.89520646385002 | 392.75 | 57.23999999999999 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 77.62498736017702 | 353.94 | 126.5 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 76.53081677236 | 390.18 | 82.99 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 69.26275687156948 | 390.345 | 104.0 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 61.9115711211102 | 379.5 | 115.745 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 61.60363209190825 | 419.1 | 87.99 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 62.02101218886767 | 370.5 | 154.0 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 60.47963606357225 | 384.0 | 81.49 | butter | novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## butter/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## butter/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | butter | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | butter | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | butter | silpo | promo_controlled |
+
+## butter/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## butter/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## butter/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 78.29497356152314 | 399.0 | 65.49 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 77.22795287995021 | 431.88 | 65.74 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 77.89520646385002 | 392.75 | 65.24 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 77.62498736017702 | 353.94 | 65.99 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 76.53081677236 | 390.18 | 70.49 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 69.26275687156948 | 390.345 | 66.24 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 61.9115711211102 | 379.5 | 67.66 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 61.60363209190825 | 419.1 | 66.49 | butter | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+
+## butter/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## butter/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | butter | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | butter | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | butter | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | butter | silpo_novus | promo_controlled |
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 10
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 78.29497356152314 | 399.0 | 65.49 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 77.22795287995021 | 431.88 | 65.74 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 77.89520646385002 | 392.75 | 64.99 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 77.62498736017702 | 353.94 | 67.32499999999999 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 76.53081677236 | 390.18 | 70.49 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 69.26275687156948 | 390.345 | 66.24 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 61.9115711211102 | 379.5 | 70.74 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 61.60363209190825 | 419.1 | 82.2175 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 62.02101218886767 | 370.5 | 154.0 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 60.47963606357225 | 384.0 | 81.49 | butter | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## butter/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | novus | promo_controlled |
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cottage_cheese | novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cottage_cheese | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | silpo | promo_controlled |
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cottage_cheese | silpo | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cottage_cheese | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | silpo_novus | promo_controlled |
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cottage_cheese | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cottage_cheese | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cottage_cheese/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cream | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | novus | promo_controlled |
+
+## cream/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cream | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## cream/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## cream/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-11-10 00:00:00 | 25.55925747159386 | 40.05 | 67.99 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 25.48605909640304 | 37.48 | 49.73999999999999 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 25.3633859069219 | 41.4 | 57.89 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 22.48178988858204 | 38.88 | 116.445 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 20.68922595011787 | 40.02 | 110.2425 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 20.62585615656168 | 38.40000000000001 | 84.99 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 20.17784663700449 | 34.8 | 109.995 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 20.07140987312907 | 38.9 | 129.0 | cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## cream/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cream | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## cream/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo | promo_controlled |
+
+## cream/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cream | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## cream/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## cream/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 25.58083974115278 | 41.79000000000001 | 54.24 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 25.51995504055111 | 42.23999999999999 | 53.945 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 25.55925747159386 | 40.05 | 54.99 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 25.48605909640304 | 37.48 | 59.99 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 25.3633859069219 | 41.4 | 59.49 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 22.48178988858204 | 38.88 | 58.24 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 20.68922595011787 | 40.02 | 59.49 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 20.62585615656168 | 38.40000000000001 | 54.99 | cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+
+## cream/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cream | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## cream/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cream | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo_novus | promo_controlled |
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cream | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 10
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 25.58083974115278 | 41.79000000000001 | 54.24 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 25.51995504055111 | 42.23999999999999 | 53.945 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 25.55925747159386 | 40.05 | 54.99 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 25.48605909640304 | 37.48 | 59.99 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 25.3633859069219 | 41.4 | 58.94 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 22.48178988858204 | 38.88 | 59.99 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 20.68922595011787 | 40.02 | 73.24125000000001 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 20.62585615656168 | 38.40000000000001 | 64.085 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 20.17784663700449 | 34.8 | 109.995 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 20.07140987312907 | 38.9 | 129.0 | cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| cream | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## cream/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
 
 ## graphs_brand_region :: graphs_brand_region_output.xlsx :: Brand_IO_Metrics
 
@@ -4947,410 +5966,624 @@ _Large table truncated in markdown; full table in Total_Run.xlsx._
 | 2023-02-21 00:00:00 | 133.454600391407 | nan | nan | Інше/невідомо | milk | nan | nan | nan | nan |
 | 2023-02-22 00:00:00 | 133.193412492679 | nan | nan | Інше/невідомо | milk | nan | nan | nan | nan |
 
-## model_ardl :: model_ardl_output.xlsx :: ARDL_Summary
+## hard_cheese/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | novus | promo_controlled |
+
+## hard_cheese/novus :: primary_chain_output.xlsx :: ModelCoefficients
 
 - Category: model_results
-- Interpretation: Model results table. Mean |coef|=0.9400; interpret sign and magnitude jointly with diagnostics.
-- Rows: 11
-- Cols: 12
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
 
-| standardized_type | y_series_source | x_series_sources | frequency | sample_period | lags_selected | short_run_coef | long_run_coef | coint_or_bounds_p | diagnostics_flags | eligible_for_ecm_form | interpretation_note |
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| butter | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=2, q=2 | 0.638088813491537 | 0.8477031455859193 | 0.7705229151133584 | LB=8.79e-15; BP=0.462; White=0.515 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| butter | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=1, q=0 | -0.1126541894710495 | -0.3318711999239127 | 0.1636038972284045 | LB=0.633; BP=0.0462; White=0.255 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| cream | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=2, q=2 | 0.04922198585267523 | 0.1895293235950405 | 0.5456672984077288 | LB=1.37e-21; BP=0.59; White=0.0654 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| cream | ProZorro | EU | weekly | 2025-04-15..2026-01-06 | p=2, q=0 | 0.2894838020743842 | 0.2798247240248903 | 7.914017296706472e-06 | LB=0.978; BP=0.322; White=0.753 | yes | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| hard_cheese | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=2, q=2 | 0.3551626072614864 | 0.6208905309984175 | 0.3497660842704009 | LB=2.94e-23; BP=0.0859; White=0.119 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| hard_cheese | ConsumerUA | EU | weekly | 2021-12-28..2026-01-13 | p=2, q=2 | 0.452794007447562 | 0.8390572807646949 | 0.5031244319467403 | LB=5.79e-21; BP=0.157; White=0.0643 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| hard_cheese | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=1, q=0 | -0.2865029854639456 | -0.4489016720895597 | 0.001297823529196093 | LB=0.705; BP=0.318; White=0.49 | yes | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| milk | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=3, q=2 | 0.4145372929609987 | 0.7957185748702496 | 0.8924029758886471 | LB=4.73e-08; BP=0.0925; White=0.164 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| milk | ConsumerUA | EU | weekly | 2021-12-28..2026-01-13 | p=3, q=2 | 0.3710293334168067 | 0.7473279445716343 | 0.9515547171935748 | LB=8.41e-08; BP=0.149; White=0.261 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| milk | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=2, q=0 | 0.7545075848393812 | 0.8868136250061809 | 4.278777154383951e-05 | LB=0.92; BP=0.381; White=0.577 | yes | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| other | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=1, q=0 | -0.09704672500046962 | 10.87221183583123 | 0.4120659935594279 | LB=0.12; BP=0.572; White=0.292 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
+| hard_cheese | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
 
-## model_ardl :: model_ardl_output.xlsx :: Model_Series
+## hard_cheese/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## hard_cheese/novus :: primary_chain_output.xlsx :: SeriesUsed
 
 - Category: other
 - Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
-- Rows: 3765
-- Cols: 4
+- Rows: 8
+- Cols: 8
 
-_Table truncated in markdown for readability; full table in Total_Run.xlsx._
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-11-10 00:00:00 | 59.31606880691795 | 272.225 | 189.0 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 59.45520000587967 | 294.0 | 330.9975 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 59.2850858876422 | 287.99 | 49.99 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 51.70489886750449 | 279.6 | 68.495 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 46.22716106084129 | 315.25 | 89.99 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 46.34016153275736 | 241.5 | 117.0 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 47.37634906317265 | 235.0 | 404.495 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 47.37749768939897 | 320.88 | 216.495 | hard_cheese | novus | promo_controlled | daily_median_of_available_silpo_novus |
 
-_Large table truncated in markdown; full table in Total_Run.xlsx._
+## hard_cheese/novus :: primary_chain_output.xlsx :: LagProfile
 
-| standardized_type | source | week | price |
-| --- | --- | --- | --- |
-| butter | EU | 2021-12-28 00:00:00 | 181.9599584085987 |
-| butter | EU | 2022-01-04 00:00:00 | 181.9599584085987 |
-| butter | EU | 2022-01-11 00:00:00 | 182.3093215348751 |
-| butter | EU | 2022-01-18 00:00:00 | 182.8200885225466 |
-| butter | EU | 2022-01-25 00:00:00 | 184.2776415657501 |
-| butter | EU | 2022-02-01 00:00:00 | 188.7173822459525 |
-| butter | EU | 2022-02-08 00:00:00 | 188.8619315870532 |
-| butter | EU | 2022-02-15 00:00:00 | 189.1146080195921 |
-| butter | EU | 2022-02-22 00:00:00 | 196.7903444397339 |
-| butter | EU | 2022-03-01 00:00:00 | 194.7985027873246 |
-| butter | EU | 2022-03-08 00:00:00 | 196.6613221508721 |
-| butter | EU | 2022-03-15 00:00:00 | 201.8132039162534 |
-| butter | EU | 2022-03-22 00:00:00 | 206.171337558882 |
-| butter | EU | 2022-03-29 00:00:00 | 212.9652461581115 |
-| butter | EU | 2022-04-05 00:00:00 | 213.8829244376504 |
-| butter | EU | 2022-04-12 00:00:00 | 216.3955538461629 |
-| butter | EU | 2022-04-19 00:00:00 | 219.2128198306872 |
-| butter | EU | 2022-04-26 00:00:00 | 212.710837448498 |
-| butter | EU | 2022-05-03 00:00:00 | 213.3685718125327 |
-| butter | EU | 2022-05-10 00:00:00 | 209.380191467247 |
-| butter | EU | 2022-05-17 00:00:00 | 215.0727594097097 |
-| butter | EU | 2022-05-24 00:00:00 | 220.2465593354796 |
-| butter | EU | 2022-05-31 00:00:00 | 222.6935416882488 |
-| butter | EU | 2022-06-07 00:00:00 | 222.4323242924934 |
-| butter | EU | 2022-06-14 00:00:00 | 218.5355516966459 |
-| butter | EU | 2022-06-21 00:00:00 | 219.2573076203153 |
-| butter | EU | 2022-06-28 00:00:00 | 217.3449024941503 |
-| butter | EU | 2022-07-05 00:00:00 | 213.2359613420426 |
-| butter | EU | 2022-07-12 00:00:00 | 210.5887962927521 |
-| butter | EU | 2022-07-19 00:00:00 | 244.1763055096185 |
-| butter | EU | 2022-07-26 00:00:00 | 263.6479029889051 |
-| butter | EU | 2022-08-02 00:00:00 | 256.5417056017673 |
-| butter | EU | 2022-08-09 00:00:00 | 261.957838704504 |
-| butter | EU | 2022-08-16 00:00:00 | 259.3302084079079 |
-| butter | EU | 2022-08-23 00:00:00 | 258.1769629913387 |
-| butter | EU | 2022-08-30 00:00:00 | 261.5188400243114 |
-| butter | EU | 2022-09-06 00:00:00 | 259.3569428204638 |
-| butter | EU | 2022-09-13 00:00:00 | 260.7992462083204 |
-| butter | EU | 2022-09-20 00:00:00 | 255.9676274477556 |
-| butter | EU | 2022-09-27 00:00:00 | 258.0304875345061 |
-| butter | EU | 2022-10-04 00:00:00 | 257.872484368298 |
-| butter | EU | 2022-10-11 00:00:00 | 253.7322133818928 |
-| butter | EU | 2022-10-18 00:00:00 | 254.9053908297002 |
-| butter | EU | 2022-10-25 00:00:00 | 254.4294834212888 |
-| butter | EU | 2022-11-01 00:00:00 | 248.698172680149 |
-| butter | EU | 2022-11-08 00:00:00 | 255.3553715042284 |
-| butter | EU | 2022-11-15 00:00:00 | 255.2393778029901 |
-| butter | EU | 2022-11-22 00:00:00 | 251.6789989476159 |
-| butter | EU | 2022-11-29 00:00:00 | 248.6329207374952 |
-| butter | EU | 2022-12-06 00:00:00 | 245.2111155288754 |
-| butter | EU | 2022-12-13 00:00:00 | 244.6663668473053 |
-| butter | EU | 2022-12-20 00:00:00 | 236.3579501367956 |
-| butter | EU | 2022-12-27 00:00:00 | 237.1307700678279 |
-| butter | EU | 2023-01-03 00:00:00 | 231.8162686213035 |
-| butter | EU | 2023-01-10 00:00:00 | 224.136749697347 |
-| butter | EU | 2023-01-17 00:00:00 | 218.4563173343697 |
-| butter | EU | 2023-01-24 00:00:00 | 210.268755728531 |
-| butter | EU | 2023-01-31 00:00:00 | 206.927420588249 |
-| butter | EU | 2023-02-07 00:00:00 | 200.9867060858905 |
-| butter | EU | 2023-02-14 00:00:00 | 198.0549682650796 |
-| butter | EU | 2023-02-21 00:00:00 | 197.9195307305077 |
-| butter | EU | 2023-02-28 00:00:00 | 192.7727981526473 |
-| butter | EU | 2023-03-07 00:00:00 | 194.7098125175143 |
-| butter | EU | 2023-03-14 00:00:00 | 200.3501901420965 |
-| butter | EU | 2023-03-21 00:00:00 | 202.8891350490334 |
-| butter | EU | 2023-03-28 00:00:00 | 201.3591055132906 |
-| butter | EU | 2023-04-04 00:00:00 | 205.6269965490893 |
-| butter | EU | 2023-04-11 00:00:00 | 202.2399558905518 |
-| butter | EU | 2023-04-18 00:00:00 | 205.8722542754485 |
-| butter | EU | 2023-04-25 00:00:00 | 203.2271064782549 |
-| butter | EU | 2023-05-02 00:00:00 | 200.1383503507745 |
-| butter | EU | 2023-05-09 00:00:00 | 192.6480974284024 |
-| butter | EU | 2023-05-16 00:00:00 | 191.6261717355347 |
-| butter | EU | 2023-05-23 00:00:00 | 196.6102533230372 |
-| butter | EU | 2023-05-30 00:00:00 | 197.5045079038209 |
-| butter | EU | 2023-06-06 00:00:00 | 196.963576422391 |
-| butter | EU | 2023-06-13 00:00:00 | 197.1407217835682 |
-| butter | EU | 2023-06-20 00:00:00 | 195.5615473417009 |
-| butter | EU | 2023-06-27 00:00:00 | 193.2422927439817 |
-| butter | EU | 2023-07-04 00:00:00 | 192.2310095213556 |
-| butter | EU | 2023-07-11 00:00:00 | 197.0425038205303 |
-| butter | EU | 2023-07-18 00:00:00 | 200.078529387958 |
-| butter | EU | 2023-07-25 00:00:00 | 194.9619412022637 |
-| butter | EU | 2023-08-01 00:00:00 | 191.8986215511508 |
-| butter | EU | 2023-08-08 00:00:00 | 191.7288666761956 |
-| butter | EU | 2023-08-15 00:00:00 | 191.5556972797418 |
-| butter | EU | 2023-08-22 00:00:00 | 189.7776525411409 |
-| butter | EU | 2023-08-29 00:00:00 | 187.688385739918 |
-| butter | EU | 2023-09-05 00:00:00 | 185.8847262476308 |
-| butter | EU | 2023-09-12 00:00:00 | 189.3401639611121 |
-| butter | EU | 2023-09-19 00:00:00 | 187.8374719625558 |
-| butter | EU | 2023-09-26 00:00:00 | 189.8892577479732 |
-| butter | EU | 2023-10-03 00:00:00 | 189.7410321326824 |
-| butter | EU | 2023-10-10 00:00:00 | 192.585108453298 |
-| butter | EU | 2023-10-17 00:00:00 | 194.2616362374727 |
-| butter | EU | 2023-10-24 00:00:00 | 198.213598328949 |
-| butter | EU | 2023-10-31 00:00:00 | 203.2236049080422 |
-| butter | EU | 2023-11-07 00:00:00 | 207.7731130343798 |
-| butter | EU | 2023-11-14 00:00:00 | 216.2578307149061 |
-| butter | EU | 2023-11-21 00:00:00 | 217.2331424202431 |
-| butter | EU | 2023-11-28 00:00:00 | 221.8785057654084 |
-| butter | EU | 2023-12-05 00:00:00 | 222.9686146372715 |
-| butter | EU | 2023-12-12 00:00:00 | 227.8773456024613 |
-| butter | EU | 2023-12-19 00:00:00 | 234.6274769265404 |
-| butter | EU | 2023-12-26 00:00:00 | 237.4276146376464 |
-| butter | EU | 2024-01-02 00:00:00 | 236.2439705739816 |
-| butter | EU | 2024-01-09 00:00:00 | 233.2346280075798 |
-| butter | EU | 2024-01-16 00:00:00 | 228.860810249204 |
-| butter | EU | 2024-01-23 00:00:00 | 226.3243083126343 |
-| butter | EU | 2024-01-30 00:00:00 | 226.0967267244598 |
-| butter | EU | 2024-02-06 00:00:00 | 226.6415261592873 |
-| butter | EU | 2024-02-13 00:00:00 | 230.7112416320392 |
-| butter | EU | 2024-02-20 00:00:00 | 242.0461749081619 |
-| butter | EU | 2024-02-27 00:00:00 | 244.6712424542761 |
-| butter | EU | 2024-03-05 00:00:00 | 246.1109637041526 |
-| butter | EU | 2024-03-12 00:00:00 | 245.3153535182859 |
-| butter | EU | 2024-03-19 00:00:00 | 247.6674220278367 |
-| butter | EU | 2024-03-26 00:00:00 | 249.7612692790663 |
-| butter | EU | 2024-04-02 00:00:00 | 250.680612486219 |
-| butter | EU | 2024-04-09 00:00:00 | 251.6010897230527 |
-| butter | EU | 2024-04-16 00:00:00 | 255.0131516907667 |
-| butter | EU | 2024-04-23 00:00:00 | 251.1991759885441 |
-| butter | EU | 2024-04-30 00:00:00 | 254.3074618554567 |
-| butter | EU | 2024-05-07 00:00:00 | 259.2341722788428 |
-| butter | EU | 2024-05-14 00:00:00 | 263.9868911778061 |
-| butter | EU | 2024-05-21 00:00:00 | 267.0257193723647 |
-| butter | EU | 2024-05-28 00:00:00 | 278.7641795013249 |
-| butter | EU | 2024-06-04 00:00:00 | 278.0074812016643 |
-| butter | EU | 2024-06-11 00:00:00 | 281.1758932472114 |
-| butter | EU | 2024-06-18 00:00:00 | 281.8535728637905 |
-| butter | EU | 2024-06-25 00:00:00 | 284.5689936612728 |
-| butter | EU | 2024-07-02 00:00:00 | 283.6342363809845 |
-| butter | EU | 2024-07-09 00:00:00 | 287.9812655314969 |
-| butter | EU | 2024-07-16 00:00:00 | 294.4778280973427 |
-| butter | EU | 2024-07-23 00:00:00 | 294.6731931195994 |
-| butter | EU | 2024-07-30 00:00:00 | 298.1927362621215 |
-| butter | EU | 2024-08-06 00:00:00 | 305.4736470780235 |
-| butter | EU | 2024-08-13 00:00:00 | 316.4365623809123 |
-| butter | EU | 2024-08-20 00:00:00 | 324.9619357112601 |
-| butter | EU | 2024-08-27 00:00:00 | 328.3488730706182 |
-| butter | EU | 2024-09-03 00:00:00 | 334.9640974844145 |
-| butter | EU | 2024-09-10 00:00:00 | 340.8212600454529 |
-| butter | EU | 2024-09-17 00:00:00 | 344.0708467881331 |
-| butter | EU | 2024-09-24 00:00:00 | 346.9715140220877 |
-| butter | EU | 2024-10-01 00:00:00 | 351.485776957591 |
-| butter | EU | 2024-10-08 00:00:00 | 349.5103805314859 |
-| butter | EU | 2024-10-15 00:00:00 | 348.6721635529345 |
-| butter | EU | 2024-10-22 00:00:00 | 346.2416593564764 |
-| butter | EU | 2024-10-29 00:00:00 | 352.2500435912822 |
-| butter | EU | 2024-11-05 00:00:00 | 350.2452377141432 |
-| butter | EU | 2024-11-12 00:00:00 | 346.1908346862937 |
-| butter | EU | 2024-11-19 00:00:00 | 344.384105462561 |
-| butter | EU | 2024-11-26 00:00:00 | 350.1410392455952 |
-| butter | EU | 2024-12-03 00:00:00 | 348.4327772997465 |
-| butter | EU | 2024-12-10 00:00:00 | 343.8001097105082 |
-| butter | EU | 2024-12-17 00:00:00 | 339.4396471010489 |
-| butter | EU | 2024-12-24 00:00:00 | 337.180589635944 |
-| butter | EU | 2024-12-31 00:00:00 | 334.8577832821225 |
-| butter | EU | 2025-01-07 00:00:00 | 334.217629600371 |
-| butter | EU | 2025-01-14 00:00:00 | 332.6820494746547 |
-| butter | EU | 2025-01-21 00:00:00 | 330.7029541919951 |
-| butter | EU | 2025-01-28 00:00:00 | 329.6582223918845 |
-| butter | EU | 2025-02-04 00:00:00 | 322.0284124499225 |
-| butter | EU | 2025-02-11 00:00:00 | 323.6829087567886 |
-| butter | EU | 2025-02-18 00:00:00 | 323.4083490703861 |
-| butter | EU | 2025-02-25 00:00:00 | 321.2901180020328 |
-| butter | EU | 2025-03-04 00:00:00 | 328.8967853765388 |
-| butter | EU | 2025-03-11 00:00:00 | 336.375561342166 |
-| butter | EU | 2025-03-18 00:00:00 | 339.1055951409879 |
-| butter | EU | 2025-03-25 00:00:00 | 334.1107490006918 |
-| butter | EU | 2025-04-01 00:00:00 | 338.3066859306776 |
-| butter | EU | 2025-04-08 00:00:00 | 347.2452586548716 |
-| butter | EU | 2025-04-15 00:00:00 | 352.6904117935253 |
-| butter | EU | 2025-04-22 00:00:00 | 356.3237265387361 |
-| butter | EU | 2025-04-29 00:00:00 | 354.2952170315473 |
-| butter | EU | 2025-05-06 00:00:00 | 350.8824151139006 |
-| butter | EU | 2025-05-13 00:00:00 | 347.3017067333426 |
-| butter | EU | 2025-05-20 00:00:00 | 351.0942412147944 |
-| butter | EU | 2025-05-27 00:00:00 | 351.0992056696609 |
-| butter | EU | 2025-06-03 00:00:00 | 355.1039597758866 |
-| butter | EU | 2025-06-10 00:00:00 | 361.3617130026497 |
-| butter | EU | 2025-06-17 00:00:00 | 365.5450666669793 |
-| butter | EU | 2025-06-24 00:00:00 | 368.9819424503294 |
-| butter | EU | 2025-07-01 00:00:00 | 369.0076224353607 |
-| butter | EU | 2025-07-08 00:00:00 | 368.3705071744872 |
-| butter | EU | 2025-07-15 00:00:00 | 367.3440739688991 |
-| butter | EU | 2025-07-22 00:00:00 | 365.2311829215504 |
-| butter | EU | 2025-07-29 00:00:00 | 355.0397402542637 |
-| butter | EU | 2025-08-05 00:00:00 | 356.0212608443018 |
-| butter | EU | 2025-08-12 00:00:00 | 356.2321455935813 |
-| butter | EU | 2025-08-19 00:00:00 | 353.0324369753913 |
-| butter | EU | 2025-08-26 00:00:00 | 346.1754502122037 |
-| butter | EU | 2025-09-02 00:00:00 | 340.643362026687 |
-| butter | EU | 2025-09-09 00:00:00 | 334.7498518119893 |
-| butter | EU | 2025-09-16 00:00:00 | 329.0301068632421 |
-| butter | EU | 2025-09-23 00:00:00 | 326.6434107338551 |
-| butter | EU | 2025-09-30 00:00:00 | 321.504661801041 |
-| butter | EU | 2025-10-07 00:00:00 | 316.2053760945195 |
-| butter | EU | 2025-10-14 00:00:00 | 315.8652455258632 |
-| butter | EU | 2025-10-21 00:00:00 | 311.0127604761909 |
-| butter | EU | 2025-10-28 00:00:00 | 303.171463605132 |
-| butter | EU | 2025-11-04 00:00:00 | 299.3322712013771 |
-| butter | EU | 2025-11-11 00:00:00 | 302.6739065432735 |
-| butter | EU | 2025-11-18 00:00:00 | 297.0265616792323 |
-| butter | EU | 2025-11-25 00:00:00 | 288.7487377854657 |
-| butter | EU | 2025-12-02 00:00:00 | 274.8222984969278 |
-| butter | EU | 2025-12-09 00:00:00 | 267.3393828906734 |
-| butter | EU | 2025-12-16 00:00:00 | 263.981713784894 |
-| butter | EU | 2025-12-23 00:00:00 | 263.4194484209436 |
-| butter | EU | 2025-12-30 00:00:00 | 252.4296668361648 |
-| butter | EU | 2026-01-06 00:00:00 | 241.6029080694488 |
-| butter | EU | 2026-01-13 00:00:00 | 249.5214273569909 |
-| butter | Novus | 2025-11-04 00:00:00 | 541.8119219748718 |
-| butter | Novus | 2025-11-11 00:00:00 | 702.7777777777778 |
-| butter | Novus | 2025-11-18 00:00:00 | 207.475 |
-| butter | Novus | 2025-11-25 00:00:00 | 577.7777777777778 |
-| butter | Novus | 2025-12-02 00:00:00 | 605.2694444444445 |
-| butter | Novus | 2025-12-09 00:00:00 | 578.8127777777778 |
-| butter | Novus | 2025-12-16 00:00:00 | 770.0 |
-| butter | Novus | 2025-12-23 00:00:00 | 405.1770833333333 |
-| butter | Novus | 2025-12-30 00:00:00 | nan |
-| butter | Novus | 2026-01-06 00:00:00 | 484.0215841333875 |
-| butter | ProZorro | 2025-04-08 00:00:00 | 369.9316666666667 |
-| butter | ProZorro | 2025-04-15 00:00:00 | 347.3978666666667 |
-| butter | ProZorro | 2025-04-22 00:00:00 | 359.558 |
-| butter | ProZorro | 2025-04-29 00:00:00 | 349.3848333333333 |
-| butter | ProZorro | 2025-05-06 00:00:00 | 335.52852 |
-| butter | ProZorro | 2025-05-13 00:00:00 | 377.2994166666667 |
-| butter | ProZorro | 2025-05-20 00:00:00 | 366.8222972972973 |
-| butter | ProZorro | 2025-05-27 00:00:00 | 338.845652173913 |
-| butter | ProZorro | 2025-06-03 00:00:00 | 328.8782716049383 |
-| butter | ProZorro | 2025-06-10 00:00:00 | 344.5091379310344 |
-| butter | ProZorro | 2025-06-17 00:00:00 | 324.1679166666667 |
-| butter | ProZorro | 2025-06-24 00:00:00 | 305.3285858585859 |
-| butter | ProZorro | 2025-07-01 00:00:00 | 342.2168181818182 |
-| butter | ProZorro | 2025-07-08 00:00:00 | 341.0908333333333 |
-| butter | ProZorro | 2025-07-15 00:00:00 | 337.5096533333333 |
-| butter | ProZorro | 2025-07-22 00:00:00 | 335.711 |
-| butter | ProZorro | 2025-07-29 00:00:00 | 329.9317391304348 |
-| butter | ProZorro | 2025-08-05 00:00:00 | 341.7127160493827 |
-| butter | ProZorro | 2025-08-12 00:00:00 | 385.6013475177305 |
-| butter | ProZorro | 2025-08-19 00:00:00 | 401.0935536723164 |
-| butter | ProZorro | 2025-08-26 00:00:00 | 396.5513888888889 |
-| butter | ProZorro | 2025-09-02 00:00:00 | 377.3821949685535 |
-| butter | ProZorro | 2025-09-09 00:00:00 | 376.2489559748428 |
-| butter | ProZorro | 2025-09-16 00:00:00 | 373.0790833333334 |
-| butter | ProZorro | 2025-09-23 00:00:00 | 399.084695035461 |
-| butter | ProZorro | 2025-09-30 00:00:00 | 390.3391358024692 |
-| butter | ProZorro | 2025-10-07 00:00:00 | 400.7017254901961 |
-| butter | ProZorro | 2025-10-14 00:00:00 | 410.3288444444444 |
-| butter | ProZorro | 2025-10-21 00:00:00 | 383.1894117647059 |
-| butter | ProZorro | 2025-10-28 00:00:00 | 397.2584375 |
-| butter | ProZorro | 2025-11-04 00:00:00 | 378.3467232704402 |
-| butter | ProZorro | 2025-11-11 00:00:00 | 368.7710784313726 |
-| butter | ProZorro | 2025-11-18 00:00:00 | 385.9099285714286 |
-| butter | ProZorro | 2025-11-25 00:00:00 | 368.6284031007752 |
-| butter | ProZorro | 2025-12-02 00:00:00 | 368.9184838709677 |
-| butter | ProZorro | 2025-12-09 00:00:00 | 374.0946993464053 |
-| butter | ProZorro | 2025-12-16 00:00:00 | 377.5032948717949 |
-| butter | ProZorro | 2025-12-23 00:00:00 | 390.6054912159038 |
-| butter | ProZorro | 2025-12-30 00:00:00 | 390.1490213032581 |
-| butter | ProZorro | 2026-01-06 00:00:00 | 385.162091954023 |
-| butter | ProducerUA | 2021-01-26 00:00:00 | 31.78268739915295 |
-| butter | ProducerUA | 2021-02-02 00:00:00 | 31.69196553797087 |
-| butter | ProducerUA | 2021-02-09 00:00:00 | 32.11990594772291 |
-| butter | ProducerUA | 2021-02-16 00:00:00 | 32.40242697520763 |
-| butter | ProducerUA | 2021-02-23 00:00:00 | 28.55053480037716 |
-| butter | ProducerUA | 2021-03-02 00:00:00 | 26.36498393884041 |
-| butter | ProducerUA | 2021-03-09 00:00:00 | 26.57157528974028 |
-| butter | ProducerUA | 2021-03-16 00:00:00 | 26.53508318385934 |
-| butter | ProducerUA | 2021-03-23 00:00:00 | 26.40650316774724 |
-| butter | ProducerUA | 2021-03-30 00:00:00 | 30.17199708177099 |
-| butter | ProducerUA | 2021-04-06 00:00:00 | 33.0550173565649 |
-| butter | ProducerUA | 2021-04-13 00:00:00 | 33.3416108924661 |
-| butter | ProducerUA | 2021-04-20 00:00:00 | 33.49996016906144 |
-| butter | ProducerUA | 2021-04-27 00:00:00 | 29.62262162996972 |
-| butter | ProducerUA | 2021-05-04 00:00:00 | 26.49912921420096 |
-| butter | ProducerUA | 2021-05-11 00:00:00 | 26.37817609861066 |
-| butter | ProducerUA | 2021-05-18 00:00:00 | 26.83940319065365 |
-| butter | ProducerUA | 2021-05-25 00:00:00 | 27.20537835216775 |
-| butter | ProducerUA | 2021-06-01 00:00:00 | 31.07691401431375 |
-| butter | ProducerUA | 2021-06-08 00:00:00 | 33.57559706067066 |
-| butter | ProducerUA | 2021-06-15 00:00:00 | 33.39821249166182 |
-| butter | ProducerUA | 2021-06-22 00:00:00 | 33.73627247078904 |
-| butter | ProducerUA | 2021-06-29 00:00:00 | 33.50415053230881 |
-| butter | ProducerUA | 2021-07-06 00:00:00 | 32.90174444288609 |
-| butter | ProducerUA | 2021-07-13 00:00:00 | 32.74078841442707 |
-| butter | ProducerUA | 2021-07-20 00:00:00 | 34.55272594498133 |
-| butter | ProducerUA | 2021-07-27 00:00:00 | 30.54770401080643 |
-| butter | ProducerUA | 2021-08-03 00:00:00 | 26.96145796901684 |
-| butter | ProducerUA | 2021-08-10 00:00:00 | 27.33144469172424 |
-| butter | ProducerUA | 2021-08-17 00:00:00 | 27.20615252982991 |
-| butter | ProducerUA | 2021-08-24 00:00:00 | 27.29426118314359 |
-| butter | ProducerUA | 2021-08-31 00:00:00 | 31.35686766699797 |
-| butter | ProducerUA | 2021-09-07 00:00:00 | 35.08603152179268 |
-| butter | ProducerUA | 2021-09-14 00:00:00 | 35.20437024515208 |
-| butter | ProducerUA | 2021-09-21 00:00:00 | 34.93530034562432 |
-| butter | ProducerUA | 2021-09-28 00:00:00 | 35.48636308653302 |
-| butter | ProducerUA | 2021-10-05 00:00:00 | 35.80173741522908 |
-| butter | ProducerUA | 2021-10-12 00:00:00 | 35.50340282147981 |
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| hard_cheese | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## hard_cheese/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo | promo_controlled |
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| hard_cheese | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 59.6293771397054 | 260.995 | 56.99 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 59.19054346563472 | 310.0 | 58.09 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 59.31606880691795 | 272.225 | 59.99 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 59.45520000587967 | 294.0 | 59.445 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 59.2850858876422 | 287.99 | 59.49 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 51.70489886750449 | 279.6 | 59.99 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 46.22716106084129 | 315.25 | 59.99 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 46.34016153275736 | 241.5 | 59.99 | hard_cheese | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| hard_cheese | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | hard_cheese | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo_novus | promo_controlled |
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| hard_cheese | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 10
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 59.6293771397054 | 260.995 | 56.99 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 59.19054346563472 | 310.0 | 58.09 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 59.31606880691795 | 272.225 | 114.495 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 59.45520000587967 | 294.0 | 186.4925 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 59.2850858876422 | 287.99 | 59.49 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 51.70489886750449 | 279.6 | 59.99 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 46.22716106084129 | 315.25 | 89.99 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 46.34016153275736 | 241.5 | 103.81 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 47.37634906317265 | 235.0 | 404.495 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 47.37749768939897 | 320.88 | 216.495 | hard_cheese | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| hard_cheese | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## hard_cheese/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | milk | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | novus | promo_controlled |
+
+## milk/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| milk | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## milk/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## milk/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-11-10 00:00:00 | 9.541324852194801 | 42.0 | 68.99 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 9.464479382910632 | 42.0 | 81.49 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 9.351463254879393 | 42.84 | 84.99 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 8.361658686536295 | 44.0 | 74.99 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 7.848155395055493 | 43.8 | 70.49 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 7.805102492916548 | 43.9 | 62.99 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 7.310218074118272 | 43.08 | 69.99 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 7.213241109896768 | 39.8 | 66.99 | milk | novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## milk/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| milk | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## milk/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo | promo_controlled |
+
+## milk/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| milk | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## milk/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## milk/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 9.391788400537894 | 44.1 | 59.99 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 9.437110443078286 | 42.15000000000001 | 59.99 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 9.541324852194801 | 42.0 | 59.99 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 9.464479382910632 | 42.0 | 59.99 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 9.351463254879393 | 42.84 | 59.99 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 8.361658686536295 | 44.0 | 61.945 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 7.848155395055493 | 43.8 | 59.99 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 7.805102492916548 | 43.9 | 61.49 | milk | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+
+## milk/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| milk | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## milk/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | milk | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo_novus | promo_controlled |
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| milk | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 10
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 9.391788400537894 | 44.1 | 59.99 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 9.437110443078286 | 42.15000000000001 | 59.99 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 9.541324852194801 | 42.0 | 59.99 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 9.464479382910632 | 42.0 | 59.99 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 9.351463254879393 | 42.84 | 61.74 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 8.361658686536295 | 44.0 | 61.945 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 7.848155395055493 | 43.8 | 62.23999999999999 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 7.805102492916548 | 43.9 | 61.74 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 7.310218074118272 | 43.08 | 69.99 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 7.213241109896768 | 39.8 | 66.99 | milk | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| milk | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## milk/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## model_ardl :: model_ardl_output.xlsx :: ARDL_Summary
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 0
+- Cols: 20
+
+_No rows_
 
 ## model_discounts :: model_discounts_output.xlsx :: Silpo_Discounts_Occurrence
 
 - Category: other
 - Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
 - Rows: 1
-- Cols: 4
+- Cols: 1
 
-| standardized_type | n_obs | model | interpretation_note |
-| --- | --- | --- | --- |
-| nan | 0 | logit | Insufficient variation/data for occurrence model in current window. |
+| note |
+| --- |
+| No rows |
 
 ## model_discounts :: model_discounts_output.xlsx :: Silpo_Discounts_Depth
 
 - Category: other
 - Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
 - Rows: 1
-- Cols: 4
+- Cols: 1
 
-| standardized_type | n_obs | model | interpretation_note |
-| --- | --- | --- | --- |
-| nan | 0 | ols_hc1 | Insufficient discounted observations for depth model. |
+| note |
+| --- |
+| No rows |
 
 ## model_discounts :: model_discounts_output.xlsx :: Silpo_Transmission_PromoCtrl
 
-- Category: model_results
-- Interpretation: Model results table. Mean |coef|=1.8479; interpret sign and magnitude jointly with diagnostics.
-- Rows: 4
-- Cols: 11
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 1
 
-| standardized_type | n_obs | coef_EU_no_promo | coef_EU_with_promo | coef_Producer_no_promo | coef_Producer_with_promo | delta_EU | delta_Producer | promo_coef_present | promo_coef_depth | interpretation_note |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| butter | 33 | 1.535644521267677 | -1.660182202847171 | -3.999278302034052 | 1.766933115146946 | -3.195826724114848 | 5.766211417180998 | -0.8947798337292888 | 0 | Difference between no-promo and promo-controlled pass-through. |
-| cream | 33 | 1.543144113274722 | 1.41819009958284 | -2.828347575510229 | -2.764913204007323 | -0.1249540136918827 | 0.06343437150290576 | -0.1271753750785895 | 0 | Difference between no-promo and promo-controlled pass-through. |
-| hard_cheese | 33 | -1.566095507221104 | 0.1552460384676559 | 0.6140932156535026 | -0.8329859269793987 | 1.72134154568876 | -1.447079142632901 | -0.3639259312553088 | 0 | Difference between no-promo and promo-controlled pass-through. |
-| milk | 33 | 1.357731332296655 | 4.27157712515603 | -1.247354240050975 | -2.005255656927778 | 2.913845792859375 | -0.7579014168768037 | -0.6067609497040047 | 0 | Difference between no-promo and promo-controlled pass-through. |
+| note |
+| --- |
+| No primary-chain silpo rows available to build discount comparison. |
 
 ## model_ecm :: model_ecm_output.xlsx :: ECM_Summary
 
 - Category: model_results
-- Interpretation: Model results table. Mean |coef|=0.6234; interpret sign and magnitude jointly with diagnostics.
-- Rows: 3
-- Cols: 12
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 0
+- Cols: 20
 
-| standardized_type | y_series_source | x_series_sources | frequency | sample_period | lags_selected | short_run_coef | long_run_coef | ect_coef | ect_pvalue | diagnostics_flags | interpretation_note |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| cream | ProZorro | EU | weekly | 2025-04-15..2026-01-06 | dy(1), dx(0), ect(1) | 0.4329521085730607 | 0.2420314765526169 | -0.9167713338060415 | 1.875767834348819e-15 | HAC SE applied | Negative significant ECT indicates convergence to long-run equilibrium. |
-| hard_cheese | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | dy(1), dx(0), ect(1) | -0.1711678294704225 | -0.8152110388071305 | -0.6376969703823614 | 0.0002994226060990344 | HAC SE applied | Negative significant ECT indicates convergence to long-run equilibrium. |
-| milk | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | dy(1), dx(0), ect(1) | 0.7517341425344837 | 0.8584340883413262 | -0.7845430609440491 | 1.248533424638271e-10 | HAC SE applied | Negative significant ECT indicates convergence to long-run equilibrium. |
-
-## model_ecm :: model_ecm_output.xlsx :: ARDL_Summary
-
-- Category: model_results
-- Interpretation: Model results table. Mean |coef|=0.9400; interpret sign and magnitude jointly with diagnostics.
-- Rows: 11
-- Cols: 12
-
-| standardized_type | y_series_source | x_series_sources | frequency | sample_period | lags_selected | short_run_coef | long_run_coef | coint_or_bounds_p | diagnostics_flags | eligible_for_ecm_form | interpretation_note |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| butter | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=2, q=2 | 0.638088813491537 | 0.8477031455859193 | 0.7705229151133584 | LB=8.79e-15; BP=0.462; White=0.515 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| butter | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=1, q=0 | -0.1126541894710495 | -0.3318711999239127 | 0.1636038972284045 | LB=0.633; BP=0.0462; White=0.255 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| cream | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=2, q=2 | 0.04922198585267523 | 0.1895293235950405 | 0.5456672984077288 | LB=1.37e-21; BP=0.59; White=0.0654 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| cream | ProZorro | EU | weekly | 2025-04-15..2026-01-06 | p=2, q=0 | 0.2894838020743842 | 0.2798247240248903 | 7.914017296706472e-06 | LB=0.978; BP=0.322; White=0.753 | yes | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| hard_cheese | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=2, q=2 | 0.3551626072614864 | 0.6208905309984175 | 0.3497660842704009 | LB=2.94e-23; BP=0.0859; White=0.119 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| hard_cheese | ConsumerUA | EU | weekly | 2021-12-28..2026-01-13 | p=2, q=2 | 0.452794007447562 | 0.8390572807646949 | 0.5031244319467403 | LB=5.79e-21; BP=0.157; White=0.0643 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| hard_cheese | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=1, q=0 | -0.2865029854639456 | -0.4489016720895597 | 0.001297823529196093 | LB=0.705; BP=0.318; White=0.49 | yes | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| milk | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | p=3, q=2 | 0.4145372929609987 | 0.7957185748702496 | 0.8924029758886471 | LB=4.73e-08; BP=0.0925; White=0.164 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| milk | ConsumerUA | EU | weekly | 2021-12-28..2026-01-13 | p=3, q=2 | 0.3710293334168067 | 0.7473279445716343 | 0.9515547171935748 | LB=8.41e-08; BP=0.149; White=0.261 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| milk | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=2, q=0 | 0.7545075848393812 | 0.8868136250061809 | 4.278777154383951e-05 | LB=0.92; BP=0.381; White=0.577 | yes | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
-| other | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | p=1, q=0 | -0.09704672500046962 | 10.87221183583123 | 0.4120659935594279 | LB=0.12; BP=0.572; White=0.292 | no | ARDL captures short- and long-run transmission under I(0)/I(1)-mix assumptions. |
+_No rows_
 
 ## model_forecast_knn :: model_forecast_knn_output.xlsx :: Forecast_Summary
 
@@ -7184,344 +8417,298 @@ _Large table truncated in markdown; full table in Total_Run.xlsx._
 | Сир твердий | 46 | -0.003448418725580535 | 0.393544581866999 | -0.1304863006531816 | 0.3633535989144401 | 0.8530481539621354 |
 | Сметана | 49 | 0.56040945620913 | 0.08992558573282051 | -5.078263514758259 | 0.1164214278893085 | 0.4607852937005169 |
 
+## model_forecast_knn :: model_forecast_knn_output.xlsx :: Ultimate_Consumer_Price
+
+- Category: forecast
+- Interpretation: Forecast/synthetic table. Focus on prediction errors, stability across products, and synthetic-retail linkage.
+- Rows: 145
+- Cols: 5
+
+| date | product | ultimate_consumer_price | actual_consumer_price | synthetic_retail_price |
+| --- | --- | --- | --- | --- |
+| 2025-10-23 00:00:00 | Молоко питне | 12.14593092614326 | 12.17781139623318 | 77.18945560492887 |
+| 2025-10-24 00:00:00 | Молоко питне | 12.0931878961892 | 12.12589662153451 | 74.42822758886413 |
+| 2025-10-25 00:00:00 | Молоко питне | 12.03276953525117 | 12.0782488146193 | 75.20669655911863 |
+| 2025-10-26 00:00:00 | Молоко питне | 11.98569317704931 | 12.04340191105444 | 73.99005308204028 |
+| 2025-10-27 00:00:00 | Молоко питне | 11.94319544968966 | 12.02988984640684 | 76.41416387310768 |
+| 2025-10-28 00:00:00 | Молоко питне | 11.92779626861546 | 12.04766659962209 | 76.95030575926232 |
+| 2025-10-29 00:00:00 | Молоко питне | 11.93267689199793 | 12.09379690902404 | 77.8735539360557 |
+| 2025-10-30 00:00:00 | Молоко питне | 11.96222644337297 | 12.15748084924699 | 73.04584568254724 |
+| 2025-10-31 00:00:00 | Молоко питне | 11.99033006212505 | 12.22791849492526 | 76.08083242306681 |
+| 2025-11-01 00:00:00 | Молоко питне | 12.04588954963015 | 12.29430992069313 | 76.08631330367497 |
+| 2025-11-02 00:00:00 | Молоко питне | 12.08935435211824 | 12.34585520118491 | 75.63487073366532 |
+| 2025-11-03 00:00:00 | Молоко питне | 12.11907147925981 | 12.37175441103492 | 74.1837706440102 |
+| 2025-11-04 00:00:00 | Молоко питне | 12.12460223170107 | 12.38075113140858 | 81.0903536331981 |
+| 2025-11-05 00:00:00 | Молоко питне | 12.13918616009673 | 12.38870578114559 | 75.89653107191029 |
+| 2025-11-06 00:00:00 | Молоко питне | 12.11989777253557 | 12.39549369139163 | 74.90566287850875 |
+| 2025-11-07 00:00:00 | Молоко питне | 12.1109531833104 | 12.40099019329236 | 76.92824563148335 |
+| 2025-11-08 00:00:00 | Молоко питне | 12.10941542289859 | 12.40507061799348 | 76.61231172538886 |
+| 2025-11-09 00:00:00 | Молоко питне | 12.10020660322384 | 12.40761029664065 | 76.08585277815054 |
+| 2025-11-10 00:00:00 | Молоко питне | 12.08917760673179 | 12.40848456037956 | 73.09215840493533 |
+| 2025-11-11 00:00:00 | Молоко питне | 12.06988067128683 | 12.39886369761992 | 75.97962385665825 |
+| 2025-11-12 00:00:00 | Молоко питне | 12.05895049146012 | 12.37342900878686 | 79.24790354079083 |
+| 2025-11-13 00:00:00 | Молоко питне | 12.03656174739064 | 12.33732234304916 | 77.69802838174871 |
+| 2025-11-14 00:00:00 | Молоко питне | 11.99285816773055 | 12.29568554957562 | 77.19405472850003 |
+| 2025-11-15 00:00:00 | Молоко питне | 11.94769279991411 | 12.25366047753503 | 76.71979377407288 |
+| 2025-11-16 00:00:00 | Молоко питне | 11.90231804739044 | 12.21638897609617 | 79.6915548175643 |
+| 2025-11-17 00:00:00 | Молоко питне | 11.86982108820042 | 12.18901289442783 | 75.0175202299447 |
+| 2025-11-18 00:00:00 | Молоко питне | 11.82449761086358 | 12.17138203951479 | 76.9673381660316 |
+| 2025-11-19 00:00:00 | Молоко питне | 11.80462080042382 | 12.15836241962987 | 74.63358231632955 |
+| 2025-11-20 00:00:00 | Молоко питне | 11.7766857023881 | 12.14762018587395 | 76.6003602069872 |
+| 2025-11-21 00:00:00 | Молоко питне | 11.76227917711411 | 12.1368214893479 | 76.21589961994013 |
+| 2025-11-22 00:00:00 | Молоко питне | 11.74143074249798 | 12.12363248115259 | 76.95955756490635 |
+| 2025-11-23 00:00:00 | Молоко питне | 11.72176315245967 | 12.1057193123889 | 74.0870688078439 |
+| 2025-11-24 00:00:00 | Молоко питне | 11.68862799828386 | 12.08074813415769 | 76.63885758183459 |
+| 2025-11-25 00:00:00 | Молоко питне | 11.66475848455662 | 11.95312133463902 | 75.2655122481201 |
+| 2025-11-26 00:00:00 | Молоко питне | 11.55356305447904 | 11.67108771163957 | 77.38611991256185 |
+| 2025-11-27 00:00:00 | Молоко питне | 11.33600578629575 | 11.29808303070008 | 77.67333932575 |
+| 2025-11-28 00:00:00 | Молоко питне | 11.04441051978822 | 10.89754305736136 | 78.30661689800162 |
+| 2025-11-29 00:00:00 | Молоко питне | 10.73147609482944 | 10.53290355716416 | 75.58934006436218 |
+| 2025-11-30 00:00:00 | Молоко питне | 10.43642434084955 | 10.26760029564928 | 77.32937604922502 |
+| 2025-12-01 00:00:00 | Молоко питне | 10.22715009660978 | 10.16506903835748 | 76.50389533453816 |
+| 2025-12-02 00:00:00 | Молоко питне | 10.1366190324609 | 10.17474982602348 | 77.21668462890251 |
+| 2025-12-03 00:00:00 | Молоко питне | 10.13627170711264 | 10.19971606789896 | 78.28954320595415 |
+| 2025-12-04 00:00:00 | Молоко питне | 10.14890366828346 | 10.23385358230012 | 73.59889295807359 |
+| 2025-12-08 00:00:00 | Молоко питне | 10.1553311517822 | 10.33983273148583 | 69.821 |
+| 2025-12-11 00:00:00 | Молоко питне | 10.22019115119868 | 10.26505257993789 | 75.81777329294769 |
+| 2025-12-12 00:00:00 | Молоко питне | 10.16639183451684 | 10.21530110501763 | 79.965020929112 |
+| 2025-12-13 00:00:00 | Молоко питне | 10.12699697067065 | 10.15839404196142 | 77.54193207509601 |
+| 2025-12-17 00:00:00 | Молоко питне | 10.06708854956635 | 9.830279131724351 | 128.1338588588589 |
+| 2025-12-18 00:00:00 | Молоко питне | 9.885708652656932 | 9.691803781082035 | nan |
+| 2025-12-25 00:00:00 | Молоко питне | 9.69971008737071 | 9.39563498493026 | nan |
+| 2025-10-23 00:00:00 | Сир твердий | 57.97768431115297 | 58.05883113667285 | 226.6536706348435 |
+| 2025-10-24 00:00:00 | Сир твердий | 57.88101966505444 | 57.97897657876775 | 231.1645612244127 |
+| 2025-10-25 00:00:00 | Сир твердий | 57.76667574418195 | 57.90568540918363 | 229.4632209466349 |
+| 2025-10-26 00:00:00 | Сир твердий | 57.66477088182283 | 57.85208440456239 | 228.0567308639739 |
+| 2025-10-27 00:00:00 | Сир твердий | 57.58351947487454 | 57.831300341546 | 229.8694610650961 |
+| 2025-10-28 00:00:00 | Сир твердий | 57.53421950094703 | 57.88122128717562 | 223.8006418867703 |
+| 2025-10-29 00:00:00 | Сир твердий | 57.57174498750508 | 58.01299688011047 | 227.5043024496681 |
+| 2025-10-30 00:00:00 | Сир твердий | 57.69100760546137 | 58.19964625441952 | 229.7309669942835 |
+| 2025-10-31 00:00:00 | Сир твердий | 57.87025802752063 | 58.41418854417175 | 229.2764007526461 |
+| 2025-11-01 00:00:00 | Сир твердий | 58.08092645715123 | 58.62964288343613 | 229.9257026168027 |
+| 2025-11-02 00:00:00 | Сир твердий | 58.29011827926504 | 58.81902840628162 | 227.8130868846393 |
+| 2025-11-03 00:00:00 | Сир твердий | 58.47161755181725 | 58.95536424677721 | 231.459877627304 |
+| 2025-11-04 00:00:00 | Сир твердий | 58.58833180319939 | 59.05792367883593 | 271.9449882994387 |
+| 2025-11-05 00:00:00 | Сир твердий | 58.63475508023289 | 59.16020162202844 | 227.8638924843073 |
+| 2025-11-06 00:00:00 | Сир твердий | 58.7444729405273 | 59.25654967891018 | 228.1058573132266 |
+| 2025-11-07 00:00:00 | Сир твердий | 58.80904728728868 | 59.34131945203654 | 229.4567728854474 |
+| 2025-11-08 00:00:00 | Сир твердий | 58.85941984475859 | 59.40886254396295 | 231.0795679423524 |
+| 2025-11-09 00:00:00 | Сир твердий | 58.89229266275037 | 59.45353055724483 | 231.0792155855851 |
+| 2025-11-10 00:00:00 | Сир твердий | 58.9052904768651 | 59.46967509443758 | 233.9124600773208 |
+| 2025-11-11 00:00:00 | Сир твердий | 58.89335059591676 | 59.46654802491421 | 229.6332740453741 |
+| 2025-11-12 00:00:00 | Сир твердий | 58.86745961401013 | 59.4577272569145 | 226.9332443372626 |
+| 2025-11-13 00:00:00 | Сир твердий | 58.83424897519387 | 59.44405345129404 | 231.7781837927396 |
+| 2025-11-14 00:00:00 | Сир твердий | 58.78927614255395 | 59.42636726890843 | 230.3518734335082 |
+| 2025-11-15 00:00:00 | Сир твердий | 58.74589304916449 | 59.40550937061328 | 230.630821390749 |
+| 2025-11-16 00:00:00 | Сир твердий | 58.69902981438195 | 59.38232041726418 | 230.2825477197986 |
+| 2025-11-17 00:00:00 | Сир твердий | 58.65052165948323 | 59.35764106971671 | 229.0676985550977 |
+| 2025-11-18 00:00:00 | Сир твердий | 58.60141919209516 | 59.33029275953629 | 231.9640578808602 |
+| 2025-11-19 00:00:00 | Сир твердий | 58.54644726653183 | 59.29681789397659 | 228.8940190753907 |
+| 2025-11-20 00:00:00 | Сир твердий | 58.49131330339682 | 59.25463859742558 | 231.9628465255986 |
+| 2025-11-21 00:00:00 | Сир твердий | 58.42292750779377 | 59.20117699427127 | 236.0807379175151 |
+| 2025-11-22 00:00:00 | Сир твердий | 58.3433231690267 | 59.13385520890166 | 232.8153174849738 |
+| 2025-11-23 00:00:00 | Сир твердий | 58.25721583301815 | 59.05009536570473 | 233.5813032997179 |
+| 2025-11-24 00:00:00 | Сир твердий | 58.15232145616822 | 58.94731958906848 | 234.9093936780864 |
+| 2025-11-25 00:00:00 | Сир твердий | 58.02915009695759 | 58.26309647166663 | 234.9694108882562 |
+| 2025-11-26 00:00:00 | Сир твердий | 57.38147742574969 | 56.67383846597856 | 237.3762489172366 |
+| 2025-11-27 00:00:00 | Сир твердий | 55.91325103969238 | 54.53523348610081 | 236.2307822365235 |
+| 2025-11-28 00:00:00 | Сир твердий | 53.9482028066281 | 52.20296944612988 | 235.2284994557624 |
+| 2025-11-29 00:00:00 | Сир твердий | 51.80306117561214 | 50.03273426016229 | 237.143687656203 |
+| 2025-11-30 00:00:00 | Сир твердий | 49.79815845862768 | 48.38021584229453 | 234.5976775303135 |
+| 2025-12-01 00:00:00 | Сир твердий | 48.26415301002543 | 47.60110210662313 | 236.306070721933 |
+| 2025-12-02 00:00:00 | Сир твердий | 47.52178470564669 | 47.39002349439211 | 237.9745020478334 |
+| 2025-12-03 00:00:00 | Сир твердий | 47.29788138186234 | 47.20584056134357 | 240.7781512976661 |
+| 2025-12-04 00:00:00 | Сир твердий | 47.09887244933068 | 47.05058639332115 | 235.6637298356631 |
+| 2025-12-05 00:00:00 | Сир твердий | 46.93287500741436 | 46.92629407616848 | nan |
+| 2025-12-13 00:00:00 | Сир твердий | 47.03348146913127 | 47.22627487595583 | 234.4173110461628 |
+| 2025-12-14 00:00:00 | Сир твердий | 47.15516261936853 | 47.37346627121473 | nan |
+| 2025-10-23 00:00:00 | Сметана | 35.62453162626448 | 35.25546012311675 | 149.3925497964998 |
+| 2025-10-24 00:00:00 | Сметана | 35.61080874644192 | 35.11964329889369 | 143.999534992785 |
+| 2025-10-25 00:00:00 | Сметана | 34.7493373950308 | 34.99498950131912 | 147.4532308802309 |
+| 2025-10-26 00:00:00 | Сметана | 35.08614796935656 | 34.90382478368995 | 146.1853601953602 |
+| 2025-10-27 00:00:00 | Сметана | 34.81765599393852 | 34.86847519930313 | 145.5954781644282 |
+| 2025-10-28 00:00:00 | Сметана | 34.68696596959883 | 34.94553550218356 | 147.4985511904762 |
+| 2025-10-29 00:00:00 | Сметана | 35.13130327722555 | 35.14593283218277 | 146.3115240944241 |
+| 2025-10-30 00:00:00 | Сметана | 35.50229057877512 | 35.42349182133768 | 147.2981708180708 |
+| 2025-10-31 00:00:00 | Сметана | 36.38175235088953 | 35.73203710168517 | 141.2606931216931 |
+| 2025-11-01 00:00:00 | Сметана | 36.34880669586883 | 36.02539330526215 | 144.6849580789581 |
+| 2025-11-02 00:00:00 | Сметана | 37.61155069230318 | 36.23673488253484 | 147.9092627401838 |
+| 2025-11-03 00:00:00 | Сметана | 38.73648334660037 | 36.23673488253484 | 143.2320781440781 |
+| 2025-11-04 00:00:00 | Сметана | 38.02095925093933 | 36.23673488253484 | 157.5926448879552 |
+| 2025-11-05 00:00:00 | Сметана | 40.08676978411174 | 36.23673488253484 | 143.5629757452575 |
+| 2025-11-06 00:00:00 | Сметана | 38.02170278366317 | 36.23673488253484 | 146.4625082655826 |
+| 2025-11-07 00:00:00 | Сметана | 38.42568374325224 | 36.23673488253484 | 149.7966963690476 |
+| 2025-11-08 00:00:00 | Сметана | 38.88870432534086 | 36.23673488253484 | 148.5318038258038 |
+| 2025-11-09 00:00:00 | Сметана | 38.67969543898597 | 36.23673488253484 | 150.1698606934002 |
+| 2025-11-10 00:00:00 | Сметана | 38.8933985281196 | 36.23673488253484 | 142.4507206349206 |
+| 2025-11-11 00:00:00 | Сметана | 37.73599410090188 | 36.23673488253484 | 143.4507439431913 |
+| 2025-11-12 00:00:00 | Сметана | 37.86010748567771 | 36.23673488253484 | 145.3843917502089 |
+| 2025-11-13 00:00:00 | Сметана | 38.12097928789752 | 36.23673488253484 | 148.2352981829574 |
+| 2025-11-14 00:00:00 | Сметана | 38.51358030491759 | 36.23673488253484 | 145.7223342063492 |
+| 2025-11-15 00:00:00 | Сметана | 38.13753292897473 | 36.1258853201433 | 141.8908462197159 |
+| 2025-11-16 00:00:00 | Сметана | 37.54478282808923 | 36.00751482551906 | 146.0058845543346 |
+| 2025-11-17 00:00:00 | Сметана | 38.01757277654136 | 35.91727447043525 | 147.1195904344194 |
+| 2025-11-18 00:00:00 | Сметана | 38.06318186957284 | 35.8562702822273 | 146.6896929197995 |
+| 2025-11-19 00:00:00 | Сметана | 37.90666540749471 | 35.8101493413126 | 144.70239446533 |
+| 2025-11-20 00:00:00 | Сметана | 37.53834262310888 | 35.77103647565598 | 141.7045964285714 |
+| 2025-11-21 00:00:00 | Сметана | 37.0274208130823 | 35.73105651322228 | 142.9255451127819 |
+| 2025-11-22 00:00:00 | Сметана | 37.13007312294199 | 35.68233428197632 | 145.2562133876358 |
+| 2025-11-23 00:00:00 | Сметана | 37.38122338235411 | 35.61699460988294 | 146.0147234126984 |
+| 2025-11-24 00:00:00 | Сметана | 37.38464955586498 | 35.52716232490695 | 132.6486610704111 |
+| 2025-11-25 00:00:00 | Сметана | 35.30076811509029 | 35.11538037560963 | 148.7107834168755 |
+| 2025-11-26 00:00:00 | Сметана | 37.40080901530548 | 34.22188693370104 | 142.4723654344194 |
+| 2025-11-27 00:00:00 | Сметана | 36.1493083827507 | 33.04534966186926 | 141.8142266917293 |
+| 2025-11-28 00:00:00 | Сметана | 35.60556732748573 | 31.78443622280236 | 139.6957090016708 |
+| 2025-11-29 00:00:00 | Сметана | 34.8267985213819 | 30.63781427918839 | 141.3698101712615 |
+| 2025-11-30 00:00:00 | Сметана | 34.60834222346504 | 29.80415149371543 | 142.98264446533 |
+| 2025-12-01 00:00:00 | Сметана | 34.4842266517854 | 29.48211552907154 | 146.0917850250626 |
+| 2025-12-02 00:00:00 | Сметана | 34.75219120445674 | 29.49941385719898 | 144.3463872180451 |
+| 2025-12-03 00:00:00 | Сметана | 34.51818371294185 | 29.54402533500134 | 145.2351156432749 |
+| 2025-12-04 00:00:00 | Сметана | 34.67001875666861 | 29.60502470260863 | 143.1892293233083 |
+| 2025-12-06 00:00:00 | Сметана | 34.44796840879172 | 29.73248606775821 | nan |
+| 2025-12-13 00:00:00 | Сметана | 35.66798703396618 | 29.20711270834541 | 142.9120016516517 |
+| 2025-12-16 00:00:00 | Сметана | 34.76000912002424 | 28.57099212612363 | 138.6220555555556 |
+| 2025-12-19 00:00:00 | Сметана | 33.45651416051654 | 27.44539411731308 | 136.9426666666666 |
+| 2025-12-26 00:00:00 | Сметана | 32.08360325901947 | 27.1167501792202 | 171.116 |
+| 2026-01-07 00:00:00 | Сметана | 36.53072046596746 | 36.23673488253484 | nan |
+
 ## model_intersection_bidirectional :: model_intersection_bidirectional_output.xlsx :: Bidirectional_Results
 
-- Category: model_results
-- Interpretation: Model results table. Mean |coef|=0.9493; interpret sign and magnitude jointly with diagnostics.
-- Rows: 47
-- Cols: 11
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 1
 
-| product | standardized_type | source_from | source_to | best_lag_days | corr_at_best_lag | coef | pvalue | lag_y_coef | n_obs | r2 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Інше/невідомо | other | ProZorro | Silpo | 5 | -0.344142756046086 | -2.966188346373614 | 0.08074954877320639 | -0.04308934987527899 | 44 | 0.1431188039001647 |
-| Інше/невідомо | other | Silpo | ProZorro | 29 | 0.3128069173851133 | 0.04512861843260454 | 0.05686316658104966 | -0.4309671655583513 | 48 | 0.2329202299889497 |
-| Вершки | cream | ProducerUA | ProZorro | 2 | -0.1283655458154975 | -7.281423391341971 | 0.06666209205020897 | -0.539090935749095 | 126 | 0.275453123868162 |
-| Вершки | cream | ProZorro | ProducerUA | 7 | -0.09861343188652431 | -0.001041998583994166 | 0.3826740791470333 | 1.029050237938417 | 153 | 0.81578053259564 |
-| Вершки | cream | ProducerUA | Silpo | 12 | -0.2522105646052715 | -8.33721486576752 | 0.00495833598196576 | -0.4527112665486566 | 44 | 0.2027430396171614 |
-| Вершки | cream | Silpo | ProducerUA | 23 | 0.1390752187096891 | 0.002741170474420749 | 0.5025226298112405 | 0.9022339549148681 | 44 | 0.8143327277244898 |
-| Вершки | cream | ProZorro | Silpo | 20 | 0.4480396505265144 | 0.1279135662452101 | 0.1867121134223578 | -0.2948713704995815 | 29 | 0.2044998214430758 |
-| Вершки | cream | Silpo | ProZorro | 16 | 0.3640911703360981 | 1.204974939456572 | 0.08450220613284475 | 0.005381410485947008 | 33 | 0.1160433930825304 |
-| Кефір | milk | ProducerUA | Silpo | 18 | 0.2133293049709356 | 3.982481001118452 | 0.000458849614093498 | -0.4482324512895203 | 44 | 0.2187910778030939 |
-| Кефір | milk | Silpo | ProducerUA | 12 | -0.09306487664615719 | -0.002946049615998741 | 0.1756608562929143 | 0.903876468535125 | 46 | 0.8235842119468182 |
-| Масло вершкове | butter | ProducerUA | ProZorro | 22 | -0.0742256147516845 | -0.7835837862964729 | 0.3194869293474676 | -0.5214432672632551 | 172 | 0.2303694002855058 |
-| Масло вершкове | butter | ProZorro | ProducerUA | 13 | 0.07602371709539194 | 0.001519173424160461 | 0.2983551258644681 | 0.9398711609836685 | 178 | 0.8193259070189257 |
-| Масло вершкове | butter | ProducerUA | Silpo | 18 | -0.1688314460469495 | -3.118529119683404 | 3.482961562980906e-06 | -0.2441812432830039 | 44 | 0.1219287269575187 |
-| Масло вершкове | butter | Silpo | ProducerUA | 8 | -0.20944787136617 | -0.01644009821815185 | 0.07022430756733357 | 0.9269751459251905 | 46 | 0.8870924244525988 |
-| Масло вершкове | butter | ProZorro | Silpo | 20 | 0.3811230782244839 | 0.1927500403143291 | 0.02527077429792273 | -0.1715439191245706 | 31 | 0.1442977620501192 |
-| Масло вершкове | butter | Silpo | ProZorro | 13 | -0.4044907256090871 | -0.691042905641526 | 0.0004539289530566551 | -0.5379483584736579 | 29 | 0.3398907133383465 |
-| Молоко питне | milk | ProducerUA | ProZorro | 9 | -0.1132414888334676 | -3.45353820131385 | 0.01540743222772413 | -0.6018912770176705 | 145 | 0.3124447382210309 |
-| Молоко питне | milk | ProZorro | ProducerUA | 24 | 0.09043495740083399 | 0.0006351496798827642 | 0.3875752226678549 | 0.8383384418093016 | 146 | 0.9046553167550895 |
-| Молоко питне | milk | ProducerUA | Silpo | 17 | 0.260494883568964 | 1.322461316497855 | 0.0697604270138432 | -0.4860642627553776 | 44 | 0.2752341099123331 |
-| Молоко питне | milk | Silpo | ProducerUA | 27 | 0.1803855821856728 | 0.008293186454638002 | 0.2267961297359476 | 0.9271794670813647 | 42 | 0.8281675573328584 |
-| Молоко питне | milk | ProducerUA | ConsumerUA | 1 | 0.922021507480644 | 0.08964948942085349 | 0.6580167675123156 | 0.8368631405185917 | 1792 | 0.857328001216203 |
-| Молоко питне | milk | ConsumerUA | ProducerUA | 1 | 0.921085111808229 | 0.01099717914440862 | 0.9554961772739896 | 0.9150185226100571 | 1791 | 0.8570073886132386 |
-| Молоко питне | milk | ProZorro | Silpo | 16 | 0.3693313792212271 | 0.08300778650892157 | 0.00706302544996906 | -0.4007998444571148 | 28 | 0.2708677053142831 |
-| Молоко питне | milk | Silpo | ProZorro | 30 | 0.419346882886758 | 0.9889298990910356 | 0.003165419334453498 | -0.3480139435363296 | 34 | 0.2644804687803639 |
-| Молоко питне | milk | Silpo | ConsumerUA | 22 | -0.1530279672586181 | -0.003170139551008958 | 0.5198158292526824 | 0.8508800882397457 | 46 | 0.8912203729402018 |
-| Молоко питне | milk | ConsumerUA | Silpo | 17 | 0.3061517063825985 | 0.996961244217275 | 0.1976906868711109 | -0.4827429422801033 | 44 | 0.2724776234003282 |
-| Сир кисломолочний | cottage_cheese | ProZorro | Silpo | 23 | -0.5280504702070822 | -0.05571365214279521 | 0.04221738403635723 | -0.3039894995629704 | 34 | 0.2963643580260934 |
-| Сир твердий | hard_cheese | ProducerUA | ProZorro | 8 | 0.07351127501400415 | 1.289851746125363 | 0.1398269544896688 | -0.5002009881118649 | 115 | 0.2286415046851921 |
-| Сир твердий | hard_cheese | ProZorro | ProducerUA | 5 | -0.08029658222773735 | -0.0008628518807110921 | 0.5505727138635541 | 0.7582423167079773 | 142 | 0.7463412608070266 |
-| Сир твердий | hard_cheese | ProducerUA | Silpo | 11 | -0.2248159777948446 | -14.3322370758533 | 0.2183172290146689 | -0.4450917977784347 | 44 | 0.2069141496002695 |
-| Сир твердий | hard_cheese | Silpo | ProducerUA | 7 | 0.1559628790950166 | 0.00580788567594811 | 0.309411313423276 | 0.9117234862999738 | 46 | 0.8444090882271245 |
-| Сир твердий | hard_cheese | ProducerUA | ConsumerUA | 1 | 0.9143993997442397 | 0.0007935426157027747 | 0.9964488805076905 | 0.9193548212504996 | 1792 | 0.8463381391661623 |
-| Сир твердий | hard_cheese | ConsumerUA | ProducerUA | 1 | 0.9138359535716607 | 0.009308587568012366 | 0.9549899255666182 | 0.9098928677644317 | 1791 | 0.8450652048993256 |
-| Сир твердий | hard_cheese | ProZorro | Silpo | 17 | 0.4810978367640439 | 0.34265500216483 | 0.01201818291579076 | -0.1195888219280774 | 26 | 0.2485665932548805 |
-| Сир твердий | hard_cheese | Silpo | ProZorro | 23 | -0.3461840694517589 | -0.310914148435912 | 0.1422539084687857 | -0.3445491626976209 | 27 | 0.2339904964092914 |
-| Сир твердий | hard_cheese | Silpo | ConsumerUA | 7 | 0.1591616110845483 | 0.005166244780792606 | 0.3072570975505161 | 0.9181111367997421 | 46 | 0.8574902158830816 |
-| Сир твердий | hard_cheese | ConsumerUA | Silpo | 12 | -0.2035758279659689 | -4.533278442344826 | 0.2444559343789292 | -0.4498989060930563 | 44 | 0.2055922450083745 |
-| Сир твердий | hard_cheese | Novus | ConsumerUA | 19 | 0.178270700245151 | 0.000629106661925951 | 0.6981170273520367 | 0.980157541363407 | 25 | 0.8057456247339839 |
-| Сметана | sour_cream | ProducerUA | ProZorro | 15 | -0.08831020627895389 | -1.924712665611491 | 0.4003538794681236 | -0.5148131588611302 | 104 | 0.2759883538788848 |
-| Сметана | sour_cream | ProZorro | ProducerUA | 5 | -0.1502212197511062 | -0.00250366969669894 | 0.09495666108878505 | 0.7711890276450871 | 130 | 0.7193176420970302 |
-| Сметана | sour_cream | ProducerUA | Silpo | 28 | -0.1710687008711113 | -0.9161047877662135 | 0.04151449968135601 | -0.3056414823280903 | 44 | 0.1183941503597548 |
-| Сметана | sour_cream | Silpo | ProducerUA | 28 | 0.1232300715537108 | 0.00764213928370603 | 0.4425921670348376 | 0.9233778506906155 | 41 | 0.8241541726322084 |
-| Сметана | sour_cream | ProducerUA | ConsumerUA | 1 | 0.9197296172072058 | 0.01529445985825603 | 0.9178437556663026 | 0.909643020376852 | 1792 | 0.8539902566920774 |
-| Сметана | sour_cream | ConsumerUA | ProducerUA | 1 | 0.918840127591367 | 0.02191100641313154 | 0.883876464996765 | 0.9012484288437169 | 1791 | 0.8522129989300707 |
-| Сметана | sour_cream | ProZorro | Silpo | 24 | 0.4826256312832329 | 0.1526741858610107 | 0.0002794515666836329 | -0.3587506677112259 | 29 | 0.3313183884700213 |
-| Сметана | sour_cream | Silpo | ConsumerUA | 28 | 0.1742852407654381 | 0.006030539112188949 | 0.607332428817378 | 1.093110818950664 | 46 | 0.8680368074772813 |
-| Сметана | sour_cream | ConsumerUA | Silpo | 28 | -0.1609766611963484 | -0.8644407842639009 | 0.05553095204045976 | -0.3058354927949435 | 44 | 0.115144611374893 |
+| note |
+| --- |
+| Insufficient Silpo-Novus overlap for bidirectional regressions. |
 
 ## model_intersection_bidirectional :: model_intersection_bidirectional_output.xlsx :: Bidirectional_Granger
 
 - Category: other
 - Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
-- Rows: 38
-- Cols: 7
+- Rows: 1
+- Cols: 1
 
-| product | standardized_type | source_from | source_to | granger_min_p_1to7 | granger_best_lag_1to7 | n_obs |
-| --- | --- | --- | --- | --- | --- | --- |
-| Інше/невідомо | other | ProZorro | Silpo | 0.3956824046659728 | 1 | 45 |
-| Інше/невідомо | other | Silpo | ProZorro | 0.04651880961144209 | 5 | 45 |
-| Вершки | cream | ProducerUA | ProZorro | 0.07103297758166575 | 1 | 160 |
-| Вершки | cream | ProZorro | ProducerUA | 0.1800730589452083 | 2 | 160 |
-| Вершки | cream | ProducerUA | Silpo | 0.1047702118277732 | 5 | 46 |
-| Вершки | cream | Silpo | ProducerUA | 0.05832439264648466 | 3 | 46 |
-| Вершки | cream | ProZorro | Silpo | 0.1040627843999825 | 4 | 35 |
-| Вершки | cream | Silpo | ProZorro | 0.2418405180907417 | 1 | 35 |
-| Кефір | milk | ProducerUA | Silpo | 0.1896215096385488 | 2 | 46 |
-| Кефір | milk | Silpo | ProducerUA | 0.5661027967078718 | 5 | 46 |
-| Масло вершкове | butter | ProducerUA | ProZorro | 0.3396175055969438 | 4 | 191 |
-| Масло вершкове | butter | ProZorro | ProducerUA | 0.03244695631151522 | 2 | 191 |
-| Масло вершкове | butter | ProducerUA | Silpo | 0.4291138645732421 | 3 | 46 |
-| Масло вершкове | butter | Silpo | ProducerUA | 0.1157681584643765 | 3 | 46 |
-| Молоко питне | milk | ProducerUA | ProZorro | 0.05543151198981763 | 7 | 168 |
-| Молоко питне | milk | ProZorro | ProducerUA | 0.2463349920228787 | 7 | 168 |
-| Молоко питне | milk | ProducerUA | Silpo | 0.1849670487481843 | 1 | 46 |
-| Молоко питне | milk | Silpo | ProducerUA | 0.1100675979793548 | 3 | 46 |
-| Молоко питне | milk | ProducerUA | ConsumerUA | 6.901497525800264e-34 | 6 | 1792 |
-| Молоко питне | milk | ConsumerUA | ProducerUA | 3.504995428670392e-10 | 6 | 1792 |
-| Молоко питне | milk | Silpo | ConsumerUA | 0.1348426817946344 | 3 | 46 |
-| Молоко питне | milk | ConsumerUA | Silpo | 0.1410355476018612 | 6 | 46 |
-| Сир твердий | hard_cheese | ProducerUA | ProZorro | 0.1508194842589405 | 2 | 145 |
-| Сир твердий | hard_cheese | ProZorro | ProducerUA | 0.325382547217091 | 2 | 145 |
-| Сир твердий | hard_cheese | ProducerUA | Silpo | 0.409110001914312 | 5 | 46 |
-| Сир твердий | hard_cheese | Silpo | ProducerUA | 0.2728923500897928 | 7 | 46 |
-| Сир твердий | hard_cheese | ProducerUA | ConsumerUA | 6.593583431618971e-22 | 6 | 1792 |
-| Сир твердий | hard_cheese | ConsumerUA | ProducerUA | 3.516125097383079e-18 | 7 | 1792 |
-| Сир твердий | hard_cheese | Silpo | ConsumerUA | 0.1386671267358425 | 6 | 46 |
-| Сир твердий | hard_cheese | ConsumerUA | Silpo | 0.4054929579658378 | 5 | 46 |
-| Сметана | sour_cream | ProducerUA | ProZorro | 0.3129673018736288 | 1 | 133 |
-| Сметана | sour_cream | ProZorro | ProducerUA | 0.1667277900295295 | 6 | 133 |
-| Сметана | sour_cream | ProducerUA | Silpo | 0.3541333361263345 | 4 | 46 |
-| Сметана | sour_cream | Silpo | ProducerUA | 0.2601938301775595 | 3 | 46 |
-| Сметана | sour_cream | ProducerUA | ConsumerUA | 4.837053745025881e-10 | 7 | 1792 |
-| Сметана | sour_cream | ConsumerUA | ProducerUA | 2.206041562001771e-06 | 7 | 1792 |
-| Сметана | sour_cream | Silpo | ConsumerUA | 0.202782439047873 | 3 | 46 |
-| Сметана | sour_cream | ConsumerUA | Silpo | 0.4779533594406421 | 4 | 46 |
+| note |
+| --- |
+| Insufficient overlap for Silpo-Novus Granger tests. |
 
 ## model_intersection_bidirectional :: model_intersection_bidirectional_output.xlsx :: Intersection_Combination_Summar
 
-- Category: model_results
-- Interpretation: Model results table. Mean |coef|=3.1201; interpret sign and magnitude jointly with diagnostics.
-- Rows: 8
-- Cols: 36
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 1
 
-| product | standardized_type | combo_model | y_source | n_obs | r2 | adj_r2 | coef_lag_y | coef_x_ProZorro_lag5 | p_x_ProZorro_lag5 | coef_x_ProducerUA_lag12 | p_x_ProducerUA_lag12 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Інше/невідомо | other | silpo_only | Silpo | 44 | 0.1431188039001647 | 0.1013197211635873 | -0.04308934987527899 | -2.966188346373614 | 0.08074954877320639 | nan | nan |
-| Вершки | cream | silpo_only | Silpo | 29 | 0.2700698197544018 | 0.1824781981249299 | -0.3475133585662908 | nan | nan | -11.98256600799471 | 0.0006750724046240528 |
-| Кефір | milk | silpo_only | Silpo | 44 | 0.2187910778030939 | 0.1806833255008058 | -0.4482324512895203 | nan | nan | nan | nan |
-| Масло вершкове | butter | silpo_only | Silpo | 31 | 0.2199496213855462 | 0.1332773570950513 | -0.1824416143101848 | nan | nan | nan | nan |
-| Молоко питне | milk | silpo_only | Silpo | 28 | 0.3503274249571305 | 0.2373408901670662 | -0.3466494883675302 | nan | nan | nan | nan |
-| Сир кисломолочний | cottage_cheese | silpo_only | Silpo | 34 | 0.2963643580260934 | 0.2509685101568091 | -0.3039894995629704 | nan | nan | nan | nan |
-| Сир твердий | hard_cheese | silpo_only | Silpo | 26 | 0.2865716392255945 | 0.1506805228876125 | -0.1728258968331617 | nan | nan | nan | nan |
-| Сметана | sour_cream | silpo_only | Silpo | 29 | 0.458682900875341 | 0.3684633843545645 | -0.5050014528624837 | nan | nan | nan | nan |
+| note |
+| --- |
+| Insufficient overlap for combined secondary model. |
 
 ## model_intersection_bidirectional :: model_intersection_bidirectional_output.xlsx :: Intersection_Combination_Detail
 
-- Category: model_results
-- Interpretation: Model results table. Mean |coef|=4.5334; interpret sign and magnitude jointly with diagnostics.
-- Rows: 16
-- Cols: 8
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
 
-| product | standardized_type | combo_model | term | coef | pvalue | tvalue | n_obs |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Інше/невідомо | other | silpo_only | x_ProZorro_lag5 | -2.966188346373614 | 0.08074954877320639 | -1.746353476751815 | 44 |
-| Вершки | cream | silpo_only | x_ProducerUA_lag12 | -11.98256600799471 | 0.0006750724046240528 | -3.399507856210484 | 29 |
-| Вершки | cream | silpo_only | x_ProZorro_lag20 | 0.1508935599933721 | 0.1268780559953044 | 1.526529473686618 | 29 |
-| Кефір | milk | silpo_only | x_ProducerUA_lag18 | 3.982481001118452 | 0.000458849614093498 | 3.503695554789362 | 44 |
-| Масло вершкове | butter | silpo_only | x_ProducerUA_lag18 | -3.061687732914887 | 5.933357692402585e-06 | -4.528750261759746 | 31 |
-| Масло вершкове | butter | silpo_only | x_ProZorro_lag20 | 0.1973237051951309 | 0.02122774588068 | 2.303909115923133 | 31 |
-| Молоко питне | milk | silpo_only | x_ProducerUA_lag17 | -10.30490240828959 | 0.01381698575460503 | -2.461986525517441 | 28 |
-| Молоко питне | milk | silpo_only | x_ProZorro_lag16 | 0.0790580816988776 | 0.01058633810840423 | 2.556064870430721 | 28 |
-| Молоко питне | milk | silpo_only | x_ConsumerUA_lag17 | 12.46278439913933 | 0.00184738597680846 | 3.113729780347475 | 28 |
-| Сир кисломолочний | cottage_cheese | silpo_only | x_ProZorro_lag23 | -0.05571365214279521 | 0.04221738403635723 | -2.031370900381737 | 34 |
-| Сир твердий | hard_cheese | silpo_only | x_ProducerUA_lag11 | -15.19304030462618 | 0.2465964290380648 | -1.158656008746027 | 26 |
-| Сир твердий | hard_cheese | silpo_only | x_ProZorro_lag17 | 0.3723956880465731 | 0.005623720691202584 | 2.768950335880656 | 26 |
-| Сир твердий | hard_cheese | silpo_only | x_ConsumerUA_lag12 | -2.802991768638697 | 0.3157493969088093 | -1.003231045913417 | 26 |
-| Сметана | sour_cream | silpo_only | x_ProducerUA_lag28 | -5.213551655761053 | 0.01581094631087446 | -2.413250556560083 | 29 |
-| Сметана | sour_cream | silpo_only | x_ProZorro_lag24 | 0.1226701806866921 | 0.02334686274590745 | 2.26771041335082 | 29 |
-| Сметана | sour_cream | silpo_only | x_ConsumerUA_lag28 | 3.585430671262313 | 0.07332844961284213 | 1.790780973760103 | 29 |
+_No rows_
 
 ## model_intersection_bidirectional :: model_intersection_bidirectional_output.xlsx :: CrossTable_Correlations
 
 - Category: correlation_lag
 - Interpretation: Correlation/lag table. Use lag structure to guide directionality and dynamic model specifications.
-- Rows: 159
+- Rows: 77
 - Cols: 10
 
 | corr_type | source_left | source_right | product | lag | freq | series_left | series_right | pearson | spearman |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| between_sources | ProZorro | Silpo | Інше/невідомо | 0 | daily | price_pchip | price_pchip | 0.08501384846662308 | 0.1438520694700537 |
-| between_sources | ProZorro | Silpo | Інше/невідомо | 7 | daily | price_pchip | price_pchip | 0.09382062100686524 | 0.07496584726779254 |
-| between_sources | ProZorro | Silpo | Інше/невідомо | 14 | daily | price_pchip | price_pchip | -0.2028089538084511 | -0.08271680356876245 |
-| between_sources | ProZorro | ProducerUA | Вершки | 0 | daily | price_pchip | price_pchip | 0.04927482212688276 | 0.07127460885841022 |
-| between_sources | ProZorro | ProducerUA | Вершки | 0 | weekly | price_pchip | price_pchip | -0.06019592258574265 | -0.05523944997629207 |
-| between_sources | ProZorro | ProducerUA | Вершки | 1 | weekly | price_pchip | price_pchip | 0.009115693673181538 | 0.006893533209322683 |
-| between_sources | ProZorro | ProducerUA | Вершки | 2 | weekly | price_pchip | price_pchip | 0.09083690134804394 | 0.1427125506072875 |
-| between_sources | ProZorro | ProducerUA | Вершки | 7 | daily | price_pchip | price_pchip | 0.07630003913768656 | 0.08652828474044104 |
-| between_sources | ProZorro | ProducerUA | Вершки | 14 | daily | price_pchip | price_pchip | 0.124704533653067 | 0.1762692414620244 |
-| between_sources | ProZorro | Silpo | Вершки | 0 | daily | price_pchip | price_pchip | -0.06413029313791055 | -0.2491694352159469 |
-| between_sources | ProZorro | Silpo | Вершки | 7 | daily | price_pchip | price_pchip | 0.0258154009447211 | -0.00316019771493396 |
-| between_sources | ProZorro | Silpo | Вершки | 14 | daily | price_pchip | price_pchip | -0.4169305791656699 | -0.2846572032618544 |
-| between_sources | ProducerUA | Silpo | Вершки | 0 | daily | price_pchip | price_pchip | -0.22063926481763 | -0.299174989144594 |
-| between_sources | ProducerUA | Silpo | Вершки | 7 | daily | price_pchip | price_pchip | -0.2134788461028884 | -0.1621797655232306 |
-| between_sources | ProducerUA | Silpo | Вершки | 14 | daily | price_pchip | price_pchip | -0.2483021766133238 | -0.1717325227963526 |
+| between_sources | EU | Silpo | Інше/невідомо | 0 | daily | price_pchip | price_pchip | 0.7036896267922405 | 0.7505738788595241 |
+| between_sources | EU | Silpo | Інше/невідомо | 0 | weekly | price_pchip | price_pchip | 0.9044841052648571 | 0.8147058823529412 |
+| between_sources | EU | Silpo | Інше/невідомо | 1 | weekly | price_pchip | price_pchip | 0.5604513838048434 | 0.5637254901960785 |
+| between_sources | EU | Silpo | Інше/невідомо | 2 | weekly | price_pchip | price_pchip | -0.4627642563176874 | -0.4019607843137256 |
+| between_sources | EU | Silpo | Інше/невідомо | 7 | daily | price_pchip | price_pchip | 0.1559845237116024 | 0.05485664719819713 |
+| between_sources | EU | Silpo | Інше/невідомо | 14 | daily | price_pchip | price_pchip | -0.1367031092605868 | -0.3056858914728678 |
+| between_sources | EU | Silpo | Вершки | 0 | daily | price_pchip | price_pchip | -0.1566232690763853 | -0.1221288515406163 |
+| between_sources | EU | Silpo | Вершки | 7 | daily | price_pchip | price_pchip | -0.1932998328718862 | -0.2198879551820729 |
+| between_sources | EU | Silpo | Вершки | 14 | daily | price_pchip | price_pchip | -0.1909864131780531 | -0.1607843137254902 |
 | between_sources | Novus | Silpo | Йогурт | 7 | daily | price_pchip | price_pchip | 0.1785008270119316 | 0.3687593134659932 |
 | between_sources | Novus | Silpo | Йогурт | 14 | daily | price_pchip | price_pchip | 0.06330319429279573 | 0.26996299142885 |
-| between_sources | ProducerUA | Silpo | Кефір | 0 | daily | price_pchip | price_pchip | -0.4487516915580174 | -0.3847155883630048 |
-| between_sources | ProducerUA | Silpo | Кефір | 7 | daily | price_pchip | price_pchip | -0.3066534227512124 | -0.1652192792010421 |
-| between_sources | ProducerUA | Silpo | Кефір | 14 | daily | price_pchip | price_pchip | -0.2800580238388762 | -0.3137212331741207 |
-| between_sources | ProZorro | ProducerUA | Масло вершкове | 0 | daily | price_pchip | price_pchip | 0.08345314771020476 | 0.1337363371444246 |
-| between_sources | ProZorro | ProducerUA | Масло вершкове | 0 | weekly | price_pchip | price_pchip | 0.2207375752759627 | 0.2622825254404202 |
-| between_sources | ProZorro | ProducerUA | Масло вершкове | 1 | weekly | price_pchip | price_pchip | 0.1876971392580341 | 0.2396761133603239 |
-| between_sources | ProZorro | ProducerUA | Масло вершкове | 2 | weekly | price_pchip | price_pchip | 0.1405323077910286 | 0.1821763602251407 |
-| between_sources | ProZorro | ProducerUA | Масло вершкове | 7 | daily | price_pchip | price_pchip | 0.05944760710130514 | 0.124808415831582 |
-| between_sources | ProZorro | ProducerUA | Масло вершкове | 14 | daily | price_pchip | price_pchip | 0.06461069135119908 | 0.1460693712988393 |
-| between_sources | ProZorro | Silpo | Масло вершкове | 0 | daily | price_pchip | price_pchip | -0.0705101572983463 | -0.05522648083623695 |
-| between_sources | ProZorro | Silpo | Масло вершкове | 7 | daily | price_pchip | price_pchip | 0.08071591051258176 | 0.1322299651567945 |
-| between_sources | ProZorro | Silpo | Масло вершкове | 14 | daily | price_pchip | price_pchip | 0.2951717845110131 | 0.2810955352078438 |
-| between_sources | ProducerUA | Silpo | Масло вершкове | 0 | daily | price_pchip | price_pchip | -0.1062102048396027 | -0.05796786799826314 |
-| between_sources | ProducerUA | Silpo | Масло вершкове | 7 | daily | price_pchip | price_pchip | -0.2405361044900116 | -0.08782023447676944 |
-| between_sources | ProducerUA | Silpo | Масло вершкове | 14 | daily | price_pchip | price_pchip | -0.09193436324323055 | -0.1405775075987842 |
+| between_sources | EU | Silpo | Масло вершкове | 0 | daily | price_pchip | price_pchip | -0.06635777043711011 | -0.03669467787114846 |
+| between_sources | EU | Silpo | Масло вершкове | 7 | daily | price_pchip | price_pchip | -0.09762200874519522 | -0.03109243697478992 |
+| between_sources | EU | Silpo | Масло вершкове | 14 | daily | price_pchip | price_pchip | -0.1287376422864664 | -0.1352941176470588 |
+| between_sources | CME | ConsumerUA | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.2992425531975654 | 0.30605849598441 |
+| between_sources | CME | ConsumerUA | Молоко питне | 0 | weekly | price_pchip | price_pchip | 0.3115895090415932 | 0.3193871706315173 |
+| between_sources | CME | ConsumerUA | Молоко питне | 1 | weekly | price_pchip | price_pchip | 0.3030069308570693 | 0.3234376391884689 |
+| between_sources | CME | ConsumerUA | Молоко питне | 2 | weekly | price_pchip | price_pchip | 0.2933645038909488 | 0.3210413422447873 |
+| between_sources | CME | ConsumerUA | Молоко питне | 7 | daily | price_pchip | price_pchip | 0.2996214605370722 | 0.3168991229186054 |
+| between_sources | CME | ConsumerUA | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.286851015094869 | 0.3090518497776876 |
+| between_sources | CME | EU | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.3073197788779528 | 0.4116781373872708 |
+| between_sources | CME | EU | Молоко питне | 0 | weekly | price_pchip | price_pchip | 0.3196867460688807 | 0.4229630147407866 |
+| between_sources | CME | EU | Молоко питне | 1 | weekly | price_pchip | price_pchip | 0.2841908338931914 | 0.3889124862365033 |
+| between_sources | CME | EU | Молоко питне | 2 | weekly | price_pchip | price_pchip | 0.2514548301665495 | 0.3539858229094981 |
+| between_sources | CME | EU | Молоко питне | 7 | daily | price_pchip | price_pchip | 0.2777858248126248 | 0.3819521583233612 |
+| between_sources | CME | EU | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.2460600593563748 | 0.3507090238460923 |
+| between_sources | CME | Silpo | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.194237213355106 | 0.3631779984721161 |
+| between_sources | CME | Silpo | Молоко питне | 7 | daily | price_pchip | price_pchip | -0.1551061682432662 | 0.07379679144385026 |
+| between_sources | CME | Silpo | Молоко питне | 14 | daily | price_pchip | price_pchip | -0.2949693622721972 | -0.2376336898395722 |
+| between_sources | ConsumerUA | EU | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.7126675585790723 | 0.7491931841552139 |
+| between_sources | ConsumerUA | EU | Молоко питне | 0 | weekly | price_pchip | price_pchip | 0.7243015793768569 | 0.7651581201466009 |
+| between_sources | ConsumerUA | EU | Молоко питне | 1 | weekly | price_pchip | price_pchip | 0.7143242699340827 | 0.7540994549383854 |
+| between_sources | ConsumerUA | EU | Молоко питне | 2 | weekly | price_pchip | price_pchip | 0.7062219973746887 | 0.7448700019385678 |
+| between_sources | ConsumerUA | EU | Молоко питне | 7 | daily | price_pchip | price_pchip | 0.7000585928250894 | 0.7379479170026346 |
+| between_sources | ConsumerUA | EU | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.6919138481746998 | 0.728943709404495 |
 | between_sources | ConsumerUA | Novus | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.1857292721505089 | 0.154746554766564 |
 | between_sources | ConsumerUA | Novus | Молоко питне | 7 | daily | price_pchip | price_pchip | 0.3326568050755541 | 0.1272727272727273 |
 | between_sources | ConsumerUA | Novus | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.2699956200960648 | 0.1071918320512804 |
-| between_sources | ConsumerUA | ProZorro | Молоко питне | 0 | daily | price_pchip | price_pchip | -0.1140437405509299 | -0.05406964329142322 |
-| between_sources | ConsumerUA | ProZorro | Молоко питне | 0 | weekly | price_pchip | price_pchip | -0.08029571983782169 | -0.2106941838649156 |
-| between_sources | ConsumerUA | ProZorro | Молоко питне | 1 | weekly | price_pchip | price_pchip | -0.1578457867263643 | -0.2412757973733584 |
-| between_sources | ConsumerUA | ProZorro | Молоко питне | 2 | weekly | price_pchip | price_pchip | -0.2764887617290851 | -0.3628517823639775 |
-| between_sources | ConsumerUA | ProZorro | Молоко питне | 7 | daily | price_pchip | price_pchip | -0.1479964719350764 | -0.1150653467639364 |
-| between_sources | ConsumerUA | ProZorro | Молоко питне | 14 | daily | price_pchip | price_pchip | -0.1670000858462626 | -0.1419006059028936 |
-| between_sources | ConsumerUA | ProducerUA | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.9943291802492265 | 0.9923113413768397 |
-| between_sources | ConsumerUA | ProducerUA | Молоко питне | 0 | weekly | price_pchip | price_pchip | 0.9943574361344858 | 0.9927806051934114 |
-| between_sources | ConsumerUA | ProducerUA | Молоко питне | 1 | weekly | price_pchip | price_pchip | 0.942828362613636 | 0.9391128670230174 |
-| between_sources | ConsumerUA | ProducerUA | Молоко питне | 2 | weekly | price_pchip | price_pchip | 0.848558403924559 | 0.847068941261471 |
-| between_sources | ConsumerUA | ProducerUA | Молоко питне | 7 | daily | price_pchip | price_pchip | 0.919611511163026 | 0.9163031783063914 |
-| between_sources | ConsumerUA | ProducerUA | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.8282565468745957 | 0.8252673674982488 |
 | between_sources | ConsumerUA | Silpo | Молоко питне | 0 | daily | price_pchip | price_pchip | -0.1561672023154664 | -0.1404689535388624 |
 | between_sources | ConsumerUA | Silpo | Молоко питне | 7 | daily | price_pchip | price_pchip | -0.08031075216965339 | -0.1715154146765089 |
 | between_sources | ConsumerUA | Silpo | Молоко питне | 14 | daily | price_pchip | price_pchip | -0.2924851312043633 | -0.2749674337820235 |
-| between_sources | Novus | ProducerUA | Молоко питне | 14 | daily | price_pchip | price_pchip | -0.1488160160018393 | -0.1246753246753247 |
-| between_sources | ProZorro | ProducerUA | Молоко питне | 0 | daily | price_pchip | price_pchip | -0.1191949057324027 | -0.04341897255271818 |
-| between_sources | ProZorro | ProducerUA | Молоко питне | 0 | weekly | price_pchip | price_pchip | -0.07158569052880222 | -0.1719006455848561 |
-| between_sources | ProZorro | ProducerUA | Молоко питне | 1 | weekly | price_pchip | price_pchip | -0.02194156237148332 | -0.03947368421052631 |
-| between_sources | ProZorro | ProducerUA | Молоко питне | 2 | weekly | price_pchip | price_pchip | 0.1383748753595073 | 0.100750469043152 |
-| between_sources | ProZorro | ProducerUA | Молоко питне | 7 | daily | price_pchip | price_pchip | -0.03625445276133798 | 0.04637725031293852 |
-| between_sources | ProZorro | ProducerUA | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.07022984765805244 | 0.1432302561993182 |
-| between_sources | ProZorro | Silpo | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.01895085088385589 | 0.08392603129445234 |
-| between_sources | ProZorro | Silpo | Молоко питне | 7 | daily | price_pchip | price_pchip | 0.2000777474902628 | 0.2837290732027574 |
-| between_sources | ProZorro | Silpo | Молоко питне | 14 | daily | price_pchip | price_pchip | 0.1015632039950771 | 0.2303939962476548 |
-| between_sources | ProducerUA | Silpo | Молоко питне | 0 | daily | price_pchip | price_pchip | -0.1528051511596381 | -0.194637429439861 |
-| between_sources | ProducerUA | Silpo | Молоко питне | 7 | daily | price_pchip | price_pchip | -0.0780843264063494 | -0.1856274424663482 |
-| between_sources | ProducerUA | Silpo | Молоко питне | 14 | daily | price_pchip | price_pchip | -0.2942017958235476 | -0.2748588797221016 |
-| between_sources | ProZorro | Silpo | Сир кисломолочний | 0 | daily | price_pchip | price_pchip | 0.2800334436364827 | 0.2943977591036415 |
-| between_sources | ProZorro | Silpo | Сир кисломолочний | 7 | daily | price_pchip | price_pchip | 0.1066571468233953 | 0.03674727358937885 |
-| between_sources | ProZorro | Silpo | Сир кисломолочний | 14 | daily | price_pchip | price_pchip | -0.1700480628464496 | -0.1374493927125506 |
+| between_sources | EU | Silpo | Молоко питне | 0 | daily | price_pchip | price_pchip | 0.1730870423925318 | 0.1703081232492997 |
+| between_sources | EU | Silpo | Молоко питне | 7 | daily | price_pchip | price_pchip | -0.3013088519893242 | -0.3196078431372549 |
+| between_sources | EU | Silpo | Молоко питне | 14 | daily | price_pchip | price_pchip | -0.3191296370850484 | -0.2778711484593838 |
+| between_sources | ConsumerUA | EU | Сир твердий | 0 | daily | price_pchip | price_pchip | 0.7431085665278738 | 0.7542992814677459 |
+| between_sources | ConsumerUA | EU | Сир твердий | 0 | weekly | price_pchip | price_pchip | 0.7524084495955645 | 0.7657462867262077 |
+| between_sources | ConsumerUA | EU | Сир твердий | 1 | weekly | price_pchip | price_pchip | 0.7439098255882197 | 0.7540046033180415 |
+| between_sources | ConsumerUA | EU | Сир твердий | 2 | weekly | price_pchip | price_pchip | 0.7423661201368158 | 0.7514248357997699 |
+| between_sources | ConsumerUA | EU | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.7298728754787885 | 0.7373669358577026 |
+| between_sources | ConsumerUA | EU | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.7285579502597065 | 0.7336837486016382 |
 | between_sources | ConsumerUA | Novus | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.1790873357699617 | -0.2113811514558391 |
 | between_sources | ConsumerUA | Novus | Сир твердий | 7 | daily | price_pchip | price_pchip | -0.04443468360383181 | -0.1264081593139869 |
 | between_sources | ConsumerUA | Novus | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.06927903954982605 | 0.1270030398242419 |
-| between_sources | ConsumerUA | ProZorro | Сир твердий | 0 | daily | price_pchip | price_pchip | 0.04013005869308488 | 0.07421586060899535 |
-| between_sources | ConsumerUA | ProZorro | Сир твердий | 0 | weekly | price_pchip | price_pchip | 0.1369520319494014 | 0.1557223264540338 |
-| between_sources | ConsumerUA | ProZorro | Сир твердий | 1 | weekly | price_pchip | price_pchip | 0.08793176854578436 | 0.1722326454033771 |
-| between_sources | ConsumerUA | ProZorro | Сир твердий | 2 | weekly | price_pchip | price_pchip | 0.04500362378542326 | 0.1636099255986297 |
-| between_sources | ConsumerUA | ProZorro | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.03089295137495161 | 0.105454611954828 |
-| between_sources | ConsumerUA | ProZorro | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.05427156543378453 | 0.1429193172705117 |
-| between_sources | ConsumerUA | ProducerUA | Сир твердий | 0 | daily | price_pchip | price_pchip | 0.9887218125421992 | 0.9872748593681128 |
-| between_sources | ConsumerUA | ProducerUA | Сир твердий | 0 | weekly | price_pchip | price_pchip | 0.9889508978692606 | 0.9875442110167171 |
-| between_sources | ConsumerUA | ProducerUA | Сир твердий | 1 | weekly | price_pchip | price_pchip | 0.9450399869291128 | 0.940015291373841 |
-| between_sources | ConsumerUA | ProducerUA | Сир твердий | 2 | weekly | price_pchip | price_pchip | 0.8620544120447317 | 0.859431766044101 |
-| between_sources | ConsumerUA | ProducerUA | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.9225270706258264 | 0.9180121545879285 |
-| between_sources | ConsumerUA | ProducerUA | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.8424124078614291 | 0.8394660722434589 |
 | between_sources | ConsumerUA | Silpo | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.01371556880129697 | 0.08228397742075554 |
 | between_sources | ConsumerUA | Silpo | Сир твердий | 7 | daily | price_pchip | price_pchip | -0.0581802457273296 | -0.1425314806773773 |
 | between_sources | ConsumerUA | Silpo | Сир твердий | 14 | daily | price_pchip | price_pchip | -0.3810721442263271 | -0.2648719062092922 |
-| between_sources | Novus | ProZorro | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.2011438393480169 | -0.2804766316605345 |
-| between_sources | Novus | ProZorro | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.01603798873697264 | -0.02500504184738412 |
-| between_sources | Novus | ProZorro | Сир твердий | 14 | daily | price_pchip | price_pchip | -0.286670131928233 | -0.1661625361471332 |
-| between_sources | Novus | ProducerUA | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.1623600316857091 | -0.2216700215931308 |
-| between_sources | Novus | ProducerUA | Сир твердий | 7 | daily | price_pchip | price_pchip | -0.06779280420202438 | -0.3414075046262525 |
-| between_sources | Novus | ProducerUA | Сир твердий | 14 | daily | price_pchip | price_pchip | -0.007345888168614791 | -0.1562630345214726 |
+| between_sources | EU | Novus | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.0802936107605772 | -0.134623946368088 |
+| between_sources | EU | Novus | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.00152579719352134 | -0.1397418815192715 |
+| between_sources | EU | Novus | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.1107259095395241 | 0.08061069078075603 |
+| between_sources | EU | Silpo | Сир твердий | 0 | daily | price_pchip | price_pchip | 0.01503369762439692 | 0.01764705882352941 |
+| between_sources | EU | Silpo | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.04048352171520568 | -0.01596638655462185 |
+| between_sources | EU | Silpo | Сир твердий | 14 | daily | price_pchip | price_pchip | -0.1854789816535956 | -0.2014005602240897 |
 | between_sources | Novus | Silpo | Сир твердий | 0 | daily | price_pchip | price_pchip | 0.1192418932716051 | 0.2969801939913985 |
 | between_sources | Novus | Silpo | Сир твердий | 7 | daily | price_pchip | price_pchip | -0.4139767649030091 | -0.3399945377871191 |
 | between_sources | Novus | Silpo | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.2869793970579667 | 0.3418017764607077 |
-| between_sources | ProZorro | ProducerUA | Сир твердий | 0 | daily | price_pchip | price_pchip | 0.05428461395580512 | 0.1067792722039832 |
-| between_sources | ProZorro | ProducerUA | Сир твердий | 0 | weekly | price_pchip | price_pchip | 0.1885046717063228 | 0.2117299485720538 |
-| between_sources | ProZorro | ProducerUA | Сир твердий | 1 | weekly | price_pchip | price_pchip | 0.2576995371143198 | 0.2572874493927125 |
-| between_sources | ProZorro | ProducerUA | Сир твердий | 2 | weekly | price_pchip | price_pchip | 0.1742906802465555 | 0.1857410881801126 |
-| between_sources | ProZorro | ProducerUA | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.1017559129233131 | 0.1392713378755266 |
-| between_sources | ProZorro | ProducerUA | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.09626408033276362 | 0.1136881656775545 |
-| between_sources | ProZorro | Silpo | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.2968095007693073 | -0.2994857205383521 |
-| between_sources | ProZorro | Silpo | Сир твердий | 7 | daily | price_pchip | price_pchip | 0.1091872142214161 | 0.1729948572053835 |
-| between_sources | ProZorro | Silpo | Сир твердий | 14 | daily | price_pchip | price_pchip | 0.05968893051873209 | 0.08742750848014005 |
-| between_sources | ProducerUA | Silpo | Сир твердий | 0 | daily | price_pchip | price_pchip | -0.03658915802878181 | -0.03789519049509767 |
-| between_sources | ProducerUA | Silpo | Сир твердий | 7 | daily | price_pchip | price_pchip | -0.07187922654334275 | -0.2244964521610217 |
-| between_sources | ProducerUA | Silpo | Сир твердий | 14 | daily | price_pchip | price_pchip | -0.3807734663423523 | -0.2655410272115011 |
-| between_sources | ConsumerUA | ProZorro | Сметана | 0 | daily | price_pchip | price_pchip | 0.01957750041124806 | 0.02972168576434972 |
-| between_sources | ConsumerUA | ProZorro | Сметана | 0 | weekly | price_pchip | price_pchip | 0.03894846872940652 | 0.04296435272045029 |
-| between_sources | ConsumerUA | ProZorro | Сметана | 1 | weekly | price_pchip | price_pchip | 0.02943026406274735 | 0.08105065666041278 |
-| between_sources | ConsumerUA | ProZorro | Сметана | 2 | weekly | price_pchip | price_pchip | 0.09050930072298158 | 0.1292682926829268 |
-| between_sources | ConsumerUA | ProZorro | Сметана | 7 | daily | price_pchip | price_pchip | -0.04217038249558883 | -0.002142591740610186 |
-| between_sources | ConsumerUA | ProZorro | Сметана | 14 | daily | price_pchip | price_pchip | 0.06834412633811189 | 0.1113484304812332 |
-| between_sources | ConsumerUA | ProducerUA | Сметана | 0 | daily | price_pchip | price_pchip | 0.9961158905875714 | 0.9950278292766597 |
-| between_sources | ConsumerUA | ProducerUA | Сметана | 0 | weekly | price_pchip | price_pchip | 0.9962428589797067 | 0.9950400240929272 |
-| between_sources | ConsumerUA | ProducerUA | Сметана | 1 | weekly | price_pchip | price_pchip | 0.9572654121909118 | 0.9553833695174979 |
-| between_sources | ConsumerUA | ProducerUA | Сметана | 2 | weekly | price_pchip | price_pchip | 0.8841648929832249 | 0.8871587807338587 |
-| between_sources | ConsumerUA | ProducerUA | Сметана | 7 | daily | price_pchip | price_pchip | 0.9388502314262073 | 0.9389790682935688 |
-| between_sources | ConsumerUA | ProducerUA | Сметана | 14 | daily | price_pchip | price_pchip | 0.8676022123691789 | 0.8718301323910529 |
 | between_sources | ConsumerUA | Silpo | Сметана | 0 | daily | price_pchip | price_pchip | -0.02684293349305297 | -0.03048063119181684 |
 | between_sources | ConsumerUA | Silpo | Сметана | 7 | daily | price_pchip | price_pchip | -0.1978897299090629 | -0.2636903525766888 |
 | between_sources | ConsumerUA | Silpo | Сметана | 14 | daily | price_pchip | price_pchip | -0.2982922421625523 | -0.3156112407228596 |
-| between_sources | ProZorro | ProducerUA | Сметана | 0 | daily | price_pchip | price_pchip | 0.01079082448259195 | 0.03270593535793265 |
-| between_sources | ProZorro | ProducerUA | Сметана | 0 | weekly | price_pchip | price_pchip | 0.04041541495561859 | 0.05306926359557938 |
-| between_sources | ProZorro | ProducerUA | Сметана | 1 | weekly | price_pchip | price_pchip | 0.0784818881858337 | 0.0757085020242915 |
-| between_sources | ProZorro | ProducerUA | Сметана | 2 | weekly | price_pchip | price_pchip | 0.07326267471469924 | 0.1343339587242026 |
-| between_sources | ProZorro | ProducerUA | Сметана | 7 | daily | price_pchip | price_pchip | 0.006529118072207306 | 0.006948752751495619 |
-| between_sources | ProZorro | ProducerUA | Сметана | 14 | daily | price_pchip | price_pchip | 0.02913761463817621 | 0.03208835914819569 |
-| between_sources | ProZorro | Silpo | Сметана | 0 | daily | price_pchip | price_pchip | -0.02209019034139358 | -0.1546121019805231 |
-| between_sources | ProZorro | Silpo | Сметана | 7 | daily | price_pchip | price_pchip | -0.03965140961947863 | 0.01214574898785425 |
-| between_sources | ProZorro | Silpo | Сметана | 14 | daily | price_pchip | price_pchip | 0.01943464741537589 | -0.03118738577911439 |
-| between_sources | ProducerUA | Silpo | Сметана | 0 | daily | price_pchip | price_pchip | -0.03907449480034125 | -0.1230823718941797 |
-| between_sources | ProducerUA | Silpo | Сметана | 7 | daily | price_pchip | price_pchip | -0.1974385918610027 | -0.2862622453876633 |
-| between_sources | ProducerUA | Silpo | Сметана | 14 | daily | price_pchip | price_pchip | -0.299487957037945 | -0.3059213674811945 |
-| within_variant | ProducerUA | ProducerUA | Вершки | 0 | daily | price_real | price_linear | 0.9999999999999999 | 1.0 |
-| within_variant | ProducerUA | ProducerUA | Вершки | 0 | daily | price_real | price_pchip | 0.9993490414101507 | 0.9991578547952584 |
-| within_variant | ProducerUA | ProducerUA | Вершки | 0 | daily | price_linear | price_pchip | 0.9993490414101507 | 0.9991578547952584 |
-| within_variant | ProducerUA | ProducerUA | Кефір | 0 | daily | price_real | price_linear | 0.9999999999999999 | 1.0 |
-| within_variant | ProducerUA | ProducerUA | Кефір | 0 | daily | price_real | price_pchip | 0.9995664828564343 | 0.9994518822364344 |
-| within_variant | ProducerUA | ProducerUA | Кефір | 0 | daily | price_linear | price_pchip | 0.9995664828564343 | 0.9994518822364344 |
-| within_variant | ProducerUA | ProducerUA | Масло вершкове | 0 | daily | price_real | price_linear | 0.9999999999999999 | 1.0 |
-| within_variant | ProducerUA | ProducerUA | Масло вершкове | 0 | daily | price_real | price_pchip | 0.9997882455497601 | 0.9996764091502303 |
-| within_variant | ProducerUA | ProducerUA | Масло вершкове | 0 | daily | price_linear | price_pchip | 0.9997882455497601 | 0.9996764091502303 |
 | within_variant | ConsumerUA | ConsumerUA | Молоко питне | 0 | daily | price_real | price_linear | 1.0 | 0.9999999999999998 |
 | within_variant | ConsumerUA | ConsumerUA | Молоко питне | 0 | daily | price_real | price_pchip | 0.9995523375149811 | 0.9994421090844146 |
 | within_variant | ConsumerUA | ConsumerUA | Молоко питне | 0 | daily | price_linear | price_pchip | 0.9995523375149811 | 0.9994421090844146 |
-| within_variant | ProducerUA | ProducerUA | Молоко питне | 0 | daily | price_real | price_linear | 1.0 | 1.0 |
-| within_variant | ProducerUA | ProducerUA | Молоко питне | 0 | daily | price_real | price_pchip | 0.9995310098836171 | 0.9992523798426814 |
-| within_variant | ProducerUA | ProducerUA | Молоко питне | 0 | daily | price_linear | price_pchip | 0.9995310098836171 | 0.9992523798426814 |
 | within_variant | ConsumerUA | ConsumerUA | Сир твердий | 0 | daily | price_real | price_linear | 1.0 | 1.0 |
 | within_variant | ConsumerUA | ConsumerUA | Сир твердий | 0 | daily | price_real | price_pchip | 0.9996495010801055 | 0.9995036962007005 |
 | within_variant | ConsumerUA | ConsumerUA | Сир твердий | 0 | daily | price_linear | price_pchip | 0.9996495010801055 | 0.9995036962007005 |
-| within_variant | ProducerUA | ProducerUA | Сир твердий | 0 | daily | price_real | price_linear | 1.0 | 1.0 |
-| within_variant | ProducerUA | ProducerUA | Сир твердий | 0 | daily | price_real | price_pchip | 0.9995095874593959 | 0.9992442659483455 |
-| within_variant | ProducerUA | ProducerUA | Сир твердий | 0 | daily | price_linear | price_pchip | 0.9995095874593959 | 0.9992442659483455 |
 | within_variant | ConsumerUA | ConsumerUA | Сметана | 0 | daily | price_real | price_linear | 0.9999999999999999 | 1.0 |
 | within_variant | ConsumerUA | ConsumerUA | Сметана | 0 | daily | price_real | price_pchip | 0.9996747135047312 | 0.9996120519123788 |
 | within_variant | ConsumerUA | ConsumerUA | Сметана | 0 | daily | price_linear | price_pchip | 0.9996747135047312 | 0.9996120519123788 |
-| within_variant | ProducerUA | ProducerUA | Сметана | 0 | daily | price_real | price_linear | 1.0 | 1.0 |
-| within_variant | ProducerUA | ProducerUA | Сметана | 0 | daily | price_real | price_pchip | 0.9996105894517224 | 0.9994742258924796 |
-| within_variant | ProducerUA | ProducerUA | Сметана | 0 | daily | price_linear | price_pchip | 0.9996105894517224 | 0.9994742258924796 |
 
 ## model_nardl :: model_nardl_output.xlsx :: NARDL_Summary
 
 - Category: model_results
-- Interpretation: Model results table. Mean |coef|=0.3855; interpret sign and magnitude jointly with diagnostics.
-- Rows: 11
-- Cols: 12
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 0
+- Cols: 20
 
-| standardized_type | y_series_source | x_series_sources | frequency | sample_period | lags_selected | short_run_coef | long_run_coef | asymmetry_short_p | asymmetry_long_p | diagnostics_flags | interpretation_note |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| butter | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | dy(1), x_pos, x_neg | -0.00257929957347239 | 0.431674313712216 | 0.7032988697348881 | 3.62400323940141e-35 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| butter | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | dy(1), x_pos, x_neg | 0.2980520944183506 | 0.324865661584349 | 0.4610198263573729 | 0.5053658392991783 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| cream | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | dy(1), x_pos, x_neg | -0.003304786284085873 | -0.0004551774905197647 | 0.6688359246375976 | 0.9806218562475245 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| cream | ProZorro | EU | weekly | 2025-04-15..2026-01-06 | dy(1), x_pos, x_neg | -0.947164083818236 | 0.1786141240120238 | 0.1472898220935979 | 0.7515583051997151 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| hard_cheese | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | dy(1), x_pos, x_neg | -0.03242904522300962 | 0.339326206737692 | 0.7969953657108445 | 4.335992962700479e-12 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| hard_cheese | ConsumerUA | EU | weekly | 2021-12-28..2026-01-13 | dy(1), x_pos, x_neg | -0.04203621536336792 | 0.4733525368886606 | 0.5978648634303664 | 1.739171585276989e-20 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| hard_cheese | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | dy(1), x_pos, x_neg | 0.7230817021185868 | 0.3612117582178556 | 0.3447177432281329 | 0.1494152419119614 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| milk | ProducerUA | EU | weekly | 2021-12-28..2025-12-23 | dy(1), x_pos, x_neg | -0.02357513460484666 | 0.4248204235844112 | 0.8261199738418743 | 3.651106085098579e-33 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| milk | ConsumerUA | EU | weekly | 2021-12-28..2026-01-13 | dy(1), x_pos, x_neg | -0.04993934884027437 | 0.4355387708736216 | 0.8169994381630011 | 1.833419471578697e-37 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| milk | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | dy(1), x_pos, x_neg | -0.5494196632537425 | -0.8902831834836844 | 0.285030587647836 | 0.1175527869214251 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
-| other | ProZorro | EU | weekly | 2025-04-08..2026-01-06 | dy(1), x_pos, x_neg | -0.4328150807688999 | 1.516592402846752 | 0.0008442188009509941 | 0.001194185354368458 | HAC SE applied | Low p-values indicate asymmetric transmission to positive vs negative shocks. |
+_No rows_
 
 ## model_short_chain_regional :: model_short_chain_regional_output.xlsx :: LagMatrix_ByProduct
 
@@ -8911,14 +10098,604 @@ _No rows_
 
 - Category: model_results
 - Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
-- Rows: 3
+- Rows: 0
+- Cols: 20
+
+_No rows_
+
+## other/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | other | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | novus | promo_controlled |
+
+## other/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| other | novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## other/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## other/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## other/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| other | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## other/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo | promo_controlled |
+
+## other/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| other | silpo | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## other/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## other/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## other/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| other | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## other/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo_novus | promo_controlled |
+
+## other/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| other | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## other/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## other/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## other/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| other | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## other/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## other/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## primary_chain_summary :: primary_chain_consolidated.xlsx :: Consolidated_ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 48
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | silpo | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| butter | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| butter | novus | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| butter | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| butter | silpo_novus | observed | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| butter | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| cottage_cheese | silpo | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| cottage_cheese | silpo | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| cottage_cheese | novus | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| cottage_cheese | novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| cottage_cheese | silpo_novus | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| cottage_cheese | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| cream | silpo | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| cream | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| cream | novus | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| cream | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| cream | silpo_novus | observed | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| cream | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| hard_cheese | silpo | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| hard_cheese | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| hard_cheese | novus | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| hard_cheese | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| hard_cheese | silpo_novus | observed | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| hard_cheese | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| milk | silpo | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| milk | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| milk | novus | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| milk | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| milk | silpo_novus | observed | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| milk | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| other | silpo | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| other | silpo | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| other | novus | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| other | novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| other | silpo_novus | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| other | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| sour_cream | silpo | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| sour_cream | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| sour_cream | novus | observed | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| sour_cream | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+| sour_cream | silpo_novus | observed | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| sour_cream | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+| yogurt_dessert | silpo | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| yogurt_dessert | silpo | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| yogurt_dessert | novus | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| yogurt_dessert | novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| yogurt_dessert | silpo_novus | observed | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+| yogurt_dessert | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## primary_chain_summary :: primary_chain_consolidated.xlsx :: Consolidated_PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 144
 - Cols: 12
 
-| standardized_type | system | y_series_source | x_series_sources | frequency | sample_period | lags_selected | cointegration_rank | cointegration_vectors | adjustment_alpha_abs_mean | diagnostics_flags | interpretation_note |
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| hard_cheese | System A | ProducerUA | ConsumerUA, EU | weekly | 2021-12-28..2025-12-23 | k_ar_diff=3 | 1 | 1.000; -0.643; -0.104 | 0.6905463602735168 | VECM estimated | Rank>0 supports long-run co-movement in the system. |
-| milk | System A | ProducerUA | ConsumerUA, EU | weekly | 2021-12-28..2025-12-23 | k_ar_diff=3 | 3 | 1.000; 0.000; 0.000 | 0.07202042647366828 | VECM estimated | Rank>0 supports long-run co-movement in the system. |
-| milk | System D | ProducerUA | EU, CME | weekly | 2021-12-28..2025-12-23 | k_ar_diff=3 | 3 | 1.000; -0.000; 0.000 | 0.06026866786576559 | VECM estimated | Rank>0 supports long-run co-movement in the system. |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | butter | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cottage_cheese | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | cream | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | hard_cheese | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | milk | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | other | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | sour_cream | silpo_novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | novus | promo_controlled |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo_novus | observed |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo_novus | observed |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo_novus | observed |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0 | yogurt_dessert | silpo_novus | promo_controlled |
+
+## primary_chain_summary :: primary_chain_consolidated.xlsx :: Consolidated_ResidualDiagnostic
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 48
+- Cols: 11
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 | butter | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | butter | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | butter | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | butter | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | butter | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | butter | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | cottage_cheese | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | cottage_cheese | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | cottage_cheese | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | cottage_cheese | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | cottage_cheese | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | cottage_cheese | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | cream | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | cream | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | cream | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | cream | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | cream | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | cream | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | hard_cheese | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | hard_cheese | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | hard_cheese | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | hard_cheese | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | hard_cheese | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | hard_cheese | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | milk | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | milk | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | milk | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | milk | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | milk | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | milk | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | other | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | other | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | other | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | other | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | other | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | other | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | sour_cream | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | sour_cream | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | sour_cream | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | sour_cream | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | sour_cream | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | sour_cream | silpo_novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | yogurt_dessert | silpo | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | yogurt_dessert | silpo | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | yogurt_dessert | novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | yogurt_dessert | novus | promo_controlled |
+| none | none | nan | nan | nan | nan | nan | 1 | yogurt_dessert | silpo_novus | observed |
+| none | none | nan | nan | nan | nan | nan | 1 | yogurt_dessert | silpo_novus | promo_controlled |
+
+## primary_chain_summary :: primary_chain_consolidated.xlsx :: Consolidated_Eligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 48
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| butter | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| butter | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| butter | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| butter | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| butter | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| butter | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cottage_cheese | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cottage_cheese | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cottage_cheese | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cottage_cheese | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cottage_cheese | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cottage_cheese | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cream | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cream | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cream | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cream | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cream | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| cream | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| hard_cheese | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| hard_cheese | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| hard_cheese | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| hard_cheese | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| hard_cheese | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| hard_cheese | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| milk | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| milk | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| milk | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| milk | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| milk | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| milk | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| other | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| other | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| other | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| other | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| other | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| other | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| sour_cream | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| sour_cream | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| sour_cream | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| sour_cream | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| sour_cream | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| sour_cream | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| yogurt_dessert | silpo | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| yogurt_dessert | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| yogurt_dessert | novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| yogurt_dessert | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| yogurt_dessert | silpo_novus | observed | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| yogurt_dessert | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## primary_chain_summary :: primary_chain_consolidated.xlsx :: Rule_Documentation
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 6
+
+| primary_chain_doc | frequency_primary | max_lag_weekly | max_lag_daily | retail_series_rule | promo_policy |
+| --- | --- | --- | --- | --- | --- |
+| Primary chain is strictly ProducerUA -> ProZorro -> Retail. Retail is estimated separately for silpo, novus, and silpo_novus. Combined rule: daily median of available silpo and novus standardized_type prices. | weekly | 10 | 30 | silpo_price, novus_price, combined_price built per standardized_type | observed and promo_controlled are estimated separately and flagged |
 
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Run_All_Summary
 
@@ -8929,25 +10706,25 @@ _No rows_
 
 | step | status | output_dir | error |
 | --- | --- | --- | --- |
-| graphs_brand_region | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_brand_region | nan |
-| graphs_correlations_lags | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_correlations_lags | nan |
-| graphs_decomposition | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition | nan |
-| graphs_overlay_ln | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_overlay_ln | nan |
-| model_ardl | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_ardl | nan |
-| model_discounts | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_discounts | nan |
-| model_ecm | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_ecm | nan |
-| model_forecast_knn | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_forecast_knn | nan |
-| model_intersection_bidirectional | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_intersection_bidirectional | nan |
-| model_nardl | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_nardl | nan |
-| model_short_chain_regional | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_short_chain_regional | nan |
-| model_vecm | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_vecm | nan |
-| sheet_cme | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_cme | nan |
-| sheet_consumerua | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_consumerua | nan |
-| sheet_eu | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_eu | nan |
-| sheet_novus | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_novus | nan |
-| sheet_producerua | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_producerua | nan |
-| sheet_prozorro | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_prozorro | nan |
-| sheet_silpo | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_silpo | nan |
+| sheet_ProducerUA | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_producerua | nan |
+| sheet_ConsumerUA | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_consumerua | nan |
+| sheet_EU | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_eu | nan |
+| sheet_ProZorro | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_prozorro | nan |
+| sheet_Silpo | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_silpo | nan |
+| sheet_Novus | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_novus | nan |
+| sheet_CME | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_cme | nan |
+| model_short_chain_regional | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/primary_chain_summary | nan |
+| model_ardl | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ardl | nan |
+| model_ecm | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ecm | nan |
+| model_nardl | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_nardl | nan |
+| model_vecm | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_vecm | nan |
+| model_discounts | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_discounts | nan |
+| model_intersection_bidirectional | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_intersection_bidirectional | nan |
+| model_forecast_knn | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_forecast_knn | nan |
+| graphs_decomposition | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition | nan |
+| graphs_overlay_ln | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_overlay_ln | nan |
+| graphs_correlations_lags | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_correlations_lags | nan |
+| graphs_brand_region | ok | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region | nan |
 
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Artifacts_By_Module
 
@@ -8958,31 +10735,31 @@ _No rows_
 
 | module | output_dir | xlsx_count | pdf_count | md_count | png_count | xlsx_files | pdf_files | md_files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| graphs_brand_region | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_brand_region | 1 | 1 | 1 | 3 | graphs_brand_region_output.xlsx | graphs_brand_region_report.pdf | graphs_brand_region_report.md |
-| graphs_correlations_lags | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_correlations_lags | 1 | 1 | 1 | 2 | graphs_correlations_lags_output.xlsx | graphs_correlations_lags_report.pdf | graphs_correlations_lags_report.md |
-| graphs_decomposition | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition | 1 | 1 | 1 | 24 | graphs_decomposition_output.xlsx | graphs_decomposition_report.pdf | graphs_decomposition_report.md |
-| graphs_overlay_ln | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_overlay_ln | 1 | 1 | 1 | 21 | graphs_overlay_ln_output.xlsx | graphs_overlay_ln_report.pdf | graphs_overlay_ln_report.md |
-| model_ardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_ardl | 1 | 1 | 1 | 1 | model_ardl_output.xlsx | model_ardl_report.pdf | model_ardl_report.md |
-| model_discounts | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_discounts | 1 | 1 | 1 | 2 | model_discounts_output.xlsx | model_discounts_report.pdf | model_discounts_report.md |
-| model_ecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_ecm | 1 | 1 | 1 | 1 | model_ecm_output.xlsx | model_ecm_report.pdf | model_ecm_report.md |
-| model_forecast_knn | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_forecast_knn | 1 | 1 | 1 | 3 | model_forecast_knn_output.xlsx | model_forecast_knn_report.pdf | model_forecast_knn_report.md |
-| model_intersection_bidirectional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_intersection_bidirectional | 1 | 1 | 1 | 2 | model_intersection_bidirectional_output.xlsx | model_intersection_bidirectional_report.pdf | model_intersection_bidirectional_report.md |
-| model_nardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_nardl | 1 | 1 | 1 | 2 | model_nardl_output.xlsx | model_nardl_report.pdf | model_nardl_report.md |
-| model_short_chain_regional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_short_chain_regional | 1 | 1 | 1 | 1 | model_short_chain_regional_output.xlsx | model_short_chain_regional_report.pdf | model_short_chain_regional_report.md |
-| model_vecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_vecm | 1 | 1 | 1 | 1 | model_vecm_output.xlsx | model_vecm_report.pdf | model_vecm_report.md |
-| sheet_cme | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_cme | 1 | 1 | 1 | 3 | sheet_cme_output.xlsx | sheet_cme_report.pdf | sheet_cme_report.md |
-| sheet_consumerua | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_consumerua | 1 | 1 | 1 | 3 | sheet_consumerua_output.xlsx | sheet_consumerua_report.pdf | sheet_consumerua_report.md |
-| sheet_eu | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_eu | 1 | 1 | 1 | 3 | sheet_eu_output.xlsx | sheet_eu_report.pdf | sheet_eu_report.md |
-| sheet_novus | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_novus | 1 | 1 | 1 | 4 | sheet_novus_output.xlsx | sheet_novus_report.pdf | sheet_novus_report.md |
-| sheet_producerua | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_producerua | 1 | 1 | 1 | 3 | sheet_producerua_output.xlsx | sheet_producerua_report.pdf | sheet_producerua_report.md |
-| sheet_prozorro | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_prozorro | 1 | 1 | 1 | 4 | sheet_prozorro_output.xlsx | sheet_prozorro_report.pdf | sheet_prozorro_report.md |
-| sheet_silpo | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_silpo | 1 | 1 | 1 | 4 | sheet_silpo_output.xlsx | sheet_silpo_report.pdf | sheet_silpo_report.md |
+| graphs_brand_region | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region | 1 | 1 | 1 | 3 | graphs_brand_region_output.xlsx | graphs_brand_region_report.pdf | graphs_brand_region_report.md |
+| graphs_correlations_lags | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_correlations_lags | 1 | 1 | 1 | 2 | graphs_correlations_lags_output.xlsx | graphs_correlations_lags_report.pdf | graphs_correlations_lags_report.md |
+| graphs_decomposition | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition | 1 | 1 | 1 | 24 | graphs_decomposition_output.xlsx | graphs_decomposition_report.pdf | graphs_decomposition_report.md |
+| graphs_overlay_ln | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_overlay_ln | 1 | 1 | 1 | 21 | graphs_overlay_ln_output.xlsx | graphs_overlay_ln_report.pdf | graphs_overlay_ln_report.md |
+| model_ardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ardl | 1 | 1 | 1 | 1 | model_ardl_output.xlsx | model_ardl_report.pdf | model_ardl_report.md |
+| model_discounts | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_discounts | 1 | 1 | 1 | 2 | model_discounts_output.xlsx | model_discounts_report.pdf | model_discounts_report.md |
+| model_ecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ecm | 1 | 1 | 1 | 1 | model_ecm_output.xlsx | model_ecm_report.pdf | model_ecm_report.md |
+| model_forecast_knn | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_forecast_knn | 1 | 1 | 1 | 3 | model_forecast_knn_output.xlsx | model_forecast_knn_report.pdf | model_forecast_knn_report.md |
+| model_intersection_bidirectional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_intersection_bidirectional | 1 | 1 | 1 | 2 | model_intersection_bidirectional_output.xlsx | model_intersection_bidirectional_report.pdf | model_intersection_bidirectional_report.md |
+| model_nardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_nardl | 1 | 1 | 1 | 2 | model_nardl_output.xlsx | model_nardl_report.pdf | model_nardl_report.md |
+| model_short_chain_regional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/primary_chain_summary | 1 | 1 | 1 | 0 | primary_chain_consolidated.xlsx | primary_chain_consolidated.pdf | primary_chain_consolidated.md |
+| model_vecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_vecm | 1 | 1 | 1 | 1 | model_vecm_output.xlsx | model_vecm_report.pdf | model_vecm_report.md |
+| sheet_CME | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_cme | 1 | 1 | 1 | 3 | sheet_cme_output.xlsx | sheet_cme_report.pdf | sheet_cme_report.md |
+| sheet_ConsumerUA | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_consumerua | 1 | 1 | 1 | 3 | sheet_consumerua_output.xlsx | sheet_consumerua_report.pdf | sheet_consumerua_report.md |
+| sheet_EU | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_eu | 1 | 1 | 1 | 3 | sheet_eu_output.xlsx | sheet_eu_report.pdf | sheet_eu_report.md |
+| sheet_Novus | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_novus | 1 | 1 | 1 | 4 | sheet_novus_output.xlsx | sheet_novus_report.pdf | sheet_novus_report.md |
+| sheet_ProZorro | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_prozorro | 1 | 1 | 1 | 4 | sheet_prozorro_output.xlsx | sheet_prozorro_report.pdf | sheet_prozorro_report.md |
+| sheet_ProducerUA | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_producerua | 1 | 1 | 1 | 3 | sheet_producerua_output.xlsx | sheet_producerua_report.pdf | sheet_producerua_report.md |
+| sheet_Silpo | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_silpo | 1 | 1 | 1 | 4 | sheet_silpo_output.xlsx | sheet_silpo_report.pdf | sheet_silpo_report.md |
 
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Sheets_Index
 
 - Category: other
 - Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
-- Rows: 83
+- Rows: 79
 - Cols: 7
 
 | module | xlsx_file | sheet | rows | cols | has_tests_pattern | has_model_results_pattern |
@@ -9001,123 +10778,117 @@ _No rows_
 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | BeforeAfterLN_Index | 42 | 4 | 0 | 0 |
 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_All | 13399 | 10 | 0 | 0 |
 | graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_Index | 12 | 4 | 0 | 0 |
-| model_ardl | model_ardl_output.xlsx | ARDL_Summary | 11 | 12 | 0 | 1 |
-| model_ardl | model_ardl_output.xlsx | Model_Series | 3765 | 4 | 0 | 0 |
-| model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Depth | 1 | 4 | 0 | 0 |
-| model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Occurrence | 1 | 4 | 0 | 0 |
-| model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | 4 | 11 | 0 | 1 |
-| model_ecm | model_ecm_output.xlsx | ARDL_Summary | 11 | 12 | 0 | 1 |
-| model_ecm | model_ecm_output.xlsx | ECM_Summary | 3 | 12 | 0 | 1 |
+| model_ardl | model_ardl_output.xlsx | ARDL_Summary | 0 | 20 | 0 | 1 |
+| model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Depth | 1 | 1 | 0 | 0 |
+| model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Occurrence | 1 | 1 | 0 | 0 |
+| model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | 1 | 1 | 0 | 0 |
+| model_ecm | model_ecm_output.xlsx | ECM_Summary | 0 | 20 | 0 | 1 |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Predictions | 540 | 6 | 0 | 0 |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Summary | 9 | 7 | 0 | 0 |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Influence_Coefficient | 28 | 7 | 0 | 1 |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Retail_Series | 91758 | 8 | 0 | 0 |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_to_Consumer_Link | 3 | 7 | 0 | 1 |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Granger | 38 | 7 | 0 | 0 |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | 47 | 11 | 0 | 1 |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | CrossTable_Correlations | 159 | 10 | 0 | 0 |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | 16 | 8 | 0 | 1 |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | 8 | 36 | 0 | 1 |
-| model_nardl | model_nardl_output.xlsx | NARDL_Summary | 11 | 12 | 0 | 1 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Details | 60 | 6 | 0 | 1 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Summary | 12 | 14 | 0 | 1 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | LagMatrix_ByProduct | 39 | 7 | 0 | 0 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | LagProfiles_ByProduct | 1025 | 7 | 0 | 0 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Models_ShortRun_Summary | 0 | 0 | 0 | 0 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Effects_Matri | 171 | 7 | 0 | 0 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Models | 0 | 0 | 0 | 0 |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | ShortRun_Details | 0 | 0 | 0 | 0 |
-| model_vecm | model_vecm_output.xlsx | VECM_Summary | 3 | 12 | 0 | 1 |
-| sheet_cme | sheet_cme_output.xlsx | clean | 1023 | 9 | 0 | 0 |
-| sheet_cme | sheet_cme_output.xlsx | daily_variants | 1486 | 12 | 0 | 0 |
-| sheet_cme | sheet_cme_output.xlsx | descriptive_stats | 3 | 21 | 0 | 0 |
-| sheet_cme | sheet_cme_output.xlsx | raw | 1023 | 2 | 0 | 0 |
-| sheet_cme | sheet_cme_output.xlsx | series_long | 1023 | 11 | 0 | 0 |
-| sheet_cme | sheet_cme_output.xlsx | tests | 3 | 23 | 1 | 1 |
-| sheet_consumerua | sheet_consumerua_output.xlsx | clean | 5463 | 12 | 0 | 0 |
-| sheet_consumerua | sheet_consumerua_output.xlsx | daily_variants | 5463 | 12 | 0 | 0 |
-| sheet_consumerua | sheet_consumerua_output.xlsx | descriptive_stats | 9 | 21 | 0 | 0 |
-| sheet_consumerua | sheet_consumerua_output.xlsx | raw | 5463 | 11 | 0 | 0 |
-| sheet_consumerua | sheet_consumerua_output.xlsx | series_long | 16389 | 11 | 0 | 0 |
-| sheet_consumerua | sheet_consumerua_output.xlsx | tests | 9 | 23 | 1 | 1 |
-| sheet_eu | sheet_eu_output.xlsx | clean | 111299 | 9 | 0 | 0 |
-| sheet_eu | sheet_eu_output.xlsx | daily_variants | 8868 | 12 | 0 | 0 |
-| sheet_eu | sheet_eu_output.xlsx | descriptive_stats | 18 | 21 | 0 | 0 |
-| sheet_eu | sheet_eu_output.xlsx | raw | 111299 | 6 | 0 | 0 |
-| sheet_eu | sheet_eu_output.xlsx | series_long | 6336 | 11 | 0 | 0 |
-| sheet_eu | sheet_eu_output.xlsx | tests | 18 | 23 | 1 | 1 |
-| sheet_novus | sheet_novus_output.xlsx | clean | 1530 | 22 | 0 | 0 |
-| sheet_novus | sheet_novus_output.xlsx | daily_variants | 8790 | 12 | 0 | 0 |
-| sheet_novus | sheet_novus_output.xlsx | descriptive_stats | 36 | 21 | 0 | 0 |
-| sheet_novus | sheet_novus_output.xlsx | raw | 1530 | 19 | 0 | 0 |
-| sheet_novus | sheet_novus_output.xlsx | series_long | 755 | 11 | 0 | 0 |
-| sheet_novus | sheet_novus_output.xlsx | tests | 36 | 23 | 1 | 1 |
-| sheet_producerua | sheet_producerua_output.xlsx | clean | 10758 | 12 | 0 | 0 |
-| sheet_producerua | sheet_producerua_output.xlsx | daily_variants | 10758 | 12 | 0 | 0 |
-| sheet_producerua | sheet_producerua_output.xlsx | descriptive_stats | 18 | 21 | 0 | 0 |
-| sheet_producerua | sheet_producerua_output.xlsx | raw | 10758 | 11 | 0 | 0 |
-| sheet_producerua | sheet_producerua_output.xlsx | series_long | 32274 | 11 | 0 | 0 |
-| sheet_producerua | sheet_producerua_output.xlsx | tests | 18 | 23 | 1 | 1 |
-| sheet_prozorro | sheet_prozorro_output.xlsx | clean | 10927 | 18 | 0 | 0 |
-| sheet_prozorro | sheet_prozorro_output.xlsx | daily_variants | 40843 | 12 | 0 | 0 |
-| sheet_prozorro | sheet_prozorro_output.xlsx | descriptive_stats | 21 | 21 | 0 | 0 |
-| sheet_prozorro | sheet_prozorro_output.xlsx | raw | 10927 | 12 | 0 | 0 |
-| sheet_prozorro | sheet_prozorro_output.xlsx | series_long | 7613 | 11 | 0 | 0 |
-| sheet_prozorro | sheet_prozorro_output.xlsx | tests | 21 | 23 | 1 | 1 |
-| sheet_silpo | sheet_silpo_output.xlsx | clean | 86765 | 23 | 0 | 0 |
-| sheet_silpo | sheet_silpo_output.xlsx | daily_variants | 23691 | 12 | 0 | 0 |
-| sheet_silpo | sheet_silpo_output.xlsx | descriptive_stats | 36 | 21 | 0 | 0 |
-| sheet_silpo | sheet_silpo_output.xlsx | raw | 86765 | 19 | 0 | 0 |
-| sheet_silpo | sheet_silpo_output.xlsx | series_long | 20933 | 11 | 0 | 0 |
-| sheet_silpo | sheet_silpo_output.xlsx | tests | 36 | 23 | 1 | 1 |
+| model_forecast_knn | model_forecast_knn_output.xlsx | Ultimate_Consumer_Price | 145 | 5 | 0 | 0 |
+| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Granger | 1 | 1 | 0 | 0 |
+| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | 1 | 1 | 0 | 0 |
+| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | CrossTable_Correlations | 77 | 10 | 0 | 0 |
+| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | 0 | 0 | 0 | 0 |
+| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | 1 | 1 | 0 | 0 |
+| model_nardl | model_nardl_output.xlsx | NARDL_Summary | 0 | 20 | 0 | 1 |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_Eligibility | 48 | 9 | 0 | 0 |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ModelCoefficients | 48 | 20 | 0 | 1 |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_PreTests | 144 | 12 | 1 | 1 |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic | 48 | 11 | 1 | 1 |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Rule_Documentation | 1 | 6 | 0 | 0 |
+| model_vecm | model_vecm_output.xlsx | VECM_Summary | 0 | 20 | 0 | 1 |
+| sheet_CME | sheet_cme_output.xlsx | clean | 1023 | 9 | 0 | 0 |
+| sheet_CME | sheet_cme_output.xlsx | daily_variants | 1486 | 12 | 0 | 0 |
+| sheet_CME | sheet_cme_output.xlsx | descriptive_stats | 3 | 21 | 0 | 0 |
+| sheet_CME | sheet_cme_output.xlsx | raw | 1023 | 2 | 0 | 0 |
+| sheet_CME | sheet_cme_output.xlsx | series_long | 1023 | 11 | 0 | 0 |
+| sheet_CME | sheet_cme_output.xlsx | tests | 3 | 23 | 1 | 1 |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | clean | 5463 | 12 | 0 | 0 |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | daily_variants | 5463 | 12 | 0 | 0 |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | descriptive_stats | 9 | 21 | 0 | 0 |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | raw | 5463 | 11 | 0 | 0 |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | series_long | 16389 | 11 | 0 | 0 |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | tests | 9 | 23 | 1 | 1 |
+| sheet_EU | sheet_eu_output.xlsx | clean | 111299 | 9 | 0 | 0 |
+| sheet_EU | sheet_eu_output.xlsx | daily_variants | 8868 | 12 | 0 | 0 |
+| sheet_EU | sheet_eu_output.xlsx | descriptive_stats | 18 | 21 | 0 | 0 |
+| sheet_EU | sheet_eu_output.xlsx | raw | 111299 | 6 | 0 | 0 |
+| sheet_EU | sheet_eu_output.xlsx | series_long | 6336 | 11 | 0 | 0 |
+| sheet_EU | sheet_eu_output.xlsx | tests | 18 | 23 | 1 | 1 |
+| sheet_Novus | sheet_novus_output.xlsx | clean | 1530 | 22 | 0 | 0 |
+| sheet_Novus | sheet_novus_output.xlsx | daily_variants | 8790 | 12 | 0 | 0 |
+| sheet_Novus | sheet_novus_output.xlsx | descriptive_stats | 36 | 21 | 0 | 0 |
+| sheet_Novus | sheet_novus_output.xlsx | raw | 1530 | 19 | 0 | 0 |
+| sheet_Novus | sheet_novus_output.xlsx | series_long | 755 | 11 | 0 | 0 |
+| sheet_Novus | sheet_novus_output.xlsx | tests | 36 | 23 | 1 | 1 |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | clean | 10927 | 18 | 0 | 0 |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | daily_variants | 40843 | 12 | 0 | 0 |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | descriptive_stats | 21 | 21 | 0 | 0 |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | raw | 10927 | 12 | 0 | 0 |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | series_long | 7613 | 11 | 0 | 0 |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | tests | 21 | 23 | 1 | 1 |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | clean | 10758 | 12 | 0 | 0 |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | daily_variants | 10758 | 12 | 0 | 0 |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | descriptive_stats | 18 | 21 | 0 | 0 |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | raw | 10758 | 11 | 0 | 0 |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | series_long | 32274 | 11 | 0 | 0 |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | tests | 18 | 23 | 1 | 1 |
+| sheet_Silpo | sheet_silpo_output.xlsx | clean | 86765 | 23 | 0 | 0 |
+| sheet_Silpo | sheet_silpo_output.xlsx | daily_variants | 23691 | 12 | 0 | 0 |
+| sheet_Silpo | sheet_silpo_output.xlsx | descriptive_stats | 36 | 21 | 0 | 0 |
+| sheet_Silpo | sheet_silpo_output.xlsx | raw | 86765 | 19 | 0 | 0 |
+| sheet_Silpo | sheet_silpo_output.xlsx | series_long | 20933 | 11 | 0 | 0 |
+| sheet_Silpo | sheet_silpo_output.xlsx | tests | 36 | 23 | 1 | 1 |
 
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Tests_Interpretation
 
 - Category: other
 - Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
-- Rows: 7
+- Rows: 9
 - Cols: 11
 
 | module | xlsx_file | sheet | n_rows | i1_like_share | stationary_share | autocorr_risk_share | heterosk_risk_share | non_normal_share | stability_risk_share | interpretation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| sheet_cme | sheet_cme_output.xlsx | tests | 3 | 0.3333333333333333 | 0.0 | 0.3333333333333333 | 0.0 | 0.3333333333333333 | 0.3333333333333333 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
-| sheet_consumerua | sheet_consumerua_output.xlsx | tests | 9 | 1.0 | 0.0 | 1.0 | 1.0 | 1.0 | 1.0 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
-| sheet_eu | sheet_eu_output.xlsx | tests | 18 | 0.3333333333333333 | 0.0 | 0.2222222222222222 | 0.05555555555555555 | 0.3333333333333333 | 0.3333333333333333 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
-| sheet_novus | sheet_novus_output.xlsx | tests | 36 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
-| sheet_producerua | sheet_producerua_output.xlsx | tests | 18 | 1.0 | 0.0 | 1.0 | 1.0 | 1.0 | 1.0 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
-| sheet_prozorro | sheet_prozorro_output.xlsx | tests | 21 | 0.1904761904761905 | 0.09523809523809523 | 0.09523809523809523 | 0.0 | 0.04761904761904762 | 0.2857142857142857 | I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
-| sheet_silpo | sheet_silpo_output.xlsx | tests | 36 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_PreTests | 144 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic | 48 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_CME | sheet_cme_output.xlsx | tests | 3 | 0.3333333333333333 | 0.0 | 0.3333333333333333 | 0.0 | 0.3333333333333333 | 0.3333333333333333 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | tests | 9 | 1.0 | 0.0 | 1.0 | 1.0 | 1.0 | 1.0 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_EU | sheet_eu_output.xlsx | tests | 18 | 0.3333333333333333 | 0.0 | 0.2222222222222222 | 0.05555555555555555 | 0.3333333333333333 | 0.3333333333333333 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_Novus | sheet_novus_output.xlsx | tests | 36 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | tests | 21 | 0.1904761904761905 | 0.09523809523809523 | 0.09523809523809523 | 0.0 | 0.04761904761904762 | 0.2857142857142857 | I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | tests | 18 | 1.0 | 0.0 | 1.0 | 1.0 | 1.0 | 1.0 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
+| sheet_Silpo | sheet_silpo_output.xlsx | tests | 36 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. |
 
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Results_Interpretation
 
 - Category: model_results
 - Interpretation: Model results table. Mean |coef|=1.8333; interpret sign and magnitude jointly with diagnostics.
-- Rows: 21
+- Rows: 17
 - Cols: 9
 
 | module | xlsx_file | sheet | n_rows | mean_abs_coef | coef_positive_share | significance_share_p_lt_005 | cointegration_rank_mean | interpretation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | graphs_brand_region | graphs_brand_region_output.xlsx | Brand_Economic_Metrics | 1880 | 20.33006410343564 | 0.4448979591836735 | 0.1826086956521739 | nan | mean /coef/=20.3301 / positive share=0.44 / significance share (p<0.05)=0.18 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_ardl | model_ardl_output.xlsx | ARDL_Summary | 11 | 0.9400399629337283 | 0.7727272727272727 | 0.2727272727272727 | nan | mean /coef/=0.9400 / positive share=0.77 / significance share (p<0.05)=0.27 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | 4 | 1.847935761026504 | 0.5 | nan | nan | mean /coef/=1.8479 / positive share=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_ecm | model_ecm_output.xlsx | ARDL_Summary | 11 | 0.9400399629337283 | 0.7727272727272727 | 0.2727272727272727 | nan | mean /coef/=0.9400 / positive share=0.77 / significance share (p<0.05)=0.27 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_ecm | model_ecm_output.xlsx | ECM_Summary | 3 | 0.6233935610457214 | 0.4444444444444444 | 1.0 | nan | mean /coef/=0.6234 / positive share=0.44 / significance share (p<0.05)=1.00 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_ardl | model_ardl_output.xlsx | ARDL_Summary | 0 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_ecm | model_ecm_output.xlsx | ECM_Summary | 0 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Influence_Coefficient | 28 | 0.5 | 1.0 | nan | nan | mean /coef/=0.5000 / positive share=1.00 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
 | model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_to_Consumer_Link | 3 | 0.9906802551231674 | 0.3333333333333333 | 0.0 | nan | mean /coef/=0.9907 / positive share=0.33 / significance share (p<0.05)=0.00 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | 47 | 0.9493166608329686 | 0.5212765957446809 | 0.2553191489361702 | nan | mean /coef/=0.9493 / positive share=0.52 / significance share (p<0.05)=0.26 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | 16 | 4.533354947742642 | 0.5 | 0.6875 | nan | mean /coef/=4.5334 / positive share=0.50 / significance share (p<0.05)=0.69 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | 8 | 3.12014259481457 | 0.3333333333333333 | 0.6875 | nan | mean /coef/=3.1201 / positive share=0.33 / significance share (p<0.05)=0.69 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_nardl | model_nardl_output.xlsx | NARDL_Summary | 11 | 0.3855059551681209 | 0.5 | 0.3181818181818182 | nan | mean /coef/=0.3855 / positive share=0.50 / significance share (p<0.05)=0.32 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Details | 60 | 2.608569635454106 | 0.5833333333333334 | 0.04166666666666666 | nan | mean /coef/=2.6086 / positive share=0.58 / significance share (p<0.05)=0.04 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Summary | 12 | 2.608569635454106 | 0.5833333333333334 | 0.04166666666666666 | nan | mean /coef/=2.6086 / positive share=0.58 / significance share (p<0.05)=0.04 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_vecm | model_vecm_output.xlsx | VECM_Summary | 3 | nan | nan | nan | 2.333333333333333 | mean cointegration rank=2.33 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_cme | sheet_cme_output.xlsx | tests | 3 | nan | nan | 0.5 | nan | significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_consumerua | sheet_consumerua_output.xlsx | tests | 9 | nan | nan | 0.6666666666666666 | nan | significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_eu | sheet_eu_output.xlsx | tests | 18 | nan | nan | 0.5 | nan | significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_novus | sheet_novus_output.xlsx | tests | 36 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_producerua | sheet_producerua_output.xlsx | tests | 18 | nan | nan | 0.6666666666666666 | nan | significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_prozorro | sheet_prozorro_output.xlsx | tests | 21 | nan | nan | 0.2142857142857143 | nan | significance share (p<0.05)=0.21 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_silpo | sheet_silpo_output.xlsx | tests | 36 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_nardl | model_nardl_output.xlsx | NARDL_Summary | 0 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ModelCoefficients | 48 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_PreTests | 144 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic | 48 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_vecm | model_vecm_output.xlsx | VECM_Summary | 0 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_CME | sheet_cme_output.xlsx | tests | 3 | nan | nan | 0.5 | nan | significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_ConsumerUA | sheet_consumerua_output.xlsx | tests | 9 | nan | nan | 0.6666666666666666 | nan | significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_EU | sheet_eu_output.xlsx | tests | 18 | nan | nan | 0.5 | nan | significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_Novus | sheet_novus_output.xlsx | tests | 36 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_ProZorro | sheet_prozorro_output.xlsx | tests | 21 | nan | nan | 0.2142857142857143 | nan | significance share (p<0.05)=0.21 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_ProducerUA | sheet_producerua_output.xlsx | tests | 18 | nan | nan | 0.6666666666666666 | nan | significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_Silpo | sheet_silpo_output.xlsx | tests | 36 | nan | nan | nan | nan | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
 
 ## run_all_summary :: run_all_rw3_summary.xlsx :: Module_Block_Interpretation
 
@@ -9128,25 +10899,25 @@ _No rows_
 
 | module | output_dir | xlsx_files | pdf_files | md_files | png_count | interpretation |
 | --- | --- | --- | --- | --- | --- | --- |
-| graphs_brand_region | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_brand_region | graphs_brand_region_output.xlsx | graphs_brand_region_report.pdf | graphs_brand_region_report.md | 3 | mean /coef/=20.3301 / positive share=0.44 / significance share (p<0.05)=0.18 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| graphs_correlations_lags | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_correlations_lags | graphs_correlations_lags_output.xlsx | graphs_correlations_lags_report.pdf | graphs_correlations_lags_report.md | 2 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
-| graphs_decomposition | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_decomposition | graphs_decomposition_output.xlsx | graphs_decomposition_report.pdf | graphs_decomposition_report.md | 24 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
-| graphs_overlay_ln | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/graphs_overlay_ln | graphs_overlay_ln_output.xlsx | graphs_overlay_ln_report.pdf | graphs_overlay_ln_report.md | 21 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
-| model_ardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_ardl | model_ardl_output.xlsx | model_ardl_report.pdf | model_ardl_report.md | 1 | mean /coef/=0.9400 / positive share=0.77 / significance share (p<0.05)=0.27 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_discounts | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_discounts | model_discounts_output.xlsx | model_discounts_report.pdf | model_discounts_report.md | 2 | mean /coef/=1.8479 / positive share=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_ecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_ecm | model_ecm_output.xlsx | model_ecm_report.pdf | model_ecm_report.md | 1 | mean /coef/=0.6234 / positive share=0.44 / significance share (p<0.05)=1.00 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_forecast_knn | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_forecast_knn | model_forecast_knn_output.xlsx | model_forecast_knn_report.pdf | model_forecast_knn_report.md | 3 | mean /coef/=0.5000 / positive share=1.00 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_intersection_bidirectional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | model_intersection_bidirectional_report.pdf | model_intersection_bidirectional_report.md | 2 | mean /coef/=0.9493 / positive share=0.52 / significance share (p<0.05)=0.26 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_nardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_nardl | model_nardl_output.xlsx | model_nardl_report.pdf | model_nardl_report.md | 2 | mean /coef/=0.3855 / positive share=0.50 / significance share (p<0.05)=0.32 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_short_chain_regional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_short_chain_regional | model_short_chain_regional_output.xlsx | model_short_chain_regional_report.pdf | model_short_chain_regional_report.md | 1 | mean /coef/=2.6086 / positive share=0.58 / significance share (p<0.05)=0.04 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| model_vecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/model_vecm | model_vecm_output.xlsx | model_vecm_report.pdf | model_vecm_report.md | 1 | mean cointegration rank=2.33 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_cme | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_cme | sheet_cme_output.xlsx | sheet_cme_report.pdf | sheet_cme_report.md | 3 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_consumerua | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_consumerua | sheet_consumerua_output.xlsx | sheet_consumerua_report.pdf | sheet_consumerua_report.md | 3 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_eu | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_eu | sheet_eu_output.xlsx | sheet_eu_report.pdf | sheet_eu_report.md | 3 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_novus | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_novus | sheet_novus_output.xlsx | sheet_novus_report.pdf | sheet_novus_report.md | 4 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_producerua | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_producerua | sheet_producerua_output.xlsx | sheet_producerua_report.pdf | sheet_producerua_report.md | 3 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_prozorro | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_prozorro | sheet_prozorro_output.xlsx | sheet_prozorro_report.pdf | sheet_prozorro_report.md | 4 | I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.21 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
-| sheet_silpo | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs/sheet_silpo | sheet_silpo_output.xlsx | sheet_silpo_report.pdf | sheet_silpo_report.md | 4 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| graphs_brand_region | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region | graphs_brand_region_output.xlsx | graphs_brand_region_report.pdf | graphs_brand_region_report.md | 3 | mean /coef/=20.3301 / positive share=0.44 / significance share (p<0.05)=0.18 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| graphs_correlations_lags | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_correlations_lags | graphs_correlations_lags_output.xlsx | graphs_correlations_lags_report.pdf | graphs_correlations_lags_report.md | 2 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
+| graphs_decomposition | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_decomposition | graphs_decomposition_output.xlsx | graphs_decomposition_report.pdf | graphs_decomposition_report.md | 24 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
+| graphs_overlay_ln | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_overlay_ln | graphs_overlay_ln_output.xlsx | graphs_overlay_ln_report.pdf | graphs_overlay_ln_report.md | 21 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
+| model_ardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ardl | model_ardl_output.xlsx | model_ardl_report.pdf | model_ardl_report.md | 1 | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_discounts | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_discounts | model_discounts_output.xlsx | model_discounts_report.pdf | model_discounts_report.md | 2 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
+| model_ecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ecm | model_ecm_output.xlsx | model_ecm_report.pdf | model_ecm_report.md | 1 | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_forecast_knn | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_forecast_knn | model_forecast_knn_output.xlsx | model_forecast_knn_report.pdf | model_forecast_knn_report.md | 3 | mean /coef/=0.5000 / positive share=1.00 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_intersection_bidirectional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | model_intersection_bidirectional_report.pdf | model_intersection_bidirectional_report.md | 2 | No explicit test/model tables detected; interpret via module-specific descriptive outputs. |
+| model_nardl | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_nardl | model_nardl_output.xlsx | model_nardl_report.pdf | model_nardl_report.md | 2 | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_short_chain_regional | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/primary_chain_summary | primary_chain_consolidated.xlsx | primary_chain_consolidated.pdf | primary_chain_consolidated.md | 0 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| model_vecm | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_vecm | model_vecm_output.xlsx | model_vecm_report.pdf | model_vecm_report.md | 1 | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_CME | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_cme | sheet_cme_output.xlsx | sheet_cme_report.pdf | sheet_cme_report.md | 3 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_ConsumerUA | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_consumerua | sheet_consumerua_output.xlsx | sheet_consumerua_report.pdf | sheet_consumerua_report.md | 3 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_EU | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_eu | sheet_eu_output.xlsx | sheet_eu_report.pdf | sheet_eu_report.md | 3 | I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.50 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_Novus | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_novus | sheet_novus_output.xlsx | sheet_novus_report.pdf | sheet_novus_report.md | 4 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_ProZorro | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_prozorro | sheet_prozorro_output.xlsx | sheet_prozorro_report.pdf | sheet_prozorro_report.md | 4 | I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.21 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_ProducerUA | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_producerua | sheet_producerua_output.xlsx | sheet_producerua_report.pdf | sheet_producerua_report.md | 3 | I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / significance share (p<0.05)=0.67 / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
+| sheet_Silpo | /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_silpo | sheet_silpo_output.xlsx | sheet_silpo_report.pdf | sheet_silpo_report.md | 4 | I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. / Result table has no standard coefficient/p-value columns; interpret by table-specific fields. / Interpret signs/magnitudes jointly with diagnostics and sample coverage. |
 
 ## sheet_cme :: sheet_cme_output.xlsx :: raw
 
@@ -18354,8 +20125,565 @@ _Large table truncated in markdown; full table in Total_Run.xlsx._
 | Silpo | Сметана | sour_cream | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Silpo | Сметана | sour_cream | real | 8 | nan | nan | nan | nan | nan | nan | 0 |
 
+## sour_cream/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | novus | promo_controlled |
+
+## sour_cream/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sour_cream | novus | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## sour_cream/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## sour_cream/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-11-10 00:00:00 | 26.22340588618493 | 127.575 | 55.99 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 26.0381314735025 | 120.3 | 42.49 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 25.72459818879635 | 110.5 | 50.73999999999999 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 23.03412689106674 | 119.295 | 47.49 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 21.54839696894781 | 141.75 | 61.99 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 21.37738112631663 | 117.125 | 58.99 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 20.17346658361763 | 142.86 | 64.49 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 19.90453730281067 | 112.26 | 90.995 | sour_cream | novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## sour_cream/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sour_cream | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## sour_cream/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | silpo | promo_controlled |
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sour_cream | silpo | promo_controlled | weekly | none | none | nan | nan | 8 | nan | nan | nan |
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 8
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 25.71785455986561 | 146.1 | 55.99 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 25.86792369438423 | 133.2 | 54.99 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 26.22340588618493 | 127.575 | 58.49 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 26.0381314735025 | 120.3 | 54.99 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 25.72459818879635 | 110.5 | 57.74 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 23.03412689106674 | 119.295 | 54.99 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 21.54839696894781 | 141.75 | 54.99 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 21.37738112631663 | 117.125 | 55.695 | sour_cream | silpo | promo_controlled | daily_median_of_available_silpo_novus |
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sour_cream | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | silpo_novus | promo_controlled |
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sour_cream | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 10 | nan | nan | nan |
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 10
+- Cols: 8
+
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-27 00:00:00 | 25.71785455986561 | 146.1 | 55.99 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | 25.86792369438423 | 133.2 | 54.99 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | 26.22340588618493 | 127.575 | 57.99 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-17 00:00:00 | 26.0381314735025 | 120.3 | 54.99 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-24 00:00:00 | 25.72459818879635 | 110.5 | 57.49 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-01 00:00:00 | 23.03412689106674 | 119.295 | 53.49 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-08 00:00:00 | 21.54839696894781 | 141.75 | 55.99 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-15 00:00:00 | 21.37738112631663 | 117.125 | 55.695 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-22 00:00:00 | 20.17346658361763 | 142.86 | 64.49 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-12-29 00:00:00 | 19.90453730281067 | 112.26 | 90.995 | sour_cream | silpo_novus | promo_controlled | daily_median_of_available_silpo_novus |
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| sour_cream | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## sour_cream/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo | promo_controlled |
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | silpo | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | silpo | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/silpo :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: PreTests
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 6
+- Cols: 13
+
+| series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
+| prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
+| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
+| producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo_novus | promo_controlled |
+| prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo_novus | promo_controlled |
+| producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo_novus | promo_controlled |
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: ModelCoefficients
+
+- Category: model_results
+- Interpretation: Model results table. Interpret coefficients, p-values, and model admissibility columns.
+- Rows: 1
+- Cols: 20
+
+| standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | silpo_novus | promo_controlled | weekly | none | none | nan | nan | 0 | nan | nan | nan |
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: ResidualDiagnostics
+
+- Category: tests
+- Interpretation: Diagnostics summary: I(1)-like share=0.00, stationary share=0.00. Use lag structure + robust/HAC + stability checks when needed.
+- Rows: 1
+- Cols: 8
+
+| model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| none | none | nan | nan | nan | nan | nan | 1 |
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: SeriesUsed
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 8
+
+_No rows_
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: LagProfile
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: ModelEligibility
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 1
+- Cols: 9
+
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | silpo_novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: NARDL_Multipliers
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
+## yogurt_dessert/silpo_novus :: primary_chain_output.xlsx :: VECM_IRF
+
+- Category: other
+- Interpretation: General output table. Interpret with module context and linked diagnostic/model outputs.
+- Rows: 0
+- Cols: 0
+
+_No rows_
+
 ## Graphs
 
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/butter/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/butter/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/butter/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/butter/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/butter/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/butter/silpo_novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cottage_cheese/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cottage_cheese/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cottage_cheese/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cottage_cheese/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cottage_cheese/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cottage_cheese/silpo_novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cream/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cream/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cream/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cream/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cream/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/cream/silpo_novus/time_series_promo_controlled.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region/brand_hhi.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region/brand_promo_intensity.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_brand_region/prozorro_region_median.png
@@ -18406,6 +20734,18 @@ _Large table truncated in markdown; full table in Total_Run.xlsx._
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_overlay_ln/overlay_07.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_overlay_ln/overlay_08.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/graphs_overlay_ln/overlay_09.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/hard_cheese/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/hard_cheese/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/hard_cheese/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/hard_cheese/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/hard_cheese/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/hard_cheese/silpo_novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/milk/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/milk/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/milk/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/milk/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/milk/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/milk/silpo_novus/time_series_promo_controlled.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_ardl/ardl_short_run.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_discounts/discount_delta_eu.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_discounts/discount_delta_producer.png
@@ -18419,6 +20759,12 @@ _Large table truncated in markdown; full table in Total_Run.xlsx._
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_nardl/nardl_short_run.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_short_chain_regional/chain_retail_from_producer.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/model_vecm/vecm_alpha.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/other/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/other/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/other/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/other/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/other/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/other/silpo_novus/time_series_promo_controlled.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_cme/sheet_cme_distribution.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_cme/sheet_cme_timeseries_by_product.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_cme/sheet_cme_timeseries_by_standardized_type.png
@@ -18443,3 +20789,15 @@ _Large table truncated in markdown; full table in Total_Run.xlsx._
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_silpo/sheet_silpo_distribution.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_silpo/sheet_silpo_timeseries_by_product.png
 - /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sheet_silpo/sheet_silpo_timeseries_by_standardized_type.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sour_cream/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sour_cream/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sour_cream/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sour_cream/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sour_cream/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/sour_cream/silpo_novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/yogurt_dessert/novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/yogurt_dessert/novus/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/yogurt_dessert/silpo/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/yogurt_dessert/silpo/time_series_promo_controlled.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/yogurt_dessert/silpo_novus/time_series_observed.png
+- /Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/yogurt_dessert/silpo_novus/time_series_promo_controlled.png

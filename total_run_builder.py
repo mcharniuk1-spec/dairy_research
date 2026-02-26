@@ -367,34 +367,43 @@ def build_total_run(outputs_root: Path | None = None) -> Path:
     total_pdf = total_dir / "Total_Run.pdf"
     total_md = total_dir / "Total_Run.md"
 
-    module_dirs = [p for p in sorted(out_root.iterdir()) if p.is_dir() and p.name != "total_run"]
     table_records: List[Dict[str, object]] = []
     images: List[Path] = []
-
-    for module_dir in module_dirs:
-        module = module_dir.name
-        for img in sorted(module_dir.glob("*.png")):
+    seen_images: set[str] = set()
+    xlsx_paths = sorted(
+        [
+            p
+            for p in out_root.rglob("*.xlsx")
+            if p.is_file() and "total_run" not in p.parts
+        ]
+    )
+    for img in sorted([p for p in out_root.rglob("*.png") if p.is_file() and "total_run" not in p.parts]):
+        key = str(img.resolve())
+        if key not in seen_images:
+            seen_images.add(key)
             images.append(img)
-        for xlsx in sorted(module_dir.glob("*.xlsx")):
+    for xlsx in xlsx_paths:
+        rel_parent = str(xlsx.parent.relative_to(out_root))
+        module = rel_parent if rel_parent else "root"
+        try:
+            xl = pd.ExcelFile(xlsx)
+        except Exception:
+            continue
+        for sheet in xl.sheet_names:
             try:
-                xl = pd.ExcelFile(xlsx)
+                dsmall = xl.parse(sheet_name=sheet, nrows=200)
             except Exception:
                 continue
-            for sheet in xl.sheet_names:
-                try:
-                    dsmall = xl.parse(sheet_name=sheet, nrows=200)
-                except Exception:
-                    continue
-                category, interp = classify_table(dsmall, sheet)
-                table_records.append(
-                    {
-                        "module": module,
-                        "xlsx_path": str(xlsx),
-                        "sheet": sheet,
-                        "category": category,
-                        "interpretation": interp,
-                    }
-                )
+            category, interp = classify_table(dsmall, sheet)
+            table_records.append(
+                {
+                    "module": module,
+                    "xlsx_path": str(xlsx),
+                    "sheet": sheet,
+                    "category": category,
+                    "interpretation": interp,
+                }
+            )
 
     index_df = _write_total_xlsx(total_xlsx, table_records)
     _write_total_pdf(total_pdf, table_records, index_df, images)

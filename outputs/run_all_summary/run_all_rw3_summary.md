@@ -59,7 +59,7 @@ Interpretation:
 ### model_ardl
 
 Interpretation:
-- mean |coef|=0.9400 | positive share=0.77 | significance share (p<0.05)=0.27 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 
 - xlsx files: model_ardl_output.xlsx
 - pdf files: model_ardl_report.pdf
@@ -69,7 +69,7 @@ Interpretation:
 ### model_discounts
 
 Interpretation:
-- mean |coef|=1.8479 | positive share=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- No explicit test/model tables detected; interpret via module-specific descriptive outputs.
 
 - xlsx files: model_discounts_output.xlsx
 - pdf files: model_discounts_report.pdf
@@ -79,7 +79,7 @@ Interpretation:
 ### model_ecm
 
 Interpretation:
-- mean |coef|=0.6234 | positive share=0.44 | significance share (p<0.05)=1.00 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 
 - xlsx files: model_ecm_output.xlsx
 - pdf files: model_ecm_report.pdf
@@ -99,7 +99,7 @@ Interpretation:
 ### model_intersection_bidirectional
 
 Interpretation:
-- mean |coef|=0.9493 | positive share=0.52 | significance share (p<0.05)=0.26 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- No explicit test/model tables detected; interpret via module-specific descriptive outputs.
 
 - xlsx files: model_intersection_bidirectional_output.xlsx
 - pdf files: model_intersection_bidirectional_report.pdf
@@ -109,7 +109,7 @@ Interpretation:
 ### model_nardl
 
 Interpretation:
-- mean |coef|=0.3855 | positive share=0.50 | significance share (p<0.05)=0.32 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 
 - xlsx files: model_nardl_output.xlsx
 - pdf files: model_nardl_report.pdf
@@ -119,24 +119,24 @@ Interpretation:
 ### model_short_chain_regional
 
 Interpretation:
-- mean |coef|=2.6086 | positive share=0.58 | significance share (p<0.05)=0.04 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 
-- xlsx files: model_short_chain_regional_output.xlsx
-- pdf files: model_short_chain_regional_report.pdf
-- md files: model_short_chain_regional_report.md
-- png count: 1
+- xlsx files: primary_chain_consolidated.xlsx
+- pdf files: primary_chain_consolidated.pdf
+- md files: primary_chain_consolidated.md
+- png count: 0
 
 ### model_vecm
 
 Interpretation:
-- mean cointegration rank=2.33 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 
 - xlsx files: model_vecm_output.xlsx
 - pdf files: model_vecm_report.pdf
 - md files: model_vecm_report.md
 - png count: 1
 
-### sheet_cme
+### sheet_CME
 
 Interpretation:
 - I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | significance share (p<0.05)=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
@@ -146,7 +146,7 @@ Interpretation:
 - md files: sheet_cme_report.md
 - png count: 3
 
-### sheet_consumerua
+### sheet_ConsumerUA
 
 Interpretation:
 - I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
@@ -156,7 +156,7 @@ Interpretation:
 - md files: sheet_consumerua_report.md
 - png count: 3
 
-### sheet_eu
+### sheet_EU
 
 Interpretation:
 - I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | significance share (p<0.05)=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
@@ -166,7 +166,7 @@ Interpretation:
 - md files: sheet_eu_report.md
 - png count: 3
 
-### sheet_novus
+### sheet_Novus
 
 Interpretation:
 - I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
@@ -176,17 +176,7 @@ Interpretation:
 - md files: sheet_novus_report.md
 - png count: 4
 
-### sheet_producerua
-
-Interpretation:
-- I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-
-- xlsx files: sheet_producerua_output.xlsx
-- pdf files: sheet_producerua_report.pdf
-- md files: sheet_producerua_report.md
-- png count: 3
-
-### sheet_prozorro
+### sheet_ProZorro
 
 Interpretation:
 - I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | significance share (p<0.05)=0.21 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
@@ -196,7 +186,17 @@ Interpretation:
 - md files: sheet_prozorro_report.md
 - png count: 4
 
-### sheet_silpo
+### sheet_ProducerUA
+
+Interpretation:
+- I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+
+- xlsx files: sheet_producerua_output.xlsx
+- pdf files: sheet_producerua_report.pdf
+- md files: sheet_producerua_report.md
+- png count: 3
+
+### sheet_Silpo
 
 Interpretation:
 - I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks. | Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
@@ -208,37 +208,35 @@ Interpretation:
 
 ## Tests Summary
 
-- sheet_cme | sheet_cme_output.xlsx | tests: I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
-- sheet_consumerua | sheet_consumerua_output.xlsx | tests: I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
-- sheet_eu | sheet_eu_output.xlsx | tests: I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
-- sheet_novus | sheet_novus_output.xlsx | tests: I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
-- sheet_producerua | sheet_producerua_output.xlsx | tests: I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
-- sheet_prozorro | sheet_prozorro_output.xlsx | tests: I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
-- sheet_silpo | sheet_silpo_output.xlsx | tests: I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_PreTests: I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic: I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_CME | sheet_cme_output.xlsx | tests: I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.33, heterosk risk share=0.00, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | tests: I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_EU | sheet_eu_output.xlsx | tests: I(1)-like share=0.33, stationary share=0.00, autocorr risk share=0.22, heterosk risk share=0.06, non-normal share=0.33, stability risk share=0.33. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_Novus | sheet_novus_output.xlsx | tests: I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_ProZorro | sheet_prozorro_output.xlsx | tests: I(1)-like share=0.19, stationary share=0.10, autocorr risk share=0.10, heterosk risk share=0.00, non-normal share=0.05, stability risk share=0.29. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_ProducerUA | sheet_producerua_output.xlsx | tests: I(1)-like share=1.00, stationary share=0.00, autocorr risk share=1.00, heterosk risk share=1.00, non-normal share=1.00, stability risk share=1.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
+- sheet_Silpo | sheet_silpo_output.xlsx | tests: I(1)-like share=0.00, stationary share=0.00, autocorr risk share=0.00, heterosk risk share=0.00, non-normal share=0.00, stability risk share=0.00. Model action: cointegration/differences + lag structure + robust/HAC + stability checks.
 
 ## Results Summary
 
 - graphs_brand_region | graphs_brand_region_output.xlsx | Brand_Economic_Metrics: mean |coef|=20.3301 | positive share=0.44 | significance share (p<0.05)=0.18 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_ardl | model_ardl_output.xlsx | ARDL_Summary: mean |coef|=0.9400 | positive share=0.77 | significance share (p<0.05)=0.27 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl: mean |coef|=1.8479 | positive share=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_ecm | model_ecm_output.xlsx | ARDL_Summary: mean |coef|=0.9400 | positive share=0.77 | significance share (p<0.05)=0.27 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_ecm | model_ecm_output.xlsx | ECM_Summary: mean |coef|=0.6234 | positive share=0.44 | significance share (p<0.05)=1.00 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_ardl | model_ardl_output.xlsx | ARDL_Summary: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_ecm | model_ecm_output.xlsx | ECM_Summary: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 - model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Influence_Coefficient: mean |coef|=0.5000 | positive share=1.00 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 - model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_to_Consumer_Link: mean |coef|=0.9907 | positive share=0.33 | significance share (p<0.05)=0.00 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results: mean |coef|=0.9493 | positive share=0.52 | significance share (p<0.05)=0.26 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail: mean |coef|=4.5334 | positive share=0.50 | significance share (p<0.05)=0.69 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar: mean |coef|=3.1201 | positive share=0.33 | significance share (p<0.05)=0.69 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_nardl | model_nardl_output.xlsx | NARDL_Summary: mean |coef|=0.3855 | positive share=0.50 | significance share (p<0.05)=0.32 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Details: mean |coef|=2.6086 | positive share=0.58 | significance share (p<0.05)=0.04 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Summary: mean |coef|=2.6086 | positive share=0.58 | significance share (p<0.05)=0.04 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- model_vecm | model_vecm_output.xlsx | VECM_Summary: mean cointegration rank=2.33 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_cme | sheet_cme_output.xlsx | tests: significance share (p<0.05)=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_consumerua | sheet_consumerua_output.xlsx | tests: significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_eu | sheet_eu_output.xlsx | tests: significance share (p<0.05)=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_novus | sheet_novus_output.xlsx | tests: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_producerua | sheet_producerua_output.xlsx | tests: significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_prozorro | sheet_prozorro_output.xlsx | tests: significance share (p<0.05)=0.21 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
-- sheet_silpo | sheet_silpo_output.xlsx | tests: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_nardl | model_nardl_output.xlsx | NARDL_Summary: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ModelCoefficients: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_PreTests: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- model_vecm | model_vecm_output.xlsx | VECM_Summary: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_CME | sheet_cme_output.xlsx | tests: significance share (p<0.05)=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | tests: significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_EU | sheet_eu_output.xlsx | tests: significance share (p<0.05)=0.50 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_Novus | sheet_novus_output.xlsx | tests: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_ProZorro | sheet_prozorro_output.xlsx | tests: significance share (p<0.05)=0.21 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_ProducerUA | sheet_producerua_output.xlsx | tests: significance share (p<0.05)=0.67 | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
+- sheet_Silpo | sheet_silpo_output.xlsx | tests: Result table has no standard coefficient/p-value columns; interpret by table-specific fields. | Interpret signs/magnitudes jointly with diagnostics and sample coverage.
 
 ## Sheet Index
 
@@ -256,72 +254,68 @@ Interpretation:
 - graphs_overlay_ln | graphs_overlay_ln_output.xlsx | BeforeAfterLN_Index | rows=42 cols=4
 - graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_All | rows=13399 cols=10
 - graphs_overlay_ln | graphs_overlay_ln_output.xlsx | Overlay_Index | rows=12 cols=4
-- model_ardl | model_ardl_output.xlsx | ARDL_Summary | rows=11 cols=12
-- model_ardl | model_ardl_output.xlsx | Model_Series | rows=3765 cols=4
-- model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Depth | rows=1 cols=4
-- model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Occurrence | rows=1 cols=4
-- model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | rows=4 cols=11
-- model_ecm | model_ecm_output.xlsx | ARDL_Summary | rows=11 cols=12
-- model_ecm | model_ecm_output.xlsx | ECM_Summary | rows=3 cols=12
+- model_ardl | model_ardl_output.xlsx | ARDL_Summary | rows=0 cols=20
+- model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Depth | rows=1 cols=1
+- model_discounts | model_discounts_output.xlsx | Silpo_Discounts_Occurrence | rows=1 cols=1
+- model_discounts | model_discounts_output.xlsx | Silpo_Transmission_PromoCtrl | rows=1 cols=1
+- model_ecm | model_ecm_output.xlsx | ECM_Summary | rows=0 cols=20
 - model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Predictions | rows=540 cols=6
 - model_forecast_knn | model_forecast_knn_output.xlsx | Forecast_Summary | rows=9 cols=7
 - model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Influence_Coefficient | rows=28 cols=7
 - model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_Retail_Series | rows=91758 cols=8
 - model_forecast_knn | model_forecast_knn_output.xlsx | Synthetic_to_Consumer_Link | rows=3 cols=7
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Granger | rows=38 cols=7
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | rows=47 cols=11
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | CrossTable_Correlations | rows=159 cols=10
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | rows=16 cols=8
-- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | rows=8 cols=36
-- model_nardl | model_nardl_output.xlsx | NARDL_Summary | rows=11 cols=12
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Details | rows=60 cols=6
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Chain_Effects_Summary | rows=12 cols=14
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | LagMatrix_ByProduct | rows=39 cols=7
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | LagProfiles_ByProduct | rows=1025 cols=7
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Models_ShortRun_Summary | rows=0 cols=0
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Effects_Matri | rows=171 cols=7
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | Prozorro_Regional_Models | rows=0 cols=0
-- model_short_chain_regional | model_short_chain_regional_output.xlsx | ShortRun_Details | rows=0 cols=0
-- model_vecm | model_vecm_output.xlsx | VECM_Summary | rows=3 cols=12
-- sheet_cme | sheet_cme_output.xlsx | clean | rows=1023 cols=9
-- sheet_cme | sheet_cme_output.xlsx | daily_variants | rows=1486 cols=12
-- sheet_cme | sheet_cme_output.xlsx | descriptive_stats | rows=3 cols=21
-- sheet_cme | sheet_cme_output.xlsx | raw | rows=1023 cols=2
-- sheet_cme | sheet_cme_output.xlsx | series_long | rows=1023 cols=11
-- sheet_cme | sheet_cme_output.xlsx | tests | rows=3 cols=23
-- sheet_consumerua | sheet_consumerua_output.xlsx | clean | rows=5463 cols=12
-- sheet_consumerua | sheet_consumerua_output.xlsx | daily_variants | rows=5463 cols=12
-- sheet_consumerua | sheet_consumerua_output.xlsx | descriptive_stats | rows=9 cols=21
-- sheet_consumerua | sheet_consumerua_output.xlsx | raw | rows=5463 cols=11
-- sheet_consumerua | sheet_consumerua_output.xlsx | series_long | rows=16389 cols=11
-- sheet_consumerua | sheet_consumerua_output.xlsx | tests | rows=9 cols=23
-- sheet_eu | sheet_eu_output.xlsx | clean | rows=111299 cols=9
-- sheet_eu | sheet_eu_output.xlsx | daily_variants | rows=8868 cols=12
-- sheet_eu | sheet_eu_output.xlsx | descriptive_stats | rows=18 cols=21
-- sheet_eu | sheet_eu_output.xlsx | raw | rows=111299 cols=6
-- sheet_eu | sheet_eu_output.xlsx | series_long | rows=6336 cols=11
-- sheet_eu | sheet_eu_output.xlsx | tests | rows=18 cols=23
-- sheet_novus | sheet_novus_output.xlsx | clean | rows=1530 cols=22
-- sheet_novus | sheet_novus_output.xlsx | daily_variants | rows=8790 cols=12
-- sheet_novus | sheet_novus_output.xlsx | descriptive_stats | rows=36 cols=21
-- sheet_novus | sheet_novus_output.xlsx | raw | rows=1530 cols=19
-- sheet_novus | sheet_novus_output.xlsx | series_long | rows=755 cols=11
-- sheet_novus | sheet_novus_output.xlsx | tests | rows=36 cols=23
-- sheet_producerua | sheet_producerua_output.xlsx | clean | rows=10758 cols=12
-- sheet_producerua | sheet_producerua_output.xlsx | daily_variants | rows=10758 cols=12
-- sheet_producerua | sheet_producerua_output.xlsx | descriptive_stats | rows=18 cols=21
-- sheet_producerua | sheet_producerua_output.xlsx | raw | rows=10758 cols=11
-- sheet_producerua | sheet_producerua_output.xlsx | series_long | rows=32274 cols=11
-- sheet_producerua | sheet_producerua_output.xlsx | tests | rows=18 cols=23
-- sheet_prozorro | sheet_prozorro_output.xlsx | clean | rows=10927 cols=18
-- sheet_prozorro | sheet_prozorro_output.xlsx | daily_variants | rows=40843 cols=12
-- sheet_prozorro | sheet_prozorro_output.xlsx | descriptive_stats | rows=21 cols=21
-- sheet_prozorro | sheet_prozorro_output.xlsx | raw | rows=10927 cols=12
-- sheet_prozorro | sheet_prozorro_output.xlsx | series_long | rows=7613 cols=11
-- sheet_prozorro | sheet_prozorro_output.xlsx | tests | rows=21 cols=23
-- sheet_silpo | sheet_silpo_output.xlsx | clean | rows=86765 cols=23
-- sheet_silpo | sheet_silpo_output.xlsx | daily_variants | rows=23691 cols=12
-- sheet_silpo | sheet_silpo_output.xlsx | descriptive_stats | rows=36 cols=21
-- sheet_silpo | sheet_silpo_output.xlsx | raw | rows=86765 cols=19
-- sheet_silpo | sheet_silpo_output.xlsx | series_long | rows=20933 cols=11
-- sheet_silpo | sheet_silpo_output.xlsx | tests | rows=36 cols=23
+- model_forecast_knn | model_forecast_knn_output.xlsx | Ultimate_Consumer_Price | rows=145 cols=5
+- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Granger | rows=1 cols=1
+- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Bidirectional_Results | rows=1 cols=1
+- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | CrossTable_Correlations | rows=77 cols=10
+- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Detail | rows=0 cols=0
+- model_intersection_bidirectional | model_intersection_bidirectional_output.xlsx | Intersection_Combination_Summar | rows=1 cols=1
+- model_nardl | model_nardl_output.xlsx | NARDL_Summary | rows=0 cols=20
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_Eligibility | rows=48 cols=9
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ModelCoefficients | rows=48 cols=20
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_PreTests | rows=144 cols=12
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Consolidated_ResidualDiagnostic | rows=48 cols=11
+- model_short_chain_regional | primary_chain_consolidated.xlsx | Rule_Documentation | rows=1 cols=6
+- model_vecm | model_vecm_output.xlsx | VECM_Summary | rows=0 cols=20
+- sheet_CME | sheet_cme_output.xlsx | clean | rows=1023 cols=9
+- sheet_CME | sheet_cme_output.xlsx | daily_variants | rows=1486 cols=12
+- sheet_CME | sheet_cme_output.xlsx | descriptive_stats | rows=3 cols=21
+- sheet_CME | sheet_cme_output.xlsx | raw | rows=1023 cols=2
+- sheet_CME | sheet_cme_output.xlsx | series_long | rows=1023 cols=11
+- sheet_CME | sheet_cme_output.xlsx | tests | rows=3 cols=23
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | clean | rows=5463 cols=12
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | daily_variants | rows=5463 cols=12
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | descriptive_stats | rows=9 cols=21
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | raw | rows=5463 cols=11
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | series_long | rows=16389 cols=11
+- sheet_ConsumerUA | sheet_consumerua_output.xlsx | tests | rows=9 cols=23
+- sheet_EU | sheet_eu_output.xlsx | clean | rows=111299 cols=9
+- sheet_EU | sheet_eu_output.xlsx | daily_variants | rows=8868 cols=12
+- sheet_EU | sheet_eu_output.xlsx | descriptive_stats | rows=18 cols=21
+- sheet_EU | sheet_eu_output.xlsx | raw | rows=111299 cols=6
+- sheet_EU | sheet_eu_output.xlsx | series_long | rows=6336 cols=11
+- sheet_EU | sheet_eu_output.xlsx | tests | rows=18 cols=23
+- sheet_Novus | sheet_novus_output.xlsx | clean | rows=1530 cols=22
+- sheet_Novus | sheet_novus_output.xlsx | daily_variants | rows=8790 cols=12
+- sheet_Novus | sheet_novus_output.xlsx | descriptive_stats | rows=36 cols=21
+- sheet_Novus | sheet_novus_output.xlsx | raw | rows=1530 cols=19
+- sheet_Novus | sheet_novus_output.xlsx | series_long | rows=755 cols=11
+- sheet_Novus | sheet_novus_output.xlsx | tests | rows=36 cols=23
+- sheet_ProZorro | sheet_prozorro_output.xlsx | clean | rows=10927 cols=18
+- sheet_ProZorro | sheet_prozorro_output.xlsx | daily_variants | rows=40843 cols=12
+- sheet_ProZorro | sheet_prozorro_output.xlsx | descriptive_stats | rows=21 cols=21
+- sheet_ProZorro | sheet_prozorro_output.xlsx | raw | rows=10927 cols=12
+- sheet_ProZorro | sheet_prozorro_output.xlsx | series_long | rows=7613 cols=11
+- sheet_ProZorro | sheet_prozorro_output.xlsx | tests | rows=21 cols=23
+- sheet_ProducerUA | sheet_producerua_output.xlsx | clean | rows=10758 cols=12
+- sheet_ProducerUA | sheet_producerua_output.xlsx | daily_variants | rows=10758 cols=12
+- sheet_ProducerUA | sheet_producerua_output.xlsx | descriptive_stats | rows=18 cols=21
+- sheet_ProducerUA | sheet_producerua_output.xlsx | raw | rows=10758 cols=11
+- sheet_ProducerUA | sheet_producerua_output.xlsx | series_long | rows=32274 cols=11
+- sheet_ProducerUA | sheet_producerua_output.xlsx | tests | rows=18 cols=23
+- sheet_Silpo | sheet_silpo_output.xlsx | clean | rows=86765 cols=23
+- sheet_Silpo | sheet_silpo_output.xlsx | daily_variants | rows=23691 cols=12
+- sheet_Silpo | sheet_silpo_output.xlsx | descriptive_stats | rows=36 cols=21
+- sheet_Silpo | sheet_silpo_output.xlsx | raw | rows=86765 cols=19
+- sheet_Silpo | sheet_silpo_output.xlsx | series_long | rows=20933 cols=11
+- sheet_Silpo | sheet_silpo_output.xlsx | tests | rows=36 cols=23
