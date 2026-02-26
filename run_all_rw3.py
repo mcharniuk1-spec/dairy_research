@@ -19,6 +19,7 @@ from model_worker import (
     run_short_chain_regional,
     run_intersection_bidirectional,
     run_forecast_knn_synthetic,
+    run_secondary_synthetic_consumer,
 )
 from graph_worker import (
     run_decomposition_graphs,
@@ -347,6 +348,7 @@ def main() -> None:
     _run_step("model_discounts", run_discounts, logs)
     _run_step("model_intersection_bidirectional", run_intersection_bidirectional, logs)
     _run_step("model_forecast_knn", run_forecast_knn_synthetic, logs)
+    _run_step("model_secondary_synthetic_consumer", run_secondary_synthetic_consumer, logs)
 
     _run_step("graphs_decomposition", run_decomposition_graphs, logs)
     _run_step("graphs_overlay_ln", run_overlay_ln_graphs, logs)

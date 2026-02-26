@@ -157,38 +157,40 @@ def _fit_ardl_pair(log_y: pd.Series, log_x: pd.Series, max_lag: int) -> Optional
     d = pd.concat([log_y.rename("y"), log_x.rename("x")], axis=1).dropna()
     if len(d) < 30:
         return None
-    try:
-        sel = ardl_select_order(d["y"], max_lag, d[["x"]], max_lag, ic="aic", trend="c")
-        ar = sel.model.fit(cov_type="HAC", cov_kwds={"maxlags": min(3, max(1, max_lag // 2))})
-        phi = float(np.nansum([v for k, v in ar.params.items() if str(k).startswith("y.L")]))
-        beta = float(np.nansum([v for k, v in ar.params.items() if str(k).startswith("x.L")]))
-        lr = beta / (1.0 - phi) if abs(1.0 - phi) > 1e-8 else np.nan
-        sr = float(ar.params.get("x.L0", np.nan))
-        uecm_res = UECM.from_ardl(sel.model).fit(cov_type="HAC", cov_kwds={"maxlags": min(3, max(1, max_lag // 2))})
-        bt = uecm_res.bounds_test(case=3)
-        lower_p = float(bt.p_values.get("lower", np.nan))
-        upper_p = float(bt.p_values.get("upper", np.nan))
-        notes = f"bounds_lower_p={lower_p:.4g}; bounds_upper_p={upper_p:.4g}"
-        return FitResult(
-            family="ARDL",
-            link="",
-            y_series="",
-            x_series="",
-            n_obs=int(len(d)),
-            sr_coef=sr,
-            lr_coef=float(lr) if pd.notna(lr) else np.nan,
-            ect_coef=np.nan,
-            ect_pvalue=np.nan,
-            asym_short_p=np.nan,
-            asym_long_p=np.nan,
-            vecm_rank=np.nan,
-            model_status="ok",
-            unreliable=0,
-            notes=notes,
-            residuals=ar.resid,
-        )
-    except Exception:
-        return None
+    for lag_try in [max_lag, min(12, max_lag), min(6, max_lag), min(3, max_lag)]:
+        try:
+            sel = ardl_select_order(d["y"], lag_try, d[["x"]], lag_try, ic="aic", trend="c")
+            ar = sel.model.fit(cov_type="HAC", cov_kwds={"maxlags": min(3, max(1, lag_try // 2))})
+            phi = float(np.nansum([v for k, v in ar.params.items() if str(k).startswith("y.L")]))
+            beta = float(np.nansum([v for k, v in ar.params.items() if str(k).startswith("x.L")]))
+            lr = beta / (1.0 - phi) if abs(1.0 - phi) > 1e-8 else np.nan
+            sr = float(ar.params.get("x.L0", np.nan))
+            uecm_res = UECM.from_ardl(sel.model).fit(cov_type="HAC", cov_kwds={"maxlags": min(3, max(1, lag_try // 2))})
+            bt = uecm_res.bounds_test(case=3)
+            lower_p = float(bt.p_values.get("lower", np.nan))
+            upper_p = float(bt.p_values.get("upper", np.nan))
+            notes = f"bounds_lower_p={lower_p:.4g}; bounds_upper_p={upper_p:.4g}; max_lag_try={lag_try}"
+            return FitResult(
+                family="ARDL",
+                link="",
+                y_series="",
+                x_series="",
+                n_obs=int(len(d)),
+                sr_coef=sr,
+                lr_coef=float(lr) if pd.notna(lr) else np.nan,
+                ect_coef=np.nan,
+                ect_pvalue=np.nan,
+                asym_short_p=np.nan,
+                asym_long_p=np.nan,
+                vecm_rank=np.nan,
+                model_status="ok",
+                unreliable=0,
+                notes=notes,
+                residuals=ar.resid,
+            )
+        except Exception:
+            continue
+    return None
 
 
 def _fit_ecm_pair(log_y: pd.Series, log_x: pd.Series, max_lag: int) -> Optional[FitResult]:
@@ -500,7 +502,7 @@ def _write_variant_output(
     )
 
 
-def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
+def run_primary_chain_pipeline(freq: str = "daily") -> Path:
     _, raw = common.load_raw()
     cleaned = common.prepare_cleaned(raw)
     chain_daily = _build_primary_inputs(cleaned)
@@ -509,7 +511,8 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
         common.write_tables_xlsx(out / "primary_chain_consolidated.xlsx", {"Consolidated_ModelCoefficients": pd.DataFrame()})
         return out
 
-    max_lag = 10 if freq == "weekly" else 30
+    lag_profile_max = 12 if freq == "weekly" else 30
+    model_max_lag = 10 if freq == "weekly" else 14
     consolidated_models: List[Dict[str, object]] = []
     consolidated_pretests: List[Dict[str, object]] = []
     consolidated_diags: List[Dict[str, object]] = []
@@ -529,20 +532,19 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                     ("silpo_novus", "observed"): "combined_observed",
                     ("silpo_novus", "promo_controlled"): "combined_regular",
                 }[(retailer, promo)]
-                d = base_std[["date", "producer", "prozorro", retail_col, "combined_rule"]].rename(columns={retail_col: "retail"})
+                d = base_std[["date", "producer", "prozorro", retail_col]].rename(columns={retail_col: "retail"})
                 if freq == "weekly":
                     d = _weekly(d, ["producer", "prozorro", "retail"])
-                d = d.dropna(subset=["producer", "prozorro", "retail"]).sort_values("date")
-                insufficient_overlap = len(d) < 20
-
-                # Enforce identical sample by strict inner overlap in one frame
-                d = d[["date", "producer", "prozorro", "retail"]].dropna().copy()
+                else:
+                    d["date"] = pd.to_datetime(d["date"], errors="coerce")
+                d = d.dropna(subset=["date"]).sort_values("date")
+                d = d[["date", "producer", "prozorro", "retail"]].copy()
 
                 # Pre-tests
                 pt_rows = []
                 classes = {}
                 for sname in ["producer", "prozorro", "retail"]:
-                    st = _integration_class(d[sname])
+                    st = _integration_class(d[sname].dropna())
                     classes[sname] = st["integration_class"]
                     row = {"series": sname}
                     row.update(st)
@@ -558,11 +560,13 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                     ("prozorro", "retail", "prozorro_to_retail"),
                     ("producer", "retail", "producer_to_retail"),
                 ]:
+                    pair = d[["date", left, right]].dropna()
                     cp = np.nan
-                    try:
-                        cp = float(coint(_safe_log(d[left]).dropna(), _safe_log(d[right]).dropna())[1])
-                    except Exception:
-                        pass
+                    if len(pair) >= 24:
+                        try:
+                            cp = float(coint(_safe_log(pair[left]).dropna(), _safe_log(pair[right]).dropna())[1])
+                        except Exception:
+                            pass
                     pair_rows.append(
                         {
                             "series": pname,
@@ -575,6 +579,7 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                             "kpss_diff2_p": np.nan,
                             "stability_flag": np.nan,
                             "cointegration_p": cp,
+                            "pair_n_obs": int(len(pair)),
                             "standardized_type": std,
                             "retailer": retailer,
                             "promo_variant": promo,
@@ -583,16 +588,28 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                 pretests = pd.DataFrame(pt_rows + pair_rows)
 
                 any_i2 = any(v == "I(2)" for v in classes.values())
+                pair_obs = {
+                    str(r["series"]): int(r["pair_n_obs"])
+                    for _, r in pretests[pretests["integration_class"] == "pair"].iterrows()
+                }
+                min_main_pair = min(
+                    pair_obs.get("producer_to_prozorro", 0),
+                    pair_obs.get("prozorro_to_retail", 0),
+                )
+                insufficient_overlap = min_main_pair < 25
                 eligibility_note = (
                     "Rejected for ARDL/ECM due to I(2) presence."
                     if any_i2
                     else "Admissible for ARDL/ECM subject to cointegration and diagnostics."
                 )
                 if insufficient_overlap:
-                    eligibility_note = "Insufficient common sample after alignment; model outputs are placeholders."
+                    eligibility_note = (
+                        f"Low pair overlap in main chain links (min pair n_obs={min_main_pair}). "
+                        "Daily estimation kept; long-run identification may be weak."
+                    )
 
                 # Lag/correlation profile
-                lag_profile = _build_lag_profile(d, max_lag=max_lag)
+                lag_profile = _build_lag_profile(d, max_lag=lag_profile_max)
 
                 model_rows = []
                 diag_rows = []
@@ -600,15 +617,18 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                 nardl_mult = pd.DataFrame()
                 irf_df = pd.DataFrame()
 
-                if not any_i2 and not insufficient_overlap:
+                if not any_i2:
                     # Pair links in strict chain
                     for link, y, x in [
                         ("producer_to_prozorro", "prozorro", "producer"),
                         ("prozorro_to_retail", "retail", "prozorro"),
                     ]:
-                        logy = _safe_log(d[y])
-                        logx = _safe_log(d[x])
-                        ar = _fit_ardl_pair(logy, logx, max_lag=max_lag)
+                        pair = d[["date", y, x]].dropna()
+                        if len(pair) < 25:
+                            continue
+                        logy = _safe_log(pair[y])
+                        logx = _safe_log(pair[x])
+                        ar = _fit_ardl_pair(logy, logx, max_lag=model_max_lag)
                         if ar is not None:
                             ar.link = link
                             ar.y_series = y
@@ -628,7 +648,7 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                             )
 
                         both_i1 = classes.get(y) == "I(1)" and classes.get(x) == "I(1)"
-                        ec = _fit_ecm_pair(logy, logx, max_lag=max_lag) if both_i1 else None
+                        ec = _fit_ecm_pair(logy, logx, max_lag=model_max_lag) if both_i1 else None
                         if ec is not None and pd.notna(ec.ect_coef) and pd.notna(ec.ect_pvalue):
                             if not (ec.ect_coef < 0 and ec.ect_pvalue < 0.10):
                                 ec.model_status = "unreliable"
@@ -652,11 +672,11 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                                 }
                             )
                             ect_plot_df = pd.concat(
-                                [ect_plot_df, pd.DataFrame({"date": d["date"], "y": logy, "x": logx})],
+                                [ect_plot_df, pd.DataFrame({"date": pair["date"], "y": logy, "x": logx})],
                                 ignore_index=True,
                             )
 
-                        na = _fit_nardl_pair(logy, logx, max_lag=max_lag)
+                        na = _fit_nardl_pair(logy, logx, max_lag=model_max_lag)
                         if na is not None:
                             na_fit, na_mult = na
                             na_fit.link = link
@@ -679,17 +699,18 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                             na_mult["link"] = link
                             nardl_mult = pd.concat([nardl_mult, na_mult], ignore_index=True)
 
-                    # VECM only if all 3 are I(1)
+                    # VECM only if all 3 are I(1) and triple overlap exists
                     if all(classes.get(v) == "I(1)" for v in ["producer", "prozorro", "retail"]):
+                        d_trip = d[["date", "producer", "prozorro", "retail"]].dropna()
                         trip = pd.DataFrame(
                             {
-                                "producer": _safe_log(d["producer"]),
-                                "prozorro": _safe_log(d["prozorro"]),
-                                "retail": _safe_log(d["retail"]),
+                                "producer": _safe_log(d_trip["producer"]),
+                                "prozorro": _safe_log(d_trip["prozorro"]),
+                                "retail": _safe_log(d_trip["retail"]),
                             },
-                            index=d["date"],
+                            index=d_trip["date"],
                         ).dropna()
-                        vr = _fit_vecm_triplet(trip, max_lag=max_lag)
+                        vr = _fit_vecm_triplet(trip, max_lag=model_max_lag)
                         if vr is not None:
                             vf, irf = vr
                             dg = _resid_diag(vf.residuals if vf.residuals is not None else pd.Series(dtype=float))
@@ -794,6 +815,11 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                             "integration_producer": classes.get("producer"),
                             "integration_prozorro": classes.get("prozorro"),
                             "integration_retail": classes.get("retail"),
+                            "n_obs_producer": int(pd.to_numeric(d["producer"], errors="coerce").notna().sum()),
+                            "n_obs_prozorro": int(pd.to_numeric(d["prozorro"], errors="coerce").notna().sum()),
+                            "n_obs_retail": int(pd.to_numeric(d["retail"], errors="coerce").notna().sum()),
+                            "n_obs_pair_prod_prozorro": int(pair_obs.get("producer_to_prozorro", 0)),
+                            "n_obs_pair_prozorro_retail": int(pair_obs.get("prozorro_to_retail", 0)),
                             "any_i2": int(any_i2),
                             "eligibility_note": eligibility_note,
                         }
@@ -891,7 +917,8 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
                 "primary_chain_doc": PRIMARY_CHAIN_DOC,
                 "frequency_primary": freq,
                 "max_lag_weekly": 10,
-                "max_lag_daily": 30,
+                "max_lag_daily": 14,
+                "lag_profile_max_daily": 30,
                 "retail_series_rule": "silpo_price, novus_price, combined_price built per standardized_type",
                 "promo_policy": "observed and promo_controlled are estimated separately and flagged",
             }
@@ -931,7 +958,7 @@ def run_primary_chain_pipeline(freq: str = "weekly") -> Path:
 def _load_primary_consolidated() -> pd.DataFrame:
     p = common.OUTPUT_ROOT / "primary_chain_summary" / "primary_chain_consolidated.xlsx"
     if not p.exists():
-        run_primary_chain_pipeline(freq="weekly")
+        run_primary_chain_pipeline(freq="daily")
     if not p.exists():
         return pd.DataFrame()
     try:
@@ -943,8 +970,16 @@ def _load_primary_consolidated() -> pd.DataFrame:
 def run_primary_model_family_report(family: str) -> Path:
     cons_path = common.OUTPUT_ROOT / "primary_chain_summary" / "primary_chain_consolidated.xlsx"
     out_primary = common.get_output_dir("primary_chain_summary")
-    if not cons_path.exists():
-        out_primary = run_primary_chain_pipeline(freq="weekly")
+    rebuild = not cons_path.exists()
+    if not rebuild:
+        try:
+            rule = pd.read_excel(cons_path, sheet_name="Rule_Documentation")
+            freq = str(rule.get("frequency_primary", pd.Series([""])).iloc[0]).strip().lower()
+            rebuild = freq != "daily"
+        except Exception:
+            rebuild = True
+    if rebuild:
+        out_primary = run_primary_chain_pipeline(freq="daily")
     cons = _load_primary_consolidated()
     fam = cons[cons["model_family"] == family].copy() if not cons.empty else pd.DataFrame()
     module_name = f"model_{family.lower()}"
@@ -960,6 +995,206 @@ def run_primary_model_family_report(family: str) -> Path:
             f"source={out_primary / 'primary_chain_consolidated.xlsx'}",
         ],
         {f"{family}_Summary": fam},
+        [],
+    )
+    return out
+
+
+def run_synthetic_consumer_chain(freq: str = "daily") -> Path:
+    _, raw = common.load_raw()
+    cleaned = common.prepare_cleaned(raw)
+    base = _build_primary_inputs(cleaned)
+    if base.empty:
+        out = common.get_output_dir("secondary_synthetic_consumer")
+        common.write_tables_xlsx(out / "secondary_synthetic_consumer_output.xlsx", {"note": pd.DataFrame([{"note": "No base data"}])})
+        return out
+
+    cons = cleaned["ConsumerUA"].copy()
+    cons["consumer_price"] = pd.to_numeric(
+        cons.get("price_pchip_input", np.nan), errors="coerce"
+    ).fillna(pd.to_numeric(cons.get("price_linear_input", np.nan), errors="coerce")).fillna(
+        pd.to_numeric(cons.get("price", np.nan), errors="coerce")
+    )
+    cons = _median_series(cons, "consumer_price", ["date", "standardized_type"])
+
+    merged = base.merge(cons, on=["date", "standardized_type"], how="left")
+    merged["date"] = pd.to_datetime(merged["date"], errors="coerce")
+    merged = merged.dropna(subset=["date"]).sort_values(["standardized_type", "date"])
+
+    series_rows: List[Dict[str, object]] = []
+    model_rows: List[Dict[str, object]] = []
+    pre_rows: List[Dict[str, object]] = []
+    diag_rows: List[Dict[str, object]] = []
+    factor_rows: List[Dict[str, object]] = []
+
+    for std in sorted(merged["standardized_type"].dropna().unique().tolist()):
+        g0 = merged[merged["standardized_type"] == std].copy()
+        g0 = g0.dropna(subset=["prozorro"])
+        if g0.empty:
+            continue
+        dmin = g0["date"].min()
+        dmax = g0["date"].max()
+        idx = pd.DataFrame({"date": pd.date_range(dmin, dmax, freq="D")})
+        g = idx.merge(g0, on="date", how="left").sort_values("date")
+
+        # Calibrate retail to consumer scale on overlap.
+        f_sil = 1.0
+        ov_s = g[pd.to_numeric(g["consumer_price"], errors="coerce").notna() & pd.to_numeric(g["silpo_observed"], errors="coerce").notna()]
+        if len(ov_s) >= 10:
+            ratio = pd.to_numeric(ov_s["consumer_price"], errors="coerce") / pd.to_numeric(ov_s["silpo_observed"], errors="coerce").replace(0, np.nan)
+            med = float(ratio.replace([np.inf, -np.inf], np.nan).dropna().median()) if ratio.notna().any() else np.nan
+            if pd.notna(med) and med > 0:
+                f_sil = med
+        f_nov = 1.0
+        ov_n = g[pd.to_numeric(g["consumer_price"], errors="coerce").notna() & pd.to_numeric(g["novus_observed"], errors="coerce").notna()]
+        if len(ov_n) >= 10:
+            ratio = pd.to_numeric(ov_n["consumer_price"], errors="coerce") / pd.to_numeric(ov_n["novus_observed"], errors="coerce").replace(0, np.nan)
+            med = float(ratio.replace([np.inf, -np.inf], np.nan).dropna().median()) if ratio.notna().any() else np.nan
+            if pd.notna(med) and med > 0:
+                f_nov = med
+        g["silpo_scaled"] = pd.to_numeric(g["silpo_observed"], errors="coerce") * f_sil
+        g["novus_scaled"] = pd.to_numeric(g["novus_observed"], errors="coerce") * f_nov
+        g["combined_scaled"] = g[["silpo_scaled", "novus_scaled"]].median(axis=1, skipna=True)
+
+        cons_val = pd.to_numeric(g["consumer_price"], errors="coerce")
+        sil_val = pd.to_numeric(g["silpo_scaled"], errors="coerce")
+        nov_val = pd.to_numeric(g["novus_scaled"], errors="coerce")
+        w_cons = np.where(cons_val.notna(), 0.50, 0.0)
+        w_sil = np.where(sil_val.notna(), 0.25, 0.0)
+        w_nov = np.where(nov_val.notna(), 0.25, 0.0)
+        wsum = w_cons + w_sil + w_nov
+        g["ultimate_consumer_price"] = np.where(
+            wsum > 0,
+            (cons_val.fillna(0) * w_cons + sil_val.fillna(0) * w_sil + nov_val.fillna(0) * w_nov) / wsum,
+            np.nan,
+        )
+
+        factor_rows.append(
+            {
+                "standardized_type": std,
+                "silpo_scale_to_consumer": f_sil,
+                "novus_scale_to_consumer": f_nov,
+                "n_overlap_silpo_consumer": int(len(ov_s)),
+                "n_overlap_novus_consumer": int(len(ov_n)),
+                "period_start": dmin,
+                "period_end": dmax,
+            }
+        )
+
+        if freq == "weekly":
+            gw = _weekly(g[["date", "producer", "prozorro", "ultimate_consumer_price", "consumer_price", "combined_scaled"]], ["producer", "prozorro", "ultimate_consumer_price", "consumer_price", "combined_scaled"])
+        else:
+            gw = g[["date", "producer", "prozorro", "ultimate_consumer_price", "consumer_price", "combined_scaled"]].copy()
+
+        for sname in ["producer", "prozorro", "ultimate_consumer_price"]:
+            st = _integration_class(gw[sname].dropna())
+            row = {"standardized_type": std, "series": sname, "frequency": freq}
+            row.update(st)
+            pre_rows.append(row)
+
+        for link, y, x in [
+            ("producer_to_prozorro", "prozorro", "producer"),
+            ("prozorro_to_ultimate_consumer", "ultimate_consumer_price", "prozorro"),
+            ("producer_to_ultimate_consumer", "ultimate_consumer_price", "producer"),
+        ]:
+            pair = gw[["date", y, x]].dropna()
+            if len(pair) < 25:
+                continue
+            logy = _safe_log(pair[y])
+            logx = _safe_log(pair[x])
+            cls_y = _integration_class(pair[y].dropna())["integration_class"]
+            cls_x = _integration_class(pair[x].dropna())["integration_class"]
+            any_i2 = cls_y == "I(2)" or cls_x == "I(2)"
+            if any_i2:
+                continue
+
+            ar = _fit_ardl_pair(logy, logx, max_lag=(30 if freq == "daily" else 10))
+            if ar is not None:
+                ar.link = link
+                ar.y_series = y
+                ar.x_series = x
+                dg = _resid_diag(ar.residuals if ar.residuals is not None else pd.Series(dtype=float))
+                model_rows.append(
+                    {
+                        "standardized_type": std,
+                        "frequency": freq,
+                        "model_family": "ARDL",
+                        "link": link,
+                        "y_series": y,
+                        "x_series": x,
+                        "n_obs": ar.n_obs,
+                        "sr_coef": ar.sr_coef,
+                        "lr_coef": ar.lr_coef,
+                        "ect_coef": np.nan,
+                        "ect_pvalue": np.nan,
+                        "asymmetry_short_p": np.nan,
+                        "asymmetry_long_p": np.nan,
+                        "model_status": "unreliable" if dg["unreliable_flag"] else "ok",
+                        "notes": ar.notes,
+                    }
+                )
+                diag_rows.append({"standardized_type": std, "model_family": "ARDL", "link": link, **dg})
+
+            if cls_y == "I(1)" and cls_x == "I(1)":
+                ec = _fit_ecm_pair(logy, logx, max_lag=(30 if freq == "daily" else 10))
+                if ec is not None:
+                    dg = _resid_diag(ec.residuals if ec.residuals is not None else pd.Series(dtype=float))
+                    model_rows.append(
+                        {
+                            "standardized_type": std,
+                            "frequency": freq,
+                            "model_family": "ECM",
+                            "link": link,
+                            "y_series": y,
+                            "x_series": x,
+                            "n_obs": ec.n_obs,
+                            "sr_coef": ec.sr_coef,
+                            "lr_coef": ec.lr_coef,
+                            "ect_coef": ec.ect_coef,
+                            "ect_pvalue": ec.ect_pvalue,
+                            "asymmetry_short_p": np.nan,
+                            "asymmetry_long_p": np.nan,
+                            "model_status": "unreliable" if dg["unreliable_flag"] else "ok",
+                            "notes": ec.notes,
+                        }
+                    )
+                    diag_rows.append({"standardized_type": std, "model_family": "ECM", "link": link, **dg})
+
+        gg = gw.copy()
+        gg["standardized_type"] = std
+        series_rows.extend(gg.to_dict("records"))
+
+    out = common.get_output_dir("secondary_synthetic_consumer")
+    series_df = pd.DataFrame(series_rows)
+    models_df = pd.DataFrame(model_rows)
+    pre_df = pd.DataFrame(pre_rows)
+    diag_df = pd.DataFrame(diag_rows)
+    factors_df = pd.DataFrame(factor_rows)
+    common.write_tables_xlsx(
+        out / "secondary_synthetic_consumer_output.xlsx",
+        {
+            "SyntheticConsumer_Series": series_df,
+            "SyntheticConsumer_Models": models_df,
+            "SyntheticConsumer_PreTests": pre_df,
+            "SyntheticConsumer_ResidualDiag": diag_df,
+            "Scaling_Factors": factors_df,
+        },
+    )
+    common.save_pdf_report(
+        out / "secondary_synthetic_consumer_report.pdf",
+        "Secondary Module: Synthetic Ultimate Consumer (Silpo+Novus+ConsumerUA)",
+        [
+            "Built after primary chain models.",
+            "Coverage is restricted to each standardized_type ProZorro period.",
+            f"frequency={freq}",
+            f"series_rows={len(series_df)}",
+            f"model_rows={len(models_df)}",
+        ],
+        {
+            "SyntheticConsumer_Models": models_df,
+            "SyntheticConsumer_PreTests": pre_df,
+            "Scaling_Factors": factors_df,
+        },
         [],
     )
     return out

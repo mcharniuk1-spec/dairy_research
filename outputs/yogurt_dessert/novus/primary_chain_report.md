@@ -13,7 +13,7 @@
 - standardized_type=yogurt_dessert
 - retailer=novus
 - promo_variant=promo_controlled
-- frequency=weekly
+- frequency=daily
 - Primary chain is strictly ProducerUA -> ProZorro -> Retail. Retail is estimated separately for silpo, novus, and silpo_novus. Combined rule: daily median of available silpo and novus standardized_type prices.
 
 ## Tables
@@ -24,7 +24,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
 | prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
-| retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
+| retail | 8.355233551536037e-07 | 0.1 | 1.9926759427019733e-07 | 0.08531812929068235 | 0.005576273944668091 | 0.1 | I(0) | 0.0 | yogurt_dessert | novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
@@ -33,7 +33,7 @@
 
 | standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| yogurt_dessert | novus | promo_controlled | weekly | none | none | n/a | n/a | 0 | nan | nan | nan |
+| yogurt_dessert | novus | promo_controlled | daily | none | none | n/a | n/a | 59 | nan | nan | nan |
 
 ### ResidualDiagnostics
 
@@ -43,7 +43,33 @@
 
 ### SeriesUsed
 
-_No rows_
+| date | producer | prozorro | retail | standardized_type | retailer | promo_variant | combined_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2025-10-21 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-22 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-23 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-24 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-25 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-26 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-27 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-28 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-29 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-30 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-10-31 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-01 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-02 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-03 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-04 00:00:00 | nan | nan | 48.99 | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-05 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-06 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-07 00:00:00 | nan | nan | 39.99 | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-08 00:00:00 | nan | nan | 48.99 | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-09 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-10 00:00:00 | nan | nan | 42.99 | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-11 00:00:00 | nan | nan | 38.79 | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-12 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-13 00:00:00 | nan | nan | nan | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
+| 2025-11-14 00:00:00 | nan | nan | 39.99 | yogurt_dessert | novus | promo_controlled | daily_median_of_available_silpo_novus |
 
 ### LagProfile
 
@@ -51,9 +77,9 @@ _No rows_
 
 ### ModelEligibility
 
-| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | any_i2 | eligibility_note |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| yogurt_dessert | novus | promo_controlled | weekly | ambiguous | ambiguous | ambiguous | 0 | Insufficient common sample after alignment; model outputs are placeholders. |
+| standardized_type | retailer | promo_variant | frequency | integration_producer | integration_prozorro | integration_retail | n_obs_producer | n_obs_prozorro | n_obs_retail | n_obs_pair_prod_prozorro | n_obs_pair_prozorro_retail |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| yogurt_dessert | novus | promo_controlled | daily | ambiguous | ambiguous | I(0) | 0 | 0 | 26 | 0 | 0 |
 
 ### NARDL_Multipliers
 

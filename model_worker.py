@@ -185,7 +185,7 @@ def run_discounts() -> Path:
     # so ConsumerUA/EU/CME are not used here.
     cons_path = common.OUTPUT_ROOT / "primary_chain_summary" / "primary_chain_consolidated.xlsx"
     if not cons_path.exists():
-        vpt.run_primary_chain_pipeline(freq="weekly")
+        vpt.run_primary_chain_pipeline(freq="daily")
     cons = pd.read_excel(cons_path, sheet_name="Consolidated_ModelCoefficients") if cons_path.exists() else pd.DataFrame()
 
     base = cons[
@@ -213,14 +213,14 @@ def run_discounts() -> Path:
         occ = pd.DataFrame(
             {
                 "standardized_type": m["standardized_type"],
-                "promo_signal": np.where(m["delta_promo_control"].abs() > 0.02, 1, 0),
+                "promo_signal": np.where((m["sr_coef_reg"] - m["sr_coef_obs"]).abs() > 0.02, 1, 0),
                 "definition": "1 if |promo-controlled - observed| > 0.02",
             }
         )
         depth = pd.DataFrame(
             {
                 "standardized_type": m["standardized_type"],
-                "promo_depth_proxy": m["delta_promo_control"].abs(),
+                "promo_depth_proxy": (m["sr_coef_reg"] - m["sr_coef_obs"]).abs(),
                 "definition": "absolute difference between promo-controlled and observed SR coefficients",
             }
         )
@@ -232,15 +232,15 @@ def run_discounts() -> Path:
     img1 = _coef_bar(
         trans,
         "standardized_type",
-        "delta_Producer",
-        "Promo-Controlled Delta Producer Pass-through",
+        "delta_promo_control",
+        "Promo-Controlled Delta Pass-through",
         out_dir / "discount_delta_producer.png",
     )
     img2 = _coef_bar(
         trans,
         "standardized_type",
-        "delta_EU",
-        "Promo-Controlled Delta EU Pass-through",
+        "coef_promo_controlled",
+        "Promo-Controlled Pass-through Coefficient",
         out_dir / "discount_delta_eu.png",
     )
     xlsx = out_dir / "model_discounts_output.xlsx"
@@ -274,7 +274,7 @@ def run_discounts() -> Path:
 
 
 def run_short_chain_regional() -> Path:
-    out_dir = vpt.run_primary_chain_pipeline(freq="weekly")
+    out_dir = vpt.run_primary_chain_pipeline(freq="daily")
     common.print_block(
         "MODEL SHORT/CHAIN/REGIONAL",
         [
@@ -862,6 +862,18 @@ def run_forecast_knn_synthetic() -> Path:
     return out_dir
 
 
+def run_secondary_synthetic_consumer() -> Path:
+    out_dir = vpt.run_synthetic_consumer_chain(freq="daily")
+    common.print_block(
+        "MODEL SECONDARY SYNTHETIC CONSUMER",
+        [
+            f"output_dir: {out_dir}",
+            "Built after primary chain models using Silpo+Novus+ConsumerUA over ProZorro coverage.",
+        ],
+    )
+    return out_dir
+
+
 if __name__ == "__main__":
     run_ardl()
     run_ecm()
@@ -871,3 +883,4 @@ if __name__ == "__main__":
     run_short_chain_regional()
     run_intersection_bidirectional()
     run_forecast_knn_synthetic()
+    run_secondary_synthetic_consumer()

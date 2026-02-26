@@ -333,7 +333,7 @@ def _write_total_md(total_md: Path, table_records: List[Dict[str, object]], inde
         lines.append(f"- Rows: {len(df)}")
         lines.append(f"- Cols: {len(df.columns)}")
         lines.append("")
-        md_hard_cap = 1200
+        md_hard_cap = 200
         dmd = df.copy()
         md_truncated = False
         if len(dmd) > md_hard_cap:
