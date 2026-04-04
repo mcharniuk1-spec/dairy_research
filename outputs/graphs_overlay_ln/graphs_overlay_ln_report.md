@@ -10,7 +10,7 @@
 - For retail transmission, compare no-promo vs promo-controlled estimates.
 
 ## Notes
-- before_after_series=38
+- before_after_series=36
 - overlay_products=9
 - Interpretation option: compare trend shifts and cross-layer alignment windows.
 
@@ -20,41 +20,38 @@
 
 | source | product | standardized_type | sheet_name |
 | --- | --- | --- | --- |
-| CME | Молоко питне | milk | BeforeAfterLN_CME_Молоко_питне |
+| CME | Інше/невідомо | other | BeforeAfterLN_CME_Інше_невідомо |
 | ConsumerUA | Молоко питне | milk | BeforeAfterLN_ConsumerUA_М_f9b2 |
 | ConsumerUA | Сир твердий | hard_cheese | BeforeAfterLN_ConsumerUA_С_5f55 |
 | ConsumerUA | Сметана | sour_cream | BeforeAfterLN_ConsumerUA_С_301e |
-| EU | Інше/невідомо | milk | BeforeAfterLN_EU_Інше_невідомо |
 | EU | Інше/невідомо | other | BeforeAfterLN_EU_Інше_невідомо |
 | EU | Вершки | cream | BeforeAfterLN_EU_Вершки |
 | EU | Масло вершкове | butter | BeforeAfterLN_EU_Масло_вершкове |
 | EU | Молоко питне | milk | BeforeAfterLN_EU_Молоко_питне |
 | EU | Сир твердий | hard_cheese | BeforeAfterLN_EU_Сир_твердий |
+| FarmGateUA_filled | Інше/невідомо | other | BeforeAfterLN_FarmGateUA_f_5d75 |
+| FarmGateUA_initial | Інше/невідомо | other | BeforeAfterLN_FarmGateUA_i_d240 |
 | Novus | Вершки | cream | BeforeAfterLN_Novus_Вершки |
 | Novus | Йогурт | yogurt_dessert | BeforeAfterLN_Novus_Йогурт |
-| Novus | Масло вершкове | butter | BeforeAfterLN_Novus_Масло__4a24 |
 | Novus | Молоко питне | milk | BeforeAfterLN_Novus_Молоко_a46c |
 | Novus | Сир кисломолочний | cottage_cheese | BeforeAfterLN_Novus_Сир_ки_9b86 |
 | Novus | Сир твердий | hard_cheese | BeforeAfterLN_Novus_Сир_твердий |
 | Novus | Сметана | sour_cream | BeforeAfterLN_Novus_Сметана |
 | ProZorro | Інше/невідомо | other | BeforeAfterLN_ProZorro_Інш_6ed0 |
 | ProZorro | Вершки | cream | BeforeAfterLN_ProZorro_Вершки |
-| ProZorro | Масло вершкове | butter | BeforeAfterLN_ProZorro_Мас_8043 |
 | ProZorro | Молоко питне | milk | BeforeAfterLN_ProZorro_Мол_d696 |
 | ProZorro | Сир кисломолочний | cottage_cheese | BeforeAfterLN_ProZorro_Сир_fdf5 |
 | ProZorro | Сир твердий | hard_cheese | BeforeAfterLN_ProZorro_Сир_2060 |
 | ProZorro | Сметана | sour_cream | BeforeAfterLN_ProZorro_Сметана |
 | ProducerUA | Вершки | cream | BeforeAfterLN_ProducerUA_Вершки |
+| ProducerUA | Кефір | milk | BeforeAfterLN_ProducerUA_Кефір |
 
 ### Overlay_Index
 
 | product | standardized_type | window | sheet_name |
 | --- | --- | --- | --- |
-| Інше/невідомо | milk | intersection | Charts_Overlay_Інше_невідо_4357 |
 | Інше/невідомо | other | intersection | Charts_Overlay_Інше_невідо_4357 |
-| Інше/невідомо | yogurt_dessert | intersection | Charts_Overlay_Інше_невідо_4357 |
 | Вершки | cream | intersection | Charts_Overlay_Вершки_inte_0e98 |
-| Йогурт | milk | intersection | Charts_Overlay_Йогурт_inte_2711 |
 | Йогурт | yogurt_dessert | intersection | Charts_Overlay_Йогурт_inte_2711 |
 | Кефір | milk | intersection | Charts_Overlay_Кефір_inter_f01a |
 | Масло вершкове | butter | intersection | Charts_Overlay_Масло_вершк_d742 |

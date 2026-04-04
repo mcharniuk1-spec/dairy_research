@@ -2,6 +2,7 @@
 
 .idea/
 __pycache__/
+.venv/
 
 # large local bundles
 graphics.zip

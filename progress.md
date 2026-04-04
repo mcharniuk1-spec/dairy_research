@@ -1,15 +1,26 @@
-Original prompt: Build a classic Snake game in this repo.
+# RW4 Upgrade Progress
 
-- Detected no existing frontend framework/routes in repository; implementing a standalone minimal web page under snake/.
-- Constraint: no new dependencies.
-- Plan: pure deterministic logic module + minimal UI + lightweight Node tests.
+Latest implementation pass:
 
-- Implemented standalone Snake web app files:
-  - snake/index.html
-  - snake/styles.css
-  - snake/app.js
-  - snake/gameLogic.mjs
-- Added Node built-in tests in tests/snake.test.mjs for movement, reverse-input guard, growth, wall/self collision, food placement.
+- moved active pipeline orchestration to `run_all_rw4.py`,
+- updated `run_total_run.py` to use RW4,
+- fixed repo-root data loading so the nested repo uses its own workbooks,
+- added auditable product mapping in `product_dictionary.csv`,
+- added `rw4_data.py` for:
+  - farm-gate workbook loading,
+  - unit admissibility,
+  - retail baseline reconstruction,
+  - promo-state enrichment,
+  - mapping audit,
+  - reconstruction diagnostics,
+- upgraded `vpt_primary_chain.py` to:
+  - include `FarmGateUA_initial` and `FarmGateUA_filled`,
+  - run both `linear` and `pchip` upstream variants,
+  - estimate forward and reverse-flow links,
+  - produce RW4 robustness and benchmark tables,
+- upgraded `model_worker.py` discount module to output promo-state incidence/type/depth plus synthesis tables,
+- updated `README.md` for RW4.
 
-- Ran tests: `node --test tests/snake.test.mjs` (6/6 pass).
-- Attempted Playwright skill client run; blocked because `playwright` package is not installed in this repo/environment.
+Remaining validation task:
+
+- run `python3 run_total_run.py` end to end in the local virtualenv and inspect any runtime/model admissibility issues that still need tuning.

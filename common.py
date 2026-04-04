@@ -21,17 +21,35 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
-if str(ROOT_DIR) not in sys.path:
-    sys.path.insert(0, str(ROOT_DIR))
+PROJECT_DIR = Path(__file__).resolve().parent
+if str(PROJECT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_DIR))
 
 import rw2_extended_mapping_pipeline as rw2
+import rw4_data
 
-INPUT_XLSX = ROOT_DIR / "full_uah.xlsx"
+INPUT_XLSX = PROJECT_DIR / "full_uah.xlsx"
 OUTPUT_ROOT = Path(__file__).resolve().parent / "outputs"
 OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 
-SOURCE_ORDER = ["ProducerUA", "ConsumerUA", "EU", "ProZorro", "Silpo", "Novus", "CME"]
+SOURCE_ORDER = [
+    "FarmGateUA_initial",
+    "FarmGateUA_filled",
+    "ProducerUA",
+    "ConsumerUA",
+    "EU",
+    "ProZorro",
+    "Silpo",
+    "Novus",
+    "CME",
+]
+_RAW_CACHE: Tuple[Path, Dict[str, pd.DataFrame]] | None = None
+_CLEANED_CACHE: Dict[str, pd.DataFrame] | None = None
+_ALL_DAILY_CACHE: pd.DataFrame | None = None
+
+
+def _copy_frame_map(frame_map: Dict[str, pd.DataFrame]) -> Dict[str, pd.DataFrame]:
+    return {k: v.copy() for k, v in frame_map.items()}
 
 
 def get_output_dir(name: str) -> Path:
@@ -41,7 +59,11 @@ def get_output_dir(name: str) -> Path:
 
 
 def load_raw() -> Tuple[Path, Dict[str, pd.DataFrame]]:
-    wb = rw2.discover_input_workbook(ROOT_DIR, INPUT_XLSX)
+    global _RAW_CACHE
+    if _RAW_CACHE is not None:
+        wb_cached, raw_cached = _RAW_CACHE
+        return wb_cached, _copy_frame_map(raw_cached)
+    wb = rw2.discover_input_workbook(PROJECT_DIR, INPUT_XLSX)
     xls = pd.ExcelFile(wb)
     raw = {
         "ProducerUA": rw2.read_sheet_or_empty(xls, "Producer_UA"),
@@ -52,11 +74,18 @@ def load_raw() -> Tuple[Path, Dict[str, pd.DataFrame]]:
         "Novus": rw2.read_sheet_or_empty(xls, "Novus"),
         "CME": rw2.read_sheet_or_empty(xls, "CME III"),
     }
-    return wb, raw
+    raw.update(rw4_data.load_farm_gate_sources())
+    _RAW_CACHE = (wb, _copy_frame_map(raw))
+    return wb, _copy_frame_map(raw)
 
 
 def prepare_cleaned(raw: Dict[str, pd.DataFrame]) -> Dict[str, pd.DataFrame]:
+    global _CLEANED_CACHE
+    if _CLEANED_CACHE is not None:
+        return _copy_frame_map(_CLEANED_CACHE)
     cleaned = {
+        "FarmGateUA_initial": rw4_data.prep_farm_gate(raw["FarmGateUA_initial"], "FarmGateUA_initial"),
+        "FarmGateUA_filled": rw4_data.prep_farm_gate(raw["FarmGateUA_filled"], "FarmGateUA_filled"),
         "ProducerUA": rw2.ensure_numeric_price(rw2.prep_producer_consumer(raw["ProducerUA"], "ProducerUA")),
         "ConsumerUA": rw2.ensure_numeric_price(rw2.prep_producer_consumer(raw["ConsumerUA"], "ConsumerUA")),
         "EU": rw2.ensure_numeric_price(rw2.prep_eu(raw["EU"])),
@@ -65,29 +94,32 @@ def prepare_cleaned(raw: Dict[str, pd.DataFrame]) -> Dict[str, pd.DataFrame]:
         "Novus": rw2.ensure_numeric_price(rw2.prep_retail(raw["Novus"], "Novus")),
         "CME": rw2.ensure_numeric_price(rw2.prep_cme(raw["CME"])),
     }
+    cleaned = rw4_data.harmonize_cleaned(cleaned)
+
     # Additional UAH-native derived fields used downstream.
     pz = cleaned["ProZorro"]
     if not pz.empty:
-        pz["prozorro_unit_price_uah"] = pd.to_numeric(pz["price"], errors="coerce")
+        pz["prozorro_unit_price_uah"] = pd.to_numeric(pz.get("observed_price", pz.get("price")), errors="coerce")
         pz["savings_rate"] = (
             pd.to_numeric(pz.get("expected"), errors="coerce") - pd.to_numeric(pz.get("sum_current"), errors="coerce")
         ) / pd.to_numeric(pz.get("expected"), errors="coerce").replace(0, np.nan)
         cleaned["ProZorro"] = pz
 
-    sil = cleaned["Silpo"]
-    if not sil.empty:
-        sil["baseline_price"] = np.where(
-            pd.to_numeric(sil.get("price_old"), errors="coerce").notna()
-            & (pd.to_numeric(sil.get("price_old"), errors="coerce") > 0)
-            & (pd.to_numeric(sil.get("price_current"), errors="coerce") < pd.to_numeric(sil.get("price_old"), errors="coerce")),
-            pd.to_numeric(sil.get("price_old"), errors="coerce"),
-            pd.to_numeric(sil.get("price_current"), errors="coerce"),
-        )
-        cleaned["Silpo"] = sil
-    return cleaned
+    for retail_source in ["Silpo", "Novus"]:
+        retail = cleaned[retail_source]
+        if retail.empty:
+            continue
+        retail["real_price_after_discount"] = pd.to_numeric(retail.get("observed_price"), errors="coerce")
+        retail["regular_price_without_discount"] = pd.to_numeric(retail.get("baseline_price"), errors="coerce")
+        cleaned[retail_source] = retail
+    _CLEANED_CACHE = _copy_frame_map(cleaned)
+    return _copy_frame_map(cleaned)
 
 
 def build_all_daily(cleaned: Dict[str, pd.DataFrame]) -> pd.DataFrame:
+    global _ALL_DAILY_CACHE
+    if _ALL_DAILY_CACHE is not None:
+        return _ALL_DAILY_CACHE.copy()
     parts: List[pd.DataFrame] = []
     for src in SOURCE_ORDER:
         df = cleaned.get(src, pd.DataFrame())
@@ -100,13 +132,15 @@ def build_all_daily(cleaned: Dict[str, pd.DataFrame]) -> pd.DataFrame:
     if all_daily.empty:
         return all_daily
     all_daily, _ = rw2.winsorize_daily_variants(all_daily, lower_q=0.01, upper_q=0.99)
+    _ALL_DAILY_CACHE = all_daily.copy()
     return all_daily
 
 
 def build_model_inputs(cleaned: Dict[str, pd.DataFrame], all_daily: pd.DataFrame):
     weekly_all = rw2.prepare_weekly_for_tests(all_daily)
     tests = rw2.build_tests_table(weekly_all, min_obs=24)
-    weekly_level = rw2.prepare_weekly_for_tests(all_daily[all_daily["unit_ok"] == 1].copy()) if not all_daily.empty else pd.DataFrame()
+    level_mask = pd.to_numeric(all_daily.get("admissible_for_level_model", all_daily.get("unit_ok")), errors="coerce").fillna(0).eq(1)
+    weekly_level = rw2.prepare_weekly_for_tests(all_daily[level_mask].copy()) if not all_daily.empty else pd.DataFrame()
     model_series = rw2.build_model_series(weekly_level)
     return tests, weekly_level, model_series
 

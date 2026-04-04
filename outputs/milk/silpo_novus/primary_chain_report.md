@@ -22,9 +22,9 @@
 
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| producer | 0.012483062457831949 | 0.01 | 4.729732285866721e-13 | 0.1 | 1.068911264269411e-21 | 0.1 | I(1) | 1.0 | milk | silpo_novus | promo_controlled |
-| prozorro | 0.0014111002754477221 | 0.01 | 3.8189780115701814e-13 | 0.1 | 4.4125656034645e-11 | 0.1 | I(1) | 0.0 | milk | silpo_novus | promo_controlled |
-| retail | 0.9135252706786217 | 0.08526130462523543 | 0.1118185172729621 | 0.1 | 0.0034682897791077313 | 0.1 | I(2) | 0.0 | milk | silpo_novus | promo_controlled |
+| producer | 0.012483062457844212 | 0.01 | 4.729732285868142e-13 | 0.1 | 1.068911264269473e-21 | 0.1 | I(1) | 1.0 | milk | silpo_novus | promo_controlled |
+| prozorro | 0.0014111002754477221 | 0.01 | 3.8189780115708437e-13 | 0.1 | 4.4125656034640205e-11 | 0.1 | I(1) | 0.0 | milk | silpo_novus | promo_controlled |
+| retail | 0.9135252706786217 | 0.08526130462523543 | 0.11181851727296371 | 0.1 | 0.003468289779107594 | 0.1 | I(2) | 0.0 | milk | silpo_novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo_novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo_novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo_novus | promo_controlled |

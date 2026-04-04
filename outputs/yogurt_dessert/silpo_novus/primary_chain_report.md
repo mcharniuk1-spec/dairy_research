@@ -24,7 +24,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
 | prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
-| retail | 5.695496839419695e-10 | 0.1 | 1.468661222075579e-08 | 0.1 | 1.0051134444285687e-05 | 0.1 | I(0) | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
+| retail | 5.695496839419695e-10 | 0.1 | 1.468661222075579e-08 | 0.1 | 1.0051134444286422e-05 | 0.1 | I(0) | 0.0 | yogurt_dessert | silpo_novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo_novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo_novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | silpo_novus | promo_controlled |

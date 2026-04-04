@@ -22,9 +22,9 @@
 
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| producer | 3.1663521310609106e-05 | 0.01 | 1.807358615624225e-13 | 0.1 | 2.250471045105603e-20 | 0.1 | I(1) | 1.0 | cream | silpo_novus | promo_controlled |
-| prozorro | 5.15934840442518e-22 | 0.1 | 3.6046356335359884e-13 | 0.1 | 1.1693001750830719e-11 | 0.09309066682789993 | I(0) | 0.0 | cream | silpo_novus | promo_controlled |
-| retail | 0.9973149052836614 | 0.02241119506040381 | 0.062198401623127224 | 0.1 | 9.358690774180871e-07 | 0.1 | I(2) | 0.0 | cream | silpo_novus | promo_controlled |
+| producer | 3.1663521310585864e-05 | 0.01 | 1.8073586156223283e-13 | 0.1 | 2.2504710451060718e-20 | 0.1 | I(1) | 1.0 | cream | silpo_novus | promo_controlled |
+| prozorro | 5.15934840442518e-22 | 0.1 | 3.604635633536289e-13 | 0.1 | 1.1693001750824993e-11 | 0.09309066682789993 | I(0) | 0.0 | cream | silpo_novus | promo_controlled |
+| retail | 0.9973149052836614 | 0.02241119506040381 | 0.06219840162312693 | 0.1 | 9.358690774186149e-07 | 0.1 | I(2) | 0.0 | cream | silpo_novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo_novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo_novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cream | silpo_novus | promo_controlled |

@@ -22,9 +22,9 @@
 
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| producer | 0.0016491839418000672 | 0.01 | 1.66813437649029e-12 | 0.1 | 4.160589056408487e-21 | 0.1 | I(1) | 1.0 | hard_cheese | silpo_novus | promo_controlled |
-| prozorro | 2.633366148124232e-10 | 0.08893253878307611 | 1.5324738060670524e-08 | 0.1 | 1.1965567303232429e-10 | 0.04166666666668085 | I(0) | 0.0 | hard_cheese | silpo_novus | promo_controlled |
-| retail | 0.00963902009133378 | 0.1 | 1.9158401072775886e-24 | 0.1 | 0.0012553169947406746 | 0.1 | I(0) | 0.0 | hard_cheese | silpo_novus | promo_controlled |
+| producer | 0.0016491839417993707 | 0.01 | 1.6681343764911542e-12 | 0.1 | 4.160589056408666e-21 | 0.1 | I(1) | 1.0 | hard_cheese | silpo_novus | promo_controlled |
+| prozorro | 2.633366148124232e-10 | 0.08893253878307611 | 1.532473806066898e-08 | 0.1 | 1.196556730322677e-10 | 0.04166666666668085 | I(0) | 0.0 | hard_cheese | silpo_novus | promo_controlled |
+| retail | 0.009639020091333756 | 0.1 | 1.9158401072775886e-24 | 0.1 | 0.0012553169947406174 | 0.1 | I(0) | 0.0 | hard_cheese | silpo_novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo_novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo_novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | hard_cheese | silpo_novus | promo_controlled |
@@ -33,17 +33,17 @@
 
 | standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| hard_cheese | silpo_novus | promo_controlled | daily | producer_to_prozorro | NARDL | prozorro | producer | 187 | -1.901684280673745 | 0.31953965595429906 | -0.703887241265392 |
-| hard_cheese | silpo_novus | promo_controlled | daily | prozorro_to_retail | ARDL | retail | prozorro | 49 | -1.3314737468808624 | -3.3232402194259745 | nan |
-| hard_cheese | silpo_novus | promo_controlled | daily | prozorro_to_retail | NARDL | retail | prozorro | 47 | -0.286917649947797 | -7.00476787473343 | -0.5857286396943655 |
+| hard_cheese | silpo_novus | promo_controlled | daily | producer_to_prozorro | NARDL | prozorro | producer | 187 | -1.9016842806737577 | 0.31953965595429923 | -0.7038872412653931 |
+| hard_cheese | silpo_novus | promo_controlled | daily | prozorro_to_retail | ARDL | retail | prozorro | 49 | -1.3314737468808606 | -3.323240219425985 | nan |
+| hard_cheese | silpo_novus | promo_controlled | daily | prozorro_to_retail | NARDL | retail | prozorro | 47 | -0.28691764994779967 | -7.004767874733442 | -0.585728639694365 |
 
 ### ResidualDiagnostics
 
 | model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| NARDL | producer_to_prozorro | prozorro | producer | 0.30453926702142564 | 0.2688968463348229 | 0.05424410826903407 | 0 |
-| ARDL | prozorro_to_retail | retail | prozorro | 0.8676166313512811 | 0.46209891936694814 | 0.2508240957204422 | 0 |
-| NARDL | prozorro_to_retail | retail | prozorro | 0.9705702295552536 | 0.49641237836935825 | 0.15198175860587926 | 0 |
+| NARDL | producer_to_prozorro | prozorro | producer | 0.30453926702142525 | 0.2688968463348201 | 0.05424410826903467 | 0 |
+| ARDL | prozorro_to_retail | retail | prozorro | 0.8676166313512658 | 0.4620989193667864 | 0.25082409572050557 | 0 |
+| NARDL | prozorro_to_retail | retail | prozorro | 0.9705702295552534 | 0.49641237836935637 | 0.15198175860588 | 0 |
 
 ### SeriesUsed
 
@@ -115,31 +115,31 @@
 
 | horizon | mult_pos | mult_neg | link |
 | --- | --- | --- | --- |
-| 0 | -1.8528869181133178 | 0.048797362560427326 | producer_to_prozorro |
-| 1 | -1.5201163099464203 | 0.04003356383238164 | producer_to_prozorro |
-| 2 | -1.5798804955409318 | 0.04160750480205159 | producer_to_prozorro |
-| 3 | -1.5691471020496899 | 0.04132483169956718 | producer_to_prozorro |
-| 4 | -1.5710747738600193 | 0.04137559858625983 | producer_to_prozorro |
-| 5 | -1.5707285722033513 | 0.041366481069376154 | producer_to_prozorro |
-| 6 | -1.5707907485481198 | 0.041368118536621826 | producer_to_prozorro |
-| 7 | -1.5707795819411023 | 0.04136782445447042 | producer_to_prozorro |
-| 8 | -1.570781587416219 | 0.04136787727037376 | producer_to_prozorro |
-| 9 | -1.5707812272414197 | 0.041367867784862206 | producer_to_prozorro |
-| 10 | -1.5707812919272812 | 0.04136786948841973 | producer_to_prozorro |
-| 11 | -1.5707812803099759 | 0.04136786918246804 | producer_to_prozorro |
-| 12 | -1.5707812823963945 | 0.041367869237415665 | producer_to_prozorro |
-| 13 | -1.5707812820216824 | 0.04136786922754731 | producer_to_prozorro |
-| 14 | -1.5707812820889793 | 0.04136786922931962 | producer_to_prozorro |
-| 15 | -1.570781282076893 | 0.04136786922900132 | producer_to_prozorro |
-| 16 | -1.5707812820790636 | 0.04136786922905849 | producer_to_prozorro |
-| 17 | -1.5707812820786737 | 0.04136786922904822 | producer_to_prozorro |
-| 18 | -1.5707812820787437 | 0.041367869229050065 | producer_to_prozorro |
-| 19 | -1.5707812820787312 | 0.04136786922904973 | producer_to_prozorro |
-| 20 | -1.5707812820787335 | 0.041367869229049795 | producer_to_prozorro |
-| 0 | 1.5649515421229236 | 1.8518691920707206 | prozorro_to_retail |
-| 1 | 1.0255407965328427 | 1.2135630754001092 | prozorro_to_retail |
-| 2 | 1.2114660118678442 | 1.4335757524961257 | prozorro_to_retail |
-| 3 | 1.1473809227590772 | 1.357741326319171 | prozorro_to_retail |
+| 0 | -1.8528869181133245 | 0.04879736256043321 | producer_to_prozorro |
+| 1 | -1.5201163099464257 | 0.04003356383238646 | producer_to_prozorro |
+| 2 | -1.5798804955409376 | 0.041607504802056605 | producer_to_prozorro |
+| 3 | -1.5691471020496954 | 0.041324831699572157 | producer_to_prozorro |
+| 4 | -1.5710747738600248 | 0.04137559858626482 | producer_to_prozorro |
+| 5 | -1.5707285722033568 | 0.041366481069381136 | producer_to_prozorro |
+| 6 | -1.5707907485481254 | 0.041368118536626815 | producer_to_prozorro |
+| 7 | -1.570779581941108 | 0.041367824454475406 | producer_to_prozorro |
+| 8 | -1.5707815874162248 | 0.04136787727037875 | producer_to_prozorro |
+| 9 | -1.5707812272414252 | 0.04136786778486719 | producer_to_prozorro |
+| 10 | -1.570781291927287 | 0.04136786948842472 | producer_to_prozorro |
+| 11 | -1.5707812803099812 | 0.04136786918247303 | producer_to_prozorro |
+| 12 | -1.5707812823964 | 0.041367869237420654 | producer_to_prozorro |
+| 13 | -1.570781282021688 | 0.04136786922755229 | producer_to_prozorro |
+| 14 | -1.5707812820889848 | 0.04136786922932461 | producer_to_prozorro |
+| 15 | -1.5707812820768985 | 0.04136786922900631 | producer_to_prozorro |
+| 16 | -1.5707812820790692 | 0.04136786922906347 | producer_to_prozorro |
+| 17 | -1.5707812820786793 | 0.04136786922905321 | producer_to_prozorro |
+| 18 | -1.5707812820787495 | 0.04136786922905505 | producer_to_prozorro |
+| 19 | -1.5707812820787368 | 0.04136786922905472 | producer_to_prozorro |
+| 20 | -1.570781282078739 | 0.04136786922905478 | producer_to_prozorro |
+| 0 | 1.56495154212292 | 1.8518691920707198 | prozorro_to_retail |
+| 1 | 1.02554079653284 | 1.213563075400108 | prozorro_to_retail |
+| 2 | 1.2114660118678413 | 1.4335757524961248 | prozorro_to_retail |
+| 3 | 1.1473809227590746 | 1.3577413263191702 | prozorro_to_retail |
 
 ### VECM_IRF
 

@@ -10,6 +10,8 @@ import common
 import rw2_extended_mapping_pipeline as rw2
 
 SHEET_CONFIG: Dict[str, Dict[str, str]] = {
+    "FarmGateUA_initial": {"raw_sheet": "farm_gate_daily.xlsx (daily_lin + daily_PCHIP)", "value_col": "price"},
+    "FarmGateUA_filled": {"raw_sheet": "farm_gate_all_missing_filled_daily.xlsx (daily_lin + daily_PCHIP)", "value_col": "price"},
     "ProducerUA": {"raw_sheet": "Producer_UA", "value_col": "price"},
     "ConsumerUA": {"raw_sheet": "Consumer_UA", "value_col": "price"},
     "EU": {"raw_sheet": "Europe", "value_col": "price"},
@@ -47,6 +49,10 @@ def run_sheet_module(source: str) -> Path:
     images = common.plot_basic_set(clean, module_dir, f"sheet_{source.lower()}", value_col=value_col)
 
     # Additional source-specific charts
+    if source.startswith("FarmGateUA") and "region" in clean.columns:
+        p = module_dir / f"sheet_{source.lower()}_region_trends.png"
+        common._plot_timeseries(clean, "date", "price", "region", f"{source}: Farm-Gate Region Trends", p, max_groups=10)
+        images.append(p)
     if source == "ProZorro" and "region" in clean.columns:
         p = module_dir / "sheet_prozorro_region_trends.png"
         common._plot_timeseries(clean, "date", "price", "region", "ProZorro: Region Unit Price Trends", p, max_groups=8)
@@ -83,7 +89,7 @@ def run_sheet_module(source: str) -> Path:
     pdf = module_dir / f"sheet_{source.lower()}_report.pdf"
     common.save_pdf_report(
         pdf,
-        title=f"RW3 Separate Sheet Module - {source}",
+        title=f"RW4 Sheet Module - {source}",
         text_lines=text,
         table_map={
             "clean": clean,

@@ -1,197 +1,107 @@
-# RW3 Separate Modular Pipeline (UAH-only)
+# RW4 Dairy Price Transmission Pipeline
 
-This folder contains the split RW3 pipeline for vertical price transmission (VPT) in dairy products.
-Analysis is product-first, supports brand and region layers, estimates two-direction influence, controls discounts, and reports correlations across sources.
-Every module report is written in both `PDF` and `MD`.
+This repository now runs the RW4 vertical price transmission workflow directly from the nested project root:
 
-Code root:
-- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3`
+- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research`
 
-Input workbook:
-- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/full_uah.xlsx`
+RW4 extends the earlier modular workflow with:
 
-Output root:
-- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs`
+- two alternative farm-gate reconstruction workbooks,
+- explicit `linear` and `pchip` upstream variants,
+- stricter unit admissibility for level/cointegration models,
+- a four-stage domestic chain `FarmGateUA -> ProducerUA -> ProZorro -> Retail`,
+- reverse-flow estimation `Retail -> ProZorro -> ProducerUA -> FarmGateUA`,
+- promo-state outputs for Silpo,
+- robustness tables across interpolation and farm-gate sources,
+- RW4 run-all and Total Run outputs.
 
-## 1) File structure
+## Inputs
 
-Core runners:
-- `common.py`: shared loading, cleaning, daily variants, XLSX/PDF writers, common plotting.
-- `sheet_worker.py`: per-sheet processing and diagnostics.
-- `model_worker.py`: econometric modules and forecast/synthetic modules.
-- `graph_worker.py`: graph and matrix modules.
-- `run_all_rw3.py`: full execution + run-all summary output.
+Core workbooks in this repo root:
 
-Sheet entry scripts:
-- `sheet_ProducerUA.py`
-- `sheet_ConsumerUA.py`
-- `sheet_EU.py`
-- `sheet_ProZorro.py`
-- `sheet_Silpo.py`
-- `sheet_Novus.py`
-- `sheet_CME.py`
+- `full_uah.xlsx`
+- `farm_gate_daily.xlsx`
+- `farm_gate_all_missing_filled_daily.xlsx`
 
-Model entry scripts:
-- `model_ardl.py`
-- `model_ecm.py`
-- `model_nardl.py`
-- `model_vecm.py`
-- `model_discounts.py`
-- `model_short_chain_regional.py`
-- `model_intersection_bidirectional.py`
-- `model_forecast_knn.py`
+Supporting workbooks remain available for legacy and auxiliary modules:
 
-Graph entry scripts:
-- `graphs_decomposition.py`
-- `graphs_overlay_ln.py`
-- `graphs_correlations_lags.py`
-- `graphs_brand_region.py`
+- `Silpo.xlsx`
+- `Novus_newest.xlsx`
+- `EJgxfgP_daily_interpolated.xlsx`
 
-Doc helper:
-- `build_readme_docx.py`: converts this README into `README.docx`.
+## Main Files
 
-## 2) Data mapping and transformations (short)
+- `common.py`: shared loading, writing, plotting, and repo-root path setup.
+- `rw4_data.py`: RW4 data contracts, auditable product mapping, farm-gate loading, unit admissibility, promo-state enrichment.
+- `rw2_extended_mapping_pipeline.py`: shared descriptive/test utilities and daily-panel helpers used by RW4 modules.
+- `vpt_primary_chain.py`: RW4 core transmission engine and consolidated summary builder.
+- `model_worker.py`: family reports, promo-state models, intersection checks, forecasts, and synthetic consumer module.
+- `graph_worker.py`: graph outputs.
+- `sheet_worker.py`: source-level diagnostics for every sheet/workbook source.
+- `run_all_rw4.py`: full RW4 execution.
+- `run_total_run.py`: RW4 execution plus combined Total Run workbook/PDF/markdown.
 
-Producer_UA / Consumer_UA:
-- Required: `date`, `ua_product`, `price_linear`, `price_pchip` (or `price_chip`), optional `price_real`.
-- Transformation: `price = price_linear -> price_pchip -> price_real`; keep all 3 variants in daily table.
+## Primary Outputs
 
-Europe:
-- Required: `date`, `Product`, `Price (UAH/kg)`.
-- Transformation: `price = Price (UAH/kg)`; daily variants generated.
+RW4 consolidated chain outputs are written to:
 
-ProZorro:
-- Required: `Дата`, `Product`/`Профіль`, `Товар`, `Ціна за одиницю`, `Регіон організатора`, `Очікувана вартість`, `Сума договорів початкова`, `Сума договорів поточна`.
-- Transformation: `price = Ціна за одиницю` (fallback from expected/qty when needed), plus `prozorro_unit_price_uah`, `savings_rate`.
+- `outputs/primary_chain_summary/primary_chain_consolidated.xlsx`
+- `outputs/primary_chain_summary/primary_chain_consolidated.pdf`
 
-Silpo / Novus:
-- Required: `date`, `product_title`, `brand`, `price_current`, `unit_price`, promo fields when available.
-- Transformation: `price = unit_price -> price_current`; Novus dedupe by latest timestamp per `(date, sku_id)`; keep promo dummies/depth/presence.
+Key required sheets include:
 
-CME III:
-- Required: `Date`, `CME III UAH`.
-- Transformation: `price = CME III UAH`.
+- `Consolidated_ModelCoefficients`
+- `ReverseFlow_ModelCoefficients`
+- `RawMilk_To_Product_Transmission`
+- `AveragePrice_Chain_Transmission`
+- `Retailer_Brand_Transmission`
+- `Variant_Robustness`
+- `FarmGate_Source_Comparison`
+- `Benchmark_Comparison`
+- `Reconstruction_Diagnostics`
+- `Mapping_Audit`
+- `Unit_Admissibility`
 
-Common:
-- Product and `standardized_type` classification from mapping logic.
-- `unit_ok` flags retained.
-- Daily variants: `price_real`, `price_linear`, `price_pchip`, with imputation flags.
+Promo-state outputs are written to:
 
-## 3) Diagnostics and interpretation
+- `outputs/model_discounts/model_discounts_output.xlsx`
 
-Diagnostics are run per `source x product x standardized_type x series_variant` (weekly aggregation for tests):
-- ADF (`adf_p`)
-- KPSS (`kpss_p`)
-- Ljung-Box (`ljungbox_p`)
-- Breusch-Pagan (`bp_p`)
-- White (`white_p`)
-- Jarque-Bera (`jb_p`)
-- Stability (`stability_flag`, `stability_drift`)
+Run-all outputs are written to:
 
-Interpretation fields added:
-- `integration_class`, `ac_risk`, `het_risk`, `non_normal_risk`, `stability_risk_class`
-- `recommended_action`, `recommended_model_family`, `avoid`
+- `outputs/run_all_summary/run_all_rw4_summary.xlsx`
+- `outputs/run_all_summary/run_all_rw4_summary.pdf`
+- `outputs/run_all_summary/run_all_rw4_summary.md`
 
-Fast rule:
-- ADF `>0.05` and KPSS `<0.05` -> likely I(1)-like -> differences/cointegration framework.
-- Ljung-Box `<0.05` -> add lag structure.
-- BP/White `<0.05` -> robust/HAC errors.
-- `stability_flag=1` -> split/rolling robustness.
+Combined Total Run outputs are written to:
 
-## 4) Model modules and outputs
+- `outputs/total_run/Total_Run.xlsx`
+- `outputs/total_run/Total_Run.pdf`
+- `outputs/total_run/Total_Run.md`
 
-`model_ardl.py`:
-- Output: `outputs/model_ardl/model_ardl_output.xlsx`, `...pdf`, `ardl_short_run.png`.
-- Main table: `ARDL_Summary`.
+## Running
 
-`model_ecm.py`:
-- Output: `outputs/model_ecm/model_ecm_output.xlsx`, `...pdf`, `ecm_ect.png`.
-- Main table: `ECM_Summary`.
+Run the full RW4 pipeline:
 
-`model_nardl.py`:
-- Output: `outputs/model_nardl/model_nardl_output.xlsx`, `...pdf`, `nardl_*.png`.
-- Main table: `NARDL_Summary`.
-
-`model_vecm.py`:
-- Output: `outputs/model_vecm/model_vecm_output.xlsx`, `...pdf`, `vecm_alpha.png`.
-- Main table: `VECM_Summary`.
-
-`model_discounts.py`:
-- Output: `outputs/model_discounts/model_discounts_output.xlsx`, `...pdf`, promo delta charts.
-- Tables: `Silpo_Discounts_Occurrence`, `Silpo_Discounts_Depth`, `Silpo_Transmission_PromoCtrl`.
-
-`model_short_chain_regional.py`:
-- Output: `outputs/model_short_chain_regional/model_short_chain_regional_output.xlsx`, `...pdf`.
-- Tables: lag matrix/profile, short-run summary/details, chain effects, ProZorro regional effects.
-
-`model_intersection_bidirectional.py`:
-- Output: `outputs/model_intersection_bidirectional/model_intersection_bidirectional_output.xlsx`, `...pdf`.
-- Tables:
-- `Bidirectional_Results`: both-direction influence per pair (ProducerUA/ProZorro/Silpo/Novus/ConsumerUA).
-- `Bidirectional_Granger`: directionality support with Granger min p-values.
-- `Intersection_Combination_Summary`: main intersection models (`silpo_only`, `novus_only`, `silpo_novus_intersection`).
-- `CrossTable_Correlations`: source correlations across tables.
-
-`model_forecast_knn.py`:
-- Output: `outputs/model_forecast_knn/model_forecast_knn_output.xlsx`, `...pdf`, forecast and synthetic charts.
-- Tables:
-- `Forecast_Summary`: ProducerUA/ConsumerUA forecasts from retail/bulk signals.
-- `Forecast_Predictions`: holdout and future 30-day predictions.
-- `Synthetic_Retail_Series`: product+brand synthetic retail price for `2025-10-21..2026-08-01`.
-- `Synthetic_Influence_Coefficients`: overlap coefficients by product+brand.
-- `Synthetic_to_Consumer_Link`: relationship of synthetic retail to ConsumerUA.
-
-## 5) Graph modules and outputs
-
-`graphs_decomposition.py`:
-- Trend/seasonal/residual decomposition tables + plots.
-
-`graphs_overlay_ln.py`:
-- Before/after ln tables + intersection overlay plots by product.
-
-`graphs_correlations_lags.py`:
-- Correlation tables/matrix and lag profile outputs.
-
-`graphs_brand_region.py`:
-- Brand IO metrics and ProZorro region metrics with charts.
-
-## 6) Run commands
-
-Run all:
 ```bash
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/run_all_rw3.py"
+python3 run_all_rw4.py
 ```
 
-Run single new modules:
+Run the full pipeline plus rebuild Total Run:
+
 ```bash
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/model_intersection_bidirectional.py"
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/model_forecast_knn.py"
+python3 run_total_run.py
 ```
 
-Generate README docx:
+Rebuild Total Run only from existing outputs:
+
 ```bash
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/build_readme_docx.py"
+python3 run_total_run.py --skip-run-all
 ```
 
-## 7) Run-all package
+## Current Modeling Rules
 
-`run_all_rw3.py` writes:
-- `outputs/run_all_summary/run_all_rw3_summary.xlsx`
-- `outputs/run_all_summary/run_all_rw3_summary.pdf`
-
-This is the readable index of every module execution status and output location.
-
-## 8) PDF layout policy
-
-Every module PDF uses non-overlapping pages:
-- text page(s),
-- table page(s),
-- graph page(s).
-
-No text over graph overlays are used.
-
-## 9) Markdown report policy
-
-Every module PDF has a same-name markdown companion in the same output folder:
-- `*_report.pdf` -> `*_report.md`
-- run-all summary also includes markdown: `run_all_rw3_summary.md`
+- Farm-gate enters from both `farm_gate_daily.xlsx` and `farm_gate_all_missing_filled_daily.xlsx`.
+- Upstream producer/farm-gate runs are carried with both `linear` and `pchip` reconstructions.
+- `ConsumerUA`, `EU`, and `CME III` are benchmark/check series, not endogenous chain stages.
+- Silpo uses both observed and baseline price states; Novus stays observed-only.
+- Findings should be treated as core only when they are stable across interpolation variants and farm-gate sources.

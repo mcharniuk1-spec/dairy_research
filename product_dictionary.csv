@@ -1,0 +1,29 @@
+raw_pattern,product,standardized_type,subcategory,unit_family,liter_equiv_allowed,maturation_type,priority
+масло,Масло вершкове,butter,butter,mass,0,butter,120
+butter,Масло вершкове,butter,butter,mass,0,butter,120
+сметан,Сметана,sour_cream,sour_cream,mass,0,fresh,120
+sour cream,Сметана,sour_cream,sour_cream,mass,0,fresh,120
+вершк,Вершки,cream,cream,liquid,1,fresh,120
+cream,Вершки,cream,cream,liquid,1,fresh,120
+кисломолоч,Сир кисломолочний,cottage_cheese,cottage_cheese,mass,0,fresh,120
+творог,Сир кисломолочний,cottage_cheese,cottage_cheese,mass,0,fresh,120
+cottage,Сир кисломолочний,cottage_cheese,cottage_cheese,mass,0,fresh,120
+бринз,Сир твердий,hard_cheese,pickled_cheese,mass,0,fresh_pickled,110
+моцарел,Сир твердий,hard_cheese,soft_cheese,mass,0,other,110
+gouda,Сир твердий,hard_cheese,hard_cheese,mass,0,aged_hard,115
+edam,Сир твердий,hard_cheese,hard_cheese,mass,0,aged_hard,115
+emmental,Сир твердий,hard_cheese,hard_cheese,mass,0,aged_hard,115
+cheddar,Сир твердий,hard_cheese,hard_cheese,mass,0,aged_hard,115
+hard cheese,Сир твердий,hard_cheese,hard_cheese,mass,0,aged_hard,115
+сир,Сир твердий,hard_cheese,hard_cheese,mass,0,aged_hard,100
+йогурт,Йогурт,yogurt_dessert,yogurt_dessert,mass,0,fresh,120
+yogurt,Йогурт,yogurt_dessert,yogurt_dessert,mass,0,fresh,120
+десерт,Йогурт,yogurt_dessert,yogurt_dessert,mass,0,fresh,110
+dessert,Йогурт,yogurt_dessert,yogurt_dessert,mass,0,fresh,110
+кефір,Кефір,milk,fermented_milk,liquid,1,fresh,125
+kefir,Кефір,milk,fermented_milk,liquid,1,fresh,125
+ряжан,Кефір,milk,fermented_milk,liquid,1,fresh,120
+згущ,Молоко питне,milk,milk,liquid,1,fresh,110
+drinking milk,Молоко питне,milk,milk,liquid,1,fresh,120
+milk,Молоко питне,milk,milk,liquid,1,fresh,100
+молоко,Молоко питне,milk,milk,liquid,1,fresh,130

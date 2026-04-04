@@ -22,9 +22,9 @@
 
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| producer | 0.012483062457831949 | 0.01 | 4.729732285866721e-13 | 0.1 | 1.068911264269411e-21 | 0.1 | I(1) | 1.0 | milk | silpo | promo_controlled |
-| prozorro | 0.0014111002754477221 | 0.01 | 3.8189780115701814e-13 | 0.1 | 4.4125656034645e-11 | 0.1 | I(1) | 0.0 | milk | silpo | promo_controlled |
-| retail | 1.8563080372772102e-09 | 0.02253830533462102 | 1.8625885395021955e-08 | 0.1 | 0.0007337482414083636 | 0.1 | I(1) | 0.0 | milk | silpo | promo_controlled |
+| producer | 0.012483062457844212 | 0.01 | 4.729732285868142e-13 | 0.1 | 1.068911264269473e-21 | 0.1 | I(1) | 1.0 | milk | silpo | promo_controlled |
+| prozorro | 0.0014111002754477221 | 0.01 | 3.8189780115708437e-13 | 0.1 | 4.4125656034640205e-11 | 0.1 | I(1) | 0.0 | milk | silpo | promo_controlled |
+| retail | 1.8563080372772102e-09 | 0.02253830533462102 | 1.862588539502213e-08 | 0.1 | 0.0007337482414083765 | 0.1 | I(1) | 0.0 | milk | silpo | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | milk | silpo | promo_controlled |
@@ -33,21 +33,21 @@
 
 | standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| milk | silpo | promo_controlled | daily | producer_to_prozorro | ARDL | prozorro | producer | 201 | 0.6442401315402562 | -0.28431662591598345 | nan |
-| milk | silpo | promo_controlled | daily | producer_to_prozorro | ECM | prozorro | producer | 197 | -0.002155003969288638 | -0.3006834081052232 | -0.9538372381620318 |
-| milk | silpo | promo_controlled | daily | producer_to_prozorro | NARDL | prozorro | producer | 199 | 0.014643405379012098 | -0.7451033547254826 | -1.0911455790247273 |
-| milk | silpo | promo_controlled | daily | prozorro_to_retail | ECM | retail | prozorro | 35 | 0.03780420860354025 | 0.07959450904544814 | -0.9002155090608189 |
-| milk | silpo | promo_controlled | daily | prozorro_to_retail | NARDL | retail | prozorro | 35 | 0.13095882303016831 | 0.11453901982630367 | -1.1487124706777676 |
+| milk | silpo | promo_controlled | daily | producer_to_prozorro | ARDL | prozorro | producer | 201 | 0.6442401315402435 | -0.28431662591594176 | nan |
+| milk | silpo | promo_controlled | daily | producer_to_prozorro | ECM | prozorro | producer | 197 | -0.0021550039692882494 | -0.3006834081052232 | -0.9538372381620321 |
+| milk | silpo | promo_controlled | daily | producer_to_prozorro | NARDL | prozorro | producer | 199 | 0.014643405379010765 | -0.7451033547254802 | -1.0911455790247266 |
+| milk | silpo | promo_controlled | daily | prozorro_to_retail | ECM | retail | prozorro | 35 | 0.037804208603540196 | 0.07959450904544814 | -0.9002155090608192 |
+| milk | silpo | promo_controlled | daily | prozorro_to_retail | NARDL | retail | prozorro | 35 | 0.13095882303016856 | 0.11453901982630346 | -1.1487124706777685 |
 
 ### ResidualDiagnostics
 
 | model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ARDL | producer_to_prozorro | prozorro | producer | 0.9979470328795065 | 0.20798453556033827 | 2.4740906855412416e-48 | 0 |
-| ECM | producer_to_prozorro | prozorro | producer | 0.15369243238216101 | 0.00213984567239458 | 4.744864281636172e-221 | 1 |
-| NARDL | producer_to_prozorro | prozorro | producer | 0.1477169652972014 | 0.0004696321631414695 | 8.675957601558099e-203 | 1 |
-| ECM | prozorro_to_retail | retail | prozorro | 0.983883560861812 | 0.7600112143069815 | 0.04648178311126343 | 0 |
-| NARDL | prozorro_to_retail | retail | prozorro | 0.9821137350650249 | 0.7475783559300608 | 0.1112173090340839 | 0 |
+| ARDL | producer_to_prozorro | prozorro | producer | 0.997947032879507 | 0.20798453556018956 | 2.474090685540177e-48 | 0 |
+| ECM | producer_to_prozorro | prozorro | producer | 0.15369243238216118 | 0.0021398456723945958 | 4.744864281639144e-221 | 1 |
+| NARDL | producer_to_prozorro | prozorro | producer | 0.14771696529720213 | 0.0004696321631414275 | 8.675957601562549e-203 | 1 |
+| ECM | prozorro_to_retail | retail | prozorro | 0.9838835608618121 | 0.7600112143069808 | 0.04648178311126383 | 0 |
+| NARDL | prozorro_to_retail | retail | prozorro | 0.9821137350650245 | 0.7475783559300255 | 0.11121730903409086 | 0 |
 
 ### SeriesUsed
 
@@ -119,31 +119,31 @@
 
 | horizon | mult_pos | mult_neg | link |
 | --- | --- | --- | --- |
-| 0 | -1.7742938741039924 | -1.7889372794830045 | producer_to_prozorro |
-| 1 | -1.8965525776203616 | -1.9122049949690545 | producer_to_prozorro |
-| 2 | -1.9049768813975763 | -1.920698825275694 | producer_to_prozorro |
-| 3 | -1.9055573627219289 | -1.9212840973641196 | producer_to_prozorro |
-| 4 | -1.9055973611095502 | -1.9213244258619968 | producer_to_prozorro |
-| 5 | -1.9056001172206347 | -1.9213272047195116 | producer_to_prozorro |
-| 6 | -1.9056003071319976 | -1.9213273961982298 | producer_to_prozorro |
-| 7 | -1.9056003202179455 | -1.921327409392177 | producer_to_prozorro |
-| 8 | -1.90560032111964 | -1.9213274103013134 | producer_to_prozorro |
-| 9 | -1.9056003211817716 | -1.921327410363958 | producer_to_prozorro |
-| 10 | -1.9056003211860528 | -1.9213274103682745 | producer_to_prozorro |
-| 11 | -1.905600321186348 | -1.9213274103685718 | producer_to_prozorro |
-| 12 | -1.9056003211863681 | -1.9213274103685924 | producer_to_prozorro |
-| 13 | -1.9056003211863697 | -1.9213274103685938 | producer_to_prozorro |
-| 14 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 15 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 16 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 17 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 18 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 19 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 20 | -1.9056003211863697 | -1.921327410368594 | producer_to_prozorro |
-| 0 | 0.06345346241198734 | -0.06750536061818097 | prozorro_to_retail |
-| 1 | 0.0692647373012674 | -0.07368772155075193 | prozorro_to_retail |
-| 2 | 0.0697969527951913 | -0.07425392231392933 | prozorro_to_retail |
-| 3 | 0.06984569482467182 | -0.07430577682512969 | prozorro_to_retail |
+| 0 | -1.7742938741039946 | -1.7889372794830054 | producer_to_prozorro |
+| 1 | -1.8965525776203653 | -1.912204994969057 | producer_to_prozorro |
+| 2 | -1.9049768813975803 | -1.9206988252756965 | producer_to_prozorro |
+| 3 | -1.9055573627219329 | -1.9212840973641223 | producer_to_prozorro |
+| 4 | -1.9055973611095542 | -1.9213244258619995 | producer_to_prozorro |
+| 5 | -1.9056001172206387 | -1.921327204719514 | producer_to_prozorro |
+| 6 | -1.9056003071320016 | -1.9213273961982325 | producer_to_prozorro |
+| 7 | -1.9056003202179495 | -1.9213274093921797 | producer_to_prozorro |
+| 8 | -1.905600321119644 | -1.921327410301316 | producer_to_prozorro |
+| 9 | -1.9056003211817756 | -1.9213274103639606 | producer_to_prozorro |
+| 10 | -1.9056003211860568 | -1.9213274103682771 | producer_to_prozorro |
+| 11 | -1.905600321186352 | -1.9213274103685745 | producer_to_prozorro |
+| 12 | -1.9056003211863721 | -1.921327410368595 | producer_to_prozorro |
+| 13 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 14 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 15 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 16 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 17 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 18 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 19 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 20 | -1.9056003211863737 | -1.9213274103685964 | producer_to_prozorro |
+| 0 | 0.06345346241198797 | -0.06750536061818059 | prozorro_to_retail |
+| 1 | 0.06926473730126805 | -0.07368772155075146 | prozorro_to_retail |
+| 2 | 0.06979695279519194 | -0.07425392231392884 | prozorro_to_retail |
+| 3 | 0.06984569482467244 | -0.0743057768251292 | prozorro_to_retail |
 
 ### VECM_IRF
 

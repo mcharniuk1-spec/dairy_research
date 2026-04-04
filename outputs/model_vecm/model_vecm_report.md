@@ -1,4 +1,4 @@
-# VECM Summary from Primary Chain
+# VECM Summary from RW4 Primary Chain
 
 ## Interpretation Guide
 - ADF p>0.05 and KPSS p<0.05 -> likely I(1)-like; prefer differences/cointegration models.
@@ -10,13 +10,39 @@
 - For retail transmission, compare no-promo vs promo-controlled estimates.
 
 ## Notes
-- Primary chain is strictly ProducerUA -> ProZorro -> Retail. Retail is estimated separately for silpo, novus, and silpo_novus. Combined rule: daily median of available silpo and novus standardized_type prices.
+- RW4 domestic vertical chain is FarmGateUA -> ProducerUA -> ProZorro -> Retail, estimated with both forward and reverse-flow pairs. Farm-gate enters from two alternative reconstruction workbooks and both linear/pchip interpolation variants are carried end-to-end.
 - family=VECM
-- rows=0
+- rows=156
 - source=/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/primary_chain_summary/primary_chain_consolidated.xlsx
 
 ## Tables
 
 ### VECM_Summary
 
-_No rows_
+| panel_level | panel_name | segment_name | product | standardized_type | retailer_panel | brand | price_variant | reconstruction_variant | farm_gate_source | frequency | chain_direction |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| product | product::Вершки::Silpo::observed::initial::linear | Вершки | Вершки | cream | Silpo | nan | observed | linear | initial | daily | forward |
+| product | product::Молоко питне::Silpo::observed::initial::linear | Молоко питне | Молоко питне | milk | Silpo | nan | observed | linear | initial | daily | forward |
+| product | product::Сир твердий::Silpo::observed::initial::linear | Сир твердий | Сир твердий | hard_cheese | Silpo | nan | observed | linear | initial | daily | forward |
+| product | product::Сметана::Silpo::observed::initial::linear | Сметана | Сметана | sour_cream | Silpo | nan | observed | linear | initial | daily | forward |
+| product | product::Вершки::Silpo::baseline::initial::linear | Вершки | Вершки | cream | Silpo | nan | baseline | linear | initial | daily | forward |
+| product | product::Молоко питне::Silpo::baseline::initial::linear | Молоко питне | Молоко питне | milk | Silpo | nan | baseline | linear | initial | daily | forward |
+| product | product::Сир твердий::Silpo::baseline::initial::linear | Сир твердий | Сир твердий | hard_cheese | Silpo | nan | baseline | linear | initial | daily | forward |
+| product | product::Сметана::Silpo::baseline::initial::linear | Сметана | Сметана | sour_cream | Silpo | nan | baseline | linear | initial | daily | forward |
+| average | average::Silpo::observed::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | observed | linear | initial | daily | forward |
+| average | average::Silpo::observed::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | observed | linear | initial | daily | forward |
+| average | average::Silpo::observed::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | observed | linear | initial | daily | forward |
+| average | average::Silpo::baseline::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | baseline | linear | initial | daily | forward |
+| average | average::Silpo::baseline::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | baseline | linear | initial | daily | forward |
+| average | average::Silpo::baseline::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | baseline | linear | initial | daily | forward |
+| comparison | comparison::silpo_vs_novus_observed::initial::linear | silpo_vs_novus_observed | silpo_vs_novus_observed | comparison_panel | silpo_vs_novus_observed | nan | observed_comparison | linear | initial | daily | forward |
+| comparison | comparison::silpo_vs_novus_observed::initial::linear | silpo_vs_novus_observed | silpo_vs_novus_observed | comparison_panel | silpo_vs_novus_observed | nan | observed_comparison | linear | initial | daily | forward |
+| comparison | comparison::silpo_vs_novus_observed::initial::linear | silpo_vs_novus_observed | silpo_vs_novus_observed | comparison_panel | silpo_vs_novus_observed | nan | observed_comparison | linear | initial | daily | forward |
+| comparison | comparison::silpo_baseline_vs_novus_observed::initial::linear | silpo_baseline_vs_novus_observed | silpo_baseline_vs_novus_observed | comparison_panel | silpo_baseline_vs_novus_observed | nan | baseline_vs_observed | linear | initial | daily | forward |
+| comparison | comparison::silpo_baseline_vs_novus_observed::initial::linear | silpo_baseline_vs_novus_observed | silpo_baseline_vs_novus_observed | comparison_panel | silpo_baseline_vs_novus_observed | nan | baseline_vs_observed | linear | initial | daily | forward |
+| comparison | comparison::silpo_baseline_vs_novus_observed::initial::linear | silpo_baseline_vs_novus_observed | silpo_baseline_vs_novus_observed | comparison_panel | silpo_baseline_vs_novus_observed | nan | baseline_vs_observed | linear | initial | daily | forward |
+| comparison | comparison::silpo_novus_combined::initial::linear | silpo_novus_combined | silpo_novus_combined | comparison_panel | silpo_novus_combined | nan | observed | linear | initial | daily | forward |
+| comparison | comparison::silpo_novus_combined::initial::linear | silpo_novus_combined | silpo_novus_combined | comparison_panel | silpo_novus_combined | nan | observed | linear | initial | daily | forward |
+| comparison | comparison::silpo_novus_combined::initial::linear | silpo_novus_combined | silpo_novus_combined | comparison_panel | silpo_novus_combined | nan | observed | linear | initial | daily | forward |
+| brand | brand::Silpo::::cream::observed::initial::linear | Silpo::cream | brand_panel | cream | Silpo | nan | observed | linear | initial | daily | forward |
+| brand | brand::Silpo::::cream::baseline::initial::linear | Silpo::cream | brand_panel | cream | Silpo | nan | baseline | linear | initial | daily | forward |

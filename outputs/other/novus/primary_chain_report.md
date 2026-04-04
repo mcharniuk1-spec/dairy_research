@@ -23,7 +23,7 @@
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | novus | promo_controlled |
-| prozorro | 0.9029715543675231 | 0.01 | 1.3734510184087591e-14 | 0.1 | 1.260173359802745e-10 | 0.1 | I(1) | 1.0 | other | novus | promo_controlled |
+| prozorro | 0.9029715543675233 | 0.01 | 1.3734510184088137e-14 | 0.1 | 1.2601733598025704e-10 | 0.1 | I(1) | 1.0 | other | novus | promo_controlled |
 | retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | other | novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | novus | promo_controlled |

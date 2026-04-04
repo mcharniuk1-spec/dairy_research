@@ -11,14 +11,40 @@ def _xml_escape(text: str) -> str:
     return html.escape(text, quote=False)
 
 
+def _run_xml(text: str, bold: bool = False, mono: bool = False) -> str:
+    rpr_parts: list[str] = []
+    if mono:
+        rpr_parts.append('<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>')
+        rpr_parts.append('<w:sz w:val="20"/>')
+    if bold:
+        rpr_parts.append("<w:b/>")
+    rpr = f"<w:rPr>{''.join(rpr_parts)}</w:rPr>" if rpr_parts else ""
+    return f'<w:r>{rpr}<w:t xml:space="preserve">{_xml_escape(text)}</w:t></w:r>'
+
+
+def _inline_runs(text: str, mono: bool = False) -> list[str]:
+    if mono:
+        return [_run_xml(text, mono=True)]
+    if not text:
+        return [_run_xml("")]
+    parts = re.split(r"(\*\*.*?\*\*)", text)
+    runs: list[str] = []
+    for part in parts:
+        if not part:
+            continue
+        if part.startswith("**") and part.endswith("**") and len(part) >= 4:
+            runs.append(_run_xml(part[2:-2], bold=True))
+        else:
+            runs.append(_run_xml(part))
+    return runs or [_run_xml("")]
+
+
 def _paragraph_xml(text: str, style: str | None = None, mono: bool = False) -> str:
     ppr = ""
     if style:
         ppr = f'<w:pPr><w:pStyle w:val="{style}"/></w:pPr>'
-    rpr = ""
-    if mono:
-        rpr = '<w:rPr><w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/><w:sz w:val="20"/></w:rPr>'
-    return f'<w:p>{ppr}<w:r>{rpr}<w:t xml:space="preserve">{_xml_escape(text)}</w:t></w:r></w:p>'
+    runs = "".join(_inline_runs(text, mono=mono))
+    return f"<w:p>{ppr}{runs}</w:p>"
 
 
 def _markdown_to_blocks(md_text: str) -> list[tuple[str, str | None, bool]]:

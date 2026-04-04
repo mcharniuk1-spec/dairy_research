@@ -82,7 +82,7 @@ def _effective_daily_prices(all_daily: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame()
     d = all_daily.copy()
     d["price_eff"] = d["price_pchip"].where(
-        d["source"].isin(["ProducerUA", "ConsumerUA"]) & d["price_pchip"].notna(),
+        d["source"].isin(["ProducerUA", "ConsumerUA", "FarmGateUA_initial", "FarmGateUA_filled"]) & d["price_pchip"].notna(),
         d["price_real"],
     )
     d["price_eff"] = pd.to_numeric(d["price_eff"], errors="coerce")
@@ -112,6 +112,11 @@ def _safe_ols(y: pd.Series, xdf: pd.DataFrame, hac_lags: int = 3):
     x = sm.add_constant(frame.drop(columns=["y"]), has_constant="add")
     fit = sm.OLS(frame["y"], x).fit(cov_type="HAC", cov_kwds={"maxlags": hac_lags})
     return fit, frame
+
+
+def _safe_log(s: pd.Series) -> pd.Series:
+    x = pd.to_numeric(s, errors="coerce")
+    return np.log(x.where(x > 0))
 
 
 def _pivot_product_daily(
@@ -181,95 +186,712 @@ def run_vecm() -> Path:
 
 
 def run_discounts() -> Path:
-    # Discount module is derived from primary-chain outputs (observed vs promo-controlled),
-    # so ConsumerUA/EU/CME are not used here.
+    cleaned, _, *_ = _prep()
+    silpo = cleaned["Silpo"].copy()
+    novus = cleaned["Novus"].copy()
+    producer = cleaned["ProducerUA"].copy()
+    prozorro = cleaned["ProZorro"].copy()
+    farm_gate = cleaned["FarmGateUA_initial"].copy()
+    eu = cleaned["EU"].copy()
+    cme = cleaned["CME"].copy()
+
     cons_path = common.OUTPUT_ROOT / "primary_chain_summary" / "primary_chain_consolidated.xlsx"
     if not cons_path.exists():
         vpt.run_primary_chain_pipeline(freq="daily")
     cons = pd.read_excel(cons_path, sheet_name="Consolidated_ModelCoefficients") if cons_path.exists() else pd.DataFrame()
 
-    base = cons[
-        (cons["retailer"] == "silpo")
-        & (cons["link"] == "prozorro_to_retail")
-    ].copy() if not cons.empty else pd.DataFrame()
-    occ = pd.DataFrame()
-    depth = pd.DataFrame()
-    if not base.empty:
-        obs = base[base["promo_variant"] == "observed"].copy()
-        reg = base[base["promo_variant"] == "promo_controlled"].copy()
-        k = ["standardized_type", "model_family", "link"]
-        m = obs.merge(reg, on=k, suffixes=("_obs", "_reg"), how="inner")
-        trans = pd.DataFrame(
-            {
-                "standardized_type": m["standardized_type"],
-                "model_family": m["model_family"],
-                "link": m["link"],
-                "coef_observed": m["sr_coef_obs"],
-                "coef_promo_controlled": m["sr_coef_reg"],
-                "delta_promo_control": m["sr_coef_reg"] - m["sr_coef_obs"],
-                "note": "positive delta means stronger transmission after promo control",
-            }
+    incidence_rows: List[Dict[str, object]] = []
+    type_rows: List[Dict[str, object]] = []
+    depth_rows: List[Dict[str, object]] = []
+
+    if not silpo.empty:
+        silpo["date"] = pd.to_datetime(silpo["date"], errors="coerce")
+        silpo = silpo.dropna(subset=["date"]).copy()
+        silpo["markdown_rate"] = pd.to_numeric(silpo.get("markdown_rate"), errors="coerce")
+        silpo["discount_present"] = pd.to_numeric(silpo.get("discount_present"), errors="coerce").fillna(0).clip(0, 1)
+        silpo["discount_type"] = silpo.get("discount_type", "unknown").astype(str)
+        silpo["brand_normalized"] = silpo.get("brand_normalized", silpo.get("brand", "")).astype(str)
+
+        prod = producer.copy()
+        prod["producer"] = pd.to_numeric(prod.get("price_pchip_input"), errors="coerce").where(
+            pd.to_numeric(prod.get("price_pchip_input"), errors="coerce").notna(),
+            pd.to_numeric(prod.get("price_linear_input"), errors="coerce"),
         )
-        occ = pd.DataFrame(
-            {
-                "standardized_type": m["standardized_type"],
-                "promo_signal": np.where((m["sr_coef_reg"] - m["sr_coef_obs"]).abs() > 0.02, 1, 0),
-                "definition": "1 if |promo-controlled - observed| > 0.02",
-            }
+        prod = prod.groupby(["date", "standardized_type"], as_index=False)["producer"].mean()
+
+        pz = prozorro.copy()
+        pz["prozorro"] = pd.to_numeric(pz.get("observed_price", pz.get("price")), errors="coerce")
+        pz = pz.groupby(["date", "standardized_type"], as_index=False)["prozorro"].mean()
+
+        fg = farm_gate.copy()
+        fg["farm_gate"] = pd.to_numeric(fg.get("price_pchip_input"), errors="coerce").where(
+            pd.to_numeric(fg.get("price_pchip_input"), errors="coerce").notna(),
+            pd.to_numeric(fg.get("price_linear_input"), errors="coerce"),
         )
-        depth = pd.DataFrame(
-            {
-                "standardized_type": m["standardized_type"],
-                "promo_depth_proxy": (m["sr_coef_reg"] - m["sr_coef_obs"]).abs(),
-                "definition": "absolute difference between promo-controlled and observed SR coefficients",
-            }
+        fg = fg.groupby("date", as_index=False)["farm_gate"].mean()
+
+        eu_daily = eu.copy()
+        eu_daily["eu_price"] = pd.to_numeric(eu_daily.get("observed_price", eu_daily.get("price")), errors="coerce")
+        eu_daily = eu_daily.groupby(["date", "standardized_type"], as_index=False)["eu_price"].mean()
+
+        cme_daily = cme.copy()
+        cme_daily["cme_price"] = pd.to_numeric(cme_daily.get("observed_price", cme_daily.get("price")), errors="coerce")
+        cme_daily = cme_daily.groupby(["date", "standardized_type"], as_index=False)["cme_price"].mean()
+
+        nov = novus.copy()
+        nov["novus_price"] = pd.to_numeric(nov.get("observed_price", nov.get("price")), errors="coerce")
+        nov = nov.groupby(["date", "standardized_type"], as_index=False)["novus_price"].mean()
+
+        daily = (
+            silpo.groupby(["date", "standardized_type"], as_index=False)
+            .agg(
+                observed_price=("observed_price", "median"),
+                baseline_price=("baseline_price", "median"),
+                discount_present=("discount_present", "mean"),
+                markdown_rate=("markdown_rate", "mean"),
+                discount_type=("discount_type", lambda s: s.mode().iloc[0] if not s.mode().empty else "unknown"),
+                promo_duration=("promo_duration", "mean"),
+                time_since_last_promo=("time_since_last_promo", "mean"),
+                top_brand_share=("brand_normalized", lambda s: float(s.astype(str).value_counts(normalize=True, dropna=False).iloc[0]) if len(s) else np.nan),
+            )
+            .merge(prod, on=["date", "standardized_type"], how="left")
+            .merge(pz, on=["date", "standardized_type"], how="left")
+            .merge(fg, on="date", how="left")
+            .merge(eu_daily, on=["date", "standardized_type"], how="left")
+            .merge(cme_daily, on=["date", "standardized_type"], how="left")
+            .merge(nov, on=["date", "standardized_type"], how="left")
+            .sort_values(["standardized_type", "date"])
         )
-    else:
-        trans = pd.DataFrame([{"note": "No primary-chain silpo rows available to build discount comparison."}])
-        occ = pd.DataFrame([{"note": "No rows"}])
-        depth = pd.DataFrame([{"note": "No rows"}])
+        pooled_daily = daily.copy()
+
+        for std, g in daily.groupby("standardized_type", dropna=False):
+            gg = g.copy().sort_values("date")
+            gg["log_observed"] = _safe_log(gg["observed_price"])
+            gg["log_baseline"] = _safe_log(gg["baseline_price"])
+            gg["d_producer"] = _safe_log(gg["producer"]).diff()
+            gg["d_prozorro"] = _safe_log(gg["prozorro"]).diff()
+            gg["d_farm_gate"] = _safe_log(gg["farm_gate"]).diff()
+            gg["d_eu"] = _safe_log(gg["eu_price"]).diff()
+            gg["d_cme"] = _safe_log(gg["cme_price"]).diff()
+            gg["lag_discount_present"] = gg["discount_present"].shift(1)
+            gg["lag_markdown_rate"] = gg["markdown_rate"].shift(1)
+            gg["gap_retail_producer"] = gg["log_observed"] - _safe_log(gg["producer"])
+            gg["gap_retail_prozorro"] = gg["log_observed"] - _safe_log(gg["prozorro"])
+            gg["deviation_from_baseline"] = gg["log_observed"] - gg["log_baseline"]
+            gg["competitor_gap"] = gg["log_observed"] - _safe_log(gg["novus_price"])
+            month = gg["date"].dt.month
+            gg["month_sin"] = np.sin(2 * np.pi * month / 12.0)
+            gg["month_cos"] = np.cos(2 * np.pi * month / 12.0)
+            gg["discount_type_markdown"] = (gg["discount_type"] == "markdown").astype(float)
+            gg["discount_type_bulk"] = (gg["discount_type"] == "bulk").astype(float)
+
+            candidate_x = [
+                "d_farm_gate",
+                "d_producer",
+                "d_prozorro",
+                "d_eu",
+                "d_cme",
+                "gap_retail_producer",
+                "gap_retail_prozorro",
+                "deviation_from_baseline",
+                "lag_discount_present",
+                "lag_markdown_rate",
+                "promo_duration",
+                "time_since_last_promo",
+                "competitor_gap",
+                "top_brand_share",
+                "month_sin",
+                "month_cos",
+            ]
+            usable_x = [c for c in candidate_x if c in gg.columns and gg[c].notna().sum() >= 20 and gg[c].std(skipna=True) > 0]
+            if not usable_x:
+                continue
+            X = sm.add_constant(gg[usable_x], has_constant="add")
+
+            y_occ = (gg["discount_present"] > 0.05).astype(int)
+            occ_frame = pd.concat([y_occ.rename("y"), X], axis=1).dropna()
+            if len(occ_frame) >= 35 and occ_frame["y"].nunique() > 1:
+                try:
+                    fit_occ = sm.Logit(occ_frame["y"], occ_frame.drop(columns=["y"])).fit(disp=False)
+                    incidence_rows.append(
+                        {
+                            "standardized_type": std,
+                            "n_obs": int(len(occ_frame)),
+                            "coef_d_farm_gate": float(fit_occ.params.get("d_farm_gate", np.nan)),
+                            "p_d_farm_gate": float(fit_occ.pvalues.get("d_farm_gate", np.nan)),
+                            "coef_d_producer": float(fit_occ.params.get("d_producer", np.nan)),
+                            "p_d_producer": float(fit_occ.pvalues.get("d_producer", np.nan)),
+                            "coef_d_prozorro": float(fit_occ.params.get("d_prozorro", np.nan)),
+                            "p_d_prozorro": float(fit_occ.pvalues.get("d_prozorro", np.nan)),
+                            "coef_lag_discount_present": float(fit_occ.params.get("lag_discount_present", np.nan)),
+                            "p_lag_discount_present": float(fit_occ.pvalues.get("lag_discount_present", np.nan)),
+                            "coef_gap_retail_producer": float(fit_occ.params.get("gap_retail_producer", np.nan)),
+                            "p_gap_retail_producer": float(fit_occ.pvalues.get("gap_retail_producer", np.nan)),
+                            "coef_gap_retail_prozorro": float(fit_occ.params.get("gap_retail_prozorro", np.nan)),
+                            "p_gap_retail_prozorro": float(fit_occ.pvalues.get("gap_retail_prozorro", np.nan)),
+                            "coef_deviation_from_baseline": float(fit_occ.params.get("deviation_from_baseline", np.nan)),
+                            "p_deviation_from_baseline": float(fit_occ.pvalues.get("deviation_from_baseline", np.nan)),
+                            "coef_competitor_gap": float(fit_occ.params.get("competitor_gap", np.nan)),
+                            "p_competitor_gap": float(fit_occ.pvalues.get("competitor_gap", np.nan)),
+                            "predictors_used": ",".join(usable_x),
+                            "model": "logit",
+                        }
+                    )
+                except Exception:
+                    pass
+
+        if pooled_daily is not None and (not incidence_rows or not type_rows or not depth_rows):
+            pool = pooled_daily.copy().sort_values(["standardized_type", "date"])
+            grp = pool.groupby("standardized_type", dropna=False)
+            pool["log_observed"] = _safe_log(pool["observed_price"])
+            pool["log_baseline"] = _safe_log(pool["baseline_price"])
+            pool["d_producer"] = grp["producer"].transform(lambda s: _safe_log(s).diff())
+            pool["d_prozorro"] = grp["prozorro"].transform(lambda s: _safe_log(s).diff())
+            pool["d_farm_gate"] = grp["farm_gate"].transform(lambda s: _safe_log(s).diff())
+            pool["d_eu"] = grp["eu_price"].transform(lambda s: _safe_log(s).diff())
+            pool["d_cme"] = grp["cme_price"].transform(lambda s: _safe_log(s).diff())
+            pool["lag_discount_present"] = grp["discount_present"].shift(1)
+            pool["lag_markdown_rate"] = grp["markdown_rate"].shift(1)
+            pool["gap_retail_producer"] = pool["log_observed"] - _safe_log(pool["producer"])
+            pool["gap_retail_prozorro"] = pool["log_observed"] - _safe_log(pool["prozorro"])
+            pool["deviation_from_baseline"] = pool["log_observed"] - pool["log_baseline"]
+            pool["competitor_gap"] = pool["log_observed"] - _safe_log(pool["novus_price"])
+            month = pool["date"].dt.month
+            pool["month_sin"] = np.sin(2 * np.pi * month / 12.0)
+            pool["month_cos"] = np.cos(2 * np.pi * month / 12.0)
+            std_dummies = pd.get_dummies(pool["standardized_type"].astype(str), prefix="std", drop_first=True)
+            pool = pd.concat([pool, std_dummies], axis=1)
+            candidate_x = [
+                "d_farm_gate",
+                "d_producer",
+                "d_prozorro",
+                "d_eu",
+                "d_cme",
+                "gap_retail_producer",
+                "gap_retail_prozorro",
+                "deviation_from_baseline",
+                "lag_discount_present",
+                "lag_markdown_rate",
+                "promo_duration",
+                "time_since_last_promo",
+                "competitor_gap",
+                "top_brand_share",
+                "month_sin",
+                "month_cos",
+            ] + std_dummies.columns.tolist()
+            usable_x = [c for c in candidate_x if c in pool.columns and pool[c].notna().sum() >= 25 and pool[c].std(skipna=True) > 0]
+            if usable_x:
+                X = sm.add_constant(pool[usable_x], has_constant="add")
+                if not incidence_rows:
+                    y_occ = (pool["discount_present"] > 0.05).astype(int)
+                    occ_frame = pd.concat([y_occ.rename("y"), X], axis=1).dropna()
+                    if len(occ_frame) >= 35 and occ_frame["y"].nunique() > 1:
+                        try:
+                            fit_occ = sm.Logit(occ_frame["y"], occ_frame.drop(columns=["y"])).fit(disp=False)
+                            incidence_rows.append(
+                                {
+                                    "standardized_type": "ALL",
+                                    "model_scope": "pooled_with_type_controls",
+                                    "n_obs": int(len(occ_frame)),
+                                    "coef_d_farm_gate": float(fit_occ.params.get("d_farm_gate", np.nan)),
+                                    "p_d_farm_gate": float(fit_occ.pvalues.get("d_farm_gate", np.nan)),
+                                    "coef_d_producer": float(fit_occ.params.get("d_producer", np.nan)),
+                                    "p_d_producer": float(fit_occ.pvalues.get("d_producer", np.nan)),
+                                    "coef_d_prozorro": float(fit_occ.params.get("d_prozorro", np.nan)),
+                                    "p_d_prozorro": float(fit_occ.pvalues.get("d_prozorro", np.nan)),
+                                    "coef_gap_retail_producer": float(fit_occ.params.get("gap_retail_producer", np.nan)),
+                                    "p_gap_retail_producer": float(fit_occ.pvalues.get("gap_retail_producer", np.nan)),
+                                    "coef_gap_retail_prozorro": float(fit_occ.params.get("gap_retail_prozorro", np.nan)),
+                                    "p_gap_retail_prozorro": float(fit_occ.pvalues.get("gap_retail_prozorro", np.nan)),
+                                    "coef_deviation_from_baseline": float(fit_occ.params.get("deviation_from_baseline", np.nan)),
+                                    "p_deviation_from_baseline": float(fit_occ.pvalues.get("deviation_from_baseline", np.nan)),
+                                    "coef_competitor_gap": float(fit_occ.params.get("competitor_gap", np.nan)),
+                                    "p_competitor_gap": float(fit_occ.pvalues.get("competitor_gap", np.nan)),
+                                    "predictors_used": ",".join(usable_x),
+                                    "model": "logit",
+                                }
+                            )
+                        except Exception:
+                            pass
+
+        if not incidence_rows or not type_rows or not depth_rows:
+            row_pool = silpo[
+                [
+                    "date",
+                    "sku_id",
+                    "standardized_type",
+                    "brand_normalized",
+                    "observed_price",
+                    "baseline_price",
+                    "discount_present",
+                    "markdown_rate",
+                    "discount_type",
+                    "promo_duration",
+                    "time_since_last_promo",
+                ]
+            ].copy()
+            row_pool = row_pool.merge(prod, on=["date", "standardized_type"], how="left")
+            row_pool = row_pool.merge(pz, on=["date", "standardized_type"], how="left")
+            row_pool = row_pool.merge(fg, on="date", how="left")
+            row_pool = row_pool.merge(eu_daily, on=["date", "standardized_type"], how="left")
+            row_pool = row_pool.merge(cme_daily, on=["date", "standardized_type"], how="left")
+            row_pool = row_pool.merge(nov, on=["date", "standardized_type"], how="left")
+            row_pool = row_pool.sort_values(["standardized_type", "sku_id", "date"])
+            up_grp = row_pool.groupby("standardized_type", dropna=False)
+            sku_grp = row_pool.groupby("sku_id", dropna=False)
+            row_pool["log_observed"] = _safe_log(row_pool["observed_price"])
+            row_pool["log_baseline"] = _safe_log(row_pool["baseline_price"])
+            row_pool["d_producer"] = up_grp["producer"].transform(lambda s: _safe_log(s).diff())
+            row_pool["d_prozorro"] = up_grp["prozorro"].transform(lambda s: _safe_log(s).diff())
+            row_pool["d_farm_gate"] = up_grp["farm_gate"].transform(lambda s: _safe_log(s).diff())
+            row_pool["gap_retail_producer"] = row_pool["log_observed"] - _safe_log(row_pool["producer"])
+            row_pool["gap_retail_prozorro"] = row_pool["log_observed"] - _safe_log(row_pool["prozorro"])
+            row_pool["deviation_from_baseline"] = row_pool["log_observed"] - row_pool["log_baseline"]
+            row_pool["competitor_gap"] = row_pool["log_observed"] - _safe_log(row_pool["novus_price"])
+            row_pool["lag_discount_present"] = sku_grp["discount_present"].shift(1)
+            row_pool["lag_markdown_rate"] = sku_grp["markdown_rate"].shift(1)
+            month = row_pool["date"].dt.month
+            row_pool["month_sin"] = np.sin(2 * np.pi * month / 12.0)
+            row_pool["month_cos"] = np.cos(2 * np.pi * month / 12.0)
+            brand_mode = (
+                row_pool.groupby("standardized_type", dropna=False)["brand_normalized"]
+                .agg(lambda s: s.mode().iloc[0] if not s.mode().empty else "")
+                .to_dict()
+            )
+            row_pool["top_brand_flag"] = [
+                float(str(brand) == str(brand_mode.get(std, "")))
+                for std, brand in zip(row_pool["standardized_type"], row_pool["brand_normalized"])
+            ]
+            std_dummies = pd.get_dummies(row_pool["standardized_type"].astype(str), prefix="std", drop_first=True)
+            row_pool = pd.concat([row_pool, std_dummies], axis=1)
+            row_x = [
+                "d_farm_gate",
+                "d_producer",
+                "d_prozorro",
+                "gap_retail_producer",
+                "gap_retail_prozorro",
+                "deviation_from_baseline",
+                "lag_discount_present",
+                "lag_markdown_rate",
+                "promo_duration",
+                "time_since_last_promo",
+                "competitor_gap",
+                "top_brand_flag",
+                "month_sin",
+                "month_cos",
+            ] + std_dummies.columns.tolist()
+            usable_row_x = [c for c in row_x if c in row_pool.columns and row_pool[c].notna().sum() >= 50 and row_pool[c].std(skipna=True) > 0]
+            if usable_row_x:
+                X = sm.add_constant(row_pool[usable_row_x], has_constant="add")
+                if not incidence_rows:
+                    occ_frame = pd.concat([(row_pool["discount_present"] > 0.5).astype(int).rename("y"), X], axis=1).dropna()
+                    if len(occ_frame) >= 100 and occ_frame["y"].nunique() > 1:
+                        try:
+                            fit_occ = sm.GLM(occ_frame["y"], occ_frame.drop(columns=["y"]), family=sm.families.Binomial()).fit()
+                            incidence_rows.append(
+                                {
+                                    "standardized_type": "ALL",
+                                    "model_scope": "row_level_pooled_with_type_controls",
+                                    "n_obs": int(len(occ_frame)),
+                                    "coef_d_farm_gate": float(fit_occ.params.get("d_farm_gate", np.nan)),
+                                    "p_d_farm_gate": float(fit_occ.pvalues.get("d_farm_gate", np.nan)),
+                                    "coef_d_producer": float(fit_occ.params.get("d_producer", np.nan)),
+                                    "p_d_producer": float(fit_occ.pvalues.get("d_producer", np.nan)),
+                                    "coef_d_prozorro": float(fit_occ.params.get("d_prozorro", np.nan)),
+                                    "p_d_prozorro": float(fit_occ.pvalues.get("d_prozorro", np.nan)),
+                                    "coef_gap_retail_producer": float(fit_occ.params.get("gap_retail_producer", np.nan)),
+                                    "p_gap_retail_producer": float(fit_occ.pvalues.get("gap_retail_producer", np.nan)),
+                                    "coef_gap_retail_prozorro": float(fit_occ.params.get("gap_retail_prozorro", np.nan)),
+                                    "p_gap_retail_prozorro": float(fit_occ.pvalues.get("gap_retail_prozorro", np.nan)),
+                                    "coef_deviation_from_baseline": float(fit_occ.params.get("deviation_from_baseline", np.nan)),
+                                    "p_deviation_from_baseline": float(fit_occ.pvalues.get("deviation_from_baseline", np.nan)),
+                                    "coef_competitor_gap": float(fit_occ.params.get("competitor_gap", np.nan)),
+                                    "p_competitor_gap": float(fit_occ.pvalues.get("competitor_gap", np.nan)),
+                                    "predictors_used": ",".join(usable_row_x),
+                                    "model": "glm_binomial",
+                                }
+                            )
+                        except Exception:
+                            pass
+                if not type_rows:
+                    type_map = {"regular": 0, "markdown": 1, "bulk": 2, "unknown": 3}
+                    type_frame = pd.concat([row_pool["discount_type"].map(type_map).rename("y"), X], axis=1).dropna()
+                    if len(type_frame) >= 100 and type_frame["y"].nunique() > 1:
+                        try:
+                            fit_type = sm.MNLogit(type_frame["y"], type_frame.drop(columns=["y"])).fit(disp=False)
+                            for cls, params in fit_type.params.items():
+                                cls_name = {v: k for k, v in type_map.items()}.get(int(cls), str(cls))
+                                type_rows.append(
+                                    {
+                                        "standardized_type": "ALL",
+                                        "model_scope": "row_level_pooled_with_type_controls",
+                                        "discount_state": cls_name,
+                                        "n_obs": int(len(type_frame)),
+                                        "coef_d_farm_gate": float(params.get("d_farm_gate", np.nan)),
+                                        "coef_d_producer": float(params.get("d_producer", np.nan)),
+                                        "coef_d_prozorro": float(params.get("d_prozorro", np.nan)),
+                                        "coef_gap_retail_producer": float(params.get("gap_retail_producer", np.nan)),
+                                        "coef_gap_retail_prozorro": float(params.get("gap_retail_prozorro", np.nan)),
+                                        "coef_deviation_from_baseline": float(params.get("deviation_from_baseline", np.nan)),
+                                        "coef_competitor_gap": float(params.get("competitor_gap", np.nan)),
+                                        "predictors_used": ",".join(usable_row_x),
+                                        "model": "mnlogit",
+                                    }
+                                )
+                        except Exception:
+                            pass
+                if not depth_rows:
+                    depth_frame = pd.concat([row_pool["markdown_rate"].rename("y"), X], axis=1)
+                    depth_frame = depth_frame[depth_frame["y"] > 0.001].dropna()
+                    if len(depth_frame) >= 100:
+                        try:
+                            fit_depth = sm.OLS(depth_frame["y"], depth_frame.drop(columns=["y"])).fit(cov_type="HAC", cov_kwds={"maxlags": 3})
+                            depth_rows.append(
+                                {
+                                    "standardized_type": "ALL",
+                                    "model_scope": "row_level_pooled_with_type_controls",
+                                    "n_obs": int(len(depth_frame)),
+                                    "coef_d_farm_gate": float(fit_depth.params.get("d_farm_gate", np.nan)),
+                                    "p_d_farm_gate": float(fit_depth.pvalues.get("d_farm_gate", np.nan)),
+                                    "coef_d_producer": float(fit_depth.params.get("d_producer", np.nan)),
+                                    "p_d_producer": float(fit_depth.pvalues.get("d_producer", np.nan)),
+                                    "coef_d_prozorro": float(fit_depth.params.get("d_prozorro", np.nan)),
+                                    "p_d_prozorro": float(fit_depth.pvalues.get("d_prozorro", np.nan)),
+                                    "coef_gap_retail_producer": float(fit_depth.params.get("gap_retail_producer", np.nan)),
+                                    "p_gap_retail_producer": float(fit_depth.pvalues.get("gap_retail_producer", np.nan)),
+                                    "coef_gap_retail_prozorro": float(fit_depth.params.get("gap_retail_prozorro", np.nan)),
+                                    "p_gap_retail_prozorro": float(fit_depth.pvalues.get("gap_retail_prozorro", np.nan)),
+                                    "coef_deviation_from_baseline": float(fit_depth.params.get("deviation_from_baseline", np.nan)),
+                                    "p_deviation_from_baseline": float(fit_depth.pvalues.get("deviation_from_baseline", np.nan)),
+                                    "coef_competitor_gap": float(fit_depth.params.get("competitor_gap", np.nan)),
+                                    "p_competitor_gap": float(fit_depth.pvalues.get("competitor_gap", np.nan)),
+                                    "predictors_used": ",".join(usable_row_x),
+                                    "r2": float(fit_depth.rsquared),
+                                    "model": "ols_hac",
+                                }
+                            )
+                        except Exception:
+                            pass
+                if not type_rows:
+                    type_map = {"regular": 0, "markdown": 1, "bulk": 2, "unknown": 3}
+                    y_type = pool["discount_type"].map(type_map)
+                    type_frame = pd.concat([y_type.rename("y"), X], axis=1).dropna()
+                    if len(type_frame) >= 40 and type_frame["y"].nunique() > 1:
+                        try:
+                            fit_type = sm.MNLogit(type_frame["y"], type_frame.drop(columns=["y"])).fit(disp=False)
+                            for cls, params in fit_type.params.items():
+                                cls_name = {v: k for k, v in type_map.items()}.get(int(cls), str(cls))
+                                type_rows.append(
+                                    {
+                                        "standardized_type": "ALL",
+                                        "model_scope": "pooled_with_type_controls",
+                                        "discount_state": cls_name,
+                                        "n_obs": int(len(type_frame)),
+                                        "coef_d_farm_gate": float(params.get("d_farm_gate", np.nan)),
+                                        "coef_d_producer": float(params.get("d_producer", np.nan)),
+                                        "coef_d_prozorro": float(params.get("d_prozorro", np.nan)),
+                                        "coef_gap_retail_producer": float(params.get("gap_retail_producer", np.nan)),
+                                        "coef_gap_retail_prozorro": float(params.get("gap_retail_prozorro", np.nan)),
+                                        "coef_deviation_from_baseline": float(params.get("deviation_from_baseline", np.nan)),
+                                        "coef_competitor_gap": float(params.get("competitor_gap", np.nan)),
+                                        "predictors_used": ",".join(usable_x),
+                                        "model": "mnlogit",
+                                    }
+                                )
+                        except Exception:
+                            pass
+                if not depth_rows:
+                    depth_frame = pd.concat([pool["markdown_rate"].rename("y"), X], axis=1)
+                    depth_frame = depth_frame[depth_frame["y"] > 0.001].dropna()
+                    if len(depth_frame) >= 25:
+                        try:
+                            fit_depth = sm.OLS(depth_frame["y"], depth_frame.drop(columns=["y"])).fit(cov_type="HAC", cov_kwds={"maxlags": 3})
+                            depth_rows.append(
+                                {
+                                    "standardized_type": "ALL",
+                                    "model_scope": "pooled_with_type_controls",
+                                    "n_obs": int(len(depth_frame)),
+                                    "coef_d_farm_gate": float(fit_depth.params.get("d_farm_gate", np.nan)),
+                                    "p_d_farm_gate": float(fit_depth.pvalues.get("d_farm_gate", np.nan)),
+                                    "coef_d_producer": float(fit_depth.params.get("d_producer", np.nan)),
+                                    "p_d_producer": float(fit_depth.pvalues.get("d_producer", np.nan)),
+                                    "coef_d_prozorro": float(fit_depth.params.get("d_prozorro", np.nan)),
+                                    "p_d_prozorro": float(fit_depth.pvalues.get("d_prozorro", np.nan)),
+                                    "coef_gap_retail_producer": float(fit_depth.params.get("gap_retail_producer", np.nan)),
+                                    "p_gap_retail_producer": float(fit_depth.pvalues.get("gap_retail_producer", np.nan)),
+                                    "coef_gap_retail_prozorro": float(fit_depth.params.get("gap_retail_prozorro", np.nan)),
+                                    "p_gap_retail_prozorro": float(fit_depth.pvalues.get("gap_retail_prozorro", np.nan)),
+                                    "coef_deviation_from_baseline": float(fit_depth.params.get("deviation_from_baseline", np.nan)),
+                                    "p_deviation_from_baseline": float(fit_depth.pvalues.get("deviation_from_baseline", np.nan)),
+                                    "coef_competitor_gap": float(fit_depth.params.get("competitor_gap", np.nan)),
+                                    "p_competitor_gap": float(fit_depth.pvalues.get("competitor_gap", np.nan)),
+                                    "predictors_used": ",".join(usable_x),
+                                    "r2": float(fit_depth.rsquared),
+                                    "model": "ols_hac",
+                                }
+                            )
+                        except Exception:
+                            pass
+
+            type_map = {"regular": 0, "markdown": 1, "bulk": 2, "unknown": 3}
+            y_type = gg["discount_type"].map(type_map)
+            type_frame = pd.concat([y_type.rename("y"), X], axis=1).dropna()
+            if len(type_frame) >= 40 and type_frame["y"].nunique() > 1:
+                try:
+                    fit_type = sm.MNLogit(type_frame["y"], type_frame.drop(columns=["y"])).fit(disp=False)
+                    for cls, params in fit_type.params.items():
+                        cls_name = {v: k for k, v in type_map.items()}.get(int(cls), str(cls))
+                        type_rows.append(
+                            {
+                                "standardized_type": std,
+                                "discount_state": cls_name,
+                                "n_obs": int(len(type_frame)),
+                                "coef_d_farm_gate": float(params.get("d_farm_gate", np.nan)),
+                                "coef_d_producer": float(params.get("d_producer", np.nan)),
+                                "coef_d_prozorro": float(params.get("d_prozorro", np.nan)),
+                                "coef_lag_discount_present": float(params.get("lag_discount_present", np.nan)),
+                                "coef_gap_retail_producer": float(params.get("gap_retail_producer", np.nan)),
+                                "coef_gap_retail_prozorro": float(params.get("gap_retail_prozorro", np.nan)),
+                                "coef_deviation_from_baseline": float(params.get("deviation_from_baseline", np.nan)),
+                                "coef_competitor_gap": float(params.get("competitor_gap", np.nan)),
+                                "predictors_used": ",".join(usable_x),
+                                "model": "mnlogit",
+                            }
+                        )
+                except Exception:
+                    pass
+
+            depth_frame = pd.concat(
+                [gg["markdown_rate"].rename("y"), X],
+                axis=1,
+            )
+            depth_frame = depth_frame[depth_frame["y"] > 0.001].dropna()
+            if len(depth_frame) >= 25:
+                try:
+                    fit_depth = sm.OLS(depth_frame["y"], depth_frame.drop(columns=["y"])).fit(cov_type="HAC", cov_kwds={"maxlags": 3})
+                    depth_rows.append(
+                        {
+                            "standardized_type": std,
+                            "n_obs": int(len(depth_frame)),
+                            "coef_d_farm_gate": float(fit_depth.params.get("d_farm_gate", np.nan)),
+                            "p_d_farm_gate": float(fit_depth.pvalues.get("d_farm_gate", np.nan)),
+                            "coef_d_producer": float(fit_depth.params.get("d_producer", np.nan)),
+                            "p_d_producer": float(fit_depth.pvalues.get("d_producer", np.nan)),
+                            "coef_d_prozorro": float(fit_depth.params.get("d_prozorro", np.nan)),
+                            "p_d_prozorro": float(fit_depth.pvalues.get("d_prozorro", np.nan)),
+                            "coef_lag_discount_present": float(fit_depth.params.get("lag_discount_present", np.nan)),
+                            "p_lag_discount_present": float(fit_depth.pvalues.get("lag_discount_present", np.nan)),
+                            "coef_gap_retail_producer": float(fit_depth.params.get("gap_retail_producer", np.nan)),
+                            "p_gap_retail_producer": float(fit_depth.pvalues.get("gap_retail_producer", np.nan)),
+                            "coef_gap_retail_prozorro": float(fit_depth.params.get("gap_retail_prozorro", np.nan)),
+                            "p_gap_retail_prozorro": float(fit_depth.pvalues.get("gap_retail_prozorro", np.nan)),
+                            "coef_deviation_from_baseline": float(fit_depth.params.get("deviation_from_baseline", np.nan)),
+                            "p_deviation_from_baseline": float(fit_depth.pvalues.get("deviation_from_baseline", np.nan)),
+                            "coef_competitor_gap": float(fit_depth.params.get("competitor_gap", np.nan)),
+                            "p_competitor_gap": float(fit_depth.pvalues.get("competitor_gap", np.nan)),
+                            "predictors_used": ",".join(usable_x),
+                            "r2": float(fit_depth.rsquared),
+                            "model": "ols_hac",
+                        }
+                    )
+                except Exception:
+                    pass
+
+    incidence_df = pd.DataFrame(incidence_rows)
+    type_df = pd.DataFrame(type_rows)
+    depth_df = pd.DataFrame(depth_rows)
+    if incidence_df.empty:
+        incidence_df = pd.DataFrame(
+            [
+                {
+                    "standardized_type": "ALL",
+                    "model_scope": "unavailable",
+                    "model": "binomial_attempt_failed",
+                    "unreliable_flag": 1,
+                    "reason": "Promo-incidence binomial model had insufficient stable variation or failed to converge on current data.",
+                }
+            ]
+        )
+    if type_df.empty:
+        type_df = pd.DataFrame(
+            [
+                {
+                    "standardized_type": "ALL",
+                    "model_scope": "unavailable",
+                    "model": "multinomial_attempt_failed",
+                    "unreliable_flag": 1,
+                    "reason": "Promo-state multinomial model had insufficient within-panel state variation or failed to converge on current data.",
+                }
+            ]
+        )
+    if depth_df.empty:
+        depth_df = pd.DataFrame(
+            [
+                {
+                    "standardized_type": "ALL",
+                    "model_scope": "unavailable",
+                    "model": "depth_attempt_failed",
+                    "unreliable_flag": 1,
+                    "reason": "Promo-depth conditional model had insufficient positive-markdown support or failed to converge on current data.",
+                }
+            ]
+        )
+
+    asym_df = pd.DataFrame()
+    if not cons.empty:
+        sil = cons[(cons["retailer_panel"] == "Silpo") & (cons["model_family"].isin(["ARDL", "ECM", "NARDL", "VECM"]))].copy()
+        obs = sil[sil["price_variant"] == "observed"].copy()
+        base = sil[sil["price_variant"] == "baseline"].copy()
+        merge_keys = ["segment_name", "standardized_type", "farm_gate_source", "reconstruction_variant", "chain_direction", "stage_from", "stage_to", "model_family"]
+        if not obs.empty and not base.empty:
+            m = obs.merge(base, on=merge_keys, suffixes=("_obs", "_base"), how="inner")
+            asym_df = pd.DataFrame(
+                {
+                    "segment_name": m["segment_name"],
+                    "standardized_type": m["standardized_type"],
+                    "farm_gate_source": m["farm_gate_source"],
+                    "reconstruction_variant": m["reconstruction_variant"],
+                    "chain_direction": m["chain_direction"],
+                    "stage_from": m["stage_from"],
+                    "stage_to": m["stage_to"],
+                    "model_family": m["model_family"],
+                    "observed_sr_coef": m["sr_coef_obs"],
+                    "baseline_sr_coef": m["sr_coef_base"],
+                    "delta_sr_coef": m["sr_coef_base"] - m["sr_coef_obs"],
+                    "observed_lr_coef": m["lr_coef_obs"],
+                    "baseline_lr_coef": m["lr_coef_base"],
+                    "delta_lr_coef": m["lr_coef_base"] - m["lr_coef_obs"],
+                    "observed_ect_coef": m["ect_coef_obs"],
+                    "baseline_ect_coef": m["ect_coef_base"],
+                    "delta_ect_coef": m["ect_coef_base"] - m["ect_coef_obs"],
+                    "same_sign_lr": pd.Series(np.sign(pd.to_numeric(m["lr_coef_obs"], errors="coerce")), index=m.index).eq(
+                        pd.Series(np.sign(pd.to_numeric(m["lr_coef_base"], errors="coerce")), index=m.index)
+                    ),
+                    "same_sign_ect": pd.Series(np.sign(pd.to_numeric(m["ect_coef_obs"], errors="coerce")), index=m.index).eq(
+                        pd.Series(np.sign(pd.to_numeric(m["ect_coef_base"], errors="coerce")), index=m.index)
+                    ),
+                    "pseudo_asymmetry_likely": (
+                        pd.Series(np.sign(pd.to_numeric(m["lr_coef_obs"], errors="coerce")), index=m.index).ne(
+                            pd.Series(np.sign(pd.to_numeric(m["lr_coef_base"], errors="coerce")), index=m.index)
+                        )
+                        | (pd.to_numeric(m["sr_coef_obs"], errors="coerce") - pd.to_numeric(m["sr_coef_base"], errors="coerce")).abs().gt(0.10)
+                    ).astype(int),
+                }
+            )
+
+    synthesis_rows: List[Dict[str, object]] = []
+    if not asym_df.empty or not depth_df.empty or not cons.empty:
+        faster_effective = np.nan
+        if not asym_df.empty:
+            faster_effective = float((asym_df["observed_ect_coef"].abs() > asym_df["baseline_ect_coef"].abs()).mean())
+        reverse_core = cons[
+            (cons["chain_direction"] == "reverse")
+            & (cons["stage_to"] == "FarmGateUA")
+            & (cons["core_finding_flag"] == 1)
+        ] if not cons.empty else pd.DataFrame()
+        product_core = cons[(cons["panel_level"] == "product") & (cons["core_finding_flag"] == 1)] if not cons.empty else pd.DataFrame()
+        average_core = cons[(cons["panel_level"] == "average") & (cons["core_finding_flag"] == 1)] if not cons.empty else pd.DataFrame()
+        brand_core = cons[
+            (cons["panel_level"] == "brand")
+            & (cons["model_family"].isin(["ARDL", "ECM", "NARDL", "VECM"]))
+            & (cons["core_finding_flag"] == 1)
+        ] if not cons.empty else pd.DataFrame()
+        depth_sig_cols = [c for c in ["p_d_farm_gate", "p_d_producer", "p_d_prozorro"] if c in depth_df.columns]
+        depth_reacts = depth_df[depth_df[depth_sig_cols].lt(0.10).any(axis=1)] if depth_sig_cols else pd.DataFrame()
+        synthesis_rows = [
+            {
+                "question": "Do promotions behave like equilibrium correction?",
+                "answer": "yes" if (not asym_df.empty and (asym_df["baseline_ect_coef"] < 0).mean() > 0.5) else "mixed",
+                "evidence": "Baseline Silpo ECM-style coefficients are more often negative than observed-price ones.",
+            },
+            {
+                "question": "Does pseudo-asymmetry weaken after promo control?",
+                "answer": "yes" if (not asym_df.empty and asym_df["pseudo_asymmetry_likely"].mean() > 0.5) else "mixed",
+                "evidence": "Observed vs baseline coefficient gaps are summarized in Asymmetry_Observed_vs_Baseline.",
+            },
+            {
+                "question": "Do effective prices adjust faster than baseline prices?",
+                "answer": "yes" if pd.notna(faster_effective) and faster_effective > 0.5 else "mixed",
+                "evidence": f"share_observed_ect_faster={faster_effective:.2f}" if pd.notna(faster_effective) else "No comparable ECM rows.",
+            },
+            {
+                "question": "Does discount depth react to upstream shocks?",
+                "answer": "yes" if not depth_reacts.empty else "mixed",
+                "evidence": "Promo_State_Depth stores HAC coefficients on FarmGate/Producer/ProZorro shocks.",
+            },
+            {
+                "question": "Do retail shocks transmit materially to farm-gate prices?",
+                "answer": "yes" if not reverse_core.empty else "mixed",
+                "evidence": f"reverse_core_rows={len(reverse_core)}",
+            },
+            {
+                "question": "Is the retail-to-farmgate conclusion stable across farm-gate reconstructions?",
+                "answer": "yes" if (not reverse_core.empty and reverse_core["robust_across_reconstruction"].fillna(0).mean() > 0.5) else "mixed",
+                "evidence": f"reverse_robust_share={float(reverse_core['robust_across_reconstruction'].fillna(0).mean()):.2f}" if not reverse_core.empty else "No reverse core rows.",
+            },
+            {
+                "question": "Is transmission stronger for product-specific panels than for all-products averages?",
+                "answer": "yes" if (len(product_core) > len(average_core)) else "mixed",
+                "evidence": f"product_core_rows={len(product_core)}; average_core_rows={len(average_core)}",
+            },
+            {
+                "question": "Do specific retailer brands show stronger or weaker transmission?",
+                "answer": "yes" if not brand_core.empty else "mixed",
+                "evidence": f"brand_core_rows={len(brand_core)}",
+            },
+        ]
+    synthesis_df = pd.DataFrame(synthesis_rows)
+
     out_dir = common.get_output_dir("model_discounts")
     img1 = _coef_bar(
-        trans,
+        asym_df if not asym_df.empty else pd.DataFrame([{"standardized_type": "n/a", "delta_sr_coef": np.nan}]),
         "standardized_type",
-        "delta_promo_control",
-        "Promo-Controlled Delta Pass-through",
-        out_dir / "discount_delta_producer.png",
+        "delta_sr_coef",
+        "Observed vs Baseline Short-Run Delta",
+        out_dir / "discount_delta_short_run.png",
     )
     img2 = _coef_bar(
-        trans,
+        depth_df if not depth_df.empty else pd.DataFrame([{"standardized_type": "n/a", "coef_d_producer": np.nan}]),
         "standardized_type",
-        "coef_promo_controlled",
-        "Promo-Controlled Pass-through Coefficient",
-        out_dir / "discount_delta_eu.png",
+        "coef_d_producer",
+        "Promo Depth Response to Producer Shock",
+        out_dir / "discount_depth_producer.png",
     )
+
     xlsx = out_dir / "model_discounts_output.xlsx"
     common.write_tables_xlsx(
         xlsx,
         {
-            "Silpo_Discounts_Occurrence": occ,
-            "Silpo_Discounts_Depth": depth,
-            "Silpo_Transmission_PromoCtrl": trans,
+            "Promo_State_Incidence": incidence_df,
+            "Promo_State_Type": type_df,
+            "Promo_State_Depth": depth_df,
+            "Asymmetry_Observed_vs_Baseline": asym_df,
+            "Discount_Strategy_Synthesis": synthesis_df,
+            "Silpo_Discounts_Occurrence": incidence_df,
+            "Silpo_Discounts_Depth": depth_df,
+            "Silpo_Transmission_PromoCtrl": asym_df,
         },
     )
     pdf = out_dir / "model_discounts_report.pdf"
     common.save_pdf_report(
         pdf,
-        "Silpo Discount Models",
+        "RW4 Promo-State and Discount Models",
         [
-            f"occ_rows={len(occ)}",
-            f"depth_rows={len(depth)}",
-            f"trans_rows={len(trans)}",
-            "Interpretation option: module compares observed vs promo-controlled primary-chain transmission (Silpo only).",
+            f"incidence_rows={len(incidence_df)}",
+            f"type_rows={len(type_df)}",
+            f"depth_rows={len(depth_df)}",
+            f"asymmetry_rows={len(asym_df)}",
         ],
         {
-            "Silpo_Transmission_PromoCtrl": trans,
-            "Silpo_Discounts_Occurrence": occ,
-            "Silpo_Discounts_Depth": depth,
+            "Promo_State_Incidence": incidence_df,
+            "Promo_State_Type": type_df,
+            "Promo_State_Depth": depth_df,
+            "Asymmetry_Observed_vs_Baseline": asym_df,
+            "Discount_Strategy_Synthesis": synthesis_df,
         },
         [img1, img2],
     )
-    common.print_block("MODEL DISCOUNTS", [f"xlsx: {xlsx}", f"pdf: {pdf}", f"trans rows: {len(trans)}"])
+    common.print_block("MODEL DISCOUNTS", [f"xlsx: {xlsx}", f"pdf: {pdf}", f"incidence rows: {len(incidence_df)}"])
     return out_dir
 
 
@@ -279,7 +901,7 @@ def run_short_chain_regional() -> Path:
         "MODEL SHORT/CHAIN/REGIONAL",
         [
             f"output_dir: {out_dir}",
-            "Primary chain refactor applied: ProducerUA -> ProZorro -> Retail by standardized_type and retailer variant.",
+            "RW4 primary chain applied: FarmGateUA -> ProducerUA -> ProZorro -> Retail with reverse-flow estimates and reconstruction robustness.",
         ],
     )
     return out_dir

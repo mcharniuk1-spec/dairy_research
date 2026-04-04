@@ -374,7 +374,9 @@ def build_total_run(outputs_root: Path | None = None) -> Path:
         [
             p
             for p in out_root.rglob("*.xlsx")
-            if p.is_file() and "total_run" not in p.parts
+            if p.is_file()
+            and "total_run" not in p.parts
+            and "rw3" not in p.name.lower()
         ]
     )
     for img in sorted([p for p in out_root.rglob("*.png") if p.is_file() and "total_run" not in p.parts]):

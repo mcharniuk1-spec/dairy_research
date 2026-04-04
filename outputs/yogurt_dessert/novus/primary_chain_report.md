@@ -24,7 +24,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
 | prozorro | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | yogurt_dessert | novus | promo_controlled |
-| retail | 8.355233551536037e-07 | 0.1 | 1.9926759427019733e-07 | 0.08531812929068235 | 0.005576273944668091 | 0.1 | I(0) | 0.0 | yogurt_dessert | novus | promo_controlled |
+| retail | 8.355233551536037e-07 | 0.1 | 1.9926759427017314e-07 | 0.08531812929068235 | 0.005576273944669278 | 0.1 | I(0) | 0.0 | yogurt_dessert | novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | yogurt_dessert | novus | promo_controlled |

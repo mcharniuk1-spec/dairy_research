@@ -23,7 +23,7 @@
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | novus | promo_controlled |
-| prozorro | 1.1483227108295172e-10 | 0.01 | 4.589982408975803e-17 | 0.1 | 4.813752592554151e-10 | 0.1 | I(1) | 0.0 | cottage_cheese | novus | promo_controlled |
+| prozorro | 1.1483227108295005e-10 | 0.01 | 4.589982408975472e-17 | 0.1 | 4.813752592550519e-10 | 0.1 | I(1) | 0.0 | cottage_cheese | novus | promo_controlled |
 | retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | cottage_cheese | novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | cottage_cheese | novus | promo_controlled |

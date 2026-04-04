@@ -46,12 +46,22 @@ except Exception:
     HAS_PCHIP = False
 
 
-DEFAULT_MODEL_DIR = Path("/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model")
+DEFAULT_MODEL_DIR = Path(__file__).resolve().parent
 DEFAULT_INPUT = DEFAULT_MODEL_DIR / "full_uah.xlsx"
 DEFAULT_OUTPUT = DEFAULT_MODEL_DIR / "results" / "rw2_full_output.xlsx"
 
 
-DATASET_ORDER = ["ProducerUA", "ConsumerUA", "EU", "ProZorro", "Silpo", "Novus", "CME"]
+DATASET_ORDER = [
+    "FarmGateUA_initial",
+    "FarmGateUA_filled",
+    "ProducerUA",
+    "ConsumerUA",
+    "EU",
+    "ProZorro",
+    "Silpo",
+    "Novus",
+    "CME",
+]
 
 
 STANDARDIZED_RULES: List[Tuple[str, List[str]]] = [
@@ -324,6 +334,23 @@ def daily_variants_for_dataset(df: pd.DataFrame, source: str) -> pd.DataFrame:
             "brand",
             "region",
             "price",
+            "observed_price",
+            "baseline_price",
+            "price_variant",
+            "reconstruction_variant",
+            "subcategory",
+            "unit_family",
+            "comparison_family",
+            "liter_equiv_allowed",
+            "maturation_type",
+            "admissible_for_level_model",
+            "admissibility_reason",
+            "mapping_quality_flag",
+            "matched_pattern",
+            "fat_band",
+            "pack_band",
+            "segment_key",
+            "shock_dummy",
             "unit_ok",
             "price_real_input",
             "price_linear_input",
@@ -339,10 +366,29 @@ def daily_variants_for_dataset(df: pd.DataFrame, source: str) -> pd.DataFrame:
     if "unit_ok" not in d.columns:
         d["unit_ok"] = 1
 
+    meta_cols = [
+        c
+        for c in [
+            "subcategory",
+            "unit_family",
+            "comparison_family",
+            "liter_equiv_allowed",
+            "maturation_type",
+            "admissible_for_level_model",
+            "admissibility_reason",
+            "mapping_quality_flag",
+            "matched_pattern",
+            "fat_band",
+            "pack_band",
+            "segment_key",
+            "shock_dummy",
+        ]
+        if c in d.columns
+    ]
     groups = []
     gcols = ["product", "standardized_type", "brand", "region"]
     for keys, g in d.groupby(gcols, dropna=False):
-        if source in {"ProducerUA", "ConsumerUA"} and ("price_linear_input" in g.columns or "price_pchip_input" in g.columns):
+        if source in {"ProducerUA", "ConsumerUA", "FarmGateUA_initial", "FarmGateUA_filled"} and ("price_linear_input" in g.columns or "price_pchip_input" in g.columns):
             base = g.copy()
             base["date"] = pd.to_datetime(base["date"], errors="coerce")
             base = base.dropna(subset=["date"])
@@ -386,14 +432,46 @@ def daily_variants_for_dataset(df: pd.DataFrame, source: str) -> pd.DataFrame:
         for k, v in zip(gcols, key_vals):
             dv[k] = v
         dv["source"] = source
-        dv["unit_ok"] = int(g["unit_ok"].max())
+        dv["unit_ok"] = int(pd.to_numeric(g.get("unit_ok"), errors="coerce").fillna(0).max())
+        if "admissible_for_level_model" in g.columns:
+            dv["admissible_for_level_model"] = int(pd.to_numeric(g["admissible_for_level_model"], errors="coerce").fillna(0).max())
+        for mc in meta_cols:
+            non_null = g[mc].dropna()
+            dv[mc] = non_null.iloc[0] if not non_null.empty else np.nan
         groups.append(dv)
 
     if not groups:
         return pd.DataFrame()
 
     out = pd.concat(groups, ignore_index=True)
-    cols = ["source", "date", "product", "standardized_type", "brand", "region", "unit_ok", "price_real", "price_linear", "price_pchip", "imputed_flag_linear", "imputed_flag_pchip"]
+    cols = [
+        "source",
+        "date",
+        "product",
+        "standardized_type",
+        "brand",
+        "region",
+        "subcategory",
+        "unit_family",
+        "comparison_family",
+        "liter_equiv_allowed",
+        "maturation_type",
+        "mapping_quality_flag",
+        "matched_pattern",
+        "fat_band",
+        "pack_band",
+        "segment_key",
+        "shock_dummy",
+        "admissible_for_level_model",
+        "admissibility_reason",
+        "unit_ok",
+        "price_real",
+        "price_linear",
+        "price_pchip",
+        "imputed_flag_linear",
+        "imputed_flag_pchip",
+    ]
+    cols = [c for c in cols if c in out.columns]
     return out[cols]
 
 
@@ -419,7 +497,7 @@ def long_price_series(daily_df: pd.DataFrame) -> pd.DataFrame:
     if daily_df.empty:
         return pd.DataFrame()
     out = daily_df.melt(
-        id_vars=[c for c in ["source", "date", "product", "standardized_type", "brand", "region", "unit_ok", "imputed_flag_linear", "imputed_flag_pchip"] if c in daily_df.columns],
+        id_vars=[c for c in ["source", "date", "product", "standardized_type", "brand", "region", "subcategory", "unit_family", "comparison_family", "segment_key", "admissible_for_level_model", "unit_ok", "imputed_flag_linear", "imputed_flag_pchip"] if c in daily_df.columns],
         value_vars=[c for c in ["price_real", "price_linear", "price_pchip"] if c in daily_df.columns],
         var_name="series_variant",
         value_name="price",
@@ -3007,7 +3085,7 @@ def build_model_series(weekly_df: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame()
     selected = []
     for source in weekly_df["source"].dropna().unique():
-        v = "pchip" if source in {"ProducerUA", "ConsumerUA"} else "real"
+        v = "pchip" if source in {"ProducerUA", "ConsumerUA", "FarmGateUA_initial", "FarmGateUA_filled"} else "real"
         ss = weekly_df[(weekly_df["source"] == source) & (weekly_df["series_variant"] == v)].copy()
         if ss.empty:
             ss = weekly_df[(weekly_df["source"] == source) & (weekly_df["series_variant"] == "real")].copy()

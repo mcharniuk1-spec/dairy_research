@@ -1,4 +1,4 @@
-# RW3 Separate Sheet Module - Novus
+# RW4 Sheet Module - Novus
 
 ## Interpretation Guide
 - ADF p>0.05 and KPSS p<0.05 -> likely I(1)-like; prefer differences/cointegration models.
@@ -15,8 +15,8 @@
 - Rows (clean): 1530
 - Date range: 2025-11-04 .. 2026-01-08
 - Products: 9
-- Stats rows: 36
-- Tests rows: 36
+- Stats rows: 27
+- Tests rows: 27
 - Interpretation option: use tests table -> recommended_action/recommended_model_family per product.
 
 ## Tables
@@ -29,11 +29,15 @@
 | Novus | cир ilchester з шоколадом і апельсином 42% | 2025-11-04 19:45:35.825000 | 2025-11-04 00:00:00 | Cир Ilchester з шоколадом і апельсином 42% | Інше | Інше/невідомо | other | Cир | Україна | 1199.0 | nan |
 | Novus | cир ilchester чеддер з ароматом копченого яблука 54% | 2025-11-04 19:45:36.039000 | 2025-11-04 00:00:00 | Cир Ilchester Чеддер з ароматом копченого яблука 54% | Сир | Сир твердий | hard_cheese | Cир | Україна | 1089.0 | nan |
 | Novus | cир paturages comtois брі 60% 130г | 2025-11-04 19:45:35.780000 | 2025-11-04 00:00:00 | Cир Paturages Comtois Брі 60% 130г | Інше | Інше/невідомо | other | Cир | Україна | 179.0 | nan |
+| Novus | cир prego mozzarella сarmela розсольний 45% 125г | 2026-01-08 13:25:16.123000 | 2026-01-08 00:00:00 | Cир Prego Mozzarella Сarmela розсольний 45% 125г | Сир | Сир твердий | hard_cheese | Cир | Україна | 49.99 | nan |
 | Novus | cир prego pomadore piccante твердий 45% | 2025-11-04 19:45:35.277000 | 2025-11-04 00:00:00 | Cир Prego Pomadore piccante твердий 45% | Сир | Сир твердий | hard_cheese | Cир | Україна | 469.0 | nan |
+| Novus | cир val de saone брі 60% 500г | 2026-01-08 13:25:16.211000 | 2026-01-08 00:00:00 | Cир Val de Saone Брі 60% 500г | Вершки | Вершки | cream | Cир | Україна | 389.0 | nan |
 | Novus | cир запечений alpenhain камамбер та соус із журавлини 57% 200г | 2025-11-04 19:45:36.018000 | 2025-11-04 00:00:00 | Cир запечений Alpenhain Камамбер та соус із журавлини 57% 200г | Сир кисломолочний | Сир кисломолочний | cottage_cheese | Cир | Україна | 249.0 | nan |
-| Novus | айран onur турецький безлактозний 1,8% 500мл | 2025-11-04 19:45:35.725000 | 2025-11-04 00:00:00 | Айран Onur Турецький безлактозний 1,8% 500мл | Масло вершкове | Масло вершкове | butter | Айран | Україна | 62.99 | nan |
+| Novus | айран onur турецький безлактозний 1,8% 500мл | 2025-11-04 19:45:35.725000 | 2025-11-04 00:00:00 | Айран Onur Турецький безлактозний 1,8% 500мл | Масло вершкове | Вершки | cream | Айран | Україна | 62.99 | nan |
 | Novus | айран onur турецький свіжа м'ята 1,8% 500мл | 2025-11-04 19:45:35.861000 | 2025-11-04 00:00:00 | Айран Onur Турецький Свіжа м'ята 1,8% 500мл | Інше | Інше/невідомо | other | Айран | Україна | 62.99 | nan |
 | Novus | айран онур турецький 1,8% 0,5л | 2025-11-04 19:45:35.678000 | 2025-11-04 00:00:00 | Айран Онур Турецький 1,8% 0,5л | Інше | Інше/невідомо | other | Айран | Україна | 49.49 | nan |
+| Novus | айран онур турецький 1,8% 1л | 2026-01-08 13:25:16.072000 | 2026-01-08 00:00:00 | Айран Онур Турецький 1,8% 1л | Інше | Інше/невідомо | other | Айран | Україна | 68.99 | nan |
+| Novus | айран онур турецький 1,8% 200г | 2025-11-05 13:53:27.347000 | 2025-11-05 00:00:00 | Айран Онур Турецький 1,8% 200г | Масло вершкове | Вершки | cream | Айран | Україна | 20.49 | nan |
 | Novus | айран яготинський з базиліком 1,8% 450г | 2025-11-04 19:45:35.786000 | 2025-11-04 00:00:00 | Айран Яготинський з базиліком 1,8% 450г | Сметана | Сметана | sour_cream | Айран | Україна | 29.99 | nan |
 | Novus | айран яготинський з кропом 1,8% 850г | 2025-11-04 19:45:35.545000 | 2025-11-04 00:00:00 | Айран Яготинський з кропом 1,8% 850г | Інше | Інше/невідомо | other | Айран | Україна | 64.99 | nan |
 | Novus | біфідойогурт danone активіа білий 2,4% 165г | 2025-11-04 19:45:35.387000 | 2025-11-04 00:00:00 | Біфідойогурт Danone Активіа Білий 2,4% 165г | Йогурт | Йогурт | yogurt_dessert | Danone | Україна | 26.49 | nan |
@@ -44,72 +48,68 @@
 | Novus | біфідойогурт активіа 5 злаків 1,5% 290г | 2025-11-04 19:45:35.265000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа 5 злаків 1,5% 290г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 80.99 | nan |
 | Novus | біфідойогурт активіа 5 злаків 1,5% 800г | 2025-11-04 19:45:36.101000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа 5 злаків 1,5% 800г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 80.99 | nan |
 | Novus | біфідойогурт активіа абрикос-злаки 1,2% 500г | 2025-11-04 19:45:35.502000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа Абрикос-злаки 1,2% 500г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 59.99 | nan |
+| Novus | біфідойогурт активіа ананас 1,2% 260г | 2026-01-08 13:25:16.228000 | 2026-01-08 00:00:00 | Біфідойогурт Активіа Ананас 1,2% 260г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 36.79 | nan |
 | Novus | біфідойогурт активіа ананас 1,5% 290г | 2025-11-04 19:45:35.731000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа Ананас 1,5% 290г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 80.99 | nan |
-| Novus | біфідойогурт активіа ананас 1,5% 800г | 2025-11-04 19:45:35.293000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа ананас 1,5% 800г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 80.99 | nan |
-| Novus | біфідойогурт активіа банан-ківі безлактозний 0,8% 260г | 2025-11-04 19:45:35.301000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа Банан-ківі безлактозний 0,8% 260г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 38.79 | nan |
-| Novus | біфідойогурт активіа без лактози 0,9% 260г | 2025-11-04 19:45:35.438000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа Без лактози 0,9% 260г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 38.79 | nan |
-| Novus | біфідойогурт активіа без цукру 1,5% 260г | 2025-11-04 19:45:35.699000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа без цукру 1,5% 260г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 33.99 | nan |
-| Novus | біфідойогурт активіа білий без цукру безлактозний 0,9% 290г | 2025-11-04 19:45:35.522000 | 2025-11-04 00:00:00 | Біфідойогурт Активіа білий без цукру безлактозний 0,9% 290г | Йогурт | Йогурт | yogurt_dessert | Активіа | Україна | 38.79 | nan |
 
 ### descriptive_stats
 
 | source | product | standardized_type | series_variant | count | missing | imputed_share | mean | median | std | min | max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Novus | Інше/невідомо | milk | linear | 0 | 68 | nan | nan | nan | nan | nan | nan |
 | Novus | Інше/невідомо | other | linear | 0 | 595 | nan | nan | nan | nan | nan | nan |
-| Novus | Інше/невідомо | yogurt_dessert | linear | 0 | 4 | nan | nan | nan | nan | nan | nan |
-| Novus | Інше/невідомо | milk | pchip | 0 | 68 | nan | nan | nan | nan | nan | nan |
 | Novus | Інше/невідомо | other | pchip | 0 | 595 | nan | nan | nan | nan | nan | nan |
-| Novus | Інше/невідомо | yogurt_dessert | pchip | 0 | 4 | nan | nan | nan | nan | nan | nan |
-| Novus | Інше/невідомо | milk | real | 5 | 63 | nan | 83.39165891472868 | 79.98666666666666 | 8.214346846934783 | 73.32000000000001 | 93.01162790697674 |
 | Novus | Інше/невідомо | other | real | 50 | 545 | nan | 308.4193055571029 | 108.73397058823531 | 578.8244318973653 | 3.6495 | 3517.647058823529 |
-| Novus | Інше/невідомо | yogurt_dessert | real | 4 | 0 | nan | 653.520688405797 | 423.25333333333333 | 565.143920198352 | 273.8260869565217 | 1493.75 |
-| Novus | Вершки | cream | linear | 0 | 1044 | nan | nan | nan | nan | nan | nan |
-| Novus | Вершки | cream | pchip | 0 | 1044 | nan | nan | nan | nan | nan | nan |
-| Novus | Вершки | cream | real | 83 | 961 | nan | 417.6976886882837 | 353.2666666666667 | 341.91679788760206 | 37.66166666666666 | 1811.975 |
-| Novus | Йогурт | milk | linear | 0 | 2 | nan | nan | nan | nan | nan | nan |
-| Novus | Йогурт | yogurt_dessert | linear | 0 | 894 | nan | nan | nan | nan | nan | nan |
-| Novus | Йогурт | milk | pchip | 0 | 2 | nan | nan | nan | nan | nan | nan |
-| Novus | Йогурт | yogurt_dessert | pchip | 0 | 894 | nan | nan | nan | nan | nan | nan |
-| Novus | Йогурт | milk | real | 2 | 0 | nan | 239.11916666666667 | 239.11916666666667 | 192.8126985826458 | 102.78 | 375.4583333333333 |
-| Novus | Йогурт | yogurt_dessert | real | 74 | 820 | nan | 1265.2588180857383 | 156.4776984126984 | 9278.627528617262 | 62.47499999999999 | 79999.99875 |
-| Novus | Кефір | milk | linear | 0 | 87 | nan | nan | nan | nan | nan | nan |
-| Novus | Кефір | milk | pchip | 0 | 87 | nan | nan | nan | nan | nan | nan |
-| Novus | Кефір | milk | real | 17 | 70 | nan | 75.0878285425316 | 75.28235294117647 | 10.790986388770849 | 56.99 | 92.21111111111111 |
-| Novus | Масло вершкове | butter | linear | 0 | 938 | nan | nan | nan | nan | nan | nan |
-| Novus | Масло вершкове | butter | pchip | 0 | 938 | nan | nan | nan | nan | nan | nan |
-| Novus | Масло вершкове | butter | real | 69 | 869 | nan | 524.8726224460459 | 544.3888888888889 | 345.0101656523798 | 73.67368421052632 | 1592.0 |
-| Novus | Молоко питне | milk | linear | 0 | 770 | nan | nan | nan | nan | nan | nan |
+| Novus | Вершки | cream | linear | 0 | 1683 | nan | nan | nan | nan | nan | nan |
+| Novus | Вершки | cream | pchip | 0 | 1683 | nan | nan | nan | nan | nan | nan |
+| Novus | Вершки | cream | real | 131 | 1552 | nan | 498.2859652257032 | 476.0 | 328.6917557705472 | 37.66166666666666 | 1811.975 |
+| Novus | Йогурт | yogurt_dessert | linear | 0 | 979 | nan | nan | nan | nan | nan | nan |
+| Novus | Йогурт | yogurt_dessert | pchip | 0 | 979 | nan | nan | nan | nan | nan | nan |
+| Novus | Йогурт | yogurt_dessert | real | 84 | 895 | nan | 1166.1801394378008 | 163.0 | 8706.963508734492 | 62.47499999999999 | 79999.99875 |
+| Novus | Кефір | milk | linear | 0 | 320 | nan | nan | nan | nan | nan | nan |
+| Novus | Кефір | milk | pchip | 0 | 320 | nan | nan | nan | nan | nan | nan |
+| Novus | Кефір | milk | real | 26 | 294 | nan | 81.30565361033958 | 79.42344827586206 | 14.173574554449727 | 62.21111111111111 | 124.05555555555559 |
+| Novus | Масло вершкове | butter | linear | 0 | 1 | nan | nan | nan | nan | nan | nan |
+| Novus | Масло вершкове | butter | pchip | 0 | 1 | nan | nan | nan | nan | nan | nan |
+| Novus | Масло вершкове | butter | real | 1 | 0 | nan | 1592.0 | 1592.0 | 0.0 | 1592.0 | 1592.0 |
+| Novus | Молоко питне | milk | linear | 0 | 1014 | nan | nan | nan | nan | nan | nan |
+| Novus | Молоко питне | milk | pchip | 0 | 1014 | nan | nan | nan | nan | nan | nan |
+| Novus | Молоко питне | milk | real | 91 | 923 | nan | 210.83802119587278 | 81.1 | 266.64860466840315 | 13.995 | 1566.333333333333 |
+| Novus | Сир кисломолочний | cottage_cheese | linear | 0 | 680 | nan | nan | nan | nan | nan | nan |
+| Novus | Сир кисломолочний | cottage_cheese | pchip | 0 | 680 | nan | nan | nan | nan | nan | nan |
+| Novus | Сир кисломолочний | cottage_cheese | real | 62 | 618 | nan | 377.02179026832835 | 283.54285714285714 | 431.1027889083751 | 101.98 | 3390.0 |
+| Novus | Сир твердий | hard_cheese | linear | 0 | 2987 | nan | nan | nan | nan | nan | nan |
+| Novus | Сир твердий | hard_cheese | pchip | 0 | 2987 | nan | nan | nan | nan | nan | nan |
+| Novus | Сир твердий | hard_cheese | real | 268 | 2719 | nan | 903.9736582903233 | 719.46 | 804.8128183586101 | 67.99 | 10990.0 |
+| Novus | Сметана | sour_cream | linear | 0 | 395 | nan | nan | nan | nan | nan | nan |
 
 ### tests
 
 | source | product | standardized_type | series_variant | n_obs | adf_p | kpss_p | ljungbox_p | bp_p | white_p | jb_p | stability_flag |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Novus | Інше/невідомо | milk | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Інше/невідомо | other | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Інше/невідомо | yogurt_dessert | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Інше/невідомо | milk | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Інше/невідомо | other | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Інше/невідомо | yogurt_dessert | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Інше/невідомо | milk | real | 3 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Інше/невідомо | other | real | 5 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Інше/невідомо | yogurt_dessert | real | 2 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Вершки | cream | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Вершки | cream | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Вершки | cream | real | 9 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Йогурт | milk | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Йогурт | yogurt_dessert | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Йогурт | milk | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Йогурт | yogurt_dessert | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Йогурт | milk | real | 1 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Йогурт | yogurt_dessert | real | 9 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Кефір | milk | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Кефір | milk | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Кефір | milk | real | 5 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Масло вершкове | butter | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Масло вершкове | butter | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
-| Novus | Масло вершкове | butter | real | 9 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Масло вершкове | butter | real | 1 | nan | nan | nan | nan | nan | nan | 0 |
 | Novus | Молоко питне | milk | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Молоко питне | milk | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Молоко питне | milk | real | 9 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сир кисломолочний | cottage_cheese | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сир кисломолочний | cottage_cheese | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сир кисломолочний | cottage_cheese | real | 9 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сир твердий | hard_cheese | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сир твердий | hard_cheese | pchip | 0 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сир твердий | hard_cheese | real | 9 | nan | nan | nan | nan | nan | nan | 0 |
+| Novus | Сметана | sour_cream | linear | 0 | nan | nan | nan | nan | nan | nan | 0 |
 
 ## Graphs
 

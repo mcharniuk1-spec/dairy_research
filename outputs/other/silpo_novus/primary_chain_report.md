@@ -23,8 +23,8 @@
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | producer | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | other | silpo_novus | promo_controlled |
-| prozorro | 0.9029715543675231 | 0.01 | 1.3734510184087591e-14 | 0.1 | 1.260173359802745e-10 | 0.1 | I(1) | 1.0 | other | silpo_novus | promo_controlled |
-| retail | 0.13774846220222936 | 0.1 | 0.022304689067361494 | 0.1 | 1.0563874553359415e-08 | 0.1 | I(1) | 0.0 | other | silpo_novus | promo_controlled |
+| prozorro | 0.9029715543675233 | 0.01 | 1.3734510184088137e-14 | 0.1 | 1.2601733598025704e-10 | 0.1 | I(1) | 1.0 | other | silpo_novus | promo_controlled |
+| retail | 0.13774846220222936 | 0.1 | 0.02230468906736146 | 0.1 | 1.0563874553359726e-08 | 0.1 | I(1) | 0.0 | other | silpo_novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo_novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo_novus | promo_controlled |
 | producer_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | other | silpo_novus | promo_controlled |
@@ -33,15 +33,15 @@
 
 | standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| other | silpo_novus | promo_controlled | daily | prozorro_to_retail | ARDL | retail | prozorro | 52 | 3.191807377212619 | -12.700814525525912 | nan |
-| other | silpo_novus | promo_controlled | daily | prozorro_to_retail | NARDL | retail | prozorro | 50 | 0.7522139284224689 | 6.209165049284258 | -0.4291476640555171 |
+| other | silpo_novus | promo_controlled | daily | prozorro_to_retail | ARDL | retail | prozorro | 52 | 3.191807377212628 | -12.70081452552557 | nan |
+| other | silpo_novus | promo_controlled | daily | prozorro_to_retail | NARDL | retail | prozorro | 50 | 0.7522139284224749 | 6.209165049284259 | -0.4291476640555165 |
 
 ### ResidualDiagnostics
 
 | model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ARDL | prozorro_to_retail | retail | prozorro | 0.38926394797562297 | 0.10283762781865258 | 0.894300321098457 | 0 |
-| NARDL | prozorro_to_retail | retail | prozorro | 0.23976635344270975 | 0.005946756007259149 | 6.260837456608593e-56 | 1 |
+| ARDL | prozorro_to_retail | retail | prozorro | 0.389263947975609 | 0.10283762781865896 | 0.8943003210984833 | 0 |
+| NARDL | prozorro_to_retail | retail | prozorro | 0.2397663534427088 | 0.0059467560072590945 | 6.260837456607158e-56 | 1 |
 
 ### SeriesUsed
 
@@ -113,27 +113,27 @@
 
 | horizon | mult_pos | mult_neg | link |
 | --- | --- | --- | --- |
-| 0 | -1.2056182554944759 | -1.9578321839169448 | prozorro_to_retail |
-| 1 | -1.3625211573833618 | -2.21263054124775 | prozorro_to_retail |
-| 2 | -1.3829409880461419 | -2.2457907903394725 | prozorro_to_retail |
-| 3 | -1.3855984881897139 | -2.250106368082376 | prozorro_to_retail |
-| 4 | -1.3859443435070138 | -2.25066801076496 | prozorro_to_retail |
-| 5 | -1.3859893541915076 | -2.2507411046869543 | prozorro_to_retail |
-| 6 | -1.3859952120216963 | -2.250750617356839 | prozorro_to_retail |
-| 7 | -1.3859959743778993 | -2.250751855365224 | prozorro_to_retail |
-| 8 | -1.3859960735933017 | -2.250752016483478 | prozorro_to_retail |
-| 9 | -1.3859960865055023 | -2.2507520374519077 | prozorro_to_retail |
-| 10 | -1.3859960881859361 | -2.2507520401808043 | prozorro_to_retail |
-| 11 | -1.385996088404633 | -2.2507520405359513 | prozorro_to_retail |
-| 12 | -1.3859960884330949 | -2.2507520405821713 | prozorro_to_retail |
-| 13 | -1.385996088436799 | -2.2507520405881865 | prozorro_to_retail |
-| 14 | -1.385996088437281 | -2.2507520405889694 | prozorro_to_retail |
-| 15 | -1.3859960884373437 | -2.250752040589071 | prozorro_to_retail |
-| 16 | -1.385996088437352 | -2.2507520405890844 | prozorro_to_retail |
-| 17 | -1.385996088437353 | -2.250752040589086 | prozorro_to_retail |
-| 18 | -1.3859960884373532 | -2.250752040589086 | prozorro_to_retail |
-| 19 | -1.3859960884373532 | -2.250752040589086 | prozorro_to_retail |
-| 20 | -1.3859960884373532 | -2.250752040589086 | prozorro_to_retail |
+| 0 | -1.2056182554944732 | -1.9578321839169481 | prozorro_to_retail |
+| 1 | -1.362521157383359 | -2.2126305412477545 | prozorro_to_retail |
+| 2 | -1.3829409880461392 | -2.245790790339477 | prozorro_to_retail |
+| 3 | -1.3855984881897114 | -2.2501063680823803 | prozorro_to_retail |
+| 4 | -1.3859443435070113 | -2.2506680107649646 | prozorro_to_retail |
+| 5 | -1.3859893541915052 | -2.250741104686959 | prozorro_to_retail |
+| 6 | -1.3859952120216938 | -2.2507506173568435 | prozorro_to_retail |
+| 7 | -1.3859959743778967 | -2.2507518553652286 | prozorro_to_retail |
+| 8 | -1.3859960735932992 | -2.2507520164834824 | prozorro_to_retail |
+| 9 | -1.3859960865054997 | -2.250752037451912 | prozorro_to_retail |
+| 10 | -1.3859960881859335 | -2.2507520401808088 | prozorro_to_retail |
+| 11 | -1.3859960884046303 | -2.250752040535956 | prozorro_to_retail |
+| 12 | -1.3859960884330922 | -2.2507520405821757 | prozorro_to_retail |
+| 13 | -1.3859960884367963 | -2.250752040588191 | prozorro_to_retail |
+| 14 | -1.3859960884372784 | -2.250752040588974 | prozorro_to_retail |
+| 15 | -1.3859960884373412 | -2.2507520405890755 | prozorro_to_retail |
+| 16 | -1.3859960884373494 | -2.250752040589089 | prozorro_to_retail |
+| 17 | -1.3859960884373503 | -2.2507520405890906 | prozorro_to_retail |
+| 18 | -1.3859960884373506 | -2.250752040589091 | prozorro_to_retail |
+| 19 | -1.3859960884373506 | -2.250752040589091 | prozorro_to_retail |
+| 20 | -1.3859960884373506 | -2.250752040589091 | prozorro_to_retail |
 
 ### VECM_IRF
 

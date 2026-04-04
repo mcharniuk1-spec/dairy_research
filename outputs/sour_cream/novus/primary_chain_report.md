@@ -22,8 +22,8 @@
 
 | series | adf_level_p | kpss_level_p | adf_diff1_p | kpss_diff1_p | adf_diff2_p | kpss_diff2_p | integration_class | stability_flag | standardized_type | retailer | promo_variant |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| producer | 0.014081535169907735 | 0.01 | 4.706435460154828e-13 | 0.1 | 3.085032729165042e-21 | 0.1 | I(1) | 1.0 | sour_cream | novus | promo_controlled |
-| prozorro | 0.21880956753864628 | 0.04947047925942609 | 2.411890357322739e-12 | 0.1 | 3.969186107838014e-13 | 0.1 | I(1) | 0.0 | sour_cream | novus | promo_controlled |
+| producer | 0.01408153516990551 | 0.01 | 4.706435460152205e-13 | 0.1 | 3.085032729165153e-21 | 0.1 | I(1) | 1.0 | sour_cream | novus | promo_controlled |
+| prozorro | 0.21880956753864866 | 0.04947047925942609 | 2.411890357322739e-12 | 0.1 | 3.969186107841103e-13 | 0.1 | I(1) | 0.0 | sour_cream | novus | promo_controlled |
 | retail | nan | nan | nan | nan | nan | nan | ambiguous | 0.0 | sour_cream | novus | promo_controlled |
 | producer_to_prozorro | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | novus | promo_controlled |
 | prozorro_to_retail | nan | nan | nan | nan | nan | nan | pair | nan | sour_cream | novus | promo_controlled |
@@ -33,15 +33,15 @@
 
 | standardized_type | retailer | promo_variant | frequency | link | model_family | y_series | x_series | n_obs | sr_coef | lr_coef | ect_coef |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| sour_cream | novus | promo_controlled | daily | producer_to_prozorro | ARDL | prozorro | producer | 178 | 0.1503321327484457 | 0.53201805897649 | nan |
-| sour_cream | novus | promo_controlled | daily | producer_to_prozorro | NARDL | prozorro | producer | 176 | 0.8049124174362647 | 0.3181803694069162 | -0.9103202976511395 |
+| sour_cream | novus | promo_controlled | daily | producer_to_prozorro | ARDL | prozorro | producer | 178 | 0.15033213274852208 | 0.532018058976545 | nan |
+| sour_cream | novus | promo_controlled | daily | producer_to_prozorro | NARDL | prozorro | producer | 176 | 0.8049124174362638 | 0.31818036940691613 | -0.9103202976511392 |
 
 ### ResidualDiagnostics
 
 | model_family | link | y_series | x_series | ljungbox_p | arch_p | jb_p | unreliable_flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ARDL | producer_to_prozorro | prozorro | producer | 0.9991919902903724 | 0.4332665662567991 | 0.028152037118155036 | 0 |
-| NARDL | producer_to_prozorro | prozorro | producer | 0.0725257366713705 | 0.012783066753899433 | 0.03261969684847455 | 1 |
+| ARDL | producer_to_prozorro | prozorro | producer | 0.9991919902903723 | 0.4332665662563698 | 0.028152037118156784 | 0 |
+| NARDL | producer_to_prozorro | prozorro | producer | 0.07252573667137008 | 0.012783066753899843 | 0.032619696848474544 | 1 |
 
 ### SeriesUsed
 
@@ -113,27 +113,27 @@
 
 | horizon | mult_pos | mult_neg | link |
 | --- | --- | --- | --- |
-| 0 | 0.5272629908128263 | -0.27764942662343833 | producer_to_prozorro |
-| 1 | 0.5660151486488385 | -0.29805577903403124 | producer_to_prozorro |
-| 2 | 0.5688633093639157 | -0.2995555812262039 | producer_to_prozorro |
-| 3 | 0.5690726401447521 | -0.2996658119313484 | producer_to_prozorro |
-| 4 | 0.5690880252933407 | -0.29967391353862705 | producer_to_prozorro |
-| 5 | 0.5690891560529745 | -0.29967450898107123 | producer_to_prozorro |
-| 6 | 0.5690892391602219 | -0.2996745527442027 | producer_to_prozorro |
-| 7 | 0.569089245268341 | -0.29967455596065407 | producer_to_prozorro |
-| 8 | 0.5690892457172685 | -0.2996745561970531 | producer_to_prozorro |
-| 9 | 0.5690892457502632 | -0.2996745562144276 | producer_to_prozorro |
-| 10 | 0.5690892457526882 | -0.2996745562157046 | producer_to_prozorro |
-| 11 | 0.5690892457528665 | -0.29967455621579847 | producer_to_prozorro |
-| 12 | 0.5690892457528796 | -0.29967455621580535 | producer_to_prozorro |
-| 13 | 0.5690892457528804 | -0.29967455621580585 | producer_to_prozorro |
-| 14 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
-| 15 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
-| 16 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
-| 17 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
-| 18 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
-| 19 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
-| 20 | 0.5690892457528806 | -0.2996745562158059 | producer_to_prozorro |
+| 0 | 0.5272629908128266 | -0.2776494266234373 | producer_to_prozorro |
+| 1 | 0.5660151486488386 | -0.2980557790340301 | producer_to_prozorro |
+| 2 | 0.5688633093639158 | -0.29955558122620274 | producer_to_prozorro |
+| 3 | 0.5690726401447522 | -0.29966581193134717 | producer_to_prozorro |
+| 4 | 0.5690880252933408 | -0.2996739135386258 | producer_to_prozorro |
+| 5 | 0.5690891560529747 | -0.29967450898107 | producer_to_prozorro |
+| 6 | 0.569089239160222 | -0.29967455274420146 | producer_to_prozorro |
+| 7 | 0.5690892452683411 | -0.29967455596065284 | producer_to_prozorro |
+| 8 | 0.5690892457172686 | -0.29967455619705186 | producer_to_prozorro |
+| 9 | 0.5690892457502633 | -0.2996745562144264 | producer_to_prozorro |
+| 10 | 0.5690892457526884 | -0.2996745562157034 | producer_to_prozorro |
+| 11 | 0.5690892457528666 | -0.29967455621579725 | producer_to_prozorro |
+| 12 | 0.5690892457528797 | -0.29967455621580413 | producer_to_prozorro |
+| 13 | 0.5690892457528807 | -0.29967455621580463 | producer_to_prozorro |
+| 14 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
+| 15 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
+| 16 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
+| 17 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
+| 18 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
+| 19 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
+| 20 | 0.5690892457528807 | -0.2996745562158047 | producer_to_prozorro |
 
 ### VECM_IRF
 
