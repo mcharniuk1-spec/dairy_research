@@ -10,39 +10,39 @@
 - For retail transmission, compare no-promo vs promo-controlled estimates.
 
 ## Notes
-- RW4 domestic vertical chain is FarmGateUA -> ProducerUA -> ProZorro -> Retail, estimated with both forward and reverse-flow pairs. Farm-gate enters from two alternative reconstruction workbooks and both linear/pchip interpolation variants are carried end-to-end.
+- RW4 domestic vertical chain is FarmGateUA -> ProducerUA -> ProZorro -> Retail, estimated with both forward and reverse-flow pairs. Farm-gate enters from two alternative reconstruction workbooks and both linear/pchip interpolation variants are carried end-to-end. Retail_combined is the anchored downstream index built from Silpo effective prices, Novus observed prices, and a level-aligned ConsumerUA anchor, while Retail_combined_core keeps the strict retailer-only overlap for robustness.
 - family=VECM
-- rows=156
+- rows=288
 - source=/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/Charniuk_Dairy_Research/outputs/primary_chain_summary/primary_chain_consolidated.xlsx
 
 ## Tables
 
 ### VECM_Summary
 
-| panel_level | panel_name | segment_name | product | standardized_type | retailer_panel | brand | price_variant | reconstruction_variant | farm_gate_source | frequency | chain_direction |
+| panel_level | panel_name | segment_name | product | standardized_type | retailer_panel | brand | price_variant | reconstruction_variant | farm_gate_source | frequency | intersection_rule |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| product | product::Вершки::Silpo::observed::initial::linear | Вершки | Вершки | cream | Silpo | nan | observed | linear | initial | daily | forward |
-| product | product::Молоко питне::Silpo::observed::initial::linear | Молоко питне | Молоко питне | milk | Silpo | nan | observed | linear | initial | daily | forward |
-| product | product::Сир твердий::Silpo::observed::initial::linear | Сир твердий | Сир твердий | hard_cheese | Silpo | nan | observed | linear | initial | daily | forward |
-| product | product::Сметана::Silpo::observed::initial::linear | Сметана | Сметана | sour_cream | Silpo | nan | observed | linear | initial | daily | forward |
-| product | product::Вершки::Silpo::baseline::initial::linear | Вершки | Вершки | cream | Silpo | nan | baseline | linear | initial | daily | forward |
-| product | product::Молоко питне::Silpo::baseline::initial::linear | Молоко питне | Молоко питне | milk | Silpo | nan | baseline | linear | initial | daily | forward |
-| product | product::Сир твердий::Silpo::baseline::initial::linear | Сир твердий | Сир твердий | hard_cheese | Silpo | nan | baseline | linear | initial | daily | forward |
-| product | product::Сметана::Silpo::baseline::initial::linear | Сметана | Сметана | sour_cream | Silpo | nan | baseline | linear | initial | daily | forward |
-| average | average::Silpo::observed::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | observed | linear | initial | daily | forward |
-| average | average::Silpo::observed::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | observed | linear | initial | daily | forward |
-| average | average::Silpo::observed::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | observed | linear | initial | daily | forward |
-| average | average::Silpo::baseline::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | baseline | linear | initial | daily | forward |
-| average | average::Silpo::baseline::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | baseline | linear | initial | daily | forward |
-| average | average::Silpo::baseline::initial::linear | all_products_average | all_products_average | all_products_average | Silpo | nan | baseline | linear | initial | daily | forward |
-| comparison | comparison::silpo_vs_novus_observed::initial::linear | silpo_vs_novus_observed | silpo_vs_novus_observed | comparison_panel | silpo_vs_novus_observed | nan | observed_comparison | linear | initial | daily | forward |
-| comparison | comparison::silpo_vs_novus_observed::initial::linear | silpo_vs_novus_observed | silpo_vs_novus_observed | comparison_panel | silpo_vs_novus_observed | nan | observed_comparison | linear | initial | daily | forward |
-| comparison | comparison::silpo_vs_novus_observed::initial::linear | silpo_vs_novus_observed | silpo_vs_novus_observed | comparison_panel | silpo_vs_novus_observed | nan | observed_comparison | linear | initial | daily | forward |
-| comparison | comparison::silpo_baseline_vs_novus_observed::initial::linear | silpo_baseline_vs_novus_observed | silpo_baseline_vs_novus_observed | comparison_panel | silpo_baseline_vs_novus_observed | nan | baseline_vs_observed | linear | initial | daily | forward |
-| comparison | comparison::silpo_baseline_vs_novus_observed::initial::linear | silpo_baseline_vs_novus_observed | silpo_baseline_vs_novus_observed | comparison_panel | silpo_baseline_vs_novus_observed | nan | baseline_vs_observed | linear | initial | daily | forward |
-| comparison | comparison::silpo_baseline_vs_novus_observed::initial::linear | silpo_baseline_vs_novus_observed | silpo_baseline_vs_novus_observed | comparison_panel | silpo_baseline_vs_novus_observed | nan | baseline_vs_observed | linear | initial | daily | forward |
-| comparison | comparison::silpo_novus_combined::initial::linear | silpo_novus_combined | silpo_novus_combined | comparison_panel | silpo_novus_combined | nan | observed | linear | initial | daily | forward |
-| comparison | comparison::silpo_novus_combined::initial::linear | silpo_novus_combined | silpo_novus_combined | comparison_panel | silpo_novus_combined | nan | observed | linear | initial | daily | forward |
-| comparison | comparison::silpo_novus_combined::initial::linear | silpo_novus_combined | silpo_novus_combined | comparison_panel | silpo_novus_combined | nan | observed | linear | initial | daily | forward |
-| brand | brand::Silpo::::cream::observed::initial::linear | Silpo::cream | brand_panel | cream | Silpo | nan | observed | linear | initial | daily | forward |
-| brand | brand::Silpo::::cream::baseline::initial::linear | Silpo::cream | brand_panel | cream | Silpo | nan | baseline | linear | initial | daily | forward |
+| pairwise_product | pairwise::producer_prozorro::Вершки::initial::linear | Вершки | Вершки | cream | nan | nan | nan | linear | initial | daily | pairwise_overlap |
+| pairwise_product | pairwise::producer_prozorro::Молоко питне::initial::linear | Молоко питне | Молоко питне | milk | nan | nan | nan | linear | initial | daily | pairwise_overlap |
+| pairwise_product | pairwise::producer_prozorro::Сир твердий::initial::linear | Сир твердий | Сир твердий | hard_cheese | nan | nan | nan | linear | initial | daily | pairwise_overlap |
+| pairwise_product | pairwise::producer_prozorro::Сметана::initial::linear | Сметана | Сметана | sour_cream | nan | nan | nan | linear | initial | daily | pairwise_overlap |
+| product | product::Вершки::Silpo::observed::initial::linear | Вершки | Вершки | cream | Silpo | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Молоко питне::Silpo::observed::initial::linear | Молоко питне | Молоко питне | milk | Silpo | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Сир твердий::Silpo::observed::initial::linear | Сир твердий | Сир твердий | hard_cheese | Silpo | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Сметана::Silpo::observed::initial::linear | Сметана | Сметана | sour_cream | Silpo | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Вершки::Silpo::baseline::initial::linear | Вершки | Вершки | cream | Silpo | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Молоко питне::Silpo::baseline::initial::linear | Молоко питне | Молоко питне | milk | Silpo | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Сир твердий::Silpo::baseline::initial::linear | Сир твердий | Сир твердий | hard_cheese | Silpo | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Сметана::Silpo::baseline::initial::linear | Сметана | Сметана | sour_cream | Silpo | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Вершки::Retail_combined::observed::initial::linear | Вершки | Вершки | cream | Retail_combined | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Молоко питне::Retail_combined::observed::initial::linear | Молоко питне | Молоко питне | milk | Retail_combined | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Сир твердий::Retail_combined::observed::initial::linear | Сир твердий | Сир твердий | hard_cheese | Retail_combined | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Сметана::Retail_combined::observed::initial::linear | Сметана | Сметана | sour_cream | Retail_combined | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Вершки::Retail_combined::baseline::initial::linear | Вершки | Вершки | cream | Retail_combined | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Молоко питне::Retail_combined::baseline::initial::linear | Молоко питне | Молоко питне | milk | Retail_combined | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Сир твердий::Retail_combined::baseline::initial::linear | Сир твердий | Сир твердий | hard_cheese | Retail_combined | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Сметана::Retail_combined::baseline::initial::linear | Сметана | Сметана | sour_cream | Retail_combined | nan | baseline | linear | initial | daily | chain_common_support |
+| product | product::Вершки::Retail_combined_core::observed::initial::linear | Вершки | Вершки | cream | Retail_combined_core | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Молоко питне::Retail_combined_core::observed::initial::linear | Молоко питне | Молоко питне | milk | Retail_combined_core | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Сир твердий::Retail_combined_core::observed::initial::linear | Сир твердий | Сир твердий | hard_cheese | Retail_combined_core | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Сметана::Retail_combined_core::observed::initial::linear | Сметана | Сметана | sour_cream | Retail_combined_core | nan | observed | linear | initial | daily | chain_common_support |
+| product | product::Вершки::Retail_combined_core::baseline::initial::linear | Вершки | Вершки | cream | Retail_combined_core | nan | baseline | linear | initial | daily | chain_common_support |

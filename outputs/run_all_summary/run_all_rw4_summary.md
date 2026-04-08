@@ -48,7 +48,7 @@
 
 ### model_ardl
 
-- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=2.8478 | significance share (p<0.05)=0.13 | robust-across-reconstruction share=0.00 | core-finding share=0.00
+- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=2.6492 | significance share (p<0.05)=0.33 | robust-across-reconstruction share=0.00 | core-finding share=0.00
 - xlsx files: model_ardl_output.xlsx
 - pdf files: model_ardl_report.pdf
 - md files: model_ardl_report.md
@@ -56,7 +56,7 @@
 
 ### model_discounts
 
-- mean |coef|=4.8410
+- mean |coef|=3.4146
 - xlsx files: model_discounts_output.xlsx
 - pdf files: model_discounts_report.pdf
 - md files: model_discounts_report.md
@@ -64,7 +64,7 @@
 
 ### model_ecm
 
-- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=0.7894 | significance share (p<0.05)=0.29 | robust-across-reconstruction share=0.57 | core-finding share=0.57
+- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=0.7494 | significance share (p<0.05)=0.74 | robust-across-reconstruction share=0.90 | core-finding share=0.10
 - xlsx files: model_ecm_output.xlsx
 - pdf files: model_ecm_report.pdf
 - md files: model_ecm_report.md
@@ -88,7 +88,7 @@
 
 ### model_nardl
 
-- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=8.3676 | significance share (p<0.05)=0.31 | robust-across-reconstruction share=0.70 | core-finding share=0.38
+- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=4.1309 | significance share (p<0.05)=0.43 | robust-across-reconstruction share=0.81 | core-finding share=0.28
 - xlsx files: model_nardl_output.xlsx
 - pdf files: model_nardl_report.pdf
 - md files: model_nardl_report.md
@@ -96,7 +96,7 @@
 
 ### model_secondary_synthetic_consumer
 
-- No explicit test/model tables detected; inspect module-specific outputs.
+- mean |coef|=0.4950 | significance share (p<0.05)=0.50
 - xlsx files: secondary_synthetic_consumer_output.xlsx
 - pdf files: secondary_synthetic_consumer_report.pdf
 - md files: secondary_synthetic_consumer_report.md
@@ -104,15 +104,15 @@
 
 ### model_short_chain_regional
 
-- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=7.4847 | significance share (p<0.05)=0.26 | robust-across-reconstruction share=0.20 | core-finding share=0.11
+- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=3.5293 | significance share (p<0.05)=0.41 | robust-across-reconstruction share=0.27 | core-finding share=0.09
 - xlsx files: primary_chain_consolidated.xlsx
 - pdf files: primary_chain_consolidated.pdf
 - md files: primary_chain_consolidated.md
-- png count: 0
+- png count: 4
 
 ### model_vecm
 
-- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=21.7232 | significance share (p<0.05)=0.09 | robust-across-reconstruction share=0.00 | core-finding share=0.00
+- I(1)-like share=0.00; cointegration-support share=0.00; inspect admissibility and reconstruction robustness before promoting findings. | mean |coef|=11.6733 | significance share (p<0.05)=0.23 | robust-across-reconstruction share=0.00 | core-finding share=0.00
 - xlsx files: model_vecm_output.xlsx
 - pdf files: model_vecm_report.pdf
 - md files: model_vecm_report.md

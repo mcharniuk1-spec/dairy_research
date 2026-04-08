@@ -27,14 +27,23 @@ RETAIL_CONFIGS = [
     {"retailer_panel": "Silpo", "source": "Silpo", "price_variant": "observed", "value_col": "observed_price"},
     {"retailer_panel": "Silpo", "source": "Silpo", "price_variant": "baseline", "value_col": "baseline_price"},
     {"retailer_panel": "Novus", "source": "Novus", "price_variant": "observed", "value_col": "observed_price"},
+    {"retailer_panel": "Retail_combined", "source": "RetailCombined", "price_variant": "observed", "value_col": "retail_observed"},
+    {"retailer_panel": "Retail_combined", "source": "RetailCombined", "price_variant": "baseline", "value_col": "retail_baseline"},
+    {"retailer_panel": "Retail_combined_core", "source": "RetailCombinedCore", "price_variant": "observed", "value_col": "retail_observed"},
+    {"retailer_panel": "Retail_combined_core", "source": "RetailCombinedCore", "price_variant": "baseline", "value_col": "retail_baseline"},
 ]
 PRIMARY_CHAIN_DOC = (
     "RW4 domestic vertical chain is FarmGateUA -> ProducerUA -> ProZorro -> Retail, "
     "estimated with both forward and reverse-flow pairs. Farm-gate enters from two alternative "
-    "reconstruction workbooks and both linear/pchip interpolation variants are carried end-to-end."
+    "reconstruction workbooks and both linear/pchip interpolation variants are carried end-to-end. "
+    "Retail_combined is the anchored downstream index built from Silpo effective prices, Novus observed prices, "
+    "and a level-aligned ConsumerUA anchor, while Retail_combined_core keeps the strict retailer-only overlap for robustness."
 )
 MIN_STABLE_PRODUCT_DAYS = 30
 MIN_BRAND_DAYS = {"Silpo": 45, "Novus": 5}
+COMBINED_RETAIL_BASE_WEIGHTS = {"Silpo": 1.00, "Novus": 0.90, "ConsumerUA": 0.75}
+COMBINED_RETAIL_MIN_BIAS_DAYS = 10
+PREFERRED_MODEL_FAMILIES = ["ARDL", "ECM", "NARDL", "VECM"]
 
 
 @dataclass
@@ -450,6 +459,292 @@ def _retail_daily_controls(cleaned: Dict[str, pd.DataFrame], source: str) -> pd.
     return agg
 
 
+def _retail_source_frame(cleaned: Dict[str, pd.DataFrame], source: str) -> pd.DataFrame:
+    if source == "ConsumerUA":
+        cons = _benchmark_series(cleaned, "ConsumerUA")
+        if cons.empty:
+            return pd.DataFrame(columns=["date", "product", "standardized_type", "consumer_price"])
+        return cons.rename(columns={"ConsumerUA": "consumer_price"})
+
+    retail = _retail_daily_controls(cleaned, source)
+    if retail.empty:
+        return retail
+    keep_cols = [
+        "date",
+        "product",
+        "standardized_type",
+        "retail_observed",
+        "retail_baseline",
+        "discount_present",
+        "markdown_rate",
+        "promo_duration",
+        "time_since_last_promo",
+        "discount_type_markdown",
+        "discount_type_bulk",
+        "top_brand_share",
+    ]
+    keep_cols = [c for c in keep_cols if c in retail.columns]
+    return retail[keep_cols].copy()
+
+
+def _coverage_weight_map(df: pd.DataFrame, price_col: str, base_weight: float) -> Dict[Tuple[str, str], float]:
+    if df.empty or price_col not in df.columns:
+        return {}
+    work = df.copy()
+    work[price_col] = pd.to_numeric(work[price_col], errors="coerce")
+    rows: Dict[Tuple[str, str], float] = {}
+    for (product, standardized_type), grp in work.groupby(["product", "standardized_type"], dropna=False):
+        total_days = float(max(grp["date"].nunique(), 1))
+        present_days = float(grp.loc[grp[price_col].notna(), "date"].nunique())
+        coverage = present_days / total_days
+        rows[(product, standardized_type)] = base_weight * (0.40 + 0.60 * coverage)
+    return rows
+
+
+def _build_combined_retail_panel(
+    cleaned: Dict[str, pd.DataFrame],
+    include_consumer: bool = True,
+    panel_name: str = "Retail_combined",
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    sil = _retail_source_frame(cleaned, "Silpo").rename(
+        columns={
+            "retail_observed": "silpo_observed",
+            "retail_baseline": "silpo_baseline",
+            "discount_present": "silpo_discount_present",
+            "markdown_rate": "silpo_markdown_rate",
+            "promo_duration": "silpo_promo_duration",
+            "time_since_last_promo": "silpo_time_since_last_promo",
+            "discount_type_markdown": "silpo_discount_type_markdown",
+            "discount_type_bulk": "silpo_discount_type_bulk",
+            "top_brand_share": "silpo_top_brand_share",
+        }
+    )
+    nov = _retail_source_frame(cleaned, "Novus").rename(
+        columns={
+            "retail_observed": "novus_observed",
+            "retail_baseline": "novus_baseline",
+            "discount_present": "novus_discount_present",
+            "markdown_rate": "novus_markdown_rate",
+            "promo_duration": "novus_promo_duration",
+            "time_since_last_promo": "novus_time_since_last_promo",
+            "discount_type_markdown": "novus_discount_type_markdown",
+            "discount_type_bulk": "novus_discount_type_bulk",
+            "top_brand_share": "novus_top_brand_share",
+        }
+    )
+    cons = _retail_source_frame(cleaned, "ConsumerUA") if include_consumer else pd.DataFrame(columns=["date", "product", "standardized_type", "consumer_price"])
+
+    frames = [df for df in [sil, nov, cons] if not df.empty]
+    if not frames:
+        empty = pd.DataFrame(columns=["date", "product", "standardized_type", "retail", "retail_observed", "retail_baseline", "retailer_panel", "price_variant"])
+        return empty, pd.DataFrame(), pd.DataFrame()
+
+    merged = frames[0].copy()
+    for frame in frames[1:]:
+        merged = merged.merge(frame, on=["date", "product", "standardized_type"], how="outer")
+    if merged.empty:
+        empty = pd.DataFrame(columns=["date", "product", "standardized_type", "retail", "retail_observed", "retail_baseline", "retailer_panel", "price_variant"])
+        return empty, pd.DataFrame(), pd.DataFrame()
+
+    merged["date"] = pd.to_datetime(merged["date"], errors="coerce")
+    merged = merged.dropna(subset=["date"]).sort_values(["product", "standardized_type", "date"]).copy()
+    source_cols = ["silpo_observed", "novus_observed"] + (["consumer_price"] if include_consumer else [])
+    for col in source_cols + ["silpo_baseline"]:
+        if col in merged.columns:
+            merged[col] = pd.to_numeric(merged[col], errors="coerce")
+
+    merged["source_count"] = merged[source_cols].notna().sum(axis=1)
+    log_cols = []
+    for col in source_cols:
+        log_col = f"log_{col}"
+        merged[log_col] = _safe_log(merged[col])
+        log_cols.append(log_col)
+    merged["log_source_median"] = merged[log_cols].median(axis=1, skipna=True)
+
+    std_bias_records: List[Dict[str, object]] = []
+    product_bias_lookup: Dict[Tuple[str, str, str], float] = {}
+    product_bias_n: Dict[Tuple[str, str, str], int] = {}
+    for source_name, log_col in [("Silpo", "log_silpo_observed"), ("Novus", "log_novus_observed")] + ([("ConsumerUA", "log_consumer_price")] if include_consumer else []):
+        valid = merged[(merged["source_count"] >= 2) & merged[log_col].notna() & merged["log_source_median"].notna()].copy()
+        if not valid.empty:
+            valid["bias_component"] = valid[log_col] - valid["log_source_median"]
+            for (product, standardized_type), grp in valid.groupby(["product", "standardized_type"], dropna=False):
+                key = (source_name, product, standardized_type)
+                product_bias_lookup[key] = float(grp["bias_component"].median())
+                product_bias_n[key] = int(len(grp))
+            for standardized_type, grp in valid.groupby("standardized_type", dropna=False):
+                std_bias_records.append(
+                    {
+                        "source": source_name,
+                        "standardized_type": standardized_type,
+                        "bias_log": float(grp["bias_component"].median()),
+                        "n_overlap_days": int(len(grp)),
+                    }
+                )
+    std_bias_df = pd.DataFrame(std_bias_records)
+    std_bias_lookup = {
+        (str(r["source"]), str(r["standardized_type"])): float(r["bias_log"])
+        for _, r in std_bias_df.iterrows()
+    } if not std_bias_df.empty else {}
+
+    diag_rows: List[Dict[str, object]] = []
+    out_rows: List[Dict[str, object]] = []
+    for (product, standardized_type), grp in merged.groupby(["product", "standardized_type"], dropna=False):
+        sil_bias = product_bias_lookup.get(("Silpo", product, standardized_type), np.nan)
+        nov_bias = product_bias_lookup.get(("Novus", product, standardized_type), np.nan)
+        cons_bias = product_bias_lookup.get(("ConsumerUA", product, standardized_type), np.nan) if include_consumer else np.nan
+        sil_bias_n = product_bias_n.get(("Silpo", product, standardized_type), 0)
+        nov_bias_n = product_bias_n.get(("Novus", product, standardized_type), 0)
+        cons_bias_n = product_bias_n.get(("ConsumerUA", product, standardized_type), 0) if include_consumer else 0
+
+        if not pd.notna(sil_bias) or sil_bias_n < COMBINED_RETAIL_MIN_BIAS_DAYS:
+            sil_bias = std_bias_lookup.get(("Silpo", str(standardized_type)), 0.0)
+        if not pd.notna(nov_bias) or nov_bias_n < COMBINED_RETAIL_MIN_BIAS_DAYS:
+            nov_bias = std_bias_lookup.get(("Novus", str(standardized_type)), 0.0)
+        if include_consumer and (not pd.notna(cons_bias) or cons_bias_n < COMBINED_RETAIL_MIN_BIAS_DAYS):
+            cons_bias = std_bias_lookup.get(("ConsumerUA", str(standardized_type)), 0.0)
+
+        n_days = float(max(len(grp), 1))
+        sil_present = float(grp["silpo_observed"].notna().sum()) if "silpo_observed" in grp.columns else 0.0
+        nov_present = float(grp["novus_observed"].notna().sum()) if "novus_observed" in grp.columns else 0.0
+        cons_present = float(grp["consumer_price"].notna().sum()) if include_consumer and "consumer_price" in grp.columns else 0.0
+        sil_overlap = float(((grp["silpo_observed"].notna()) & grp["source_count"].ge(2)).sum()) if "silpo_observed" in grp.columns else 0.0
+        nov_overlap = float(((grp["novus_observed"].notna()) & grp["source_count"].ge(2)).sum()) if "novus_observed" in grp.columns else 0.0
+        cons_overlap = float(((grp["consumer_price"].notna()) & grp["source_count"].ge(2)).sum()) if include_consumer and "consumer_price" in grp.columns else 0.0
+
+        def _reliability_weight(base_weight: float, present_days: float, overlap_days: float) -> float:
+            if present_days <= 0:
+                return 0.0
+            coverage = present_days / n_days
+            overlap_share = overlap_days / present_days
+            return float(base_weight * (0.30 + 0.40 * coverage + 0.30 * overlap_share))
+
+        sil_weight = _reliability_weight(COMBINED_RETAIL_BASE_WEIGHTS["Silpo"], sil_present, sil_overlap)
+        nov_weight = _reliability_weight(COMBINED_RETAIL_BASE_WEIGHTS["Novus"], nov_present, nov_overlap)
+        cons_weight = _reliability_weight(COMBINED_RETAIL_BASE_WEIGHTS["ConsumerUA"], cons_present, cons_overlap) if include_consumer else 0.0
+
+        diag_rows.append(
+            {
+                "product": product,
+                "standardized_type": standardized_type,
+                "bias_log_silpo": sil_bias,
+                "bias_log_novus": nov_bias,
+                "bias_log_consumer": cons_bias if include_consumer else np.nan,
+                "bias_days_silpo": sil_bias_n,
+                "bias_days_novus": nov_bias_n,
+                "bias_days_consumer": cons_bias_n if include_consumer else 0,
+                "weight_silpo": sil_weight,
+                "weight_novus": nov_weight,
+                "weight_consumer": cons_weight if include_consumer else 0.0,
+                "coverage_silpo": float(grp["silpo_observed"].notna().mean()) if "silpo_observed" in grp.columns else np.nan,
+                "coverage_novus": float(grp["novus_observed"].notna().mean()) if "novus_observed" in grp.columns else np.nan,
+                "coverage_consumer": float(grp["consumer_price"].notna().mean()) if include_consumer and "consumer_price" in grp.columns else np.nan,
+                "retailer_overlap_share": float((grp["source_count"] >= 2).mean()),
+                "n_days": int(len(grp)),
+                "n_days_2plus_sources": int((grp["source_count"] >= 2).sum()),
+                "panel_name": panel_name,
+            }
+        )
+
+        for _, row in grp.iterrows():
+            obs_logs: List[float] = []
+            obs_weights: List[float] = []
+            baseline_logs: List[float] = []
+            baseline_weights: List[float] = []
+            retailer_weight_sum = 0.0
+            total_weight_sum = 0.0
+
+            if pd.notna(row.get("silpo_observed")) and row.get("silpo_observed", np.nan) > 0:
+                obs_logs.append(float(np.log(row["silpo_observed"]) - sil_bias))
+                obs_weights.append(float(sil_weight))
+                retailer_weight_sum += float(sil_weight)
+                total_weight_sum += float(sil_weight)
+            if pd.notna(row.get("novus_observed")) and row.get("novus_observed", np.nan) > 0:
+                obs_logs.append(float(np.log(row["novus_observed"]) - nov_bias))
+                obs_weights.append(float(nov_weight))
+                retailer_weight_sum += float(nov_weight)
+                total_weight_sum += float(nov_weight)
+            if include_consumer and pd.notna(row.get("consumer_price")) and row.get("consumer_price", np.nan) > 0:
+                obs_logs.append(float(np.log(row["consumer_price"]) - cons_bias))
+                obs_weights.append(float(cons_weight))
+                total_weight_sum += float(cons_weight)
+
+            if pd.notna(row.get("silpo_baseline")) and row.get("silpo_baseline", np.nan) > 0:
+                baseline_logs.append(float(np.log(row["silpo_baseline"]) - sil_bias))
+                baseline_weights.append(float(sil_weight))
+            elif pd.notna(row.get("silpo_observed")) and row.get("silpo_observed", np.nan) > 0:
+                baseline_logs.append(float(np.log(row["silpo_observed"]) - sil_bias))
+                baseline_weights.append(float(sil_weight))
+            if pd.notna(row.get("novus_observed")) and row.get("novus_observed", np.nan) > 0:
+                baseline_logs.append(float(np.log(row["novus_observed"]) - nov_bias))
+                baseline_weights.append(float(nov_weight))
+            if include_consumer and pd.notna(row.get("consumer_price")) and row.get("consumer_price", np.nan) > 0:
+                baseline_logs.append(float(np.log(row["consumer_price"]) - cons_bias))
+                baseline_weights.append(float(cons_weight))
+
+            retail_observed = float(np.exp(np.average(obs_logs, weights=obs_weights))) if obs_logs and sum(obs_weights) > 0 else np.nan
+            retail_baseline = float(np.exp(np.average(baseline_logs, weights=baseline_weights))) if baseline_logs and sum(baseline_weights) > 0 else np.nan
+            silpo_share = float(sil_weight / sum(obs_weights)) if obs_logs and pd.notna(row.get("silpo_observed")) and sum(obs_weights) > 0 else 0.0
+            retailer_support_share = float(retailer_weight_sum / total_weight_sum) if total_weight_sum > 0 else 0.0
+            retailer_present_flag = int(
+                (pd.notna(row.get("silpo_observed")) and row.get("silpo_observed", np.nan) > 0)
+                or (pd.notna(row.get("novus_observed")) and row.get("novus_observed", np.nan) > 0)
+            )
+            consumer_present_flag = int(include_consumer and pd.notna(row.get("consumer_price")) and row.get("consumer_price", np.nan) > 0)
+            consumer_anchor_only_flag = int(consumer_present_flag == 1 and retailer_present_flag == 0)
+
+            out_rows.append(
+                {
+                    "date": row["date"],
+                    "product": product,
+                    "standardized_type": standardized_type,
+                    "retail_observed": retail_observed,
+                    "retail_baseline": retail_baseline,
+                    "retail": retail_observed,
+                    "discount_present": float(row.get("silpo_discount_present", 0.0)) * silpo_share,
+                    "markdown_rate": float(row.get("silpo_markdown_rate", 0.0)) * silpo_share,
+                    "promo_duration": row.get("silpo_promo_duration", np.nan),
+                    "time_since_last_promo": row.get("silpo_time_since_last_promo", np.nan),
+                    "discount_type_markdown": float(row.get("silpo_discount_type_markdown", 0.0)) * silpo_share,
+                    "discount_type_bulk": float(row.get("silpo_discount_type_bulk", 0.0)) * silpo_share,
+                    "top_brand_share": row.get("silpo_top_brand_share", np.nan),
+                    "consumer_price_raw": row.get("consumer_price", np.nan),
+                    "retailer_panel": panel_name,
+                    "price_variant": "dual_variant_output",
+                    "combined_rule": "weighted_geometric_mean_of_aligned_silpo_observed_novus_observed_consumer_anchor" if include_consumer else "weighted_geometric_mean_of_aligned_silpo_observed_novus_observed",
+                    "source_count": int(row["source_count"]),
+                    "weight_silpo": sil_weight,
+                    "weight_novus": nov_weight,
+                    "weight_consumer": cons_weight if include_consumer else 0.0,
+                    "retailer_support_share": retailer_support_share,
+                    "retailer_present_flag": retailer_present_flag,
+                    "consumer_present_flag": consumer_present_flag,
+                    "consumer_anchor_only_flag": consumer_anchor_only_flag,
+                }
+            )
+
+    combined_df = pd.DataFrame(out_rows)
+    if combined_df.empty:
+        combined_df = pd.DataFrame(columns=["date", "product", "standardized_type", "retail", "retail_observed", "retail_baseline", "retailer_panel", "price_variant"])
+    diagnostics_df = pd.DataFrame(diag_rows)
+    methodology_df = pd.DataFrame(
+        [
+                {
+                    "retailer_panel": panel_name,
+                    "include_consumer": int(include_consumer),
+                "base_weight_silpo": COMBINED_RETAIL_BASE_WEIGHTS["Silpo"],
+                "base_weight_novus": COMBINED_RETAIL_BASE_WEIGHTS["Novus"],
+                "base_weight_consumer": COMBINED_RETAIL_BASE_WEIGHTS["ConsumerUA"] if include_consumer else 0.0,
+                "panel_name": panel_name,
+                "construction_rule": "Daily weighted geometric mean after source-specific log-bias alignment; Silpo observed carries discounts as effective downward price moves.",
+                "bias_fallback_rule": "Use product-level median log bias when overlap>=10 days, otherwise standardized_type-level median bias.",
+                "support_rule": "Retailer support share tracks the retailer-weight share in the combined index; consumer_anchor_only_flag identifies dates carried only by ConsumerUA after alignment.",
+            }
+        ]
+    )
+    return combined_df, diagnostics_df, methodology_df
+
+
 def _no_fit_row(meta: Dict[str, object], direction: str, stage_from: str, stage_to: str, n_obs: int, reason: str, promo_controls: int = 0) -> Dict[str, object]:
     return {
         **meta,
@@ -535,16 +830,12 @@ def _retail_comparison_panel(cleaned: Dict[str, pd.DataFrame], price_variant: st
     return comp
 
 
-def _combined_retail_panel(cleaned: Dict[str, pd.DataFrame]) -> pd.DataFrame:
-    sil = _source_value_series(cleaned["Silpo"], "silpo_obs", "observed_price")
-    nov = _source_value_series(cleaned["Novus"], "novus_obs", "observed_price")
-    comp = sil.merge(nov, on=["date", "product", "standardized_type"], how="inner")
-    if comp.empty:
-        return comp
-    comp["retail"] = comp[["silpo_obs", "novus_obs"]].median(axis=1, skipna=False)
-    comp["retailer_panel"] = "silpo_novus_combined"
-    comp["price_variant"] = "observed"
-    return comp
+def _combined_retail_panel(
+    cleaned: Dict[str, pd.DataFrame],
+    include_consumer: bool = True,
+    panel_name: str = "Retail_combined",
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    return _build_combined_retail_panel(cleaned, include_consumer=include_consumer, panel_name=panel_name)
 
 
 def _stable_products(df: pd.DataFrame, label_col: str = "product", min_days: int = 45) -> List[str]:
@@ -872,6 +1163,7 @@ def _variant_robustness(model_df: pd.DataFrame) -> pd.DataFrame:
         "retailer_panel",
         "brand",
         "price_variant",
+        "intersection_rule",
         "farm_gate_source",
         "chain_direction",
         "stage_from",
@@ -923,6 +1215,7 @@ def _farmgate_source_comparison(model_df: pd.DataFrame) -> pd.DataFrame:
         "retailer_panel",
         "brand",
         "price_variant",
+        "intersection_rule",
         "reconstruction_variant",
         "chain_direction",
         "stage_from",
@@ -944,9 +1237,20 @@ def _farmgate_source_comparison(model_df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[str, object]], pd.DataFrame]:
+def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[str, object]], pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     panels: List[Dict[str, object]] = []
     index_rows: List[Dict[str, object]] = []
+
+    def _append_panel(meta: Dict[str, object], frame: pd.DataFrame) -> None:
+        panels.append({"meta": meta, "frame": frame})
+        index_rows.append(_panel_index_rows(str(meta["panel_name"]), str(meta["panel_level"]), frame, meta))
+
+    def _attach_benchmarks(frame: pd.DataFrame, product: str) -> pd.DataFrame:
+        merged = frame.copy()
+        for src, bdf in benchmark_cache.items():
+            b = bdf[bdf["product"] == product][["date", "standardized_type", src]]
+            merged = merged.merge(b, on=["date", "standardized_type"], how="left")
+        return merged
 
     producer_products = set(_stable_products(_national_rows(cleaned["ProducerUA"]), "product", min_days=MIN_STABLE_PRODUCT_DAYS))
     prozorro_products = set(_stable_products(_national_rows(cleaned["ProZorro"]), "product", min_days=MIN_STABLE_PRODUCT_DAYS))
@@ -954,8 +1258,26 @@ def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[s
     benchmark_cache = {src: _benchmark_series(cleaned, src) for src in ["ConsumerUA", "EU", "CME"]}
     comparison_obs = _retail_comparison_panel(cleaned, "observed")
     comparison_base = _retail_comparison_panel(cleaned, "baseline")
-    combined_panel = _combined_retail_panel(cleaned)
+    combined_panel, combined_diag, combined_methodology = _combined_retail_panel(
+        cleaned,
+        include_consumer=True,
+        panel_name="Retail_combined",
+    )
+    combined_core_panel, combined_core_diag, combined_core_methodology = _combined_retail_panel(
+        cleaned,
+        include_consumer=False,
+        panel_name="Retail_combined_core",
+    )
     retail_controls_cache = {src: _retail_daily_controls(cleaned, src) for src in ["Silpo", "Novus"]}
+    retail_controls_cache["RetailCombined"] = combined_panel.copy()
+    retail_controls_cache["RetailCombinedCore"] = combined_core_panel.copy()
+
+    combined_diag = pd.concat([combined_diag, combined_core_diag], ignore_index=True) if not combined_core_diag.empty else combined_diag
+    combined_methodology = (
+        pd.concat([combined_methodology, combined_core_methodology], ignore_index=True)
+        if not combined_core_methodology.empty
+        else combined_methodology
+    )
 
     for recon in RECONSTRUCTION_VARIANTS:
         producer = _producer_series(cleaned, recon)
@@ -965,24 +1287,101 @@ def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[s
         for farm_gate_source in FARM_GATE_SOURCE_MAP:
             farm = _farm_gate_series(cleaned, farm_gate_source, recon)
             shock = _build_shock_dummy(cleaned, recon, farm_gate_source)
+
+            # Pairwise non-retail panels: do not force the narrow full-chain overlap.
+            for product in sorted(producer_products):
+                pp = producer[producer["product"] == product][["date", "product", "standardized_type", "producer"]]
+                merged = pp.merge(farm[["date", "farm_gate"]], on="date", how="inner").merge(shock, on=["date", "standardized_type"], how="left")
+                if merged.empty:
+                    continue
+                merged["shock_dummy"] = merged["shock_dummy"].fillna(0).astype(int)
+                merged = _attach_benchmarks(merged, product)
+                panel_name = f"pairwise::farm_gate_producer::{product}::{farm_gate_source}::{recon}"
+                meta = {
+                    "panel_level": "pairwise_product",
+                    "panel_name": panel_name,
+                    "segment_name": product,
+                    "product": product,
+                    "standardized_type": merged["standardized_type"].mode().iloc[0] if not merged["standardized_type"].mode().empty else "",
+                    "retailer_panel": "",
+                    "brand": "",
+                    "price_variant": "",
+                    "reconstruction_variant": recon,
+                    "farm_gate_source": farm_gate_source,
+                    "frequency": "daily",
+                    "intersection_rule": "pairwise_overlap",
+                    "pair_scope": "farm_gate_producer",
+                }
+                _append_panel(meta, merged)
+
+            for product in sorted(prozorro_products):
+                zz = prozorro_daily[prozorro_daily["product"] == product][["date", "product", "standardized_type", "prozorro"]]
+                merged = zz.merge(farm[["date", "farm_gate"]], on="date", how="inner").merge(shock, on=["date", "standardized_type"], how="left")
+                if merged.empty:
+                    continue
+                merged["shock_dummy"] = merged["shock_dummy"].fillna(0).astype(int)
+                merged = _attach_benchmarks(merged, product)
+                panel_name = f"pairwise::farm_gate_prozorro::{product}::{farm_gate_source}::{recon}"
+                meta = {
+                    "panel_level": "pairwise_product",
+                    "panel_name": panel_name,
+                    "segment_name": product,
+                    "product": product,
+                    "standardized_type": merged["standardized_type"].mode().iloc[0] if not merged["standardized_type"].mode().empty else "",
+                    "retailer_panel": "",
+                    "brand": "",
+                    "price_variant": "",
+                    "reconstruction_variant": recon,
+                    "farm_gate_source": farm_gate_source,
+                    "frequency": "daily",
+                    "intersection_rule": "pairwise_overlap",
+                    "pair_scope": "farm_gate_prozorro",
+                }
+                _append_panel(meta, merged)
+
+            for product in sorted(producer_products.intersection(prozorro_products)):
+                pp = producer[producer["product"] == product][["date", "product", "standardized_type", "producer"]]
+                zz = prozorro_daily[prozorro_daily["product"] == product][["date", "product", "standardized_type", "prozorro"]]
+                merged = pp.merge(zz, on=["date", "product", "standardized_type"], how="inner")
+                if merged.empty:
+                    continue
+                merged = merged.merge(farm[["date", "farm_gate"]], on="date", how="left").merge(shock, on=["date", "standardized_type"], how="left")
+                merged["shock_dummy"] = merged["shock_dummy"].fillna(0).astype(int)
+                merged = _attach_benchmarks(merged, product)
+                panel_name = f"pairwise::producer_prozorro::{product}::{farm_gate_source}::{recon}"
+                meta = {
+                    "panel_level": "pairwise_product",
+                    "panel_name": panel_name,
+                    "segment_name": product,
+                    "product": product,
+                    "standardized_type": merged["standardized_type"].mode().iloc[0] if not merged["standardized_type"].mode().empty else "",
+                    "retailer_panel": "",
+                    "brand": "",
+                    "price_variant": "",
+                    "reconstruction_variant": recon,
+                    "farm_gate_source": farm_gate_source,
+                    "frequency": "daily",
+                    "intersection_rule": "pairwise_overlap",
+                    "pair_scope": "producer_prozorro",
+                }
+                _append_panel(meta, merged)
+
             for cfg in RETAIL_CONFIGS:
                 retail_controls = retail_controls_cache.get(cfg["source"], pd.DataFrame()).copy()
                 if retail_controls.empty:
                     continue
-                retail_products = set(
-                    _stable_products(
-                        _national_rows(cleaned[cfg["source"]]),
-                        "product",
-                        min_days=MIN_STABLE_PRODUCT_DAYS,
-                    )
-                )
+                if cfg["source"] in cleaned:
+                    retail_base = _national_rows(cleaned[cfg["source"]])
+                else:
+                    retail_base = retail_controls
+                retail_products = set(_stable_products(retail_base, "product", min_days=MIN_STABLE_PRODUCT_DAYS))
                 common_products = sorted(producer_products.intersection(prozorro_products).intersection(retail_products))
                 retail_col = "retail_baseline" if cfg["price_variant"] == "baseline" else "retail_observed"
-                competitor_source = "Novus" if cfg["source"] == "Silpo" else "Silpo"
+                competitor_source = "Novus" if cfg["source"] == "Silpo" else ("Silpo" if cfg["source"] == "Novus" else None)
                 competitor_daily = retail_controls_cache.get(competitor_source, pd.DataFrame())
                 competitor_daily = competitor_daily[["date", "product", "standardized_type", "retail_observed"]].rename(
                     columns={"retail_observed": "competitor_price"}
-                ) if not competitor_daily.empty else pd.DataFrame()
+                ) if (competitor_source is not None and not competitor_daily.empty) else pd.DataFrame()
                 for product in common_products:
                     pp = producer[producer["product"] == product].rename(columns={"producer": "producer"})
                     zz = prozorro_daily[prozorro_daily["product"] == product][["date", "product", "standardized_type", "prozorro"]]
@@ -1023,37 +1422,172 @@ def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[s
                         "reconstruction_variant": recon,
                         "farm_gate_source": farm_gate_source,
                         "frequency": "daily",
+                        "intersection_rule": "chain_common_support",
+                        "pair_scope": "full_chain",
                     }
-                    for src, bdf in benchmark_cache.items():
-                        b = bdf[bdf["product"] == product][["date", "standardized_type", src]]
-                        merged = merged.merge(b, on=["date", "standardized_type"], how="left")
-                    panels.append({"meta": meta, "frame": merged})
-                    index_rows.append(_panel_index_rows(panel_name, "product", merged, meta))
+                    merged = _attach_benchmarks(merged, product)
+                    _append_panel(meta, merged)
+
+                # Pairwise retail panels improve extreme-point estimation without requiring the full chain.
+                retail_pair_products = sorted(retail_products)
+                producer_retail_products = sorted(producer_products.intersection(retail_products))
+                prozorro_retail_products = sorted(prozorro_products.intersection(retail_products))
+
+                for product in retail_pair_products:
+                    rr = retail_controls[retail_controls["product"] == product][
+                        [
+                            "date",
+                            "product",
+                            "standardized_type",
+                            retail_col,
+                            "retail_observed",
+                            "retail_baseline",
+                            "discount_present",
+                            "markdown_rate",
+                            "promo_duration",
+                            "time_since_last_promo",
+                            "discount_type_markdown",
+                            "discount_type_bulk",
+                            "top_brand_share",
+                        ]
+                    ].rename(columns={retail_col: "retail"})
+                    merged = rr.merge(farm[["date", "farm_gate"]], on="date", how="inner").merge(shock, on=["date", "standardized_type"], how="left")
+                    if merged.empty:
+                        continue
+                    if not competitor_daily.empty:
+                        merged = merged.merge(competitor_daily[competitor_daily["product"] == product], on=["date", "product", "standardized_type"], how="left")
+                    merged["shock_dummy"] = merged["shock_dummy"].fillna(0).astype(int)
+                    merged = _attach_benchmarks(merged, product)
+                    panel_name = f"pairwise::farm_gate_retail::{product}::{cfg['retailer_panel']}::{cfg['price_variant']}::{farm_gate_source}::{recon}"
+                    meta = {
+                        "panel_level": "pairwise_product",
+                        "panel_name": panel_name,
+                        "segment_name": product,
+                        "product": product,
+                        "standardized_type": merged["standardized_type"].mode().iloc[0] if not merged["standardized_type"].mode().empty else "",
+                        "retailer_panel": cfg["retailer_panel"],
+                        "brand": "",
+                        "price_variant": cfg["price_variant"],
+                        "reconstruction_variant": recon,
+                        "farm_gate_source": farm_gate_source,
+                        "frequency": "daily",
+                        "intersection_rule": "pairwise_overlap",
+                        "pair_scope": "farm_gate_retail",
+                    }
+                    _append_panel(meta, merged)
+
+                for product in producer_retail_products:
+                    pp = producer[producer["product"] == product][["date", "product", "standardized_type", "producer"]]
+                    rr = retail_controls[retail_controls["product"] == product][
+                        [
+                            "date",
+                            "product",
+                            "standardized_type",
+                            retail_col,
+                            "retail_observed",
+                            "retail_baseline",
+                            "discount_present",
+                            "markdown_rate",
+                            "promo_duration",
+                            "time_since_last_promo",
+                            "discount_type_markdown",
+                            "discount_type_bulk",
+                            "top_brand_share",
+                        ]
+                    ].rename(columns={retail_col: "retail"})
+                    merged = pp.merge(rr, on=["date", "product", "standardized_type"], how="inner")
+                    if merged.empty:
+                        continue
+                    if not competitor_daily.empty:
+                        merged = merged.merge(competitor_daily[competitor_daily["product"] == product], on=["date", "product", "standardized_type"], how="left")
+                    merged = merged.merge(farm[["date", "farm_gate"]], on="date", how="left").merge(shock, on=["date", "standardized_type"], how="left")
+                    merged["shock_dummy"] = merged["shock_dummy"].fillna(0).astype(int)
+                    merged = _attach_benchmarks(merged, product)
+                    panel_name = f"pairwise::producer_retail::{product}::{cfg['retailer_panel']}::{cfg['price_variant']}::{farm_gate_source}::{recon}"
+                    meta = {
+                        "panel_level": "pairwise_product",
+                        "panel_name": panel_name,
+                        "segment_name": product,
+                        "product": product,
+                        "standardized_type": merged["standardized_type"].mode().iloc[0] if not merged["standardized_type"].mode().empty else "",
+                        "retailer_panel": cfg["retailer_panel"],
+                        "brand": "",
+                        "price_variant": cfg["price_variant"],
+                        "reconstruction_variant": recon,
+                        "farm_gate_source": farm_gate_source,
+                        "frequency": "daily",
+                        "intersection_rule": "pairwise_overlap",
+                        "pair_scope": "producer_retail",
+                    }
+                    _append_panel(meta, merged)
+
+                for product in prozorro_retail_products:
+                    zz = prozorro_daily[prozorro_daily["product"] == product][["date", "product", "standardized_type", "prozorro"]]
+                    rr = retail_controls[retail_controls["product"] == product][
+                        [
+                            "date",
+                            "product",
+                            "standardized_type",
+                            retail_col,
+                            "retail_observed",
+                            "retail_baseline",
+                            "discount_present",
+                            "markdown_rate",
+                            "promo_duration",
+                            "time_since_last_promo",
+                            "discount_type_markdown",
+                            "discount_type_bulk",
+                            "top_brand_share",
+                        ]
+                    ].rename(columns={retail_col: "retail"})
+                    merged = zz.merge(rr, on=["date", "product", "standardized_type"], how="inner")
+                    if merged.empty:
+                        continue
+                    if not competitor_daily.empty:
+                        merged = merged.merge(competitor_daily[competitor_daily["product"] == product], on=["date", "product", "standardized_type"], how="left")
+                    merged = merged.merge(farm[["date", "farm_gate"]], on="date", how="left").merge(shock, on=["date", "standardized_type"], how="left")
+                    merged["shock_dummy"] = merged["shock_dummy"].fillna(0).astype(int)
+                    merged = _attach_benchmarks(merged, product)
+                    panel_name = f"pairwise::prozorro_retail::{product}::{cfg['retailer_panel']}::{cfg['price_variant']}::{farm_gate_source}::{recon}"
+                    meta = {
+                        "panel_level": "pairwise_product",
+                        "panel_name": panel_name,
+                        "segment_name": product,
+                        "product": product,
+                        "standardized_type": merged["standardized_type"].mode().iloc[0] if not merged["standardized_type"].mode().empty else "",
+                        "retailer_panel": cfg["retailer_panel"],
+                        "brand": "",
+                        "price_variant": cfg["price_variant"],
+                        "reconstruction_variant": recon,
+                        "farm_gate_source": farm_gate_source,
+                        "frequency": "daily",
+                        "intersection_rule": "pairwise_overlap",
+                        "pair_scope": "prozorro_retail",
+                    }
+                    _append_panel(meta, merged)
 
             # Average-price layer
             for cfg in RETAIL_CONFIGS:
                 retail_controls = retail_controls_cache.get(cfg["source"], pd.DataFrame()).copy()
                 if retail_controls.empty:
                     continue
-                retail_products = set(
-                    _stable_products(
-                        _national_rows(cleaned[cfg["source"]]),
-                        "product",
-                        min_days=MIN_STABLE_PRODUCT_DAYS,
-                    )
-                )
+                if cfg["source"] in cleaned:
+                    retail_base = _national_rows(cleaned[cfg["source"]])
+                else:
+                    retail_base = retail_controls
+                retail_products = set(_stable_products(retail_base, "product", min_days=MIN_STABLE_PRODUCT_DAYS))
                 common_products = sorted(producer_products.intersection(prozorro_products).intersection(retail_products))
                 if not common_products:
                     continue
                 retail_col = "retail_baseline" if cfg["price_variant"] == "baseline" else "retail_observed"
-                competitor_source = "Novus" if cfg["source"] == "Silpo" else "Silpo"
+                competitor_source = "Novus" if cfg["source"] == "Silpo" else ("Silpo" if cfg["source"] == "Novus" else None)
                 competitor_daily = retail_controls_cache.get(competitor_source, pd.DataFrame())
                 competitor_daily = (
                     competitor_daily[competitor_daily["product"].isin(common_products)]
                     .groupby("date", as_index=False)["retail_observed"]
                     .mean()
                     .rename(columns={"retail_observed": "competitor_price"})
-                ) if not competitor_daily.empty else pd.DataFrame()
+                ) if (competitor_source is not None and not competitor_daily.empty) else pd.DataFrame()
                 avg_components = {}
                 avg_components["producer"] = (
                     producer[producer["product"].isin(common_products)]
@@ -1103,12 +1637,13 @@ def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[s
                     "reconstruction_variant": recon,
                     "farm_gate_source": farm_gate_source,
                     "frequency": "daily",
+                    "intersection_rule": "chain_common_support",
+                    "pair_scope": "full_chain_average",
                 }
-                panels.append({"meta": meta, "frame": merged})
-                index_rows.append(_panel_index_rows(panel_name, "average", merged, meta))
+                _append_panel(meta, merged)
 
             # Widened retail comparison panels
-            for comp in [comparison_obs, comparison_base, combined_panel]:
+            for comp in [comparison_obs, comparison_base, combined_panel, combined_core_panel]:
                 if comp.empty:
                     continue
                 merged = producer.groupby(["date", "product", "standardized_type"], as_index=False)["producer"].mean().merge(
@@ -1137,9 +1672,10 @@ def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[s
                     "reconstruction_variant": recon,
                     "farm_gate_source": farm_gate_source,
                     "frequency": "daily",
+                    "intersection_rule": "comparison_panel",
+                    "pair_scope": "comparison",
                 }
-                panels.append({"meta": meta, "frame": merged})
-                index_rows.append(_panel_index_rows(panel_name, "comparison", merged, meta))
+                _append_panel(meta, merged)
 
             # Brand-level retailer transmission
             for source in ["Silpo", "Novus"]:
@@ -1216,11 +1752,12 @@ def _build_primary_panels(cleaned: Dict[str, pd.DataFrame]) -> Tuple[List[Dict[s
                             "reconstruction_variant": recon,
                             "farm_gate_source": farm_gate_source,
                             "frequency": "daily",
+                            "intersection_rule": "brand_top_sku",
+                            "pair_scope": "brand_panel",
                         }
-                        panels.append({"meta": meta, "frame": merged})
-                        index_rows.append(_panel_index_rows(panel_name, "brand", merged, meta))
+                        _append_panel(meta, merged)
 
-    return panels, pd.DataFrame(index_rows)
+    return panels, pd.DataFrame(index_rows), combined_diag, combined_methodology
 
 
 def _benchmark_comparison_rows(panels: List[Dict[str, object]]) -> pd.DataFrame:
@@ -1232,6 +1769,8 @@ def _benchmark_comparison_rows(panels: List[Dict[str, object]]) -> pd.DataFrame:
             if bm not in frame.columns:
                 continue
             for stage in ["farm_gate", "producer", "prozorro", "retail"]:
+                if bm == "ConsumerUA" and stage == "retail" and str(meta.get("retailer_panel", "")) == "Retail_combined":
+                    continue
                 if stage not in frame.columns:
                     continue
                 d = pd.DataFrame(
@@ -1318,6 +1857,263 @@ def _coverage_validation(model_df: pd.DataFrame, panel_index: pd.DataFrame) -> p
     return pd.DataFrame(rows)
 
 
+def _preferred_results(model_df: pd.DataFrame) -> pd.DataFrame:
+    if model_df.empty:
+        return pd.DataFrame()
+    return model_df[model_df["model_family"].isin(PREFERRED_MODEL_FAMILIES)].copy()
+
+
+def _farmgate_summary(model_df: pd.DataFrame, direction: str) -> pd.DataFrame:
+    use = _preferred_results(model_df)
+    if use.empty:
+        return pd.DataFrame()
+    if direction == "direct":
+        use = use[(use["chain_direction"] == "forward") & (use["stage_from"] == "FarmGateUA")].copy()
+    else:
+        use = use[(use["chain_direction"] == "reverse") & (use["stage_to"] == "FarmGateUA")].copy()
+    if use.empty:
+        return pd.DataFrame()
+    use["ect_negative_sig"] = (
+        pd.to_numeric(use["ect_coef"], errors="coerce").lt(0)
+        & pd.to_numeric(use["ect_pvalue"], errors="coerce").lt(0.10)
+    ).astype(int)
+    group_cols = [
+        "stage_from",
+        "stage_to",
+        "retailer_panel",
+        "price_variant",
+        "panel_level",
+        "intersection_rule",
+        "model_family",
+    ]
+    out = (
+        use.groupby(group_cols, dropna=False)
+        .agg(
+            rows_total=("panel_name", "count"),
+            median_n_obs=("n_obs", "median"),
+            core_finding_share=("core_finding_flag", "mean"),
+            robust_linear_vs_pchip_share=("robust_linear_vs_pchip", "mean"),
+            robust_across_reconstruction_share=("robust_across_reconstruction", "mean"),
+            ect_negative_sig_share=("ect_negative_sig", "mean"),
+            median_lr_coef=("lr_coef", "median"),
+            median_sr_coef=("sr_coef", "median"),
+        )
+        .reset_index()
+    )
+    out["summary_direction"] = direction
+    return out.sort_values(["stage_from", "stage_to", "retailer_panel", "intersection_rule", "model_family"]).reset_index(drop=True)
+
+
+def _farmgate_variant_stability(model_df: pd.DataFrame) -> pd.DataFrame:
+    use = _preferred_results(model_df)
+    if use.empty:
+        return pd.DataFrame()
+    use = use[(use["stage_from"] == "FarmGateUA") | (use["stage_to"] == "FarmGateUA")].copy()
+    if use.empty:
+        return pd.DataFrame()
+    group_cols = [
+        "chain_direction",
+        "stage_from",
+        "stage_to",
+        "retailer_panel",
+        "price_variant",
+        "panel_level",
+        "intersection_rule",
+        "model_family",
+    ]
+    out = (
+        use.groupby(group_cols, dropna=False)
+        .agg(
+            rows_total=("panel_name", "count"),
+            source_variants=("farm_gate_source", "nunique"),
+            interpolation_variants=("reconstruction_variant", "nunique"),
+            median_n_obs=("n_obs", "median"),
+            core_finding_share=("core_finding_flag", "mean"),
+            robust_linear_vs_pchip_share=("robust_linear_vs_pchip", "mean"),
+            robust_across_reconstruction_share=("robust_across_reconstruction", "mean"),
+        )
+        .reset_index()
+    )
+    return out.sort_values(["chain_direction", "stage_from", "stage_to", "retailer_panel", "intersection_rule", "model_family"]).reset_index(drop=True)
+
+
+def _unified_retail_comparison(model_df: pd.DataFrame, panel_index: pd.DataFrame, combined_diag: pd.DataFrame) -> pd.DataFrame:
+    data_rows: List[Dict[str, object]] = []
+    if not combined_diag.empty:
+        for retailer_panel, grp in combined_diag.groupby("panel_name", dropna=False):
+            if pd.isna(retailer_panel):
+                continue
+            data_rows.append(
+                {
+                    "comparison_block": "data",
+                    "retailer_panel": retailer_panel,
+                    "price_variant": "",
+                    "chain_direction": "",
+                    "stage_from": "",
+                    "stage_to": "",
+                    "intersection_rule": "",
+                    "model_family": "",
+                    "rows_total": int(len(grp)),
+                    "products_total": int(grp["product"].nunique()) if "product" in grp.columns else 0,
+                    "median_source_count": float(pd.to_numeric(grp.get("n_days_2plus_sources"), errors="coerce").median()),
+                    "anchor_only_share": np.nan,
+                    "core_finding_share": np.nan,
+                    "median_n_obs": np.nan,
+                    "robust_linear_vs_pchip_share": np.nan,
+                    "robust_across_reconstruction_share": np.nan,
+                }
+            )
+    use = _preferred_results(model_df)
+    if not use.empty:
+        use = use[use["retailer_panel"].isin(["Silpo", "Novus", "Retail_combined", "Retail_combined_core"])].copy()
+        use = use[(use["stage_from"] == "Retail") | (use["stage_to"] == "Retail")].copy()
+    if use.empty:
+        return pd.DataFrame(data_rows)
+    model_rows = (
+        use.groupby(
+            ["retailer_panel", "price_variant", "chain_direction", "stage_from", "stage_to", "intersection_rule", "model_family"],
+            dropna=False,
+        )
+        .agg(
+            rows_total=("panel_name", "count"),
+            core_finding_share=("core_finding_flag", "mean"),
+            median_n_obs=("n_obs", "median"),
+            robust_linear_vs_pchip_share=("robust_linear_vs_pchip", "mean"),
+            robust_across_reconstruction_share=("robust_across_reconstruction", "mean"),
+        )
+        .reset_index()
+    )
+    model_rows["comparison_block"] = "model"
+    model_rows["products_total"] = np.nan
+    model_rows["median_source_count"] = np.nan
+    model_rows["anchor_only_share"] = np.nan
+    cols = [
+        "comparison_block",
+        "retailer_panel",
+        "price_variant",
+        "chain_direction",
+        "stage_from",
+        "stage_to",
+        "intersection_rule",
+        "model_family",
+        "rows_total",
+        "products_total",
+        "median_source_count",
+        "anchor_only_share",
+        "core_finding_share",
+        "median_n_obs",
+        "robust_linear_vs_pchip_share",
+        "robust_across_reconstruction_share",
+    ]
+    base = pd.DataFrame(data_rows)
+    if base.empty:
+        return model_rows.loc[:, cols].reset_index(drop=True)
+    return pd.concat([base.loc[:, cols], model_rows.loc[:, cols]], ignore_index=True)
+
+
+def _intersection_stability(model_df: pd.DataFrame) -> pd.DataFrame:
+    use = _preferred_results(model_df)
+    if use.empty:
+        return pd.DataFrame()
+    out = (
+        use.groupby(["intersection_rule", "stage_from", "stage_to", "retailer_panel", "model_family"], dropna=False)
+        .agg(
+            rows_total=("panel_name", "count"),
+            median_n_obs=("n_obs", "median"),
+            core_finding_share=("core_finding_flag", "mean"),
+            robust_linear_vs_pchip_share=("robust_linear_vs_pchip", "mean"),
+            robust_across_reconstruction_share=("robust_across_reconstruction", "mean"),
+        )
+        .reset_index()
+    )
+    return out.sort_values(["stage_from", "stage_to", "retailer_panel", "intersection_rule", "model_family"]).reset_index(drop=True)
+
+
+def _save_primary_chain_summary_plots(
+    out_dir: Path,
+    farmgate_direct_df: pd.DataFrame,
+    farmgate_reverse_df: pd.DataFrame,
+    unified_retail_df: pd.DataFrame,
+    intersection_df: pd.DataFrame,
+) -> List[Path]:
+    paths: List[Path] = []
+
+    if not farmgate_direct_df.empty:
+        pivot = (
+            farmgate_direct_df.groupby(["stage_to", "retailer_panel"], dropna=False)["core_finding_share"]
+            .mean()
+            .unstack(fill_value=np.nan)
+            .sort_index()
+        )
+        if not pivot.empty:
+            fig, ax = common.plt.subplots(figsize=(10, 5), facecolor="white")
+            im = ax.imshow(pivot.fillna(0).to_numpy(), aspect="auto", cmap="YlGnBu", vmin=0, vmax=1)
+            ax.set_xticks(range(len(pivot.columns)))
+            ax.set_xticklabels([str(c) for c in pivot.columns], rotation=30, ha="right")
+            ax.set_yticks(range(len(pivot.index)))
+            ax.set_yticklabels([str(i) for i in pivot.index])
+            ax.set_title("Farm-gate direct core-finding share by downstream stage and retail panel")
+            for i in range(pivot.shape[0]):
+                for j in range(pivot.shape[1]):
+                    val = pivot.iloc[i, j]
+                    if pd.notna(val):
+                        ax.text(j, i, f"{val:.2f}", ha="center", va="center", fontsize=8)
+            fig.colorbar(im, ax=ax, fraction=0.03, pad=0.02)
+            p = out_dir / "farmgate_direct_heatmap.png"
+            fig.savefig(p, dpi=300, bbox_inches="tight", facecolor="white")
+            common.plt.close(fig)
+            paths.append(p)
+
+    if not farmgate_reverse_df.empty:
+        rev = (
+            farmgate_reverse_df.groupby("stage_from", dropna=False)["core_finding_share"]
+            .mean()
+            .sort_values(ascending=False)
+        )
+        if not rev.empty:
+            fig, ax = common.plt.subplots(figsize=(8, 4.8), facecolor="white")
+            ax.bar(rev.index.astype(str), rev.values, color="#4C78A8")
+            ax.set_ylim(0, 1)
+            ax.set_title("Reverse-to-farm-gate core-finding share")
+            ax.set_ylabel("Core-finding share")
+            ax.tick_params(axis="x", rotation=25)
+            p = out_dir / "farmgate_reverse_corefinding.png"
+            fig.savefig(p, dpi=300, bbox_inches="tight", facecolor="white")
+            common.plt.close(fig)
+            paths.append(p)
+
+    if not unified_retail_df.empty:
+        u = unified_retail_df[unified_retail_df["comparison_block"] == "model"].copy()
+        u = u[u["stage_to"].eq("Retail") | u["stage_from"].eq("Retail")]
+        if not u.empty:
+            grp = u.groupby("retailer_panel", dropna=False)["core_finding_share"].mean().sort_values(ascending=False)
+            fig, ax = common.plt.subplots(figsize=(8.5, 4.8), facecolor="white")
+            ax.bar(grp.index.astype(str), grp.values, color=["#72B7B2", "#54A24B", "#E45756", "#F58518"][: len(grp)])
+            ax.set_ylim(0, 1)
+            ax.set_title("Retail-panel comparison of core finding share")
+            ax.set_ylabel("Core-finding share")
+            ax.tick_params(axis="x", rotation=25)
+            p = out_dir / "unified_retail_comparison.png"
+            fig.savefig(p, dpi=300, bbox_inches="tight", facecolor="white")
+            common.plt.close(fig)
+            paths.append(p)
+
+    if not intersection_df.empty:
+        inter = intersection_df.groupby("intersection_rule", dropna=False)["core_finding_share"].mean().sort_values(ascending=False)
+        fig, ax = common.plt.subplots(figsize=(8, 4.6), facecolor="white")
+        ax.bar(inter.index.astype(str), inter.values, color="#B279A2")
+        ax.set_ylim(0, 1)
+        ax.set_title("Intersection-rule stability")
+        ax.set_ylabel("Core-finding share")
+        ax.tick_params(axis="x", rotation=25)
+        p = out_dir / "intersection_stability.png"
+        fig.savefig(p, dpi=300, bbox_inches="tight", facecolor="white")
+        common.plt.close(fig)
+        paths.append(p)
+
+    return paths
+
+
 def run_primary_chain_pipeline(freq: str = "daily") -> Path:
     _, raw = common.load_raw()
     cleaned = common.prepare_cleaned(raw)
@@ -1325,7 +2121,7 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
     mapping_audit = rw4_data.build_mapping_audit(cleaned)
     unit_admissibility = rw4_data.build_unit_admissibility(cleaned)
     reconstruction_diag = rw4_data.build_reconstruction_diagnostics(cleaned, all_daily)
-    panels, panel_index = _build_primary_panels(cleaned)
+    panels, panel_index, combined_diag, combined_methodology = _build_primary_panels(cleaned)
 
     pretests: List[Dict[str, object]] = []
     model_rows: List[Dict[str, object]] = []
@@ -1430,6 +2226,7 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
             "retailer_panel",
             "brand",
             "price_variant",
+            "intersection_rule",
             "farm_gate_source",
             "chain_direction",
             "stage_from",
@@ -1448,6 +2245,7 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
             "retailer_panel",
             "brand",
             "price_variant",
+            "intersection_rule",
             "reconstruction_variant",
             "chain_direction",
             "stage_from",
@@ -1472,9 +2270,14 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
     benchmark_cmp = _benchmark_comparison_rows(panels)
     coverage_df = _coverage_validation(model_df, panel_index)
     reverse_df = model_df[model_df["chain_direction"] == "reverse"].copy() if not model_df.empty else pd.DataFrame()
-    raw_milk_df = model_df[(model_df["panel_level"] == "product") & (model_df["stage_from"] == "FarmGateUA")].copy() if not model_df.empty else pd.DataFrame()
+    raw_milk_df = model_df[model_df["stage_from"] == "FarmGateUA"].copy() if not model_df.empty else pd.DataFrame()
     avg_df = model_df[model_df["panel_level"] == "average"].copy() if not model_df.empty else pd.DataFrame()
     brand_df = model_df[model_df["panel_level"] == "brand"].copy() if not model_df.empty else pd.DataFrame()
+    farmgate_direct_df = _farmgate_summary(model_df, "direct")
+    farmgate_reverse_df = _farmgate_summary(model_df, "reverse")
+    farmgate_stability_df = _farmgate_variant_stability(model_df)
+    unified_retail_df = _unified_retail_comparison(model_df, panel_index, combined_diag)
+    intersection_df = _intersection_stability(model_df)
 
     rule_df = pd.DataFrame(
         [
@@ -1486,11 +2289,20 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
                 "core_chain": "FarmGateUA -> ProducerUA -> ProZorro -> Retail",
                 "reverse_chain": "Retail -> ProZorro -> ProducerUA -> FarmGateUA",
                 "benchmarks_role": "ConsumerUA, EU, CME are external comparison benchmarks only",
+                "retail_combined_rule": "Retail_combined is the anchored weighted geometric mean of bias-aligned Silpo observed, Novus observed, and ConsumerUA; Retail_combined_core keeps the retailer-only support window.",
+                "intersection_rules": "chain_common_support, pairwise_overlap, comparison_panel, brand_top_sku",
             }
         ]
     )
 
     out_summary = common.get_output_dir("primary_chain_summary")
+    image_paths = _save_primary_chain_summary_plots(
+        out_summary,
+        farmgate_direct_df,
+        farmgate_reverse_df,
+        unified_retail_df,
+        intersection_df,
+    )
     common.write_tables_xlsx(
         out_summary / "primary_chain_consolidated.xlsx",
         {
@@ -1503,11 +2315,18 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
             "Retailer_Brand_Transmission": brand_df,
             "Variant_Robustness": variant_rob,
             "FarmGate_Source_Comparison": source_rob,
+            "FarmGate_Direct_Summary": farmgate_direct_df,
+            "FarmGate_Reverse_Summary": farmgate_reverse_df,
+            "FarmGate_Variant_Stability": farmgate_stability_df,
+            "Unified_Retail_Comparison": unified_retail_df,
+            "Intersection_Stability": intersection_df,
             "Benchmark_Comparison": benchmark_cmp,
             "Coverage_Validation": coverage_df,
             "Reconstruction_Diagnostics": reconstruction_diag,
             "Mapping_Audit": mapping_audit,
             "Unit_Admissibility": unit_admissibility,
+            "Retail_Combined_Diagnostics": combined_diag,
+            "Retail_Combined_Methodology": combined_methodology,
             "NARDL_Multipliers": multiplier_df,
             "VECM_IRF": vecm_irf_df,
             "Rule_Documentation": rule_df,
@@ -1527,9 +2346,13 @@ def run_primary_chain_pipeline(freq: str = "daily") -> Path:
             "Consolidated_ModelCoefficients": model_df,
             "Variant_Robustness": variant_rob,
             "FarmGate_Source_Comparison": source_rob,
+            "FarmGate_Direct_Summary": farmgate_direct_df,
+            "FarmGate_Reverse_Summary": farmgate_reverse_df,
+            "Unified_Retail_Comparison": unified_retail_df,
+            "Intersection_Stability": intersection_df,
             "Benchmark_Comparison": benchmark_cmp,
         },
-        [],
+        image_paths,
     )
     return out_summary
 
@@ -1574,7 +2397,7 @@ def run_synthetic_consumer_chain(freq: str = "daily") -> Path:
     _, raw = common.load_raw()
     cleaned = common.prepare_cleaned(raw)
     consumer = _benchmark_series(cleaned, "ConsumerUA")
-    retail = _combined_retail_panel(cleaned)
+    retail, _, _ = _combined_retail_panel(cleaned, include_consumer=False, panel_name="Retail_combined_core")
     producer = _producer_series(cleaned, "pchip")
     if consumer.empty or retail.empty:
         out = common.get_output_dir("secondary_synthetic_consumer")

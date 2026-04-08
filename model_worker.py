@@ -912,6 +912,16 @@ def run_intersection_bidirectional() -> Path:
     # ConsumerUA/EU/CME are used only as optional controls/robustness variables here.
     cleaned, all_daily, *_ = _prep()
     eff = _effective_daily_prices(all_daily)
+    retail_combined, _, retail_combined_method = vpt._combined_retail_panel(
+        cleaned,
+        include_consumer=True,
+        panel_name="Retail_combined",
+    )
+    retail_combined_core, _, retail_combined_core_method = vpt._combined_retail_panel(
+        cleaned,
+        include_consumer=False,
+        panel_name="Retail_combined_core",
+    )
     if eff.empty:
         out_dir = common.get_output_dir("model_intersection_bidirectional")
         xlsx = out_dir / "model_intersection_bidirectional_output.xlsx"
@@ -988,30 +998,58 @@ def run_intersection_bidirectional() -> Path:
             except Exception:
                 pass
 
-        # Combined intersection regression with optional secondary controls
-        retail_combined = p[["Silpo", "Novus"]].median(axis=1, skipna=True)
-        dlp2 = dlp.copy()
-        dlp2["RetailCombined"] = np.log(retail_combined.where(retail_combined > 0)).diff()
-        y = dlp2["RetailCombined"]
-        frame = pd.DataFrame({"y": y, "lag_y": y.shift(1)})
-        for src in ["Silpo", "Novus", "ConsumerUA", "EU", "CME", "ProducerUA"]:
-            if src not in dlp2.columns:
+        # Combined intersection regressions with both the anchored and strict retailer-core chains.
+        combined_specs = [
+            (
+                "RetailCombined",
+                "retail_combined_secondary_controls",
+                retail_combined,
+                retail_combined_method,
+            ),
+            (
+                "RetailCombinedCore",
+                "retail_combined_core_secondary_controls",
+                retail_combined_core,
+                retail_combined_core_method,
+            ),
+        ]
+        for y_label, combo_model, combo_frame, combo_method in combined_specs:
+            combined_prod = combo_frame[
+                (combo_frame["product"] == product)
+                & (combo_frame["standardized_type"] == standardized_type)
+            ][["date", "retail_observed"]].drop_duplicates().rename(columns={"retail_observed": y_label})
+            if combined_prod.empty:
                 continue
-            lag, _ = _best_lag(y, dlp2[src], max_lag=30, min_obs=20)
-            term = f"x_{src}_lag{lag}"
-            frame[term] = dlp2[src].shift(lag)
-        xcols = [c for c in frame.columns if c != "y"]
-        fit, used = _safe_ols(frame["y"], frame[xcols], hac_lags=3)
-        if fit is not None:
+            dlp2 = dlp.copy()
+            dlp2 = dlp2.merge(combined_prod, left_index=True, right_on="date", how="left").set_index("date")
+            raw_target = pd.to_numeric(dlp2[y_label], errors="coerce")
+            dlp2[y_label] = np.log(raw_target.where(raw_target > 0)).diff()
+            y = dlp2[y_label]
+            frame = pd.DataFrame({"y": y, "lag_y": y.shift(1)})
+            for src in ["Silpo", "Novus", "EU", "CME", "ProducerUA"]:
+                if src not in dlp2.columns:
+                    continue
+                lag, _ = _best_lag(y, dlp2[src], max_lag=30, min_obs=20)
+                term = f"x_{src}_lag{lag}"
+                frame[term] = dlp2[src].shift(lag)
+            xcols = [c for c in frame.columns if c != "y"]
+            fit, used = _safe_ols(frame["y"], frame[xcols], hac_lags=3)
+            if fit is None:
+                continue
             row = {
                 "product": product,
                 "standardized_type": standardized_type,
-                "combo_model": "silpo_novus_secondary_controls",
-                "y_source": "RetailCombined",
+                "combo_model": combo_model,
+                "y_source": y_label,
                 "n_obs": int(len(used)),
                 "r2": float(fit.rsquared),
                 "adj_r2": float(fit.rsquared_adj),
                 "coef_lag_y": float(fit.params.get("lag_y", np.nan)),
+                "combined_rule": (
+                    combo_method["construction_rule"].iloc[0]
+                    if not combo_method.empty and "construction_rule" in combo_method.columns
+                    else f"{y_label} constructed from the RW4 combined-retail builder."
+                ),
                 "module_role": "secondary_intersection_robustness",
             }
             for t in xcols:
@@ -1023,7 +1061,7 @@ def run_intersection_bidirectional() -> Path:
                     {
                         "product": product,
                         "standardized_type": standardized_type,
-                        "combo_model": "silpo_novus_secondary_controls",
+                        "combo_model": combo_model,
                         "term": t,
                         "coef": float(fit.params.get(t, np.nan)),
                         "pvalue": float(fit.pvalues.get(t, np.nan)),
