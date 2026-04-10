@@ -1,0 +1,794 @@
+product,product_literal,retailer,brand_norm,n_rows,n_dates,n_item_keys,matched_share,mean_discount_share,median_price
+butter,butter,Novus,,5,1,5,0.0,0.0,47.49
+butter,butter,Novus,новгород сіверський,4,3,1,0.0,0.0,106.495
+butter,butter,Novus,novus,4,2,1,0.0,0.0,114.0
+butter,butter,Novus,prego,4,2,4,0.25,0.0,114.0
+butter,butter,Novus,гхі,4,2,2,0.0,0.0,364.0
+butter,butter,Novus,яготинське,4,2,3,1.0,0.0,134.0
+butter,butter,Novus,roshen,3,2,2,0.6666666666666666,0.0,124.0
+butter,butter,Novus,волошкове поле,3,2,1,1.0,0.0,114.0
+butter,butter,Novus,селянське,3,2,2,1.0,0.0,99.99
+butter,butter,Novus,organic,2,2,1,0.0,0.0,141.5
+butter,butter,Novus,галичина,2,2,1,1.0,0.0,124.0
+butter,butter,Novus,дари,2,2,1,0.0,0.0,98.99
+butter,butter,Novus,молочна,2,2,1,1.0,0.0,101.495
+butter,butter,Novus,paysan,2,1,2,0.0,0.0,279.0
+butter,butter,Novus,біло,2,1,1,1.0,0.0,106.995
+butter,butter,Novus,ранчо,2,1,1,1.0,0.0,126.5
+butter,butter,Novus,dziugas,1,1,1,0.0,0.0,89.99
+butter,butter,Novus,mlekovita,1,1,1,0.0,0.0,79.99
+butter,butter,Novus,mother,1,1,1,0.0,0.0,154.0
+butter,butter,Novus,president,1,1,1,0.0,0.0,199.0
+butter,butter,Novus,валіо,1,1,1,0.0,0.0,229.0
+butter,butter,Novus,житомирський,1,1,1,0.0,0.0,114.0
+butter,butter,Novus,звени гора,1,1,1,0.0,0.0,104.0
+butter,butter,Novus,комо,1,1,1,1.0,0.0,139.0
+butter,butter,Novus,молокiя,1,1,1,0.0,0.0,124.0
+butter,butter,Novus,молокія,1,1,1,1.0,0.0,114.0
+butter,butter,Novus,онур,1,1,1,0.0,0.0,35.49
+butter,butter,Novus,ферма,1,1,1,1.0,0.0,154.0
+butter,butter,Novus,чумак,1,1,1,0.0,0.0,37.49
+butter,butter,Novus,щедро,1,1,1,0.0,0.0,41.99
+butter,butter,Silpo,лавка традицій,1064,48,23,0.0,0.19548872180451127,55.49
+butter,butter,Silpo,селянське,811,48,15,0.17879161528976573,0.18002466091245375,77.99
+butter,butter,Silpo,яготинське,432,48,6,0.6666666666666666,0.23842592592592593,59.99
+butter,butter,Silpo,l amp l,340,48,11,0.0,0.1676470588235294,294.0
+butter,butter,Silpo,ферма,233,48,5,0.41201716738197425,0.7167381974248928,55.9
+butter,butter,Silpo,gheesome,192,48,4,0.0,0.3541666666666667,94.19
+butter,butter,Silpo,organic,192,48,4,0.0,0.296875,59.99
+butter,butter,Silpo,isigny,191,48,4,0.0,0.18848167539267016,125.0
+butter,butter,Silpo,burro,144,48,3,0.0,0.3125,92.49
+butter,butter,Silpo,president,144,48,2,0.0,0.2569444444444444,57.49
+butter,butter,Silpo,valio,144,48,3,0.0,0.3680555555555556,64.99
+butter,butter,Silpo,біло,144,48,3,0.3333333333333333,0.2916666666666667,62.24
+butter,butter,Silpo,гхі,144,48,2,0.0,0.2847222222222222,89.99
+butter,butter,Silpo,повна чаша,144,48,1,0.0,0.1527777777777778,52.24
+butter,butter,Silpo,яготинське для дітей,144,48,3,0.0,0.2569444444444444,44.69
+butter,butter,Silpo,волошкове поле,97,48,1,1.0,0.21649484536082475,66.49
+butter,butter,Silpo,beppino,96,48,2,0.0,0.10416666666666667,33.49
+butter,butter,Silpo,brazzale,96,48,2,0.0,0.28125,119.495
+butter,butter,Silpo,paysan,96,48,2,0.0,0.17708333333333334,74.49
+butter,butter,Silpo,галичина,96,48,1,1.0,0.2604166666666667,54.74
+butter,butter,Silpo,молокія,96,48,1,1.0,0.3541666666666667,66.24
+butter,butter,Silpo,радимо,96,48,1,0.0,0.0,63.95
+butter,butter,Silpo,ранчо,96,48,1,1.0,0.010416666666666666,104.5
+butter,butter,Silpo,харківське,96,48,2,0.0,0.0,74.19
+butter,butter,Silpo,smjor,73,48,2,0.0,0.4383561643835616,81.49
+butter,butter,Silpo,elle,48,48,1,0.0,0.0,39.39
+butter,butter,Silpo,деражня,48,48,1,0.0,0.0,43.99
+butter,butter,Silpo,молочна,48,48,1,1.0,0.0,87.99
+butter,butter,Silpo,новгород сіверський сз,48,48,1,0.0,0.5625,479.0
+butter,butter,Silpo,первомайський мкк,48,48,1,0.0,0.0,92.19999999999999
+butter,butter,Silpo,премія,48,48,1,0.0,0.0,61.99
+butter,butter,Silpo,ситий,48,48,1,0.0,0.3333333333333333,72.49
+butter,butter,Silpo,щедро,48,48,1,0.0,0.125,70.24
+butter,butter,Silpo,столиця,47,47,1,0.0,0.0,119.0
+butter,butter,Silpo,комо,38,37,2,0.9736842105263158,0.0,112.0
+butter,butter,Silpo,smjorr,24,24,1,0.0,1.0,339.0
+butter,butter,Silpo,радивилівмолоко,23,23,1,0.0,0.0,134.0
+butter,butter,Silpo,волошковое поле,19,19,1,0.0,0.05263157894736842,43.49
+butter,butter,Silpo,roshen,8,8,1,1.0,0.375,56.49
+butter,butter,Silpo,prego,2,2,1,1.0,0.0,126.0
+condensed_milk,condensed_milk,Novus,пмкк,8,4,5,0.0,0.0,81.99
+condensed_milk,condensed_milk,Novus,ічня,8,4,6,0.375,0.0,94.49
+condensed_milk,condensed_milk,Novus,первомайський мкк,4,1,4,0.0,0.0,65.99
+condensed_milk,condensed_milk,Novus,roshen,2,2,1,0.0,0.0,110.495
+condensed_milk,condensed_milk,Novus,полтавочка,2,1,1,0.0,0.0,68.49
+condensed_milk,condensed_milk,Novus,green,1,1,1,0.0,0.0,65.99
+condensed_milk,condensed_milk,Novus,happy,1,1,1,0.0,0.0,71.99
+condensed_milk,condensed_milk,Novus,mama,1,1,1,0.0,0.0,97.99
+condensed_milk,condensed_milk,Novus,злагода,1,1,1,0.0,0.0,27.99
+condensed_milk,condensed_milk,Novus,мама,1,1,1,0.0,0.0,92.99
+condensed_milk,condensed_milk,Novus,нappy,1,1,1,0.0,0.0,47.99
+condensed_milk,condensed_milk,Novus,фанні,1,1,1,0.0,0.0,23.99
+condensed_milk,condensed_milk,Silpo,первомайський мкк,289,48,4,0.0,0.3771626297577855,39.99
+condensed_milk,condensed_milk,Silpo,лавка традицій,192,48,4,0.0,0.13541666666666666,71.7
+condensed_milk,condensed_milk,Silpo,,144,48,3,0.0,0.19444444444444445,60.24
+condensed_milk,condensed_milk,Silpo,еко молпродукт,144,48,3,0.0,0.1388888888888889,64.49
+condensed_milk,condensed_milk,Silpo,первомайский мкк,144,48,3,0.0,0.034722222222222224,76.99
+condensed_milk,condensed_milk,Silpo,ічня,144,48,3,0.3333333333333333,0.1736111111111111,56.49
+condensed_milk,condensed_milk,Silpo,mama,96,48,2,0.0,0.041666666666666664,86.51
+condensed_milk,condensed_milk,Silpo,sladosvit,96,48,2,0.0,0.125,120.0
+condensed_milk,condensed_milk,Silpo,злагода,96,48,2,0.0,0.20833333333333334,29.99
+condensed_milk,condensed_milk,Silpo,премія,96,48,1,0.0,0.4583333333333333,50.99
+condensed_milk,condensed_milk,Silpo,green,48,48,1,0.0,0.020833333333333332,74.99
+condensed_milk,condensed_milk,Silpo,organic,48,48,1,0.0,0.0,59.99
+condensed_milk,condensed_milk,Silpo,бісквіт,48,48,1,0.0,0.0,349.0
+condensed_milk,condensed_milk,Silpo,круасани,48,48,1,0.0,0.10416666666666667,83.42
+condensed_milk,condensed_milk,Silpo,фанні,48,48,1,0.0,0.22916666666666666,63.94499999999999
+condensed_milk,condensed_milk,Silpo,premia,47,47,1,0.0,0.46808510638297873,46.99
+condensed_milk,condensed_milk,Silpo,ферма,39,39,1,0.0,0.28205128205128205,17.99
+condensed_milk,condensed_milk,Silpo,премія рікі тікі,1,1,1,0.0,0.0,44.29
+cottage_cheese,cottage_cheese,Novus,president,8,5,3,0.625,0.0,93.49
+cottage_cheese,cottage_cheese,Novus,біло,7,3,2,0.7142857142857143,0.0,84.99
+cottage_cheese,cottage_cheese,Novus,звени гора,7,2,7,0.5714285714285714,0.0,88.99
+cottage_cheese,cottage_cheese,Novus,яготинський,7,2,2,0.8571428571428571,0.0,97.99
+cottage_cheese,cottage_cheese,Novus,український,5,4,2,0.0,0.0,79.99
+cottage_cheese,cottage_cheese,Novus,простонаше,3,3,2,0.3333333333333333,0.0,91.99
+cottage_cheese,cottage_cheese,Novus,organic,3,2,2,0.0,0.0,114.0
+cottage_cheese,cottage_cheese,Novus,волошкове поле,3,1,2,1.0,0.0,83.99
+cottage_cheese,cottage_cheese,Novus,novus,2,2,1,0.0,0.0,85.99
+cottage_cheese,cottage_cheese,Novus,premialle,2,2,2,0.0,0.0,59.99
+cottage_cheese,cottage_cheese,Novus,галичина,2,1,2,0.5,0.0,88.49
+cottage_cheese,cottage_cheese,Novus,молокія,2,1,1,1.0,0.0,91.49
+cottage_cheese,cottage_cheese,Novus,своє,2,1,1,1.0,0.0,96.49
+cottage_cheese,cottage_cheese,Novus,ферма,2,1,1,1.0,0.0,99.49
+cottage_cheese,cottage_cheese,Novus,eggs,1,1,1,0.0,0.0,98.99
+cottage_cheese,cottage_cheese,Novus,philadelphia,1,1,1,0.0,0.0,114.0
+cottage_cheese,cottage_cheese,Novus,снек,1,1,1,0.0,0.0,55.99
+cottage_cheese,cottage_cheese,Silpo,,1102,48,19,0.0,0.28584392014519056,59.945
+cottage_cheese,cottage_cheese,Silpo,лавка традицій,412,48,9,0.0,0.04854368932038835,61.99
+cottage_cheese,cottage_cheese,Silpo,president,343,48,4,0.8571428571428571,0.32653061224489793,59.99
+cottage_cheese,cottage_cheese,Silpo,біло,288,48,2,0.8333333333333334,0.2534722222222222,63.99
+cottage_cheese,cottage_cheese,Silpo,молокія,287,48,4,0.5017421602787456,0.1602787456445993,59.99
+cottage_cheese,cottage_cheese,Silpo,волошкове поле,192,48,2,1.0,0.20833333333333334,67.99
+cottage_cheese,cottage_cheese,Silpo,звени гора,191,48,4,1.0,0.2931937172774869,61.49
+cottage_cheese,cottage_cheese,Silpo,простонаше,191,48,3,0.24607329842931938,0.3507853403141361,51.49
+cottage_cheese,cottage_cheese,Silpo,повна чаша,150,48,2,0.0,0.22,54.99
+cottage_cheese,cottage_cheese,Silpo,творожна традиція,144,48,1,0.0,0.1388888888888889,58.99
+cottage_cheese,cottage_cheese,Silpo,галичина,142,48,2,0.3380281690140845,0.24647887323943662,59.99
+cottage_cheese,cottage_cheese,Silpo,злагода,96,48,2,0.0,0.0625,95.39
+cottage_cheese,cottage_cheese,Silpo,премія,96,48,1,0.0,0.3125,61.49
+cottage_cheese,cottage_cheese,Silpo,ферма,96,48,1,1.0,0.8125,51.49
+cottage_cheese,cottage_cheese,Silpo,яготинське,96,48,2,0.0,0.15625,58.24
+cottage_cheese,cottage_cheese,Silpo,яготинське для дітей,96,48,2,0.0,0.010416666666666666,24.94
+cottage_cheese,cottage_cheese,Silpo,джерсей,48,48,1,0.0,0.0,29.9
+cottage_cheese,cottage_cheese,Silpo,рудь,48,48,1,0.0,0.0,64.99
+cottage_cheese,cottage_cheese,Silpo,своє,48,48,1,1.0,0.08333333333333333,70.49
+cottage_cheese,cottage_cheese,Silpo,яготинський,48,48,1,1.0,0.3125,59.99
+cottage_cheese,cottage_cheese,Silpo,агуня,47,47,1,0.0,0.3829787234042553,50.99
+cream,cream,Novus,галичина,8,3,6,0.625,0.0,62.489999999999995
+cream,cream,Novus,hochland,7,4,7,0.0,0.0,99.99
+cream,cream,Novus,president,7,2,6,0.14285714285714285,0.0,99.99
+cream,cream,Novus,бурьонка,6,4,1,1.0,0.0,57.39
+cream,cream,Novus,яготинські,6,4,2,0.8333333333333334,0.0,87.49
+cream,cream,Novus,,5,2,5,0.0,0.0,31.99
+cream,cream,Novus,простонаше,4,2,1,1.0,0.0,55.49
+cream,cream,Novus,valio,3,3,3,0.0,0.0,144.0
+cream,cream,Novus,селянські,3,3,1,1.0,0.0,67.99
+cream,cream,Novus,пирятин,3,2,2,0.0,0.0,32.99
+cream,cream,Novus,ферма,3,2,1,0.0,0.0,30.49
+cream,cream,Novus,good,2,2,2,0.0,0.0,76.99
+cream,cream,Novus,laciaty,2,2,2,0.0,0.0,79.99
+cream,cream,Novus,комо,2,2,2,0.0,0.0,60.489999999999995
+cream,cream,Novus,olkom,2,1,2,0.0,0.0,39.99
+cream,cream,Novus,европейська,2,1,2,0.0,0.0,759.0
+cream,cream,Novus,точно,2,1,2,0.0,0.0,26.99
+cream,cream,Novus,шостка,2,1,2,0.0,0.0,53.489999999999995
+cream,cream,Novus,biraghi,1,1,1,0.0,0.0,104.0
+cream,cream,Novus,cheese,1,1,1,0.0,0.0,114.0
+cream,cream,Novus,elle vire,1,1,1,0.0,0.0,42.99
+cream,cream,Novus,exquisa,1,1,1,0.0,0.0,114.0
+cream,cream,Novus,miree,1,1,1,0.0,0.0,115.0
+cream,cream,Novus,mlekpol,1,1,1,0.0,0.0,109.0
+cream,cream,Novus,muller,1,1,1,0.0,0.0,52.99
+cream,cream,Novus,premialle,1,1,1,0.0,0.0,94.99
+cream,cream,Novus,saint,1,1,1,0.0,0.0,299.0
+cream,cream,Novus,zott,1,1,1,0.0,0.0,42.49
+cream,cream,Novus,дольче,1,1,1,0.0,0.0,43.49
+cream,cream,Novus,желе,1,1,1,0.0,0.0,25.99
+cream,cream,Novus,клуб,1,1,1,0.0,0.0,114.0
+cream,cream,Novus,крем,1,1,1,0.0,0.0,199.0
+cream,cream,Novus,на здоров я,1,1,1,0.0,0.0,29.99
+cream,cream,Novus,наш,1,1,1,0.0,0.0,21.709
+cream,cream,Novus,пікнік,1,1,1,0.0,0.0,38.49
+cream,cream,Novus,смачно шеф,1,1,1,0.0,0.0,199.0
+cream,cream,Novus,фанні,1,1,1,0.0,0.0,31.49
+cream,cream,Novus,чумак,1,1,1,0.0,0.0,44.99
+cream,cream,Novus,щедро,1,1,1,0.0,0.0,42.49
+cream,cream,Silpo,галичина,527,48,7,0.635673624288425,0.4079696394686907,52.49
+cream,cream,Silpo,яготинські,360,48,4,0.3333333333333333,0.2638888888888889,61.49
+cream,cream,Silpo,president,303,48,6,0.15841584158415842,0.2607260726072607,54.99
+cream,cream,Silpo,простонаше,290,48,3,0.6689655172413793,0.4241379310344828,56.945
+cream,cream,Silpo,бурьонка,288,48,4,0.3333333333333333,0.2708333333333333,48.34
+cream,cream,Silpo,ферма,276,48,4,0.0,0.5507246376811594,56.9
+cream,cream,Silpo,лавка традицій,212,48,5,0.0,0.0660377358490566,73.9
+cream,cream,Silpo,селянські,192,48,1,1.0,0.2552083333333333,57.49
+cream,cream,Silpo,окздх,144,48,2,0.0,0.3402777777777778,43.29
+cream,cream,Silpo,смачно шеф,144,48,2,0.0,0.20833333333333334,72.34
+cream,cream,Silpo,polmlek,114,28,5,0.0,0.17543859649122806,59.99
+cream,cream,Silpo,яготинське,73,48,1,0.0,0.2054794520547945,117.0
+cream,cream,Silpo,,48,48,1,0.0,0.4375,57.49
+cream,cream,Silpo,bakoma,48,48,1,0.0,0.20833333333333334,55.49
+cream,cream,Silpo,elle amp vire,48,48,1,0.0,0.2916666666666667,74.74
+cream,cream,Silpo,lactel,48,48,1,0.0,0.4166666666666667,53.945
+cream,cream,Silpo,premialle,48,48,1,0.0,0.3958333333333333,62.49
+cream,cream,Silpo,zott,48,48,1,0.0,0.0,44.59
+cream,cream,Silpo,вершковий пломбір,48,48,1,0.0,0.2916666666666667,57.49
+cream,cream,Silpo,данколекція,48,48,1,0.0,0.5,50.49
+cream,cream,Silpo,дольче,48,48,1,0.0,0.5208333333333334,45.99
+cream,cream,Silpo,київський,48,48,1,0.0,0.125,73.195
+cream,cream,Silpo,коктейль,48,48,1,0.0,0.4375,71.99
+cream,cream,Silpo,на здоров я,48,48,1,0.0,0.3541666666666667,56.49
+cream,cream,Silpo,пудинг,48,48,1,0.0,0.375,57.99
+cream,cream,Silpo,пудінг,48,48,1,0.0,0.0,42.79
+cream,cream,Silpo,смачно,48,48,1,0.0,0.0625,194.0
+cream,cream,Silpo,чумак,48,48,1,0.0,0.125,65.74
+cream,cream,Silpo,щедро,48,48,1,0.0,0.125,69.99
+cream,cream,Silpo,elle,5,5,1,0.0,0.0,29.68
+cream,cream,Silpo,крімер,3,3,1,0.0,0.0,189.0
+cream,cream,Silpo,ранчо,2,2,1,0.0,0.0,121.53999999999999
+cream,cream,Silpo,olkom,1,1,1,0.0,0.0,189.0
+hard_cheese,hard_cheese,Novus,комо,42,8,39,0.0,0.0,98.99
+hard_cheese,hard_cheese,Novus,звени гора,23,6,19,0.0,0.0,99.99
+hard_cheese,hard_cheese,Novus,пирятин,22,4,19,0.0,0.0,99.99
+hard_cheese,hard_cheese,Novus,мукко,19,2,19,0.0,0.0,879.0
+hard_cheese,hard_cheese,Novus,новгород сіверський,17,4,17,0.0,0.0,449.0
+hard_cheese,hard_cheese,Novus,zinka,17,1,17,0.0,0.0,699.0
+hard_cheese,hard_cheese,Novus,president,13,2,13,0.0,0.0,104.0
+hard_cheese,hard_cheese,Novus,paysan,11,3,9,0.0,0.0,199.0
+hard_cheese,hard_cheese,Novus,,11,2,11,0.0,0.0,52.99
+hard_cheese,hard_cheese,Novus,dziugas,10,6,10,0.0,0.0,174.0
+hard_cheese,hard_cheese,Novus,mlekovita,10,4,9,0.0,0.0,99.99
+hard_cheese,hard_cheese,Novus,kaserei,9,3,8,0.0,0.0,1099.0
+hard_cheese,hard_cheese,Novus,шостка,9,3,8,0.0,0.0,119.0
+hard_cheese,hard_cheese,Novus,mlekpol,9,2,8,0.0,0.0,109.0
+hard_cheese,hard_cheese,Novus,wyke,9,2,7,0.0,0.0,244.0
+hard_cheese,hard_cheese,Novus,rory,8,1,8,0.0,0.0,904.0
+hard_cheese,hard_cheese,Novus,sabelli,7,4,7,0.0,0.0,144.0
+hard_cheese,hard_cheese,Novus,ферма,7,3,6,0.0,0.0,47.49
+hard_cheese,hard_cheese,Novus,briette,7,2,7,0.0,0.0,224.0
+hard_cheese,hard_cheese,Novus,exquisa,7,2,6,0.0,0.0,114.0
+hard_cheese,hard_cheese,Novus,cир,6,2,6,0.0,0.0,319.0
+hard_cheese,hard_cheese,Novus,rambyno,6,1,6,0.0,0.0,104.0
+hard_cheese,hard_cheese,Novus,granarolo,5,4,5,0.0,0.0,189.0
+hard_cheese,hard_cheese,Novus,prego,5,4,5,0.0,0.0,499.0
+hard_cheese,hard_cheese,Novus,biraghi,5,3,5,0.0,0.0,879.0
+hard_cheese,hard_cheese,Novus,belgomilk,5,2,5,0.0,0.0,899.0
+hard_cheese,hard_cheese,Novus,castello,5,2,5,0.0,0.0,199.0
+hard_cheese,hard_cheese,Novus,желе,5,2,5,0.0,0.0,24.99
+hard_cheese,hard_cheese,Novus,hochland,4,3,4,0.0,0.0,86.49
+hard_cheese,hard_cheese,Novus,laciaty,4,3,4,0.0,0.0,84.99
+hard_cheese,hard_cheese,Novus,reny,4,3,4,0.0,0.0,116.5
+hard_cheese,hard_cheese,Novus,біло,4,3,4,0.0,0.0,76.99
+hard_cheese,hard_cheese,Novus,cheese,4,2,4,0.0,0.0,496.5
+hard_cheese,hard_cheese,Novus,coburger,4,2,4,0.0,0.0,246.5
+hard_cheese,hard_cheese,Novus,paturages,4,2,4,0.0,0.0,179.0
+hard_cheese,hard_cheese,Novus,philadelphia,4,2,4,0.0,0.0,189.0
+hard_cheese,hard_cheese,Novus,клуб,4,2,4,0.0,0.0,426.995
+hard_cheese,hard_cheese,Novus,сирна,4,2,4,0.0,0.0,214.0
+hard_cheese,hard_cheese,Novus,garcia,4,1,4,0.0,0.0,706.5
+hard_cheese,hard_cheese,Novus,inalpi,4,1,4,0.0,0.0,169.0
+hard_cheese,hard_cheese,Novus,lel,4,1,4,0.0,0.0,389.0
+hard_cheese,hard_cheese,Novus,pittoresque,4,1,4,0.0,0.0,959.0
+hard_cheese,hard_cheese,Novus,saint,4,1,4,0.0,0.0,324.0
+hard_cheese,hard_cheese,Novus,сокіл,4,1,4,0.0,0.0,819.0
+hard_cheese,hard_cheese,Novus,good,3,3,2,0.0,0.0,76.99
+hard_cheese,hard_cheese,Novus,castelli,3,2,2,0.0,0.0,199.0
+hard_cheese,hard_cheese,Novus,rokiskio,3,2,2,0.0,0.0,174.0
+hard_cheese,hard_cheese,Novus,волошкове поле,3,2,3,0.0,0.0,159.0
+hard_cheese,hard_cheese,Novus,звенигора,3,2,3,0.0,0.0,21.729999999999997
+hard_cheese,hard_cheese,Novus,яготинська,3,2,3,0.0,0.0,81.99
+hard_cheese,hard_cheese,Novus,albeniz,3,1,3,0.0,0.0,82.99
+hard_cheese,hard_cheese,Novus,entremont,3,1,3,0.0,0.0,299.0
+hard_cheese,hard_cheese,Novus,frico,3,1,3,0.0,0.0,629.0
+hard_cheese,hard_cheese,Novus,ile,3,1,3,0.0,0.0,299.0
+hard_cheese,hard_cheese,Novus,le,3,1,3,0.0,0.0,299.0
+hard_cheese,hard_cheese,Novus,pastourelle,3,1,3,0.0,0.0,749.0
+hard_cheese,hard_cheese,Novus,наш,3,1,3,0.0,0.0,22.99
+hard_cheese,hard_cheese,Novus,сироватка,3,1,3,0.0,0.0,149.0
+hard_cheese,hard_cheese,Novus,bergader,2,2,2,0.0,0.0,189.0
+hard_cheese,hard_cheese,Novus,cantorel,2,2,2,0.0,0.0,909.0
+hard_cheese,hard_cheese,Novus,grand,2,2,1,0.0,0.0,199.0
+hard_cheese,hard_cheese,Novus,grand or,2,2,2,0.0,0.0,684.495
+hard_cheese,hard_cheese,Novus,kroon,2,2,2,0.0,0.0,524.0
+hard_cheese,hard_cheese,Novus,mother,2,2,2,0.0,0.0,116.5
+hard_cheese,hard_cheese,Novus,premialle,2,2,2,0.0,0.0,76.49
+hard_cheese,hard_cheese,Novus,turek,2,2,2,0.0,0.0,159.0
+hard_cheese,hard_cheese,Novus,злагода,2,2,2,0.0,0.0,48.489999999999995
+hard_cheese,hard_cheese,Novus,маасдам,2,2,1,0.0,0.0,354.0
+hard_cheese,hard_cheese,Novus,ammerlаnder,2,1,2,0.0,0.0,204.0
+hard_cheese,hard_cheese,Novus,arla,2,1,2,0.0,0.0,824.0
+hard_cheese,hard_cheese,Novus,beemster,2,1,2,0.0,0.0,1209.0
+hard_cheese,hard_cheese,Novus,bons,2,1,2,0.0,0.0,529.0
+hard_cheese,hard_cheese,Novus,carcia,2,1,2,0.0,0.0,314.0
+hard_cheese,hard_cheese,Novus,cesvaine,2,1,2,0.0,0.0,98.99
+hard_cheese,hard_cheese,Novus,hallbauer,2,1,2,0.0,0.0,1074.5
+hard_cheese,hard_cheese,Novus,hard_cheese,2,1,2,0.0,0.0,71.99
+hard_cheese,hard_cheese,Novus,huizer,2,1,2,0.0,0.0,984.0
+hard_cheese,hard_cheese,Novus,jack s,2,1,2,0.0,0.0,990.0
+hard_cheese,hard_cheese,Novus,landana,2,1,2,0.0,0.0,1481.5999999999988
+hard_cheese,hard_cheese,Novus,lazur,2,1,2,0.0,0.0,374.0
+hard_cheese,hard_cheese,Novus,marques,2,1,2,0.0,0.0,151.995
+hard_cheese,hard_cheese,Novus,merci,2,1,2,0.0,0.0,209.0
+hard_cheese,hard_cheese,Novus,oh,2,1,2,0.0,0.0,144.0
+hard_cheese,hard_cheese,Novus,paladin,2,1,2,0.0,0.0,499.495
+hard_cheese,hard_cheese,Novus,soloviov,2,1,2,0.0,0.0,589.0
+hard_cheese,hard_cheese,Novus,synnove,2,1,2,0.0,0.0,674.0
+hard_cheese,hard_cheese,Novus,valio,2,1,1,0.0,0.0,214.0
+hard_cheese,hard_cheese,Novus,villa,2,1,2,0.0,0.0,429.0
+hard_cheese,hard_cheese,Novus,весела,2,1,2,0.0,0.0,100.995
+hard_cheese,hard_cheese,Novus,дживальдіс,2,1,2,0.0,0.0,78.49
+hard_cheese,hard_cheese,Novus,молочний світ,2,1,2,0.0,0.0,974.0
+hard_cheese,hard_cheese,Novus,палички,2,1,2,0.0,0.0,86.99
+hard_cheese,hard_cheese,Novus,фанні,2,1,2,0.0,0.0,67.99
+hard_cheese,hard_cheese,Novus,alpenhain,1,1,1,0.0,0.0,89.99
+hard_cheese,hard_cheese,Novus,arnaud,1,1,1,0.0,0.0,174.0
+hard_cheese,hard_cheese,Novus,bayernland,1,1,1,0.0,0.0,639.0
+hard_cheese,hard_cheese,Novus,bleu,1,1,1,0.0,0.0,199.0
+hard_cheese,hard_cheese,Novus,brazzale,1,1,1,0.0,0.0,1099.0
+hard_cheese,hard_cheese,Novus,carmela,1,1,1,0.0,0.0,669.0
+hard_cheese,hard_cheese,Novus,casarrigoni,1,1,1,0.0,0.0,1499.0
+hard_cheese,hard_cheese,Novus,cuvee,1,1,1,0.0,0.0,1099.0
+hard_cheese,hard_cheese,Novus,cоbreros,1,1,1,0.0,0.0,144.0
+hard_cheese,hard_cheese,Novus,dallicarillo,1,1,1,0.0,0.0,58.99
+hard_cheese,hard_cheese,Novus,danablu,1,1,1,0.0,0.0,649.0
+hard_cheese,hard_cheese,Novus,dodoni,1,1,1,0.0,0.0,209.0
+hard_cheese,hard_cheese,Novus,emborg,1,1,1,0.0,0.0,114.0
+hard_cheese,hard_cheese,Novus,fior,1,1,1,0.0,0.0,40.99
+hard_cheese,hard_cheese,Novus,fiorella,1,1,1,0.0,0.0,1379.0
+hard_cheese,hard_cheese,Novus,fourme,1,1,1,0.0,0.0,899.0
+hard_cheese,hard_cheese,Novus,fromager,1,1,1,0.0,0.0,919.0
+hard_cheese,hard_cheese,Novus,galbani,1,1,1,0.0,0.0,184.0
+hard_cheese,hard_cheese,Novus,gillot,1,1,1,0.0,0.0,239.0
+hard_cheese,hard_cheese,Novus,gourmini,1,1,1,0.0,0.0,67.99
+hard_cheese,hard_cheese,Novus,haisynmilk,1,1,1,0.0,0.0,559.0
+hard_cheese,hard_cheese,Novus,karavel,1,1,1,0.0,0.0,949.0
+hard_cheese,hard_cheese,Novus,kinder,1,1,1,0.0,0.0,45.99
+hard_cheese,hard_cheese,Novus,l ortolan,1,1,1,0.0,0.0,89.99
+hard_cheese,hard_cheese,Novus,la,1,1,1,0.0,0.0,599.0
+hard_cheese,hard_cheese,Novus,leerdammer,1,1,1,0.0,0.0,129.0
+hard_cheese,hard_cheese,Novus,mantova,1,1,1,0.0,0.0,299.0
+hard_cheese,hard_cheese,Novus,miree,1,1,1,0.0,0.0,115.0
+hard_cheese,hard_cheese,Novus,montesinos,1,1,1,0.0,0.0,1159.0
+hard_cheese,hard_cheese,Novus,neogal,1,1,1,0.0,0.0,149.0
+hard_cheese,hard_cheese,Novus,niva,1,1,1,0.0,0.0,689.0
+hard_cheese,hard_cheese,Novus,novus,1,1,1,0.0,0.0,429.0
+hard_cheese,hard_cheese,Novus,richesmonts,1,1,1,0.0,0.0,149.0
+hard_cheese,hard_cheese,Novus,rouzaire,1,1,1,0.0,0.0,1279.0
+hard_cheese,hard_cheese,Novus,sara,1,1,1,0.0,0.0,44.99
+hard_cheese,hard_cheese,Novus,sepi,1,1,1,0.0,0.0,369.0
+hard_cheese,hard_cheese,Novus,sierpc,1,1,1,0.0,0.0,144.0
+hard_cheese,hard_cheese,Novus,soreda,1,1,1,0.0,0.0,289.0
+hard_cheese,hard_cheese,Novus,sterilgarda,1,1,1,0.0,0.0,79.99
+hard_cheese,hard_cheese,Novus,striegistaler,1,1,1,0.0,0.0,114.0
+hard_cheese,hard_cheese,Novus,tete,1,1,1,0.0,0.0,1524.1999999999975
+hard_cheese,hard_cheese,Novus,tilbury,1,1,1,0.0,0.0,629.0
+hard_cheese,hard_cheese,Novus,trikata,1,1,1,0.0,0.0,67.99
+hard_cheese,hard_cheese,Novus,veenland,1,1,1,0.0,0.0,699.0
+hard_cheese,hard_cheese,Novus,verchee,1,1,1,0.0,0.0,799.0
+hard_cheese,hard_cheese,Novus,vilkyskiu,1,1,1,0.0,0.0,95.99
+hard_cheese,hard_cheese,Novus,villiers,1,1,1,0.0,0.0,219.0
+hard_cheese,hard_cheese,Novus,vilvi,1,1,1,0.0,0.0,689.0
+hard_cheese,hard_cheese,Novus,zlaty,1,1,1,0.0,0.0,99.99
+hard_cheese,hard_cheese,Novus,адигейський,1,1,1,0.0,0.0,499.0
+hard_cheese,hard_cheese,Novus,бергадер,1,1,1,0.0,0.0,134.0
+hard_cheese,hard_cheese,Novus,біо,1,1,1,0.0,0.0,589.0
+hard_cheese,hard_cheese,Novus,гайсин,1,1,1,0.0,0.0,579.0
+hard_cheese,hard_cheese,Novus,гауда,1,1,1,0.0,0.0,299.0
+hard_cheese,hard_cheese,Novus,горіховий,1,1,1,0.0,0.0,849.0
+hard_cheese,hard_cheese,Novus,доообра,1,1,1,0.0,0.0,1524.1999999999975
+hard_cheese,hard_cheese,Novus,зат,1,1,1,0.0,0.0,259.0
+hard_cheese,hard_cheese,Novus,звені,1,1,1,0.0,0.0,124.0
+hard_cheese,hard_cheese,Novus,козуб,1,1,1,0.0,0.0,689.0
+hard_cheese,hard_cheese,Novus,моцарелла,1,1,1,0.0,0.0,429.0
+hard_cheese,hard_cheese,Novus,мікс,1,1,1,0.0,0.0,209.0
+hard_cheese,hard_cheese,Novus,новус,1,1,1,0.0,0.0,434.0
+hard_cheese,hard_cheese,Novus,пармезан,1,1,1,0.0,0.0,769.0
+hard_cheese,hard_cheese,Novus,плато,1,1,1,0.0,0.0,219.0
+hard_cheese,hard_cheese,Novus,снек,1,1,1,0.0,0.0,88.99
+hard_cheese,hard_cheese,Novus,сокiл,1,1,1,0.0,0.0,819.0
+hard_cheese,hard_cheese,Novus,староказацький,1,1,1,0.0,0.0,569.0
+hard_cheese,hard_cheese,Novus,старокозацький,1,1,1,0.0,0.0,479.0
+hard_cheese,hard_cheese,Novus,старокозаче,1,1,1,0.0,0.0,799.0
+hard_cheese,hard_cheese,Novus,старокозачий,1,1,1,0.0,0.0,134.0
+hard_cheese,hard_cheese,Novus,сулугуні,1,1,1,0.0,0.0,819.0
+hard_cheese,hard_cheese,Novus,український,1,1,1,0.0,0.0,349.0
+hard_cheese,hard_cheese,Novus,яготинський,1,1,1,0.0,0.0,76.99
+hard_cheese,hard_cheese,Novus,європейська,1,1,1,0.0,0.0,419.0
+hard_cheese,hard_cheese,Silpo,яготинське,384,48,8,0.0,0.3151041666666667,49.99
+hard_cheese,hard_cheese,Silpo,,336,48,7,0.0,0.03273809523809524,78.99
+hard_cheese,hard_cheese,Silpo,hard_cheese,287,48,6,0.0,0.28222996515679444,58.99
+hard_cheese,hard_cheese,Silpo,маса,192,48,3,0.0,0.078125,54.99
+hard_cheese,hard_cheese,Silpo,чудо,192,48,4,0.0,0.8333333333333334,35.49
+hard_cheese,hard_cheese,Silpo,сироватка,151,48,4,0.0,0.039735099337748346,52.49
+hard_cheese,hard_cheese,Silpo,волошкове поле,144,48,3,0.0,0.0,79.99
+hard_cheese,hard_cheese,Silpo,желе,144,48,3,0.0,0.3611111111111111,48.49
+hard_cheese,hard_cheese,Silpo,лавка традицій,144,48,3,0.0,0.0763888888888889,62.99
+hard_cheese,hard_cheese,Silpo,яготинське для дітей,111,48,5,0.0,0.04504504504504504,16.15
+hard_cheese,hard_cheese,Silpo,запіканка,94,47,2,0.0,0.2872340425531915,57.49
+hard_cheese,hard_cheese,Silpo,president,48,48,1,0.0,0.3541666666666667,66.99
+hard_cheese,hard_cheese,Silpo,бісквіт,48,48,1,0.0,0.4583333333333333,73.695
+hard_cheese,hard_cheese,Silpo,вишня,48,48,1,0.0,0.08333333333333333,58.49
+hard_cheese,hard_cheese,Silpo,галичина,48,48,1,0.0,0.20833333333333334,57.49
+hard_cheese,hard_cheese,Silpo,злагода,48,48,1,0.0,0.041666666666666664,359.0
+hard_cheese,hard_cheese,Silpo,крімер,48,48,1,0.0,0.22916666666666666,86.49
+hard_cheese,hard_cheese,Silpo,любимчик,48,48,1,0.0,0.22916666666666666,39.99
+hard_cheese,hard_cheese,Silpo,повна чаша,48,48,1,0.0,0.16666666666666666,78.49
+hard_cheese,hard_cheese,Silpo,рудь,48,48,1,0.0,0.0,46.99
+hard_cheese,hard_cheese,Silpo,яготинська,48,48,1,0.0,0.16666666666666666,30.89
+hard_cheese,hard_cheese,Silpo,сет,10,10,1,0.0,0.8,301.4
+milk,milk,Novus,,36,9,36,0.0,0.0,46.99
+milk,milk,Novus,яготинське,14,3,4,0.7857142857142857,0.0,61.989999999999995
+milk,milk,Novus,селянське,11,5,3,1.0,0.0,59.99
+milk,kefir,Novus,яготинський,8,4,2,1.0,0.0,56.49
+milk,milk,Novus,галичина,8,4,2,1.0,0.0,66.49
+milk,ayran,Novus,айран,7,3,5,0.42857142857142855,0.0,62.99
+milk,ryazhanka,Novus,яготинська,6,4,4,1.0,0.0,48.49
+milk,milk,Novus,organic,5,3,3,0.6,0.0,89.99
+milk,kefir,Novus,молокія,4,4,2,1.0,0.0,66.99
+milk,milk,Novus,бурьонка,4,3,1,1.0,0.0,84.49
+milk,kefir,Novus,селянський,3,2,1,1.0,0.0,68.99
+milk,milk,Novus,ферма,3,2,1,1.0,0.0,64.99
+milk,ayran,Novus,яготинський,3,1,2,0.0,0.0,61.99
+milk,kefir,Novus,галичина,3,1,3,0.3333333333333333,0.0,21.99
+milk,milk,Novus,quick,3,1,3,0.0,0.0,46.99
+milk,milk,Novus,zinka,3,1,1,0.0,0.0,69.99
+milk,kefir,Novus,волошкове поле,2,2,2,1.0,0.0,52.989999999999995
+milk,kefir,Novus,ферма,2,2,1,1.0,0.0,69.49
+milk,milk,Novus,житомирський,2,2,1,0.0,0.0,57.49
+milk,milk,Novus,здоров я,2,2,1,0.0,0.0,63.989999999999995
+milk,milk,Novus,на здоров я,2,2,2,1.0,0.0,52.239999999999995
+milk,milk,Novus,наше,2,2,2,0.5,0.0,53.989999999999995
+milk,kefir,Novus,,2,1,2,0.0,0.0,64.99
+milk,kefir,Novus,mother,2,1,1,0.0,0.0,56.99
+milk,kefir,Novus,organic,2,1,2,0.5,0.0,70.49
+milk,kefir,Novus,галичанський,2,1,1,0.0,0.0,44.74
+milk,kefir,Novus,простонаше,2,1,1,1.0,0.0,63.489999999999995
+milk,kefir,Novus,ґокарпати,2,1,2,1.0,0.0,43.99
+milk,milk,Novus,lactel,2,1,1,1.0,0.0,78.49
+milk,milk,Novus,закваска,2,1,2,0.0,0.0,59.89
+milk,milk,Novus,лактель,2,1,1,0.0,0.0,79.49
+milk,milk,Novus,молокія,2,1,2,1.0,0.0,63.489999999999995
+milk,milk,Novus,простонаше,2,1,2,1.0,0.0,63.489999999999995
+milk,ayran,Novus,lactel,1,1,1,1.0,0.0,29.99
+milk,kefir,Novus,kefir,1,1,1,0.0,0.0,57.99
+milk,kefir,Novus,novus,1,1,1,0.0,0.0,56.99
+milk,kefir,Novus,zinka,1,1,1,0.0,0.0,46.49
+milk,kefir,Novus,на здоров я,1,1,1,1.0,0.0,69.99
+milk,kefir,Novus,своє,1,1,1,0.0,0.0,71.99
+milk,kefir,Novus,слов яночка,1,1,1,1.0,0.0,69.99
+milk,milk,Novus,eggs,1,1,1,0.0,0.0,98.99
+milk,milk,Novus,marka,1,1,1,0.0,0.0,45.99
+milk,milk,Novus,mother,1,1,1,0.0,0.0,72.99
+milk,milk,Novus,novus,1,1,1,0.0,0.0,51.99
+milk,milk,Novus,агуня,1,1,1,1.0,0.0,23.79
+milk,milk,Novus,азорель,1,1,1,0.0,0.0,74.99
+milk,milk,Novus,волошкове поле,1,1,1,0.0,0.0,60.99
+milk,milk,Novus,своє,1,1,1,0.0,0.0,51.99
+milk,milk,Novus,слов яночка,1,1,1,1.0,0.0,57.99
+milk,milk,Novus,яготинське для дітей,1,1,1,0.0,0.0,26.49
+milk,milk,Novus,яготинський,1,1,1,0.0,0.0,50.99
+milk,ryazhanka,Novus,organic,1,1,1,0.0,0.0,67.99
+milk,ryazhanka,Novus,простонаше,1,1,1,1.0,0.0,67.99
+milk,ryazhanka,Novus,селянська,1,1,1,1.0,0.0,38.99
+milk,ryazhanka,Novus,слов яночка,1,1,1,1.0,0.0,79.99
+milk,milk,Silpo,,1044,48,28,0.0,0.28544061302681994,62.99
+milk,milk,Silpo,селянське,888,48,9,0.6227477477477478,0.2759009009009009,55.49
+milk,milk,Silpo,яготинське,818,48,9,0.558679706601467,0.2567237163814181,61.99
+milk,milk,Silpo,лавка традицій,817,48,19,0.0,0.16156670746634028,64.99
+milk,milk,Silpo,коктейль,639,48,15,0.0,0.39593114241001565,48.69
+milk,kefir,Silpo,лавка традицій,591,48,11,0.0,0.04060913705583756,71.99
+milk,milk,Silpo,lactel,575,48,6,0.08347826086956522,0.22260869565217392,75.49
+milk,milk,Silpo,actimel,549,48,12,0.0,0.46083788706739526,52.9
+milk,ayran,Silpo,айран,532,48,10,0.20300751879699247,0.2932330827067669,58.24
+milk,milk,Silpo,галичина,480,48,6,0.6,0.25833333333333336,67.99
+milk,kefir,Silpo,селянський,432,48,2,0.7777777777777778,0.2962962962962963,53.49
+milk,milk,Silpo,бурьонка,431,48,8,0.11136890951276102,0.21345707656612528,55.99
+milk,ryazhanka,Silpo,яготинська,421,48,7,0.6579572446555819,0.25653206650831356,46.29
+milk,milk,Silpo,ферма,413,48,6,0.4648910411622276,0.6828087167070218,56.9
+milk,milk,Silpo,молокія,384,48,4,0.375,0.2708333333333333,60.49
+milk,kefir,Silpo,яготинський,336,48,2,1.0,0.20535714285714285,63.99
+milk,milk,Silpo,премія,336,48,4,0.0,0.2916666666666667,58.335
+milk,milk,Silpo,organic,290,48,2,0.6689655172413793,0.27241379310344827,51.99
+milk,milk,Silpo,волошкове поле,290,48,3,0.6724137931034483,0.1793103448275862,64.99
+milk,kefir,Silpo,молокія,288,48,2,1.0,0.2743055555555556,52.99
+milk,kefir,Silpo,ґокарпати,288,48,4,0.6666666666666666,0.5,59.99
+milk,milk,Silpo,яготинське для дітей,288,48,5,0.0,0.24305555555555555,53.99
+milk,milk,Silpo,закваска,286,48,6,0.0,0.19230769230769232,64.99
+milk,milk,Silpo,лактонія,250,48,7,0.0,0.292,42.79
+milk,kefir,Silpo,organic,243,48,2,0.8024691358024691,0.11522633744855967,75.49
+milk,milk,Silpo,міськмолзавод,240,48,3,0.0,0.004166666666666667,67.99
+milk,milk,Silpo,на здоров я,240,48,2,1.0,0.2125,59.945
+milk,ryazhanka,Silpo,селянська,240,48,2,0.8,0.43333333333333335,40.89
+milk,milk,Silpo,слов яночка,205,48,3,0.5317073170731708,0.25365853658536586,54.99
+milk,kefir,Silpo,волошкове поле,192,48,2,1.0,0.2760416666666667,53.74
+milk,kefir,Silpo,злагода,192,48,4,0.0,0.171875,56.49
+milk,milk,Silpo,окздх,192,48,3,0.0,0.3229166666666667,44.84
+milk,milk,Silpo,радимо,192,48,3,0.0,0.203125,63.99
+milk,ryazhanka,Silpo,лавка традицій,192,48,4,0.0,0.25,65.91
+milk,ayran,Silpo,,155,48,4,0.0,0.2645161290322581,57.99
+milk,kefir,Silpo,галичина,154,48,3,0.9805194805194806,0.2922077922077922,52.99
+milk,milk,Silpo,простонаше,146,48,2,1.0,0.3972602739726027,53.9
+milk,ayran,Silpo,турецький,144,48,2,0.0,0.2361111111111111,52.49
+milk,kefir,Silpo,ферма,144,48,2,0.6666666666666666,0.7986111111111112,42.49
+milk,milk,Silpo,злагода,144,48,2,0.0,0.18055555555555555,83.24
+milk,milk,Silpo,кремосо,144,48,3,0.0,0.0625,179.0
+milk,milk,Silpo,соломинка,144,48,3,0.0,0.2569444444444444,55.74
+milk,ryazhanka,Silpo,простонаше,144,48,3,0.0,0.3819444444444444,55.99
+milk,milk,Silpo,muller,140,48,4,0.0,0.0,40.39
+milk,kefir,Silpo,радимо,135,48,2,0.0,0.3037037037037037,49.99
+milk,milk,Silpo,feels,127,48,3,0.0,0.3228346456692913,57.49
+milk,milk,Silpo,трубочка,112,48,3,0.0,0.07142857142857142,47.89
+milk,kefir,Silpo,mimimilk,96,48,1,0.0,0.3854166666666667,57.24
+milk,kefir,Silpo,кагма,96,48,1,0.0,0.0,45.59
+milk,kefir,Silpo,лактонія,96,48,1,0.0,0.3125,54.99
+milk,kefir,Silpo,міськмолзавод,96,48,1,0.0,0.0,51.74
+milk,kefir,Silpo,повна чаша,96,48,1,0.0,0.19791666666666666,54.99
+milk,kefir,Silpo,простонаше,96,48,1,0.0,0.40625,44.99
+milk,milk,Silpo,valio,96,48,2,0.0,0.2708333333333333,64.24
+milk,milk,Silpo,весела бурьонка,96,48,1,0.0,0.0,38.34
+milk,milk,Silpo,деражня,96,48,1,0.0,0.0,43.99
+milk,milk,Silpo,козацька ферма,96,48,1,0.0,0.0,69.99
+milk,milk,Silpo,повна чаша,96,48,1,0.0,0.3229166666666667,42.64
+milk,milk,Silpo,яготинський для дітей,96,48,2,0.0,0.2916666666666667,59.99
+milk,ryazhanka,Silpo,волошкове поле,96,48,2,0.0,0.10416666666666667,39.99
+milk,ryazhanka,Silpo,волошковое поле,96,48,1,0.0,0.08333333333333333,22.49
+milk,ryazhanka,Silpo,злагода,96,48,2,0.0,0.2604166666666667,47.49
+milk,ryazhanka,Silpo,міськмолзавод,96,48,1,0.0,0.0,57.49
+milk,ryazhanka,Silpo,радимо,96,48,1,0.0,0.041666666666666664,65.99
+milk,ryazhanka,Silpo,слов яночка,96,48,2,0.5,0.28125,66.65
+milk,kefir,Silpo,framo,95,48,1,0.0,0.0,30.99
+milk,milk,Silpo,рудь,95,48,1,0.0,0.07368421052631578,46.99
+milk,milk,Silpo,кагма,94,48,1,0.0,0.0,149.0
+milk,kefir,Silpo,гармонія,90,45,2,0.0,0.0,43.49
+milk,ayran,Silpo,lactel,48,48,1,1.0,0.22916666666666666,53.49
+milk,ayran,Silpo,ферма,48,48,1,0.0,0.125,59.99
+milk,kefir,Silpo,kefir,48,48,1,0.0,0.0,64.99
+milk,kefir,Silpo,гокарпати,48,48,1,0.0,0.14583333333333334,27.29
+milk,kefir,Silpo,деражня,48,48,1,0.0,0.0,43.49
+milk,kefir,Silpo,закваска,48,48,1,0.0,0.14583333333333334,59.99
+milk,kefir,Silpo,кефiр,48,48,1,0.0,0.0,51.99
+milk,kefir,Silpo,мілкін,48,48,1,0.0,0.0,14.9
+milk,kefir,Silpo,на здоров я,48,48,1,1.0,0.1875,51.09
+milk,kefir,Silpo,рудь,48,48,1,0.0,0.041666666666666664,25.99
+milk,kefir,Silpo,слов яночка,48,48,1,1.0,0.875,34.99
+milk,kefir,Silpo,угринів молоко,48,48,1,0.0,0.0,40.29
+milk,kefir,Silpo,фанні,48,48,1,0.0,0.25,78.4
+milk,kefir,Silpo,яготинське,48,48,1,0.0,0.3333333333333333,58.99
+milk,milk,Silpo,cир,48,48,1,0.0,0.2916666666666667,69.49
+milk,milk,Silpo,danone,48,48,1,0.0,0.3125,59.945
+milk,milk,Silpo,ecomil,48,48,1,0.0,0.1875,61.99
+milk,milk,Silpo,virtuoso by lukachivka,48,48,1,0.0,0.1875,59.39
+milk,milk,Silpo,агуня,48,48,1,1.0,0.75,51.144999999999996
+milk,milk,Silpo,біла лінія,48,48,1,0.0,0.14583333333333334,28.79
+milk,milk,Silpo,данколекція,48,48,1,0.0,0.5208333333333334,83.74
+milk,milk,Silpo,наше,48,48,1,1.0,0.4583333333333333,79.99
+milk,milk,Silpo,полуниця,48,48,1,0.0,0.3333333333333333,31.49
+milk,milk,Silpo,своє,48,48,1,0.0,0.0,33.84
+milk,milk,Silpo,сосохім,48,48,1,0.0,1.0,44.39
+milk,milk,Silpo,старий порицьк,48,48,1,0.0,1.0,93.99
+milk,milk,Silpo,сільпо,48,48,1,0.0,0.3125,59.99
+milk,milk,Silpo,угринів молоко,48,48,1,0.0,0.0,69.99
+milk,milk,Silpo,фанні,48,48,1,0.0,0.3125,61.49
+milk,ryazhanka,Silpo,farm,48,48,1,0.0,0.0625,89.99
+milk,ryazhanka,Silpo,organic,48,48,1,0.0,0.3333333333333333,63.99
+milk,ryazhanka,Silpo,ryazhanka,48,48,1,0.0,0.0,60.49
+milk,ryazhanka,Silpo,на здоров я,48,48,1,0.0,0.0,28.67
+milk,ryazhanka,Silpo,повна чаша,48,48,1,0.0,0.5,43.99
+milk,ryazhanka,Silpo,ферма,48,48,1,1.0,0.6875,46.595
+milk,milk,Silpo,первомайський мкк,47,47,1,0.0,0.0,19.99
+milk,milk,Silpo,снек,47,47,1,0.0,0.19148936170212766,52.99
+milk,ryazhanka,Silpo,галичина,47,47,1,1.0,0.40425531914893614,49.99
+milk,kefir,Silpo,старий порицьк,45,45,1,0.0,0.5333333333333333,279.0
+milk,milk,Silpo,гармонія,44,44,1,0.0,0.0,22.99
+milk,kefir,Silpo,feels,31,31,1,0.0,0.0,75.99
+milk,milk,Silpo,polmlek,28,27,2,0.0,0.14285714285714285,49.99
+milk,kefir,Silpo,virtuoso by lukachivka,18,18,1,0.0,0.0,137.0
+milk,ryazhanka,Silpo,галичанська,5,5,1,0.0,0.0,59.99
+milk,ryazhanka,Silpo,гармонія,5,5,1,0.0,1.0,39.38
+milk_powder,milk_powder,Novus,крімер,1,1,1,0.0,0.0,129.0
+milk_powder,milk_powder,Novus,молочний світ,1,1,1,1.0,0.0,199.0
+milk_powder,milk_powder,Silpo,сто пудов,96,48,1,0.0,0.2604166666666667,54.99
+milk_powder,milk_powder,Silpo,молочний світ,66,48,2,0.7272727272727273,0.45454545454545453,84.9
+milk_powder,milk_powder,Silpo,kara,48,48,1,0.0,0.5625,169.0
+sour_cream,sour_cream,Novus,president,11,3,5,0.7272727272727273,0.0,63.99
+sour_cream,sour_cream,Novus,яготинська,7,3,2,1.0,0.0,60.99
+sour_cream,sour_cream,Novus,волошкове поле,6,2,1,1.0,0.0,57.99
+sour_cream,sour_cream,Novus,простонаше,6,2,2,1.0,0.0,56.99
+sour_cream,sour_cream,Novus,селянська,6,2,1,1.0,0.0,48.99
+sour_cream,sour_cream,Novus,молокія,5,3,2,1.0,0.0,56.99
+sour_cream,sour_cream,Novus,ферма,3,3,2,1.0,0.0,68.99
+sour_cream,sour_cream,Novus,слов яночка,3,2,1,1.0,0.0,57.99
+sour_cream,sour_cream,Novus,звени гора,3,1,3,0.0,0.0,199.0
+sour_cream,sour_cream,Novus,novus,2,2,1,0.0,0.0,50.99
+sour_cream,sour_cream,Novus,,2,1,2,0.0,0.0,163.495
+sour_cream,sour_cream,Novus,галичина,2,1,1,1.0,0.0,62.489999999999995
+sour_cream,sour_cream,Novus,organic,1,1,1,1.0,0.0,69.99
+sour_cream,sour_cream,Novus,villa,1,1,1,0.0,0.0,55.99
+sour_cream,sour_cream,Novus,галичанськa,1,1,1,0.0,0.0,61.99
+sour_cream,sour_cream,Novus,галичанська,1,1,1,1.0,0.0,46.99
+sour_cream,sour_cream,Novus,запіканка,1,1,1,0.0,0.0,109.0
+sour_cream,sour_cream,Novus,комо,1,1,1,0.0,0.0,469.0
+sour_cream,sour_cream,Silpo,лавка традицій,625,48,12,0.0,0.2368,54.99
+sour_cream,sour_cream,Silpo,president,582,48,5,0.7542955326460481,0.23195876288659795,49.49
+sour_cream,sour_cream,Silpo,яготинська,292,48,3,0.9863013698630136,0.3561643835616438,48.99
+sour_cream,sour_cream,Silpo,ферма,290,48,3,0.993103448275862,0.5448275862068965,38.99
+sour_cream,sour_cream,Silpo,простонаше,288,48,2,1.0,0.34375,51.24
+sour_cream,sour_cream,Silpo,міськмолзавод,240,48,3,0.0,0.0,65.49
+sour_cream,sour_cream,Silpo,organic,194,48,2,0.7525773195876289,0.17010309278350516,44.99
+sour_cream,sour_cream,Silpo,mimimilk,192,48,1,0.0,0.2864583333333333,59.99
+sour_cream,sour_cream,Silpo,молокія,192,48,2,1.0,0.328125,56.99
+sour_cream,sour_cream,Silpo,волошкове поле,156,48,1,1.0,0.20512820512820512,44.89
+sour_cream,sour_cream,Silpo,framo,144,48,1,0.0,0.1736111111111111,43.99
+sour_cream,sour_cream,Silpo,селянська,144,48,1,1.0,0.2152777777777778,71.99
+sour_cream,sour_cream,Silpo,радимо,143,48,1,0.0,0.26573426573426573,69.99
+sour_cream,sour_cream,Silpo,гармонія,138,48,1,0.0,0.2826086956521739,54.99
+sour_cream,sour_cream,Silpo,слов яночка,112,48,1,1.0,0.10714285714285714,97.49
+sour_cream,sour_cream,Silpo,hollandia,106,48,1,0.0,0.3113207547169811,63.489999999999995
+sour_cream,sour_cream,Silpo,повна чаша,97,48,2,0.0,0.38144329896907214,52.99
+sour_cream,sour_cream,Silpo,галичина,96,48,1,1.0,0.3229166666666667,52.99
+sour_cream,sour_cream,Silpo,деражня,96,48,1,0.0,0.125,74.99
+sour_cream,sour_cream,Silpo,кагма,96,48,1,0.0,0.07291666666666667,38.49
+sour_cream,sour_cream,Silpo,молочне,96,48,1,0.0,0.3125,59.24
+sour_cream,sour_cream,Silpo,столиця,96,48,1,0.0,0.0,63.989999999999995
+sour_cream,sour_cream,Silpo,харківська,96,48,1,0.0,0.0,244.495
+sour_cream,sour_cream,Silpo,галичанська,95,48,1,1.0,0.29473684210526313,50.99
+sour_cream,sour_cream,Silpo,на здоров я,95,48,1,0.0,0.3684210526315789,51.99
+sour_cream,sour_cream,Silpo,злагода,94,48,1,0.0,0.18085106382978725,46.49
+sour_cream,sour_cream,Silpo,malenka,48,48,1,0.0,0.4375,59.9
+sour_cream,sour_cream,Silpo,бiла лiнiя,48,48,1,0.0,0.14583333333333334,19.64
+sour_cream,sour_cream,Silpo,біла лінія,48,48,1,0.0,0.0,34.99
+sour_cream,sour_cream,Silpo,простокваша,48,48,1,0.0,0.020833333333333332,71.49
+sour_cream,sour_cream,Silpo,рудь,48,48,1,0.0,0.020833333333333332,70.99
+sour_cream,sour_cream,Silpo,селянське,48,48,1,0.0,0.20833333333333334,64.74
+sour_cream,sour_cream,Silpo,сметана,48,48,1,0.0,0.16666666666666666,78.78
+sour_cream,sour_cream,Silpo,угринів молоко,48,48,1,0.0,0.0,54.99
+sour_cream,sour_cream,Silpo,мілкін,46,46,1,0.0,0.0,38.69
+sour_cream,sour_cream,Silpo,простоквашино,2,2,1,0.0,1.0,23.39
+sour_cream,sour_cream,Silpo,смаковеньки,1,1,1,0.0,0.0,64.99
+yogurt_dessert,yogurt,Novus,молокія,33,7,26,0.5151515151515151,0.0,41.49
+yogurt_dessert,yogurt,Novus,галичина,30,8,22,0.7,0.0,41.49
+yogurt_dessert,yogurt,Novus,активіа,24,2,17,0.75,0.0,40.79
+yogurt_dessert,yogurt,Novus,яготинський,22,4,17,0.7727272727272727,0.0,40.49
+yogurt_dessert,yogurt,Novus,дольче,20,8,16,0.45,0.0,45.14
+yogurt_dessert,dessert,Novus,волошкове поле,17,6,17,0.23529411764705882,0.0,19.49
+yogurt_dessert,dessert,Novus,дольче,14,7,12,0.2857142857142857,0.0,60.989999999999995
+yogurt_dessert,dessert,Novus,чудо,10,3,9,0.1,0.0,27.49
+yogurt_dessert,yogurt,Novus,чудо,10,1,7,0.9,0.0,65.99
+yogurt_dessert,dessert,Novus,пудинг,8,3,8,0.0,0.0,77.99
+yogurt_dessert,yogurt,Novus,danone,8,2,7,0.875,0.0,20.74
+yogurt_dessert,dessert,Novus,elle vire,8,1,8,0.0,0.0,51.99
+yogurt_dessert,yogurt,Novus,лактонія,7,3,7,0.0,0.0,22.99
+yogurt_dessert,yogurt,Novus,ростишка,7,2,5,1.0,0.0,26.99
+yogurt_dessert,yogurt,Novus,фанні,7,2,6,1.0,0.0,31.99
+yogurt_dessert,yogurt,Novus,movenpick,6,5,6,0.0,0.0,36.49
+yogurt_dessert,dessert,Novus,марійка,6,4,6,0.5,0.0,40.64
+yogurt_dessert,dessert,Novus,яготинський,6,4,4,0.0,0.0,37.79
+yogurt_dessert,dessert,Novus,деліссімо,6,3,6,0.0,0.0,46.14
+yogurt_dessert,yogurt,Novus,organic,6,1,6,0.6666666666666666,0.0,84.495
+yogurt_dessert,yogurt,Novus,muller,5,2,5,0.0,0.0,52.99
+yogurt_dessert,yogurt,Novus,мукко,5,1,5,0.0,0.0,37.99
+yogurt_dessert,dessert,Novus,фанні,4,3,4,0.0,0.0,44.489999999999995
+yogurt_dessert,yogurt,Novus,волошкове поле,4,3,4,0.75,0.0,41.99
+yogurt_dessert,yogurt,Novus,активія,4,2,4,0.0,0.0,48.89
+yogurt_dessert,dessert,Novus,zott,4,1,4,0.0,0.0,40.74
+yogurt_dessert,dessert,Novus,пані хуторянка,4,1,4,0.0,0.0,26.99
+yogurt_dessert,yogurt,Novus,ehrmann,4,1,4,0.0,0.0,34.99
+yogurt_dessert,yogurt,Novus,villa,4,1,4,0.0,0.0,51.39
+yogurt_dessert,yogurt,Novus,zinka,4,1,4,0.0,0.0,34.74
+yogurt_dessert,dessert,Novus,exquisa,3,2,3,0.0,0.0,119.0
+yogurt_dessert,yogurt,Novus,lactel,3,2,3,0.0,0.0,18.99
+yogurt_dessert,yogurt,Novus,premialle,3,2,3,0.6666666666666666,0.0,48.99
+yogurt_dessert,yogurt,Novus,деліссімо,3,2,3,0.0,0.0,40.49
+yogurt_dessert,yogurt,Novus,на здоров я,3,2,3,0.6666666666666666,0.0,39.99
+yogurt_dessert,yogurt,Novus,азорель,3,1,3,0.0,0.0,53.99
+yogurt_dessert,dessert,Novus,ферма,2,2,2,1.0,0.0,18.39
+yogurt_dessert,yogurt,Novus,onur,2,2,1,0.0,0.0,64.99
+yogurt_dessert,dessert,Novus,nonpareil,2,1,2,0.0,0.0,77.495
+yogurt_dessert,dessert,Novus,зорька,2,1,2,0.0,0.0,49.79
+yogurt_dessert,dessert,Novus,слов яночка,2,1,2,0.5,0.0,33.89
+yogurt_dessert,yogurt,Novus,mother,2,1,2,0.0,0.0,90.995
+yogurt_dessert,yogurt,Novus,закваска,2,1,2,0.5,0.0,79.99
+yogurt_dessert,yogurt,Novus,молочар,2,1,2,0.0,0.0,67.99
+yogurt_dessert,dessert,Novus,baileys,1,1,1,0.0,0.0,119.0
+yogurt_dessert,dessert,Novus,danone,1,1,1,0.0,0.0,49.79
+yogurt_dessert,dessert,Novus,l o l,1,1,1,0.0,0.0,15.99
+yogurt_dessert,dessert,Novus,valio,1,1,1,0.0,0.0,88.99
+yogurt_dessert,dessert,Novus,даніссімо,1,1,1,0.0,0.0,49.79
+yogurt_dessert,dessert,Novus,злагода,1,1,1,0.0,0.0,22.49
+yogurt_dessert,dessert,Novus,крем,1,1,1,0.0,0.0,36.99
+yogurt_dessert,dessert,Novus,полуниця,1,1,1,0.0,0.0,19.99
+yogurt_dessert,dessert,Novus,равлик,1,1,1,0.0,0.0,87.99
+yogurt_dessert,dessert,Novus,яготинське,1,1,1,0.0,0.0,32.99
+yogurt_dessert,yogurt,Novus,,1,1,1,0.0,0.0,69.99
+yogurt_dessert,yogurt,Novus,soloviov,1,1,1,0.0,0.0,34.99
+yogurt_dessert,yogurt,Novus,агуня,1,1,1,0.0,0.0,21.49
+yogurt_dessert,yogurt,Novus,житомирський,1,1,1,0.0,0.0,24.99
+yogurt_dessert,yogurt,Novus,локо моко,1,1,1,0.0,0.0,18.99
+yogurt_dessert,yogurt,Silpo,лавка традицій,2860,48,68,0.0,0.2545454545454545,69.99
+yogurt_dessert,yogurt,Silpo,молокія,2327,48,49,0.29694886119467123,0.2681564245810056,49.99
+yogurt_dessert,yogurt,Silpo,яготинський,1719,48,35,0.4363001745200698,0.2862129144851658,50.09
+yogurt_dessert,yogurt,Silpo,галичина,1631,48,27,0.4996934396076027,0.2556713672593501,58.57
+yogurt_dessert,yogurt,Silpo,активіа,1201,48,18,0.720233139050791,0.3122398001665279,45.99
+yogurt_dessert,yogurt,Silpo,дольче,1153,48,23,0.3738074588031223,0.2489158716392021,59.99
+yogurt_dessert,dessert,Silpo,лавка традицій,1142,48,25,0.0,0.19264448336252188,82.99
+yogurt_dessert,dessert,Silpo,дольче,982,48,23,0.14663951120162932,0.24643584521384929,54.99
+yogurt_dessert,yogurt,Silpo,lekker,837,48,18,0.0,0.30824372759856633,52.99
+yogurt_dessert,yogurt,Silpo,волошкове поле,768,48,16,0.1875,0.23307291666666666,39.79
+yogurt_dessert,yogurt,Silpo,фанні,725,48,9,0.8620689655172413,0.17517241379310344,52.99
+yogurt_dessert,yogurt,Silpo,чудо,722,48,12,0.5983379501385041,0.3601108033240997,57.49
+yogurt_dessert,yogurt,Silpo,danone,571,48,14,0.6725043782837128,0.3204903677758319,54.49
+yogurt_dessert,yogurt,Silpo,bakoma,528,48,11,0.0,0.3768939393939394,64.945
+yogurt_dessert,dessert,Silpo,чудо,527,48,11,0.09108159392789374,0.5445920303605313,50.99
+yogurt_dessert,yogurt,Silpo,радимо,527,48,11,0.0,0.47438330170777987,31.39
+yogurt_dessert,dessert,Silpo,пані хуторянка,512,48,11,0.0,0.150390625,50.99
+yogurt_dessert,dessert,Silpo,волошкове поле,499,48,13,0.3847695390781563,0.2605210420841683,51.9
+yogurt_dessert,yogurt,Silpo,hollandia,486,48,12,0.0,0.3559670781893004,42.79
+yogurt_dessert,dessert,Silpo,деліссімо,437,48,11,0.0,0.2997711670480549,48.99
+yogurt_dessert,dessert,Silpo,gelarty,432,48,9,0.0,0.16666666666666666,86.99
+yogurt_dessert,yogurt,Silpo,ферма,423,48,9,0.0,0.2907801418439716,56.99
+yogurt_dessert,yogurt,Silpo,на здоров я,386,48,9,0.24870466321243523,0.10103626943005181,41.19
+yogurt_dessert,yogurt,Silpo,organic,384,48,8,0.5,0.20052083333333334,79.99
+yogurt_dessert,yogurt,Silpo,міськмолзавод,383,48,8,0.0,0.013054830287206266,39.99
+yogurt_dessert,yogurt,Silpo,молочне,380,48,6,0.0,0.29736842105263156,34.99
+yogurt_dessert,dessert,Silpo,яготинський,340,48,10,0.0,0.29411764705882354,45.99
+yogurt_dessert,yogurt,Silpo,lactel,337,48,8,0.0,0.09792284866468842,57.99
+yogurt_dessert,dessert,Silpo,premialle,336,48,7,0.0,0.6964285714285714,36.24
+yogurt_dessert,yogurt,Silpo,локо моко,336,48,7,0.0,0.30952380952380953,52.99
+yogurt_dessert,yogurt,Silpo,злагода,335,48,7,0.0,0.20597014925373133,41.19
+yogurt_dessert,yogurt,Silpo,ростишка,334,48,5,1.0,0.38323353293413176,45.99
+yogurt_dessert,dessert,Silpo,марійка,318,48,11,0.44654088050314467,0.5911949685534591,45.89
+yogurt_dessert,yogurt,Silpo,яготинське,290,48,8,0.0,0.3448275862068966,46.99
+yogurt_dessert,yogurt,Silpo,milupa,288,48,6,0.0,0.5902777777777778,49.724999999999994
+yogurt_dessert,yogurt,Silpo,premialle,288,48,6,0.3333333333333333,0.6319444444444444,39.99
+yogurt_dessert,yogurt,Silpo,агуня,288,48,6,0.0,0.4826388888888889,49.945
+yogurt_dessert,yogurt,Silpo,лактонія,288,48,6,0.0,0.3819444444444444,54.9
+yogurt_dessert,dessert,Silpo,valio,287,48,6,0.0,0.30313588850174217,73.99
+yogurt_dessert,dessert,Silpo,пудинг,287,48,6,0.0,0.3554006968641115,57.99
+yogurt_dessert,yogurt,Silpo,feels,287,48,5,0.0,0.4564459930313589,48.99
+yogurt_dessert,dessert,Silpo,фанні,285,48,6,0.0,0.21754385964912282,49.29
+yogurt_dessert,dessert,Silpo,,240,48,5,0.0,0.2708333333333333,65.99
+yogurt_dessert,dessert,Silpo,агуня,240,48,5,0.0,0.35,49.14
+yogurt_dessert,dessert,Silpo,злагода,240,48,5,0.0,0.24166666666666667,37.09
+yogurt_dessert,yogurt,Silpo,міmіmilk,240,48,4,0.0,0.425,58.99
+yogurt_dessert,dessert,Silpo,молочне,239,48,5,0.0,0.42677824267782427,69.99
+yogurt_dessert,dessert,Silpo,lekker,203,48,5,0.0,0.3251231527093596,51.49
+yogurt_dessert,yogurt,Silpo,біфідойогурт,202,48,5,0.0,0.2079207920792079,75.49
+yogurt_dessert,yogurt,Silpo,,194,48,6,0.0,0.4587628865979381,44.99
+yogurt_dessert,yogurt,Silpo,гармонія,194,48,5,0.0,0.26288659793814434,39.38
+yogurt_dessert,yogurt,Silpo,capretta,192,48,4,0.0,0.14583333333333334,74.99
+yogurt_dessert,yogurt,Silpo,framo,192,48,3,0.0,0.026041666666666668,25.99
+yogurt_dessert,yogurt,Silpo,закваска,192,48,4,0.25,0.23958333333333334,59.99
+yogurt_dessert,dessert,Silpo,bakoma,191,48,4,0.0,0.5130890052356021,37.19
+yogurt_dessert,yogurt,Silpo,деліссімо,191,48,4,0.0,0.46596858638743455,56.99
+yogurt_dessert,dessert,Silpo,lactel,144,48,3,0.0,0.1597222222222222,45.19
+yogurt_dessert,yogurt,Silpo,azienda,144,48,3,0.0,0.09027777777777778,179.0
+yogurt_dessert,yogurt,Silpo,гормолзавод 1,144,48,3,0.0,0.0,55.49
+yogurt_dessert,yogurt,Silpo,повна чаша,144,48,2,0.0,0.14583333333333334,45.69
+yogurt_dessert,dessert,Silpo,latteria,143,48,3,0.0,0.20279720279720279,159.0
+yogurt_dessert,dessert,Silpo,ферма,134,48,3,0.7089552238805971,0.5,55.9
+yogurt_dessert,yogurt,Silpo,марійка,134,48,3,0.0,0.0,45.19
+yogurt_dessert,yogurt,Silpo,muller,108,48,3,0.0,0.42592592592592593,39.38
+yogurt_dessert,dessert,Silpo,premia,96,48,2,0.0,0.40625,49.99
+yogurt_dessert,dessert,Silpo,zott,96,48,2,0.0,0.3229166666666667,54.49
+yogurt_dessert,dessert,Silpo,крем десерт,96,48,2,0.0,0.14583333333333334,134.62
+yogurt_dessert,dessert,Silpo,слов яночка,96,48,2,0.5,0.09375,47.49
+yogurt_dessert,yogurt,Silpo,movenpick,96,48,2,0.0,0.3333333333333333,59.99
+yogurt_dessert,yogurt,Silpo,біла лінія,96,48,2,0.0,0.5,58.57
+yogurt_dessert,yogurt,Silpo,крем,96,48,2,0.0,0.5,75.49
+yogurt_dessert,yogurt,Silpo,мілкін,96,48,2,0.0,0.28125,40.69
+yogurt_dessert,yogurt,Silpo,кагма,91,47,2,0.0,0.02197802197802198,61.99
+yogurt_dessert,yogurt,Silpo,emmi,76,26,3,0.0,0.13157894736842105,71.99
+yogurt_dessert,yogurt,Silpo,mimimilk,58,48,2,0.0,0.46551724137931033,35.09
+yogurt_dessert,dessert,Silpo,даніссімо,51,48,2,0.0,0.058823529411764705,24.53
+yogurt_dessert,dessert,Silpo,лт,50,48,2,0.0,0.44,48.99
+yogurt_dessert,dessert,Silpo,laska,48,48,1,0.0,0.0,92.49
+yogurt_dessert,dessert,Silpo,milupa,48,48,1,0.0,0.375,44.99
+yogurt_dessert,dessert,Silpo,monte,48,48,1,0.0,0.10416666666666667,62.44499999999999
+yogurt_dessert,dessert,Silpo,банан,48,48,1,0.0,0.5,40.94
+yogurt_dessert,dessert,Silpo,малина,48,48,1,0.0,0.0,28.49
+yogurt_dessert,dessert,Silpo,мультифрукт,48,48,1,0.0,0.3541666666666667,55.99
+yogurt_dessert,dessert,Silpo,натуральний,48,48,1,0.0,0.4375,56.24
+yogurt_dessert,dessert,Silpo,персик і маракуя,48,48,1,0.0,0.0,15.14
+yogurt_dessert,dessert,Silpo,повна чаша,48,48,1,0.0,0.6458333333333334,38.99
+yogurt_dessert,dessert,Silpo,полуниця,48,48,1,0.0,0.0,15.14
+yogurt_dessert,dessert,Silpo,ростишка,48,48,1,0.0,0.4791666666666667,48.49
+yogurt_dessert,dessert,Silpo,яготинське,48,48,1,0.0,0.20833333333333334,54.99
+yogurt_dessert,yogurt,Silpo,абрикос липовий цвіт,48,48,1,0.0,0.3958333333333333,47.09
+yogurt_dessert,yogurt,Silpo,гмз,48,48,1,0.0,0.0,43.59
+yogurt_dessert,yogurt,Silpo,натуральний,48,48,1,0.0,0.5833333333333334,47.99
+yogurt_dessert,yogurt,Silpo,ніжний,48,48,1,0.0,0.3541666666666667,40.99
+yogurt_dessert,yogurt,Silpo,премія,48,48,1,0.0,0.0,64.99
+yogurt_dessert,yogurt,Silpo,пробіо йогурт,48,48,1,0.0,0.3333333333333333,69.99
+yogurt_dessert,yogurt,Silpo,яготинське для дітей,48,48,1,0.0,0.0,15.14
+yogurt_dessert,yogurt,Silpo,імуно йогурт,48,48,1,0.0,0.3125,66.49
+yogurt_dessert,yogurt,Silpo,турецький,47,47,1,0.0,0.0851063829787234,65.99
+yogurt_dessert,yogurt,Silpo,polmlek,31,31,1,0.0,0.1935483870967742,44.69
+yogurt_dessert,dessert,Silpo,карамель,28,28,1,0.0,0.14285714285714285,289.0
+yogurt_dessert,yogurt,Silpo,яблуко алое вера,18,18,1,0.0,0.0,54.99
+yogurt_dessert,dessert,Silpo,danio,9,9,1,0.0,0.0,24.53
+yogurt_dessert,yogurt,Silpo,лт,5,4,3,0.0,0.0,37.19
+yogurt_dessert,dessert,Silpo,волошковеполе,4,4,1,0.0,0.0,24.19
+yogurt_dessert,dessert,Silpo,rians,3,3,1,0.0,0.0,118.0
+yogurt_dessert,yogurt,Silpo,агуша,1,1,1,0.0,1.0,99.0

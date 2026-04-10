@@ -1,0 +1,7 @@
+standardized_type,n_obs,coef_dlog_benchmark,p_dlog_benchmark,r2,region_fe_count,interpretation_note
+butter,698,0.061323003929372524,0.4860240949008372,0.002378249063045401,23,Regional FE model for institutional procurement heterogeneity.
+cream,540,0.07968411443420256,0.45457651070678706,0.006171364597528539,23,Regional FE model for institutional procurement heterogeneity.
+hard_cheese,423,0.0077128813002320315,0.955551324367247,0.008298058020268284,23,Regional FE model for institutional procurement heterogeneity.
+milk,552,-0.19787541660631172,0.08281744197081806,0.003917552254083745,22,Regional FE model for institutional procurement heterogeneity.
+other,752,0.4778477079518993,0.22125052932098255,0.009462387016524798,24,Regional FE model for institutional procurement heterogeneity.
+sour_cream,337,-0.1183889495281565,0.4534967101177708,0.007407484656054786,21,Regional FE model for institutional procurement heterogeneity.

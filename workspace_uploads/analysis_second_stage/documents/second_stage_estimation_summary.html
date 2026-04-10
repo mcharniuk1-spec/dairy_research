@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Second-Stage Estimation Summary</title>
+  <style>
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 980px; margin: 32px auto; line-height: 1.45; }
+    h1, h2 { font-family: Arial, sans-serif; }
+    img { border: 1px solid #ddd; padding: 4px; }
+    code { background: #f6f6f6; padding: 1px 3px; }
+  </style>
+</head>
+<body>
+<h1>Second-Stage Estimation Summary</h1>
+
+<h2>Analytical Purpose</h2>
+<p>This second-stage run keeps the thesis chain as FarmGateUA -&gt; ProducerUA -&gt; ProZorro -&gt; Retail, but estimates it with a different empirical design from the earlier RW4 ARDL/ECM/NARDL/VECM workflow. The aim is to check whether the same economic story survives when the model is rebuilt as a daily product-panel local-projection exercise and a vertical spread/discount market-power proxy exercise.</p>
+
+<p>The model uses the active <code>full_uah.xlsx</code>, <code>farm_gate_daily.xlsx</code>, and <code>farm_gate_all_missing_filled_daily.xlsx</code> workbooks from the nested Charniuk dairy research project. Farm-gate variants remain explicit (<code>initial</code> and <code>filled</code>, each with <code>linear</code> and <code>pchip</code> reconstruction), while retail is separated into observed and baseline price paths to keep discount behavior visible.</p>
+
+<h2>Data Coverage</h2>
+<p>The cleaned second-stage panel covers 9 standardized product groups. The strongest retail coverage remains in Silpo, while Novus is useful mainly as a thinner cross-retailer robustness layer. ProZorro is treated as an institutional procurement layer and is locally interpolated only across short gaps to avoid inventing long contract windows.</p>
+
+<p>The retail-preparation block now works at item level before product-level aggregation. Silpo and Novus rows are harmonized with normalized brand names, canonical item names, standardized dairy product types, fat percentage, and pack-size fields. This produced 200 unique harmonized item keys observed in both shops, against 1229 Silpo-only keys and 947 Novus-only keys. Effective price keeps the discount inside the price, while discount amount, discount-type dummies, and markdown depth remain as separate covariates.</p>
+
+<figure><img src="../figures/01_panel_coverage.png" alt="Panel coverage" style="max-width: 900px;"><figcaption>Panel coverage</figcaption></figure>
+
+<figure><img src="../figures/06_cross_shop_match_status.png" alt="Cross-shop match status" style="max-width: 900px;"><figcaption>Cross-shop match status</figcaption></figure>
+
+<h2>Model Design</h2>
+<p>The first model block uses local projections. For each admissible product and chain link, the cumulative change in the downstream log price over horizons 0, 1, 3, 7, 14, and 21 days is regressed on the current upstream log shock with HAC inference. A parallel asymmetric version separates positive and negative upstream shocks. This is intentionally different from the thesis draft&#x27;s ECM/NARDL core and therefore functions as a robustness redesign rather than a simple rerun.</p>
+
+<p>The second model block estimates vertical spread equations. The dependent variable is the change in the log spread between downstream and upstream stages; regressors include the lagged spread, positive and negative upstream shocks, and retail discount measures where they vary. This is a market-power proxy, not a direct structural proof of conduct: persistent or asymmetric spreads and discount-responsive retail margins are interpreted as evidence consistent with timing control and category management.</p>
+
+<p>A new consumer-linked endpoint is also added. <code>Retail+Consumer</code> combines the harmonized merged-shop retail layer with ConsumerUA, so the rerun can test whether conclusions survive once the retailer-facing endpoint is blended with the official consumer-price environment instead of using retail-only prices alone.</p>
+
+<h2>Main Local-Projection Results</h2>
+<p>The local-projection block estimated 3570 linear pass-through equations, of which 728 met the p&lt;0.10 and overlap screen (20.4%). The strongest thesis-relevant 7/14-day signals, excluding the mechanically smooth reconstructed FarmGateUA-ProducerUA diagnostic, are: ProZorro -&gt; Silpo (silpo_baseline, h=7): core share 42.9%, median coefficient -0.025; FarmGateUA -&gt; Retail+Consumer (retail_consumer_observed, h=7): core share 41.7%, median coefficient -3.610; ProducerUA -&gt; ProZorro (procurement_price, h=7): core share 40.0%, median coefficient 1.497; FarmGateUA -&gt; Retail (retail_observed, h=7): core share 38.9%, median coefficient -2.996; Retail -&gt; FarmGateUA (retail_observed, h=14): core share 38.9%, median coefficient 0.000.</p>
+
+<p>The FarmGateUA -&gt; ProducerUA and ProducerUA -&gt; FarmGateUA local-projection rows are retained in the workbook, but they should not be promoted as headline causal evidence. Both sides are reconstructed over a long common daily horizon, so high fit can reflect shared smoothing and benchmark coherence rather than a clean product-level farm-to-processor response. This is consistent with the corrected-format draft&#x27;s conservative farm-gate interpretation.</p>
+
+<figure><img src="../figures/02_lp_pass_through_horizons.png" alt="Local-projection pass-through" style="max-width: 900px;"><figcaption>Local-projection pass-through</figcaption></figure>
+
+<figure><img src="../figures/03_forward_reverse_core_share.png" alt="Forward versus reverse evidence" style="max-width: 900px;"><figcaption>Forward versus reverse evidence</figcaption></figure>
+
+<h2>Market-Power And Discount Results</h2>
+<p>The spread model produced 280 usable margin equations. Persistent-margin flags appear in 24 rows and asymmetric-margin flags appear in 223 rows. These flags should be read as market-power proxies: they indicate where spreads do not quickly mean-revert or where upstream increases and decreases affect margins differently.</p>
+
+<p>The discount model produced 4 usable product equations, with 2 discount-strategy signals. In this data structure, the discount result is strongest as a retail-pricing mechanism rather than as a farm-gate mechanism: discount variables are directly observed only for Silpo, while ProducerUA, ProZorro, and FarmGateUA do not contain comparable markdown variables.</p>
+
+<figure><img src="../figures/04_vertical_spread_proxy.png" alt="Vertical spread proxy" style="max-width: 900px;"><figcaption>Vertical spread proxy</figcaption></figure>
+
+<figure><img src="../figures/05_discount_incidence.png" alt="Discount incidence" style="max-width: 900px;"><figcaption>Discount incidence</figcaption></figure>
+
+<h2>Thesis Interpretation</h2>
+<p>The second-stage run supports a cautious but coherent interpretation. Vertical coordination remains visible, but it is not a single cost-plus coefficient. The local-projection redesign shows that short-horizon evidence is selective and product-dependent, while the spread regressions show where timing control, discount smoothing, and asymmetric margin behavior are plausible. This strengthens the thesis argument that downstream market power is better described as control over timing, visibility, and discount-mediated adjustment than as one static markup wedge.</p>
+
+<p>Farm-gate results should still be written conservatively. The farm-gate benchmark is economically necessary as the raw-milk origin of the chain, but it is much smoother and less product-specific than the retail and procurement data. The second-stage results therefore use FarmGateUA as an upstream benchmark and robustness dimension, not as a literal product-level farm-to-shelf elasticity for every dairy category.</p>
+
+<h2>Output Files</h2>
+<p>&bull; <code>outputs/second_stage_model_outputs.xlsx</code> contains all model tables.</p>
+<p>&bull; <code>data/second_stage_daily_panel.csv</code> contains the cleaned daily panel used by the models.</p>
+<p>&bull; <code>data/retail_items_full_harmonized.csv</code> contains the full harmonized Silpo-Novus item list.</p>
+<p>&bull; <code>data/retail_match_audit.csv</code> contains the cross-shop item-match audit.</p>
+<p>&bull; <code>data/consumerua_clean_daily.csv</code> contains the cleaned ConsumerUA daily layer used in the consumer-linked rerun.</p>
+<p>&bull; <code>outputs/local_projection_coefficients.csv</code>, <code>outputs/margin_market_power_models.csv</code>, and <code>outputs/discount_strategy_models.csv</code> contain the main machine-readable estimates.</p>
+</body>
+</html>

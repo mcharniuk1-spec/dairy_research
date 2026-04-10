@@ -1,0 +1,51 @@
+source,raw_label,standardized_type
+Producer_UA,Кефір,milk
+Producer_UA,Масло вершкове жирністю не більше 85%,butter
+Producer_UA,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",milk
+Producer_UA,Молоко та вершки сухі знежирені,cream
+Producer_UA,Сир твердий,hard_cheese
+Producer_UA,Сметана,sour_cream
+Consumer_UA,"Молоко пастеризоване жирністю до 2,6% включно",milk
+Consumer_UA,Сири м’які жирні,hard_cheese
+Consumer_UA,Сметана жирністю до 15% включно,sour_cream
+Prozorro,Яйця курячі,other
+Prozorro,Молоко питне,milk
+Prozorro,Сметана,sour_cream
+Prozorro,Сир твердий/напівтвердий,hard_cheese
+Prozorro,Масло вершкове,butter
+Prozorro,Вершки,cream
+Prozorro,Сир кисломолочний,cottage_cheese
+Prozorro,Молоко згущене,milk
+Prozorro,Молоко сухе,milk
+Silpo,Вершки,cream
+Silpo,Молоко питне,milk
+Silpo,Йогурт,yogurt_dessert
+Silpo,Сир,hard_cheese
+Silpo,Масло вершкове,butter
+Silpo,Сир кисломолочний,cottage_cheese
+Silpo,Сметана,sour_cream
+Silpo,Інше,other
+Silpo,Яйця курячі,other
+Silpo,Молоко згущене,milk
+Silpo,Молоко сухе,milk
+Novus,Молоко згущене,milk
+Novus,Сир,hard_cheese
+Novus,Сметана,sour_cream
+Novus,Масло вершкове,butter
+Novus,Йогурт,yogurt_dessert
+Novus,Молоко питне,milk
+Novus,Вершки,cream
+Novus,Сир кисломолочний,cottage_cheese
+Novus,Інше,other
+Novus,Яйця курячі,other
+Novus,Молоко сухе,milk
+Europe,WMP,milk
+Europe,EMMENTAL,hard_cheese
+Europe,SMP,milk
+Europe,DRINKING MILK,milk
+Europe,EDAM,hard_cheese
+Europe,BUTTER,butter
+Europe,WHEYPOWDER,other
+Europe,CREAM,cream
+Europe,GOUDA,hard_cheese
+Europe,CHEDDAR,hard_cheese

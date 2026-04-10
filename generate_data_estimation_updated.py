@@ -74,7 +74,17 @@ class FigureBlock:
     width_in: float = 5.9
 
 
-Block = Union[ParagraphBlock, FigureBlock]
+@dataclass
+class TableBlock:
+    caption: str
+    headers: list[str]
+    rows: list[list[str]]
+    source: str
+    caption_style: str = "Subtitle"
+    style_id: str = "TableGrid"
+
+
+Block = Union[ParagraphBlock, FigureBlock, TableBlock]
 
 
 def _safe_num(value: object) -> float | None:
@@ -168,6 +178,55 @@ def _make_paragraph(text: str, style: str | None = None, page_break_before: bool
         run = ET.SubElement(paragraph, _w("r"))
         ET.SubElement(run, _w("t")).text = ""
     return paragraph
+
+
+def _make_table(headers: list[str], rows: list[list[str]], style_id: str = "TableGrid") -> ET.Element:
+    w_type = f"{{{NS_W}}}type"
+    w_w = f"{{{NS_W}}}w"
+    w_sz = f"{{{NS_W}}}sz"
+    w_space = f"{{{NS_W}}}space"
+    w_color = f"{{{NS_W}}}color"
+    w_fill = f"{{{NS_W}}}fill"
+
+    table = ET.Element(_w("tbl"))
+    tbl_pr = ET.SubElement(table, _w("tblPr"))
+    tbl_style = ET.SubElement(tbl_pr, _w("tblStyle"))
+    tbl_style.set(W_VAL, style_id)
+    tbl_w = ET.SubElement(tbl_pr, _w("tblW"))
+    tbl_w.set(w_w, "0")
+    tbl_w.set(w_type, "auto")
+    tbl_layout = ET.SubElement(tbl_pr, _w("tblLayout"))
+    tbl_layout.set(w_type, "autofit")
+    tbl_borders = ET.SubElement(tbl_pr, _w("tblBorders"))
+    for border_name in ["top", "left", "bottom", "right", "insideH", "insideV"]:
+        border = ET.SubElement(tbl_borders, _w(border_name))
+        border.set(W_VAL, "single")
+        border.set(w_sz, "4")
+        border.set(w_space, "0")
+        border.set(w_color, "auto")
+
+    tbl_grid = ET.SubElement(table, _w("tblGrid"))
+    for _ in headers:
+        ET.SubElement(tbl_grid, _w("gridCol"))
+
+    def add_row(cells: list[str], header: bool = False) -> None:
+        tr = ET.SubElement(table, _w("tr"))
+        for cell_text in cells:
+            tc = ET.SubElement(tr, _w("tc"))
+            tc_pr = ET.SubElement(tc, _w("tcPr"))
+            tc_w = ET.SubElement(tc_pr, _w("tcW"))
+            tc_w.set(w_w, "0")
+            tc_w.set(w_type, "auto")
+            v_align = ET.SubElement(tc_pr, _w("vAlign"))
+            v_align.set(W_VAL, "top")
+            para = _make_paragraph(f"**{cell_text}**" if header else cell_text, style="NoSpacing")
+            tc.append(para)
+
+    add_row(headers, header=True)
+    for row in rows:
+        normalized = ["" if cell is None else str(cell) for cell in row]
+        add_row(normalized, header=False)
+    return table
 
 
 def _png_size(path: Path) -> tuple[int, int]:
@@ -1366,6 +1425,13 @@ def _write_docx_from_template(template_path: Path, output_path: Path, blocks: li
         for block in blocks:
             if isinstance(block, ParagraphBlock):
                 body.append(_make_paragraph(block.text, style=block.style, page_break_before=block.page_break_before))
+                continue
+            if isinstance(block, TableBlock):
+                body.append(_make_paragraph("", style="BodyText"))
+                body.append(_make_paragraph(block.caption, style=block.caption_style))
+                body.append(_make_table(block.headers, block.rows, style_id=block.style_id))
+                body.append(_make_paragraph(block.source, style="source"))
+                body.append(_make_paragraph("", style="BodyText"))
                 continue
 
             image_counter += 1

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Second-stage data chapter</title>
+  <style>
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 980px; margin: 32px auto; line-height: 1.45; }
+    h1, h2 { font-family: Arial, sans-serif; }
+    img { border: 1px solid #ddd; padding: 4px; }
+    code { background: #f6f6f6; padding: 1px 3px; }
+  </style>
+</head>
+<body>
+<h1>Chapter 5. Second-stage data and retail harmonisation</h1>
+
+<p>This chapter documents the second-stage data architecture used to complement the corrected master-thesis draft. The logic is intentionally close to the main thesis: each source is still treated as an institutional pricing layer, but the downstream retail block is rebuilt more deeply at item level so that Novus and Silpo contribute directly to the stage-4 model rather than only through broad category pooling.</p>
+
+<p>The practical goal of the redesign is not to overturn the master-thesis structure. It is to improve it where the original bottleneck was strongest: retailer product naming, brand reconciliation, literal dairy-product typing, and explicit discount-aware construction of the effective retail price.</p>
+
+<h2>5.1 Data sources and analytical layers</h2>
+<p>The second-stage chain still follows FarmGateUA -&gt; ProducerUA -&gt; ProZorro -&gt; Retail. FarmGateUA remains the raw-milk benchmark, ProducerUA remains the processor-level domestic price layer, ProZorro remains the institutional procurement layer, and the retail block is rebuilt from harmonised Novus and Silpo product records. ConsumerUA is added as a downstream robustness environment, not as a replacement for the retailer-facing stage.</p>
+
+<p>The cleaned second-stage panel covers 9 thesis product groups. The retail input after dairy-only reconciliation contains 78556 product-day observations, 362 normalised brand identifiers, and 13 literal dairy-product types. This is materially deeper downstream preparation than the summary-level retail block in the earlier second-stage run.</p>
+
+<p>Figure 5.1. Second-stage panel coverage by product and source.</p>
+<figure><img src="../figures/01_panel_coverage.png" alt="Figure 5.1. Second-stage panel coverage by product and source." style="max-width: 900px;"><figcaption>Figure 5.1. Second-stage panel coverage by product and source.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on the second-stage panel coverage table.</p>
+
+<h2>5.1.1 Retail reconstruction from Novus and Silpo</h2>
+<p>Retail preparation now begins at the item level. Each row keeps the effective observed shelf price, meaning the discount is already embedded in the price actually faced by the buyer. At the same time, the discount amount, discount state, discount type, and markdown depth are retained as separate variables so that retail adjustment can be studied both through the price itself and through the promotional mechanism behind it.</p>
+
+<p>Literal dairy typing is also made explicit. Instead of trusting the raw shop category alone, product titles, product names, brands, and auxiliary entity labels are cleaned jointly and mapped into literal dairy types such as milk, kefir, yogurt, hard cheese, cottage cheese, sour cream, cream, butter, condensed milk, and milk powder. Plant-based analogues and other non-comparable items are screened out before aggregation, which keeps the downstream series closer to the real dairy chain addressed in the thesis.</p>
+
+<p>The reconciled literal mix is selective rather than generic: Yogurt / dessert -&gt; Yogurt (705 item keys); Hard cheese -&gt; Hard / semi-hard cheese (592 item keys); Yogurt / dessert -&gt; Dairy dessert / glazed snack (318 item keys); Milk / fermented milk -&gt; Milk (292 item keys); Butter -&gt; Butter (163 item keys); Cream -&gt; Cream (135 item keys).</p>
+
+<p>Figure 5.2. Retail literal-product mix after dairy-only reconciliation.</p>
+<figure><img src="../figures/07_retail_literal_mix.png" alt="Figure 5.2. Retail literal-product mix after dairy-only reconciliation." style="max-width: 900px;"><figcaption>Figure 5.2. Retail literal-product mix after dairy-only reconciliation.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on the harmonised retail literal summary.</p>
+
+<h2>5.1.2 Cross-shop name reconciliation and brand harmonisation</h2>
+<p>The core reconciliation object is the harmonised item key. It combines the thesis product group, the cleaned brand, and a canonicalised item name stripped of redundant pack and percentage tokens. This step is necessary because Novus and Silpo often refer to the same item with slightly different wording, word order, or packaging notation.</p>
+
+<p>The resulting audit identifies 200 matched cross-shop item keys, 1229 Silpo-only keys, and 947 Novus-only keys. Among the matched keys, 106 cases also align one-for-one on the stricter fat-and-pack diagnostic key. This is exactly the kind of retailer-name adaptation that was missing from the broad category view.</p>
+
+<p>Figure 5.3. Cross-shop retail item harmonisation status.</p>
+<figure><img src="../figures/06_cross_shop_match_status.png" alt="Figure 5.3. Cross-shop retail item harmonisation status." style="max-width: 900px;"><figcaption>Figure 5.3. Cross-shop retail item harmonisation status.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on the retail match audit.</p>
+
+<p>Brand support remains economically meaningful after reconciliation: Butter in Novus: новгород сіверський (1 item keys, 3 days); Butter in Silpo: лавка традицій (23 item keys, 48 days); Condensed milk in Novus: пмкк (5 item keys, 4 days); Condensed milk in Silpo: первомайський мкк (4 item keys, 48 days); Cottage cheese in Novus: president (3 item keys, 5 days); Cottage cheese in Silpo: лавка традицій (9 item keys, 48 days).</p>
+
+<p>Figure 5.4. Dominant retailer-brand support by dairy product.</p>
+<figure><img src="../figures/08_dominant_brand_support.png" alt="Figure 5.4. Dominant retailer-brand support by dairy product." style="max-width: 900px;"><figcaption>Figure 5.4. Dominant retailer-brand support by dairy product.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on the reconciled retail brand-support table.</p>
+
+<h2>5.2 Downstream levels tested for the four-stage model</h2>
+<p>The retail endpoint is not forced into one representation. Instead, the second-stage pipeline constructs and keeps several candidate downstream levels: merged full-list retail, matched cross-shop retail, Silpo-only retail, Novus-only retail, and a retail-plus-ConsumerUA endpoint. Each level is useful for a different reason. The merged series maximises assortment support, the matched series maximises cross-shop comparability, Silpo and Novus preserve retailer-specific pricing behaviour, and the ConsumerUA-linked variant extends the downstream environment when retailer support is thin.</p>
+
+<p>Candidate levels are compared product by product using a composite score that combines coverage, procurement alignment, consumer alignment, item-support depth, and discount variation. This complements the master-thesis draft because it keeps the same four-stage chain but tests whether stage 4 is better represented by a broader retail pool, a stricter matched subset, a retailer-specific panel, or a consumer-linked endpoint.</p>
+
+<p>The selected level by product is as follows: Butter: Retail merged full list (score 0.50); Condensed milk: Retail merged full list (score 0.48); Cottage cheese: Retail merged full list (score 0.49); Cream: Retail merged full list (score 0.60); Hard cheese: Retail plus ConsumerUA (score 0.65); Milk / fermented milk: Retail merged full list (score 0.56); Milk powder: Retail matched cross-shop (score 0.31); Sour cream: Retail merged full list (score 0.64); Yogurt / dessert: Retail merged full list (score 0.48).</p>
+
+<p>Figure 5.5. Candidate downstream retail scores by product.</p>
+<figure><img src="../figures/09_retail_level_scores.png" alt="Figure 5.5. Candidate downstream retail scores by product." style="max-width: 900px;"><figcaption>Figure 5.5. Candidate downstream retail scores by product.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on the retail-level selection table.</p>
+
+<p>Figure 5.6. Chosen optimal retail level by product.</p>
+<figure><img src="../figures/10_optimal_retail_level.png" alt="Figure 5.6. Chosen optimal retail level by product." style="max-width: 900px;"><figcaption>Figure 5.6. Chosen optimal retail level by product.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on the selected retail-level hierarchy.</p>
+
+<h2>5.3 Discount-aware downstream environment</h2>
+<p>Discount variables remain central because the user requested that the final effective price should include the markdown while the markdown mechanism itself remains modelled separately. This design matches the master-thesis interpretation more closely than a raw regular-price series would. It treats retail adjustment as a combination of baseline repricing and promotional smoothing, not as one undifferentiated observed price path.</p>
+
+<p>Figure 5.7. Retail discount environment by product and retailer.</p>
+<figure><img src="../figures/12_discount_environment.png" alt="Figure 5.7. Retail discount environment by product and retailer." style="max-width: 900px;"><figcaption>Figure 5.7. Retail discount environment by product and retailer.</figcaption></figure>
+<p>Source: author&#x27;s calculations based on retailer-product discount states in the harmonised retail panel.</p>
+
+<h2>5.4 What remains after second-stage preparation</h2>
+<p>After reconciliation, the downstream data are no longer a loose category average. They are a hierarchy of comparable retail series supported by explicit item keys, literal product types, brand structure, and discount metadata. That makes the second-stage outputs much easier to defend as a robustness complement to the corrected thesis draft: the master thesis keeps the broader structural story, while this second-stage data chapter shows that the downstream block has been rebuilt in a more disciplined way.</p>
+
+<p>The most important dataset files produced by this chapter are <code>data/retail_items_full_harmonized.csv</code>, <code>data/retail_brand_daily.csv</code>, <code>data/retail_literal_summary.csv</code>, <code>data/retail_level_selection.csv</code>, and <code>data/retail_optimal_daily.csv</code>. Together they document exactly how the stage-4 retail block was built before the models were rerun.</p>
+</body>
+</html>

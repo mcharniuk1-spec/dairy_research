@@ -1,0 +1,128 @@
+product,standardized_type,left,right,metric,pearson,spearman,n_obs
+Інше/невідомо,milk,EU,Silpo,log_price,0.08620555986270838,0.08235294117647059,35
+Інше/невідомо,milk,EU,Silpo,dlog_price,0.11149193528528792,0.13125763125763126,27
+Інше/невідомо,other,EU,ProZorro,log_price,0.7680237365545062,0.7588716271795062,195
+Інше/невідомо,other,EU,Silpo,log_price,-0.2787190057133762,0.17776878274882263,39
+Інше/невідомо,other,ProZorro,Silpo,log_price,0.05890890767299419,0.1438520694700537,50
+Інше/невідомо,other,EU,ProZorro,dlog_price,0.012761717763345545,0.01281948698441015,166
+Інше/невідомо,other,EU,Silpo,dlog_price,0.0716980757115671,-0.014114326112660482,31
+Інше/невідомо,other,ProZorro,Silpo,dlog_price,-0.011781061699245645,-0.11449652498058925,45
+Вершки,cream,EU,Novus,log_price,0.024917818653577943,0.175,15
+Вершки,cream,EU,ProZorro,log_price,0.09281139551092116,-0.022506392496713407,186
+Вершки,cream,EU,ProducerUA,log_price,0.352852774177395,0.3676764624413275,1043
+Вершки,cream,EU,Silpo,log_price,-0.1512410129276213,-0.12212885154061627,35
+Вершки,cream,Novus,ProZorro,log_price,0.2104842701352669,0.3323529411764706,16
+Вершки,cream,Novus,ProducerUA,log_price,0.0733658148064421,0.31176470588235294,16
+Вершки,cream,Novus,Silpo,log_price,-0.3620774007282089,-0.21818181818181823,11
+Вершки,cream,ProZorro,ProducerUA,log_price,0.04139655089121324,0.07127460885841022,199
+Вершки,cream,ProZorro,Silpo,log_price,-0.13608389189279174,-0.24916943521594687,42
+Вершки,cream,ProducerUA,Silpo,log_price,-0.21527900184689516,-0.299174989144594,48
+Вершки,cream,EU,ProZorro,dlog_price,-0.07698534352875441,-0.09167734593270428,142
+Вершки,cream,EU,ProducerUA,dlog_price,0.04895719804424357,0.12092983558890098,833
+Вершки,cream,EU,Silpo,dlog_price,-0.1593007158197878,-0.15323565323565325,27
+Вершки,cream,ProZorro,ProducerUA,dlog_price,-0.09155595587988914,-0.06152584085315833,160
+Вершки,cream,ProZorro,Silpo,dlog_price,-0.1301168187707229,-0.19971988795518206,35
+Вершки,cream,ProducerUA,Silpo,dlog_price,0.060117161045954465,0.01436941103916127,46
+Йогурт,yogurt_dessert,Novus,Silpo,log_price,-0.038933802003614605,-0.23568339110907688,14
+Кефір,milk,ProducerUA,Silpo,log_price,-0.43823027319968694,-0.3847155883630048,48
+Кефір,milk,ProducerUA,Silpo,dlog_price,-0.07682212216131305,-0.04286154794942954,46
+Масло вершкове,butter,EU,Novus,log_price,-0.17709820187832478,-0.07692307692307693,14
+Масло вершкове,butter,EU,ProZorro,log_price,-0.38044950345186235,-0.48204692185103315,194
+Масло вершкове,butter,EU,ProducerUA,log_price,0.772714276629197,0.7388989590174632,1043
+Масло вершкове,butter,EU,Silpo,log_price,-0.06286469972749563,-0.03669467787114846,35
+Масло вершкове,butter,Novus,ProZorro,log_price,-0.11896493207459373,-0.13120787260768896,17
+Масло вершкове,butter,Novus,ProducerUA,log_price,-0.06593716110504985,-0.1898455260099464,16
+Масло вершкове,butter,ProZorro,ProducerUA,log_price,0.07846291021129219,0.13373633714442462,220
+Масло вершкове,butter,ProZorro,Silpo,log_price,-0.0792134952246721,-0.05522648083623695,41
+Масло вершкове,butter,ProducerUA,Silpo,log_price,-0.10413945524667707,-0.05796786799826314,48
+Масло вершкове,butter,EU,ProZorro,dlog_price,0.09068437209875505,0.05222344417382367,155
+Масло вершкове,butter,EU,ProducerUA,dlog_price,0.1265268841615802,0.21563321296884963,833
+Масло вершкове,butter,EU,Silpo,dlog_price,0.10726810491635397,-0.021367521367521368,27
+Масло вершкове,butter,ProZorro,ProducerUA,dlog_price,-0.0096457637554683,0.05349087582240454,191
+Масло вершкове,butter,ProZorro,Silpo,dlog_price,-0.22140473409776984,-0.1928475935828877,33
+Масло вершкове,butter,ProducerUA,Silpo,dlog_price,0.006774024892404234,0.0748072772124576,46
+Молоко питне,milk,CME,ConsumerUA,log_price,0.31954769416470336,0.30605849598441004,1022
+Молоко питне,milk,CME,EU,log_price,0.29807361520366643,0.4116781373872708,1016
+Молоко питне,milk,CME,Novus,log_price,-0.09049922953785114,-0.07352941176470588,17
+Молоко питне,milk,CME,ProZorro,log_price,0.2642032506752144,0.21398773103834975,182
+Молоко питне,milk,CME,ProducerUA,log_price,0.3249029262728048,0.30600733289432563,1004
+Молоко питне,milk,CME,Silpo,log_price,0.1907637444870545,0.36317799847211607,34
+Молоко питне,milk,ConsumerUA,EU,log_price,0.6976997022498754,0.7491931841552139,1056
+Молоко питне,milk,ConsumerUA,Novus,log_price,0.16353857073842853,0.15474655476656404,21
+Молоко питне,milk,ConsumerUA,ProZorro,log_price,-0.09233625989700454,-0.05406964329142322,211
+Молоко питне,milk,ConsumerUA,ProducerUA,log_price,0.9950934314121332,0.9923113413768397,1793
+Молоко питне,milk,ConsumerUA,Silpo,log_price,-0.15747953804786596,-0.14046895353886235,48
+Молоко питне,milk,EU,Novus,log_price,0.1657938062613031,0.1413828689370485,18
+Молоко питне,milk,EU,ProZorro,log_price,0.027326616697066413,0.027754729950368234,189
+Молоко питне,milk,EU,ProducerUA,log_price,0.6865212453719609,0.7173339113791939,1043
+Молоко питне,milk,EU,Silpo,log_price,0.17341022480620907,0.17030812324929973,35
+Молоко питне,milk,Novus,ProZorro,log_price,0.1005445624353998,0.15438596491228068,19
+Молоко питне,milk,Novus,ProducerUA,log_price,0.1339258361435952,0.21568627450980388,18
+Молоко питне,milk,Novus,Silpo,log_price,-0.5149093719527463,-0.26363636363636367,11
+Молоко питне,milk,ProZorro,ProducerUA,log_price,-0.09562799438748554,-0.043418972552718184,201
+Молоко питне,milk,ProZorro,Silpo,log_price,0.015125393212069889,0.08392603129445234,37
+Молоко питне,milk,ProducerUA,Silpo,log_price,-0.15432567878663672,-0.19463742943986104,48
+Молоко питне,milk,CME,ConsumerUA,dlog_price,0.006361634177006414,0.003068015912604055,799
+Молоко питне,milk,CME,EU,dlog_price,0.2848569139187073,0.06546826670511711,795
+Молоко питне,milk,CME,ProZorro,dlog_price,-0.03137620473299399,0.0028836340638691833,138
+Молоко питне,milk,CME,ProducerUA,dlog_price,0.010165123909742477,-0.004031961253591384,786
+Молоко питне,milk,CME,Silpo,dlog_price,0.3450909677351007,0.3069230769230769,25
+Молоко питне,milk,ConsumerUA,EU,dlog_price,0.09178245445737993,0.09732765669037102,844
+Молоко питне,milk,ConsumerUA,ProZorro,dlog_price,0.02285105989082155,0.02334535962504805,178
+Молоко питне,milk,ConsumerUA,ProducerUA,dlog_price,0.9948363966305385,0.9930221341515497,1792
+Молоко питне,milk,ConsumerUA,Silpo,dlog_price,-0.07022353118082451,-0.08874498920752388,46
+Молоко питне,milk,EU,ProZorro,dlog_price,0.024352355445919543,-0.02957427125955899,149
+Молоко питне,milk,EU,ProducerUA,dlog_price,0.09415747923369233,0.10201877842973248,833
+Молоко питне,milk,EU,Silpo,dlog_price,0.14942484191752736,0.16361416361416362,27
+Молоко питне,milk,ProZorro,ProducerUA,dlog_price,0.023324056675578495,0.008481032201267747,168
+Молоко питне,milk,ProZorro,Silpo,dlog_price,-0.1390592166878385,-0.13793103448275862,29
+Молоко питне,milk,ProducerUA,Silpo,dlog_price,-0.06666465343689541,-0.09355534998458218,46
+Сир кисломолочний,cottage_cheese,Novus,ProZorro,log_price,0.03032226442879991,0.12147248407733056,17
+Сир кисломолочний,cottage_cheese,Novus,Silpo,log_price,0.2698331584143535,0.16253505200525303,13
+Сир кисломолочний,cottage_cheese,ProZorro,Silpo,log_price,0.3236153015664687,0.29439775910364147,35
+Сир кисломолочний,cottage_cheese,ProZorro,Silpo,dlog_price,0.6093222903323161,0.5247863247863247,26
+Сир твердий,hard_cheese,ConsumerUA,EU,log_price,0.7272907083363443,0.7542992814677459,1056
+Сир твердий,hard_cheese,ConsumerUA,Novus,log_price,-0.2783984909389485,-0.21138115145583913,37
+Сир твердий,hard_cheese,ConsumerUA,ProZorro,log_price,0.058433583229898646,0.07421586060899535,199
+Сир твердий,hard_cheese,ConsumerUA,ProducerUA,log_price,0.9900331060795661,0.9872748593681128,1793
+Сир твердий,hard_cheese,ConsumerUA,Silpo,log_price,-0.025528600054663193,0.08228397742075554,48
+Сир твердий,hard_cheese,EU,Novus,log_price,-0.13416298322147108,-0.134623946368088,30
+Сир твердий,hard_cheese,EU,ProZorro,log_price,-0.08319345551610445,-0.17684281318190864,181
+Сир твердий,hard_cheese,EU,ProducerUA,log_price,0.6613270732816627,0.6637987566791136,1043
+Сир твердий,hard_cheese,EU,Silpo,log_price,0.009047926947569958,0.017647058823529415,35
+Сир твердий,hard_cheese,Novus,ProZorro,log_price,-0.22828434939574785,-0.28047663166053455,32
+Сир твердий,hard_cheese,Novus,ProducerUA,log_price,-0.27941216492037085,-0.22167002159313082,34
+Сир твердий,hard_cheese,Novus,Silpo,log_price,0.22109972663696295,0.29698019399139847,25
+Сир твердий,hard_cheese,ProZorro,ProducerUA,log_price,0.0735184178090851,0.10677927220398319,189
+Сир твердий,hard_cheese,ProZorro,Silpo,log_price,-0.30380347107019984,-0.2994857205383521,38
+Сир твердий,hard_cheese,ProducerUA,Silpo,log_price,-0.04633203647027628,-0.037895190495097666,48
+Сир твердий,hard_cheese,ConsumerUA,EU,dlog_price,0.10837379236475268,0.14299644501401412,844
+Сир твердий,hard_cheese,ConsumerUA,Novus,dlog_price,-0.007880867868376395,0.030427350427350425,26
+Сир твердий,hard_cheese,ConsumerUA,ProZorro,dlog_price,-0.04595334484221461,-0.017859559795043667,155
+Сир твердий,hard_cheese,ConsumerUA,ProducerUA,dlog_price,0.9939384822255739,0.9777627774882008,1792
+Сир твердий,hard_cheese,ConsumerUA,Silpo,dlog_price,0.0400891239939267,0.04717853839037928,46
+Сир твердий,hard_cheese,EU,Novus,dlog_price,0.2039789806259043,0.3578947368421052,19
+Сир твердий,hard_cheese,EU,ProZorro,dlog_price,0.04584136444891568,0.04433956457238528,138
+Сир твердий,hard_cheese,EU,ProducerUA,dlog_price,0.08717778736538676,0.1625492539308249,833
+Сир твердий,hard_cheese,EU,Silpo,dlog_price,0.03424883247235108,-0.0018315018315018313,27
+Сир твердий,hard_cheese,Novus,ProZorro,dlog_price,-0.4364076760746275,-0.45563909774436084,20
+Сир твердий,hard_cheese,Novus,ProducerUA,dlog_price,-0.02536243414207195,-0.010443868185174138,24
+Сир твердий,hard_cheese,Novus,Silpo,dlog_price,0.4116177377888409,0.37500000000000006,17
+Сир твердий,hard_cheese,ProZorro,ProducerUA,dlog_price,-0.06512548462009576,-0.04369513041773783,145
+Сир твердий,hard_cheese,ProZorro,Silpo,dlog_price,-0.346987847395004,-0.3010011123470523,30
+Сир твердий,hard_cheese,ProducerUA,Silpo,dlog_price,0.043804731289669566,0.07582844004211663,46
+Сметана,sour_cream,ConsumerUA,Novus,log_price,-0.3298339991044604,-0.1349862258953168,13
+Сметана,sour_cream,ConsumerUA,ProZorro,log_price,0.03324401201812319,0.029721685764349724,188
+Сметана,sour_cream,ConsumerUA,ProducerUA,log_price,0.9959575722780988,0.9950278292766597,1793
+Сметана,sour_cream,ConsumerUA,Silpo,log_price,-0.031982692117821857,-0.030480631191816838,48
+Сметана,sour_cream,Novus,ProZorro,log_price,-0.014722200230576415,0.2451842639184212,12
+Сметана,sour_cream,Novus,ProducerUA,log_price,-0.48927095303380097,-0.4145796632961667,11
+Сметана,sour_cream,ProZorro,ProducerUA,log_price,0.026312268813432495,0.032705935357932654,178
+Сметана,sour_cream,ProZorro,Silpo,log_price,0.0011998005365556948,-0.15461210198052305,38
+Сметана,sour_cream,ProducerUA,Silpo,log_price,-0.04355631954608532,-0.12308237189417971,48
+Сметана,sour_cream,ConsumerUA,ProZorro,dlog_price,0.04572691727180564,-0.0126633202059808,143
+Сметана,sour_cream,ConsumerUA,ProducerUA,dlog_price,0.9950944031030885,0.996752902828907,1792
+Сметана,sour_cream,ConsumerUA,Silpo,dlog_price,0.009788413569964674,0.0950137161478859,46
+Сметана,sour_cream,ProZorro,ProducerUA,dlog_price,0.03077174908758272,-0.021704798850361442,133
+Сметана,sour_cream,ProZorro,Silpo,dlog_price,0.04957796383658239,0.04926108374384235,29
+Сметана,sour_cream,ProducerUA,Silpo,dlog_price,0.026949734152234225,0.08960159330041555,46
