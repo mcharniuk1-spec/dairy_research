@@ -1,0 +1,2 @@
+Index,product,product_label,link,x_col,y_col,week_min,week_max,overlap_weeks,continuity_share,x_raw_support_share,y_raw_support_share,mapping_type,interpolation_dominant_flag,admissibility_status
+114,sour_cream,Sour cream,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,2021-12-27,2026-01-12,212,1.0,1.0,1.0,inferred,0,acceptable

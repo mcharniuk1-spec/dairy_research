@@ -1,0 +1,289 @@
+dataset,raw_product,standardized_product,mapping_basis,mapping_type,ambiguity_flag,n_rows
+Consumer_UA,Сири м’які жирні,cheese,government row label,direct,0,1478
+Consumer_UA,"Молоко пастеризоване жирністю до 2,6% включно",milk,government row label,direct,0,1478
+Consumer_UA,Сметана жирністю до 15% включно,sour_cream,government row label,direct,0,1478
+FarmGate_UA,Молоко,milk,official farm-gate product label,direct,0,39906
+Novus,butter,butter,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,93
+Novus,cheese,cheese,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,635
+Novus,cottage cheese,cheese,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,118
+Novus,condensed milk,condensed_milk,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,32
+Novus,cream,cream,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,70
+Novus,drinking milk,milk,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,87
+Novus,інше,milk,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,64
+Novus,молоко сухе,milk_powder,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,0,1
+Novus,chicken eggs,other,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,39
+Novus,sour cream,sour_cream,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,71
+Novus,yogurt,yogurt_dessert,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,0,237
+Producer_UA,Масло вершкове жирністю не більше 85%,butter,government row label,direct,0,1478
+Producer_UA,Сир твердий,cheese,government row label,direct,0,1478
+Producer_UA,Кефір,milk,government row label,direct,0,1478
+Producer_UA,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",milk,government row label,direct,0,1478
+Producer_UA,Молоко та вершки сухі знежирені,milk_powder,government row label,direct,0,1478
+Producer_UA,Сметана,sour_cream,government row label,direct,0,1478
+Prozorro,2025-04-14 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2025-04-15 00:00:00,other,procurement profile plus tender title,approximate,1,33
+Prozorro,2025-04-16 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-04-17 00:00:00,other,procurement profile plus tender title,approximate,1,25
+Prozorro,2025-04-18 00:00:00,other,procurement profile plus tender title,approximate,1,24
+Prozorro,2025-04-19 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-04-21 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2025-04-22 00:00:00,other,procurement profile plus tender title,approximate,1,34
+Prozorro,2025-04-23 00:00:00,other,procurement profile plus tender title,approximate,1,18
+Prozorro,2025-04-24 00:00:00,other,procurement profile plus tender title,approximate,1,28
+Prozorro,2025-04-25 00:00:00,other,procurement profile plus tender title,approximate,1,39
+Prozorro,2025-04-28 00:00:00,other,procurement profile plus tender title,approximate,1,45
+Prozorro,2025-04-29 00:00:00,other,procurement profile plus tender title,approximate,1,36
+Prozorro,2025-04-30 00:00:00,other,procurement profile plus tender title,approximate,1,41
+Prozorro,2025-05-01 00:00:00,other,procurement profile plus tender title,approximate,1,34
+Prozorro,2025-05-02 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-05-03 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-05-04 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-05-05 00:00:00,other,procurement profile plus tender title,approximate,1,37
+Prozorro,2025-05-06 00:00:00,other,procurement profile plus tender title,approximate,1,49
+Prozorro,2025-05-07 00:00:00,other,procurement profile plus tender title,approximate,1,35
+Prozorro,2025-05-08 00:00:00,other,procurement profile plus tender title,approximate,1,29
+Prozorro,2025-05-09 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2025-05-10 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-05-11 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-05-12 00:00:00,other,procurement profile plus tender title,approximate,1,27
+Prozorro,2025-05-13 00:00:00,other,procurement profile plus tender title,approximate,1,44
+Prozorro,2025-05-14 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-05-15 00:00:00,other,procurement profile plus tender title,approximate,1,35
+Prozorro,2025-05-16 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-05-17 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-05-18 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-05-19 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-05-20 00:00:00,other,procurement profile plus tender title,approximate,1,30
+Prozorro,2025-05-21 00:00:00,other,procurement profile plus tender title,approximate,1,31
+Prozorro,2025-05-22 00:00:00,other,procurement profile plus tender title,approximate,1,39
+Prozorro,2025-05-23 00:00:00,other,procurement profile plus tender title,approximate,1,38
+Prozorro,2025-05-25 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-05-26 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-05-27 00:00:00,other,procurement profile plus tender title,approximate,1,33
+Prozorro,2025-05-28 00:00:00,other,procurement profile plus tender title,approximate,1,16
+Prozorro,2025-05-29 00:00:00,other,procurement profile plus tender title,approximate,1,33
+Prozorro,2025-05-30 00:00:00,other,procurement profile plus tender title,approximate,1,16
+Prozorro,2025-06-02 00:00:00,other,procurement profile plus tender title,approximate,1,28
+Prozorro,2025-06-03 00:00:00,other,procurement profile plus tender title,approximate,1,27
+Prozorro,2025-06-04 00:00:00,other,procurement profile plus tender title,approximate,1,31
+Prozorro,2025-06-05 00:00:00,other,procurement profile plus tender title,approximate,1,29
+Prozorro,2025-06-06 00:00:00,other,procurement profile plus tender title,approximate,1,21
+Prozorro,2025-06-07 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-06-08 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-06-09 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2025-06-10 00:00:00,other,procurement profile plus tender title,approximate,1,24
+Prozorro,2025-06-11 00:00:00,other,procurement profile plus tender title,approximate,1,32
+Prozorro,2025-06-12 00:00:00,other,procurement profile plus tender title,approximate,1,33
+Prozorro,2025-06-13 00:00:00,other,procurement profile plus tender title,approximate,1,19
+Prozorro,2025-06-14 00:00:00,other,procurement profile plus tender title,approximate,1,4
+Prozorro,2025-06-16 00:00:00,other,procurement profile plus tender title,approximate,1,36
+Prozorro,2025-06-17 00:00:00,other,procurement profile plus tender title,approximate,1,31
+Prozorro,2025-06-18 00:00:00,other,procurement profile plus tender title,approximate,1,24
+Prozorro,2025-06-19 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2025-06-20 00:00:00,other,procurement profile plus tender title,approximate,1,22
+Prozorro,2025-06-21 00:00:00,other,procurement profile plus tender title,approximate,1,4
+Prozorro,2025-06-22 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-06-23 00:00:00,other,procurement profile plus tender title,approximate,1,30
+Prozorro,2025-06-24 00:00:00,other,procurement profile plus tender title,approximate,1,38
+Prozorro,2025-06-25 00:00:00,other,procurement profile plus tender title,approximate,1,29
+Prozorro,2025-06-26 00:00:00,other,procurement profile plus tender title,approximate,1,18
+Prozorro,2025-06-27 00:00:00,other,procurement profile plus tender title,approximate,1,32
+Prozorro,2025-06-29 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-06-30 00:00:00,other,procurement profile plus tender title,approximate,1,33
+Prozorro,2025-07-01 00:00:00,other,procurement profile plus tender title,approximate,1,43
+Prozorro,2025-07-02 00:00:00,other,procurement profile plus tender title,approximate,1,28
+Prozorro,2025-07-03 00:00:00,other,procurement profile plus tender title,approximate,1,19
+Prozorro,2025-07-04 00:00:00,other,procurement profile plus tender title,approximate,1,9
+Prozorro,2025-07-06 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-07-07 00:00:00,other,procurement profile plus tender title,approximate,1,25
+Prozorro,2025-07-08 00:00:00,other,procurement profile plus tender title,approximate,1,28
+Prozorro,2025-07-09 00:00:00,other,procurement profile plus tender title,approximate,1,27
+Prozorro,2025-07-10 00:00:00,other,procurement profile plus tender title,approximate,1,25
+Prozorro,2025-07-11 00:00:00,other,procurement profile plus tender title,approximate,1,24
+Prozorro,2025-07-13 00:00:00,other,procurement profile plus tender title,approximate,1,4
+Prozorro,2025-07-14 00:00:00,other,procurement profile plus tender title,approximate,1,17
+Prozorro,2025-07-15 00:00:00,other,procurement profile plus tender title,approximate,1,18
+Prozorro,2025-07-16 00:00:00,other,procurement profile plus tender title,approximate,1,18
+Prozorro,2025-07-17 00:00:00,other,procurement profile plus tender title,approximate,1,23
+Prozorro,2025-07-18 00:00:00,other,procurement profile plus tender title,approximate,1,42
+Prozorro,2025-07-20 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-07-21 00:00:00,other,procurement profile plus tender title,approximate,1,17
+Prozorro,2025-07-22 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-07-23 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-07-24 00:00:00,other,procurement profile plus tender title,approximate,1,31
+Prozorro,2025-07-25 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2025-07-26 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-07-28 00:00:00,other,procurement profile plus tender title,approximate,1,30
+Prozorro,2025-07-29 00:00:00,other,procurement profile plus tender title,approximate,1,29
+Prozorro,2025-07-30 00:00:00,other,procurement profile plus tender title,approximate,1,30
+Prozorro,2025-07-31 00:00:00,other,procurement profile plus tender title,approximate,1,25
+Prozorro,2025-08-01 00:00:00,other,procurement profile plus tender title,approximate,1,21
+Prozorro,2025-08-02 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-08-03 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-08-04 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-08-05 00:00:00,other,procurement profile plus tender title,approximate,1,39
+Prozorro,2025-08-06 00:00:00,other,procurement profile plus tender title,approximate,1,37
+Prozorro,2025-08-07 00:00:00,other,procurement profile plus tender title,approximate,1,26
+Prozorro,2025-08-08 00:00:00,other,procurement profile plus tender title,approximate,1,30
+Prozorro,2025-08-09 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-08-11 00:00:00,other,procurement profile plus tender title,approximate,1,29
+Prozorro,2025-08-12 00:00:00,other,procurement profile plus tender title,approximate,1,39
+Prozorro,2025-08-13 00:00:00,other,procurement profile plus tender title,approximate,1,37
+Prozorro,2025-08-14 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-08-15 00:00:00,other,procurement profile plus tender title,approximate,1,40
+Prozorro,2025-08-17 00:00:00,other,procurement profile plus tender title,approximate,1,4
+Prozorro,2025-08-18 00:00:00,other,procurement profile plus tender title,approximate,1,61
+Prozorro,2025-08-19 00:00:00,other,procurement profile plus tender title,approximate,1,54
+Prozorro,2025-08-20 00:00:00,other,procurement profile plus tender title,approximate,1,71
+Prozorro,2025-08-21 00:00:00,other,procurement profile plus tender title,approximate,1,84
+Prozorro,2025-08-22 00:00:00,other,procurement profile plus tender title,approximate,1,83
+Prozorro,2025-08-23 00:00:00,other,procurement profile plus tender title,approximate,1,10
+Prozorro,2025-08-24 00:00:00,other,procurement profile plus tender title,approximate,1,8
+Prozorro,2025-08-25 00:00:00,other,procurement profile plus tender title,approximate,1,109
+Prozorro,2025-08-26 00:00:00,other,procurement profile plus tender title,approximate,1,99
+Prozorro,2025-08-27 00:00:00,other,procurement profile plus tender title,approximate,1,101
+Prozorro,2025-08-28 00:00:00,other,procurement profile plus tender title,approximate,1,76
+Prozorro,2025-08-29 00:00:00,other,procurement profile plus tender title,approximate,1,68
+Prozorro,2025-08-30 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-08-31 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-09-01 00:00:00,other,procurement profile plus tender title,approximate,1,44
+Prozorro,2025-09-02 00:00:00,other,procurement profile plus tender title,approximate,1,57
+Prozorro,2025-09-03 00:00:00,other,procurement profile plus tender title,approximate,1,67
+Prozorro,2025-09-04 00:00:00,other,procurement profile plus tender title,approximate,1,65
+Prozorro,2025-09-05 00:00:00,other,procurement profile plus tender title,approximate,1,54
+Prozorro,2025-09-06 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-09-07 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-09-08 00:00:00,other,procurement profile plus tender title,approximate,1,63
+Prozorro,2025-09-09 00:00:00,other,procurement profile plus tender title,approximate,1,68
+Prozorro,2025-09-10 00:00:00,other,procurement profile plus tender title,approximate,1,66
+Prozorro,2025-09-11 00:00:00,other,procurement profile plus tender title,approximate,1,44
+Prozorro,2025-09-12 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-09-13 00:00:00,other,procurement profile plus tender title,approximate,1,6
+Prozorro,2025-09-14 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-09-15 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-09-16 00:00:00,other,procurement profile plus tender title,approximate,1,40
+Prozorro,2025-09-17 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-09-18 00:00:00,other,procurement profile plus tender title,approximate,1,51
+Prozorro,2025-09-19 00:00:00,other,procurement profile plus tender title,approximate,1,36
+Prozorro,2025-09-20 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-09-21 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-09-22 00:00:00,other,procurement profile plus tender title,approximate,1,60
+Prozorro,2025-09-23 00:00:00,other,procurement profile plus tender title,approximate,1,53
+Prozorro,2025-09-24 00:00:00,other,procurement profile plus tender title,approximate,1,53
+Prozorro,2025-09-25 00:00:00,other,procurement profile plus tender title,approximate,1,75
+Prozorro,2025-09-26 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-09-27 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-09-28 00:00:00,other,procurement profile plus tender title,approximate,1,11
+Prozorro,2025-09-29 00:00:00,other,procurement profile plus tender title,approximate,1,53
+Prozorro,2025-09-30 00:00:00,other,procurement profile plus tender title,approximate,1,49
+Prozorro,2025-10-01 00:00:00,other,procurement profile plus tender title,approximate,1,38
+Prozorro,2025-10-02 00:00:00,other,procurement profile plus tender title,approximate,1,58
+Prozorro,2025-10-03 00:00:00,other,procurement profile plus tender title,approximate,1,61
+Prozorro,2025-10-04 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-10-05 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-10-06 00:00:00,other,procurement profile plus tender title,approximate,1,72
+Prozorro,2025-10-07 00:00:00,other,procurement profile plus tender title,approximate,1,77
+Prozorro,2025-10-08 00:00:00,other,procurement profile plus tender title,approximate,1,68
+Prozorro,2025-10-09 00:00:00,other,procurement profile plus tender title,approximate,1,76
+Prozorro,2025-10-10 00:00:00,other,procurement profile plus tender title,approximate,1,62
+Prozorro,2025-10-11 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-10-12 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-10-13 00:00:00,other,procurement profile plus tender title,approximate,1,53
+Prozorro,2025-10-14 00:00:00,other,procurement profile plus tender title,approximate,1,81
+Prozorro,2025-10-15 00:00:00,other,procurement profile plus tender title,approximate,1,79
+Prozorro,2025-10-16 00:00:00,other,procurement profile plus tender title,approximate,1,59
+Prozorro,2025-10-17 00:00:00,other,procurement profile plus tender title,approximate,1,62
+Prozorro,2025-10-19 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-10-20 00:00:00,other,procurement profile plus tender title,approximate,1,68
+Prozorro,2025-10-21 00:00:00,other,procurement profile plus tender title,approximate,1,85
+Prozorro,2025-10-22 00:00:00,other,procurement profile plus tender title,approximate,1,69
+Prozorro,2025-10-23 00:00:00,other,procurement profile plus tender title,approximate,1,56
+Prozorro,2025-10-24 00:00:00,other,procurement profile plus tender title,approximate,1,59
+Prozorro,2025-10-25 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-10-26 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-10-27 00:00:00,other,procurement profile plus tender title,approximate,1,78
+Prozorro,2025-10-28 00:00:00,other,procurement profile plus tender title,approximate,1,94
+Prozorro,2025-10-29 00:00:00,other,procurement profile plus tender title,approximate,1,78
+Prozorro,2025-10-30 00:00:00,other,procurement profile plus tender title,approximate,1,58
+Prozorro,2025-10-31 00:00:00,other,procurement profile plus tender title,approximate,1,50
+Prozorro,2025-11-01 00:00:00,other,procurement profile plus tender title,approximate,1,5
+Prozorro,2025-11-02 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-11-03 00:00:00,other,procurement profile plus tender title,approximate,1,65
+Prozorro,2025-11-04 00:00:00,other,procurement profile plus tender title,approximate,1,73
+Prozorro,2025-11-05 00:00:00,other,procurement profile plus tender title,approximate,1,62
+Prozorro,2025-11-06 00:00:00,other,procurement profile plus tender title,approximate,1,71
+Prozorro,2025-11-07 00:00:00,other,procurement profile plus tender title,approximate,1,66
+Prozorro,2025-11-08 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-11-09 00:00:00,other,procurement profile plus tender title,approximate,1,5
+Prozorro,2025-11-10 00:00:00,other,procurement profile plus tender title,approximate,1,70
+Prozorro,2025-11-11 00:00:00,other,procurement profile plus tender title,approximate,1,71
+Prozorro,2025-11-12 00:00:00,other,procurement profile plus tender title,approximate,1,69
+Prozorro,2025-11-13 00:00:00,other,procurement profile plus tender title,approximate,1,67
+Prozorro,2025-11-14 00:00:00,other,procurement profile plus tender title,approximate,1,61
+Prozorro,2025-11-15 00:00:00,other,procurement profile plus tender title,approximate,1,3
+Prozorro,2025-11-16 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-11-17 00:00:00,other,procurement profile plus tender title,approximate,1,64
+Prozorro,2025-11-18 00:00:00,other,procurement profile plus tender title,approximate,1,70
+Prozorro,2025-11-19 00:00:00,other,procurement profile plus tender title,approximate,1,67
+Prozorro,2025-11-20 00:00:00,other,procurement profile plus tender title,approximate,1,71
+Prozorro,2025-11-21 00:00:00,other,procurement profile plus tender title,approximate,1,69
+Prozorro,2025-11-22 00:00:00,other,procurement profile plus tender title,approximate,1,4
+Prozorro,2025-11-23 00:00:00,other,procurement profile plus tender title,approximate,1,4
+Prozorro,2025-11-24 00:00:00,other,procurement profile plus tender title,approximate,1,87
+Prozorro,2025-11-25 00:00:00,other,procurement profile plus tender title,approximate,1,73
+Prozorro,2025-11-26 00:00:00,other,procurement profile plus tender title,approximate,1,61
+Prozorro,2025-11-27 00:00:00,other,procurement profile plus tender title,approximate,1,61
+Prozorro,2025-11-28 00:00:00,other,procurement profile plus tender title,approximate,1,56
+Prozorro,2025-11-29 00:00:00,other,procurement profile plus tender title,approximate,1,7
+Prozorro,2025-11-30 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Prozorro,2025-12-01 00:00:00,other,procurement profile plus tender title,approximate,1,73
+Prozorro,2025-12-02 00:00:00,other,procurement profile plus tender title,approximate,1,63
+Prozorro,2025-12-03 00:00:00,other,procurement profile plus tender title,approximate,1,67
+Prozorro,2025-12-04 00:00:00,other,procurement profile plus tender title,approximate,1,68
+Prozorro,2025-12-05 00:00:00,other,procurement profile plus tender title,approximate,1,84
+Prozorro,2025-12-06 00:00:00,other,procurement profile plus tender title,approximate,1,5
+Prozorro,2025-12-07 00:00:00,other,procurement profile plus tender title,approximate,1,2
+Prozorro,2025-12-08 00:00:00,other,procurement profile plus tender title,approximate,1,72
+Prozorro,2025-12-09 00:00:00,other,procurement profile plus tender title,approximate,1,63
+Prozorro,2025-12-10 00:00:00,other,procurement profile plus tender title,approximate,1,82
+Prozorro,2025-12-11 00:00:00,other,procurement profile plus tender title,approximate,1,69
+Prozorro,2025-12-12 00:00:00,other,procurement profile plus tender title,approximate,1,64
+Prozorro,2025-12-13 00:00:00,other,procurement profile plus tender title,approximate,1,9
+Prozorro,2025-12-14 00:00:00,other,procurement profile plus tender title,approximate,1,10
+Prozorro,2025-12-15 00:00:00,other,procurement profile plus tender title,approximate,1,90
+Prozorro,2025-12-16 00:00:00,other,procurement profile plus tender title,approximate,1,86
+Prozorro,2025-12-17 00:00:00,other,procurement profile plus tender title,approximate,1,92
+Prozorro,2025-12-18 00:00:00,other,procurement profile plus tender title,approximate,1,104
+Prozorro,2025-12-19 00:00:00,other,procurement profile plus tender title,approximate,1,102
+Prozorro,2025-12-20 00:00:00,other,procurement profile plus tender title,approximate,1,18
+Prozorro,2025-12-21 00:00:00,other,procurement profile plus tender title,approximate,1,10
+Prozorro,2025-12-22 00:00:00,other,procurement profile plus tender title,approximate,1,133
+Prozorro,2025-12-23 00:00:00,other,procurement profile plus tender title,approximate,1,191
+Prozorro,2025-12-24 00:00:00,other,procurement profile plus tender title,approximate,1,159
+Prozorro,2025-12-25 00:00:00,other,procurement profile plus tender title,approximate,1,153
+Prozorro,2025-12-26 00:00:00,other,procurement profile plus tender title,approximate,1,146
+Prozorro,2025-12-27 00:00:00,other,procurement profile plus tender title,approximate,1,21
+Prozorro,2025-12-28 00:00:00,other,procurement profile plus tender title,approximate,1,19
+Prozorro,2025-12-29 00:00:00,other,procurement profile plus tender title,approximate,1,221
+Prozorro,2025-12-30 00:00:00,other,procurement profile plus tender title,approximate,1,197
+Prozorro,2025-12-31 00:00:00,other,procurement profile plus tender title,approximate,1,108
+Prozorro,2026-01-01 00:00:00,other,procurement profile plus tender title,approximate,1,46
+Prozorro,2026-01-02 00:00:00,other,procurement profile plus tender title,approximate,1,153
+Prozorro,2026-01-03 00:00:00,other,procurement profile plus tender title,approximate,1,20
+Prozorro,2026-01-04 00:00:00,other,procurement profile plus tender title,approximate,1,24
+Prozorro,2026-01-05 00:00:00,other,procurement profile plus tender title,approximate,1,206
+Prozorro,2026-01-06 00:00:00,other,procurement profile plus tender title,approximate,1,156
+Prozorro,2026-01-07 00:00:00,other,procurement profile plus tender title,approximate,1,52
+Prozorro,2026-01-08 00:00:00,other,procurement profile plus tender title,approximate,1,22
+Prozorro,2026-01-09 00:00:00,other,procurement profile plus tender title,approximate,1,1
+Silpo,butter,butter,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,7314
+Silpo,cottage cheese,cheese,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,9720
+Silpo,condensed milk,condensed_milk,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,2893
+Silpo,cream,cream,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,5142
+Silpo,drinking milk,milk,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,10232
+Silpo,інше,milk,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,6037
+Silpo,молоко сухе,milk_powder,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,0,162
+Silpo,chicken eggs,other,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,2589
+Silpo,sour cream,sour_cream,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,6226
+Silpo,cheese,yogurt_dessert,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,5060
+Silpo,yogurt,yogurt_dessert,"retail title, product title, literal dairy typing, and brand-normalized item text",inferred,1,25474

@@ -1,0 +1,16 @@
+product,product_label,link,x_col,y_col,best_abs_corr,best_lag_weeks,n_obs,admissibility_status,mapping_type
+butter,Butter,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,0.7282379993147992,1.0,39,weak_extension,inferred
+butter,Butter,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,0.9029902262533354,0.0,212,acceptable,inferred
+butter,Butter,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,0.6898228705701515,5.0,39,weak_extension,direct
+cheese,CHEESE,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,0.4804608265789625,4.0,39,weak_extension,inferred
+cheese,CHEESE,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,0.8170339387369532,0.0,212,acceptable,inferred
+cheese,CHEESE,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,0.40655976990538367,6.0,39,weak_extension,direct
+condensed_milk,Condensed milk,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,0.11906625258531925,4.0,36,weak_extension,inferred
+cream,Cream,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,0.39965627216285277,0.0,39,weak_extension,inferred
+milk,Drinking milk / fermented milk,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,0.21815578687903825,7.0,39,weak_extension,direct
+milk,Drinking milk / fermented milk,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,0.9281782045167367,0.0,212,strong,direct
+milk,Drinking milk / fermented milk,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,0.14630322963576992,1.0,39,weak_extension,direct
+milk_powder,Milk powder,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,0.3418847100734647,0.0,212,acceptable,inferred
+sour_cream,Sour cream,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,0.6032585600381078,4.0,39,weak_extension,inferred
+sour_cream,Sour cream,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,0.9321781962046244,0.0,212,acceptable,inferred
+sour_cream,Sour cream,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,0.37905426254456004,1.0,39,weak_extension,direct

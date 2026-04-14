@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+cheese,CHEESE,FarmGate -> Producer,NARDL,weekly_raw,210,0.7950617771036262,0.23366860514319143,-0.06270990764512109,,1,0.7814515101600448,conditionally_usable
+cheese,CHEESE,FarmGate -> Producer,NARDL,weekly_smoothed,210,0.5849044390823048,0.3696943250057652,-0.058613224721181204,,1,0.6478916886778734,conditionally_usable

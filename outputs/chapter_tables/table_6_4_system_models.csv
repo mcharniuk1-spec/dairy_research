@@ -1,0 +1,11 @@
+block,system_or_link,family,variant,estimate,status,diagnostic_note
+Aggregate index models,Index FarmGate -> Downstream extension,ECM,weekly_raw,1.156,reliable,ECT=-0.213; cointegration p=0.005
+Aggregate index models,Index FarmGate -> Downstream extension,ECM,weekly_smoothed,1.159,reliable,ECT=-0.153; cointegration p=0.013
+Aggregate index models,Index FarmGate -> Producer,ECM,weekly_smoothed,0.884,reliable,ECT=-0.046; cointegration p=0.001
+Aggregate index models,Index Producer -> Downstream extension,NARDL,weekly_raw,1.531,reliable,ECT=-0.345; cointegration p=n/a
+Aggregate index models,Index Producer -> Procurement,ECM,weekly_raw,0.883,reliable,ECT=-1.315; cointegration p=0.000
+Aggregate index models,Index Producer -> Procurement,NARDL,weekly_raw,1.271,reliable,ECT=-1.601; cointegration p=n/a
+Product-level VECM,Product systems,VECM,weekly,3 feasible / 27 attempted,screening outcome,"No product-level system is treated as the main identification layer unless overlap, rank, and diagnostics are jointly admissible."
+Aggregate index VECM,aggregate_chain_strict,VECM,weekly,infeasible,too_short,n=11
+Aggregate index VECM,aggregate_chain_extended,VECM,weekly,ok,,n=39
+Aggregate index VECM,aggregate_midstream_extended,VECM,weekly,ok,,n=39

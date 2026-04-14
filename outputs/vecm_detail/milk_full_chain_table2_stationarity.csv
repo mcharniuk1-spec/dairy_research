@@ -1,0 +1,6 @@
+series_col,n_obs,adf_p,kpss_p,integration_class,stability_flag
+farmgate_combined_linear_weekly,11,,,too_short,1
+producer_linear_weekly,11,,,too_short,1
+prozorro_weekly,11,,,too_short,1
+retail_category_baseline_weekly,11,,,too_short,1
+consumer_linear_weekly,11,,,too_short,1

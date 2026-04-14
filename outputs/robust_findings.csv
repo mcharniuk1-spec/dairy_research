@@ -1,0 +1,200 @@
+finding_type,link_or_stage,product,product_label,price_variant,n_core_rows,median_coef,directionally_stable,interpretation_flag
+local_projection,FarmGateUA -> ProZorro,cheese,CHEESE,procurement_price,4,47.93603164085357,1.0,stronger
+local_projection,FarmGateUA -> ProZorro,sour_cream,Sour cream,procurement_price,4,-40.54685115383987,1.0,stronger
+local_projection,FarmGateUA -> ProducerUA,butter,Butter,processor_price,8,7.051879998902111,1.0,stronger
+local_projection,FarmGateUA -> ProducerUA,cheese,CHEESE,processor_price,8,4.15654197901201,1.0,stronger
+local_projection,FarmGateUA -> ProducerUA,milk,Drinking milk / fermented milk,processor_price,8,4.2327563971894335,1.0,stronger
+local_projection,FarmGateUA -> ProducerUA,milk_powder,Milk powder,processor_price,8,4.4831248882800825,1.0,stronger
+local_projection,FarmGateUA -> ProducerUA,sour_cream,Sour cream,processor_price,8,4.922900624186235,1.0,stronger
+local_projection,FarmGateUA -> Retail,butter,Butter,retail_observed,8,-62.6229844361289,1.0,stronger
+local_projection,FarmGateUA -> Retail,cheese,CHEESE,retail_observed,4,-132.1628109133423,1.0,stronger
+local_projection,FarmGateUA -> Retail,condensed_milk,Condensed milk,retail_observed,1,14.41139248406607,1.0,selective
+local_projection,FarmGateUA -> Retail,cream,Cream,retail_observed,2,-96.79487877891927,1.0,selective
+local_projection,FarmGateUA -> Retail,milk_powder,Milk powder,retail_observed,4,-108.91118727381472,1.0,stronger
+local_projection,FarmGateUA -> Retail,sour_cream,Sour cream,retail_observed,1,26.506128532329683,1.0,selective
+local_projection,FarmGateUA -> Retail,yogurt_dessert,Yogurt / dessert,retail_observed,2,47.73846811399982,1.0,selective
+local_projection,FarmGateUA -> Retail optimal,butter,Butter,retail_optimal_observed,8,-62.6229844361289,1.0,stronger
+local_projection,FarmGateUA -> Retail optimal,cheese,CHEESE,retail_optimal_observed,4,-132.1628109133423,1.0,stronger
+local_projection,FarmGateUA -> Retail optimal,condensed_milk,Condensed milk,retail_optimal_observed,1,14.41139248406607,1.0,selective
+local_projection,FarmGateUA -> Retail optimal,cream,Cream,retail_optimal_observed,2,-96.79487877891927,1.0,selective
+local_projection,FarmGateUA -> Retail optimal,milk_powder,Milk powder,retail_optimal_observed,2,-269.305009258637,1.0,selective
+local_projection,FarmGateUA -> Retail optimal,sour_cream,Sour cream,retail_optimal_observed,1,26.506128532329683,1.0,selective
+local_projection,FarmGateUA -> Retail optimal,yogurt_dessert,Yogurt / dessert,retail_optimal_observed,2,47.73846811399982,1.0,selective
+local_projection,Novus -> ProZorro,milk,Drinking milk / fermented milk,novus_observed,2,0.06795795060417259,1.0,selective
+local_projection,ProZorro -> Novus,milk,Drinking milk / fermented milk,novus_observed,2,-1.354595546189001,1.0,selective
+local_projection,ProZorro -> Retail,milk,Drinking milk / fermented milk,retail_baseline,2,-0.6512148393484039,1.0,selective
+local_projection,ProZorro -> Retail,milk,Drinking milk / fermented milk,retail_observed,2,-0.6584815771005894,1.0,selective
+local_projection,ProZorro -> Retail matched,condensed_milk,Condensed milk,retail_matched_baseline,2,-0.9273136558623745,1.0,selective
+local_projection,ProZorro -> Retail matched,condensed_milk,Condensed milk,retail_matched_observed,2,-1.0803059819808376,1.0,selective
+local_projection,ProZorro -> Retail matched,cream,Cream,retail_matched_observed,2,-0.13378757013314568,1.0,selective
+local_projection,ProZorro -> Retail optimal,milk,Drinking milk / fermented milk,retail_optimal_baseline,2,-0.6512148393484039,1.0,selective
+local_projection,ProZorro -> Retail optimal,milk,Drinking milk / fermented milk,retail_optimal_observed,2,-0.6584815771005894,1.0,selective
+local_projection,ProZorro -> Silpo,butter,Butter,silpo_baseline,2,0.13402221825584093,1.0,selective
+local_projection,ProZorro -> Silpo,butter,Butter,silpo_observed,2,0.1496037918604205,1.0,selective
+local_projection,ProZorro -> Silpo,cheese,CHEESE,silpo_observed,2,-0.05607170897775719,1.0,selective
+local_projection,ProZorro -> Silpo,condensed_milk,Condensed milk,silpo_baseline,2,-0.10213303074202751,1.0,selective
+local_projection,ProZorro -> Silpo,milk,Drinking milk / fermented milk,silpo_baseline,2,-0.12761333390766838,1.0,selective
+local_projection,ProZorro -> Silpo,sour_cream,Sour cream,silpo_baseline,2,-0.09165091672456604,1.0,selective
+local_projection,ProZorro -> Silpo,sour_cream,Sour cream,silpo_observed,2,-0.09499215361050681,1.0,selective
+local_projection,ProducerUA -> FarmGateUA,butter,Butter,processor_price,8,2.4079796154827937,1.0,stronger
+local_projection,ProducerUA -> FarmGateUA,cheese,CHEESE,processor_price,8,3.836962439904828,1.0,stronger
+local_projection,ProducerUA -> FarmGateUA,milk,Drinking milk / fermented milk,processor_price,8,5.550795824811782,1.0,stronger
+local_projection,ProducerUA -> FarmGateUA,milk_powder,Milk powder,processor_price,8,2.8845601592976555,1.0,stronger
+local_projection,ProducerUA -> FarmGateUA,sour_cream,Sour cream,processor_price,8,3.067434249788392,1.0,stronger
+local_projection,ProducerUA -> ProZorro,cheese,CHEESE,procurement_price,3,24.551571120001427,1.0,stronger
+local_projection,ProducerUA -> ProZorro,milk,Drinking milk / fermented milk,procurement_price,1,-28.125416438545283,1.0,selective
+local_projection,Retail -> FarmGateUA,butter,Butter,retail_observed,8,0.014167154043636885,1.0,stronger
+local_projection,Retail -> FarmGateUA,yogurt_dessert,Yogurt / dessert,retail_observed,4,-0.04817832136905649,1.0,stronger
+local_projection,Retail -> ProZorro,condensed_milk,Condensed milk,retail_baseline,2,-0.8608778486050148,1.0,selective
+local_projection,Retail -> ProZorro,condensed_milk,Condensed milk,retail_observed,2,-0.6473820253299916,1.0,selective
+local_projection,Retail -> ProZorro,milk,Drinking milk / fermented milk,retail_baseline,2,0.1376476016939874,1.0,selective
+local_projection,Retail -> ProZorro,milk,Drinking milk / fermented milk,retail_observed,2,0.15919001655861847,1.0,selective
+local_projection,Retail matched -> ProZorro,cheese,CHEESE,retail_matched_observed,2,-0.26490073964049377,1.0,selective
+local_projection,Retail optimal -> FarmGateUA,butter,Butter,retail_optimal_observed,8,0.014167154043636885,1.0,stronger
+local_projection,Retail optimal -> FarmGateUA,yogurt_dessert,Yogurt / dessert,retail_optimal_observed,4,-0.04817832136905649,1.0,stronger
+local_projection,Retail optimal -> ProZorro,condensed_milk,Condensed milk,retail_optimal_baseline,2,-0.8608778486050148,1.0,selective
+local_projection,Retail optimal -> ProZorro,condensed_milk,Condensed milk,retail_optimal_observed,2,-0.6473820253299916,1.0,selective
+local_projection,Retail optimal -> ProZorro,milk,Drinking milk / fermented milk,retail_optimal_baseline,2,0.1376476016939874,1.0,selective
+local_projection,Retail optimal -> ProZorro,milk,Drinking milk / fermented milk,retail_optimal_observed,2,0.15919001655861847,1.0,selective
+local_projection,Silpo -> ProZorro,condensed_milk,Condensed milk,silpo_baseline,2,-0.5818089861636627,1.0,selective
+local_projection,Silpo -> ProZorro,condensed_milk,Condensed milk,silpo_observed,2,-0.39412993516860223,1.0,selective
+local_projection,Silpo -> ProZorro,cream,Cream,silpo_observed,2,-0.6586043352489781,1.0,selective
+margin_power_proxy,producer_farmgate,butter,Butter,ProducerUA / FarmGateUA,1,-0.000975780273294791,,proxy_only
+margin_power_proxy,producer_farmgate,butter,Butter,ProducerUA / FarmGateUA,1,-0.0022350898118893817,,proxy_only
+margin_power_proxy,procurement_producer,butter,Butter,ProZorro / ProducerUA,1,-0.5284530116316932,,proxy_only
+margin_power_proxy,retail_procurement_observed,butter,Butter,Retail observed / ProZorro,1,-0.3785287968794958,,proxy_only
+margin_power_proxy,retail_procurement_baseline,butter,Butter,Retail baseline / ProZorro,1,-0.37119634510907346,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,butter,Butter,Retail matched observed / ProZorro,1,-0.35298350266615497,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,butter,Butter,Retail matched baseline / ProZorro,1,-0.3457051042029624,,proxy_only
+margin_power_proxy,silpo_procurement_observed,butter,Butter,Silpo observed / ProZorro,1,-0.24073070623195253,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,butter,Butter,Silpo baseline / ProZorro,1,-0.22511168291323147,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,butter,Butter,Retail optimal observed / ProZorro,1,-0.3785287968794958,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,butter,Butter,Retail optimal baseline / ProZorro,1,-0.37119634510907346,,proxy_only
+margin_power_proxy,producer_farmgate,butter,Butter,ProducerUA / FarmGateUA,1,-0.0010374376147034834,,proxy_only
+margin_power_proxy,producer_farmgate,butter,Butter,ProducerUA / FarmGateUA,1,-0.002267756836624702,,proxy_only
+margin_power_proxy,procurement_producer,butter,Butter,ProZorro / ProducerUA,1,-0.517800824183683,,proxy_only
+margin_power_proxy,retail_procurement_observed,butter,Butter,Retail observed / ProZorro,1,-0.3785287968794958,,proxy_only
+margin_power_proxy,retail_procurement_baseline,butter,Butter,Retail baseline / ProZorro,1,-0.37119634510907346,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,butter,Butter,Retail matched observed / ProZorro,1,-0.35298350266615497,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,butter,Butter,Retail matched baseline / ProZorro,1,-0.3457051042029624,,proxy_only
+margin_power_proxy,silpo_procurement_observed,butter,Butter,Silpo observed / ProZorro,1,-0.24073070623195253,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,butter,Butter,Silpo baseline / ProZorro,1,-0.22511168291323147,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,butter,Butter,Retail optimal observed / ProZorro,1,-0.3785287968794958,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,butter,Butter,Retail optimal baseline / ProZorro,1,-0.37119634510907346,,proxy_only
+margin_power_proxy,producer_farmgate,cheese,CHEESE,ProducerUA / FarmGateUA,1,-0.00035299915206311145,,proxy_only
+margin_power_proxy,producer_farmgate,cheese,CHEESE,ProducerUA / FarmGateUA,1,-0.0012567144358725216,,proxy_only
+margin_power_proxy,retail_procurement_observed,cheese,CHEESE,Retail observed / ProZorro,1,-0.5991291449905589,,proxy_only
+margin_power_proxy,retail_procurement_baseline,cheese,CHEESE,Retail baseline / ProZorro,1,-0.5921503385736557,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,cheese,CHEESE,Retail matched observed / ProZorro,1,-0.4169983909817198,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,cheese,CHEESE,Retail matched baseline / ProZorro,1,-0.3946246555129868,,proxy_only
+margin_power_proxy,silpo_procurement_observed,cheese,CHEESE,Silpo observed / ProZorro,1,-0.14660946656007512,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,cheese,CHEESE,Silpo baseline / ProZorro,1,-0.12277934566780338,,proxy_only
+margin_power_proxy,novus_procurement_observed,cheese,CHEESE,Novus observed / ProZorro,1,-0.5184480314979597,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,cheese,CHEESE,Retail optimal observed / ProZorro,1,-0.5991291449905589,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,cheese,CHEESE,Retail optimal baseline / ProZorro,1,-0.5921503385736557,,proxy_only
+margin_power_proxy,producer_farmgate,cheese,CHEESE,ProducerUA / FarmGateUA,1,-0.00038772278441529494,,proxy_only
+margin_power_proxy,producer_farmgate,cheese,CHEESE,ProducerUA / FarmGateUA,1,-0.0013596470264250133,,proxy_only
+margin_power_proxy,retail_procurement_observed,cheese,CHEESE,Retail observed / ProZorro,1,-0.5991291449905589,,proxy_only
+margin_power_proxy,retail_procurement_baseline,cheese,CHEESE,Retail baseline / ProZorro,1,-0.5921503385736557,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,cheese,CHEESE,Retail matched observed / ProZorro,1,-0.4169983909817198,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,cheese,CHEESE,Retail matched baseline / ProZorro,1,-0.3946246555129868,,proxy_only
+margin_power_proxy,silpo_procurement_observed,cheese,CHEESE,Silpo observed / ProZorro,1,-0.14660946656007512,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,cheese,CHEESE,Silpo baseline / ProZorro,1,-0.12277934566780338,,proxy_only
+margin_power_proxy,novus_procurement_observed,cheese,CHEESE,Novus observed / ProZorro,1,-0.5184480314979597,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,cheese,CHEESE,Retail optimal observed / ProZorro,1,-0.5991291449905589,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,cheese,CHEESE,Retail optimal baseline / ProZorro,1,-0.5921503385736557,,proxy_only
+margin_power_proxy,retail_farmgate_observed,condensed_milk,Condensed milk,Retail observed / FarmGateUA,1,-0.5932587484798827,,proxy_only
+margin_power_proxy,retail_farmgate_baseline,condensed_milk,Condensed milk,Retail baseline / FarmGateUA,1,-0.6007005684936599,,proxy_only
+margin_power_proxy,retail_farmgate_observed,condensed_milk,Condensed milk,Retail observed / FarmGateUA,1,-0.6289686926387602,,proxy_only
+margin_power_proxy,retail_farmgate_baseline,condensed_milk,Condensed milk,Retail baseline / FarmGateUA,1,-0.6376067844517701,,proxy_only
+margin_power_proxy,retail_procurement_observed,condensed_milk,Condensed milk,Retail observed / ProZorro,1,-0.1626422960276501,,proxy_only
+margin_power_proxy,retail_procurement_baseline,condensed_milk,Condensed milk,Retail baseline / ProZorro,1,-0.14895849368547065,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,condensed_milk,Condensed milk,Retail matched observed / ProZorro,1,-0.723182690859777,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,condensed_milk,Condensed milk,Retail matched baseline / ProZorro,1,-0.7750822059537439,,proxy_only
+margin_power_proxy,silpo_procurement_observed,condensed_milk,Condensed milk,Silpo observed / ProZorro,1,-0.18582335305356537,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,condensed_milk,Condensed milk,Silpo baseline / ProZorro,1,-0.16566568475207244,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,condensed_milk,Condensed milk,Retail optimal observed / ProZorro,1,-0.1626422960276501,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,condensed_milk,Condensed milk,Retail optimal baseline / ProZorro,1,-0.14895849368547065,,proxy_only
+margin_power_proxy,retail_farmgate_observed,condensed_milk,Condensed milk,Retail observed / FarmGateUA,1,-0.5886086193909997,,proxy_only
+margin_power_proxy,retail_farmgate_baseline,condensed_milk,Condensed milk,Retail baseline / FarmGateUA,1,-0.5949755692734667,,proxy_only
+margin_power_proxy,retail_farmgate_observed,condensed_milk,Condensed milk,Retail observed / FarmGateUA,1,-0.629899710631585,,proxy_only
+margin_power_proxy,retail_farmgate_baseline,condensed_milk,Condensed milk,Retail baseline / FarmGateUA,1,-0.6351690325285451,,proxy_only
+margin_power_proxy,retail_procurement_observed,condensed_milk,Condensed milk,Retail observed / ProZorro,1,-0.1626422960276501,,proxy_only
+margin_power_proxy,retail_procurement_baseline,condensed_milk,Condensed milk,Retail baseline / ProZorro,1,-0.14895849368547065,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,condensed_milk,Condensed milk,Retail matched observed / ProZorro,1,-0.723182690859777,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,condensed_milk,Condensed milk,Retail matched baseline / ProZorro,1,-0.7750822059537439,,proxy_only
+margin_power_proxy,silpo_procurement_observed,condensed_milk,Condensed milk,Silpo observed / ProZorro,1,-0.18582335305356537,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,condensed_milk,Condensed milk,Silpo baseline / ProZorro,1,-0.16566568475207244,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,condensed_milk,Condensed milk,Retail optimal observed / ProZorro,1,-0.1626422960276501,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,condensed_milk,Condensed milk,Retail optimal baseline / ProZorro,1,-0.14895849368547065,,proxy_only
+margin_power_proxy,retail_procurement_observed,cream,Cream,Retail observed / ProZorro,1,-0.14864442284606366,,proxy_only
+margin_power_proxy,retail_procurement_baseline,cream,Cream,Retail baseline / ProZorro,1,-0.14688958340820327,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,cream,Cream,Retail matched observed / ProZorro,1,-0.183061833775909,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,cream,Cream,Retail matched baseline / ProZorro,1,-0.1899074344205623,,proxy_only
+margin_power_proxy,silpo_procurement_observed,cream,Cream,Silpo observed / ProZorro,1,-0.10122823741447423,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,cream,Cream,Silpo baseline / ProZorro,1,-0.05934753937748807,,proxy_only
+margin_power_proxy,novus_procurement_observed,cream,Cream,Novus observed / ProZorro,1,-0.2612531686729383,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,cream,Cream,Retail optimal observed / ProZorro,1,-0.14864442284606366,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,cream,Cream,Retail optimal baseline / ProZorro,1,-0.14688958340820327,,proxy_only
+margin_power_proxy,retail_procurement_observed,cream,Cream,Retail observed / ProZorro,1,-0.14864442284606366,,proxy_only
+margin_power_proxy,retail_procurement_baseline,cream,Cream,Retail baseline / ProZorro,1,-0.14688958340820327,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,cream,Cream,Retail matched observed / ProZorro,1,-0.183061833775909,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,cream,Cream,Retail matched baseline / ProZorro,1,-0.1899074344205623,,proxy_only
+margin_power_proxy,silpo_procurement_observed,cream,Cream,Silpo observed / ProZorro,1,-0.10122823741447423,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,cream,Cream,Silpo baseline / ProZorro,1,-0.05934753937748807,,proxy_only
+margin_power_proxy,novus_procurement_observed,cream,Cream,Novus observed / ProZorro,1,-0.2612531686729383,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,cream,Cream,Retail optimal observed / ProZorro,1,-0.14864442284606366,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,cream,Cream,Retail optimal baseline / ProZorro,1,-0.14688958340820327,,proxy_only
+margin_power_proxy,producer_farmgate,milk,Drinking milk / fermented milk,ProducerUA / FarmGateUA,1,0.0021421670976474036,,proxy_only
+margin_power_proxy,producer_farmgate,milk,Drinking milk / fermented milk,ProducerUA / FarmGateUA,1,-0.0009073089353417069,,proxy_only
+margin_power_proxy,retail_procurement_observed,milk,Drinking milk / fermented milk,Retail observed / ProZorro,1,-0.6623384086629831,,proxy_only
+margin_power_proxy,retail_procurement_baseline,milk,Drinking milk / fermented milk,Retail baseline / ProZorro,1,-0.7010721195553549,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,milk,Drinking milk / fermented milk,Retail matched observed / ProZorro,1,-0.641500558740399,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,milk,Drinking milk / fermented milk,Retail matched baseline / ProZorro,1,-0.7039290642436629,,proxy_only
+margin_power_proxy,silpo_procurement_observed,milk,Drinking milk / fermented milk,Silpo observed / ProZorro,1,-0.04980331056915163,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,milk,Drinking milk / fermented milk,Silpo baseline / ProZorro,1,-0.04986026331418989,,proxy_only
+margin_power_proxy,novus_procurement_observed,milk,Drinking milk / fermented milk,Novus observed / ProZorro,1,-0.5794624370999357,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,milk,Drinking milk / fermented milk,Retail optimal observed / ProZorro,1,-0.6623384086629831,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,milk,Drinking milk / fermented milk,Retail optimal baseline / ProZorro,1,-0.7010721195553549,,proxy_only
+margin_power_proxy,producer_farmgate,milk,Drinking milk / fermented milk,ProducerUA / FarmGateUA,1,0.0021574466645981234,,proxy_only
+margin_power_proxy,producer_farmgate,milk,Drinking milk / fermented milk,ProducerUA / FarmGateUA,1,-0.0008740738271313296,,proxy_only
+margin_power_proxy,retail_procurement_observed,milk,Drinking milk / fermented milk,Retail observed / ProZorro,1,-0.6623384086629831,,proxy_only
+margin_power_proxy,retail_procurement_baseline,milk,Drinking milk / fermented milk,Retail baseline / ProZorro,1,-0.7010721195553549,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,milk,Drinking milk / fermented milk,Retail matched observed / ProZorro,1,-0.641500558740399,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,milk,Drinking milk / fermented milk,Retail matched baseline / ProZorro,1,-0.7039290642436629,,proxy_only
+margin_power_proxy,silpo_procurement_observed,milk,Drinking milk / fermented milk,Silpo observed / ProZorro,1,-0.04980331056915163,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,milk,Drinking milk / fermented milk,Silpo baseline / ProZorro,1,-0.04986026331418989,,proxy_only
+margin_power_proxy,novus_procurement_observed,milk,Drinking milk / fermented milk,Novus observed / ProZorro,1,-0.5794624370999357,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,milk,Drinking milk / fermented milk,Retail optimal observed / ProZorro,1,-0.6623384086629831,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,milk,Drinking milk / fermented milk,Retail optimal baseline / ProZorro,1,-0.7010721195553549,,proxy_only
+margin_power_proxy,producer_farmgate,milk_powder,Milk powder,ProducerUA / FarmGateUA,1,-0.0017359538466338578,,proxy_only
+margin_power_proxy,producer_farmgate,milk_powder,Milk powder,ProducerUA / FarmGateUA,1,-0.00202043184176499,,proxy_only
+margin_power_proxy,retail_farmgate_observed,milk_powder,Milk powder,Retail observed / FarmGateUA,1,-0.9160623280032258,,proxy_only
+margin_power_proxy,procurement_producer,milk_powder,Milk powder,ProZorro / ProducerUA,1,-0.004428266480501093,,proxy_only
+margin_power_proxy,producer_farmgate,milk_powder,Milk powder,ProducerUA / FarmGateUA,1,-0.0015870400870397106,,proxy_only
+margin_power_proxy,producer_farmgate,milk_powder,Milk powder,ProducerUA / FarmGateUA,1,-0.001905881108453262,,proxy_only
+margin_power_proxy,procurement_producer,milk_powder,Milk powder,ProZorro / ProducerUA,1,-0.0035331863738683683,,proxy_only
+margin_power_proxy,producer_farmgate,sour_cream,Sour cream,ProducerUA / FarmGateUA,1,0.001079579415947485,,proxy_only
+margin_power_proxy,producer_farmgate,sour_cream,Sour cream,ProducerUA / FarmGateUA,1,-0.0003990711635333984,,proxy_only
+margin_power_proxy,retail_farmgate_observed,sour_cream,Sour cream,Retail observed / FarmGateUA,1,-0.42420357703014605,,proxy_only
+margin_power_proxy,retail_procurement_observed,sour_cream,Sour cream,Retail observed / ProZorro,1,-0.09686032531878938,,proxy_only
+margin_power_proxy,retail_procurement_baseline,sour_cream,Sour cream,Retail baseline / ProZorro,1,-0.10052634689811968,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,sour_cream,Sour cream,Retail matched observed / ProZorro,1,-0.2113707488719358,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,sour_cream,Sour cream,Retail matched baseline / ProZorro,1,-0.20742934494735574,,proxy_only
+margin_power_proxy,silpo_procurement_observed,sour_cream,Sour cream,Silpo observed / ProZorro,1,-0.06801037100879914,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,sour_cream,Sour cream,Silpo baseline / ProZorro,1,-0.09249699329356716,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,sour_cream,Sour cream,Retail optimal observed / ProZorro,1,-0.09686032531878938,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,sour_cream,Sour cream,Retail optimal baseline / ProZorro,1,-0.10052634689811968,,proxy_only
+margin_power_proxy,producer_farmgate,sour_cream,Sour cream,ProducerUA / FarmGateUA,1,0.0009851742830419257,,proxy_only
+margin_power_proxy,producer_farmgate,sour_cream,Sour cream,ProducerUA / FarmGateUA,1,-0.0004946892414425824,,proxy_only
+margin_power_proxy,retail_farmgate_observed,sour_cream,Sour cream,Retail observed / FarmGateUA,1,-0.4248282589585949,,proxy_only
+margin_power_proxy,retail_procurement_observed,sour_cream,Sour cream,Retail observed / ProZorro,1,-0.09686032531878938,,proxy_only
+margin_power_proxy,retail_procurement_baseline,sour_cream,Sour cream,Retail baseline / ProZorro,1,-0.10052634689811968,,proxy_only
+margin_power_proxy,retail_matched_procurement_observed,sour_cream,Sour cream,Retail matched observed / ProZorro,1,-0.2113707488719358,,proxy_only
+margin_power_proxy,retail_matched_procurement_baseline,sour_cream,Sour cream,Retail matched baseline / ProZorro,1,-0.20742934494735574,,proxy_only
+margin_power_proxy,silpo_procurement_observed,sour_cream,Sour cream,Silpo observed / ProZorro,1,-0.06801037100879914,,proxy_only
+margin_power_proxy,silpo_procurement_baseline,sour_cream,Sour cream,Silpo baseline / ProZorro,1,-0.09249699329356716,,proxy_only
+margin_power_proxy,retail_optimal_procurement_observed,sour_cream,Sour cream,Retail optimal observed / ProZorro,1,-0.09686032531878938,,proxy_only
+margin_power_proxy,retail_optimal_procurement_baseline,sour_cream,Sour cream,Retail optimal baseline / ProZorro,1,-0.10052634689811968,,proxy_only
+discount_strategy,Silpo/retail discount incidence,cheese,CHEESE,discount_share,1,0.016077918157301807,,retail_price_management_signal
+discount_strategy,Silpo/retail discount incidence,milk,Drinking milk / fermented milk,discount_share,1,0.09115613516881593,,retail_price_management_signal

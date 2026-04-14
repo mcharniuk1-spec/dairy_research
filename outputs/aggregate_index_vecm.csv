@@ -1,0 +1,4 @@
+system_name,status,reason,n_obs,vecm_rank,k_ar_diff,alpha_farmgate_index_weekly,alpha_producer_index_weekly,alpha_procurement_index_weekly,alpha_downstream_extension_weekly
+aggregate_chain_strict,infeasible,too_short,11,,,,,,
+aggregate_chain_extended,ok,,39,2.0,3.0,-0.0596088660453695,0.058296268390625905,-3.2595509643325613,4.541053401008686
+aggregate_midstream_extended,ok,,39,1.0,3.0,,0.022493534692060356,0.8265037190752891,-0.31391299753380175

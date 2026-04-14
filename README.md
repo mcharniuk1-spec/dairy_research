@@ -1,197 +1,136 @@
-# RW3 Separate Modular Pipeline (UAH-only)
+# FINAL_RESEARCH
 
-This folder contains the split RW3 pipeline for vertical price transmission (VPT) in dairy products.
-Analysis is product-first, supports brand and region layers, estimates two-direction influence, controls discounts, and reports correlations across sources.
-Every module report is written in both `PDF` and `MD`.
+This folder contains the corrected, reproducible rerun of the dairy price-transmission thesis pipeline built on `full_uah_final.xlsx`.
 
-Code root:
-- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3`
+The project is designed as one self-contained empirical system: source materials, processed data, econometric outputs, figures, run logs, and thesis-style writing are stored here so the analysis can be reopened without relying on scattered external files.
 
-Input workbook:
-- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/full_uah.xlsx`
+## Research scope
+- Topic: vertical price transmission in Ukraine's dairy chain.
+- Core chain: FarmGate Ukraine average -> Producer Ukraine average -> ProZorro procurement price -> downstream retail endpoint.
+- Downstream mechanisms: Silpo discount behavior, Novus comparison, retail spread behavior, and consumer-benchmark comparison.
+- System extensions: aggregate chain indices and widened VECM robustness blocks.
 
-Output root:
-- `/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/outputs`
-
-## 1) File structure
-
-Core runners:
-- `common.py`: shared loading, cleaning, daily variants, XLSX/PDF writers, common plotting.
-- `sheet_worker.py`: per-sheet processing and diagnostics.
-- `model_worker.py`: econometric modules and forecast/synthetic modules.
-- `graph_worker.py`: graph and matrix modules.
-- `run_all_rw3.py`: full execution + run-all summary output.
-
-Sheet entry scripts:
-- `sheet_ProducerUA.py`
-- `sheet_ConsumerUA.py`
-- `sheet_EU.py`
-- `sheet_ProZorro.py`
-- `sheet_Silpo.py`
-- `sheet_Novus.py`
-- `sheet_CME.py`
-
-Model entry scripts:
-- `model_ardl.py`
-- `model_ecm.py`
-- `model_nardl.py`
-- `model_vecm.py`
-- `model_discounts.py`
-- `model_short_chain_regional.py`
-- `model_intersection_bidirectional.py`
-- `model_forecast_knn.py`
-
-Graph entry scripts:
-- `graphs_decomposition.py`
-- `graphs_overlay_ln.py`
-- `graphs_correlations_lags.py`
-- `graphs_brand_region.py`
-
-Doc helper:
-- `build_readme_docx.py`: converts this README into `README.docx`.
-
-## 2) Data mapping and transformations (short)
-
-Producer_UA / Consumer_UA:
-- Required: `date`, `ua_product`, `price_linear`, `price_pchip` (or `price_chip`), optional `price_real`.
-- Transformation: `price = price_linear -> price_pchip -> price_real`; keep all 3 variants in daily table.
-
-Europe:
-- Required: `date`, `Product`, `Price (UAH/kg)`.
-- Transformation: `price = Price (UAH/kg)`; daily variants generated.
-
-ProZorro:
-- Required: `Дата`, `Product`/`Профіль`, `Товар`, `Ціна за одиницю`, `Регіон організатора`, `Очікувана вартість`, `Сума договорів початкова`, `Сума договорів поточна`.
-- Transformation: `price = Ціна за одиницю` (fallback from expected/qty when needed), plus `prozorro_unit_price_uah`, `savings_rate`.
-
-Silpo / Novus:
-- Required: `date`, `product_title`, `brand`, `price_current`, `unit_price`, promo fields when available.
-- Transformation: `price = unit_price -> price_current`; Novus dedupe by latest timestamp per `(date, sku_id)`; keep promo dummies/depth/presence.
-
-CME III:
-- Required: `Date`, `CME III UAH`.
-- Transformation: `price = CME III UAH`.
-
-Common:
-- Product and `standardized_type` classification from mapping logic.
-- `unit_ok` flags retained.
-- Daily variants: `price_real`, `price_linear`, `price_pchip`, with imputation flags.
-
-## 3) Diagnostics and interpretation
-
-Diagnostics are run per `source x product x standardized_type x series_variant` (weekly aggregation for tests):
-- ADF (`adf_p`)
-- KPSS (`kpss_p`)
-- Ljung-Box (`ljungbox_p`)
-- Breusch-Pagan (`bp_p`)
-- White (`white_p`)
-- Jarque-Bera (`jb_p`)
-- Stability (`stability_flag`, `stability_drift`)
-
-Interpretation fields added:
-- `integration_class`, `ac_risk`, `het_risk`, `non_normal_risk`, `stability_risk_class`
-- `recommended_action`, `recommended_model_family`, `avoid`
-
-Fast rule:
-- ADF `>0.05` and KPSS `<0.05` -> likely I(1)-like -> differences/cointegration framework.
-- Ljung-Box `<0.05` -> add lag structure.
-- BP/White `<0.05` -> robust/HAC errors.
-- `stability_flag=1` -> split/rolling robustness.
-
-## 4) Model modules and outputs
-
-`model_ardl.py`:
-- Output: `outputs/model_ardl/model_ardl_output.xlsx`, `...pdf`, `ardl_short_run.png`.
-- Main table: `ARDL_Summary`.
-
-`model_ecm.py`:
-- Output: `outputs/model_ecm/model_ecm_output.xlsx`, `...pdf`, `ecm_ect.png`.
-- Main table: `ECM_Summary`.
-
-`model_nardl.py`:
-- Output: `outputs/model_nardl/model_nardl_output.xlsx`, `...pdf`, `nardl_*.png`.
-- Main table: `NARDL_Summary`.
-
-`model_vecm.py`:
-- Output: `outputs/model_vecm/model_vecm_output.xlsx`, `...pdf`, `vecm_alpha.png`.
-- Main table: `VECM_Summary`.
-
-`model_discounts.py`:
-- Output: `outputs/model_discounts/model_discounts_output.xlsx`, `...pdf`, promo delta charts.
-- Tables: `Silpo_Discounts_Occurrence`, `Silpo_Discounts_Depth`, `Silpo_Transmission_PromoCtrl`.
-
-`model_short_chain_regional.py`:
-- Output: `outputs/model_short_chain_regional/model_short_chain_regional_output.xlsx`, `...pdf`.
-- Tables: lag matrix/profile, short-run summary/details, chain effects, ProZorro regional effects.
-
-`model_intersection_bidirectional.py`:
-- Output: `outputs/model_intersection_bidirectional/model_intersection_bidirectional_output.xlsx`, `...pdf`.
-- Tables:
-- `Bidirectional_Results`: both-direction influence per pair (ProducerUA/ProZorro/Silpo/Novus/ConsumerUA).
-- `Bidirectional_Granger`: directionality support with Granger min p-values.
-- `Intersection_Combination_Summary`: main intersection models (`silpo_only`, `novus_only`, `silpo_novus_intersection`).
-- `CrossTable_Correlations`: source correlations across tables.
-
-`model_forecast_knn.py`:
-- Output: `outputs/model_forecast_knn/model_forecast_knn_output.xlsx`, `...pdf`, forecast and synthetic charts.
-- Tables:
-- `Forecast_Summary`: ProducerUA/ConsumerUA forecasts from retail/bulk signals.
-- `Forecast_Predictions`: holdout and future 30-day predictions.
-- `Synthetic_Retail_Series`: product+brand synthetic retail price for `2025-10-21..2026-08-01`.
-- `Synthetic_Influence_Coefficients`: overlap coefficients by product+brand.
-- `Synthetic_to_Consumer_Link`: relationship of synthetic retail to ConsumerUA.
-
-## 5) Graph modules and outputs
-
-`graphs_decomposition.py`:
-- Trend/seasonal/residual decomposition tables + plots.
-
-`graphs_overlay_ln.py`:
-- Before/after ln tables + intersection overlay plots by product.
-
-`graphs_correlations_lags.py`:
-- Correlation tables/matrix and lag profile outputs.
-
-`graphs_brand_region.py`:
-- Brand IO metrics and ProZorro region metrics with charts.
-
-## 6) Run commands
-
-Run all:
-```bash
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/run_all_rw3.py"
+## Folder structure
+```text
+FINAL_RESEARCH/
+├── code/                     Reproducible Python scripts for the pipeline and companion documents
+├── data/                     Final processed datasets used by the modelling system
+├── documents/                Thesis-ready chapter text and workflow/result companions
+├── figures/                  Full graph system, split into chapter, sequence, and model-specific folders
+├── logs/                     Run summary and execution notes
+├── materials/                Inputs, references, and instruction documents used by the project
+├── outputs/                  Model outputs, summaries, chapter tables, and per-model exports
+└── README.md                 This guide
 ```
 
-Run single new modules:
-```bash
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/model_intersection_bidirectional.py"
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/model_forecast_knn.py"
-```
+## Key entry points
+- `code/final_research_pipeline.py`: main end-to-end pipeline and output writer.
+- `code/generate_stepbystep_doc.py`: generates the workflow explanation document.
+- `code/generate_stepbystep_results.py`: generates the result-by-result companion and refreshes the chapter package.
+- `materials/inputs/full_uah_final.xlsx`: corrected governmental source workbook.
+- `materials/inputs/full_uah_final_whatadded_matched_smoothed.xlsx`: final matched/smoothed modelling workbook used by the pipeline.
+- `outputs/final_research_outputs.xlsx`: master workbook with the main processed tables and model summaries.
+- `outputs/integrated_summary_workbook.xlsx`: compact summary workbook for fast review.
+- `documents/Chapter5_6_analysis.docx`: thesis-style Chapter 5 and Chapter 6 document for the dissertation.
+- `documents/stepbystep.docx`: workflow explanation of transformations, datasets, and models.
+- `documents/stepbystep_results.docx`: result-by-result companion with figures and short interpretations.
+- `logs/run_summary.md`: compact run note with the main counts and retained model families.
 
-Generate README docx:
-```bash
-python3 "/Users/getapple/Documents/KSE/Master Thesis/Main materials/Model/separately RW3/build_readme_docx.py"
-```
+## Materials
+### `materials/inputs/`
+- `full_uah_final.xlsx`: corrected FarmGateUA, ProducerUA, and ConsumerUA source workbook used as the base truth.
+- `full_uah_final_whatadded_matched_smoothed.xlsx`: final modelling workbook with matched and smoothed panels used in the rerun.
+- `full_uah_final_whatadded_matched_smoothed.xlsx 2.xlsx`: duplicate save kept for traceability because it was part of the working project history.
 
-## 7) Run-all package
+### `materials/references/`
+- `Charniuk_Maksym_MScThesis_Draft_correctedformat.docx`: thesis-format and writing reference for Chapters 5 and 6.
+- `data_estiamtion_updated_conclusion_fullversion.md`: earlier integrated chapter text used as a comparison and transition reference.
 
-`run_all_rw3.py` writes:
-- `outputs/run_all_summary/run_all_rw3_summary.xlsx`
-- `outputs/run_all_summary/run_all_rw3_summary.pdf`
+### `materials/instructions/`
+- Correction and methodology notes used during the rebuild, including formatting guidance and data-method summaries.
 
-This is the readable index of every module execution status and output location.
+## Processed data (`data/`)
+- `product_dictionary_standardized.csv`: standardized product taxonomy across governmental, procurement, and retail layers.
+- `product_audit_long.csv`: long-form product-definition audit across sources.
+- `final_daily_panel.csv`: final modelling panel at daily frequency.
+- `final_weekly_panel.csv`: weekly median modelling panel used for long-run specifications.
+- `intersection_admissibility.csv`: strong / acceptable / weak / unusable overlap classification.
+- `final_panel_coverage.csv`: source coverage and overlap audit.
+- `aggregate_chain_index_daily.csv`, `aggregate_chain_index_weekly.csv`, `aggregate_chain_index_weights.csv`: aggregate dairy-chain index series and weights.
+- `retail_items_full_harmonized.csv`: cleaned SKU-level retail archive used to build category-level retail prices.
+- `retail_item_catalog.csv`, `retail_match_audit.csv`, `retail_name_reconciliation_examples.csv`: retail matching and harmonization audit outputs.
+- `retail_brand_daily.csv`, `retail_brand_support.csv`: brand-level retail panels and support measures.
+- `retail_level_scores.csv`, `retail_level_selection.csv`, `retail_optimal_daily.csv`: downstream endpoint selection and chosen retail layer.
+- `consumerua_clean_daily.csv`, `cme_class3_daily.csv`, `europe_benchmark_daily.csv`: benchmark and cleaned supporting series.
 
-## 8) PDF layout policy
+## Outputs (`outputs/`)
+### Main workbooks and summaries
+- `final_research_outputs.xlsx`: main results workbook used for integrated review.
+- `integrated_summary_workbook.xlsx`: condensed cross-model summary workbook.
+- `core_chain_models.csv`, `discount_strategy_models.csv`, `procurement_scale_models.csv`, `aggregate_index_models.csv`, `aggregate_index_vecm.csv`: model-family exports.
+- `lag_correlation_scan.csv`, `link21_summary.csv`, `model_reliability_overview.csv`, `robust_findings.csv`: core screening and synthesis outputs.
 
-Every module PDF uses non-overlapping pages:
-- text page(s),
-- table page(s),
-- graph page(s).
+### Chapter tables
+- `outputs/chapter_tables/`: thesis-facing tables used by `Chapter5_6_analysis.docx`.
 
-No text over graph overlays are used.
+### Per-model exports
+- `outputs/single_model_tables/`: one compact results file for each weekly specification and special model block.
+- `outputs/single_model_diagnostics/`: diagnostics saved per retained model.
+- `outputs/single_model_notes/`: plain-language notes and interpretation fragments per model.
 
-## 9) Markdown report policy
+### VECM detail
+- `outputs/vecm_detail/`: table-by-table VECM exports, including stationarity, lag selection, Johansen tests, alpha/beta, speed of adjustment, IRF, and FEVD where feasible.
 
-Every module PDF has a same-name markdown companion in the same output folder:
-- `*_report.pdf` -> `*_report.md`
-- run-all summary also includes markdown: `run_all_rw3_summary.md`
+## Figures (`figures/`)
+- Top-level numbered PNGs: integrated figure inventory covering the whole project.
+- `chapter5_data/`: figures used or considered for the data chapter.
+- `chapter6_results/`: figures used or considered for the results chapter.
+- `sequence/`: figures ordered by execution logic, from raw data to final model interpretation.
+- `model_specific/`: reserved for additional model-specific visuals.
+- `reliability/`: reserved for reliability-oriented visuals.
+
+## Documents (`documents/`)
+- `Chapter5_6_analysis.docx/.md/.html`: final thesis chapter package.
+- `stepbystep.docx/.md/.html`: methodological walkthrough of the final research sequence.
+- `stepbystep_results.docx/.md/.html`: comprehensive results companion with figures and short interpretations.
+
+## Logs (`logs/`)
+- `run_summary.md/.txt/.html`: compact execution note with the current model counts and main retained result signal.
+
+## Current run status
+- Product dictionary rows: 28
+- Strong intersections: 1
+- Acceptable intersections: 4
+- Weak-extension intersections: 10
+- Reliable core models: 30
+- Conditionally usable core models: 21
+- Feasible VECM systems: 3
+- Discount strategy signals: 2
+- Procurement-scale signals: 5
+- Strongest lag signal: Sour cream | FarmGate -> Producer | corr 0.932 | lag 0 weeks
+
+## Execution order
+1. Load the corrected governmental source workbook and validate the active sheets.
+2. Run the product-definition audit across governmental, procurement, and retail sources.
+3. Build cleaned retail product mappings, brand support tables, and the final daily panel.
+4. Construct weekly medians and controlled smoothing variants for long-run modelling.
+5. Score intersections and classify admissibility before estimation.
+6. Run the first strict weekly screening pass.
+7. Apply explicit post-test adaptation when strict overlap remains too thin.
+8. Estimate weekly ECM and NARDL retained models, while keeping ARDL screening outputs for traceability.
+9. Estimate daily local projections, vertical spread models, Silpo discount models, and procurement-scale models.
+10. Estimate aggregate chain index models and widened system/VECM robustness blocks where feasible.
+11. Export separate model tables, diagnostics, notes, chapter tables, and VECM detail tables.
+12. Generate figures, summaries, and the thesis-style chapter and companion documents.
+
+## How to use this folder
+1. Open `documents/Chapter5_6_analysis.docx` if you want the thesis-ready narrative first.
+2. Open `logs/run_summary.md` if you want the current high-level status in one page.
+3. Open `outputs/final_research_outputs.xlsx` for the integrated numerical output.
+4. Open `documents/stepbystep.docx` to understand the data-construction and modelling sequence.
+5. Open `documents/stepbystep_results.docx` if you want all interpretable outputs and the full figure appendix.
+6. Use `outputs/single_model_tables/`, `outputs/single_model_diagnostics/`, and `outputs/single_model_notes/` for model-by-model inspection.
+
+## Reproducibility note
+- The folder is organized so the core source materials used by the rerun are stored in `materials/` and the generated outputs are stored inside the project itself.
+- The modelling outputs currently present in `outputs/` are the active final rerun outputs; this README documents that state rather than promising a fresh rerun on every open.

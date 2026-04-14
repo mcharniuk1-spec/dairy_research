@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+condensed_milk,Condensed milk,FarmGate -> Procurement,NARDL,weekly_raw,34,3.7334688580634205,-5.5359463310256345,-1.7218128132721167,,1,0.0011340606117965445,reliable
+condensed_milk,Condensed milk,FarmGate -> Procurement,NARDL,weekly_smoothed,39,-6.564175332216677,-5.028589071349433,-0.645521258064599,,1,0.04682701895613731,reliable

@@ -1,0 +1,4 @@
+series_col,n_obs,adf_p,kpss_p,integration_class,stability_flag
+producer_linear_weekly,2,,,too_short,1
+prozorro_weekly,2,,,too_short,1
+retail_category_baseline_weekly,2,,,too_short,1

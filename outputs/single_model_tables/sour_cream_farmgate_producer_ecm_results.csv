@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+sour_cream,Sour cream,FarmGate -> Producer,ECM,weekly_raw,210,0.8685204713786105,1.0812136506701122,-0.05768366112306942,0.00010612775462103669,1,,conditionally_usable
+sour_cream,Sour cream,FarmGate -> Producer,ECM,weekly_smoothed,210,0.7384009146275354,1.0821450384248872,-0.050177424997592895,0.0021796792703313926,1,,conditionally_usable

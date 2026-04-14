@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+cheese,CHEESE,Producer -> Procurement,ECM,weekly_smoothed,39,0.20072805723970466,0.38015383130298813,-0.4543328625282507,0.06470427652430456,1,,reliable

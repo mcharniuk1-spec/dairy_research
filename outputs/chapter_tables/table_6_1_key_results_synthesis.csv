@@ -1,0 +1,11 @@
+evidence_block,scope,estimate,reading
+Weekly core link,FarmGate -> Producer,ECM 1.481; ECT -0.039,Retained weekly evidence for the main chain.
+Weekly core link,FarmGate -> Procurement,NARDL 2.239; ECT -0.376,Retained weekly evidence for the main chain.
+Weekly core link,Producer -> Procurement,NARDL 2.455; ECT -0.225,Retained weekly evidence for the main chain.
+Silpo discount strategy,Drinking milk / fermented milk,lag discount 0.250; p 0.053,Observed shelf adjustment is partly managed through markdown policy.
+Procurement scale,Sour cream,current contract sum -0.771; p 0.000,Procurement intensity modifies observed price adjustment.
+Aggregate index robustness,Index FarmGate -> Producer,ECM 0.884; ECT -0.046,The staged transmission pattern survives aggregation.
+Aggregate index robustness,Index FarmGate -> Downstream extension,ECM 1.156; ECT -0.213,The staged transmission pattern survives aggregation.
+Aggregate index robustness,Index Producer -> Procurement,ECM 0.866; ECT -0.566,The staged transmission pattern survives aggregation.
+Aggregate system VECM,aggregate_chain_extended,rank 2; n 39,The widened downstream extension makes a compact system model feasible as robustness.
+Aggregate system VECM,aggregate_midstream_extended,rank 1; n 39,The widened downstream extension makes a compact system model feasible as robustness.

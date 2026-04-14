@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+sour_cream,Sour cream,FarmGate -> Producer,NARDL,weekly_raw,0.010063664283083173,0.09290173309069699,0.00039559909297016244,9.486848142476813e-08,0,Positive and negative weekly shock decomposition.
+sour_cream,Sour cream,FarmGate -> Producer,NARDL,weekly_smoothed,0.007506626812913432,0.005025091500075454,0.0001719740428120951,0.3157188995788043,0,Positive and negative weekly shock decomposition.

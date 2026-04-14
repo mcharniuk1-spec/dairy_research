@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+butter,Butter,Producer -> Procurement,NARDL,weekly_raw,0.2530379922459903,0.5616182462537844,0.15972327131082073,0.7827437946068134,0,Positive and negative weekly shock decomposition.
+butter,Butter,Producer -> Procurement,NARDL,weekly_smoothed,0.08865758134242264,0.15960346126107,0.215985543426075,0.4111028464965023,0,Positive and negative weekly shock decomposition.

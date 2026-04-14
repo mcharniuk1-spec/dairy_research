@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+butter,Butter,FarmGate -> Producer,NARDL,weekly_raw,0.00034783653384188316,0.34233804822282626,0.0674223686732147,0.0017525902640361775,0,Positive and negative weekly shock decomposition.
+butter,Butter,FarmGate -> Producer,NARDL,weekly_smoothed,0.013712991030497465,0.5090782589279241,0.02615735936499101,1.6451625838732525e-13,0,Positive and negative weekly shock decomposition.

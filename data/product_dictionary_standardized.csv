@@ -1,0 +1,29 @@
+dataset,standardized_product,raw_variants,example_raw_products,mapping_types,ambiguity_rows,n_rows
+Consumer_UA,cheese,1,Сири м’які жирні,direct,0,1478
+Consumer_UA,milk,1,"Молоко пастеризоване жирністю до 2,6% включно",direct,0,1478
+Consumer_UA,sour_cream,1,Сметана жирністю до 15% включно,direct,0,1478
+FarmGate_UA,milk,1,Молоко,direct,0,39906
+Novus,butter,1,butter,inferred,1,93
+Novus,cheese,2,cheese; cottage cheese,inferred,2,753
+Novus,condensed_milk,1,condensed milk,inferred,1,32
+Novus,cream,1,cream,inferred,1,70
+Novus,milk,2,drinking milk; інше,inferred,2,151
+Novus,milk_powder,1,молоко сухе,inferred,0,1
+Novus,other,1,chicken eggs,inferred,1,39
+Novus,sour_cream,1,sour cream,inferred,1,71
+Novus,yogurt_dessert,1,yogurt,inferred,0,237
+Producer_UA,butter,1,Масло вершкове жирністю не більше 85%,direct,0,1478
+Producer_UA,cheese,1,Сир твердий,direct,0,1478
+Producer_UA,milk,2,"Кефір; Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",direct,0,2956
+Producer_UA,milk_powder,1,Молоко та вершки сухі знежирені,direct,0,1478
+Producer_UA,sour_cream,1,Сметана,direct,0,1478
+Prozorro,other,256,2025-04-14 00:00:00; 2025-04-15 00:00:00; 2025-04-16 00:00:00; 2025-04-17 00:00:00; 2025-04-18 00:00:00,approximate,256,10927
+Silpo,butter,1,butter,inferred,1,7314
+Silpo,cheese,1,cottage cheese,inferred,1,9720
+Silpo,condensed_milk,1,condensed milk,inferred,1,2893
+Silpo,cream,1,cream,inferred,1,5142
+Silpo,milk,2,drinking milk; інше,inferred,2,16269
+Silpo,milk_powder,1,молоко сухе,inferred,0,162
+Silpo,other,1,chicken eggs,inferred,1,2589
+Silpo,sour_cream,1,sour cream,inferred,1,6226
+Silpo,yogurt_dessert,2,cheese; yogurt,inferred,2,30534

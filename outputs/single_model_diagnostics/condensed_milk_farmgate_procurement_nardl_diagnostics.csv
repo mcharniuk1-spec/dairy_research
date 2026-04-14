@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+condensed_milk,Condensed milk,FarmGate -> Procurement,NARDL,weekly_raw,0.13969389075594985,0.3125228838118083,0.35752998274883413,0.5655341693442854,0,Positive and negative weekly shock decomposition.
+condensed_milk,Condensed milk,FarmGate -> Procurement,NARDL,weekly_smoothed,0.1974063985508127,0.7338795036689658,0.1287789166980893,0.6042071191760452,0,Positive and negative weekly shock decomposition.

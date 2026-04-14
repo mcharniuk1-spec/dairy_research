@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+cheese,CHEESE,Producer -> Procurement,ECM,weekly_smoothed,0.5289986481176518,0.4219538134541987,0.8583050925792177,0.4925114069935992,0,engle_granger_p=0.0647

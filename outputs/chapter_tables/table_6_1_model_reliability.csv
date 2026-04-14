@@ -1,0 +1,9 @@
+model_block,family,rows_estimated,reliable_rows,conditionally_usable_rows
+Product-level weekly models,ECM,21,16,5
+Product-level weekly models,NARDL,30,14,16
+Aggregate index models,ECM,6,5,1
+Aggregate index models,NARDL,10,3,7
+Discount models,OLS-HAC,3,2,1
+Procurement-scale models,OLS-HAC,6,5,1
+Product-level VECM,VECM,27,3,24
+Aggregate index VECM,VECM,3,2,1

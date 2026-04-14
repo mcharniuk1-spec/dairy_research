@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+sour_cream,Sour cream,FarmGate -> Producer,NARDL,weekly_raw,210,1.2670640353234273,0.29861750685298966,-0.07071873463933527,,1,0.6881146460659024,conditionally_usable
+sour_cream,Sour cream,FarmGate -> Producer,NARDL,weekly_smoothed,210,0.9319822039048578,0.18575549754084947,-0.06551229616290924,,1,0.7825888834522856,conditionally_usable

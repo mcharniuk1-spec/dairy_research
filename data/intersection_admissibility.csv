@@ -1,0 +1,142 @@
+product,product_label,link,x_col,y_col,week_min,week_max,overlap_weeks,continuity_share,x_raw_support_share,y_raw_support_share,mapping_type,interpolation_dominant_flag,admissibility_status
+butter,Butter,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,inferred,0,weak_extension
+butter,Butter,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,2021-12-27,2026-01-12,212,1.0,1.0,1.0,inferred,0,acceptable
+butter,Butter,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,8,0.625,1.0,1.0,inferred,0,unusable
+butter,Butter,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+butter,Butter,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+butter,Butter,Procurement -> Retail (Novus),prozorro_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,8,0.625,1.0,1.0,direct,0,unusable
+butter,Butter,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+butter,Butter,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+butter,Butter,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,direct,0,weak_extension
+butter,Butter,Producer -> Retail (Novus),producer_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,8,0.625,1.0,1.0,direct,0,unusable
+butter,Butter,Producer -> Retail (Silpo),producer_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+butter,Butter,Producer -> Retail combined,producer_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+butter,Butter,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,8,0.625,1.0,1.0,inferred,0,unusable
+butter,Butter,Retail (Novus) -> Procurement,novus_category_baseline_weekly,prozorro_weekly,2025-11-03,2026-01-05,8,0.625,1.0,1.0,direct,0,unusable
+butter,Butter,Retail (Novus) -> Producer,novus_category_baseline_weekly,producer_linear_weekly,2025-11-03,2026-01-05,8,0.625,1.0,1.0,direct,0,unusable
+butter,Butter,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+butter,Butter,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+butter,Butter,Retail (Silpo) -> Producer,silpo_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+butter,Butter,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+butter,Butter,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+butter,Butter,Retail combined -> Producer,retail_category_baseline_weekly,producer_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+cheese,CHEESE,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,inferred,0,weak_extension
+cheese,CHEESE,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,2021-12-27,2026-01-12,212,1.0,1.0,1.0,inferred,0,acceptable
+cheese,CHEESE,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,inferred,0,unusable
+cheese,CHEESE,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+cheese,CHEESE,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+cheese,CHEESE,Procurement -> Retail (Novus),prozorro_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,direct,0,weak_extension
+cheese,CHEESE,Producer -> Retail (Novus),producer_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Producer -> Retail (Silpo),producer_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Producer -> Retail combined,producer_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,inferred,0,unusable
+cheese,CHEESE,Retail (Novus) -> Procurement,novus_category_baseline_weekly,prozorro_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Retail (Novus) -> Producer,novus_category_baseline_weekly,producer_linear_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+cheese,CHEESE,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Retail (Silpo) -> Producer,silpo_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+cheese,CHEESE,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+cheese,CHEESE,Retail combined -> Producer,retail_category_baseline_weekly,producer_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+condensed_milk,Condensed milk,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,36,0.4444444444444444,1.0,1.0,inferred,0,weak_extension
+condensed_milk,Condensed milk,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,7,0.42857142857142855,1.0,1.0,inferred,0,unusable
+condensed_milk,Condensed milk,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+condensed_milk,Condensed milk,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+condensed_milk,Condensed milk,Procurement -> Retail (Novus),prozorro_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,7,0.42857142857142855,1.0,1.0,direct,0,unusable
+condensed_milk,Condensed milk,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+condensed_milk,Condensed milk,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+condensed_milk,Condensed milk,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,7,0.42857142857142855,1.0,1.0,inferred,0,unusable
+condensed_milk,Condensed milk,Retail (Novus) -> Procurement,novus_category_baseline_weekly,prozorro_weekly,2025-11-03,2026-01-05,7,0.42857142857142855,1.0,1.0,direct,0,unusable
+condensed_milk,Condensed milk,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+condensed_milk,Condensed milk,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+condensed_milk,Condensed milk,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+condensed_milk,Condensed milk,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+cream,Cream,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,inferred,0,weak_extension
+cream,Cream,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,inferred,0,unusable
+cream,Cream,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+cream,Cream,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+cream,Cream,Procurement -> Retail (Novus),prozorro_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+cream,Cream,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+cream,Cream,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+cream,Cream,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,inferred,0,unusable
+cream,Cream,Retail (Novus) -> Procurement,novus_category_baseline_weekly,prozorro_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+cream,Cream,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+cream,Cream,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+cream,Cream,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+cream,Cream,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,direct,0,weak_extension
+milk,Drinking milk / fermented milk,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,2021-12-27,2026-01-12,212,1.0,1.0,1.0,direct,0,strong
+milk,Drinking milk / fermented milk,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Procurement -> Retail (Novus),prozorro_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,direct,0,weak_extension
+milk,Drinking milk / fermented milk,Producer -> Retail (Novus),producer_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Producer -> Retail (Silpo),producer_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Producer -> Retail combined,producer_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail (Novus) -> Procurement,novus_category_baseline_weekly,prozorro_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail (Novus) -> Producer,novus_category_baseline_weekly,producer_linear_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail (Silpo) -> Producer,silpo_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk,Drinking milk / fermented milk,Retail combined -> Producer,retail_category_baseline_weekly,producer_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-05-05,2025-11-17,8,0.25,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,2021-12-27,2026-01-12,212,1.0,1.0,1.0,inferred,0,acceptable
+milk_powder,Milk powder,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2025-11-03,1,1.0,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-11-10,2025-11-17,2,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-11-10,2025-11-17,2,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,2025-05-05,2025-11-17,8,0.25,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Producer -> Retail (Novus),producer_linear_weekly,novus_category_baseline_weekly,2025-11-03,2025-11-03,1,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Producer -> Retail (Silpo),producer_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Producer -> Retail combined,producer_linear_weekly,retail_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2025-11-03,1,1.0,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,Retail (Novus) -> Producer,novus_category_baseline_weekly,producer_linear_weekly,2025-11-03,2025-11-03,1,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-11-10,2025-11-17,2,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Retail (Silpo) -> Producer,silpo_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+milk_powder,Milk powder,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-11-10,2025-11-17,2,1.0,1.0,1.0,direct,0,unusable
+milk_powder,Milk powder,Retail combined -> Producer,retail_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+other,Other,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,5,0.4,1.0,1.0,inferred,0,unusable
+other,Other,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+other,Other,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,10,0.8,1.0,1.0,inferred,0,unusable
+other,Other,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,5,0.4,1.0,1.0,inferred,0,unusable
+other,Other,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+other,Other,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,10,0.8,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,FarmGate -> Procurement,farmgate_combined_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,inferred,0,weak_extension
+sour_cream,Sour cream,FarmGate -> Producer,farmgate_combined_linear_weekly,producer_linear_weekly,2021-12-27,2026-01-12,212,1.0,1.0,1.0,inferred,0,acceptable
+sour_cream,Sour cream,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,7,0.7142857142857143,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,Procurement -> Retail (Novus),prozorro_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,7,0.7142857142857143,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Procurement -> Retail (Silpo),prozorro_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Procurement -> Retail combined,prozorro_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Producer -> Procurement,producer_linear_weekly,prozorro_weekly,2025-04-14,2026-01-05,39,1.0,1.0,1.0,direct,0,weak_extension
+sour_cream,Sour cream,Producer -> Retail (Novus),producer_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,7,0.7142857142857143,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Producer -> Retail (Silpo),producer_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Producer -> Retail combined,producer_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,7,0.7142857142857143,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,Retail (Novus) -> Procurement,novus_category_baseline_weekly,prozorro_weekly,2025-11-03,2026-01-05,7,0.7142857142857143,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Retail (Novus) -> Producer,novus_category_baseline_weekly,producer_linear_weekly,2025-11-03,2026-01-05,7,0.7142857142857143,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,Retail (Silpo) -> Procurement,silpo_category_baseline_weekly,prozorro_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Retail (Silpo) -> Producer,silpo_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+sour_cream,Sour cream,Retail combined -> Procurement,retail_category_baseline_weekly,prozorro_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+sour_cream,Sour cream,Retail combined -> Producer,retail_category_baseline_weekly,producer_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,direct,0,unusable
+yogurt_dessert,Yogurt / dessert,FarmGate -> Retail (Novus),farmgate_combined_linear_weekly,novus_category_baseline_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,inferred,0,unusable
+yogurt_dessert,Yogurt / dessert,FarmGate -> Retail (Silpo),farmgate_combined_linear_weekly,silpo_category_baseline_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+yogurt_dessert,Yogurt / dessert,FarmGate -> Retail combined,farmgate_combined_linear_weekly,retail_category_baseline_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable
+yogurt_dessert,Yogurt / dessert,Retail (Novus) -> FarmGate,novus_category_baseline_weekly,farmgate_combined_linear_weekly,2025-11-03,2026-01-05,9,0.8888888888888888,1.0,1.0,inferred,0,unusable
+yogurt_dessert,Yogurt / dessert,Retail (Silpo) -> FarmGate,silpo_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,inferred,0,unusable
+yogurt_dessert,Yogurt / dessert,Retail combined -> FarmGate,retail_category_baseline_weekly,farmgate_combined_linear_weekly,2025-10-20,2026-01-05,11,0.9090909090909091,1.0,1.0,inferred,0,unusable

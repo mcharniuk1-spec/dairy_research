@@ -1,0 +1,205 @@
+product,product_label,stage,spread,farm_gate_source,reconstruction_variant,n_obs,mean_log_spread,median_log_spread,sd_log_spread,mean_price_ratio,date_min,date_max
+butter,Butter,producer_farmgate,ProducerUA / FarmGateUA,initial,linear,1478,2.858488096649298,2.825186846841259,0.12905732123250743,17.43514674267308,2021-12-30,2026-01-15
+butter,Butter,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,67,1.5475596031724135,1.4507275193341815,0.28086541147653465,4.699986343964921,2025-10-21,2026-01-08
+butter,Butter,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,67,1.5933219841624184,1.4840070071313476,0.2544739235388445,4.920066192443617,2025-10-21,2026-01-08
+butter,Butter,producer_farmgate,ProducerUA / FarmGateUA,filled,linear,1478,3.0979011314430673,3.0964091809923047,0.17340275205092076,22.151409559033223,2021-12-30,2026-01-15
+butter,Butter,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,67,1.8256966417742628,1.7272737350797658,0.2652503521146421,6.207117650720424,2025-10-21,2026-01-08
+butter,Butter,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,67,1.871459022764268,1.7714415846391383,0.2390269957059323,6.497769880766603,2025-10-21,2026-01-08
+butter,Butter,procurement_producer,ProZorro / ProducerUA,not_applicable,linear,270,0.14681075154280868,0.16450649871312484,0.17002122604288267,1.158134767071373,2025-04-14,2026-01-08
+butter,Butter,retail_procurement_observed,Retail observed / ProZorro,not_applicable,linear,67,-1.5385072273215972,-1.6351658406850218,0.2898997932880078,0.21470136265708947,2025-10-21,2026-01-08
+butter,Butter,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,linear,67,-1.492744846331592,-1.5721002419964556,0.2658520977918972,0.224754890455615,2025-10-21,2026-01-08
+butter,Butter,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,linear,61,-1.6838563000856206,-1.7363026256544032,0.2281137015820855,0.18565664606841997,2025-10-21,2026-01-08
+butter,Butter,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,linear,61,-1.6253230839200805,-1.657041095148207,0.20457423819083462,0.19684806648429004,2025-10-21,2026-01-08
+butter,Butter,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,linear,51,-1.6945545350455642,-1.7196924373987281,0.1297399412237989,0.18368103426924248,2025-10-21,2025-12-13
+butter,Butter,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,linear,51,-1.634564852871111,-1.6543172442302634,0.12232839462512639,0.19503722272391147,2025-10-21,2025-12-13
+butter,Butter,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,linear,67,-1.5385072273215972,-1.6351658406850218,0.2898997932880078,0.21470136265708947,2025-10-21,2026-01-08
+butter,Butter,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,linear,67,-1.492744846331592,-1.5721002419964556,0.2658520977918972,0.224754890455615,2025-10-21,2026-01-08
+butter,Butter,producer_farmgate,ProducerUA / FarmGateUA,initial,pchip,1478,2.8584710535571247,2.8247666102762015,0.12940878493144514,17.434849596392244,2021-12-30,2026-01-15
+butter,Butter,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,67,1.5475279179927746,1.4510573629750123,0.2812287178690252,4.699837426412565,2025-10-21,2026-01-08
+butter,Butter,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,67,1.59329029898278,1.4838735712860327,0.2548532020896666,4.919910301732202,2025-10-21,2026-01-08
+butter,Butter,producer_farmgate,ProducerUA / FarmGateUA,filled,pchip,1478,3.0978605083153044,3.096586708981727,0.17369065366127495,22.150509717769882,2021-12-30,2026-01-15
+butter,Butter,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,67,1.8255936580169796,1.7268132211593001,0.2654251727254425,6.206478451336996,2025-10-21,2026-01-08
+butter,Butter,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,67,1.871356039006985,1.7709292007055706,0.2392105186852069,6.497100750465688,2025-10-21,2026-01-08
+butter,Butter,procurement_producer,ProZorro / ProducerUA,not_applicable,pchip,270,0.1468252051012403,0.1645918843813181,0.17024444675715764,1.1581515063608716,2025-04-14,2026-01-08
+butter,Butter,retail_procurement_observed,Retail observed / ProZorro,not_applicable,pchip,67,-1.5385072273215972,-1.6351658406850218,0.2898997932880078,0.21470136265708947,2025-10-21,2026-01-08
+butter,Butter,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,pchip,67,-1.492744846331592,-1.5721002419964556,0.2658520977918972,0.224754890455615,2025-10-21,2026-01-08
+butter,Butter,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,pchip,61,-1.6838563000856206,-1.7363026256544032,0.2281137015820855,0.18565664606841997,2025-10-21,2026-01-08
+butter,Butter,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,pchip,61,-1.6253230839200805,-1.657041095148207,0.20457423819083462,0.19684806648429004,2025-10-21,2026-01-08
+butter,Butter,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,pchip,51,-1.6945545350455642,-1.7196924373987281,0.1297399412237989,0.18368103426924248,2025-10-21,2025-12-13
+butter,Butter,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,pchip,51,-1.634564852871111,-1.6543172442302634,0.12232839462512639,0.19503722272391147,2025-10-21,2025-12-13
+butter,Butter,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,pchip,67,-1.5385072273215972,-1.6351658406850218,0.2898997932880078,0.21470136265708947,2025-10-21,2026-01-08
+butter,Butter,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,pchip,67,-1.492744846331592,-1.5721002419964556,0.2658520977918972,0.224754890455615,2025-10-21,2026-01-08
+cheese,CHEESE,producer_farmgate,ProducerUA / FarmGateUA,initial,linear,1478,2.696420598936519,2.702411223527151,0.11369539873804461,14.826566404078731,2021-12-30,2026-01-15
+cheese,CHEESE,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,71,1.5255265770657578,1.1928927172690953,0.6122884453643107,4.597563903714518,2025-10-21,2026-01-08
+cheese,CHEESE,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,71,1.5774275018844526,1.2690859765695128,0.5807278645435713,4.842482497229118,2025-10-21,2026-01-08
+cheese,CHEESE,producer_farmgate,ProducerUA / FarmGateUA,filled,linear,1478,2.935833633730289,2.925889683531336,0.09963413957554054,18.837199916827153,2021-12-30,2026-01-15
+cheese,CHEESE,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,71,1.8016415064340174,1.48145837360671,0.5969601241510595,6.059586154629599,2025-10-21,2026-01-08
+cheese,CHEESE,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,71,1.8535424312527122,1.55390982127867,0.5656670373374948,6.382388697313861,2025-10-21,2026-01-08
+cheese,CHEESE,procurement_producer,ProZorro / ProducerUA,not_applicable,linear,270,-0.12834630925277146,-0.07428710608756539,0.3067874171519519,0.8795487305327251,2025-04-14,2026-01-08
+cheese,CHEESE,retail_procurement_observed,Retail observed / ProZorro,not_applicable,linear,71,-1.0117400086146806,-1.2886628858101954,0.6555519264771565,0.36358578644993805,2025-10-21,2026-01-08
+cheese,CHEESE,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,linear,71,-0.9598390837959856,-1.2162383488029338,0.6252401153305275,0.3829545046024521,2025-10-21,2026-01-08
+cheese,CHEESE,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,linear,61,-1.268575151202969,-1.317589531112903,0.2674887170362028,0.28123204958363174,2025-10-21,2026-01-08
+cheese,CHEESE,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,linear,61,-1.1900172594309941,-1.2615630437150758,0.24370831955269237,0.3042160134261016,2025-10-21,2026-01-08
+cheese,CHEESE,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,linear,51,-1.3894472914833904,-1.4223707103587868,0.19064288750899575,0.24921300872542237,2025-10-21,2025-12-13
+cheese,CHEESE,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,linear,51,-1.3092415126035226,-1.341737054652846,0.18564327003162212,0.2700247891305599,2025-10-21,2025-12-13
+cheese,CHEESE,novus_procurement_observed,Novus observed / ProZorro,not_applicable,linear,57,-0.133957714107045,-0.31453568724365244,0.7560345802874112,0.8746270482071222,2025-11-04,2026-01-08
+cheese,CHEESE,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,linear,71,-1.0117400086146806,-1.2886628858101954,0.6555519264771565,0.36358578644993805,2025-10-21,2026-01-08
+cheese,CHEESE,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,linear,71,-0.9598390837959856,-1.2162383488029338,0.6252401153305275,0.3829545046024521,2025-10-21,2026-01-08
+cheese,CHEESE,producer_farmgate,ProducerUA / FarmGateUA,initial,pchip,1478,2.696371851340971,2.702771229720107,0.11384860510315882,14.82584366223241,2021-12-30,2026-01-15
+cheese,CHEESE,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,71,1.5255387150337554,1.1928927172690953,0.6126349831592226,4.59761970913673,2025-10-21,2026-01-08
+cheese,CHEESE,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,71,1.5774396398524504,1.2699264869143896,0.5810620225172027,4.8425412754834225,2025-10-21,2026-01-08
+cheese,CHEESE,producer_farmgate,ProducerUA / FarmGateUA,filled,pchip,1478,2.935761306099151,2.9256435008051938,0.09985709259676351,18.83583751605011,2021-12-30,2026-01-15
+cheese,CHEESE,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,71,1.8015590162528272,1.481292940237743,0.5971242185318478,6.059086318885821,2025-10-21,2026-01-08
+cheese,CHEESE,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,71,1.8534599410715227,1.554183145996868,0.5658249319323252,6.381862234628096,2025-10-21,2026-01-08
+cheese,CHEESE,procurement_producer,ProZorro / ProducerUA,not_applicable,pchip,270,-0.12837344251893495,-0.07309493621357266,0.306884007397217,0.879524865826681,2025-04-14,2026-01-08
+cheese,CHEESE,retail_procurement_observed,Retail observed / ProZorro,not_applicable,pchip,71,-1.0117400086146806,-1.2886628858101954,0.6555519264771565,0.36358578644993805,2025-10-21,2026-01-08
+cheese,CHEESE,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,pchip,71,-0.9598390837959856,-1.2162383488029338,0.6252401153305275,0.3829545046024521,2025-10-21,2026-01-08
+cheese,CHEESE,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,pchip,61,-1.268575151202969,-1.317589531112903,0.2674887170362028,0.28123204958363174,2025-10-21,2026-01-08
+cheese,CHEESE,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,pchip,61,-1.1900172594309941,-1.2615630437150758,0.24370831955269237,0.3042160134261016,2025-10-21,2026-01-08
+cheese,CHEESE,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,pchip,51,-1.3894472914833904,-1.4223707103587868,0.19064288750899575,0.24921300872542237,2025-10-21,2025-12-13
+cheese,CHEESE,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,pchip,51,-1.3092415126035226,-1.341737054652846,0.18564327003162212,0.2700247891305599,2025-10-21,2025-12-13
+cheese,CHEESE,novus_procurement_observed,Novus observed / ProZorro,not_applicable,pchip,57,-0.133957714107045,-0.31453568724365244,0.7560345802874112,0.8746270482071222,2025-11-04,2026-01-08
+cheese,CHEESE,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,pchip,71,-1.0117400086146806,-1.2886628858101954,0.6555519264771565,0.36358578644993805,2025-10-21,2026-01-08
+cheese,CHEESE,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,pchip,71,-0.9598390837959856,-1.2162383488029338,0.6252401153305275,0.3829545046024521,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,64,1.3485863082439749,1.2941488701564339,0.18983957226668646,3.8519761727884787,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,64,1.3704458844469214,1.3354523522954753,0.1783724159020772,3.937105798396235,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,64,1.6275610337999318,1.5864639118319603,0.17373444496134252,5.091441708617515,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,64,1.6494206100028785,1.6105659271329202,0.16275344168278866,5.203963828956739,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_procurement_observed,Retail observed / ProZorro,not_applicable,linear,62,-0.428371179227341,-0.45625996059624896,0.23669187524061555,0.651569520837199,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,linear,62,-0.4058064554049446,-0.42597428967269435,0.2284827565065704,0.6664391406370533,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,linear,51,-0.5122281524673894,-0.6274020013634827,0.6427592116438303,0.5991590726293954,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,linear,51,-0.4304315999932321,-0.4926417880157672,0.6414112375147435,0.6502283955816677,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,linear,51,-0.4652421907320651,-0.4769773843980296,0.19892164566340792,0.6279829951092485,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,linear,51,-0.4372105214970999,-0.45287679803117076,0.19239576927323274,0.6458354548512968,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,linear,62,-0.428371179227341,-0.45625996059624896,0.23669187524061555,0.651569520837199,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,linear,62,-0.4058064554049446,-0.42597428967269435,0.2284827565065704,0.6664391406370533,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,64,1.3485500521850033,1.2945115984131674,0.19020827718962302,3.8518365178448857,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,64,1.37040962838795,1.3356476627764786,0.17872330968428274,3.9369630570438674,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,64,1.627448302684647,1.586711657465,0.17389256645572657,5.090867777065874,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,64,1.6493078788875937,1.6101682562536725,0.1628950543261024,5.203377213375934,2025-10-21,2026-01-08
+condensed_milk,Condensed milk,retail_procurement_observed,Retail observed / ProZorro,not_applicable,pchip,62,-0.428371179227341,-0.45625996059624896,0.23669187524061555,0.651569520837199,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,pchip,62,-0.4058064554049446,-0.42597428967269435,0.2284827565065704,0.6664391406370533,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,pchip,51,-0.5122281524673894,-0.6274020013634827,0.6427592116438303,0.5991590726293954,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,pchip,51,-0.4304315999932321,-0.4926417880157672,0.6414112375147435,0.6502283955816677,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,pchip,51,-0.4652421907320651,-0.4769773843980296,0.19892164566340792,0.6279829951092485,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,pchip,51,-0.4372105214970999,-0.45287679803117076,0.19239576927323274,0.6458354548512968,2025-10-21,2025-12-13
+condensed_milk,Condensed milk,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,pchip,62,-0.428371179227341,-0.45625996059624896,0.23669187524061555,0.651569520837199,2025-10-21,2025-12-29
+condensed_milk,Condensed milk,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,pchip,62,-0.4058064554049446,-0.42597428967269435,0.2284827565065704,0.6664391406370533,2025-10-21,2025-12-29
+cream,Cream,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,70,1.3023115299641328,1.1845559391690457,0.34592749246720383,3.677788167210651,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,70,1.3562117999620389,1.252709046552542,0.3254659125872215,3.881461662995924,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,70,1.578836126938175,1.4746964768269724,0.3382421260938611,4.849308545939842,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,70,1.632736396936081,1.539632755250534,0.3189716282079342,5.117860071690726,2025-10-21,2026-01-08
+cream,Cream,retail_procurement_observed,Retail observed / ProZorro,not_applicable,linear,70,0.4463667497475832,0.4055911630767475,0.46323144917148085,1.5626244535798122,2025-10-21,2026-01-08
+cream,Cream,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,linear,70,0.5002670197454894,0.4842708164117908,0.44405042266636924,1.649161570615983,2025-10-21,2026-01-08
+cream,Cream,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,linear,63,0.3966369111846958,0.36655026447794725,0.4870690698039294,1.4868159857785237,2025-10-21,2026-01-08
+cream,Cream,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,linear,63,0.4732132894657611,0.4335414763478811,0.4692743690091515,1.605143706711612,2025-10-21,2026-01-08
+cream,Cream,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,linear,51,0.28380262647914395,0.3708970008337329,0.3184578183961842,1.328170759141749,2025-10-21,2025-12-13
+cream,Cream,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,linear,51,0.3605089541549856,0.431107538721502,0.3125872014618304,1.4340590991936055,2025-10-21,2025-12-13
+cream,Cream,novus_procurement_observed,Novus observed / ProZorro,not_applicable,linear,47,0.7146085881934424,0.8108292010134552,0.5527764712559249,2.043386720023858,2025-11-04,2026-01-08
+cream,Cream,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,linear,70,0.4463667497475832,0.4055911630767475,0.46323144917148085,1.5626244535798122,2025-10-21,2026-01-08
+cream,Cream,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,linear,70,0.5002670197454894,0.4842708164117908,0.44405042266636924,1.649161570615983,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,70,1.3023210545799877,1.1848371479154658,0.34609375515532875,3.6778231968969615,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,70,1.3562213245778938,1.2530512747906144,0.3256153739741113,3.88149863260328,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,70,1.5787510334694432,1.4745124968331218,0.33825987631599186,4.848895919010895,2025-10-21,2026-01-08
+cream,Cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,70,1.6326513034673493,1.539686741858674,0.31897916088635714,5.117424593753169,2025-10-21,2026-01-08
+cream,Cream,retail_procurement_observed,Retail observed / ProZorro,not_applicable,pchip,70,0.4463667497475832,0.4055911630767475,0.46323144917148085,1.5626244535798122,2025-10-21,2026-01-08
+cream,Cream,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,pchip,70,0.5002670197454894,0.4842708164117908,0.44405042266636924,1.649161570615983,2025-10-21,2026-01-08
+cream,Cream,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,pchip,63,0.3966369111846958,0.36655026447794725,0.4870690698039294,1.4868159857785237,2025-10-21,2026-01-08
+cream,Cream,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,pchip,63,0.4732132894657611,0.4335414763478811,0.4692743690091515,1.605143706711612,2025-10-21,2026-01-08
+cream,Cream,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,pchip,51,0.28380262647914395,0.3708970008337329,0.3184578183961842,1.328170759141749,2025-10-21,2025-12-13
+cream,Cream,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,pchip,51,0.3605089541549856,0.431107538721502,0.3125872014618304,1.4340590991936055,2025-10-21,2025-12-13
+cream,Cream,novus_procurement_observed,Novus observed / ProZorro,not_applicable,pchip,47,0.7146085881934424,0.8108292010134552,0.5527764712559249,2.043386720023858,2025-11-04,2026-01-08
+cream,Cream,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,pchip,70,0.4463667497475832,0.4055911630767475,0.46323144917148085,1.5626244535798122,2025-10-21,2026-01-08
+cream,Cream,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,pchip,70,0.5002670197454894,0.4842708164117908,0.44405042266636924,1.649161570615983,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,producer_farmgate,ProducerUA / FarmGateUA,initial,linear,1478,0.8307121300202325,0.8406031673452199,0.07818040053374951,2.2949524630275566,2021-12-30,2026-01-15
+milk,Drinking milk / fermented milk,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,72,1.174810275419834,1.167398777542347,0.16977279478790766,3.2375286468028897,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,72,1.2180007600467926,1.2163895076854736,0.16818265990270484,3.3804226972940183,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,producer_farmgate,ProducerUA / FarmGateUA,filled,linear,1478,1.0701251648140024,1.0638152710548654,0.07523592428465563,2.9157444257473144,2021-12-30,2026-01-15
+milk,Drinking milk / fermented milk,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,72,1.4505313563685187,1.4505514054825965,0.16384685451806852,4.265380350145788,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,72,1.4937218409954776,1.5078883696445942,0.16551334408450366,4.453640452714917,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,procurement_producer,ProZorro / ProducerUA,not_applicable,linear,270,0.10693670329684966,0.09901919180465346,0.117768791157258,1.1128638116396172,2025-04-14,2026-01-08
+milk,Drinking milk / fermented milk,retail_procurement_observed,Retail observed / ProZorro,not_applicable,linear,72,0.3003635834261861,0.3094837003922499,0.17873838404240702,1.3503496830978234,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,linear,72,0.34355406805314487,0.3565082633816332,0.18027358734647334,1.4099497536602288,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,linear,72,0.32765072597359457,0.32306877073733076,0.14179949965948072,1.3877041986020064,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,linear,72,0.38382251197521927,0.38041266765642257,0.1367417089011191,1.4678848865708445,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,linear,51,0.30270666618532416,0.30097159441205257,0.07024661709520373,1.353517373790594,2025-10-21,2025-12-13
+milk,Drinking milk / fermented milk,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,linear,51,0.3663179585909663,0.3565082633816332,0.06601214277001466,1.4424137976085873,2025-10-21,2025-12-13
+milk,Drinking milk / fermented milk,novus_procurement_observed,Novus observed / ProZorro,not_applicable,linear,56,0.27361922700897506,0.3619492654486183,0.31070492447782455,1.3147140992977637,2025-11-04,2026-01-08
+milk,Drinking milk / fermented milk,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,linear,72,0.3003635834261861,0.3094837003922499,0.17873838404240702,1.3503496830978234,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,linear,72,0.34355406805314487,0.3565082633816332,0.18027358734647334,1.4099497536602288,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,producer_farmgate,ProducerUA / FarmGateUA,initial,pchip,1478,0.8307346388591824,0.8402639915658636,0.07829606067683532,2.2950041203243154,2021-12-30,2026-01-15
+milk,Drinking milk / fermented milk,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,72,1.174829024552138,1.1667829123180133,0.16990504359929443,3.2375893482248745,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,72,1.2180195091790966,1.2162162077101886,0.1682609358325783,3.380486077880577,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,producer_farmgate,ProducerUA / FarmGateUA,filled,pchip,1478,1.0701240936173624,1.0640202892663941,0.07533186121217836,2.9157413024133554,2021-12-30,2026-01-15
+milk,Drinking milk / fermented milk,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,72,1.4504569991298637,1.4499234693427097,0.16387575511267538,4.265063200032487,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,72,1.4936474837568228,1.5077681071447795,0.1655142924588245,4.4533093046206735,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,procurement_producer,ProZorro / ProducerUA,not_applicable,pchip,270,0.10683836723834518,0.09929435807554765,0.1178704471824037,1.1127543823792376,2025-04-14,2026-01-08
+milk,Drinking milk / fermented milk,retail_procurement_observed,Retail observed / ProZorro,not_applicable,pchip,72,0.3003635834261861,0.3094837003922499,0.17873838404240702,1.3503496830978234,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,pchip,72,0.34355406805314487,0.3565082633816332,0.18027358734647334,1.4099497536602288,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,pchip,72,0.32765072597359457,0.32306877073733076,0.14179949965948072,1.3877041986020064,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,pchip,72,0.38382251197521927,0.38041266765642257,0.1367417089011191,1.4678848865708445,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,pchip,51,0.30270666618532416,0.30097159441205257,0.07024661709520373,1.353517373790594,2025-10-21,2025-12-13
+milk,Drinking milk / fermented milk,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,pchip,51,0.3663179585909663,0.3565082633816332,0.06601214277001466,1.4424137976085873,2025-10-21,2025-12-13
+milk,Drinking milk / fermented milk,novus_procurement_observed,Novus observed / ProZorro,not_applicable,pchip,56,0.27361922700897506,0.3619492654486183,0.31070492447782455,1.3147140992977637,2025-11-04,2026-01-08
+milk,Drinking milk / fermented milk,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,pchip,72,0.3003635834261861,0.3094837003922499,0.17873838404240702,1.3503496830978234,2025-10-21,2026-01-08
+milk,Drinking milk / fermented milk,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,pchip,72,0.34355406805314487,0.3565082633816332,0.18027358734647334,1.4099497536602288,2025-10-21,2026-01-08
+milk_powder,Milk powder,producer_farmgate,ProducerUA / FarmGateUA,initial,linear,1478,1.969761014174136,1.9183291262868196,0.19275944090064182,7.168963003061545,2021-12-30,2026-01-15
+milk_powder,Milk powder,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,51,1.5129586769412124,1.5550474488983328,0.2803572424901234,4.540143760867394,2025-10-21,2025-12-13
+milk_powder,Milk powder,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,51,1.5688450930070377,1.662215928396872,0.3035412842342245,4.801100166507889,2025-10-21,2025-12-13
+milk_powder,Milk powder,producer_farmgate,ProducerUA / FarmGateUA,filled,linear,1478,2.2091740489679057,2.166511581342317,0.1588302971280042,9.108190366169877,2021-12-30,2026-01-15
+milk_powder,Milk powder,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,51,1.8005942871966056,1.8505179356715216,0.28130378809959244,6.0532437609556755,2025-10-21,2025-12-13
+milk_powder,Milk powder,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,51,1.8564807032624304,1.9408488760676659,0.3053857009818683,6.401169469374862,2025-10-21,2025-12-13
+milk_powder,Milk powder,procurement_producer,ProZorro / ProducerUA,not_applicable,linear,84,0.2969265971740428,0.3536843772189142,0.14780719706475495,1.3457165164274225,2025-05-06,2025-11-21
+milk_powder,Milk powder,producer_farmgate,ProducerUA / FarmGateUA,initial,pchip,1478,1.9697186551130286,1.917698884649527,0.19289940749733003,7.168659338951131,2021-12-30,2026-01-15
+milk_powder,Milk powder,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,51,1.512791875357423,1.5550068466611475,0.28039379396534503,4.539386520853621,2025-10-21,2025-12-13
+milk_powder,Milk powder,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,51,1.568678291423248,1.6619175681852476,0.30363569728309103,4.800299402182419,2025-10-21,2025-12-13
+milk_powder,Milk powder,producer_farmgate,ProducerUA / FarmGateUA,filled,pchip,1478,2.209108109871208,2.166540043779876,0.15904703415648136,9.107589800125192,2021-12-30,2026-01-15
+milk_powder,Milk powder,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,51,1.8004406547497251,1.850005551737954,0.28131437221032923,6.052313857738598,2025-10-21,2025-12-13
+milk_powder,Milk powder,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,51,1.8563270708155497,1.9399721914765244,0.30542453084810905,6.400186117585689,2025-10-21,2025-12-13
+milk_powder,Milk powder,procurement_producer,ProZorro / ProducerUA,not_applicable,pchip,84,0.2969581188699966,0.3537218231856376,0.14783448086053957,1.345758936362864,2025-05-06,2025-11-21
+other,Other,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,64,1.2303705061393653,1.3322899995991435,0.5409615176820912,3.4224973576903497,2025-10-21,2026-01-08
+other,Other,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,64,1.278967186562191,1.3732023215390945,0.5055674866472998,3.5929269853437864,2025-10-21,2026-01-08
+other,Other,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,64,1.5093040094584875,1.6207307919926517,0.5410110325968597,4.523581328623736,2025-10-21,2026-01-08
+other,Other,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,64,1.5579006898813135,1.6624562086942332,0.5058597039225511,4.748841482518394,2025-10-21,2026-01-08
+other,Other,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,64,1.2303139310752738,1.331594469154945,0.5408349702692575,3.4223037351601406,2025-10-21,2026-01-08
+other,Other,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,64,1.2789106114980995,1.373470747542312,0.5054416372104423,3.592723721019215,2025-10-21,2026-01-08
+other,Other,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,64,1.5092010898185255,1.6204820854825324,0.5408864196596616,4.523115787219143,2025-10-21,2026-01-08
+other,Other,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,64,1.5577977702413515,1.6619921070580363,0.5057325520009788,4.748352758612851,2025-10-21,2026-01-08
+sour_cream,Sour cream,producer_farmgate,ProducerUA / FarmGateUA,initial,linear,1478,1.805884975604781,1.8118480876180225,0.0757450113275084,6.08535445649409,2021-12-30,2026-01-15
+sour_cream,Sour cream,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,68,1.1786081856646997,1.151640536687918,0.09803058593700213,3.2498478688606327,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,68,1.228232855953611,1.215447574154105,0.07296012366301138,3.4151890696425555,2025-10-21,2026-01-08
+sour_cream,Sour cream,producer_farmgate,ProducerUA / FarmGateUA,filled,linear,1478,2.0452980103985507,2.029306833003705,0.09054647906107613,7.73146225077437,2021-12-30,2026-01-15
+sour_cream,Sour cream,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,68,1.4562425798999474,1.4336072264638673,0.08417659535200632,4.2898105876400905,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,68,1.5058672501888588,1.4984450838303454,0.06184846406079789,4.508061552703291,2025-10-21,2026-01-08
+sour_cream,Sour cream,procurement_producer,ProZorro / ProducerUA,not_applicable,linear,270,0.07916454062018959,0.10567951186083446,0.20263189190101139,1.0823824032910354,2025-04-14,2026-01-08
+sour_cream,Sour cream,retail_procurement_observed,Retail observed / ProZorro,not_applicable,linear,68,-0.7650985663222039,-0.7840763996816733,0.18133974246424203,0.46528806698050035,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,linear,68,-0.7154738960332923,-0.7430815536202364,0.17392306776823305,0.48896034051711584,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,linear,66,-0.8107629565801155,-0.818898728632969,0.20072884685490408,0.4445187882777271,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,linear,66,-0.7283374473559727,-0.7841237594022195,0.18753849555761895,0.4827108555429199,2025-10-21,2026-01-08
+sour_cream,Sour cream,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,linear,51,-0.7883091110314183,-0.8086848652714655,0.17061083896080897,0.45461284560105786,2025-10-21,2025-12-13
+sour_cream,Sour cream,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,linear,51,-0.7201710775463604,-0.7421456997671143,0.16774856066712387,0.48666899070094777,2025-10-21,2025-12-13
+sour_cream,Sour cream,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,linear,68,-0.7650985663222039,-0.7840763996816733,0.18133974246424203,0.46528806698050035,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,linear,68,-0.7154738960332923,-0.7430815536202364,0.17392306776823305,0.48896034051711584,2025-10-21,2026-01-08
+sour_cream,Sour cream,producer_farmgate,ProducerUA / FarmGateUA,initial,pchip,1478,1.8058582361791047,1.8117536418257598,0.07601948460624249,6.085191739786372,2021-12-30,2026-01-15
+sour_cream,Sour cream,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,68,1.1785898234638164,1.151454715092311,0.0982736146129565,3.2497881950490974,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,68,1.2282144937527277,1.2149246802561788,0.0731334671305177,3.415126359830551,2025-10-21,2026-01-08
+sour_cream,Sour cream,producer_farmgate,ProducerUA / FarmGateUA,filled,pchip,1478,2.045247690937285,2.0279185988590056,0.0908005871573724,7.731073217547168,2021-12-30,2026-01-15
+sour_cream,Sour cream,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,68,1.4561402332590214,1.4337438888229663,0.08422875493539077,4.289371562402999,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,68,1.505764903547933,1.4984450838303454,0.06183772042507183,4.5076001913560795,2025-10-21,2026-01-08
+sour_cream,Sour cream,procurement_producer,ProZorro / ProducerUA,not_applicable,pchip,270,0.07911156880015473,0.10465854337463432,0.2026836618223828,1.0823250690437225,2025-04-14,2026-01-08
+sour_cream,Sour cream,retail_procurement_observed,Retail observed / ProZorro,not_applicable,pchip,68,-0.7650985663222039,-0.7840763996816733,0.18133974246424203,0.46528806698050035,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_procurement_baseline,Retail baseline / ProZorro,not_applicable,pchip,68,-0.7154738960332923,-0.7430815536202364,0.17392306776823305,0.48896034051711584,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_matched_procurement_observed,Retail matched observed / ProZorro,not_applicable,pchip,66,-0.8107629565801155,-0.818898728632969,0.20072884685490408,0.4445187882777271,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_matched_procurement_baseline,Retail matched baseline / ProZorro,not_applicable,pchip,66,-0.7283374473559727,-0.7841237594022195,0.18753849555761895,0.4827108555429199,2025-10-21,2026-01-08
+sour_cream,Sour cream,silpo_procurement_observed,Silpo observed / ProZorro,not_applicable,pchip,51,-0.7883091110314183,-0.8086848652714655,0.17061083896080897,0.45461284560105786,2025-10-21,2025-12-13
+sour_cream,Sour cream,silpo_procurement_baseline,Silpo baseline / ProZorro,not_applicable,pchip,51,-0.7201710775463604,-0.7421456997671143,0.16774856066712387,0.48666899070094777,2025-10-21,2025-12-13
+sour_cream,Sour cream,retail_optimal_procurement_observed,Retail optimal observed / ProZorro,not_applicable,pchip,68,-0.7650985663222039,-0.7840763996816733,0.18133974246424203,0.46528806698050035,2025-10-21,2026-01-08
+sour_cream,Sour cream,retail_optimal_procurement_baseline,Retail optimal baseline / ProZorro,not_applicable,pchip,68,-0.7154738960332923,-0.7430815536202364,0.17392306776823305,0.48896034051711584,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_observed,Retail observed / FarmGateUA,initial,linear,72,1.017772503737782,1.089316783709033,0.1535613425555225,2.767024357822802,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,linear,72,1.083643742206362,1.184160357152335,0.1911781000292008,2.9554287760393225,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_observed,Retail observed / FarmGateUA,filled,linear,72,1.293493584686467,1.3808985525607214,0.1690654544831579,3.6455001983958404,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,linear,72,1.3593648231550468,1.480020364366971,0.207622524436132,3.893719315818933,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_observed,Retail observed / FarmGateUA,initial,pchip,72,1.017791252870086,1.0879723837962991,0.15328907102364023,2.7670762376149245,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_baseline,Retail baseline / FarmGateUA,initial,pchip,72,1.0836624913386663,1.1846416318164257,0.19088407864727708,2.9554841882839247,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_observed,Retail observed / FarmGateUA,filled,pchip,72,1.293419227447812,1.380221329540791,0.16894285110596927,3.645229139145305,2025-10-21,2026-01-08
+yogurt_dessert,Yogurt / dessert,retail_farmgate_baseline,Retail baseline / FarmGateUA,filled,pchip,72,1.359290465916392,1.4797567800866624,0.2074908390797736,3.8934298003664303,2025-10-21,2026-01-08

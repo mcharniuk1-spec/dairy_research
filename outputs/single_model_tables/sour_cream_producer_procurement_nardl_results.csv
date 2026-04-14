@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+sour_cream,Sour cream,Producer -> Procurement,NARDL,weekly_raw,37,-0.04161957222595625,1.4285314096049928,-0.6928967278894376,,1,0.10173436056819625,conditionally_usable
+sour_cream,Sour cream,Producer -> Procurement,NARDL,weekly_smoothed,39,0.08779776766658343,0.7843393493259478,-0.2940024585489345,,1,0.4711691341580251,conditionally_usable

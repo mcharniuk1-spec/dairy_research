@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+milk,Drinking milk / fermented milk,FarmGate -> Producer,ECM,weekly_raw,210,0.77189030125778,0.9712583089278988,-0.04393714045436384,0.002479981083430273,1,,conditionally_usable
+milk,Drinking milk / fermented milk,FarmGate -> Producer,ECM,weekly_smoothed,210,0.5648469625893382,0.9725514070254162,-0.039926125486127936,0.00909204022014311,1,,conditionally_usable

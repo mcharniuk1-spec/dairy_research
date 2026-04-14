@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+milk,Drinking milk / fermented milk,FarmGate -> Producer,NARDL,weekly_raw,210,1.1859041609134788,0.07288659756361077,-0.04982963902876536,,1,0.9388725605276709,conditionally_usable
+milk,Drinking milk / fermented milk,FarmGate -> Producer,NARDL,weekly_smoothed,210,0.7678497286842738,0.027661160449941546,-0.04489370926543939,,1,0.9751456296397963,conditionally_usable

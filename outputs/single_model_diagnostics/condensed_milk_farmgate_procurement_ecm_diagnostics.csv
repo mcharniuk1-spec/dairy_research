@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+condensed_milk,Condensed milk,FarmGate -> Procurement,ECM,weekly_smoothed,0.9473696784437583,0.5612855654066875,0.11220311416305902,0.9721392705586598,0,engle_granger_p=0.01227

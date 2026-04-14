@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+milk,Drinking milk / fermented milk,Producer -> Procurement,NARDL,weekly_raw,37,-2.1222508536479596,0.9271772293656458,-1.2370464189751362,,1,0.0203696198025104,reliable
+milk,Drinking milk / fermented milk,Producer -> Procurement,NARDL,weekly_smoothed,39,-1.4714611812268659,1.015627635473227,-0.5409516837938559,,1,0.08723837998332398,reliable

@@ -1,0 +1,5 @@
+series_col,n_obs,adf_p,kpss_p,adf_diff1_p,kpss_diff1_p,integration_class,stability_flag
+farmgate_index_weekly,39,0.18196348565191767,0.019530453271675664,0.9594035652926992,0.1,ambiguous,1
+producer_index_weekly,39,0.11145809883559166,0.1,0.20612137950880777,0.1,ambiguous,1
+procurement_index_weekly,39,0.00011782055460141596,0.01092115518126505,6.036844990620134e-07,0.1,I(1),1
+downstream_extension_weekly,39,1.0,0.01271831039230855,0.9892807114729769,0.1,ambiguous,1

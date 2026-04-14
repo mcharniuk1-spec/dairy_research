@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+sour_cream,Sour cream,Producer -> Procurement,ECM,weekly_raw,37,-0.4333149744976622,0.6350653374809699,-0.5980660412254649,0.0003557010381370289,1,,reliable

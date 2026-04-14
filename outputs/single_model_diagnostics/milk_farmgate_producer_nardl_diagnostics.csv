@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+milk,Drinking milk / fermented milk,FarmGate -> Producer,NARDL,weekly_raw,3.409943488003006e-05,0.02292416246199644,2.6206061694753194e-07,2.3874875916823204e-35,0,Positive and negative weekly shock decomposition.
+milk,Drinking milk / fermented milk,FarmGate -> Producer,NARDL,weekly_smoothed,0.005420397066579219,0.04032505917787558,2.5680112812783265e-13,2.25672487690638e-31,0,Positive and negative weekly shock decomposition.

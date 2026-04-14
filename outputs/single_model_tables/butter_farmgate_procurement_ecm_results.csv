@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+butter,Butter,FarmGate -> Procurement,ECM,weekly_raw,37,-2.210454726685891,1.6299229189501268,-0.6043123382958279,7.427564536896012e-06,1,,reliable

@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+milk,Drinking milk / fermented milk,FarmGate -> Producer,ECM,weekly_raw,0.007723443856365096,0.001987676006493166,7.880471610517534e-11,1.6229377874299493e-292,0,engle_granger_p=0.00248
+milk,Drinking milk / fermented milk,FarmGate -> Producer,ECM,weekly_smoothed,0.028207954552879298,0.008319330183070574,1.68170412667553e-17,3.0366945395707198e-102,0,engle_granger_p=0.009092

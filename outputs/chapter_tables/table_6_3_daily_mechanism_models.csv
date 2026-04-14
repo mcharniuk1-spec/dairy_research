@@ -1,0 +1,15 @@
+block,product_or_scope,equation,estimate,significance_or_support,reading
+Local projections,Multi-product,"FarmGateUA -> ProducerUA, h=7",4.643,"core 100.0%, sig 100.0%",Daily timing evidence for short-run pass-through.
+Local projections,Multi-product,"FarmGateUA -> ProducerUA, h=14",4.776,"core 100.0%, sig 100.0%",Daily timing evidence for short-run pass-through.
+Local projections,Multi-product,"ProducerUA -> FarmGateUA, h=14",3.373,"core 100.0%, sig 100.0%",Daily timing evidence for short-run pass-through.
+Local projections,Multi-product,"ProducerUA -> FarmGateUA, h=7",3.238,"core 100.0%, sig 100.0%",Daily timing evidence for short-run pass-through.
+Local projections,Multi-product,"ProZorro -> Silpo, h=7",-0.011,"core 50.0%, sig 50.0%",Daily timing evidence for short-run pass-through.
+Spread models,CHEESE,silpo_procurement_observed,-0.147,p=0.122; asym p=0.000,Tests whether vertical spreads behave like managed margins.
+Spread models,Drinking milk / fermented milk,silpo_procurement_baseline,-0.050,p=0.288; asym p=0.000,Tests whether vertical spreads behave like managed margins.
+Silpo discount models,Drinking milk / fermented milk,Discount incidence and depth,0.250,p=0.053; gap 0.444,Shows whether markdown policy smooths or exposes pass-through.
+Silpo discount models,CHEESE,Discount incidence and depth,0.042,p=0.643; gap -0.251,Shows whether markdown policy smooths or exposes pass-through.
+Silpo discount models,Yogurt / dessert,Discount incidence and depth,0.601,p=0.000; gap n/a,Shows whether markdown policy smooths or exposes pass-through.
+Procurement scale models,Sour cream,Change in current contract sum,-0.771,p=0.000,Captures whether contract scale modifies price adjustment.
+Procurement scale models,Cream,Change in current contract sum,0.184,p=0.058,Captures whether contract scale modifies price adjustment.
+Procurement scale models,Butter,Change in current contract sum,-0.124,p=0.529,Captures whether contract scale modifies price adjustment.
+Procurement scale models,Drinking milk / fermented milk,Change in current contract sum,-0.047,p=0.485,Captures whether contract scale modifies price adjustment.

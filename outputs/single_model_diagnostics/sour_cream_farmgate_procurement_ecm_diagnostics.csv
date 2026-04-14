@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+sour_cream,Sour cream,FarmGate -> Procurement,ECM,weekly_raw,0.2538799898448946,0.5578750332292699,0.6341924496900775,0.3485295278284705,0,engle_granger_p=0.001009

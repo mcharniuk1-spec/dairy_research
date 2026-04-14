@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+butter,Butter,FarmGate -> Producer,NARDL,weekly_raw,210,1.9280949403017837,-1.1702326669505814,-0.05694465176099807,,1,0.38066740886368344,conditionally_usable
+butter,Butter,FarmGate -> Producer,NARDL,weekly_smoothed,210,1.4897825318722335,-0.8031929642497188,-0.05582845969557356,,1,0.5126425241968662,conditionally_usable

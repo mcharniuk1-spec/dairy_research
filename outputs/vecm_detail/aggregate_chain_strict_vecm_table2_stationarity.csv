@@ -1,0 +1,6 @@
+series_col,n_obs,adf_p,kpss_p,integration_class,stability_flag
+farmgate_index_weekly,11,,,too_short,1
+producer_index_weekly,11,,,too_short,1
+procurement_index_weekly,11,,,too_short,1
+retail_index_weekly,11,,,too_short,1
+consumer_index_weekly,11,,,too_short,1

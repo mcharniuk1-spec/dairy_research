@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FINAL_RESEARCH Run Summary</title>
+  <style>
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 980px; margin: 32px auto; line-height: 1.45; }
+    h1, h2 { font-family: Arial, sans-serif; }
+    img { border: 1px solid #ddd; padding: 4px; }
+    code { background: #f6f6f6; padding: 1px 3px; }
+  </style>
+</head>
+<body>
+<h1>FINAL_RESEARCH Run Summary</h1>
+
+<h2>Execution order</h2>
+<p>&bull; Load corrected full_uah_final.xlsx.</p>
+<p>&bull; Run product-definition audit across government, procurement, and retail sources.</p>
+<p>&bull; Build corrected daily panel with retail combined, Silpo, and Novus downstream variants.</p>
+<p>&bull; Construct weekly median panels and controlled smoothing variants.</p>
+<p>&bull; Score intersections and admissibility before core estimation.</p>
+<p>&bull; Run the first strict weekly model pass.</p>
+<p>&bull; Activate post-test adaptation where strict weekly links remain too thin, keeping adapted evidence labelled separately.</p>
+<p>&bull; Estimate weekly ARDL, ECM, NARDL, and VECM system models.</p>
+<p>&bull; Estimate daily local projections, margin models, discount models, and procurement-scale models.</p>
+<p>&bull; Generate figures, workbooks, and thesis-style Chapter 5-6 outputs.</p>
+<p>&bull; Save separate compact results, diagnostics, and notes for individual retained models.</p>
+
+<h2>Key counts</h2>
+<p>&bull; Product dictionary rows: 28</p>
+<p>&bull; Strong intersections: 1</p>
+<p>&bull; Acceptable intersections: 4</p>
+<p>&bull; Weak-extension intersections: 10</p>
+<p>&bull; Reliable core models: 30</p>
+<p>&bull; Conditionally usable core models: 21</p>
+<p>&bull; Feasible VECM systems: 3</p>
+<p>&bull; Discount strategy signals: 2</p>
+<p>&bull; Procurement-scale signals: 5</p>
+
+<h2>Retained weekly model families</h2>
+<p>&bull; NARDL: 30</p>
+<p>&bull; ECM: 21</p>
+<p>&bull; ARDL was screened in the weekly pass but no ARDL row met the retained reporting standard on corrected data.</p>
+
+<h2>Strongest lag signal</h2>
+<p>&bull; Sour cream | FarmGate -&gt; Producer | corr 0.932 | lag 0 weeks</p>
+</body>
+</html>

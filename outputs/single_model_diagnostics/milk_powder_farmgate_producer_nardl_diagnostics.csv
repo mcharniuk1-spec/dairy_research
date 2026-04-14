@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+milk_powder,Milk powder,FarmGate -> Producer,NARDL,weekly_raw,4.1255920591114645e-06,0.00010709545805003489,5.800183601382079e-05,4.61714908824612e-16,0,Positive and negative weekly shock decomposition.
+milk_powder,Milk powder,FarmGate -> Producer,NARDL,weekly_smoothed,0.00015246112744619425,0.0008456677328852905,5.694703854963526e-06,1.0378313772602353e-10,0,Positive and negative weekly shock decomposition.

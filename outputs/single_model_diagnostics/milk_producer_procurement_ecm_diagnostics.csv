@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+milk,Drinking milk / fermented milk,Producer -> Procurement,ECM,weekly_raw,0.8664404413084128,0.49597794910907667,0.24508528453104653,0.444103176751781,0,engle_granger_p=6.145e-10
+milk,Drinking milk / fermented milk,Producer -> Procurement,ECM,weekly_smoothed,0.7680955894034264,0.2536587191009583,0.5314493434717965,0.004746910001689848,0,engle_granger_p=0.003147

@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+sour_cream,Sour cream,Producer -> Procurement,ECM,weekly_raw,0.5749489984653768,0.5559054216282293,0.6105899804610576,0.12166532366112208,0,engle_granger_p=0.0003557

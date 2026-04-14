@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+cheese,CHEESE,FarmGate -> Procurement,ECM,weekly_raw,0.7402819969738974,0.20198566095605408,0.34893085982724753,0.5468529766933272,0,engle_granger_p=0.0006282
+cheese,CHEESE,FarmGate -> Procurement,ECM,weekly_smoothed,0.8173699869703422,0.598150189662777,0.3225214480887192,0.7303845637573549,0,engle_granger_p=0.0002252

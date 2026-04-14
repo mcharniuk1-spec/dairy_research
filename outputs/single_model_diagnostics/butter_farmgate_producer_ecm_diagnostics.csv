@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+butter,Butter,FarmGate -> Producer,ECM,weekly_raw,0.4420875574627414,0.5555328754670052,0.5338812865613318,0.0005632978165569444,0,engle_granger_p=0.0005934
+butter,Butter,FarmGate -> Producer,ECM,weekly_smoothed,0.14945254863372215,0.7577792718405967,0.02867618966222299,7.219135677027921e-05,0,engle_granger_p=0.0006816

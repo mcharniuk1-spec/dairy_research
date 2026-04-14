@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+milk_powder,Milk powder,FarmGate -> Producer,ECM,weekly_raw,209,0.7164658101475245,0.25669532539285,-0.044064147116544404,0.03895799821544239,2,,conditionally_usable
+milk_powder,Milk powder,FarmGate -> Producer,ECM,weekly_smoothed,208,0.5996055303500728,0.25673673450715073,-0.03903306932183228,0.04914376381507131,3,,reliable

@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+butter,Butter,Producer -> Procurement,NARDL,weekly_raw,37,-2.8371950440011964,0.22168751645848989,-0.7932274610664828,,1,0.4944254604683991,conditionally_usable
+butter,Butter,Producer -> Procurement,NARDL,weekly_smoothed,39,1.2166181435716472,2.4550128775822087,-0.22486257676899862,,1,0.0008980653442787191,reliable

@@ -1,0 +1,19 @@
+product,product_label,series_col,n_obs,adf_p,kpss_p,adf_diff1_p,kpss_diff1_p,integration_class,stability_flag
+butter,Butter,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+butter,Butter,producer_linear_weekly,212,0.2878496922584981,0.01,1.231456711804702e-06,0.1,I(1),1
+butter,Butter,prozorro_weekly,39,0.5188283431851991,0.028027012338823553,1.9664360120865004e-23,0.1,I(1),1
+cheese,CHEESE,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+cheese,CHEESE,producer_linear_weekly,212,0.07770976822199464,0.01,2.88516204580911e-07,0.1,I(1),1
+cheese,CHEESE,prozorro_weekly,39,0.7398713863062583,0.023426944665005753,1.0384408619334476e-06,0.1,I(1),1
+condensed_milk,Condensed milk,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+condensed_milk,Condensed milk,prozorro_weekly,36,0.051122980423115666,0.1,0.010144729133685054,0.1,I(1),0
+cream,Cream,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+cream,Cream,prozorro_weekly,39,0.2585720617998467,0.1,0.09238393993255051,0.1,ambiguous,0
+milk,Drinking milk / fermented milk,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+milk,Drinking milk / fermented milk,producer_linear_weekly,212,0.23340542050929342,0.01,0.0017031541219671713,0.1,I(1),1
+milk,Drinking milk / fermented milk,prozorro_weekly,39,1.8825559358139905e-10,0.1,5.697312111286809e-06,0.1,I(0),0
+milk_powder,Milk powder,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+milk_powder,Milk powder,producer_linear_weekly,212,0.05321337549952103,0.1,1.2074449041868996e-05,0.1,I(1),0
+sour_cream,Sour cream,farmgate_combined_linear_weekly,212,0.7380627702047932,0.01,2.6304484512266188e-08,0.1,I(1),1
+sour_cream,Sour cream,producer_linear_weekly,212,0.36925075774873173,0.01,1.5128633930124357e-07,0.1,I(1),1
+sour_cream,Sour cream,prozorro_weekly,39,0.10083644354693899,0.1,0.11268332948340365,0.1,ambiguous,1

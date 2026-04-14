@@ -1,0 +1,19 @@
+product,product_label,system_name,status,reason,n_obs
+butter,Butter,full_chain,infeasible,too_short,0
+butter,Butter,staged_chain,infeasible,too_short,11
+cheese,CHEESE,full_chain,infeasible,too_short,11
+cheese,CHEESE,staged_chain,infeasible,too_short,11
+condensed_milk,Condensed milk,full_chain,infeasible,too_short,0
+condensed_milk,Condensed milk,staged_chain,infeasible,too_short,0
+cream,Cream,full_chain,infeasible,too_short,0
+cream,Cream,staged_chain,infeasible,too_short,0
+milk,Drinking milk / fermented milk,full_chain,infeasible,too_short,11
+milk,Drinking milk / fermented milk,staged_chain,infeasible,too_short,11
+milk_powder,Milk powder,full_chain,infeasible,too_short,0
+milk_powder,Milk powder,staged_chain,infeasible,too_short,2
+other,Other,full_chain,infeasible,too_short,0
+other,Other,staged_chain,infeasible,too_short,0
+sour_cream,Sour cream,full_chain,infeasible,too_short,11
+sour_cream,Sour cream,staged_chain,infeasible,too_short,11
+yogurt_dessert,Yogurt / dessert,full_chain,infeasible,too_short,0
+yogurt_dessert,Yogurt / dessert,staged_chain,infeasible,too_short,0

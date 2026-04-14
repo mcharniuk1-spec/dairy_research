@@ -1,5 +1,0 @@
-notes
-Weekly is core modeling frequency; daily is used for promotions and short-window alignment.
-Novus/Silpo dedup rule: keep last timestamp within product-day.
-"Daily series derived from weekly benchmarks must be treated as constructed support, not independent structural evidence."
-"If FX file is not provided, USD conversion fields may be NaN and should be completed with external rates."

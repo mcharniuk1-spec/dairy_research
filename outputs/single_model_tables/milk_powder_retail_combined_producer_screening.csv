@@ -1,0 +1,2 @@
+Index,product,product_label,link,x_col,y_col,week_min,week_max,overlap_weeks,continuity_share,x_raw_support_share,y_raw_support_share,mapping_type,interpolation_dominant_flag,admissibility_status
+104,milk_powder,Milk powder,Retail combined -> Producer,retail_category_baseline_weekly,producer_linear_weekly,2025-10-20,2025-12-08,8,1.0,1.0,1.0,direct,0,unusable

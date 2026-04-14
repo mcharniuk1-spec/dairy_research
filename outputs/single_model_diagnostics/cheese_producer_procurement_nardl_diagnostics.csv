@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+cheese,CHEESE,Producer -> Procurement,NARDL,weekly_raw,0.19357115837934144,0.04988190951814284,0.3245212389754773,0.6886692120665696,0,Positive and negative weekly shock decomposition.
+cheese,CHEESE,Producer -> Procurement,NARDL,weekly_smoothed,0.6782088474016669,0.17100910274843684,0.554064076157535,0.7065947861220352,0,Positive and negative weekly shock decomposition.

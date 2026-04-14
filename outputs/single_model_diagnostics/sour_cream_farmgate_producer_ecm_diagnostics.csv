@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+sour_cream,Sour cream,FarmGate -> Producer,ECM,weekly_raw,0.0024744663702713806,0.019360604980031112,7.203733502977253e-08,4.449299955667265e-23,0,engle_granger_p=0.0001061
+sour_cream,Sour cream,FarmGate -> Producer,ECM,weekly_smoothed,0.030272450501712678,0.6284295278644574,0.023050711294507573,0.9943560383636612,0,engle_granger_p=0.00218

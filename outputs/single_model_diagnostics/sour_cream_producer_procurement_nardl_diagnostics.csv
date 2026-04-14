@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,ljungbox_p,bp_p,white_p,jb_p,stability_flag,notes
+sour_cream,Sour cream,Producer -> Procurement,NARDL,weekly_raw,0.09495377363694474,0.3984579515876956,0.2323205291638118,0.31671853805501826,0,Positive and negative weekly shock decomposition.
+sour_cream,Sour cream,Producer -> Procurement,NARDL,weekly_smoothed,0.8131107266578854,0.6472245523994997,0.404758111360816,0.015932731081551934,0,Positive and negative weekly shock decomposition.

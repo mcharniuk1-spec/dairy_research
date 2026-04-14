@@ -1,0 +1,3 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+milk_powder,Milk powder,FarmGate -> Producer,NARDL,weekly_raw,210,0.7585047785092152,0.2846961406748443,-0.06812001262981042,,1,0.7260844487280793,conditionally_usable
+milk_powder,Milk powder,FarmGate -> Producer,NARDL,weekly_smoothed,210,0.6372285563864886,0.11964270302541379,-0.06535443410143883,,1,0.8833898597466087,conditionally_usable

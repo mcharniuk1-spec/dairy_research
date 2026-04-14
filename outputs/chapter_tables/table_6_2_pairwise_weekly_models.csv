@@ -1,0 +1,22 @@
+link,admissibility,overlap_weeks,best_lag_corr,best_lag_weeks,retained_model,reported_coef,ect,reliability,reading,retained_product,n_obs,ect_pvalue,cointegration_p,asymmetry_pvalue
+FarmGate -> Producer,strong,212,0.9321781962046244,0.0,ECM,1.481480419596336,-0.03918595268591528,reliable,Retained weekly evidence.,Butter,210.0,0.005626534994827443,0.0006816120902666117,
+Producer -> Procurement,weak_extension,39,0.6898228705701515,5.0,NARDL,2.455012877582209,-0.2248625767689986,reliable,Retained weekly evidence.,Butter,39.0,0.0892300895347895,,0.0008980653442787191
+Procurement -> Retail (Novus),unusable,9,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Procurement -> Retail (Silpo),unusable,8,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Procurement -> Retail combined,unusable,11,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Producer -> Retail (Novus),unusable,9,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Producer -> Retail (Silpo),unusable,8,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Producer -> Retail combined,unusable,11,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+FarmGate -> Procurement,weak_extension,39,0.7282379993147992,1.0,NARDL,-5.535946331025634,-1.721812813272117,reliable,Retained weekly evidence.,Condensed milk,34.0,1.082954965472669e-14,,0.001134060611796545
+FarmGate -> Retail (Novus),unusable,9,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+FarmGate -> Retail (Silpo),unusable,8,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+FarmGate -> Retail combined,unusable,11,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail (Novus) -> Procurement,unusable,9,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail (Silpo) -> Procurement,unusable,8,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail combined -> Procurement,unusable,11,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail (Novus) -> Producer,unusable,9,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail (Silpo) -> Producer,unusable,8,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail combined -> Producer,unusable,11,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail (Novus) -> FarmGate,unusable,9,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail (Silpo) -> FarmGate,unusable,8,,,,,,,Weekly overlap too thin for retained estimation.,,,,,
+Retail combined -> FarmGate,unusable,11,,,,,,,Weekly overlap too thin for retained estimation.,,,,,

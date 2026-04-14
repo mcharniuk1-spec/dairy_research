@@ -1,0 +1,2 @@
+product,product_label,link,model_family,data_variant,n_obs,sr_coef,lr_coef,ect_coef,cointegration_p,lag_order,asymmetry_pvalue,model_reliability
+condensed_milk,Condensed milk,FarmGate -> Procurement,ECM,weekly_smoothed,38,-1.3850456609951087,-0.511650269042704,-0.7199449064244315,0.012274641677400496,2,,reliable
