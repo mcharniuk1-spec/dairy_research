@@ -1,0 +1,955 @@
+date,period,territory,source,stage,product,Розріз,price_raw,price_uah_kg,unit_raw,unit_clean,quality_flag
+2013-01-01,2013-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,42963.51,42.96351,Гривні за тону,UAH/kg,ok
+2013-02-01,2013-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,43275.15,43.275150000000004,Гривні за тону,UAH/kg,ok
+2013-03-01,2013-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,43306.95,43.30695,Гривні за тону,UAH/kg,ok
+2013-04-01,2013-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,43687.59,43.68758999999999,Гривні за тону,UAH/kg,ok
+2013-05-01,2013-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,43688.25,43.68825,Гривні за тону,UAH/kg,ok
+2013-06-01,2013-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,43783.81,43.783809999999995,Гривні за тону,UAH/kg,ok
+2013-07-01,2013-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,44239.15,44.23915,Гривні за тону,UAH/kg,ok
+2013-08-01,2013-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,44819.99,44.81999,Гривні за тону,UAH/kg,ok
+2013-09-01,2013-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,46333.27,46.33327,Гривні за тону,UAH/kg,ok
+2013-10-01,2013-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,47283.61,47.28361,Гривні за тону,UAH/kg,ok
+2013-11-01,2013-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,48246.92,48.246919999999996,Гривні за тону,UAH/kg,ok
+2013-12-01,2013-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49202.8,49.2028,Гривні за тону,UAH/kg,ok
+2014-01-01,2014-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,50180.68,50.18068,Гривні за тону,UAH/kg,ok
+2014-02-01,2014-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,50999.8,50.9998,Гривні за тону,UAH/kg,ok
+2014-03-01,2014-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,51047.08,51.04708,Гривні за тону,UAH/kg,ok
+2014-04-01,2014-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,50682.82,50.68282,Гривні за тону,UAH/kg,ok
+2014-05-01,2014-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49479.99,49.47999,Гривні за тону,UAH/kg,ok
+2014-06-01,2014-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49060.18,49.06018,Гривні за тону,UAH/kg,ok
+2014-07-01,2014-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49065.55,49.06555,Гривні за тону,UAH/kg,ok
+2014-08-01,2014-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49008.99,49.00899,Гривні за тону,UAH/kg,ok
+2014-09-01,2014-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49274.25,49.27425,Гривні за тону,UAH/kg,ok
+2014-10-01,2014-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,49704.96,49.70496,Гривні за тону,UAH/kg,ok
+2014-11-01,2014-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,50253.51,50.25351,Гривні за тону,UAH/kg,ok
+2014-12-01,2014-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,50960.04,50.96004,Гривні за тону,UAH/kg,ok
+2015-01-01,2015-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,51777.6,51.7776,Гривні за тону,UAH/kg,ok
+2015-02-01,2015-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,51796.15,51.796150000000004,Гривні за тону,UAH/kg,ok
+2015-03-01,2015-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,55918.47,55.91847,Гривні за тону,UAH/kg,ok
+2015-04-01,2015-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,55856.39,55.85639,Гривні за тону,UAH/kg,ok
+2015-05-01,2015-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,55580.56,55.58056,Гривні за тону,UAH/kg,ok
+2015-06-01,2015-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,55223.93,55.22393,Гривні за тону,UAH/kg,ok
+2015-07-01,2015-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,55576.67,55.57667,Гривні за тону,UAH/kg,ok
+2015-08-01,2015-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,56316.63,56.316629999999996,Гривні за тону,UAH/kg,ok
+2015-09-01,2015-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,57186.96,57.18696,Гривні за тону,UAH/kg,ok
+2015-10-01,2015-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,60489.52,60.48952,Гривні за тону,UAH/kg,ok
+2015-11-01,2015-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,63560.02,63.560019999999994,Гривні за тону,UAH/kg,ok
+2015-12-01,2015-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,65530.33,65.53033,Гривні за тону,UAH/kg,ok
+2016-01-01,2016-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,66819.59,66.81958999999999,Гривні за тону,UAH/kg,ok
+2016-02-01,2016-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,68953.98,68.95398,Гривні за тону,UAH/kg,ok
+2016-03-01,2016-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,71021.33,71.02133,Гривні за тону,UAH/kg,ok
+2016-04-01,2016-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,69553.05,69.55305,Гривні за тону,UAH/kg,ok
+2016-05-01,2016-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,68076.01,68.07601,Гривні за тону,UAH/kg,ok
+2016-06-01,2016-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,67155.05,67.15505,Гривні за тону,UAH/kg,ok
+2016-07-01,2016-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,67600.63,67.60063000000001,Гривні за тону,UAH/kg,ok
+2016-08-01,2016-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,70784.26,70.78425999999999,Гривні за тону,UAH/kg,ok
+2016-09-01,2016-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,75206.0,75.206,Гривні за тону,UAH/kg,ok
+2016-10-01,2016-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,79896.64,79.89664,Гривні за тону,UAH/kg,ok
+2016-11-01,2016-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,82352.25,82.35225,Гривні за тону,UAH/kg,ok
+2016-12-01,2016-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,88646.18,88.64617999999999,Гривні за тону,UAH/kg,ok
+2017-01-01,2017-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,93562.74,93.56274,Гривні за тону,UAH/kg,ok
+2017-02-01,2017-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,93972.33,93.97233,Гривні за тону,UAH/kg,ok
+2017-03-01,2017-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,94721.7,94.7217,Гривні за тону,UAH/kg,ok
+2017-04-01,2017-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,92850.0,92.85,Гривні за тону,UAH/kg,ok
+2017-05-01,2017-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,90492.09,90.49208999999999,Гривні за тону,UAH/kg,ok
+2017-06-01,2017-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,91659.5,91.6595,Гривні за тону,UAH/kg,ok
+2017-07-01,2017-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,95329.17,95.32917,Гривні за тону,UAH/kg,ok
+2017-08-01,2017-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,96570.95,96.57095,Гривні за тону,UAH/kg,ok
+2017-09-01,2017-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,100727.23,100.72722999999999,Гривні за тону,UAH/kg,ok
+2017-10-01,2017-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,103302.18,103.30217999999999,Гривні за тону,UAH/kg,ok
+2017-11-01,2017-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,107736.6,107.73660000000001,Гривні за тону,UAH/kg,ok
+2017-12-01,2017-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,108252.83,108.25283,Гривні за тону,UAH/kg,ok
+2018-01-01,2018-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,112654.05,112.65405,Гривні за тону,UAH/kg,ok
+2018-02-01,2018-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,113596.63,113.59663,Гривні за тону,UAH/kg,ok
+2018-03-01,2018-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,111620.58,111.62058,Гривні за тону,UAH/kg,ok
+2018-04-01,2018-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,110709.64,110.70964,Гривні за тону,UAH/kg,ok
+2018-05-01,2018-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,108967.61,108.96761000000001,Гривні за тону,UAH/kg,ok
+2018-06-01,2018-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,109900.35,109.90035,Гривні за тону,UAH/kg,ok
+2018-07-01,2018-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,109509.54,109.50953999999999,Гривні за тону,UAH/kg,ok
+2018-08-01,2018-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,109963.71,109.96371,Гривні за тону,UAH/kg,ok
+2018-09-01,2018-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,113400.43,113.40043,Гривні за тону,UAH/kg,ok
+2018-10-01,2018-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,115701.16,115.70116,Гривні за тону,UAH/kg,ok
+2018-11-01,2018-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,117685.29,117.68529,Гривні за тону,UAH/kg,ok
+2018-12-01,2018-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,118452.28,118.45228,Гривні за тону,UAH/kg,ok
+2019-01-01,2019-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,119088.71,119.08871,Гривні за тону,UAH/kg,ok
+2019-02-01,2019-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,119387.29,119.38729,Гривні за тону,UAH/kg,ok
+2019-03-01,2019-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,119507.06,119.50706,Гривні за тону,UAH/kg,ok
+2019-04-01,2019-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,118672.67,118.67267,Гривні за тону,UAH/kg,ok
+2019-05-01,2019-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,118735.22,118.73522,Гривні за тону,UAH/kg,ok
+2019-06-01,2019-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,118077.68,118.07767999999999,Гривні за тону,UAH/kg,ok
+2019-07-01,2019-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,118045.37,118.04536999999999,Гривні за тону,UAH/kg,ok
+2019-08-01,2019-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,119910.96,119.91096,Гривні за тону,UAH/kg,ok
+2019-09-01,2019-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,122497.93,122.49793,Гривні за тону,UAH/kg,ok
+2019-10-01,2019-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,122973.07,122.97307,Гривні за тону,UAH/kg,ok
+2019-11-01,2019-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,125250.4,125.2504,Гривні за тону,UAH/kg,ok
+2019-12-01,2019-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,126495.54,126.49553999999999,Гривні за тону,UAH/kg,ok
+2020-01-01,2020-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,124894.75,124.89475,Гривні за тону,UAH/kg,ok
+2020-02-01,2020-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,126143.94,126.14394,Гривні за тону,UAH/kg,ok
+2020-03-01,2020-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,125923.13,125.92313,Гривні за тону,UAH/kg,ok
+2020-04-01,2020-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,126127.44,126.12744,Гривні за тону,UAH/kg,ok
+2020-05-01,2020-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,124256.01,124.25600999999999,Гривні за тону,UAH/kg,ok
+2020-06-01,2020-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,124000.85,124.00085,Гривні за тону,UAH/kg,ok
+2020-07-01,2020-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,123366.54,123.36654,Гривні за тону,UAH/kg,ok
+2020-08-01,2020-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,124173.12,124.17312,Гривні за тону,UAH/kg,ok
+2020-09-01,2020-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,126114.88,126.11488,Гривні за тону,UAH/kg,ok
+2020-10-01,2020-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,128490.51,128.49051,Гривні за тону,UAH/kg,ok
+2020-11-01,2020-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,131020.45,131.02045,Гривні за тону,UAH/kg,ok
+2020-12-01,2020-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,133194.76,133.19476,Гривні за тону,UAH/kg,ok
+2021-01-01,2021-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,126716.26,126.71625999999999,Гривні за тону,UAH/kg,ok
+2021-02-01,2021-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,128235.87,128.23587,Гривні за тону,UAH/kg,ok
+2021-03-01,2021-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,131022.17,131.02217,Гривні за тону,UAH/kg,ok
+2021-04-01,2021-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,133050.9,133.05089999999998,Гривні за тону,UAH/kg,ok
+2021-05-01,2021-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,133834.61,133.83461,Гривні за тону,UAH/kg,ok
+2021-06-01,2021-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,134634.63,134.63463000000002,Гривні за тону,UAH/kg,ok
+2021-07-01,2021-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,134587.36,134.58736,Гривні за тону,UAH/kg,ok
+2021-08-01,2021-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,135827.97,135.82797,Гривні за тону,UAH/kg,ok
+2021-09-01,2021-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,139654.24,139.65424,Гривні за тону,UAH/kg,ok
+2021-10-01,2021-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,142510.13,142.51013,Гривні за тону,UAH/kg,ok
+2021-11-01,2021-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,144057.67,144.05767,Гривні за тону,UAH/kg,ok
+2021-12-01,2021-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,145643.32,145.64332000000002,Гривні за тону,UAH/kg,ok
+2022-01-01,2022-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,151807.85,151.80785,Гривні за тону,UAH/kg,ok
+2022-02-01,2022-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,155266.94,155.26694,Гривні за тону,UAH/kg,ok
+2022-03-01,2022-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,157848.02,157.84802,Гривні за тону,UAH/kg,ok
+2022-04-01,2022-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,162795.78,162.79578,Гривні за тону,UAH/kg,ok
+2022-05-01,2022-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,163914.95,163.91495,Гривні за тону,UAH/kg,ok
+2022-06-01,2022-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,163286.13,163.28613,Гривні за тону,UAH/kg,ok
+2022-07-01,2022-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,163239.95,163.23995000000002,Гривні за тону,UAH/kg,ok
+2022-08-01,2022-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,167023.64,167.02364,Гривні за тону,UAH/kg,ok
+2022-09-01,2022-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,171619.21,171.61920999999998,Гривні за тону,UAH/kg,ok
+2022-10-01,2022-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,180258.8,180.25879999999998,Гривні за тону,UAH/kg,ok
+2022-11-01,2022-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,183324.13,183.32413,Гривні за тону,UAH/kg,ok
+2022-12-01,2022-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,184426.67,184.42667,Гривні за тону,UAH/kg,ok
+2023-01-01,2023-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,192212.26,192.21226000000001,Гривні за тону,UAH/kg,ok
+2023-02-01,2023-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,193258.01,193.25801,Гривні за тону,UAH/kg,ok
+2023-03-01,2023-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,193033.11,193.03311,Гривні за тону,UAH/kg,ok
+2023-04-01,2023-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,192341.59,192.34159,Гривні за тону,UAH/kg,ok
+2023-05-01,2023-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,190345.0,190.345,Гривні за тону,UAH/kg,ok
+2023-06-01,2023-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,188447.46,188.44745999999998,Гривні за тону,UAH/kg,ok
+2023-07-01,2023-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,187291.94,187.29194,Гривні за тону,UAH/kg,ok
+2023-08-01,2023-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,188437.39,188.43739000000002,Гривні за тону,UAH/kg,ok
+2023-09-01,2023-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,197767.02,197.76702,Гривні за тону,UAH/kg,ok
+2023-10-01,2023-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,208530.48,208.53048,Гривні за тону,UAH/kg,ok
+2023-11-01,2023-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,217944.85,217.94485,Гривні за тону,UAH/kg,ok
+2023-12-01,2023-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,224828.34,224.82834,Гривні за тону,UAH/kg,ok
+2024-01-01,2024-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,230705.43,230.70543,Гривні за тону,UAH/kg,ok
+2024-02-01,2024-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,235731.78,235.73178,Гривні за тону,UAH/kg,ok
+2024-03-01,2024-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,234767.93,234.76793,Гривні за тону,UAH/kg,ok
+2024-04-01,2024-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,234545.25,234.54525,Гривні за тону,UAH/kg,ok
+2024-05-01,2024-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,232033.79,232.03379,Гривні за тону,UAH/kg,ok
+2024-06-01,2024-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,233856.13,233.85613,Гривні за тону,UAH/kg,ok
+2024-07-01,2024-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,237733.31,237.73331,Гривні за тону,UAH/kg,ok
+2024-08-01,2024-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,250173.03,250.17303,Гривні за тону,UAH/kg,ok
+2024-09-01,2024-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,265358.86,265.35886,Гривні за тону,UAH/kg,ok
+2024-10-01,2024-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,279709.5,279.7095,Гривні за тону,UAH/kg,ok
+2024-11-01,2024-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,295440.36,295.44036,Гривні за тону,UAH/kg,ok
+2024-12-01,2024-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,299513.54,299.51354,Гривні за тону,UAH/kg,ok
+2025-01-01,2025-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,309975.96,309.97596000000004,Гривні за тону,UAH/kg,ok
+2025-02-01,2025-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,302829.94,302.82994,Гривні за тону,UAH/kg,ok
+2025-03-01,2025-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,298419.03,298.41903,Гривні за тону,UAH/kg,ok
+2025-04-01,2025-M04,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,294878.54,294.87854,Гривні за тону,UAH/kg,ok
+2025-05-01,2025-M05,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,295626.11,295.62611,Гривні за тону,UAH/kg,ok
+2025-06-01,2025-M06,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,296207.9,296.2079,Гривні за тону,UAH/kg,ok
+2025-07-01,2025-M07,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,307410.06,307.41006,Гривні за тону,UAH/kg,ok
+2025-08-01,2025-M08,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,314905.52,314.90552,Гривні за тону,UAH/kg,ok
+2025-09-01,2025-M09,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,316856.89,316.85689,Гривні за тону,UAH/kg,ok
+2025-10-01,2025-M10,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,316717.62,316.71762,Гривні за тону,UAH/kg,ok
+2025-11-01,2025-M11,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,308517.92,308.51792,Гривні за тону,UAH/kg,ok
+2025-12-01,2025-M12,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,307238.34,307.23834000000005,Гривні за тону,UAH/kg,ok
+2026-01-01,2026-M01,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,300940.69,300.94069,Гривні за тону,UAH/kg,ok
+2026-02-01,2026-M02,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,294757.34,294.75734,Гривні за тону,UAH/kg,ok
+2026-03-01,2026-M03,Україна,SSSU industrial producer prices raw workbook,processor,butter,Масло вершкове жирністю не більше 85%,289001.81,289.00181,Гривні за тону,UAH/kg,ok
+2013-01-01,2013-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5646.46,5.64646,Гривні за тону,UAH/kg,ok
+2013-02-01,2013-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5617.14,5.61714,Гривні за тону,UAH/kg,ok
+2013-03-01,2013-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5640.44,5.64044,Гривні за тону,UAH/kg,ok
+2013-04-01,2013-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5723.68,5.72368,Гривні за тону,UAH/kg,ok
+2013-05-01,2013-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5726.22,5.7262200000000005,Гривні за тону,UAH/kg,ok
+2013-06-01,2013-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5752.05,5.7520500000000006,Гривні за тону,UAH/kg,ok
+2013-07-01,2013-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5794.65,5.79465,Гривні за тону,UAH/kg,ok
+2013-08-01,2013-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5882.15,5.882149999999999,Гривні за тону,UAH/kg,ok
+2013-09-01,2013-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",5971.76,5.971760000000001,Гривні за тону,UAH/kg,ok
+2013-10-01,2013-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6034.43,6.03443,Гривні за тону,UAH/kg,ok
+2013-11-01,2013-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6058.97,6.05897,Гривні за тону,UAH/kg,ok
+2013-12-01,2013-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6123.76,6.12376,Гривні за тону,UAH/kg,ok
+2014-01-01,2014-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6476.1,6.476100000000001,Гривні за тону,UAH/kg,ok
+2014-02-01,2014-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6520.1,6.5201,Гривні за тону,UAH/kg,ok
+2014-03-01,2014-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6574.05,6.574050000000001,Гривні за тону,UAH/kg,ok
+2014-04-01,2014-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6758.82,6.75882,Гривні за тону,UAH/kg,ok
+2014-05-01,2014-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6809.8,6.8098,Гривні за тону,UAH/kg,ok
+2014-06-01,2014-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6807.58,6.80758,Гривні за тону,UAH/kg,ok
+2014-07-01,2014-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6809.94,6.809939999999999,Гривні за тону,UAH/kg,ok
+2014-08-01,2014-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6866.37,6.86637,Гривні за тону,UAH/kg,ok
+2014-09-01,2014-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",6959.78,6.959779999999999,Гривні за тону,UAH/kg,ok
+2014-10-01,2014-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7011.56,7.01156,Гривні за тону,UAH/kg,ok
+2014-11-01,2014-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7038.21,7.03821,Гривні за тону,UAH/kg,ok
+2014-12-01,2014-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7207.3,7.2073,Гривні за тону,UAH/kg,ok
+2015-01-01,2015-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7317.0,7.317,Гривні за тону,UAH/kg,ok
+2015-02-01,2015-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7343.14,7.34314,Гривні за тону,UAH/kg,ok
+2015-03-01,2015-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7832.64,7.8326400000000005,Гривні за тону,UAH/kg,ok
+2015-04-01,2015-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7915.78,7.91578,Гривні за тону,UAH/kg,ok
+2015-05-01,2015-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",7993.71,7.99371,Гривні за тону,UAH/kg,ok
+2015-06-01,2015-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8086.36,8.086359999999999,Гривні за тону,UAH/kg,ok
+2015-07-01,2015-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8113.29,8.11329,Гривні за тону,UAH/kg,ok
+2015-08-01,2015-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8224.87,8.224870000000001,Гривні за тону,UAH/kg,ok
+2015-09-01,2015-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8335.89,8.33589,Гривні за тону,UAH/kg,ok
+2015-10-01,2015-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8504.74,8.50474,Гривні за тону,UAH/kg,ok
+2015-11-01,2015-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8642.07,8.64207,Гривні за тону,UAH/kg,ok
+2015-12-01,2015-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",8838.23,8.83823,Гривні за тону,UAH/kg,ok
+2016-01-01,2016-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",9498.8,9.4988,Гривні за тону,UAH/kg,ok
+2016-02-01,2016-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",9668.07,9.66807,Гривні за тону,UAH/kg,ok
+2016-03-01,2016-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",10078.12,10.07812,Гривні за тону,UAH/kg,ok
+2016-04-01,2016-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",9935.38,9.935379999999999,Гривні за тону,UAH/kg,ok
+2016-05-01,2016-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",9906.85,9.90685,Гривні за тону,UAH/kg,ok
+2016-06-01,2016-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",10126.14,10.12614,Гривні за тону,UAH/kg,ok
+2016-07-01,2016-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",10109.09,10.10909,Гривні за тону,UAH/kg,ok
+2016-08-01,2016-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",10198.11,10.19811,Гривні за тону,UAH/kg,ok
+2016-09-01,2016-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",10454.85,10.45485,Гривні за тону,UAH/kg,ok
+2016-10-01,2016-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",10845.38,10.845379999999999,Гривні за тону,UAH/kg,ok
+2016-11-01,2016-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",11090.74,11.09074,Гривні за тону,UAH/kg,ok
+2016-12-01,2016-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",11462.38,11.46238,Гривні за тону,UAH/kg,ok
+2017-01-01,2017-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12473.59,12.47359,Гривні за тону,UAH/kg,ok
+2017-02-01,2017-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12705.9,12.7059,Гривні за тону,UAH/kg,ok
+2017-03-01,2017-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12852.98,12.852979999999999,Гривні за тону,UAH/kg,ok
+2017-04-01,2017-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12951.26,12.95126,Гривні за тону,UAH/kg,ok
+2017-05-01,2017-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12931.73,12.93173,Гривні за тону,UAH/kg,ok
+2017-06-01,2017-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12833.0,12.833,Гривні за тону,UAH/kg,ok
+2017-07-01,2017-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",12959.27,12.95927,Гривні за тону,UAH/kg,ok
+2017-08-01,2017-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",13102.14,13.102139999999999,Гривні за тону,UAH/kg,ok
+2017-09-01,2017-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",13438.65,13.438649999999999,Гривні за тону,UAH/kg,ok
+2017-10-01,2017-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",13841.63,13.841629999999999,Гривні за тону,UAH/kg,ok
+2017-11-01,2017-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14277.23,14.27723,Гривні за тону,UAH/kg,ok
+2017-12-01,2017-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14649.31,14.64931,Гривні за тону,UAH/kg,ok
+2018-01-01,2018-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14767.46,14.76746,Гривні за тону,UAH/kg,ok
+2018-02-01,2018-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14851.44,14.85144,Гривні за тону,UAH/kg,ok
+2018-03-01,2018-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14961.34,14.96134,Гривні за тону,UAH/kg,ok
+2018-04-01,2018-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15071.07,15.071069999999999,Гривні за тону,UAH/kg,ok
+2018-05-01,2018-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14911.97,14.91197,Гривні за тону,UAH/kg,ok
+2018-06-01,2018-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14833.15,14.83315,Гривні за тону,UAH/kg,ok
+2018-07-01,2018-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14845.9,14.8459,Гривні за тону,UAH/kg,ok
+2018-08-01,2018-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",14981.38,14.98138,Гривні за тону,UAH/kg,ok
+2018-09-01,2018-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15416.43,15.41643,Гривні за тону,UAH/kg,ok
+2018-10-01,2018-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15563.16,15.56316,Гривні за тону,UAH/kg,ok
+2018-11-01,2018-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15960.09,15.960090000000001,Гривні за тону,UAH/kg,ok
+2018-12-01,2018-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16131.07,16.13107,Гривні за тону,UAH/kg,ok
+2019-01-01,2019-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15404.69,15.40469,Гривні за тону,UAH/kg,ok
+2019-02-01,2019-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15444.83,15.44483,Гривні за тону,UAH/kg,ok
+2019-03-01,2019-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15615.21,15.61521,Гривні за тону,UAH/kg,ok
+2019-04-01,2019-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15506.24,15.50624,Гривні за тону,UAH/kg,ok
+2019-05-01,2019-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15410.97,15.410969999999999,Гривні за тону,UAH/kg,ok
+2019-06-01,2019-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15254.63,15.254629999999999,Гривні за тону,UAH/kg,ok
+2019-07-01,2019-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15258.67,15.25867,Гривні за тону,UAH/kg,ok
+2019-08-01,2019-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15429.08,15.42908,Гривні за тону,UAH/kg,ok
+2019-09-01,2019-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15743.43,15.74343,Гривні за тону,UAH/kg,ok
+2019-10-01,2019-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15796.97,15.79697,Гривні за тону,UAH/kg,ok
+2019-11-01,2019-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",15895.16,15.89516,Гривні за тону,UAH/kg,ok
+2019-12-01,2019-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16014.93,16.01493,Гривні за тону,UAH/kg,ok
+2020-01-01,2020-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16729.86,16.729860000000002,Гривні за тону,UAH/kg,ok
+2020-02-01,2020-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16759.75,16.75975,Гривні за тону,UAH/kg,ok
+2020-03-01,2020-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16815.59,16.81559,Гривні за тону,UAH/kg,ok
+2020-04-01,2020-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16919.14,16.91914,Гривні за тону,UAH/kg,ok
+2020-05-01,2020-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16909.73,16.90973,Гривні за тону,UAH/kg,ok
+2020-06-01,2020-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16929.72,16.92972,Гривні за тону,UAH/kg,ok
+2020-07-01,2020-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",16981.16,16.98116,Гривні за тону,UAH/kg,ok
+2020-08-01,2020-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",17014.73,17.01473,Гривні за тону,UAH/kg,ok
+2020-09-01,2020-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",17311.91,17.31191,Гривні за тону,UAH/kg,ok
+2020-10-01,2020-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",17342.31,17.34231,Гривні за тону,UAH/kg,ok
+2020-11-01,2020-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",17659.56,17.659560000000003,Гривні за тону,UAH/kg,ok
+2020-12-01,2020-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",17899.5,17.8995,Гривні за тону,UAH/kg,ok
+2021-01-01,2021-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",18328.91,18.32891,Гривні за тону,UAH/kg,ok
+2021-02-01,2021-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",18577.43,18.57743,Гривні за тону,UAH/kg,ok
+2021-03-01,2021-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",18712.94,18.71294,Гривні за тону,UAH/kg,ok
+2021-04-01,2021-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",18986.1,18.986099999999997,Гривні за тону,UAH/kg,ok
+2021-05-01,2021-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",19170.48,19.17048,Гривні за тону,UAH/kg,ok
+2021-06-01,2021-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",19320.84,19.32084,Гривні за тону,UAH/kg,ok
+2021-07-01,2021-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",19658.52,19.65852,Гривні за тону,UAH/kg,ok
+2021-08-01,2021-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",19709.38,19.70938,Гривні за тону,UAH/kg,ok
+2021-09-01,2021-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",19842.3,19.842299999999998,Гривні за тону,UAH/kg,ok
+2021-10-01,2021-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",20044.24,20.044240000000002,Гривні за тону,UAH/kg,ok
+2021-11-01,2021-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",20045.35,20.04535,Гривні за тону,UAH/kg,ok
+2021-12-01,2021-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",20216.12,20.21612,Гривні за тону,UAH/kg,ok
+2022-01-01,2022-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",21725.97,21.72597,Гривні за тону,UAH/kg,ok
+2022-02-01,2022-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",22242.38,22.24238,Гривні за тону,UAH/kg,ok
+2022-03-01,2022-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",22512.24,22.512240000000002,Гривні за тону,UAH/kg,ok
+2022-04-01,2022-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",22696.58,22.69658,Гривні за тону,UAH/kg,ok
+2022-05-01,2022-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",22769.11,22.76911,Гривні за тону,UAH/kg,ok
+2022-06-01,2022-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",23174.07,23.17407,Гривні за тону,UAH/kg,ok
+2022-07-01,2022-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",23758.83,23.758830000000003,Гривні за тону,UAH/kg,ok
+2022-08-01,2022-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",23754.62,23.75462,Гривні за тону,UAH/kg,ok
+2022-09-01,2022-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",24236.31,24.23631,Гривні за тону,UAH/kg,ok
+2022-10-01,2022-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",24622.0,24.622,Гривні за тону,UAH/kg,ok
+2022-11-01,2022-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",25000.23,25.00023,Гривні за тону,UAH/kg,ok
+2022-12-01,2022-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",25415.41,25.41541,Гривні за тону,UAH/kg,ok
+2023-01-01,2023-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",26645.88,26.645880000000002,Гривні за тону,UAH/kg,ok
+2023-02-01,2023-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",26891.36,26.89136,Гривні за тону,UAH/kg,ok
+2023-03-01,2023-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27058.34,27.05834,Гривні за тону,UAH/kg,ok
+2023-04-01,2023-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",26960.39,26.96039,Гривні за тону,UAH/kg,ok
+2023-05-01,2023-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27048.28,27.04828,Гривні за тону,UAH/kg,ok
+2023-06-01,2023-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27104.6,27.104599999999998,Гривні за тону,UAH/kg,ok
+2023-07-01,2023-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",26928.59,26.92859,Гривні за тону,UAH/kg,ok
+2023-08-01,2023-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27000.47,27.00047,Гривні за тону,UAH/kg,ok
+2023-09-01,2023-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",26268.96,26.26896,Гривні за тону,UAH/kg,ok
+2023-10-01,2023-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",26980.81,26.98081,Гривні за тону,UAH/kg,ok
+2023-11-01,2023-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27481.83,27.481830000000002,Гривні за тону,UAH/kg,ok
+2023-12-01,2023-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",28268.11,28.26811,Гривні за тону,UAH/kg,ok
+2024-01-01,2024-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27277.97,27.27797,Гривні за тону,UAH/kg,ok
+2024-02-01,2024-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27436.53,27.436529999999998,Гривні за тону,UAH/kg,ok
+2024-03-01,2024-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27851.64,27.85164,Гривні за тону,UAH/kg,ok
+2024-04-01,2024-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27587.99,27.58799,Гривні за тону,UAH/kg,ok
+2024-05-01,2024-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27629.88,27.62988,Гривні за тону,UAH/kg,ok
+2024-06-01,2024-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27588.78,27.58878,Гривні за тону,UAH/kg,ok
+2024-07-01,2024-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",27752.87,27.752869999999998,Гривні за тону,UAH/kg,ok
+2024-08-01,2024-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",28148.28,28.14828,Гривні за тону,UAH/kg,ok
+2024-09-01,2024-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",28870.76,28.870759999999997,Гривні за тону,UAH/kg,ok
+2024-10-01,2024-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",30557.99,30.55799,Гривні за тону,UAH/kg,ok
+2024-11-01,2024-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",31712.56,31.71256,Гривні за тону,UAH/kg,ok
+2024-12-01,2024-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",33013.87,33.013870000000004,Гривні за тону,UAH/kg,ok
+2025-01-01,2025-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35096.29,35.09629,Гривні за тону,UAH/kg,ok
+2025-02-01,2025-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35161.18,35.16118,Гривні за тону,UAH/kg,ok
+2025-03-01,2025-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",33783.16,33.78316,Гривні за тону,UAH/kg,ok
+2025-04-01,2025-M04,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",33790.9,33.7909,Гривні за тону,UAH/kg,ok
+2025-05-01,2025-M05,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",33760.7,33.7607,Гривні за тону,UAH/kg,ok
+2025-06-01,2025-M06,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",33613.16,33.61316,Гривні за тону,UAH/kg,ok
+2025-07-01,2025-M07,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",33400.96,33.40096,Гривні за тону,UAH/kg,ok
+2025-08-01,2025-M08,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",34554.93,34.55493,Гривні за тону,UAH/kg,ok
+2025-09-01,2025-M09,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35129.87,35.129870000000004,Гривні за тону,UAH/kg,ok
+2025-10-01,2025-M10,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35756.92,35.75692,Гривні за тону,UAH/kg,ok
+2025-11-01,2025-M11,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35369.44,35.369440000000004,Гривні за тону,UAH/kg,ok
+2025-12-01,2025-M12,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35236.91,35.23691,Гривні за тону,UAH/kg,ok
+2026-01-01,2026-M01,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",34780.47,34.78047,Гривні за тону,UAH/kg,ok
+2026-02-01,2026-M02,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",34860.85,34.86085,Гривні за тону,UAH/kg,ok
+2026-03-01,2026-M03,Україна,SSSU industrial producer prices raw workbook,processor,drinking_milk,"Молоко рідке оброблене (пастеризоване, стерилізоване, гомогенізоване, топлене, пептизоване)",35002.2,35.002199999999995,Гривні за тону,UAH/kg,ok
+2013-01-01,2013-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,43767.1,43.7671,Гривні за тону,UAH/kg,ok
+2013-02-01,2013-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,44152.57,44.15257,Гривні за тону,UAH/kg,ok
+2013-03-01,2013-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,44301.37,44.301370000000006,Гривні за тону,UAH/kg,ok
+2013-04-01,2013-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,44504.32,44.50432,Гривні за тону,UAH/kg,ok
+2013-05-01,2013-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,44021.74,44.02174,Гривні за тону,UAH/kg,ok
+2013-06-01,2013-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,44339.01,44.33901,Гривні за тону,UAH/kg,ok
+2013-07-01,2013-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,45255.94,45.25594,Гривні за тону,UAH/kg,ok
+2013-08-01,2013-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,45902.47,45.90247,Гривні за тону,UAH/kg,ok
+2013-09-01,2013-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,46873.88,46.87388,Гривні за тону,UAH/kg,ok
+2013-10-01,2013-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,48113.46,48.113459999999996,Гривні за тону,UAH/kg,ok
+2013-11-01,2013-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,49781.17,49.781169999999996,Гривні за тону,UAH/kg,ok
+2013-12-01,2013-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,50926.66,50.926660000000005,Гривні за тону,UAH/kg,ok
+2014-01-01,2014-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,52054.35,52.05435,Гривні за тону,UAH/kg,ok
+2014-02-01,2014-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,52724.59,52.72459,Гривні за тону,UAH/kg,ok
+2014-03-01,2014-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,53083.75,53.08375,Гривні за тону,UAH/kg,ok
+2014-04-01,2014-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,53210.52,53.210519999999995,Гривні за тону,UAH/kg,ok
+2014-05-01,2014-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,52379.19,52.37919,Гривні за тону,UAH/kg,ok
+2014-06-01,2014-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,51286.99,51.286989999999996,Гривні за тону,UAH/kg,ok
+2014-07-01,2014-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,50910.22,50.91022,Гривні за тону,UAH/kg,ok
+2014-08-01,2014-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,50568.09,50.56809,Гривні за тону,UAH/kg,ok
+2014-09-01,2014-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,52231.15,52.23115,Гривні за тону,UAH/kg,ok
+2014-10-01,2014-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,53089.14,53.08914,Гривні за тону,UAH/kg,ok
+2014-11-01,2014-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,53357.51,53.357510000000005,Гривні за тону,UAH/kg,ok
+2014-12-01,2014-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,53595.36,53.59536,Гривні за тону,UAH/kg,ok
+2015-01-01,2015-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,57147.4,57.147400000000005,Гривні за тону,UAH/kg,ok
+2015-02-01,2015-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,58120.1,58.1201,Гривні за тону,UAH/kg,ok
+2015-03-01,2015-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,60128.99,60.128989999999995,Гривні за тону,UAH/kg,ok
+2015-04-01,2015-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,61288.28,61.28828,Гривні за тону,UAH/kg,ok
+2015-05-01,2015-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,62402.17,62.40217,Гривні за тону,UAH/kg,ok
+2015-06-01,2015-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,62866.38,62.86638,Гривні за тону,UAH/kg,ok
+2015-07-01,2015-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,64360.71,64.36071,Гривні за тону,UAH/kg,ok
+2015-08-01,2015-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,65813.31,65.81331,Гривні за тону,UAH/kg,ok
+2015-09-01,2015-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,65258.82,65.25882,Гривні за тону,UAH/kg,ok
+2015-10-01,2015-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,65890.46,65.89046,Гривні за тону,UAH/kg,ok
+2015-11-01,2015-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,67941.4,67.94139999999999,Гривні за тону,UAH/kg,ok
+2015-12-01,2015-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,69241.22,69.24122,Гривні за тону,UAH/kg,ok
+2016-01-01,2016-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,72925.59,72.92559,Гривні за тону,UAH/kg,ok
+2016-02-01,2016-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,73582.4,73.58239999999999,Гривні за тону,UAH/kg,ok
+2016-03-01,2016-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,73896.14,73.89614,Гривні за тону,UAH/kg,ok
+2016-04-01,2016-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,74158.77,74.15877,Гривні за тону,UAH/kg,ok
+2016-05-01,2016-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,73096.84,73.09684,Гривні за тону,UAH/kg,ok
+2016-06-01,2016-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,71764.41,71.76441,Гривні за тону,UAH/kg,ok
+2016-07-01,2016-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,72356.45,72.35645,Гривні за тону,UAH/kg,ok
+2016-08-01,2016-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,72241.49,72.24149,Гривні за тону,UAH/kg,ok
+2016-09-01,2016-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,74423.7,74.4237,Гривні за тону,UAH/kg,ok
+2016-10-01,2016-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,78679.32,78.67932,Гривні за тону,UAH/kg,ok
+2016-11-01,2016-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,82796.98,82.79697999999999,Гривні за тону,UAH/kg,ok
+2016-12-01,2016-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,87734.74,87.73474,Гривні за тону,UAH/kg,ok
+2017-01-01,2017-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,92520.49,92.52049000000001,Гривні за тону,UAH/kg,ok
+2017-02-01,2017-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,93787.34,93.78734,Гривні за тону,UAH/kg,ok
+2017-03-01,2017-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,95230.28,95.23028,Гривні за тону,UAH/kg,ok
+2017-04-01,2017-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,95009.07,95.00907000000001,Гривні за тону,UAH/kg,ok
+2017-05-01,2017-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,92470.17,92.47017,Гривні за тону,UAH/kg,ok
+2017-06-01,2017-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,91584.4,91.58439999999999,Гривні за тону,UAH/kg,ok
+2017-07-01,2017-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,91907.63,91.90763000000001,Гривні за тону,UAH/kg,ok
+2017-08-01,2017-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,91999.66,91.99966,Гривні за тону,UAH/kg,ok
+2017-09-01,2017-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,92920.28,92.92028,Гривні за тону,UAH/kg,ok
+2017-10-01,2017-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,97209.29,97.20929,Гривні за тону,UAH/kg,ok
+2017-11-01,2017-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,100564.84,100.56483999999999,Гривні за тону,UAH/kg,ok
+2017-12-01,2017-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,102592.44,102.59244,Гривні за тону,UAH/kg,ok
+2018-01-01,2018-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,107437.03,107.43703,Гривні за тону,UAH/kg,ok
+2018-02-01,2018-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,107082.02,107.08202,Гривні за тону,UAH/kg,ok
+2018-03-01,2018-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,105850.17,105.85016999999999,Гривні за тону,UAH/kg,ok
+2018-04-01,2018-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,106148.58,106.14858,Гривні за тону,UAH/kg,ok
+2018-05-01,2018-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,102915.39,102.91539,Гривні за тону,UAH/kg,ok
+2018-06-01,2018-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,102670.62,102.67062,Гривні за тону,UAH/kg,ok
+2018-07-01,2018-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,102521.31,102.52131,Гривні за тону,UAH/kg,ok
+2018-08-01,2018-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,103105.43,103.10543,Гривні за тону,UAH/kg,ok
+2018-09-01,2018-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,106040.68,106.04068,Гривні за тону,UAH/kg,ok
+2018-10-01,2018-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,108129.4,108.12939999999999,Гривні за тону,UAH/kg,ok
+2018-11-01,2018-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,112227.41,112.22741,Гривні за тону,UAH/kg,ok
+2018-12-01,2018-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,115252.62,115.25262,Гривні за тону,UAH/kg,ok
+2019-01-01,2019-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,120341.15,120.34115,Гривні за тону,UAH/kg,ok
+2019-02-01,2019-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,121761.1,121.7611,Гривні за тону,UAH/kg,ok
+2019-03-01,2019-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,121366.82,121.36682,Гривні за тону,UAH/kg,ok
+2019-04-01,2019-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,120542.63,120.54263,Гривні за тону,UAH/kg,ok
+2019-05-01,2019-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,118505.5,118.5055,Гривні за тону,UAH/kg,ok
+2019-06-01,2019-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,116430.51,116.43051,Гривні за тону,UAH/kg,ok
+2019-07-01,2019-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,112335.49,112.33549000000001,Гривні за тону,UAH/kg,ok
+2019-08-01,2019-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,112202.92,112.20291999999999,Гривні за тону,UAH/kg,ok
+2019-09-01,2019-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,115487.65,115.48764999999999,Гривні за тону,UAH/kg,ok
+2019-10-01,2019-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,118220.47,118.22047,Гривні за тону,UAH/kg,ok
+2019-11-01,2019-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,120125.76,120.12576,Гривні за тону,UAH/kg,ok
+2019-12-01,2019-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,121180.93,121.18092999999999,Гривні за тону,UAH/kg,ok
+2020-01-01,2020-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,119701.79,119.70178999999999,Гривні за тону,UAH/kg,ok
+2020-02-01,2020-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,120587.15,120.58715,Гривні за тону,UAH/kg,ok
+2020-03-01,2020-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,122287.26,122.28725999999999,Гривні за тону,UAH/kg,ok
+2020-04-01,2020-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,122119.59,122.11959,Гривні за тону,UAH/kg,ok
+2020-05-01,2020-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,120605.66,120.60566,Гривні за тону,UAH/kg,ok
+2020-06-01,2020-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,120936.58,120.93658,Гривні за тону,UAH/kg,ok
+2020-07-01,2020-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,119571.63,119.57163,Гривні за тону,UAH/kg,ok
+2020-08-01,2020-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,119942.89,119.94289,Гривні за тону,UAH/kg,ok
+2020-09-01,2020-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,121057.58,121.05758,Гривні за тону,UAH/kg,ok
+2020-10-01,2020-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,121191.19,121.19119,Гривні за тону,UAH/kg,ok
+2020-11-01,2020-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,123839.0,123.839,Гривні за тону,UAH/kg,ok
+2020-12-01,2020-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,124402.45,124.40245,Гривні за тону,UAH/kg,ok
+2021-01-01,2021-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,127897.61,127.89761,Гривні за тону,UAH/kg,ok
+2021-02-01,2021-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,128567.25,128.56725,Гривні за тону,UAH/kg,ok
+2021-03-01,2021-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,132593.73,132.59373000000002,Гривні за тону,UAH/kg,ok
+2021-04-01,2021-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,133935.81,133.93581,Гривні за тону,UAH/kg,ok
+2021-05-01,2021-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,133587.0,133.587,Гривні за тону,UAH/kg,ok
+2021-06-01,2021-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,132793.15,132.79315,Гривні за тону,UAH/kg,ok
+2021-07-01,2021-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,133975.4,133.9754,Гривні за тону,UAH/kg,ok
+2021-08-01,2021-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,135715.07,135.71507,Гривні за тону,UAH/kg,ok
+2021-09-01,2021-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,141255.2,141.2552,Гривні за тону,UAH/kg,ok
+2021-10-01,2021-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,144302.15,144.30214999999998,Гривні за тону,UAH/kg,ok
+2021-11-01,2021-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,150445.03,150.44503,Гривні за тону,UAH/kg,ok
+2021-12-01,2021-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,153314.7,153.31470000000002,Гривні за тону,UAH/kg,ok
+2022-01-01,2022-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,153771.75,153.77175,Гривні за тону,UAH/kg,ok
+2022-02-01,2022-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,158308.31,158.30831,Гривні за тону,UAH/kg,ok
+2022-03-01,2022-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,164164.25,164.16425,Гривні за тону,UAH/kg,ok
+2022-04-01,2022-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,164860.25,164.86025,Гривні за тону,UAH/kg,ok
+2022-05-01,2022-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,163636.34,163.63634,Гривні за тону,UAH/kg,ok
+2022-06-01,2022-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,163626.51,163.62651,Гривні за тону,UAH/kg,ok
+2022-07-01,2022-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,163497.93,163.49793,Гривні за тону,UAH/kg,ok
+2022-08-01,2022-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,165291.63,165.29163,Гривні за тону,UAH/kg,ok
+2022-09-01,2022-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,167956.66,167.95666,Гривні за тону,UAH/kg,ok
+2022-10-01,2022-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,171183.35,171.18335000000002,Гривні за тону,UAH/kg,ok
+2022-11-01,2022-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,178584.88,178.58488,Гривні за тону,UAH/kg,ok
+2022-12-01,2022-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,182008.24,182.00824,Гривні за тону,UAH/kg,ok
+2023-01-01,2023-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,181516.57,181.51657,Гривні за тону,UAH/kg,ok
+2023-02-01,2023-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,181869.78,181.86978,Гривні за тону,UAH/kg,ok
+2023-03-01,2023-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,183856.33,183.85632999999999,Гривні за тону,UAH/kg,ok
+2023-04-01,2023-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,184109.51,184.10951,Гривні за тону,UAH/kg,ok
+2023-05-01,2023-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,181841.61,181.84160999999997,Гривні за тону,UAH/kg,ok
+2023-06-01,2023-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,180324.81,180.32480999999999,Гривні за тону,UAH/kg,ok
+2023-07-01,2023-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,180060.13,180.06013000000002,Гривні за тону,UAH/kg,ok
+2023-08-01,2023-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,180768.88,180.76888,Гривні за тону,UAH/kg,ok
+2023-09-01,2023-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,184371.14,184.37114000000003,Гривні за тону,UAH/kg,ok
+2023-10-01,2023-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,191940.35,191.94035,Гривні за тону,UAH/kg,ok
+2023-11-01,2023-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,193094.52,193.09452,Гривні за тону,UAH/kg,ok
+2023-12-01,2023-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,196165.21,196.16521,Гривні за тону,UAH/kg,ok
+2024-01-01,2024-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,196519.74,196.51973999999998,Гривні за тону,UAH/kg,ok
+2024-02-01,2024-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,198364.91,198.36491,Гривні за тону,UAH/kg,ok
+2024-03-01,2024-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,196901.33,196.90132999999997,Гривні за тону,UAH/kg,ok
+2024-04-01,2024-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,197071.01,197.07101,Гривні за тону,UAH/kg,ok
+2024-05-01,2024-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,200461.69,200.46169,Гривні за тону,UAH/kg,ok
+2024-06-01,2024-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,202419.88,202.41988,Гривні за тону,UAH/kg,ok
+2024-07-01,2024-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,198021.25,198.02125,Гривні за тону,UAH/kg,ok
+2024-08-01,2024-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,201274.83,201.27482999999998,Гривні за тону,UAH/kg,ok
+2024-09-01,2024-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,207416.48,207.41648,Гривні за тону,UAH/kg,ok
+2024-10-01,2024-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,215446.08,215.44608,Гривні за тону,UAH/kg,ok
+2024-11-01,2024-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,220231.75,220.23175,Гривні за тону,UAH/kg,ok
+2024-12-01,2024-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,225337.82,225.33782,Гривні за тону,UAH/kg,ok
+2025-01-01,2025-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,232929.87,232.92987,Гривні за тону,UAH/kg,ok
+2025-02-01,2025-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,231784.19,231.78419,Гривні за тону,UAH/kg,ok
+2025-03-01,2025-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,228907.07,228.90707,Гривні за тону,UAH/kg,ok
+2025-04-01,2025-M04,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,228421.24,228.42123999999998,Гривні за тону,UAH/kg,ok
+2025-05-01,2025-M05,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,226969.56,226.96956,Гривні за тону,UAH/kg,ok
+2025-06-01,2025-M06,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,226123.42,226.12342,Гривні за тону,UAH/kg,ok
+2025-07-01,2025-M07,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,226833.28,226.83328,Гривні за тону,UAH/kg,ok
+2025-08-01,2025-M08,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,232525.05,232.52505,Гривні за тону,UAH/kg,ok
+2025-09-01,2025-M09,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,238302.54,238.30254000000002,Гривні за тону,UAH/kg,ok
+2025-10-01,2025-M10,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,237977.28,237.97728,Гривні за тону,UAH/kg,ok
+2025-11-01,2025-M11,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,237020.62,237.02062,Гривні за тону,UAH/kg,ok
+2025-12-01,2025-M12,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,233921.34,233.92134,Гривні за тону,UAH/kg,ok
+2026-01-01,2026-M01,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,238101.24,238.10124,Гривні за тону,UAH/kg,ok
+2026-02-01,2026-M02,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,236344.09,236.34409,Гривні за тону,UAH/kg,ok
+2026-03-01,2026-M03,Україна,SSSU industrial producer prices raw workbook,processor,hard_cheese,Сир твердий,234863.38,234.86338,Гривні за тону,UAH/kg,ok
+2013-01-01,2013-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6734.47,6.73447,Гривні за тону,UAH/kg,ok
+2013-02-01,2013-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6760.12,6.76012,Гривні за тону,UAH/kg,ok
+2013-03-01,2013-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6859.6,6.8596,Гривні за тону,UAH/kg,ok
+2013-04-01,2013-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6880.83,6.88083,Гривні за тону,UAH/kg,ok
+2013-05-01,2013-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6930.35,6.930350000000001,Гривні за тону,UAH/kg,ok
+2013-06-01,2013-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6931.87,6.93187,Гривні за тону,UAH/kg,ok
+2013-07-01,2013-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,6981.41,6.9814099999999994,Гривні за тону,UAH/kg,ok
+2013-08-01,2013-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7055.21,7.05521,Гривні за тону,UAH/kg,ok
+2013-09-01,2013-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7106.25,7.10625,Гривні за тону,UAH/kg,ok
+2013-10-01,2013-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7154.67,7.15467,Гривні за тону,UAH/kg,ok
+2013-11-01,2013-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7225.88,7.22588,Гривні за тону,UAH/kg,ok
+2013-12-01,2013-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7402.05,7.40205,Гривні за тону,UAH/kg,ok
+2014-01-01,2014-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7414.88,7.41488,Гривні за тону,UAH/kg,ok
+2014-02-01,2014-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7471.1,7.471100000000001,Гривні за тону,UAH/kg,ok
+2014-03-01,2014-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7582.47,7.58247,Гривні за тону,UAH/kg,ok
+2014-04-01,2014-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7625.67,7.62567,Гривні за тону,UAH/kg,ok
+2014-05-01,2014-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7634.51,7.634510000000001,Гривні за тону,UAH/kg,ok
+2014-06-01,2014-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7610.28,7.6102799999999995,Гривні за тону,UAH/kg,ok
+2014-07-01,2014-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7766.56,7.76656,Гривні за тону,UAH/kg,ok
+2014-08-01,2014-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7809.61,7.809609999999999,Гривні за тону,UAH/kg,ok
+2014-09-01,2014-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,7975.86,7.97586,Гривні за тону,UAH/kg,ok
+2014-10-01,2014-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,8001.58,8.00158,Гривні за тону,UAH/kg,ok
+2014-11-01,2014-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,8133.76,8.13376,Гривні за тону,UAH/kg,ok
+2014-12-01,2014-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,8281.15,8.28115,Гривні за тону,UAH/kg,ok
+2015-01-01,2015-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,8421.86,8.42186,Гривні за тону,UAH/kg,ok
+2015-02-01,2015-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,8441.42,8.44142,Гривні за тону,UAH/kg,ok
+2015-03-01,2015-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9146.26,9.14626,Гривні за тону,UAH/kg,ok
+2015-04-01,2015-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9220.97,9.22097,Гривні за тону,UAH/kg,ok
+2015-05-01,2015-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9308.08,9.30808,Гривні за тону,UAH/kg,ok
+2015-06-01,2015-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9418.23,9.41823,Гривні за тону,UAH/kg,ok
+2015-07-01,2015-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9404.68,9.40468,Гривні за тону,UAH/kg,ok
+2015-08-01,2015-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9469.09,9.46909,Гривні за тону,UAH/kg,ok
+2015-09-01,2015-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9593.76,9.59376,Гривні за тону,UAH/kg,ok
+2015-10-01,2015-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9755.9,9.7559,Гривні за тону,UAH/kg,ok
+2015-11-01,2015-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,9889.98,9.88998,Гривні за тону,UAH/kg,ok
+2015-12-01,2015-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,10044.89,10.044889999999999,Гривні за тону,UAH/kg,ok
+2016-01-01,2016-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,10958.5,10.9585,Гривні за тону,UAH/kg,ok
+2016-02-01,2016-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11103.26,11.10326,Гривні за тону,UAH/kg,ok
+2016-03-01,2016-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11359.59,11.35959,Гривні за тону,UAH/kg,ok
+2016-04-01,2016-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11275.07,11.27507,Гривні за тону,UAH/kg,ok
+2016-05-01,2016-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11197.73,11.19773,Гривні за тону,UAH/kg,ok
+2016-06-01,2016-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11248.44,11.24844,Гривні за тону,UAH/kg,ok
+2016-07-01,2016-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11138.92,11.13892,Гривні за тону,UAH/kg,ok
+2016-08-01,2016-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11221.69,11.22169,Гривні за тону,UAH/kg,ok
+2016-09-01,2016-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,11648.16,11.64816,Гривні за тону,UAH/kg,ok
+2016-10-01,2016-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,12090.33,12.09033,Гривні за тону,UAH/kg,ok
+2016-11-01,2016-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,12530.41,12.53041,Гривні за тону,UAH/kg,ok
+2016-12-01,2016-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13422.2,13.4222,Гривні за тону,UAH/kg,ok
+2017-01-01,2017-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13859.1,13.8591,Гривні за тону,UAH/kg,ok
+2017-02-01,2017-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13883.76,13.88376,Гривні за тону,UAH/kg,ok
+2017-03-01,2017-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13950.82,13.95082,Гривні за тону,UAH/kg,ok
+2017-04-01,2017-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13991.28,13.991280000000001,Гривні за тону,UAH/kg,ok
+2017-05-01,2017-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13855.2,13.8552,Гривні за тону,UAH/kg,ok
+2017-06-01,2017-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13911.6,13.9116,Гривні за тону,UAH/kg,ok
+2017-07-01,2017-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,13956.84,13.95684,Гривні за тону,UAH/kg,ok
+2017-08-01,2017-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,14294.77,14.29477,Гривні за тону,UAH/kg,ok
+2017-09-01,2017-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,14619.34,14.61934,Гривні за тону,UAH/kg,ok
+2017-10-01,2017-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15131.67,15.13167,Гривні за тону,UAH/kg,ok
+2017-11-01,2017-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15342.89,15.342889999999999,Гривні за тону,UAH/kg,ok
+2017-12-01,2017-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15715.45,15.71545,Гривні за тону,UAH/kg,ok
+2018-01-01,2018-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15914.55,15.914549999999998,Гривні за тону,UAH/kg,ok
+2018-02-01,2018-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16006.27,16.00627,Гривні за тону,UAH/kg,ok
+2018-03-01,2018-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16107.4,16.1074,Гривні за тону,UAH/kg,ok
+2018-04-01,2018-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16125.15,16.125149999999998,Гривні за тону,UAH/kg,ok
+2018-05-01,2018-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15972.95,15.97295,Гривні за тону,UAH/kg,ok
+2018-06-01,2018-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15806.29,15.80629,Гривні за тону,UAH/kg,ok
+2018-07-01,2018-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15806.29,15.80629,Гривні за тону,UAH/kg,ok
+2018-08-01,2018-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,15869.46,15.869459999999998,Гривні за тону,UAH/kg,ok
+2018-09-01,2018-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16305.98,16.305979999999998,Гривні за тону,UAH/kg,ok
+2018-10-01,2018-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16456.05,16.456049999999998,Гривні за тону,UAH/kg,ok
+2018-11-01,2018-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16859.2,16.8592,Гривні за тону,UAH/kg,ok
+2018-12-01,2018-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,16914.98,16.91498,Гривні за тону,UAH/kg,ok
+2019-01-01,2019-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,17889.57,17.88957,Гривні за тону,UAH/kg,ok
+2019-02-01,2019-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,17830.86,17.83086,Гривні за тону,UAH/kg,ok
+2019-03-01,2019-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,18003.88,18.003880000000002,Гривні за тону,UAH/kg,ok
+2019-04-01,2019-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,17995.99,17.995990000000003,Гривні за тону,UAH/kg,ok
+2019-05-01,2019-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,17849.19,17.84919,Гривні за тону,UAH/kg,ok
+2019-06-01,2019-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,17826.7,17.826700000000002,Гривні за тону,UAH/kg,ok
+2019-07-01,2019-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,17836.0,17.836,Гривні за тону,UAH/kg,ok
+2019-08-01,2019-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,18156.62,18.15662,Гривні за тону,UAH/kg,ok
+2019-09-01,2019-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,18424.18,18.42418,Гривні за тону,UAH/kg,ok
+2019-10-01,2019-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,18664.74,18.664740000000002,Гривні за тону,UAH/kg,ok
+2019-11-01,2019-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,18973.88,18.97388,Гривні за тону,UAH/kg,ok
+2019-12-01,2019-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19142.58,19.142580000000002,Гривні за тону,UAH/kg,ok
+2020-01-01,2020-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19256.19,19.25619,Гривні за тону,UAH/kg,ok
+2020-02-01,2020-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19205.99,19.20599,Гривні за тону,UAH/kg,ok
+2020-03-01,2020-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19255.01,19.25501,Гривні за тону,UAH/kg,ok
+2020-04-01,2020-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19257.56,19.25756,Гривні за тону,UAH/kg,ok
+2020-05-01,2020-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19257.56,19.25756,Гривні за тону,UAH/kg,ok
+2020-06-01,2020-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19212.63,19.21263,Гривні за тону,UAH/kg,ok
+2020-07-01,2020-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19205.47,19.205470000000002,Гривні за тону,UAH/kg,ok
+2020-08-01,2020-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19224.33,19.224330000000002,Гривні за тону,UAH/kg,ok
+2020-09-01,2020-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19448.76,19.44876,Гривні за тону,UAH/kg,ok
+2020-10-01,2020-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19615.83,19.615830000000003,Гривні за тону,UAH/kg,ok
+2020-11-01,2020-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,19961.29,19.96129,Гривні за тону,UAH/kg,ok
+2020-12-01,2020-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,20211.8,20.2118,Гривні за тону,UAH/kg,ok
+2021-01-01,2021-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,20423.47,20.423470000000002,Гривні за тону,UAH/kg,ok
+2021-02-01,2021-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,20728.26,20.72826,Гривні за тону,UAH/kg,ok
+2021-03-01,2021-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,20853.01,20.853009999999998,Гривні за тону,UAH/kg,ok
+2021-04-01,2021-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,21125.1,21.1251,Гривні за тону,UAH/kg,ok
+2021-05-01,2021-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,21337.17,21.337169999999997,Гривні за тону,UAH/kg,ok
+2021-06-01,2021-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,21550.75,21.55075,Гривні за тону,UAH/kg,ok
+2021-07-01,2021-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,21651.26,21.651259999999997,Гривні за тону,UAH/kg,ok
+2021-08-01,2021-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,21924.14,21.924139999999998,Гривні за тону,UAH/kg,ok
+2021-09-01,2021-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,22384.33,22.384330000000002,Гривні за тону,UAH/kg,ok
+2021-10-01,2021-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,22709.41,22.70941,Гривні за тону,UAH/kg,ok
+2021-11-01,2021-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,22921.29,22.921290000000003,Гривні за тону,UAH/kg,ok
+2021-12-01,2021-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,23130.22,23.13022,Гривні за тону,UAH/kg,ok
+2022-01-01,2022-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,24690.49,24.69049,Гривні за тону,UAH/kg,ok
+2022-02-01,2022-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,25429.02,25.42902,Гривні за тону,UAH/kg,ok
+2022-03-01,2022-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,25601.06,25.60106,Гривні за тону,UAH/kg,ok
+2022-04-01,2022-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,25838.41,25.83841,Гривні за тону,UAH/kg,ok
+2022-05-01,2022-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,25929.36,25.92936,Гривні за тону,UAH/kg,ok
+2022-06-01,2022-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,26332.12,26.33212,Гривні за тону,UAH/kg,ok
+2022-07-01,2022-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,26381.03,26.38103,Гривні за тону,UAH/kg,ok
+2022-08-01,2022-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,26331.28,26.33128,Гривні за тону,UAH/kg,ok
+2022-09-01,2022-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,27052.67,27.05267,Гривні за тону,UAH/kg,ok
+2022-10-01,2022-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,27521.06,27.521060000000002,Гривні за тону,UAH/kg,ok
+2022-11-01,2022-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,27709.99,27.70999,Гривні за тону,UAH/kg,ok
+2022-12-01,2022-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,27951.19,27.95119,Гривні за тону,UAH/kg,ok
+2023-01-01,2023-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,29510.9,29.510900000000003,Гривні за тону,UAH/kg,ok
+2023-02-01,2023-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30101.52,30.10152,Гривні за тону,UAH/kg,ok
+2023-03-01,2023-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30099.96,30.09996,Гривні за тону,UAH/kg,ok
+2023-04-01,2023-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30138.23,30.13823,Гривні за тону,UAH/kg,ok
+2023-05-01,2023-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30214.62,30.21462,Гривні за тону,UAH/kg,ok
+2023-06-01,2023-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30298.98,30.29898,Гривні за тону,UAH/kg,ok
+2023-07-01,2023-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30503.42,30.50342,Гривні за тону,UAH/kg,ok
+2023-08-01,2023-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30324.05,30.32405,Гривні за тону,UAH/kg,ok
+2023-09-01,2023-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,30731.84,30.731840000000002,Гривні за тону,UAH/kg,ok
+2023-10-01,2023-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,31069.38,31.069380000000002,Гривні за тону,UAH/kg,ok
+2023-11-01,2023-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,31549.31,31.549310000000002,Гривні за тону,UAH/kg,ok
+2023-12-01,2023-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32179.41,32.17941,Гривні за тону,UAH/kg,ok
+2024-01-01,2024-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32435.39,32.43539,Гривні за тону,UAH/kg,ok
+2024-02-01,2024-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32514.87,32.51487,Гривні за тону,UAH/kg,ok
+2024-03-01,2024-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32539.91,32.53991,Гривні за тону,UAH/kg,ok
+2024-04-01,2024-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32558.06,32.558060000000005,Гривні за тону,UAH/kg,ok
+2024-05-01,2024-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32474.31,32.47431,Гривні за тону,UAH/kg,ok
+2024-06-01,2024-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32474.31,32.47431,Гривні за тону,UAH/kg,ok
+2024-07-01,2024-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,32590.06,32.59006,Гривні за тону,UAH/kg,ok
+2024-08-01,2024-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,33212.67,33.212669999999996,Гривні за тону,UAH/kg,ok
+2024-09-01,2024-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,34178.25,34.17825,Гривні за тону,UAH/kg,ok
+2024-10-01,2024-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,35650.17,35.650169999999996,Гривні за тону,UAH/kg,ok
+2024-11-01,2024-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,38036.85,38.03685,Гривні за тону,UAH/kg,ok
+2024-12-01,2024-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,38682.42,38.68242,Гривні за тону,UAH/kg,ok
+2025-01-01,2025-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,38320.9,38.3209,Гривні за тону,UAH/kg,ok
+2025-02-01,2025-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,39478.88,39.47888,Гривні за тону,UAH/kg,ok
+2025-03-01,2025-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,39396.79,39.39679,Гривні за тону,UAH/kg,ok
+2025-04-01,2025-M04,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,39227.02,39.227019999999996,Гривні за тону,UAH/kg,ok
+2025-05-01,2025-M05,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,39263.67,39.26367,Гривні за тону,UAH/kg,ok
+2025-06-01,2025-M06,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,38603.74,38.603739999999995,Гривні за тону,UAH/kg,ok
+2025-07-01,2025-M07,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,38767.66,38.76766000000001,Гривні за тону,UAH/kg,ok
+2025-08-01,2025-M08,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40192.16,40.19216,Гривні за тону,UAH/kg,ok
+2025-09-01,2025-M09,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40323.29,40.32329,Гривні за тону,UAH/kg,ok
+2025-10-01,2025-M10,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40409.32,40.40932,Гривні за тону,UAH/kg,ok
+2025-11-01,2025-M11,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40167.84,40.16784,Гривні за тону,UAH/kg,ok
+2025-12-01,2025-M12,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40567.1,40.567099999999996,Гривні за тону,UAH/kg,ok
+2026-01-01,2026-M01,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,41176.15,41.17615,Гривні за тону,UAH/kg,ok
+2026-02-01,2026-M02,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40310.29,40.31029,Гривні за тону,UAH/kg,ok
+2026-03-01,2026-M03,Україна,SSSU industrial producer prices raw workbook,processor,kefir,Кефір,40976.07,40.97607,Гривні за тону,UAH/kg,ok
+2013-01-01,2013-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,23205.76,23.205759999999998,Гривні за тону,UAH/kg,ok
+2013-02-01,2013-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,23192.28,23.19228,Гривні за тону,UAH/kg,ok
+2013-03-01,2013-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,24090.59,24.09059,Гривні за тону,UAH/kg,ok
+2013-04-01,2013-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,26022.41,26.02241,Гривні за тону,UAH/kg,ok
+2013-05-01,2013-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,27391.71,27.39171,Гривні за тону,UAH/kg,ok
+2013-06-01,2013-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,27248.94,27.248939999999997,Гривні за тону,UAH/kg,ok
+2013-07-01,2013-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,27431.8,27.4318,Гривні за тону,UAH/kg,ok
+2013-08-01,2013-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,27624.27,27.62427,Гривні за тону,UAH/kg,ok
+2013-09-01,2013-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,29027.96,29.02796,Гривні за тону,UAH/kg,ok
+2013-10-01,2013-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,29199.4,29.1994,Гривні за тону,UAH/kg,ok
+2013-11-01,2013-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,29973.64,29.97364,Гривні за тону,UAH/kg,ok
+2013-12-01,2013-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,31601.45,31.60145,Гривні за тону,UAH/kg,ok
+2014-01-01,2014-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,30945.17,30.945169999999997,Гривні за тону,UAH/kg,ok
+2014-02-01,2014-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,31869.56,31.86956,Гривні за тону,UAH/kg,ok
+2014-03-01,2014-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,32791.07,32.79107,Гривні за тону,UAH/kg,ok
+2014-04-01,2014-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,32689.72,32.68972,Гривні за тону,UAH/kg,ok
+2014-05-01,2014-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,31256.46,31.25646,Гривні за тону,UAH/kg,ok
+2014-06-01,2014-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,31123.58,31.12358,Гривні за тону,UAH/kg,ok
+2014-07-01,2014-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,31536.95,31.53695,Гривні за тону,UAH/kg,ok
+2014-08-01,2014-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,32940.04,32.94004,Гривні за тону,UAH/kg,ok
+2014-09-01,2014-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,33229.07,33.22907,Гривні за тону,UAH/kg,ok
+2014-10-01,2014-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,33823.88,33.823879999999996,Гривні за тону,UAH/kg,ok
+2014-11-01,2014-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,33857.96,33.85796,Гривні за тону,UAH/kg,ok
+2014-12-01,2014-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,33987.12,33.987120000000004,Гривні за тону,UAH/kg,ok
+2015-01-01,2015-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,33996.76,33.99676,Гривні за тону,UAH/kg,ok
+2015-02-01,2015-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,34058.32,34.05832,Гривні за тону,UAH/kg,ok
+2015-03-01,2015-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,36929.35,36.92935,Гривні за тону,UAH/kg,ok
+2015-04-01,2015-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,37763.57,37.76357,Гривні за тону,UAH/kg,ok
+2015-05-01,2015-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,35918.3,35.9183,Гривні за тону,UAH/kg,ok
+2015-06-01,2015-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,35312.74,35.31274,Гривні за тону,UAH/kg,ok
+2015-07-01,2015-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,35562.66,35.56266,Гривні за тону,UAH/kg,ok
+2015-08-01,2015-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,36439.91,36.439910000000005,Гривні за тону,UAH/kg,ok
+2015-09-01,2015-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,35678.97,35.67897,Гривні за тону,UAH/kg,ok
+2015-10-01,2015-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,37568.21,37.56821,Гривні за тону,UAH/kg,ok
+2015-11-01,2015-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,38242.95,38.24295,Гривні за тону,UAH/kg,ok
+2015-12-01,2015-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,39101.31,39.10131,Гривні за тону,UAH/kg,ok
+2016-01-01,2016-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,41728.68,41.72868,Гривні за тону,UAH/kg,ok
+2016-02-01,2016-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,41784.19,41.78419,Гривні за тону,UAH/kg,ok
+2016-03-01,2016-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,42557.09,42.557089999999995,Гривні за тону,UAH/kg,ok
+2016-04-01,2016-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,39484.56,39.484559999999995,Гривні за тону,UAH/kg,ok
+2016-05-01,2016-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,37701.83,37.70183,Гривні за тону,UAH/kg,ok
+2016-06-01,2016-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,37656.09,37.65609,Гривні за тону,UAH/kg,ok
+2016-07-01,2016-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,38000.78,38.00078,Гривні за тону,UAH/kg,ok
+2016-08-01,2016-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,38730.81,38.73081,Гривні за тону,UAH/kg,ok
+2016-09-01,2016-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,41492.81,41.49281,Гривні за тону,UAH/kg,ok
+2016-10-01,2016-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,43952.11,43.95211,Гривні за тону,UAH/kg,ok
+2016-11-01,2016-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,45556.49,45.55649,Гривні за тону,UAH/kg,ok
+2016-12-01,2016-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,46698.98,46.698980000000006,Гривні за тону,UAH/kg,ok
+2017-01-01,2017-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48586.1,48.5861,Гривні за тону,UAH/kg,ok
+2017-02-01,2017-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,49069.83,49.06983,Гривні за тону,UAH/kg,ok
+2017-03-01,2017-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,49052.47,49.05247,Гривні за тону,UAH/kg,ok
+2017-04-01,2017-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,50512.2,50.5122,Гривні за тону,UAH/kg,ok
+2017-05-01,2017-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48114.77,48.11477,Гривні за тону,UAH/kg,ok
+2017-06-01,2017-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,46924.0,46.924,Гривні за тону,UAH/kg,ok
+2017-07-01,2017-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,47171.49,47.17149,Гривні за тону,UAH/kg,ok
+2017-08-01,2017-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,47957.08,47.957080000000005,Гривні за тону,UAH/kg,ok
+2017-09-01,2017-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48895.1,48.8951,Гривні за тону,UAH/kg,ok
+2017-10-01,2017-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,49090.88,49.09088,Гривні за тону,UAH/kg,ok
+2017-11-01,2017-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,49312.8,49.3128,Гривні за тону,UAH/kg,ok
+2017-12-01,2017-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48157.27,48.15727,Гривні за тону,UAH/kg,ok
+2018-01-01,2018-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48676.66,48.676660000000005,Гривні за тону,UAH/kg,ok
+2018-02-01,2018-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,47794.46,47.79446,Гривні за тону,UAH/kg,ok
+2018-03-01,2018-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,47630.97,47.63097,Гривні за тону,UAH/kg,ok
+2018-04-01,2018-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,46297.49,46.297489999999996,Гривні за тону,UAH/kg,ok
+2018-05-01,2018-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,44276.2,44.276199999999996,Гривні за тону,UAH/kg,ok
+2018-06-01,2018-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,44072.68,44.07268,Гривні за тону,UAH/kg,ok
+2018-07-01,2018-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,43385.31,43.38531,Гривні за тону,UAH/kg,ok
+2018-08-01,2018-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,43786.06,43.78606,Гривні за тону,UAH/kg,ok
+2018-09-01,2018-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,45025.42,45.02542,Гривні за тону,UAH/kg,ok
+2018-10-01,2018-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,46319.77,46.31977,Гривні за тону,UAH/kg,ok
+2018-11-01,2018-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,47586.07,47.58607,Гривні за тону,UAH/kg,ok
+2018-12-01,2018-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48153.65,48.15365,Гривні за тону,UAH/kg,ok
+2019-01-01,2019-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,48189.77,48.189769999999996,Гривні за тону,UAH/kg,ok
+2019-02-01,2019-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,50173.35,50.17335,Гривні за тону,UAH/kg,ok
+2019-03-01,2019-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,51524.42,51.52442,Гривні за тону,UAH/kg,ok
+2019-04-01,2019-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,51688.28,51.68828,Гривні за тону,UAH/kg,ok
+2019-05-01,2019-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,51538.87,51.53887,Гривні за тону,UAH/kg,ok
+2019-06-01,2019-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,51511.13,51.511129999999994,Гривні за тону,UAH/kg,ok
+2019-07-01,2019-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,53080.45,53.08045,Гривні за тону,UAH/kg,ok
+2019-08-01,2019-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,56443.59,56.44358999999999,Гривні за тону,UAH/kg,ok
+2019-09-01,2019-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,56893.94,56.89394,Гривні за тону,UAH/kg,ok
+2019-10-01,2019-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,56972.76,56.97276,Гривні за тону,UAH/kg,ok
+2019-11-01,2019-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,58913.63,58.91363,Гривні за тону,UAH/kg,ok
+2019-12-01,2019-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,60205.08,60.20508,Гривні за тону,UAH/kg,ok
+2020-01-01,2020-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,63348.77,63.348769999999995,Гривні за тону,UAH/kg,ok
+2020-02-01,2020-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,64625.44,64.62544,Гривні за тону,UAH/kg,ok
+2020-03-01,2020-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,64239.32,64.23932,Гривні за тону,UAH/kg,ok
+2020-04-01,2020-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,61579.61,61.57961,Гривні за тону,UAH/kg,ok
+2020-05-01,2020-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,56489.45,56.48945,Гривні за тону,UAH/kg,ok
+2020-06-01,2020-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,55442.41,55.44241,Гривні за тону,UAH/kg,ok
+2020-07-01,2020-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,54339.13,54.33913,Гривні за тону,UAH/kg,ok
+2020-08-01,2020-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,55361.28,55.36128,Гривні за тону,UAH/kg,ok
+2020-09-01,2020-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,57781.67,57.78167,Гривні за тону,UAH/kg,ok
+2020-10-01,2020-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,59209.19,59.20919,Гривні за тону,UAH/kg,ok
+2020-11-01,2020-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,62146.47,62.14647,Гривні за тону,UAH/kg,ok
+2020-12-01,2020-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,63887.17,63.88717,Гривні за тону,UAH/kg,ok
+2021-01-01,2021-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,65221.57,65.22157,Гривні за тону,UAH/kg,ok
+2021-02-01,2021-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,66476.54,66.47654,Гривні за тону,UAH/kg,ok
+2021-03-01,2021-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,67437.72,67.43772,Гривні за тону,UAH/kg,ok
+2021-04-01,2021-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,68609.37,68.60937,Гривні за тону,UAH/kg,ok
+2021-05-01,2021-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,69577.91,69.57791,Гривні за тону,UAH/kg,ok
+2021-06-01,2021-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,69889.06,69.88906,Гривні за тону,UAH/kg,ok
+2021-07-01,2021-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,69997.75,69.99775,Гривні за тону,UAH/kg,ok
+2021-08-01,2021-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,71653.92,71.65392,Гривні за тону,UAH/kg,ok
+2021-09-01,2021-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,72835.18,72.83518,Гривні за тону,UAH/kg,ok
+2021-10-01,2021-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,73533.38,73.53338000000001,Гривні за тону,UAH/kg,ok
+2021-11-01,2021-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,76772.05,76.77205000000001,Гривні за тону,UAH/kg,ok
+2021-12-01,2021-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,79482.15,79.48214999999999,Гривні за тону,UAH/kg,ok
+2022-01-01,2022-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,83451.42,83.45142,Гривні за тону,UAH/kg,ok
+2022-02-01,2022-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,84945.68,84.94568,Гривні за тону,UAH/kg,ok
+2022-03-01,2022-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,86020.37,86.02037,Гривні за тону,UAH/kg,ok
+2022-04-01,2022-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,89204.19,89.20419,Гривні за тону,UAH/kg,ok
+2022-05-01,2022-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,92526.92,92.52692,Гривні за тону,UAH/kg,ok
+2022-06-01,2022-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,90550.86,90.55086,Гривні за тону,UAH/kg,ok
+2022-07-01,2022-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,94323.92,94.32392,Гривні за тону,UAH/kg,ok
+2022-08-01,2022-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,101042.19,101.04219,Гривні за тону,UAH/kg,ok
+2022-09-01,2022-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102969.75,102.96975,Гривні за тону,UAH/kg,ok
+2022-10-01,2022-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,104658.39,104.65839,Гривні за тону,UAH/kg,ok
+2022-11-01,2022-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102441.08,102.44108,Гривні за тону,UAH/kg,ok
+2022-12-01,2022-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,106444.09,106.44409,Гривні за тону,UAH/kg,ok
+2023-01-01,2023-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,103827.51,103.82750999999999,Гривні за тону,UAH/kg,ok
+2023-02-01,2023-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,100482.14,100.48214,Гривні за тону,UAH/kg,ok
+2023-03-01,2023-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,98091.84,98.09183999999999,Гривні за тону,UAH/kg,ok
+2023-04-01,2023-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,97610.3,97.61030000000001,Гривні за тону,UAH/kg,ok
+2023-05-01,2023-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,95254.15,95.25415,Гривні за тону,UAH/kg,ok
+2023-06-01,2023-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,93761.57,93.76157,Гривні за тону,UAH/kg,ok
+2023-07-01,2023-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,91614.24,91.61424000000001,Гривні за тону,UAH/kg,ok
+2023-08-01,2023-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,92704.16,92.70416,Гривні за тону,UAH/kg,ok
+2023-09-01,2023-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,93745.61,93.74561,Гривні за тону,UAH/kg,ok
+2023-10-01,2023-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,91848.34,91.84834,Гривні за тону,UAH/kg,ok
+2023-11-01,2023-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,92017.52,92.01752,Гривні за тону,UAH/kg,ok
+2023-12-01,2023-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,93189.01,93.18901,Гривні за тону,UAH/kg,ok
+2024-01-01,2024-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,98812.7,98.81269999999999,Гривні за тону,UAH/kg,ok
+2024-02-01,2024-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,97775.85,97.77585,Гривні за тону,UAH/kg,ok
+2024-03-01,2024-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,98740.18,98.74018,Гривні за тону,UAH/kg,ok
+2024-04-01,2024-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,96464.48,96.46448,Гривні за тону,UAH/kg,ok
+2024-05-01,2024-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,95447.62,95.44762,Гривні за тону,UAH/kg,ok
+2024-06-01,2024-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,92787.22,92.78722,Гривні за тону,UAH/kg,ok
+2024-07-01,2024-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,94590.81,94.59081,Гривні за тону,UAH/kg,ok
+2024-08-01,2024-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,96857.69,96.85769,Гривні за тону,UAH/kg,ok
+2024-09-01,2024-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,99998.19,99.99819000000001,Гривні за тону,UAH/kg,ok
+2024-10-01,2024-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,101670.44,101.67044,Гривні за тону,UAH/kg,ok
+2024-11-01,2024-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,103527.42,103.52741999999999,Гривні за тону,UAH/kg,ok
+2024-12-01,2024-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,105703.41,105.70341,Гривні за тону,UAH/kg,ok
+2025-01-01,2025-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,100797.8,100.79780000000001,Гривні за тону,UAH/kg,ok
+2025-02-01,2025-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,100291.81,100.29181,Гривні за тону,UAH/kg,ok
+2025-03-01,2025-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,99532.86,99.53286,Гривні за тону,UAH/kg,ok
+2025-04-01,2025-M04,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,99824.39,99.82439,Гривні за тону,UAH/kg,ok
+2025-05-01,2025-M05,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102214.03,102.21403,Гривні за тону,UAH/kg,ok
+2025-06-01,2025-M06,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102440.84,102.44084,Гривні за тону,UAH/kg,ok
+2025-07-01,2025-M07,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,103038.95,103.03895,Гривні за тону,UAH/kg,ok
+2025-08-01,2025-M08,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,103212.9,103.21289999999999,Гривні за тону,UAH/kg,ok
+2025-09-01,2025-M09,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,104393.84,104.39384,Гривні за тону,UAH/kg,ok
+2025-10-01,2025-M10,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102764.68,102.76468,Гривні за тону,UAH/kg,ok
+2025-11-01,2025-M11,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,101826.03,101.82603,Гривні за тону,UAH/kg,ok
+2025-12-01,2025-M12,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102149.39,102.14939,Гривні за тону,UAH/kg,ok
+2026-01-01,2026-M01,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102363.51,102.36350999999999,Гривні за тону,UAH/kg,ok
+2026-02-01,2026-M02,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,102391.29,102.39129,Гривні за тону,UAH/kg,ok
+2026-03-01,2026-M03,Україна,SSSU industrial producer prices raw workbook,processor,skim_milk_powder,Молоко та вершки сухі знежирені,106684.66,106.68466000000001,Гривні за тону,UAH/kg,ok
+2013-01-01,2013-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17066.68,17.06668,Гривні за тону,UAH/kg,ok
+2013-02-01,2013-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17124.67,17.12467,Гривні за тону,UAH/kg,ok
+2013-03-01,2013-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17162.72,17.16272,Гривні за тону,UAH/kg,ok
+2013-04-01,2013-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17220.55,17.22055,Гривні за тону,UAH/kg,ok
+2013-05-01,2013-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17231.4,17.2314,Гривні за тону,UAH/kg,ok
+2013-06-01,2013-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17314.28,17.31428,Гривні за тону,UAH/kg,ok
+2013-07-01,2013-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17449.03,17.44903,Гривні за тону,UAH/kg,ok
+2013-08-01,2013-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17646.73,17.646729999999998,Гривні за тону,UAH/kg,ok
+2013-09-01,2013-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17759.41,17.75941,Гривні за тону,UAH/kg,ok
+2013-10-01,2013-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,17974.14,17.97414,Гривні за тону,UAH/kg,ok
+2013-11-01,2013-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,18079.53,18.07953,Гривні за тону,UAH/kg,ok
+2013-12-01,2013-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,18480.8,18.4808,Гривні за тону,UAH/kg,ok
+2014-01-01,2014-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,19377.09,19.37709,Гривні за тону,UAH/kg,ok
+2014-02-01,2014-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,19538.02,19.53802,Гривні за тону,UAH/kg,ok
+2014-03-01,2014-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,19870.06,19.870060000000002,Гривні за тону,UAH/kg,ok
+2014-04-01,2014-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20291.1,20.2911,Гривні за тону,UAH/kg,ok
+2014-05-01,2014-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20356.05,20.35605,Гривні за тону,UAH/kg,ok
+2014-06-01,2014-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20310.67,20.31067,Гривні за тону,UAH/kg,ok
+2014-07-01,2014-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20368.87,20.368869999999998,Гривні за тону,UAH/kg,ok
+2014-08-01,2014-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20474.68,20.47468,Гривні за тону,UAH/kg,ok
+2014-09-01,2014-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20620.6,20.6206,Гривні за тону,UAH/kg,ok
+2014-10-01,2014-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20761.45,20.76145,Гривні за тону,UAH/kg,ok
+2014-11-01,2014-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,20876.29,20.87629,Гривні за тону,UAH/kg,ok
+2014-12-01,2014-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,21089.26,21.08926,Гривні за тону,UAH/kg,ok
+2015-01-01,2015-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,21465.88,21.465880000000002,Гривні за тону,UAH/kg,ok
+2015-02-01,2015-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,21669.35,21.669349999999998,Гривні за тону,UAH/kg,ok
+2015-03-01,2015-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,23075.29,23.075290000000003,Гривні за тону,UAH/kg,ok
+2015-04-01,2015-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,23436.95,23.43695,Гривні за тону,UAH/kg,ok
+2015-05-01,2015-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,23778.24,23.77824,Гривні за тону,UAH/kg,ok
+2015-06-01,2015-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,23821.34,23.82134,Гривні за тону,UAH/kg,ok
+2015-07-01,2015-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,23884.72,23.88472,Гривні за тону,UAH/kg,ok
+2015-08-01,2015-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,24148.66,24.14866,Гривні за тону,UAH/kg,ok
+2015-09-01,2015-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,24072.04,24.07204,Гривні за тону,UAH/kg,ok
+2015-10-01,2015-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,24497.04,24.497040000000002,Гривні за тону,UAH/kg,ok
+2015-11-01,2015-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,24944.44,24.94444,Гривні за тону,UAH/kg,ok
+2015-12-01,2015-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,25292.15,25.292150000000003,Гривні за тону,UAH/kg,ok
+2016-01-01,2016-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,28029.27,28.02927,Гривні за тону,UAH/kg,ok
+2016-02-01,2016-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,28642.97,28.642970000000002,Гривні за тону,UAH/kg,ok
+2016-03-01,2016-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,29255.6,29.255599999999998,Гривні за тону,UAH/kg,ok
+2016-04-01,2016-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,29322.16,29.32216,Гривні за тону,UAH/kg,ok
+2016-05-01,2016-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,29364.14,29.36414,Гривні за тону,UAH/kg,ok
+2016-06-01,2016-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,29282.27,29.28227,Гривні за тону,UAH/kg,ok
+2016-07-01,2016-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,29380.68,29.38068,Гривні за тону,UAH/kg,ok
+2016-08-01,2016-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,29296.96,29.29696,Гривні за тону,UAH/kg,ok
+2016-09-01,2016-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,30361.36,30.36136,Гривні за тону,UAH/kg,ok
+2016-10-01,2016-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,31423.38,31.42338,Гривні за тону,UAH/kg,ok
+2016-11-01,2016-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,32298.78,32.29878,Гривні за тону,UAH/kg,ok
+2016-12-01,2016-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,34534.57,34.53457,Гривні за тону,UAH/kg,ok
+2017-01-01,2017-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,35917.46,35.91746,Гривні за тону,UAH/kg,ok
+2017-02-01,2017-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,36621.98,36.62198,Гривні за тону,UAH/kg,ok
+2017-03-01,2017-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,37047.95,37.04795,Гривні за тону,UAH/kg,ok
+2017-04-01,2017-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,37274.71,37.27471,Гривні за тону,UAH/kg,ok
+2017-05-01,2017-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,36970.12,36.97012,Гривні за тону,UAH/kg,ok
+2017-06-01,2017-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,37113.63,37.11363,Гривні за тону,UAH/kg,ok
+2017-07-01,2017-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,37492.24,37.492239999999995,Гривні за тону,UAH/kg,ok
+2017-08-01,2017-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,38200.96,38.20096,Гривні за тону,UAH/kg,ok
+2017-09-01,2017-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,39125.09,39.12508999999999,Гривні за тону,UAH/kg,ok
+2017-10-01,2017-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,40456.69,40.45669,Гривні за тону,UAH/kg,ok
+2017-11-01,2017-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,41151.98,41.15198,Гривні за тону,UAH/kg,ok
+2017-12-01,2017-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,42221.4,42.2214,Гривні за тону,UAH/kg,ok
+2018-01-01,2018-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43220.13,43.22013,Гривні за тону,UAH/kg,ok
+2018-02-01,2018-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43326.04,43.32604,Гривні за тону,UAH/kg,ok
+2018-03-01,2018-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43776.85,43.776849999999996,Гривні за тону,UAH/kg,ok
+2018-04-01,2018-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,44036.86,44.03686,Гривні за тону,UAH/kg,ok
+2018-05-01,2018-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43716.52,43.716519999999996,Гривні за тону,UAH/kg,ok
+2018-06-01,2018-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43534.61,43.53461,Гривні за тону,UAH/kg,ok
+2018-07-01,2018-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43653.77,43.653769999999994,Гривні за тону,UAH/kg,ok
+2018-08-01,2018-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,43728.62,43.72862,Гривні за тону,UAH/kg,ok
+2018-09-01,2018-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,45026.89,45.02689,Гривні за тону,UAH/kg,ok
+2018-10-01,2018-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,45348.67,45.34867,Гривні за тону,UAH/kg,ok
+2018-11-01,2018-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,46211.08,46.21108,Гривні за тону,UAH/kg,ok
+2018-12-01,2018-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,46963.94,46.96394,Гривні за тону,UAH/kg,ok
+2019-01-01,2019-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48051.74,48.051739999999995,Гривні за тону,UAH/kg,ok
+2019-02-01,2019-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,47898.93,47.89893,Гривні за тону,UAH/kg,ok
+2019-03-01,2019-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48488.69,48.488690000000005,Гривні за тону,UAH/kg,ok
+2019-04-01,2019-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48753.71,48.75371,Гривні за тону,UAH/kg,ok
+2019-05-01,2019-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48256.21,48.256209999999996,Гривні за тону,UAH/kg,ok
+2019-06-01,2019-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48384.01,48.38401,Гривні за тону,UAH/kg,ok
+2019-07-01,2019-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48096.17,48.09617,Гривні за тону,UAH/kg,ok
+2019-08-01,2019-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,48990.52,48.99052,Гривні за тону,UAH/kg,ok
+2019-09-01,2019-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,49855.2,49.855199999999996,Гривні за тону,UAH/kg,ok
+2019-10-01,2019-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,50722.67,50.72267,Гривні за тону,UAH/kg,ok
+2019-11-01,2019-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,50732.55,50.73255,Гривні за тону,UAH/kg,ok
+2019-12-01,2019-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51222.02,51.22201999999999,Гривні за тону,UAH/kg,ok
+2020-01-01,2020-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51777.11,51.77711,Гривні за тону,UAH/kg,ok
+2020-02-01,2020-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51524.39,51.52439,Гривні за тону,UAH/kg,ok
+2020-03-01,2020-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51841.04,51.84104,Гривні за тону,UAH/kg,ok
+2020-04-01,2020-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51753.78,51.75378,Гривні за тону,UAH/kg,ok
+2020-05-01,2020-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51753.78,51.75378,Гривні за тону,UAH/kg,ok
+2020-06-01,2020-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51753.78,51.75378,Гривні за тону,UAH/kg,ok
+2020-07-01,2020-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51753.78,51.75378,Гривні за тону,UAH/kg,ok
+2020-08-01,2020-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51753.78,51.75378,Гривні за тону,UAH/kg,ok
+2020-09-01,2020-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,52593.98,52.59398,Гривні за тону,UAH/kg,ok
+2020-10-01,2020-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,53053.05,53.053050000000006,Гривні за тону,UAH/kg,ok
+2020-11-01,2020-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,53991.06,53.99106,Гривні за тону,UAH/kg,ok
+2020-12-01,2020-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,54527.41,54.52741,Гривні за тону,UAH/kg,ok
+2021-01-01,2021-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51192.92,51.19292,Гривні за тону,UAH/kg,ok
+2021-02-01,2021-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,51337.03,51.33703,Гривні за тону,UAH/kg,ok
+2021-03-01,2021-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,52120.3,52.1203,Гривні за тону,UAH/kg,ok
+2021-04-01,2021-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,52607.94,52.60794,Гривні за тону,UAH/kg,ok
+2021-05-01,2021-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,53401.79,53.40179,Гривні за тону,UAH/kg,ok
+2021-06-01,2021-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,53944.53,53.94453,Гривні за тону,UAH/kg,ok
+2021-07-01,2021-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,54237.35,54.23735,Гривні за тону,UAH/kg,ok
+2021-08-01,2021-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,54961.27,54.96127,Гривні за тону,UAH/kg,ok
+2021-09-01,2021-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,56165.5,56.1655,Гривні за тону,UAH/kg,ok
+2021-10-01,2021-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,56575.55,56.57555,Гривні за тону,UAH/kg,ok
+2021-11-01,2021-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,57024.03,57.024029999999996,Гривні за тону,UAH/kg,ok
+2021-12-01,2021-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,58079.46,58.07946,Гривні за тону,UAH/kg,ok
+2022-01-01,2022-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,59848.31,59.84831,Гривні за тону,UAH/kg,ok
+2022-02-01,2022-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,62827.28,62.82728,Гривні за тону,UAH/kg,ok
+2022-03-01,2022-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,63633.15,63.63315,Гривні за тону,UAH/kg,ok
+2022-04-01,2022-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,64220.05,64.22005,Гривні за тону,UAH/kg,ok
+2022-05-01,2022-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,64390.91,64.39091,Гривні за тону,UAH/kg,ok
+2022-06-01,2022-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,64682.41,64.68241,Гривні за тону,UAH/kg,ok
+2022-07-01,2022-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,66003.1,66.0031,Гривні за тону,UAH/kg,ok
+2022-08-01,2022-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,66260.95,66.26095,Гривні за тону,UAH/kg,ok
+2022-09-01,2022-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,67420.03,67.42003,Гривні за тону,UAH/kg,ok
+2022-10-01,2022-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,68698.66,68.69866,Гривні за тону,UAH/kg,ok
+2022-11-01,2022-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,69167.87,69.16787,Гривні за тону,UAH/kg,ok
+2022-12-01,2022-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,69664.49,69.66449,Гривні за тону,UAH/kg,ok
+2023-01-01,2023-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74151.4,74.1514,Гривні за тону,UAH/kg,ok
+2023-02-01,2023-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74692.06,74.69206,Гривні за тону,UAH/kg,ok
+2023-03-01,2023-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,75019.75,75.01975,Гривні за тону,UAH/kg,ok
+2023-04-01,2023-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74578.93,74.57893,Гривні за тону,UAH/kg,ok
+2023-05-01,2023-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74454.72,74.45472,Гривні за тону,UAH/kg,ok
+2023-06-01,2023-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74441.62,74.44162,Гривні за тону,UAH/kg,ok
+2023-07-01,2023-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74312.78,74.31278,Гривні за тону,UAH/kg,ok
+2023-08-01,2023-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,73987.24,73.98724,Гривні за тону,UAH/kg,ok
+2023-09-01,2023-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,74848.71,74.84871000000001,Гривні за тону,UAH/kg,ok
+2023-10-01,2023-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,76331.2,76.3312,Гривні за тону,UAH/kg,ok
+2023-11-01,2023-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,77654.17,77.65417,Гривні за тону,UAH/kg,ok
+2023-12-01,2023-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,78548.97,78.54897,Гривні за тону,UAH/kg,ok
+2024-01-01,2024-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,78250.51,78.25050999999999,Гривні за тону,UAH/kg,ok
+2024-02-01,2024-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,78961.29,78.96128999999999,Гривні за тону,UAH/kg,ok
+2024-03-01,2024-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,79380.47,79.38047,Гривні за тону,UAH/kg,ok
+2024-04-01,2024-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,79720.1,79.7201,Гривні за тону,UAH/kg,ok
+2024-05-01,2024-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,79690.63,79.69063,Гривні за тону,UAH/kg,ok
+2024-06-01,2024-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,79869.68,79.86967999999999,Гривні за тону,UAH/kg,ok
+2024-07-01,2024-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,79920.69,79.92069000000001,Гривні за тону,UAH/kg,ok
+2024-08-01,2024-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,81177.16,81.17716,Гривні за тону,UAH/kg,ok
+2024-09-01,2024-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,82783.71,82.78371000000001,Гривні за тону,UAH/kg,ok
+2024-10-01,2024-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,87371.24,87.37124,Гривні за тону,UAH/kg,ok
+2024-11-01,2024-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,90800.67,90.80067,Гривні за тону,UAH/kg,ok
+2024-12-01,2024-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,92688.58,92.68858,Гривні за тону,UAH/kg,ok
+2025-01-01,2025-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,100257.07,100.25707000000001,Гривні за тону,UAH/kg,ok
+2025-02-01,2025-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,98763.98,98.76397999999999,Гривні за тону,UAH/kg,ok
+2025-03-01,2025-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,98708.17,98.70817,Гривні за тону,UAH/kg,ok
+2025-04-01,2025-M04,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,98910.98,98.91098,Гривні за тону,UAH/kg,ok
+2025-05-01,2025-M05,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,98459.26,98.45926,Гривні за тону,UAH/kg,ok
+2025-06-01,2025-M06,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,99551.64,99.55164,Гривні за тону,UAH/kg,ok
+2025-07-01,2025-M07,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,99111.93,99.11192999999999,Гривні за тону,UAH/kg,ok
+2025-08-01,2025-M08,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,100728.46,100.72846000000001,Гривні за тону,UAH/kg,ok
+2025-09-01,2025-M09,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,101620.45,101.62044999999999,Гривні за тону,UAH/kg,ok
+2025-10-01,2025-M10,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,103963.27,103.96327000000001,Гривні за тону,UAH/kg,ok
+2025-11-01,2025-M11,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,103811.57,103.81157,Гривні за тону,UAH/kg,ok
+2025-12-01,2025-M12,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,104203.31,104.20331,Гривні за тону,UAH/kg,ok
+2026-01-01,2026-M01,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,105897.37,105.89737,Гривні за тону,UAH/kg,ok
+2026-02-01,2026-M02,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,104759.9,104.75989999999999,Гривні за тону,UAH/kg,ok
+2026-03-01,2026-M03,Україна,SSSU industrial producer prices raw workbook,processor,sour_cream,Сметана,103613.27,103.61327,Гривні за тону,UAH/kg,ok

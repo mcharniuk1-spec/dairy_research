@@ -1,0 +1,686 @@
+Journal of Economic Behavior & Organization 123 (2016) 184–192
+Contents lists available at ScienceDirect
+Journal of Economic Behavior & Organization
+j ourna  l ho me pa g e: www.elsevier.com/locate/jebo
+Asymmetric cost pass-through? Empirical evidence on the
+role
+ of market power, search and menu costs
+Jens-Peter Loy a,∗, Christoph
+ R. Weiss b, Thomas Glauben c
+a Department of Agricultural Economics, Christian-Albrechts-University, Kiel, Germany
+b Vienna University of Economics and Business (WU), Austria
+c Leibniz Institute of Agricultural Development in Central and Eastern Europe, Halle an der Saale, Germany
+a r t i c l e i n f o
+Article
+ history:
+Received
+ 20 October 2014
+Received
+ in revised form 18 January 2016
+Accepted
+ 24 January 2016
+Available
+ online 3 February 2016
+JEL classiﬁcation:
+C32
+D21
+L11
+L81
+Keywords:
+Asymmetric
+ cost pass-through
+Market
+ power
+Menu
+ costs
+Search
+ costs
+Milk
+Food
+ retailing
+a b s t r a c t
+We estimate cost pass-through rates based on data for store-level retail prices and whole-
+sale
+ costs for up to 90 different brands of milk sold in 327 retail stores across Germany. The
+abundance
+ of the data allows us to identify heterogeneity in pass-through across retailers
+and
+ relate it to underlying explanatory factors such as retailer market power, measures of
+consumer
+ search and menu costs. Results from a threshold-error-correction-process clearly
+provide
+ empirical support for the ‘rockets and feathers’ phenomenon: prices increase more
+quickly
+ than they decrease. In contrast to much of the existing literature, which explains
+the
+ ‘rockets and feathers’ phenomenon as a result of retailers exercising market power, we
+ﬁnd
+ the opposite result: the degree of asymmetry in prices is negatively related to mar-
+ket
+ power (decreases with the Lerner-Index). Our measure of (cross-product) search costs
+does
+ not account for observable differences in asymmetric cost pass-through rates between
+products.
+ The ‘rockets and feathers’ observation is better explained by product-speciﬁc  dif-
+ferences
+ in menu costs (‘mistake costs’) and costs associated with stock-outs which can
+lead
+ to a loss of consumer goodwill.
+© 2016 Elsevier B.V. All rights reserved.
+1. Introduction
+An asymmetric adjustment of prices to cost increases and decreases (asymmetric cost pass-through, ‘aCPT’)1 has been
+observed for many agricultural and energy markets (see Frey and Manera (2007), Eckert (2013) or Perdiguero-Garcia (2013)
+for recent surveys of the ﬁeld).  Different explanations for an aCPT have been proposed in the existing literature: non-
+competitive markets (market power), costs of price adjustment (menu costs and ‘mistake costs’), product-speciﬁc  differences
+in costs of stock-outs, and search costs.
+While there is ample empirical evidence on incomplete and asymmetric price transmission, the existing studies do not
+provide reliable support to interpret this as evidence in favor of one of the different explanations offered in the literature. A
+large share of this literature focuses on one product market using only time series data and implicitly assumes competition
+∗ Corresponding author. Tel.: +49 1704520158.
+E-mail address: jploy@ae.uni-kiel.de (J.-P. Loy).
+1 The existing literature uses the terms ‘vertical price transmission’ and ‘cost-pass-through’ (CPT) interchangeably to characterize the impact of factor
+price
+ (cost) changes on downstream product prices (Misra and Khan, 2010). We will use the term ‘cost-pass-though’ (CPT) or ‘asymmetric cost-pass-through’
+(aCPT)
+ in the present analysis.
+http://dx.doi.org/10.1016/j.jebo.2016.01.007
+0167-2681/© 2016 Elsevier B.V. All rights reserved.
+J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192  185
+within this market to be global (some exceptions are mentioned in the next section). ‘Unless important changes in market
+power are known to have occurred within the study period, this sort of analysis provides no basis for comparing price
+transmission under conditions of more and less market power because there is no variation in the ‘treatment variable”
+(Meyer and von Cramon-Taubadel, 2004, p. 588).
+The present analysis goes beyond this research by comparing the cost pass-through rates for a large number of different
+brands and retailers. The empirical model is based on a comprehensive data set comprising a long panel of store-level retail
+prices and wholesale costs for up to 90 different brands of milk sold in 327 retail stores across Germany. The abundance of
+the data allows us to identify heterogeneity in pass-through across retailers and measure conditional correlations between
+pass-through rates and factors such as retailer market power, measures of consumer search and menu costs, and product
+characteristics.2 In a two-stage procedure, we ﬁrst  estimate coefﬁcients  of the threshold-error-correction-process, which
+are then used as a dependent variable in a regression to measure conditional correlations with our measures of market
+power, menu- and search costs.
+2. Literature
+In terms of the empirical approach applied, the present analysis is closely related to studies in the retail gasoline
+market. Deltas (2008), Verlinda (2008) and Lewis (2011) investigate pass-through rates in multiple geographic mar-
+kets and across many sellers and aim at examining observed differences between markets and regions with station and
+local market level characteristics. According to Meyer and von Cramon-Taubadel (2004) two explanations for an aCPT
+are predominantly used in the existing literature: non-competitive markets (market power) and menu costs. The ﬁrst
+hypothesis states that (oligopoly) retailers may exert market power by raising prices more rapidly in response to a cost
+increase than by cutting prices in response to a cost decrease. Borenstein et al. (1997), for example, argue that ‘prices are
+sticky downward because when input prices fall the old output price offers a natural focal point for oligopolistic sellers’
+(p. 324).3
+The second hypothesis relies on costs related to adjusting quantities and prices. Menu costs imply a lagged response to
+cost shocks (Ball and Mankiw, 1994). Supply adjustment costs (including menu costs) can also explain asymmetries in price
+adjustment if these costs are asymmetric with respect to an increase or a decrease in output quantities and/or prices.4 Levy
+et al. (1998), however, cast some doubt on this asymmetry in menu costs: ‘given the structure of the price change process,
+the cost of labor used, the cost of preparing and delivering price tags, and the cost of in-store managerial time are not likely
+to be higher for price increases than price decreases’ (p. 113).5 The authors also explore one speciﬁc  component of the costs
+of price adjustment –  the so-called ‘mistake costs’ (i.e. costs associated with mistakes that occur in the price change process)
+–  that may have an asymmetric effect on price adjustment. According to Levy et al. (1998), costs associated with these
+mistakes will be low if they favor the customers, but they can be very high if the mistakes favor the store, since the store
+may lose reputation and customers’ goodwill and may even face legal problems. The authors argue that ‘the asymmetric
+effects of the mistake cost component of the price adjustment costs may indeed deter price increases more often than price
+decreases’ (p. 113).
+Retailers’ incentives to adjust prices asymmetrically to cost increases and decreases can also differ between products.
+Ward (1982) suggests that retailers of perishable products might hesitate to raise prices for fear of reduced sales leading to
+spoilage. This would lead to negative aCPT. Ward’s explanation is challenged by Heien (1980), who argues that ‘changing
+price is not a problem for perishables, but for items with a long shelf life, price changing is costly both in terms of time to
+put on new labels and in goodwill lost’ (p. 15).6 More speciﬁcally,  aCPT can be the result of households’ unequal costs of
+maintaining relatively high or low inventories. For products that are more expensive to store in the household (perishable
+products), the costs of experiencing a stock-out at the retailer will be particularly high. To ward off a stock-out of these
+2 Previous investigations of the milk market have found evidence of asymmetric pass-through. Kinnucan and Forker (1987) observe pricing asymmetries
+in
+ retail prices of dairy products (milk, cheese, butter, and ice cream) in the US, with larger and speedier reactions when farm prices are increasing. Serra and
+Goodwin
+ (2003) ﬁnd  evidence for aCPT in dairy products in Spain. Chavas and Mehta (2004) analyze the butter market in the US for the period from 1980
+to
+ 2001. They ﬁnd  strong support for asymmetry in the adjustment of retail prices, with a stronger reaction when confronting wholesale price increases
+compared
+ to wholesale price decreases. Fernandez-Amador et al. (2010) observe signiﬁcant  asymmetries in the vertical price transmission mechanism
+between
+ producer and consumer prices of milk products in Austria using monthly data for the period from January 1996 to February 2010.
+3 A reviewer correctly pointed out that high markups are not necessarily associated with collusion. Monopoly and nearly monopoly markets also have
+high
+ markups, but may not indicate asymmetric cost pass-through.
+4 In the Ball and Mankiw (1994) model, positive inﬂation  rates can explain an asymmetric price transmission. Firms increase prices to correct for
+accumulated
+ and anticipated inﬂation.  Transmission of negative shocks would be less necessary as inﬂation  would already have adjusted the prices. This
+model,
+ however, does not explain any differences in aCPT between products within an economy.
+5 He et al. (2013) argue that the form of the pricing asymmetry in a model with menu costs critically depends on the shape of the consumer demand
+curve.
+ If the demand function is convex, a ﬁrm  is more likely to change its price in response to a negative cost shock and less likely to change its price
+responding
+ to a positive cost shock. A concave demand function has the opposite effect. Similarly, Meyer and von Cramon-Taubadel (2004) conclude: ‘In
+summary,
+ . . . , attempts to explain APT [asymmetric price transmission] based on adjustment costs lead to ambiguous and sometimes contradictory results,
+with
+ some authors providing arguments for positive APT, and others for negative’ (p. 590).
+6 Similarly, Rotemberg (2009, 2010) argues in a formal model, in which ﬁrms  internalize the cost-related regret that consumers experience when prices
+change
+ unexpectedly: ‘Price changes can trigger consumer regret. If a good is storable and people notice an increase in its price, they are likely to regret
+not
+ having purchased earlier, while they regret not having waited if they see a price decline (Rotemberg, 2009, p. 1)’.
+186 J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192
+products, ﬁrms  may lower their own prices at a slower rate than the decline in upstream prices. Thus, a cost reduction will
+be passed on to consumers more slowly than cost increases, which implies a positive asymmetry in cost pass-through rates
+for perishable products. For products that can be stored more easily in the household, the degree of asymmetry in cost pass-
+through rates should be smaller.7 Costs associated with product stock-outs can be substantial; Matsa (2011) argues that
+product availability is an important dimension of quality in the supermarket industry. According to the author, stock-outs
+are estimated to cost U.S. supermarket retailers $6 billion to $12 billion in immediate lost sales each year in addition to the
+potentially even greater risk that some consumers will also shift their future shopping to competing stores. To avoid these
+costs, supermarkets typically spend twice as much on inventory as on advertising.8
+The importance of stock-out costs as an explanation for aCPT-rates has been challenged by the observation of rather slow
+price transmission rates for some products (in some cases, cost shocks take many weeks to pass through to retail prices).
+Given this slow speed of adjustment, one would expect re-stocking of these products to be rather easy during such a long
+time period. The present paper, however, does not suggest that stock-out costs fully explain slow price transmission rates.
+Our analysis rather aims at providing empirical evidence for differences in the speed and asymmetry of price transmission
+between products, which might be related to product-speciﬁc  differences in stock-out costs: aCPT-rates should be larger for
+perishable products than for products that can be stored more easily.
+More recent studies provide additional arguments for aCPT based on consumer search costs. Tappata (2009) argues that
+rational consumers will search less when prices are falling compared to when they are rising. Therefore, prices are slower
+to adjust in a downward direction. While Tappata assumes symmetric learning by consumers, Yang and Ye (2008) focus
+on asymmetric learning: ‘When a positive cost shock occurs, all the searchers immediately learn the true state; the search
+intensity, and hence the prices, fully adjust in the next period. When a negative cost shock occurs, it takes longer for non-
+searchers to learn the true state, and the search intensity increases gradually, leading to slow falling of prices’ (Yang and Ye,
+2008, p. 547). In Cabral and Fishman (2012), ﬁrms  experience heterogeneous cost shocks and consumers search sequentially.
+Consumers’ willingness to search is low (high) when they observe small (large) price variations. Thus, ﬁrms’  incentives to
+pass cost shocks to ﬁnal  prices differ depending on the size of these shocks. When cost changes are small, sellers increase
+prices moderately without losing customers but do not reduce prices. The opposite asymmetry occurs when the cost change
+is large. The following sections aim at examining cost pass-through rates empirically.
+3. Market description, data and model speciﬁcation
+German dairies process about 20 per cent of the milk produced in the EU-27 (AMI, 2010). About one fourth of the German
+dairy companies are
+ cooperatives, which are generally larger than non-cooperatives; their total share of processed milk is
+about 50 per cent. The market share of the six largest dairy companies is almost 50 per cent, and four of them are cooperatives.
+Dairy companies deal directly with food retailers. The food retailing sector is even more concentrated than the processing
+sector. In 2010, the top six grocery retailers provided more than 75 per cent of the sector’s turnover. Among the different
+retail business formats (with respect to store size and store product assortment) discounters are particularly important; in
+2009 discounters accounted for 56 per cent of milk retail sales in Germany. Consumers in Germany are highly price sensitive
+and dairy products are key items that inﬂuence  consumers’ store choices. Almost 75 per cent of the milk consumed in
+Germany are private labels. A more detailed description of the German milk processing and retailing market is available in
+Herrmann et al. (2009) and Loy et al. (2015).
+The empirical analysis uses weekly retail prices of 90 different brands of milk (one-liter packs, with 3.5 percent fat) from
+327 grocery stores for the period from 2005 to 2008. The data are obtained from Symphony IRI Group (SIG, 2011). Not all 90
+brands are sold in all stores; in total 917 individual price series for 90 different brands and 327 grocery stores are available.
+Note that the price series include price promotions (‘sales’), i.e. signiﬁcant  temporary price reductions that are unrelated to
+cost changes (Hosken and Reiffen, 2001). To prevent our price transmission estimates from being biased by the incidence of
+sales, we eliminate all price promotions from the retail price series and replace sales prices with the regular prices prior to
+the sale.9
+The retail milk market is particularly suited for studying cost pass-through rates for several reasons. Milk is a frequently
+purchased product and an important category for both consumers and retailers. In periods of high retail prices as well as
+during sporadic outbreaks of price warfare, milk prices have been the subject of continuing interest to retailers and dairy
+farmers, as well as to consumers and government agencies. Secondly, due to the short shelf life and high perishability of
+milk, it is difﬁcult  for food processors, retailers and consumers to stockpile this product and hold large inventories in periods
+7 Slonim and Garbarino (2009) show that the direction and strength of the asymmetry depend on the product’s stockability (i.e., the number of units of
+the
+ product a consumer will carry) and the strength of the reference price (loss aversion) effects.
+8 The issue of stock-outs has begun to receive increased interest in the business literature as researchers have started to examine the short- and long-run
+consequences
+ of stock-outs on consumers (see Corsten and Gruen (2004) and Musalem et al. (2010) among others). In a comprehensive study on the
+incidence
+ and consequences of stock-outs across different product categories and geographies, Gruen et al. (2002) observe that the average out-of-stock
+rate
+ in the United States and in Europe is about 8% at any point in time and that the costs associated with out-of-stocks can be substantial for some product
+categories.
+9 We also checked the impact of excluding promotional prices by running models with the original series. The results show only small differences, the
+main
+ conclusions remain unchanged. Results are available from the authors upon request.
+J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192  187
+of low prices. While the missing information on retailer inventories is a major concern for many empirical studies of cost
+pass-through rates, retailer inventories are less likely to be an important issue with milk. Finally, in contrast to most retail
+settings, where wholesale costs of retailers are unobservable to researchers, wholesale prices for milk can be measured very
+accurately. In the present case, we obtain wholesale prices for milk from an extensive survey of the German dairy industry
+conducted by the BLE (‘Bundesanstalt für Landwirtschaft und Ernährung’). The BLE collects the data for each dairy (including
+the costs of transportation to the retailer). Due to conﬁdentiality  reasons, BLE only releases the average wholesale prices
+over all dairies. However, we interviewed dairy managers who conﬁrmed  that differences between retailers (due to different
+transportation costs, for example) are negligible. The pasteurization and homogenization involved in processing raw milk is
+highly standardized, with negligible differences across ﬁrms  and locations, which justiﬁes  using the same wholesale price
+for each retailer and each brand. The market experts interviewed (CEOs of major dairy companies in the German market)
+conﬁrmed  that our cost measure is representative (with only minor differences of a few Eurocent per liter) for all dairies.
+For each price series (brand of milk sold at one retailer), we estimate a restricted bivariate three-regime-threshold-error-
+correction-model, which allows asymmetric price responses. The estimation procedure considers the proper lag length,
+tests for threshold co-integration and the number of thresholds (for details see Loy et al., 2015). Eq. (1) shows the cost
+pass-through model.
+/Delta1pR
+t = ˛ 0 + ı− I1
+t /SYNt− 1 + ı0I2
+t /SYNt− 1 + ı+I3
+t /SYNt− 1 +
+k∑
+j=1
+˛j/Delta1pR
+t−j +
+k∑
+j=1
+ˇj/Delta1pW
+t−j + vt (1)
+Changes of the retail price (/Delta1pR
+t ) depend on changes of the wholesale price (/Delta1pW
+t ) and deviations from the long-run
+price-cost-equilibrium (/SYNt− 1), which are separated by indicator variables (I1
+t , I2
+t , I3
+t ) into three regimes.10 By estimating Eq.
+(1) for each individual product (brand of milk sold at a speciﬁc  store), we obtain estimates for lower and upper regime
+error-corrections ı− ; ı+. From the parameter estimates ı− and ı+, we can derive a natural measure for the speed of the
+cost pass-through (sCPT) as well as for the asymmetry of the cost pass-through (aCPT), which are calculated as follows:
+CPT = |ı+ + ı− |/2 and CPT = ı+ − ı− .
+In a second step, we investigate the relationship between differences in sCPT and aCPT between the 917 products (brands
+sold in different stores) and our measures of market power, menu- and search costs. In this two-stage procedure, we estimate
+all coefﬁcients  of the CPT model for each individual retail price series separately. Note that this procedure does not take into
+account any form of interdependence that might exist between individual retail price series. As an alternative, one could
+also estimate the model in a one-step panel model. However, a panel model places strong restrictions on individual CPT
+processes: all CPT model parameters are assumed identical for all individual series. The efﬁciency  gain of the panel model
+comes at the cost of placing model parameter restrictions. We decided on the most ﬂexible  form, in particular because the
+number of time-related observations of our sample is quite large (t = 208).
+We follow previous studies (Connor and Peterson, 1992; Barsky et al., 2003) by using the relative markup between average
+individual retail and wholesale prices (i.e. the Lerner Index LI) as our measure of market power. Note that this margin does
+not cover marginal costs of retailing; our measure thus represents an upper bound for retailers’ markup on marginal costs.11
+Our measure of menu costs (MC) is obtained from estimation results of the threshold-error-correction model. The inner
+regime of the threshold-error-correction-mechanism captures smaller deviations from the long-run cost-price-equilibrium.
+Due to adjustment costs these small deviations need to cumulate over time before they are passed on to retail prices. Over
+the range of the inner regime, retail prices may not change at all. A greater range, thus, indicates higher menu costs. We thus
+deﬁne  MC = /DC2+ − /DC2− .
+While search models have played an important role in economics ever since the seminal article by Stigler (1961), empirical
+evidence on the importance of search costs is scarce due to the obvious difﬁculties  in measuring these costs.12 In the context
+of multi-product retailers, a distinction between cross-store and cross-product search costs is important. Richards et al.
+(2014), one of the very few studies investigating the implications of search costs for price adjustment empirically, focus on
+cross-product (within store) search costs. The authors assume that consumer search costs vary directly with the number
+of products in a retail store. Greater variety of products implies higher search costs because consumers must evaluate a
+greater number of alternatives before ﬁnding  the one they prefer. However, as pointed out by one of our referees, the
+comparison of different product prices within a given store will typically be easier than comparing prices across stores.
+If consumers are willing to switch between stores to purchase the cheapest product, it might be more important (but
+also more costly) to obtain information about what other stores are charging (cross-store search costs). Unfortunately,
+10 Two
+ thresholds (/DC2− , /DC2+ ) are estimated following the procedure by Chan (1993). The indicator variables are deﬁned  according to the regimes separated
+by the thresholds: if /SYNt− 1 < /DC2− , then I1
+t = 1, else I1
+t = 0. If /SYNt− 1 > /DC2+ , then I2
+t = 1 else I2
+t = 0 and I3
+t = 1 − I1
+t − I2
+t .
+11 Connor and Peterson (1992) and Barsky et al. (2003) measure market power in a similar way by calculating the difference between national brand and
+private
+ label prices.
+12 Some authors (Brown and Goolsbee (2002) and Tang et al. (2010), for example) have attempted to understand the nature of search costs by comparing
+the
+ degree of price dispersion between online and traditional retail markets, for example. Since milk is not sold online, this measure cannot be used in the
+present
+ context.
+188 J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192
+Table 1
+Summary
+ statistics of estimation results from ﬁrst  stage regression.
+Parameters and tests Mean Std. dev. Share of estimates signiﬁcantly
+different
+ from zero at 5% level
+(1)
+ (2) (3)
+ı− − 0.316 0.213 93%
+ı0 − 0.045 0.270 8%
+ı+ − 0.118 0.103 62%
+ı+ − ı− 0.198 0.161 76%
+/DC2− − 0.035 0.023 n.a.
+/DC2+ 0.058 0.034 n.a.
+Own calculations based on SIG (2011) using Stata (2011).
+The
+ thresholds /DC2− and /DC2+ are estimated following Chan’s (1993) procedure. To our knowledge, no formal test on the size of thresholds is available so far.
+a good proxy for cross-store search costs is not available. Thus, in the present analysis, we follow Richards et al. (2014) and
+use the number of different milk brands in a store as our only measure of consumer search costs (SC).
+We also control for the type of milk (fresh versus processed at ‘ultra-high temperature’), the organizational structure of
+the food processor (cooperative versus non-cooperative), the type of the brand (private label versus national brand), and
+the type of the retail channel (discounter versus non-discounter). These variables are included in the matrix X in Eq. (2).
+sCPTi = ˛ 0 + ˛ 1LIi + ˛ 2MCi + ˛ 3SCi + Xi/CR + εi
+sCPTi = ˇ 0 + ˇ 1LIi + ˇ 2MCi + ˇ 3SCi + Xiı + ∈i
+(2)
+In Eq. (2), subscript i refers to the different products (brands in different stores), ˛ 0, ˛ 1, ˛ 2, ˇ 0, ˇ 1, ˇ 2, /CR and ı and are
+parameters to be estimated and ε as well as ∈ are IID error terms.
+4. Results and conclusions
+Time series unit root, co-integration, and threshold co-integration tests are applied to each of the 917 price series.
+Furthermore, we use panel tests for unit roots and co-integration. Granger-causality tests suggest that wholesale prices are
+exogenous. All procedures indicate non-stationary behavior of price series and co-integration between wholesale and retail
+prices. The cost pass-through processes indicate non-linear behavior which is modeled by a threshold-error-correction-
+mechanism. The number of thresholds is determined using the procedure developed by Strikholm and Teräsvirta (2006).
+For 90 per cent of all retail price series for milk, the procedure suggests at least one threshold. In 49 per cent of all cases,
+the assumption of one threshold is rejected against the two-threshold model (i.e. three regimes). We thus estimate the
+two-threshold model (with three regimes) for all price series since this is the more ﬂexible  speciﬁcation.
+Nearly all (99 percent) of the steady state price-cost-equilibria lie within the range of thresholds ([/DC2+, /DC2− ]). On average,
+150 out of 208 observations (75 percent) refer to the inner regime. The lower threshold is on average -3.5 Eurocent per liter;
+the upper one is 5.8 Eurocent per liter. The adjustment coefﬁcient  estimates (ı0) for the inner regime (/DC2− ≤ /SYNt− 1 ≤ /DC2+) are
+small, the average is − 0.04. The parameter estimates for ı0 are not signiﬁcantly  different from zero in 92 percent of cases. In
+the vast majority of cases, adjustment coefﬁcients  for the outer regimes (ı− ; ı+) are absolutely larger than the coefﬁcients
+for the respective inner regime. The estimates for the lower regimes (ı− for ≤ /SYNt− 1 ≤ /DC2− ) are larger in absolute terms than the
+ones for the upper regime (ı+ for ≤ /SYNt− 1 ≤ /DC2+). The average rate of decay for a margin that is smaller than the lower threshold
+(ı− ) is − 0.32 compared to − 0.12 for ı+. Furthermore, the parameter estimates for ı− are signiﬁcantly  different from zero in
+nine out of ten cases, while the estimates for ı+ are signiﬁcantly  different from zero in 62 percent of all cases. Table 1 reports
+descriptive statistics of the ﬁrst-stage  estimation results.
+In a second step, we investigate the conditional correlation between CPT-rates (the speed sCPT = |ı+ + ı− |/2 as well as the
+asymmetry aCPT = ı+ − ı− of cost pass-through rates) and measures of market power, menu- and search costs.13 Table 2
+reports descriptive statistics of all variables used in Eq. (2), conditional correlations of the speed and asymmetry of price
+transmission with market, store, and product characteristics are shown in Table 3.
+Following Lewis and Linzer (2005) we apply OLS with robust standard errors (in columns (1) and (3) of Table 3) and WLS.
+Note that the empirical analysis might be affected by problems associated with the endogeneity of explanatory variables.
+Firstly, an asymmetric CPT might mechanically generate a higher Lerner Index: if the prices of some brands adjust more
+quickly to cost increases than to cost decreases, the average mark-up for these brands will be larger. Secondly, the same price
+data is used in both, our deﬁnition  of the dependent variables (sCPT and aCPT) and in our measure of menu costs (MC), which
+might cause difﬁculties  with regard to identifying a causal link. To consider the potential problem of endogeneity of the
+Lerner Index (LI) and our measure of menu costs (MC), we employ the instrumental variable approach suggested by Lewbel
+13 The parameter estimates suggest positive asymmetries for most products (brands in different stores). We exclude estimates that indicate no asym-
+metries
+ or negative ones. This reduces the sample by 7 percent; the number of observations for the second step is reduced to 857. The exclusion of these
+estimates
+ does not change the main results of our empirical analysis.
+J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192  189
+Table 2
+Descriptive
+ statistics.
+Obs. Mean Std. dev. Min. Max.
+Asymmetry (aCPT) 857 0.219 0.145 0.003 0.828
+Speed
+ (sCPT) 857 0.223 0.147 − 0.000 0.607
+Lerner
+ Index (LI) 857 0.340 0.124 0.086 0.538
+Menu
+ costs (MC) 857 0.094 0.045 0.001 0.288
+Search
+ costs (SC) 857  7.540 2.863 2
+ 14
+Non-cooperative
+ dairy (P) 857  0.360 0.480 0  1
+Private
+ label (PL) 857 0.331 0.470 0 1
+UHT-milk
+ (UHT) 857 0.669 0.470 0 1
+Discounter
+ (DC) 857 0.076 0.265 0 1
+Source: own calculations based on SIG (2011) using Stata (2011).
+Asymmetry = Difference of error
+ correction response (ı+ − ı− ); Speed = Average speed error correction response (|ı+ + ı− |)/2; Lerner Index = (Ø retail price − Ø
+wholesale price)/Ø retail price; Menu costs = Range of thresholds (range of inner regime); Search costs = # stock-keeping units. The number of observations
+is
+ 857.
+Table 3
+Estimation
+ results of second-stage estimation model (dependent variables are the speed and the asymmetry of cost pass-through rate).
+Estimation method Dependent
+ variable is CPT
+ ≡ |ı++ı− |
+2 Dependent variable is
+ CPT ≡ ı+ − ı−
+Parameter
+value
+(t-ratio) Parameter
+value
+(t-ratio) Parameter
+value
+(t-ratio) Parameter
+value
+(t-ratio)
+OLS (1) IVreg (Lewbel, 2012) (2) OLS (3) IVreg (Lewbel, 2012) (4)
+Explanatory variables
+Constant
+ 0.491 (16.31)*** 0.503 (13.95)*** 0.507 (15.09)*** 0.513 (12.15)***
+Lerner
+ Index (LI) − 0.803 (− 11.54)*** − 0.756 (− 8.56)*** − 0.638 (− 7.77)*** − 0.619 (− 5.52)***
+Menu
+ costs (MC) 0.008 (0.13) − 0.274 (− 2.25)** − 0.317 (− 3.33)*** − 0.437 (− 2.86)**
+Search
+ costs (SC) − 0.004 (− 3.97)*** − 0.004 (− 3.92)*** − 0.003 (− 1.84)* − 0.003 (− 1.83)*
+Non-cooperative
+ dairy (P) 0.050 (6.49)*** 0.046 (5.84)*** − 0.006 (− 0.49) − 0.008 (− 0.58)
+Private
+ label (PL) 0.082 (4.75)*** 0.080 (3.95)*** − 0.003 (− 0.17) − 0.005 (− 0.22)
+UHT-milk
+ (UHT) − 0.015
+ (− 2.31)** − 0.014 (− 2.21)** − 0.031 (− 3.56)*** − 0.031 (3.58)***
+Discounter (DC) 0.012 (0.97) 0.016 (1.09) 0.035 (2.15)** 0.039 (2.37)**
+R-squared
+ 0.705 0.699 0.396 0.396
+Adj.
+ R-squared 0.703 0.697 0.391 0.390
+Source: own calculations based on SIG (2011) using Stata (2011).
+We report White’s (1980) heteroscedasticity-consistent standard errors. Asterisks denote statistical signiﬁcance  in a t-test at 1 per cent (***), 5 per cent (**)
+or
+ 10 per cent (*) levels. The number of observations is 857. The reference category is a national brand of fresh milk, produced at a cooperative dairy, sold
+at
+ non-discounters in Central Germany. Estimates for the WLS procedure are available from the authors upon request. The Hausman-test shows that both
+estimation
+ procedures result in the same set of estimators. For sCPT the /US2 (7) = 11.55 (p-value = 0.12) and for aCPT the chi/US2 (7) = 1.22 (p-value = 0.99).
+(2012) in columns (2) and (4).14 Table 3 suggests that the parameter estimates between the OLS and the IV approach are
+very similar. In fact, employing a Hausman test does not reject the same set of estimates for OLS and Lewbel’s instrumental
+variable approach. Thus, endogeneity appears not to be an issue here.
+As an additional robustness test, we re-estimate the model with store-ﬁxed  effects. Two explanatory variables that are
+ﬁxed  for each retailer (our measure of search costs, i.e. the number of products in each store, as well as the type of the retail
+channel, i.e. discounter versus non-discounter), had to be removed in the ﬁxed-effects  model. Since the parameter estimates
+for all other variables are hardly affected, they are not shown in Table 3 but are reported in Table A1 in Appendix A.
+Table 3 reports a negative parameter estimate for the Lerner Index (LI) which is signiﬁcantly  different from zero at the
+99%-level in all four estimation models. Columns 1 and 2 suggest a negative correlation between price-cost margins and
+our measures of the speed and asymmetry of price adjustment. This ﬁnding  is in line with the theoretical arguments and
+the empirical evidence (for the gasoline market) reported in Borenstein and Shepard (2002), for example. The estimation
+results reported in columns (3) and (4) suggest that the (positive) asymmetry between the adjustment coefﬁcients  of the
+outer regimes ı− , ı+ is associated with lower values of the Lerner Index (LI). A causal interpretation of these estimates is that
+retailers adjust prices of products (brands in individual stores) more quickly to cost increases than to cost decreases where
+the markup on wholesale prices is small. For products with a larger markup on wholesale prices, the asymmetry of price
+adjustments with respect to cost shocks is signiﬁcantly  smaller. Note, however, that we cannot fully rule out the existence
+of an omitted variable that leads to both, high margins and low values for the asymmetry of price transmission.
+The parameter estimate for our measure of the magnitude of menu costs (MC) is negative and signiﬁcantly  different from
+zero in columns (2), (3) and (4). Larger menu costs are associated with a slower speed of price adjustment (column (2)).
+Column (3) and (4) suggest that the positive asymmetry in cost pass-through rates tends to be smaller in markets where
+14 More details are provided in Appendix A.
+190 J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192
+menu costs are important. This ﬁnding  is consistent with the existence of ‘mistake costs’ –  although not a formal test of it
+–  since this type of price adjustment costs would indeed deter price increases more often than price decreases (Levy et al.,
+1998).
+Some of the effects of menu-costs might also be picked up by product-, store- and brand dummies included in our empirical
+model (see below). Levy et al. (1997) use store-level data to directly measure menu costs at ﬁve  multistore supermarket
+chains and observe substantial differences in menu costs between chains. In an additional estimation experiment (available
+from the authors upon request), we estimate the relationship between the range of the thresholds (our measure of menu
+costs) and dummies for non-cooperative dairies, private labels, and the retail channel (discounter). For the private label
+dummy, we ﬁnd  a signiﬁcant  negative parameter estimate indicating that the inner regime (the regime with almost no
+cost-price-adjustment) is smaller for private labels than for national brands. This could be interpreted as an indication for
+lower menu costs for private labels (we are grateful to one of the referees for bringing up this issue).
+Our measure of consumer search costs (SC), i.e. the number of different milk brands offered in the retail store, is negatively
+correlated with the speed of price adjustment to cost changes: prices adjust more sluggishly to cost changes in stores with
+many different brands (high consumer search costs). The impact of SC is signiﬁcantly  different from zero at the 10% level in
+columns (3) and (4). Our results thus do not provide empirical support to the recent theoretical literature on asymmetric cost
+pass-through, which suggests a positive relationship between search costs and pricing asymmetries. However, the present
+analysis is based on measuring cross-product (within store) search costs only. The question whether (potentially more
+important) cross-store search costs would exert the expected positive impact on pricing asymmetries cannot be answered
+based on the available data but is deferred to future research.
+We further ﬁnd  that non-cooperative brands and private labels adjust prices more quickly to cost changes than cooper-
+ative and/or national brands (columns 1 and 2 in Table 3). No signiﬁcant  differences in the asymmetry of cost pass-through
+rates for these variables are reported in Table 3. We ﬁnd  a higher speed (columns 1 and 2) but less asymmetry (columns 3
+and 4) in the price adjustment to cost changes for ‘ultra-high temperature’ (UHT) milk. Discounters do not pass on costs more
+quickly than other retailers, however, they tend to adjust more asymmetrically: the value of aCPT is signiﬁcantly  higher for
+discounters than for all other retailers in columns (3) and (4).
+In summary, our results conﬁrm  Peltzman’s (2000) argument which suggests that ‘. . . attributing asymmetries to imper-
+fect competition is unlikely to be rewarding’ (p. 468). In contrast to much of the existing literature, which explains the
+‘rockets and feathers’ phenomenon as an apparent result of retailers exercising market power, we ﬁnd  the opposite result:
+the degree of asymmetry in prices is negatively related to market power (decreases with the Lerner-Index). If we assume an
+oligopoly for the market under study, this result implies a rejection of the theory of Borenstein et al. (1997); or the market
+under study is not an oligopoly but e.g. a monopoly or nearly monopoly market, which also have high markups without
+perhaps an asymmetric cost pass-through.15
+Furthermore, we ﬁnd  that our measure of (cross-product) search costs does not account for observable differences in
+aCPT-rates between products. Whether asymmetries in price transmission are due to consumers’ cross-store search costs
+should be analyzed in future research.
+The ‘rockets and feathers’ observation is better explained by differences in menu costs (‘mistake costs’) as well as costs
+associated with stock-outs. Note that in both cases, an asymmetry in consumer learning is involved where consumers react
+asymmetrically to satisfying and unsatisfying experiences. In the case of stock-outs, for example, Gaur and Park (2007)
+argue that “in  practice, customers do react substantially and negative to poor service (e.g., stock-outs), which may lead
+them to switch retailers on subsequent trips”  (p. 227). The authors further suggest that stock-out costs will differ between
+product categories: “For  a necessity item such as milk, for instance, consumers may react more strongly to a stock-out than
+to a satisfying visit because they might take it for granted that such items should always be in stock. For a search item
+such as fashion clothing, on the other hand, consumers may weigh a satisfying visit much more than a stock-out of one
+of the variants because they expect to search for these items”  (p. 231–2).  Similarly, if costs of experiencing a stock-out for
+consumers are larger for perishable products (i.e. fresh milk), retailers will adjust prices for these products more quickly
+upwards than downwards. Our ﬁnding  of a signiﬁcantly  smaller degree of aCPT for UHT milk as opposed to fresh milk is
+consistent with–although  not a formal econometric test of–this  argument.16 Empirical work by Corsten and Gruen (2004),
+Musalem et al. (2010), and Matsa (2011) suggests that costs associated with stock-outs indeed are substantial.
+Data permitting, it would be interesting to measure and control for the impact of perishability, the stock of inventories
+and the importance of cross-store search costs directly. Explicitly analyzing inventory policies of retailers for different
+products as well as their implications for asymmetries in cost pass-through rates should prove conducive to enhancing our
+understanding of retailer strategies and providing implications for managerial decision-making at the retailer level.
+15 Either way, the clear negative association between the LI and the aCPT shown in the data calls for an extension of the theory. However, such an extension
+goes
+ beyond the scope of this paper.
+16 Note that this explanation for aCPT-rates will be particularly relevant for retailers who sell a larger share of their milk products to smaller businesses
+(restaurants,
+ cafes or other businesses not large enough to buy at wholesale). These customers will have the largest incentive to carry sufﬁcient  inventory
+of
+ storable products. While some of the existing empirical studies on the incidence and consequences of stock-outs found signiﬁcant  differences between
+product
+ groups (Gruen et al. (2002) and Corsten and Gruen (2004)), systematic empirical evidence for (different types of) milk products is not available so
+far.
+J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192  191
+Acknowledgments
+Jens-Peter Loy gratefully acknowledges the ﬁnancial  and other support by the Vienna University of Economics and
+Business during a research visit in March 2014.
+Appendix A.
+(a) Results of ﬁxed-effects  estimation
+Table A1
+Fixed-effects
+ estimation results of second-stage estimation model (dependent variables are the speed and the asymmetry of cost pass-through rate).
+Dependent variable is CPT ≡ |ı++ı− |
+2 Dependent variable is CPT ≡ ı+ − ı−
+Parameter value (t-ratio) Parameter value (t-ratio)
+(1) (2)
+Explanatory variables
+Constant
+ 0.439 (16.65)*** 0.473 (12.73)***
+Lerner
+ Index (LI) − 0.768 ( − 11.14)*** − 0.634
+ (− 6.52)***
+Menu costs (MC) 0.069 (0.85) − 0.194 (− 1.69)*
+Non-cooperative
+ dairy (P) 0.050 (5.25)*** − 0.005 (− 0.39)
+Private
+ label (PL) 0.096 (6.29)*** 0.008 (0.40)
+UHT-milk
+ (UHT) − 0.017 (− 2.64)*** − 0.033 (− 3.69)***
+R-squared (within) 0.735 0.432
+R-squared
+ (between) 0.664 0.364
+R-squared
+ (overall) 0.696 0.387
+Source: own calculations based on SIG (2011) using Stata (2011).
+We
+ report White’s (1980) heteroscedasticity-consistent standard errors. Asterisks denote statistical signiﬁcance  in a t-test at 1 per cent (***), 5 per cent
+(**)
+ or 10 per cent (*) levels. The number of observations is 857. The reference category is a national brand of fresh milk produced at a cooperative dairy.
+(b) Instrumental variable approach
+Conventionally, identiﬁcation  of the structural parameters is obtained by assuming exclusion restrictions, or equivalently
+by postulating the availability of instrumental variables. Since the exclusion restrictions may not always be justiﬁed,  the
+present analysis follows Lewbel (2012), who relies on heteroscedasticity in the errors to achieve identiﬁcation.  The main
+advantages of this method are that no external instrumental variables are necessary to identify the structural parameters
+and that the associated estimator usually takes the standard form of the generalized method of moments (GMM). “For  each
+exogenous variable an instrument is constructed from Zj = (Xj − ¯X) · εj, where ε is a vector of residuals from the ﬁrst  stage
+regression of each endogenous regressor on all exogenous regressors, including a constant vector. These auxiliary regression
+residuals have zero covariance with each of the regressors used to construct them, implying that the means of the generated
+instruments will be zero by construction. However, their element-wise products with the centered regressors will not be
+zero, and will contain sizable elements if there is clear evidence of ‘scale heteroskedasticity’ with respect to the regressors”
+(Baum et al., 2013: 11–12).
+Lewbel (2012) shows that identiﬁcation  can be achieved without imposing the standard exclusion restrictions when there
+are some exogenous variables Z in the structural equation and errors are heteroscedastic. In the present context, the Z vector
+comprises the following variables: SC, PL, P, UHT, and DC (see Table 2 or Table 3). Identiﬁcation  requires that the error terms
+in the ﬁrst-stage  regressions (for LI and MC) are heteroscedastic. Following Lewbel (2012), we use the Breusch–Pagan  test
+of heteroscedasticity. The results show that the null of homoscedastic errors is clearly rejected in each case with a p-value
+equal to 0.01 or less. Sargan’s test of overidentiﬁcation  is not rejected (˛ = 0.202); thus, we employed proper instruments.
+Table A2 shows results from the ﬁrst-stage  regression for the Lerner-Index (LI) for key variables in the Z vector. Non-
+cooperative dairies (P), which are more ﬂexible  in making strategic decisions and produce more and higher value national
+Table A2
+First-stage
+ regression for the Lerner-Index (LI).
+Explanatory variables Parameter estimates (t-ratio)
+Non-cooperative dairy (P) 0.084 (20.02)***
+Private
+ label (PL) − 0.182 (− 40.65)***
+Ultra
+ high heated milk (UHT) 0.001 (0.40)
+Discounters
+ (DC) − 0.023 (− 3.53)***
+Constant
+ 0.370 (110.19)***
+N
+ = 857 R2 = 0.85
+Source: own calculations based on SIG (2011) using Stata (2011).
+192 J.-P. Loy et al. / Journal of Economic Behavior & Organization 123 (2016) 184–192
+brands, are found to have higher markups. Private labels (PL) are store brands that are used to promote the store and to
+present a low price alternative to national brands; thus PL are cheaper (lower markups) than national brands. Ultra high
+heated milk (UHT) is more expensive to produce but at the same time the handling and storage are cheaper; we do not
+observe a signiﬁcant  relationship with the Lerner-Index. Discounters (DC) tend to offer a small product assortment and
+follow an EDLP (everyday low price) strategy with lower markups.
+References
+AMI (Agrarmarkt Informations-Gesellschaft mbH), 2010. AMI-Marktbilanz Milch 2010. Bonn.
+Ball, L., Mankiw, N.G., 1994. Asymmetric price adjustment and economic ﬂuctuations.  Econ. J. 104 (March), 247–261.
+Barsky, R.B., Bergen, M., Dutta, S., Levy, D., 2003. What can the price gap between branded and private-label products tell us about markups? In: Feenstra,
+R.C., Shapiro, M.D. (Eds.), Scanner Data and Price Indexes. University of Chicago Press, pp. 165–228.
+Baum, C.F., Lewbel, A., Schaffer, M.E., Talavera, O., 2013. Instrumental Variables Estimation Using Heteroskedasticity-Based Instruments. German Stata
+Users Group Meeting, Potsdam (http://www.stata.com/meeting/germany13/abstracts/materials/de13 baum.pdf).
+Borenstein, S., Shepard,
+ A., 2002. Sticky prices, inventories, and market power in wholesale gasoline markets. RAND J. Econ. 33 (1), 116–139.
+Borenstein, S., Cameron, A.C., Gilbert, R., 1997. Do gasoline prices respond asymmetrically to crude oil price changes? Q. J. Econ. 112 (1), 305–339.
+Brown, J.R., Goolsbee, A., 2002. Does the internet make markets more competitive? Evidence from the life insurance industry. J. Polit. Econ. 110 (3), 481–507.
+Cabral, L., Fishman, A., 2012. Business as usual: a consumer search theory of sticky prices and asymmetric price adjustment. Int. J. Ind. Organ. 30, 371–376.
+Chan, K.S., 1993.
+ Consistency and limiting distribution of the least squares estimator of a threshold autoregressive model. Ann. Stat. 21 (1), 520–533.
+Chavas, J.-P., Mehta, A., 2004. Price dynamics in a vertical sector: the case of butter. Am. J. Agric. Econ. 86, 1078–1093.
+Connor, J.M., Peterson, E.B., 1992. Market-structure determinants of national brand-private label price differences of manufactured food products. J. Ind.
+Econ. 40 (2), 157–171.
+Corsten, D.S.,
+ 
+Gruen,
+ T., 2004. Stock-outs cause walkouts. Harv. Bus. Rev. 82 (5), 26–28.
+Deltas, G., 2008. Retail gasoline price dynamics and local market power. J. Ind. Econ. 56 (3), 613–628.
+Eckert, A., 2013. Empirical studies of gasoline retailing: a guide to the literature. J. Econ. Surv. 27 (1), 140–166.
+Fernandez-Amador, O., Baumgartner, J., Crespo-Cuaresma, J., 2010. Milking the prices: the role of asymmetries in the price transmission mechanism for
+milk products
+ in Austria. Working Paper in Economics and Statistics. University of Innsbruck, pp. 2010–2021.
+Frey, G., Manera, M., 2007. Models of asymmetric price transmission. J. Econ. Surv. 21 (2), 349–415.
+Gaur, V., Park, Y.-H., 2007. Asymmetric consumer learning and inventory competition. Manag. Sci. 53 (2), 227–240.
+Gruen, T.W., Corsten, D.S., Bharadwaj, S., 2002. Retail Out-of-Stocks: A Worldwide Examination of Extent, Causes and Consumer Responses. Grocery
+Manufacturers of America,
+ Washington, DC.
+He, G., LaFrance, J.T., Perloff, J.M., 2013. Do supermarkets adjust prices asymmetrically? Working Paper. University of Berkeley, Available at:
+http://are.berkeley.edu/candidate/sites/are.berkeley.edu/ﬁles/HeLaFrancePerloffPassThrough.pdf  (downloaded April 16, 2014).
+Heien, D.M., 1980. Markup pricing in a dynamic model of the food industry. Am. J. Agric. Econ. 62 (1), 10–18.
+Herrmann, R.,
+ Moeser, A., Weber, S., 2009. Grocery retailing in Germany: situation, development and pricing strategies. Working Paper No 41. Zentrum für
+internationale Entwicklungs- und Umweltforschung der Justus-Liebig-Universität Gießen,  Gießen,  Germany.
+Hosken, D., Reiffen, D., 2001. Multiproduct retailers and the sale phenomenon. Agribusiness 17 (1), 115–137.
+Kinnucan, H.W., Forker, O.D., 1987. Asymmetry in farm-retail price transmission for major dairy products. Am. J. Agric. Econ. 69, 285–292.
+Levy, D., Bergen, M., Dutta, S., Venable, R., 1997. The magnitude of menu costs: direct evidence from large U.S. supermarket chains. Q. J. Econ. 112 (3),
+791–825.
+Levy, D., Dutta, S., Bergen, M., Venable, R., 1998. Price adjustment at multiproduct retailers. Manag. Decis. Econ. 19, 81–120.
+Lewbel, A., 2012. Using heteroscedasticity to identify and estimate mismeasured and endogenous regressor models. J. Bus. Econ. Stat. 30 (1), 67–80.
+Lewis,
+ J.B., Linzer, D.A., 2005. Estimating regression models in which the dependent variable is based on estimates. Polit. Anal. 13 (4), 345–364.
+Lewis, M., 2011. Asymmetric price adjustment and consumer search: an examination of the retail gasoline market. J. Econ. Manag. Strateg. 20 (2), 409–449.
+Loy, J.-P., Holm, T., Steinhagen, C., Glauben, T., 2015. Cost pass-through in differentiated product markets: a disaggregated study for milk and butter. Eur.
+Rev. Agric. Econ. 42 (3), 441–471.
+Matsa, D.A., 2011. Competition and product quality in the supermarket industry. Q. J. Econ. 126, 1539–1591.
+Meyer, J., von Cramon-Taubadel, S., 2004. Asymmetric price transmission. J. Agric. Econ. 55 (3), 581–611.
+Misra, K.R., Khan, V., 2010. Asymmetries and dynamics of cost pass through in the US milk market. Working Paper. London Business School, Available at:
+http://faculty.london.edu/kmisra/assets/documents/Cost Passthrough.pdf, downloaded 06.03.2014.
+Musalem, A., Olivares, M., Bradlow, E.T., Terwiesch, C., Corsten, D., 2010. Structural estimation of the effect of out-of-stocks. Manag. Sci. 56 (7), 1180–1197.
+Perdiguero-Garcia, J., 2013. Symmetric or asymmetric oil prices? A meta-analysis approach. Energy Policy 57, 389–397.
+Peltzman, S., 2000. Prices rise faster than they fall. J. Polit. Econ. 108 (3), 466–502.
+Richards, T.J., Gómez, M.I., Lee, J., 2014. Pass-through and consumer search: an empirical analysis. Am. J. Agric. Econ. 96 (4), 1049–1069.
+Rotemberg, J., 2010. Altruistic dynamic pricing with customer regret. Scand. J. Econ. 112 (4), 646–672.
+Rotemberg, J., http://www.nber.org/papers/w14933 2009. Altruistic dynamic pricing with customer regret. Working Paper 14933. National Bureau of
+Economic Research, 1050 Massachusetts Avenue, Cambridge, MA 02138.
+Serra, T., Goodwin, B.K., 2003. Price transmission and asymmetric adjustment in the Spanish dairy sector. Appl. Econ. 35, 1889–1899.
+SIG: SymphonyIRI Group, 2011. Retail Scanner Data. SymphonyIRI Group GmbH, Düsseldorf.
+Slonim, R., Garbarino, E., 2009. Similarities and differences between stockpiling and reference effects. Manag. Decis. Econ. 30, 351–371.
+Stigler, G.J., 1961. The economics of information. J. Polit. Econ. 69 (3), 213–225.
+Strikholm, B., Teräsvirta, T., 2006. A sequential procedure for determining the number of regimes in a threshold autoregressive model. Econom. J. 9 (3),
+472–491.
+Tang, Z., Smith, M.D., Montgomery, A., 2010. The impact of shopbot use on prices and price dispersion: Evidence from online book retailing. Int. J. Ind. Organ.
+28, 579–590.
+Tappata, M., 2009. Rockets and feathers: understanding asymmetric pricing. RAND J. Econ. 40, 673–687.
+Verlinda, J.A., 2008. Do rockets rise faster and feathers fall slower in an atmosphere of local market power? Evidence from the retail gasoline market. J. Ind.
+Econ. 56 (3), 581–612.
+Ward, R.W., 1982. Asymmetry in retail, wholesale, and shipping point pricing for fresh vegetables. Am. J. Agric. Econ. 64 (2), 205–212.
+White, H., 1980. A heteroscedasticity consistent covariance matrix estimator and a direct test for heteroscedasticity. Econometrica 48, 817–838.
+Yang, H., Ye, L., 2008. Search with learning: understanding asymmetric price adjustments. RAND J. Econ. 39, 547–564.

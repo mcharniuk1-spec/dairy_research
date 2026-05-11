@@ -1,0 +1,11 @@
+comparison,n,correlation,MAE,RMSE,MAPE_pct,sign_agreement,decision
+FarmGate(oldmodel) vs observed Farm_milk_2015,46,0.963068937734562,1.39679114879106,1.6646605032497142,9.497738063898806,0.7333333333333333,Old reconstruction validates well; usable as robustness.
+Producer(oldmodel) vs Processor_price: butter,50,0.8862708789661755,23.816801207004673,38.271599732182985,10.105759919772456,0.6530612244897959,Old reconstruction validates well; usable as robustness.
+Producer(oldmodel) vs Processor_price: drinking_milk,50,0.8391808723229716,2.183811196055966,3.863438185964796,7.402182093765543,0.6530612244897959,Partial validation; appendix/support only.
+Producer(oldmodel) vs Processor_price: hard_cheese,50,0.7827081968330756,15.728559264830308,23.5152193702288,7.933241897238859,0.673469387755102,Partial validation; appendix/support only.
+Producer(oldmodel) vs Processor_price: kefir,50,0.9122330454196952,1.8784045527128097,3.007423639787007,5.598904382400078,0.6938775510204082,Old reconstruction validates well; usable as robustness.
+Producer(oldmodel) vs Processor_price: skim_milk_powder,50,0.512284471409546,7.6989593022177765,11.310970149468355,7.916931412725416,0.7551020408163265,Weak validation; do not use for main inference.
+Producer(oldmodel) vs Processor_price: sour_cream,50,0.8977508724527928,5.65494116806987,9.445541516716215,6.832123760399239,0.6122448979591837,Old reconstruction validates well; usable as robustness.
+Consumer(oldmodel) vs Consumer_2017_2026: drinking_milk,50,0.8816156812415249,3.1034556377267934,4.974567294993633,7.684911352211888,0.6530612244897959,Old reconstruction validates well; usable as robustness.
+Consumer(oldmodel) vs Consumer_2017_2026: soft_cheese,50,0.9015245500883018,13.788134871274185,22.039306708668157,7.356269058031422,0.5306122448979592,Old reconstruction validates well; usable as robustness.
+Consumer(oldmodel) vs Consumer_2017_2026: sour_cream,50,0.8783576674894177,9.711292909120582,14.794021972571386,8.710268912755687,0.6326530612244898,Old reconstruction validates well; usable as robustness.

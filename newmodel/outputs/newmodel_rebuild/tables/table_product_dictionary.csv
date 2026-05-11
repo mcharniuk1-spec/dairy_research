@@ -1,0 +1,15 @@
+product,label,role,main_use
+raw_milk,Raw milk,Farm-gate raw material,H1 upstream
+drinking_milk,Drinking milk,Comparable dairy product group,H1/H2 where matching is available
+sour_cream,Sour cream,Comparable dairy product group,H1/H2 where matching is available
+kefir,Kefir,Comparable dairy product group,H1/H2 where matching is available
+butter,Butter,Comparable dairy product group,H1/H2 where matching is available
+hard_cheese,Hard cheese,Comparable dairy product group,H1/H2 where matching is available
+soft_cheese,Soft cheese,Comparable dairy product group,Audit or exclusion
+cottage_cheese,Cottage cheese,Comparable dairy product group,H2 / retail-ProZorro mechanism if support is sufficient
+skim_milk_powder,Skim milk powder,Comparable dairy product group,H1/H2 where matching is available
+cream,Cream,Comparable dairy product group,H2 / retail-ProZorro mechanism if support is sufficient
+condensed_milk,Condensed milk,Comparable dairy product group,H2 / retail-ProZorro mechanism if support is sufficient
+yogurt,Yogurt,Comparable dairy product group,H2 / retail-ProZorro mechanism if support is sufficient
+other_dairy,Other dairy,Dairy but weakly comparable,Audit or exclusion
+exclude_non_dairy,Excluded non-dairy,Excluded,Audit or exclusion

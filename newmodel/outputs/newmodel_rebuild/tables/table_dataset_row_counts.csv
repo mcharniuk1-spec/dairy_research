@@ -1,0 +1,8 @@
+dataset,rows,date_min,date_max,products,quality_ok_share
+clean_farmgate_monthly,3645,2015-01-01,2026-03-01,raw_milk,0.832
+clean_processor_monthly,954,2013-01-01,2026-03-01,"butter, drinking_milk, hard_cheese, kefir, skim_milk_powder, sour_cream",1.0
+clean_consumer_monthly,8658,2017-01-01,2026-03-01,"drinking_milk, soft_cheese, sour_cream",0.964
+clean_prozorro_lot_level,16573,2023-01-02,2026-04-29,"butter, condensed_milk, cottage_cheese, cream, drinking_milk, hard_cheese, kefir, other_dairy, skim_milk_powder, soft_cheese",1.0
+clean_retail_sku_day,88295,2025-10-21,2026-01-08,"butter, condensed_milk, cottage_cheese, cream, drinking_milk, exclude_non_dairy, hard_cheese, kefir, other_dairy, skim_milk_powder, sour_cream, yogurt",0.914
+clean_farm_volumes,19110,2025-01-01,2026-03-01,"butter, condensed_milk, cream, drinking_milk, kefir, other_dairy, raw_milk, skim_milk_powder",1.0
+clean_cost_index,171,2015-01-01,2025-10-01,livestock_products,1.0

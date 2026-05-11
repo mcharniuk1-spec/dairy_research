@@ -1,0 +1,38 @@
+hypothesis,source_block,integrated_reliability,models
+H1,newmodel_v1_ecm_ardl_nardl,appendix or discard,1
+H1,newmodel_v2,appendix or discard,6
+H1,newmodel_v2,main reliable,5
+H1,newmodel_v2,probable / supporting,1
+H1,old_final_daily,main reliable,11
+H1,old_final_index,main reliable,1
+H1,old_final_lp,appendix or discard,5
+H1,old_final_lp,main reliable,5
+H1,old_final_margin,appendix or discard,5
+H1,second_stage_lp,appendix or discard,1
+H1,second_stage_lp,main reliable,1
+H1,second_stage_margin,appendix or discard,1
+H1/H2,extra_long_equilibrium,probable / supporting,3
+H1/H2,extra_procurement_bridge,appendix or discard,3
+H2,extra_retail_short_run,appendix or discard,11
+H2,newmodel_v1_ecm_ardl_nardl,probable / supporting,1
+H2,newmodel_v2,main reliable,2
+H2,newmodel_v2,probable / supporting,1
+H2,newmodel_v2_retail,probable / supporting,3
+H2,old_final_daily,appendix or discard,17
+H2,old_final_daily,main reliable,4
+H2,old_final_daily,probable / supporting,19
+H2,old_final_discount,appendix or discard,1
+H2,old_final_discount,probable / supporting,2
+H2,old_final_index,appendix or discard,1
+H2,old_final_index,main reliable,1
+H2,old_final_index,probable / supporting,2
+H2,old_final_lp,appendix or discard,54
+H2,old_final_lp,probable / supporting,38
+H2,old_final_margin,appendix or discard,74
+H2,old_final_proc_scale,appendix or discard,1
+H2,old_final_proc_scale,probable / supporting,5
+H2,second_stage_discount,probable / supporting,4
+H2,second_stage_lp,appendix or discard,42
+H2,second_stage_lp,main reliable,2
+H2,second_stage_lp,probable / supporting,35
+H2,second_stage_margin,appendix or discard,43

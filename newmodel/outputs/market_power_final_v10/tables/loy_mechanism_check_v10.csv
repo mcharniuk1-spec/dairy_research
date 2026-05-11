@@ -1,0 +1,5 @@
+first-stage measure,mechanism variable,coefficient,p-value,observations,interpretation
+speed_measure,perishable,-0.149541770336204,0.3554942288017666,27,No statistically strong explanatory role in the current short retail/procurement sample.
+speed_measure,retail_link,0.2991249384415406,0.0466989644083657,27,Retail-linked pairs show faster correction in the Loy-style first-stage screen.
+asymmetry_measure,perishable,-0.0428439838077575,0.8046812050538532,27,No statistically strong explanatory role in the current short retail/procurement sample.
+asymmetry_measure,retail_link,0.1453758519902551,0.4129897970855126,27,No statistically strong explanatory role in the current short retail/procurement sample.

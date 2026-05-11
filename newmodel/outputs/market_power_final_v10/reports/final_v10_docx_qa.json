@@ -1,0 +1,89 @@
+{
+  "docx": "/Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_rewritten_v10.docx",
+  "exists": true,
+  "size_bytes": 11408754,
+  "zip_test": null,
+  "embedded_images": 35,
+  "has_styles": true,
+  "has_settings": true,
+  "has_update_fields": true,
+  "paragraphs": 416,
+  "tables": 21,
+  "word_count": 14733,
+  "visible_toc_placeholder": false,
+  "contains_main_oldmodel_warning": true,
+  "contains_data_audit": true,
+  "contains_source_names_ua": true,
+  "figure_files_checked": [
+    {
+      "file": "fig_06_reliability_screen_large.png",
+      "size": [
+        1989,
+        1019
+      ]
+    },
+    {
+      "file": "fig_10_livestock_cost_index.png",
+      "size": [
+        1980,
+        937
+      ]
+    },
+    {
+      "file": "fig_08_regional_farmgate_dispersion.png",
+      "size": [
+        2180,
+        937
+      ]
+    },
+    {
+      "file": "fig_04_prozorro_weekly_large.png",
+      "size": [
+        2275,
+        1106
+      ]
+    },
+    {
+      "file": "fig_05_retail_discounts_large.png",
+      "size": [
+        2275,
+        1106
+      ]
+    },
+    {
+      "file": "fig_07_selected_coefficients_large.png",
+      "size": [
+        2794,
+        1514
+      ]
+    },
+    {
+      "file": "fig_03_h2_processor_consumer_large.png",
+      "size": [
+        2275,
+        1106
+      ]
+    },
+    {
+      "file": "fig_01_value_chain_market_power.png",
+      "size": [
+        2274,
+        954
+      ]
+    },
+    {
+      "file": "fig_09_dairy_trade_hs0401_0406.png",
+      "size": [
+        3012,
+        1773
+      ]
+    },
+    {
+      "file": "fig_02_h1_monthly_prices_large.png",
+      "size": [
+        2275,
+        1106
+      ]
+    }
+  ]
+}

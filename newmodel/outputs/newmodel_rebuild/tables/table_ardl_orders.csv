@@ -1,0 +1,7 @@
+model_id,ardl_order
+H1_farmgate_to_processor_butter,"(2, 4)"
+H1_farmgate_to_processor_drinking_milk,"(2, 1)"
+H1_farmgate_to_processor_hard_cheese,"(2, 1)"
+H1_farmgate_to_processor_kefir,"(1, 2)"
+H1_farmgate_to_processor_skim_milk_powder,"(2, 2)"
+H1_farmgate_to_processor_sour_cream,"(2, 1)"

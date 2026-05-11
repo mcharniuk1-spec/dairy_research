@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "out": "/Users/getapple/Documents/KSE/Master Thesis/outputs/newmodel_deep_rebuild_v2",
+  "docx": "/Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_deep_rebuild_v2.docx",
+  "docx_info": {
+    "docx": "/Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_deep_rebuild_v2.docx",
+    "exists": true,
+    "word_count": 13297,
+    "paragraphs": 313,
+    "tables": 5,
+    "images": 6,
+    "render": "no_pngs rc=1 stderr=ce -env:UserInstallation=file:///var/folders/rw/l18tb_lj1rx1h1dpt6fbzvs80000gn/T/soffice_profile_8o302y2_ --invisible --headless --norestore --convert-to odt --outdir /var/folders/rw/l18tb_lj1rx1h1dpt6fbzvs80000gn/T/soffice_convert_9687g02b /Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_deep_rebuild_v2.docx\nEXIT: 134\nSTDERR:\n/opt/homebrew/bin/soffice: line 2:  6201 Abort trap: 6           '/Applications/LibreOffice.app/Contents/MacOS/soffice' \"$@\"\n",
+    "render_pages": 0
+  },
+  "evidence_counts": {
+    "appendix or discard": 12375,
+    "probable / supporting": 685,
+    "main reliable": 214
+  },
+  "additional_models": 121,
+  "figures": 7,
+  "report": "/Users/getapple/Documents/KSE/Master Thesis/outputs/newmodel_deep_rebuild_v2/reports/deep_rebuild_v2_report.md"
+}

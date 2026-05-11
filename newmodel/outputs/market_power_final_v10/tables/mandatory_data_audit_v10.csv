@@ -1,0 +1,6 @@
+audit item,risk,correction,status
+Processor unit,Processor_price is stored as Гривні за тону.,Divide by 1000 and report as UAH/kg.,mandatory before modeling
+Farm-gate unit,"Farm_price uses the short unit label Гривня, but magnitudes are tonne-level prices.","Treat as UAH/tonne, divide by 1000, and label as UAH/kg.",mandatory before modeling
+ProZorro numeric fields,ProzorroM(full) includes text numbers and non-breaking spaces.,"Strip non-breaking spaces, normalize decimal signs, and recalculate reliable UAH/kg lot prices.",mandatory before aggregation
+Retail classification,Legacy product labels misclassify some dairy and non-dairy items.,Rebuild product from product_title and product_name; keep a controlled product column in every table.,mandatory before H2 retail models
+Integrated consumer sheet,Combined Consumer_price sheet contains implausible values above 1000 UAH/kg.,Use the raw Consumer_2017_2026 component workbook and cleaned national/region series.,mandatory before official consumer models

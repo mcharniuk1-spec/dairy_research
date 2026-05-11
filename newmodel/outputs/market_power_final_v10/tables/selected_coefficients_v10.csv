@@ -1,0 +1,10 @@
+label,coef,use,block,rank
+H1 Farm-gate -> processor: drinking milk,0.9445887778165968,main reliable,H1,0
+H1 Farm-gate -> processor: hard cheese,0.8742259292751426,main reliable,H1,1
+H1 Farm-gate -> processor: kefir,0.9626797638227572,probable / supporting,H1,2
+H1 Farm-gate -> processor: skim milk powder,0.7803301114935992,probable / supporting,H1,3
+H1 Farm-gate -> processor: sour cream,0.922719233444665,main reliable,H1,4
+H1 Farm-gate -> processor: butter,1.0701571865372412,probable / supporting,H1,5
+H2 ProZorro -> Consumer: drinking milk,0.831804069031002,probable / supporting,H2,6
+H2 Processor -> Consumer: drinking milk,0.8864868219006117,probable / supporting,H2,7
+H2 Processor -> Consumer: sour cream,1.1750553526721998,main reliable,H2,8

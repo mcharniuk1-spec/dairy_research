@@ -1,0 +1,2 @@
+check,affected_rows,affected_ukraine_rows,decision
+Integrated Consumer_price implausible values above 1000 UAH/kg,340,12,"Use raw Consumer_2017_2026.xlsx, not the combined sheet, for official consumer models."

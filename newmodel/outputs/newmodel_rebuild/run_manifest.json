@@ -1,0 +1,22 @@
+{
+  "outputs": {
+    "root": "/Users/getapple/Documents/KSE/Master Thesis/outputs/newmodel_rebuild",
+    "docx": "/Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_newmodel_draft.docx",
+    "clean_data": "/Users/getapple/Documents/KSE/Master Thesis/outputs/newmodel_rebuild/clean_data",
+    "figures": "/Users/getapple/Documents/KSE/Master Thesis/outputs/newmodel_rebuild/figures",
+    "tables": "/Users/getapple/Documents/KSE/Master Thesis/outputs/newmodel_rebuild/tables"
+  },
+  "render_check": {
+    "docx": "/Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_newmodel_draft.docx",
+    "exists": true,
+    "paragraphs": 83,
+    "tables": 5,
+    "render_status": "soffice_available_manual_render_not_run_in_script"
+  },
+  "model_counts": {
+    "unreliable / appendix only": 19,
+    "probable / needs validation": 14,
+    "reliable": 1
+  },
+  "figure_count": 11
+}

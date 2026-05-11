@@ -1,0 +1,181 @@
+flow,code,product_label,year,value_eur_mln,is_dairy_only_0401_0406
+exports,0409,Honey,2015,75.685,False
+exports,0409,Honey,2016,87.889,False
+exports,0409,Honey,2017,118.38,False
+exports,0409,Honey,2018,82.933,False
+exports,0409,Honey,2019,90.281,False
+exports,0409,Honey,2020,121.572,False
+exports,0409,Honey,2021,121.233,False
+exports,0409,Honey,2022,130.893,False
+exports,0409,Honey,2023,112.228,False
+exports,0409,Honey,2024,154.281,False
+exports,0407,Shell Eggs,2015,69.799,False
+exports,0407,Shell Eggs,2016,41.105,False
+exports,0407,Shell Eggs,2017,60.782,False
+exports,0407,Shell Eggs,2018,79.666,False
+exports,0407,Shell Eggs,2019,99.921,False
+exports,0407,Shell Eggs,2020,85.253,False
+exports,0407,Shell Eggs,2021,37.675,False
+exports,0407,Shell Eggs,2022,40.354,False
+exports,0407,Shell Eggs,2023,56.25,False
+exports,0407,Shell Eggs,2024,68.887,False
+exports,0402,Cond. Milk,2015,80.479,True
+exports,0402,Cond. Milk,2016,66.575,True
+exports,0402,Cond. Milk,2017,71.359,True
+exports,0402,Cond. Milk,2018,49.977,True
+exports,0402,Cond. Milk,2019,68.065,True
+exports,0402,Cond. Milk,2020,48.655,True
+exports,0402,Cond. Milk,2021,48.47,True
+exports,0402,Cond. Milk,2022,86.637,True
+exports,0402,Cond. Milk,2023,63.49,True
+exports,0402,Cond. Milk,2024,68.651,True
+exports,0406,Cheese,2015,31.481,True
+exports,0406,Cheese,2016,21.975,True
+exports,0406,Cheese,2017,28.781,True
+exports,0406,Cheese,2018,26.065,True
+exports,0406,Cheese,2019,23.916,True
+exports,0406,Cheese,2020,21.393,True
+exports,0406,Cheese,2021,22.553,True
+exports,0406,Cheese,2022,40.061,True
+exports,0406,Cheese,2023,36.922,True
+exports,0406,Cheese,2024,50.077,True
+exports,0405,Butter,2015,26.987,True
+exports,0405,Butter,2016,33.918,True
+exports,0405,Butter,2017,114.93,True
+exports,0405,Butter,2018,108.851,True
+exports,0405,Butter,2019,68.852,True
+exports,0405,Butter,2020,42.662,True
+exports,0405,Butter,2021,44.195,True
+exports,0405,Butter,2022,77.723,True
+exports,0405,Butter,2023,38.62,True
+exports,0405,Butter,2024,45.189,True
+exports,0408,Egg Products,2015,42.711,False
+exports,0408,Egg Products,2016,26.988,False
+exports,0408,Egg Products,2017,9.084,False
+exports,0408,Egg Products,2018,21.367,False
+exports,0408,Egg Products,2019,15.523,False
+exports,0408,Egg Products,2020,16.044,False
+exports,0408,Egg Products,2021,10.227,False
+exports,0408,Egg Products,2022,22.02,False
+exports,0408,Egg Products,2023,36.32,False
+exports,0408,Egg Products,2024,30.759,False
+exports,0401,Fresh Milk,2015,4.163,True
+exports,0401,Fresh Milk,2016,4.907,True
+exports,0401,Fresh Milk,2017,8.62,True
+exports,0401,Fresh Milk,2018,12.471,True
+exports,0401,Fresh Milk,2019,13.675,True
+exports,0401,Fresh Milk,2020,10.519,True
+exports,0401,Fresh Milk,2021,8.764,True
+exports,0401,Fresh Milk,2022,15.563,True
+exports,0401,Fresh Milk,2023,15.322,True
+exports,0401,Fresh Milk,2024,16.283,True
+exports,0404,Whey,2015,13.979,True
+exports,0404,Whey,2016,12.959,True
+exports,0404,Whey,2017,21.986,True
+exports,0404,Whey,2018,18.56,True
+exports,0404,Whey,2019,16.305,True
+exports,0404,Whey,2020,19.544,True
+exports,0404,Whey,2021,19.283,True
+exports,0404,Whey,2022,15.904,True
+exports,0404,Whey,2023,10.035,True
+exports,0404,Whey,2024,12.363,True
+exports,0403,Fermented Milk,2015,3.005,True
+exports,0403,Fermented Milk,2016,2.333,True
+exports,0403,Fermented Milk,2017,3.701,True
+exports,0403,Fermented Milk,2018,7.177,True
+exports,0403,Fermented Milk,2019,8.843,True
+exports,0403,Fermented Milk,2020,7.863,True
+exports,0403,Fermented Milk,2021,7.308,True
+exports,0403,Fermented Milk,2022,4.426,True
+exports,0403,Fermented Milk,2023,3.857,True
+exports,0403,Fermented Milk,2024,5.468,True
+exports,0410,Other Animal,2015,0.005,False
+exports,0410,Other Animal,2016,0.032,False
+exports,0410,Other Animal,2017,0.0,False
+exports,0410,Other Animal,2018,0.001,False
+exports,0410,Other Animal,2019,0.011,False
+exports,0410,Other Animal,2020,0.197,False
+exports,0410,Other Animal,2021,0.077,False
+exports,0410,Other Animal,2022,0.15,False
+exports,0410,Other Animal,2023,0.019,False
+exports,0410,Other Animal,2024,0.227,False
+exports,01,Live Animals,2015,23.107,False
+exports,01,Live Animals,2016,27.926,False
+exports,01,Live Animals,2017,40.476,False
+exports,01,Live Animals,2018,38.754,False
+exports,01,Live Animals,2019,55.866,False
+exports,01,Live Animals,2020,45.131,False
+exports,01,Live Animals,2021,34.539,False
+exports,01,Live Animals,2022,36.982,False
+exports,01,Live Animals,2023,28.286,False
+exports,01,Live Animals,2024,35.179,False
+exports,02,Meat,2015,340.312,False
+exports,02,Meat,2016,349.916,False
+exports,02,Meat,2017,470.417,False
+exports,02,Meat,2018,546.716,False
+exports,02,Meat,2019,635.82,False
+exports,02,Meat,2020,571.344,False
+exports,02,Meat,2021,714.386,False
+exports,02,Meat,2022,885.786,False
+exports,02,Meat,2023,824.992,False
+exports,02,Meat,2024,972.96,False
+exports,04,Dairy & Eggs,2015,348.291,False
+exports,04,Dairy & Eggs,2016,298.682,False
+exports,04,Dairy & Eggs,2017,437.622,False
+exports,04,Dairy & Eggs,2018,407.066,False
+exports,04,Dairy & Eggs,2019,405.39,False
+exports,04,Dairy & Eggs,2020,373.703,False
+exports,04,Dairy & Eggs,2021,319.782,False
+exports,04,Dairy & Eggs,2022,433.73,False
+exports,04,Dairy & Eggs,2023,373.064,False
+exports,04,Dairy & Eggs,2024,452.185,False
+exports,03,Seafood,2015,11.701,False
+exports,03,Seafood,2016,15.367,False
+exports,03,Seafood,2017,23.357,False
+exports,03,Seafood,2018,21.144,False
+exports,03,Seafood,2019,30.042,False
+exports,03,Seafood,2020,36.979,False
+exports,03,Seafood,2021,48.326,False
+exports,03,Seafood,2022,40.429,False
+exports,03,Seafood,2023,21.989,False
+exports,03,Seafood,2024,37.733,False
+exports,05,Animal Origin,2015,18.614,False
+exports,05,Animal Origin,2016,7.964,False
+exports,05,Animal Origin,2017,9.939,False
+exports,05,Animal Origin,2018,10.953,False
+exports,05,Animal Origin,2019,13.449,False
+exports,05,Animal Origin,2020,13.848,False
+exports,05,Animal Origin,2021,19.513,False
+exports,05,Animal Origin,2022,14.171,False
+exports,05,Animal Origin,2023,12.044,False
+exports,05,Animal Origin,2024,15.21,False
+exports,TOTAL,All Products,2015,34360.286,False
+exports,TOTAL,All Products,2016,32858.403,False
+exports,TOTAL,All Products,2017,38311.491,False
+exports,TOTAL,All Products,2018,40063.545,False
+exports,TOTAL,All Products,2019,44707.476,False
+exports,TOTAL,All Products,2020,43102.03,False
+exports,TOTAL,All Products,2021,57516.319,False
+exports,TOTAL,All Products,2022,42171.154,False
+exports,TOTAL,All Products,2023,33456.167,False
+exports,TOTAL,All Products,2024,37345.203,False
+exports,Dairy EX,All Dairy,2015,160.094,False
+exports,Dairy EX,All Dairy,2016,142.667,False
+exports,Dairy EX,All Dairy,2017,249.37699999999998,False
+exports,Dairy EX,All Dairy,2018,223.101,False
+exports,Dairy EX,All Dairy,2019,199.656,False
+exports,Dairy EX,All Dairy,2020,150.63600000000002,False
+exports,Dairy EX,All Dairy,2021,150.57299999999998,False
+exports,Dairy EX,All Dairy,2022,240.31399999999996,False
+exports,Dairy EX,All Dairy,2023,168.246,False
+exports,Dairy EX,All Dairy,2024,198.03099999999998,False
+exports,Share of dairy in animal-origin products,All Dairy,2015,0.21575283851622246,False
+exports,Share of dairy in animal-origin products,All Dairy,2016,0.2038522265326389,False
+exports,Share of dairy in animal-origin products,All Dairy,2017,0.2539969505332493,False
+exports,Share of dairy in animal-origin products,All Dairy,2018,0.21773747283173583,False
+exports,Share of dairy in animal-origin products,All Dairy,2019,0.17504977787363654,False
+exports,Share of dairy in animal-origin products,All Dairy,2020,0.14470247501212774,False
+exports,Share of dairy in animal-origin products,All Dairy,2021,0.13248297913150897,False
+exports,Share of dairy in animal-origin products,All Dairy,2022,0.17030284218388797,False
+exports,Share of dairy in animal-origin products,All Dairy,2023,0.13348884260636715,False
+exports,Share of dairy in animal-origin products,All Dairy,2024,0.13086322506206768,False

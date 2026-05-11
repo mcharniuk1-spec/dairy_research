@@ -1,0 +1,13 @@
+n,adf_p,kpss_p,integration,series,block,product
+131,0.7684613488028007,0.01,I(1)-likely,processor_butter,H1,butter
+131,0.5605401074506775,0.01,I(1)-likely,farmgate_raw_milk,H1,butter
+131,0.41324840395770374,0.01,I(1)-likely,processor_drinking_milk,H1,drinking_milk
+131,0.5605401074506775,0.01,I(1)-likely,farmgate_raw_milk,H1,drinking_milk
+131,0.40991271245859545,0.01,I(1)-likely,processor_hard_cheese,H1,hard_cheese
+131,0.5605401074506775,0.01,I(1)-likely,farmgate_raw_milk,H1,hard_cheese
+131,0.828394343516891,0.01,I(1)-likely,processor_kefir,H1,kefir
+131,0.5605401074506775,0.01,I(1)-likely,farmgate_raw_milk,H1,kefir
+131,0.7636499641337051,0.01,I(1)-likely,processor_skim_milk_powder,H1,skim_milk_powder
+131,0.5605401074506775,0.01,I(1)-likely,farmgate_raw_milk,H1,skim_milk_powder
+131,0.5324067635783054,0.01,I(1)-likely,processor_sour_cream,H1,sour_cream
+131,0.5605401074506775,0.01,I(1)-likely,farmgate_raw_milk,H1,sour_cream

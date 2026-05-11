@@ -1,0 +1,4 @@
+source block,link,product,model_family,n_obs,coefficient,p-value,use,thesis_use
+newmodel_v2_retail,ProZorro -> Retail,drinking_milk,Threshold ECM (Loy-style),55.0,-0.0176520140110478,0.9431206682025208,probable / supporting,short supporting block or appendix
+newmodel_v2_retail,ProZorro -> Retail,kefir,Threshold ECM (Loy-style),52.0,0.0118495901412172,0.8284648752126023,probable / supporting,short supporting block or appendix
+newmodel_v2_retail,ProZorro -> Retail,soft_cheese,Threshold ECM (Loy-style),53.0,-0.1880929452730138,0.3303206762411834,probable / supporting,short supporting block or appendix
