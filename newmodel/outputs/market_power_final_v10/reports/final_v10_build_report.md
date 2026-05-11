@@ -18,7 +18,7 @@
 
 ```json
 {
-  "docx": "/Users/getapple/Documents/KSE/Master Thesis/output/doc/Maksym_Charniuk_MSc_thesis_market_power_rewritten_v10.docx",
+  "docx": "/Users/getapple/Documents/GitHub/dairy_research/newmodel/doc/Maksym_Charniuk_MSc_thesis_market_power_rewritten_v10.docx",
   "exists": true,
   "size_bytes": 11408754,
   "zip_test": null,

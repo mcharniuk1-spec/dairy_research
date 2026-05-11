@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import textwrap
 import zipfile
@@ -25,11 +26,28 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 
-ROOT = Path("/Users/getapple/Documents/KSE/Master Thesis")
-DRAFT2 = ROOT / "draft" / "Maksym_Charniuk_MSc_thesis_draft_2.docx"
-COMMENTED = ROOT / "Commented_draft2.docx"
-TRANSCRIPT = ROOT / "Nivievskyi_5_05_transcript.docx"
-NEWMODEL = ROOT / "Newmodel_data" / "newmodel.xlsx"
+SCRIPT_DIR = Path(__file__).resolve().parent
+PACKAGE_ROOT = SCRIPT_DIR.parent
+LEGACY_ROOT = Path("/Users/getapple/Documents/KSE/Master Thesis")
+
+
+def resolve_root() -> Path:
+    """Prefer the portable GitHub package; allow THESIS_ROOT for local reruns."""
+    env_root = os.environ.get("THESIS_ROOT")
+    if env_root:
+        return Path(env_root).expanduser().resolve()
+    if (PACKAGE_ROOT / "data" / "Newmodel_data" / "newmodel.xlsx").exists():
+        return PACKAGE_ROOT
+    return LEGACY_ROOT
+
+
+ROOT = resolve_root()
+DATA_ROOT = ROOT / "data" / "Newmodel_data" if (ROOT / "data" / "Newmodel_data").exists() else ROOT / "Newmodel_data"
+SOURCE_DOCS = ROOT / "doc" / "source" if (ROOT / "doc" / "source").exists() else ROOT
+DRAFT2 = SOURCE_DOCS / "Maksym_Charniuk_MSc_thesis_draft_2.docx"
+COMMENTED = SOURCE_DOCS / "Commented_draft2.docx"
+TRANSCRIPT = SOURCE_DOCS / "Nivievskyi_5_05_transcript.docx"
+NEWMODEL = DATA_ROOT / "newmodel.xlsx"
 V2 = ROOT / "outputs" / "newmodel_deep_rebuild_v2"
 V1 = ROOT / "outputs" / "newmodel_rebuild"
 V3 = ROOT / "outputs" / "market_power_final_v3"
@@ -37,7 +55,7 @@ OUT = ROOT / "outputs" / "market_power_final_v10"
 FIG_OUT = OUT / "figures"
 TABLE_OUT = OUT / "tables"
 REPORT_OUT = OUT / "reports"
-DOC_OUT = ROOT / "output" / "doc"
+DOC_OUT = ROOT / "doc"
 
 DOCX_OUT = DOC_OUT / "Maksym_Charniuk_MSc_thesis_market_power_rewritten_v10.docx"
 
@@ -778,8 +796,8 @@ def regional_facts(ev: dict[str, pd.DataFrame]) -> dict[str, float | int | str]:
 def trade_facts() -> dict[str, float]:
     facts = {}
     for kind, file in [
-        ("exports", ROOT / "Newmodel_data" / "additioanl materials" / "share_dairy_exp.xlsx"),
-        ("imports", ROOT / "Newmodel_data" / "additioanl materials" / "share_dairy_imp.xlsx"),
+        ("exports", DATA_ROOT / "additioanl materials" / "share_dairy_exp.xlsx"),
+        ("imports", DATA_ROOT / "additioanl materials" / "share_dairy_imp.xlsx"),
     ]:
         raw = pd.read_excel(file, header=None)
         if kind == "exports":
@@ -801,7 +819,7 @@ def trade_facts() -> dict[str, float]:
 
 def read_trade_inputs() -> tuple[pd.DataFrame, pd.DataFrame]:
     """Read trade-value/share and partner-flow workbooks used for Chapter 2."""
-    base = ROOT / "Newmodel_data" / "additioanl materials"
+    base = DATA_ROOT / "additioanl materials"
     exp = pd.read_excel(base / "share_dairy_exp.xlsx", header=None)
     imp = pd.read_excel(base / "share_dairy_imp.xlsx", header=None)
     years = [int(x) for x in exp.iloc[13, 2:12]]
@@ -941,21 +959,24 @@ def create_coefficients_figure(h1_table: pd.DataFrame, h2_table: pd.DataFrame) -
 
 def copy_figures() -> dict[str, Path]:
     figures = {
-        "chain": V3 / "figures" / "fig_01_value_chain_market_power.png",
-        "h1_prices": V3 / "figures" / "fig_02_h1_monthly_prices_large.png",
-        "h2_bridge": V3 / "figures" / "fig_03_h2_processor_consumer_large.png",
-        "prozorro": V3 / "figures" / "fig_04_prozorro_weekly_large.png",
-        "discounts": V3 / "figures" / "fig_05_retail_discounts_large.png",
-        "reliability": V3 / "figures" / "fig_06_reliability_screen_large.png",
-        "regional": V1 / "figures" / "fig_08_regional_farmgate_dispersion.png",
-        "cost": V1 / "figures" / "fig_10_livestock_cost_index.png",
+        "chain": [V3 / "figures" / "fig_01_value_chain_market_power.png", FIG_OUT / "fig_01_value_chain_market_power.png"],
+        "h1_prices": [V3 / "figures" / "fig_02_h1_monthly_prices_large.png", FIG_OUT / "fig_02_h1_monthly_prices_large.png"],
+        "h2_bridge": [V3 / "figures" / "fig_03_h2_processor_consumer_large.png", FIG_OUT / "fig_03_h2_processor_consumer_large.png"],
+        "prozorro": [V3 / "figures" / "fig_04_prozorro_weekly_large.png", FIG_OUT / "fig_04_prozorro_weekly_large.png"],
+        "discounts": [V3 / "figures" / "fig_05_retail_discounts_large.png", FIG_OUT / "fig_05_retail_discounts_large.png"],
+        "reliability": [V3 / "figures" / "fig_06_reliability_screen_large.png", FIG_OUT / "fig_06_reliability_screen_large.png"],
+        "regional": [V1 / "figures" / "fig_08_regional_farmgate_dispersion.png", FIG_OUT / "fig_08_regional_farmgate_dispersion.png"],
+        "cost": [V1 / "figures" / "fig_10_livestock_cost_index.png", FIG_OUT / "fig_10_livestock_cost_index.png"],
     }
     out = {}
-    for key, src in figures.items():
-        if src.exists():
-            dst = FIG_OUT / src.name
-            dst.write_bytes(src.read_bytes())
-            out[key] = dst
+    for key, candidates in figures.items():
+        for src in candidates:
+            if src.exists():
+                dst = FIG_OUT / src.name
+                if src.resolve() != dst.resolve():
+                    dst.write_bytes(src.read_bytes())
+                out[key] = dst
+                break
     return out
 
 

@@ -1,3 +1,18 @@
+# Dairy Research Repository
+
+## Current Final Model Stack
+
+The current thesis-facing model package is in [`newmodel/`](newmodel/). It contains the final V10 market-power thesis draft, the raw `Newmodel_data` workbooks, cleaned model data, final tables/figures, reports, and portable Python runners.
+
+Use this first for the latest draft:
+
+- Final draft: `newmodel/doc/Maksym_Charniuk_MSc_thesis_market_power_rewritten_v10.docx`
+- Full setup and model description: `newmodel/README.md`
+- Final V10 outputs: `newmodel/outputs/market_power_final_v10/`
+- Main model-stack outputs: `newmodel/outputs/newmodel_deep_rebuild_v2/`
+
+The older root-level package below is retained as the earlier `FINAL_RESEARCH` rerun and validation archive.
+
 # FINAL_RESEARCH
 
 This folder contains the corrected, reproducible rerun of the dairy price-transmission thesis pipeline built on `full_uah_final.xlsx`.

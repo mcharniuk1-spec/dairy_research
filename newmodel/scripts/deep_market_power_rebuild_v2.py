@@ -12,6 +12,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import math
+import os
 import re
 import shutil
 import subprocess
@@ -35,23 +36,40 @@ from docx.shared import Inches, Pt
 from statsmodels.stats.diagnostic import acorr_ljungbox, het_breuschpagan
 from statsmodels.tsa.stattools import adfuller, coint
 
-ROOT = Path("/Users/getapple/Documents/KSE/Master Thesis")
+SCRIPT_DIR = Path(__file__).resolve().parent
+PACKAGE_ROOT = SCRIPT_DIR.parent
+REPO_ROOT = PACKAGE_ROOT.parent
+LEGACY_ROOT = Path("/Users/getapple/Documents/KSE/Master Thesis")
+
+
+def resolve_root() -> Path:
+    """Prefer the portable GitHub package; allow THESIS_ROOT for local reruns."""
+    env_root = os.environ.get("THESIS_ROOT")
+    if env_root:
+        return Path(env_root).expanduser().resolve()
+    if (PACKAGE_ROOT / "data" / "Newmodel_data" / "newmodel.xlsx").exists():
+        return PACKAGE_ROOT
+    return LEGACY_ROOT
+
+
+ROOT = resolve_root()
 BASE_SCRIPT = ROOT / "scripts" / "newmodel_market_power_rebuild.py"
 OUT = ROOT / "outputs" / "newmodel_deep_rebuild_v2"
 DATA_OUT = OUT / "clean_data"
 FIG_OUT = OUT / "figures"
 TABLE_OUT = OUT / "tables"
 REPORT_OUT = OUT / "reports"
-DOC_OUT = ROOT / "output" / "doc"
+DOC_OUT = ROOT / "doc"
 
-FINAL = ROOT / "FINAL_RESEARCH"
+FINAL = REPO_ROOT if (REPO_ROOT / "outputs").exists() else ROOT / "FINAL_RESEARCH"
 EXTRA = FINAL / "extra"
-SECOND = ROOT / "analysis second stage"
-DRAFT2 = ROOT / "draft" / "Maksym_Charniuk_MSc_thesis_draft_2.docx"
-DRAFT3 = ROOT / "draft" / "Maksym_Charniuk_MSc_thesis_draft_3.docx"
-COMMENTED = ROOT / "Commented_draft2.docx"
-TRANSCRIPT = ROOT / "Nivievskyi_5_05_transcript.docx"
-LOY = ROOT / "mat" / "Main materials" / "textbooks" / "loy2016.pdf"
+SECOND = REPO_ROOT / "analysis second stage" if (REPO_ROOT / "analysis second stage").exists() else ROOT / "analysis second stage"
+SOURCE_DOCS = ROOT / "doc" / "source" if (ROOT / "doc" / "source").exists() else ROOT
+DRAFT2 = SOURCE_DOCS / "Maksym_Charniuk_MSc_thesis_draft_2.docx"
+DRAFT3 = SOURCE_DOCS / "Maksym_Charniuk_MSc_thesis_draft_3.docx"
+COMMENTED = SOURCE_DOCS / "Commented_draft2.docx"
+TRANSCRIPT = SOURCE_DOCS / "Nivievskyi_5_05_transcript.docx"
+LOY = ROOT / "references" / "loy2016.pdf"
 
 
 def load_base():
@@ -691,7 +709,8 @@ def lloyd_second_stage(additional: pd.DataFrame, retail_aggs: dict[str, pd.DataF
 
 
 def newmodel_workbook_audit() -> pd.DataFrame:
-    path = ROOT / "Newmodel_data" / "newmodel.xlsx"
+    data_root = ROOT / "data" / "Newmodel_data" if (ROOT / "data" / "Newmodel_data").exists() else ROOT / "Newmodel_data"
+    path = data_root / "newmodel.xlsx"
     rows = []
     try:
         xl = pd.ExcelFile(path)
